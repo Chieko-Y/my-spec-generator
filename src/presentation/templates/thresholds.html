@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Thresholds — <code>{{ manual_id }}</code> — {{ chapter }}</h1>
+<p>A value can only be saved with evidence and who filled it in — the manual never states the number itself, so a person has to vouch for it.</p>
+<table>
+  <tr><th>Function</th><th>Matching text</th><th>Kind / Unit</th><th>Current value</th><th>Status</th><th>Set new value</th></tr>
+  {% for row in rows %}
+  {% set t = row.threshold %}
+  <tr>
+    <td>{{ row.function }}</td>
+    <td>{{ t.matching_text }}<br><small style="color:#6b6f76">{{ t.context }}</small></td>
+    <td>{{ t.kind }} / {{ t.unit or '—' }}</td>
+    <td>{{ t.value or '—' }}</td>
+    <td>{{ t.status.value }}</td>
+    <td>
+      <form method="post" action="/thresholds/{{ manual_id }}">
+        <input type="hidden" name="chapter" value="{{ chapter }}">
+        <input type="hidden" name="threshold_id" value="{{ t.threshold_id }}">
+        <input type="text" name="value" placeholder="value" required style="width:70px;display:inline-block">
+        <select name="status" style="width:120px;display:inline-block">
+          {% for s in statuses if s.value != 'unfilled' %}
+          <option value="{{ s.value }}">{{ s.value }}</option>
+          {% endfor %}
+        </select>
+        <input type="text" name="filled_by" placeholder="your name" required style="width:100px;display:inline-block">
+        <br>
+        <input type="text" name="evidence" placeholder="evidence (required)" required style="width:260px">
+        <button type="submit">Save</button>
+      </form>
+    </td>
+  </tr>
+  {% else %}
+  <tr><td colspan="6">No numeric thresholds detected in this manual.</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

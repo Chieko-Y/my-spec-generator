@@ -1,0 +1,49 @@
+{
+  "chapters": [
+    {
+      "label": "Quick Guide",
+      "page_start": 12,
+      "page_end": 66
+    },
+    {
+      "label": "Basic Function",
+      "page_start": 66,
+      "page_end": 78
+    },
+    {
+      "label": "Settings",
+      "page_start": 78,
+      "page_end": 106
+    },
+    {
+      "label": "Phone",
+      "page_start": 106,
+      "page_end": 124
+    },
+    {
+      "label": "Apps",
+      "page_start": 124,
+      "page_end": 144
+    },
+    {
+      "label": "Audio",
+      "page_start": 144,
+      "page_end": 194
+    },
+    {
+      "label": "Navigation System (If equipped)",
+      "page_start": 194,
+      "page_end": 226
+    },
+    {
+      "label": "Voice Recognition System",
+      "page_start": 226,
+      "page_end": 236
+    },
+    {
+      "label": "Appendix/What To Do If/Index",
+      "page_start": 236,
+      "page_end": 256
+    }
+  ]
+}

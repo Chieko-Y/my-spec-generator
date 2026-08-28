@@ -1,0 +1,685 @@
+{
+  "manual_id": "subaru/outback-2026/multimedia",
+  "maker": "Subaru",
+  "model": "Outback 2026",
+  "document_title": "2026 Outback Multimedia",
+  "scope": "Introduction",
+  "markets": [
+    "US",
+    "CA"
+  ],
+  "profile_id": "generic_v1",
+  "meta": {
+    "unmatched_headings": [],
+    "chapter_prefix": "Introduction",
+    "chapter_label": "Introduction",
+    "excluded_sections": []
+  },
+  "functions": [
+    {
+      "function_id": "0427a42a2dbc",
+      "chapter_number": "1",
+      "title": "Introduction",
+      "area": "Introduction",
+      "function_path": "Introduction / Introduction",
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "aa2012add470",
+          "slot": "overview",
+          "text": "Introduction Introduction.",
+          "source_text": "Introduction Introduction",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f4eaac5dd237",
+          "slot": "overview",
+          "text": "The symbols described below are found in this instruction manual as well as on the unit itself to ensure its proper and safe usage and to prevent injury or damage to property. Make sure you understand the meaning of these symbols before reading the rest of this manual.",
+          "source_text": "The symbols described below are found in this instruction manual as well as on the unit itself to ensure its proper and safe usage and to prevent injury or damage to property. Make sure you understand the meaning of these symbols before reading the rest of this manual.",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a89803a44df7",
+          "slot": "overview",
+          "text": "Read first.",
+          "source_text": "Read first",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "343a01f99529",
+          "slot": "overview",
+          "text": "We recommend that you wait until the positioning stabilizes before starting to drive.",
+          "source_text": "We recommend that you wait until the positioning stabilizes before starting to drive.",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2847c1ded037",
+          "slot": "overview",
+          "text": "If you start to drive while the positioning is not complete, the indicated position may dif- fer from the actual vehicle position.",
+          "source_text": "If you start to drive while the positioning is not complete, the indicated position may dif- fer from the actual vehicle position.",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f48a545ddc20",
+          "slot": "overview",
+          "text": "The screens shown in this manual may differ from the actual screens depending on the data type or when the map data was created.",
+          "source_text": "The screens shown in this manual may differ from the actual screens depending on the data type or when the map data was created.",
+          "strength": "constraint",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "44cc933e3365",
+          "slot": "overview",
+          "text": "When maps are created, land surveys are conducted and information on road improve- ments and reopening is collected to provide the most accurate information possible. However, modifications to roads, place names and facilities may be carried out at any time. Consequently, we cannot guarantee that map data contains no errors in road positions, configuration and names, or in facility names.",
+          "source_text": "When maps are created, land surveys are conducted and information on road improve- ments and reopening is collected to provide the most accurate information possible. However, modifications to roads, place names and facilities may be carried out at any time. Consequently, we cannot guarantee that map data contains no errors in road positions, configuration and names, or in facility names.",
+          "strength": "constraint",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9556a9a6ddaf",
+          "slot": "overview",
+          "text": "● This sign indicates a situation in which incorrect handling through disregard of written infor- mation might result in death or serious personal injury.",
+          "source_text": "● This sign indicates a situation in which incorrect handling through disregard of written infor- mation might result in death or serious personal injury.",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9556a9a6ddaf",
+          "slot": "overview",
+          "text": "● This sign indicates a situation in which incorrect handling through disregard of written infor- mation might result in personal injury or damage to property.",
+          "source_text": "● This sign indicates a situation in which incorrect handling through disregard of written infor- mation might result in personal injury or damage to property.",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b894b2d0eafc",
+          "slot": "overview",
+          "text": "● Useful information for the user is described.",
+          "source_text": "● Useful information for the user is described.",
+          "strength": "capability",
+          "source": "p.5 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "690dc60923d1",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 6 ページ.",
+          "source_text": "NB8_北米英語.book 6 ページ",
+          "strength": "capability",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e97261cd375d",
+          "slot": "overview",
+          "text": "Symbols used in illustrations.",
+          "source_text": "Symbols used in illustrations",
+          "strength": "capability",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "eb18f4e443a6",
+          "slot": "overview",
+          "text": "Safety symbol.",
+          "source_text": "Safety symbol",
+          "strength": "capability",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e80f3cf9a005",
+          "slot": "overview",
+          "text": "The symbol of a circle with a slash through it means “Do not”, “Do not do this” or “Do not let this happen”.",
+          "source_text": "The symbol of a circle with a slash through it means “Do not”, “Do not do this” or “Do not let this happen”.",
+          "strength": "define",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "875370d6707d",
+          "slot": "overview",
+          "text": "Arrows indicating operations.",
+          "source_text": "Arrows indicating operations",
+          "strength": "capability",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "03163040cd99",
+          "slot": "overview",
+          "text": "Indicates the action (pressing, turning, etc.) used to operate switches and other devices.",
+          "source_text": "Indicates the action (pressing, turning, etc.) used to operate switches and other devices.",
+          "strength": "capability",
+          "source": "p.6 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2e4fd5ebce1c",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 7 ページ.",
+          "source_text": "NB8_北米英語.book 7 ページ",
+          "strength": "capability",
+          "source": "p.7 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.7 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3fdad6cbdd73",
+          "slot": "overview",
+          "text": "Precautions for use.",
+          "source_text": "Precautions for use",
+          "strength": "capability",
+          "source": "p.7 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0e57f9c07a6e",
+          "slot": "overview",
+          "text": "● The main unit requires a 12 V DC power supply. The main unit should not be installed in any vehicle which does not have a 12 V power system with a ground-connected negative side. An installation other than the one intended may cause severe damage to the main unit, and electric shock or serious injury to the users. ● Even when using the route guidance of the navigation system, be sure to drive by following the actual traffic regulations. If you drive by following only the route guidance of the naviga- tion system, you may violate the actual traffic regulations and cause a traffic accident. ● To ensure safety, the driver should not operate the navigation system while driving. Operat- ing the navigation system while driving may result in an accidental steering wheel operation or otherwise cause an accident. Stop the vehicle before operating the navigation system. Also, do not watch the screen while driving because doing so may be dangerous (ETC). Inat- tention to road conditions ahead may result in an accident. ● The driver should not perform operations such as volume adjustment while driving. Inatten- tion to road conditions ahead may result in an accident, so be sure to stop the vehicle in a safe place before performing the operation. ● The driver should not perform operations such as adding a location or setting the memory while driving. Inattention to road conditions ahead may result in an accident, so be sure to stop the vehicle in a safe place before performing the operation. ● Before viewing a video, be sure to stop the vehicle in a safe place and apply the parking brake. To ensure safety, videos are not displayed during driving. ● To ensure safety, never operate a cell phone while driving. ● Do not disassemble or modify the unit. Doing so may result in an accident, fire or electric shock. ● Do not let water or foreign objects enter the internal parts of the unit. Doing so may result in smoke, fire or an electric shock. ● Do not use the unit when it is malfunctioning, such as when the screen is not lit or no sound comes out. Doing so may result in an accident, fire or electric shock. ● Always replace fuses with fuses of the same specified capacity (amperage). Using a fuse with a higher capacity than the specification may result in a fire. ● If a foreign object or water enters the unit, smoke or a strange odor may be emitted. If such an abnormality occurs, stop using the unit immediately and contact your SUBARU dealer. An accident, fire or electric shock may result if you continue to use the unit under these condi- tions. ● In a thunderstorm, do not touch the antenna line or the unit. Lightning may cause an electric shock. ● Do not park or stop in prohibited areas to use the unit. ● If direct sunlight shines into the vehicle, light may reflect off the product. Be very careful while driving. ● Never use headphones or earphones while driving. Driving while not being able to hear sounds from outside the vehicle may result in a traffic accident.",
+          "source_text": "● The main unit requires a 12 V DC power supply. The main unit should not be installed in any vehicle which does not have a 12 V power system with a ground-connected negative side. An installation other than the one intended may cause severe damage to the main unit, and electric shock or serious injury to the users. ● Even when using the route guidance of the navigation system, be sure to drive by following the actual traffic regulations. If you drive by following only the route guidance of the naviga- tion system, you may violate the actual traffic regulations and cause a traffic accident. ● To ensure safety, the driver should not operate the navigation system while driving. Operat- ing the navigation system while driving may result in an accidental steering wheel operation or otherwise cause an accident. Stop the vehicle before operating the navigation system. Also, do not watch the screen while driving because doing so may be dangerous (ETC). Inat- tention to road conditions ahead may result in an accident. ● The driver should not perform operations such as volume adjustment while driving. Inatten- tion to road conditions ahead may result in an accident, so be sure to stop the vehicle in a safe place before performing the operation. ● The driver should not perform operations such as adding a location or setting the memory while driving. Inattention to road conditions ahead may result in an accident, so be sure to stop the vehicle in a safe place before performing the operation. ● Before viewing a video, be sure to stop the vehicle in a safe place and apply the parking brake. To ensure safety, videos are not displayed during driving. ● To ensure safety, never operate a cell phone while driving. ● Do not disassemble or modify the unit. Doing so may result in an accident, fire or electric shock. ● Do not let water or foreign objects enter the internal parts of the unit. Doing so may result in smoke, fire or an electric shock. ● Do not use the unit when it is malfunctioning, such as when the screen is not lit or no sound comes out. Doing so may result in an accident, fire or electric shock. ● Always replace fuses with fuses of the same specified capacity (amperage). Using a fuse with a higher capacity than the specification may result in a fire. ● If a foreign object or water enters the unit, smoke or a strange odor may be emitted. If such an abnormality occurs, stop using the unit immediately and contact your SUBARU dealer. An accident, fire or electric shock may result if you continue to use the unit under these condi- tions. ● In a thunderstorm, do not touch the antenna line or the unit. Lightning may cause an electric shock. ● Do not park or stop in prohibited areas to use the unit. ● If direct sunlight shines into the vehicle, light may reflect off the product. Be very careful while driving. ● Never use headphones or earphones while driving. Driving while not being able to hear sounds from outside the vehicle may result in a traffic accident.",
+          "strength": "constraint",
+          "source": "p.7 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e3933ef948cd",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 8 ページ.",
+          "source_text": "NB8_北米英語.book 8 ページ",
+          "strength": "capability",
+          "source": "p.8 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.8 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "da2e858d9d73",
+          "slot": "overview",
+          "text": "● Although the unit can be used when the ignition switch is set to either ACC or ON, to protect the battery, start the engine before using the unit. ● To prevent the battery from being discharged, do not leave the audio system on longer than necessary when the engine is not running. ● Do not use the unit anywhere other than in a vehicle. Doing so may result in an electric shock or other injury. ● While driving, keep the volume low enough for you to hear outside sounds. Driving while not being able to hear sounds from outside the vehicle may result in an accident. ● Be careful of the volume when turning on the power. If a loud noise is emitted suddenly when you turn on the power, it may damage your hearing. ● Do not touch the hot parts of the unit. The hot parts may burn you. ● Do not use while there is an abnormality such as sound breakup or distortion. Doing so may result in a fire. ● Using the unit during extremely high or low temperature may result in mistaken operation or a malfunction. In particular, the temperature inside the vehicle can often rise to a high level during the summer. Cool the vehicle, for example by opening a window, before using the unit. ● Be careful if metal or water enters the unit, or the unit is exposed to a strong impact, because it may result in a malfunction. ● The touch buttons on the display screen may not operate correctly if condensation forms inside them. If this happens, do not attempt to operate the buttons until the condensation has disappeared. ● If juice or similar liquid is spilled on the display, wipe off immediately. Failure to do so may result in product malfunction. ● The screen is easily marked by fingerprints and tends to attract dust, and should therefore be cleaned occasionally. When cleaning, turn off the power, and wipe lightly with a soft, dry cloth. To remove dirt, soak a soft cloth in neutral detergent and squeeze well before wiping. Do not use a wet floor-cloth, organic solvents (benzene, ethanol, thinner, etc.), acids, or alka- lis. Using such agents will result in screen deterioration. Furthermore, do not hit the screen or rub it with hard objects. ● Do not apply a strong force to the display and surrounding panels. Doing so may result in damage. ● Do not place a heavy object or apply a strong force near the display. Otherwise, a display malfunction may be caused. ● Do not apply protective film to the display. Otherwise, the display may be difficult to see or may not be operated properly.",
+          "source_text": "● Although the unit can be used when the ignition switch is set to either ACC or ON, to protect the battery, start the engine before using the unit. ● To prevent the battery from being discharged, do not leave the audio system on longer than necessary when the engine is not running. ● Do not use the unit anywhere other than in a vehicle. Doing so may result in an electric shock or other injury. ● While driving, keep the volume low enough for you to hear outside sounds. Driving while not being able to hear sounds from outside the vehicle may result in an accident. ● Be careful of the volume when turning on the power. If a loud noise is emitted suddenly when you turn on the power, it may damage your hearing. ● Do not touch the hot parts of the unit. The hot parts may burn you. ● Do not use while there is an abnormality such as sound breakup or distortion. Doing so may result in a fire. ● Using the unit during extremely high or low temperature may result in mistaken operation or a malfunction. In particular, the temperature inside the vehicle can often rise to a high level during the summer. Cool the vehicle, for example by opening a window, before using the unit. ● Be careful if metal or water enters the unit, or the unit is exposed to a strong impact, because it may result in a malfunction. ● The touch buttons on the display screen may not operate correctly if condensation forms inside them. If this happens, do not attempt to operate the buttons until the condensation has disappeared. ● If juice or similar liquid is spilled on the display, wipe off immediately. Failure to do so may result in product malfunction. ● The screen is easily marked by fingerprints and tends to attract dust, and should therefore be cleaned occasionally. When cleaning, turn off the power, and wipe lightly with a soft, dry cloth. To remove dirt, soak a soft cloth in neutral detergent and squeeze well before wiping. Do not use a wet floor-cloth, organic solvents (benzene, ethanol, thinner, etc.), acids, or alka- lis. Using such agents will result in screen deterioration. Furthermore, do not hit the screen or rub it with hard objects. ● Do not apply a strong force to the display and surrounding panels. Doing so may result in damage. ● Do not place a heavy object or apply a strong force near the display. Otherwise, a display malfunction may be caused. ● Do not apply protective film to the display. Otherwise, the display may be difficult to see or may not be operated properly.",
+          "strength": "constraint",
+          "source": "p.8 / text",
+          "thresholds": [
+            {
+              "threshold_id": "ca2652af613f",
+              "matching_text": "occasionally",
+              "kind": "frequency",
+              "unit": null,
+              "context": "and tends to attract dust, and should therefore be cleaned occasionally. When cleaning, turn off the power, and wipe lightly with a",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5ea085e6552e",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 9 ページ.",
+          "source_text": "NB8_北米英語.book 9 ページ",
+          "strength": "capability",
+          "source": "p.9 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.9 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "777d680bfc71",
+          "slot": "overview",
+          "text": "● SUBARU CORPORATION is not responsible for any damages to the purchaser or third par- ties that occur from using the map data. ● We do not provide any replacements or refunds for any mistakes there may be in the map data displays or contents, such as misspelling, omissions or misaligned positions. ● SUBARU CORPORATION makes no guarantee that the functions included in the map data will be appropriate for the specific objectives of the purchaser. ● Functions that cannot be operated while driving have their colors toned down when the vehi- cle is being driven, and their operation is disabled. Selecting a disabled button may result in the display of an operation prohibited message on the screen. ● When using the unit for the first time after purchase, or after the battery was removed for a long time, the current position may not be displayed correctly. Wait a short time until the GPS positioning corrects the displayed position. ● This device is precision-engineered equipment and the recorded data can be lost as a result of static electricity, electrical noise, vibration, or other influences. To protect the device against data loss, we recommend keeping a separate record of the data that you record after purchase. ● The screen may be adversely affected or disturbed by noise if electrical equipment that gen- erates powerful electrical noise is used near the system. In such cases, keep the electrical equipment at a distance, or refrain from use. ● The display may appear brighter when the temperature is low, or immediately after starting the engine, however, this is a characteristic of the LED elements, and does not indicate a fault. The display will return to its original brightness when the vehicle cabin has warmed up. ● When you look at the screen through polarized material such as polarized sunglasses, the screen may be dark and hard to see. If so, look at the screen from different angles, adjust the screen settings on the general settings screen or take off your sunglasses. ● It may be difficult to view the screen if the display is exposed to sunlight from an awkward angle. ● The touch panel may function incorrectly or fail to respond if operated with objects other than fingers (nails, operation when wearing gloves, pens, etc.) ● If the system functions unexpectedly such as an area other than the one touched being selected, or failure to respond when touched, there is a possibility that another finger or part of the hand is in contact with display. ● Scratches on the system panel surface are easily noticeable, and it should therefore be han- dled with care. ● If a device that uses wireless communication is installed in the vehicle, functions using a Bluetooth device, the radio broadcast receiver, navigation system, etc. may not operate properly.",
+          "source_text": "● SUBARU CORPORATION is not responsible for any damages to the purchaser or third par- ties that occur from using the map data. ● We do not provide any replacements or refunds for any mistakes there may be in the map data displays or contents, such as misspelling, omissions or misaligned positions. ● SUBARU CORPORATION makes no guarantee that the functions included in the map data will be appropriate for the specific objectives of the purchaser. ● Functions that cannot be operated while driving have their colors toned down when the vehi- cle is being driven, and their operation is disabled. Selecting a disabled button may result in the display of an operation prohibited message on the screen. ● When using the unit for the first time after purchase, or after the battery was removed for a long time, the current position may not be displayed correctly. Wait a short time until the GPS positioning corrects the displayed position. ● This device is precision-engineered equipment and the recorded data can be lost as a result of static electricity, electrical noise, vibration, or other influences. To protect the device against data loss, we recommend keeping a separate record of the data that you record after purchase. ● The screen may be adversely affected or disturbed by noise if electrical equipment that gen- erates powerful electrical noise is used near the system. In such cases, keep the electrical equipment at a distance, or refrain from use. ● The display may appear brighter when the temperature is low, or immediately after starting the engine, however, this is a characteristic of the LED elements, and does not indicate a fault. The display will return to its original brightness when the vehicle cabin has warmed up. ● When you look at the screen through polarized material such as polarized sunglasses, the screen may be dark and hard to see. If so, look at the screen from different angles, adjust the screen settings on the general settings screen or take off your sunglasses. ● It may be difficult to view the screen if the display is exposed to sunlight from an awkward angle. ● The touch panel may function incorrectly or fail to respond if operated with objects other than fingers (nails, operation when wearing gloves, pens, etc.) ● If the system functions unexpectedly such as an area other than the one touched being selected, or failure to respond when touched, there is a possibility that another finger or part of the hand is in contact with display. ● Scratches on the system panel surface are easily noticeable, and it should therefore be han- dled with care. ● If a device that uses wireless communication is installed in the vehicle, functions using a Bluetooth device, the radio broadcast receiver, navigation system, etc. may not operate properly.",
+          "strength": "constraint",
+          "source": "p.9 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7c0e19a7f06c",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 10 ページ.",
+          "source_text": "NB8_北米英語.book 10 ページ",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d44b6b51713f",
+          "slot": "overview",
+          "text": "When transferring ownership of the vehicle.",
+          "source_text": "When transferring ownership of the vehicle",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e1ff9ddf6c29",
+          "slot": "overview",
+          "text": "● When transferring ownership of your vehicle, delete the personal information registered in the vehicle by performing a Factory Data Reset. For details about the Factory Data Reset, (→P.48) refer to the “Software settings screen” section. Note that certain personal information inputted in the system and the phone number of any paired device will remain in vehicle data logs even after the Factory Data Reset. These data logs are strictly for quality assurance purposes and not viewable by any subsequent pur- chaser. To have those logs deleted permanently from the vehicle, please contact your SUB- ARU dealer.",
+          "source_text": "● When transferring ownership of your vehicle, delete the personal information registered in the vehicle by performing a Factory Data Reset. For details about the Factory Data Reset, (→P.48) refer to the “Software settings screen” section. Note that certain personal information inputted in the system and the phone number of any paired device will remain in vehicle data logs even after the Factory Data Reset. These data logs are strictly for quality assurance purposes and not viewable by any subsequent pur- chaser. To have those logs deleted permanently from the vehicle, please contact your SUB- ARU dealer.",
+          "strength": "constraint",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "347e25d0361c",
+          "slot": "overview",
+          "text": "Safety instruction.",
+          "source_text": "Safety instruction",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "84f67c3b1e86",
+          "slot": "overview",
+          "text": "To use this system in the safest possible manner, follow all the safety tips shown below.",
+          "source_text": "To use this system in the safest possible manner, follow all the safety tips shown below.",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a9820567c243",
+          "slot": "overview",
+          "text": "This system is intended to assist in reaching the destination and, if used properly, can do so. The driver is solely responsible for the safe operation of your vehicle and the safety of your passengers.",
+          "source_text": "This system is intended to assist in reaching the destination and, if used properly, can do so. The driver is solely responsible for the safe operation of your vehicle and the safety of your passengers.",
+          "strength": "constraint",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e04883ff5f4a",
+          "slot": "overview",
+          "text": "Do not use any feature of this system to the extent it becomes a distraction and pre- vents safe driving. The first priority while driving should always be the safe operation of the vehicle. While driving, be sure to observe all traffic regulations.",
+          "source_text": "Do not use any feature of this system to the extent it becomes a distraction and pre- vents safe driving. The first priority while driving should always be the safe operation of the vehicle. While driving, be sure to observe all traffic regulations.",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "92f605f47b1f",
+          "slot": "overview",
+          "text": "Prior to the actual use of this system, learn how to use it and become thoroughly famil- iar with it. Read the entire manual to make sure you understand the system. Do not allow other people to use this system until they have read and understood the instruc- tions in this manual.",
+          "source_text": "Prior to the actual use of this system, learn how to use it and become thoroughly famil- iar with it. Read the entire manual to make sure you understand the system. Do not allow other people to use this system until they have read and understood the instruc- tions in this manual.",
+          "strength": "capability",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3296898983b2",
+          "slot": "overview",
+          "text": "For your safety, some functions may become inoperable when driving. Unavailable screen buttons are dimmed. Only when the vehicle is not moving, can the destination and route selection be done.",
+          "source_text": "For your safety, some functions may become inoperable when driving. Unavailable screen buttons are dimmed. Only when the vehicle is not moving, can the destination and route selection be done.",
+          "strength": "constraint",
+          "source": "p.10 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f4792bebf694",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 11 ページ.",
+          "source_text": "NB8_北米英語.book 11 ページ",
+          "strength": "capability",
+          "source": "p.11 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.11 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "77b74c6944b6",
+          "slot": "overview",
+          "text": "● For safety, the driver should not operate the system while he/she is driving. Insufficient atten- tion to the road and traffic may cause an accident. ● While driving, be sure to obey the traffic regulations and maintain awareness of the road conditions. If a traffic sign on the road has been changed, route guidance may not have the updated information such as the direction of a one way street.",
+          "source_text": "● For safety, the driver should not operate the system while he/she is driving. Insufficient atten- tion to the road and traffic may cause an accident. ● While driving, be sure to obey the traffic regulations and maintain awareness of the road conditions. If a traffic sign on the road has been changed, route guidance may not have the updated information such as the direction of a one way street.",
+          "strength": "constraint",
+          "source": "p.11 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b84f4a2cf31f",
+          "slot": "overview",
+          "text": "While driving, listen to the voice instructions as much as possible and glance at the screen briefly and only when it is safe. However, do not totally rely on voice guidance. Use it just for reference. If the system cannot determine the current position correctly, there is a possibility of incorrect, late, or non-voice guidance.",
+          "source_text": "While driving, listen to the voice instructions as much as possible and glance at the screen briefly and only when it is safe. However, do not totally rely on voice guidance. Use it just for reference. If the system cannot determine the current position correctly, there is a possibility of incorrect, late, or non-voice guidance.",
+          "strength": "constraint",
+          "source": "p.11 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ba304dec174e",
+          "slot": "overview",
+          "text": "The data in the system may occasionally be incomplete. Road conditions, including driving restrictions (no left turns, street closures, etc.) frequently change. Therefore, before following any instructions from the system, look to see whether the instruction can be done safely and legally.",
+          "source_text": "The data in the system may occasionally be incomplete. Road conditions, including driving restrictions (no left turns, street closures, etc.) frequently change. Therefore, before following any instructions from the system, look to see whether the instruction can be done safely and legally.",
+          "strength": "capability",
+          "source": "p.11 / text",
+          "thresholds": [
+            {
+              "threshold_id": "496e32f7fc14",
+              "matching_text": "occasionally",
+              "kind": "frequency",
+              "unit": null,
+              "context": "The data in the system may occasionally be incomplete. Road conditions, including driving restricti",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0ec666e6e2b5",
+          "slot": "overview",
+          "text": "This system cannot warn about such things as the safety of an area, condition of streets, and availability of emergency services. If unsure about the safety of an area, do not drive into it. Under no circumstances is this system a substitute for the driver’s personal judgement.",
+          "source_text": "This system cannot warn about such things as the safety of an area, condition of streets, and availability of emergency services. If unsure about the safety of an area, do not drive into it. Under no circumstances is this system a substitute for the driver’s personal judgement.",
+          "strength": "constraint",
+          "source": "p.11 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2afbea526871",
+          "slot": "overview",
+          "text": "Use this system only in locations where it is legal to do so. Some states/provinces may have laws prohibiting the use of video and navigation screens next to the driver.",
+          "source_text": "Use this system only in locations where it is legal to do so. Some states/provinces may have laws prohibiting the use of video and navigation screens next to the driver.",
+          "strength": "capability",
+          "source": "p.11 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2974e43c5c7d",
+          "slot": "overview",
+          "text": "NB8_北米英語.book 12 ページ.",
+          "source_text": "NB8_北米英語.book 12 ページ",
+          "strength": "capability",
+          "source": "p.12 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81a449c3b6f6",
+          "slot": "overview",
+          "text": "Introduction.",
+          "source_text": "Introduction",
+          "strength": "capability",
+          "source": "p.12 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2a59ddce9d31",
+          "slot": "overview",
+          "text": "How to read this manual.",
+          "source_text": "How to read this manual",
+          "strength": "capability",
+          "source": "p.12 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fe644fb15bbd",
+          "slot": "overview",
+          "text": "No. Name Description Operational outlines An outline of the operation is explained. Main operations The steps of an operation are explained. Describes supplemental information relating to main Supplemental information operation.",
+          "source_text": "No. Name Description Operational outlines An outline of the operation is explained. Main operations The steps of an operation are explained. Describes supplemental information relating to main Supplemental information operation.",
+          "strength": "capability",
+          "source": "p.12 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "77d44ff5535b",
+          "slot": "overview",
+          "text": "● In this manual, screen buttons and displays are described as “○○○”. In Owner’s Manuals of some languages, they are described as “○○○ (○○ ○)”. Displays after languages are changed in the settings screen are described as “(○○○)”.",
+          "source_text": "● In this manual, screen buttons and displays are described as “○○○”. In Owner’s Manuals of some languages, they are described as “○○○ (○○ ○)”. Displays after languages are changed in the settings screen are described as “(○○○)”.",
+          "strength": "capability",
+          "source": "p.12 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "056ac4a5c2bc",
+      "chapter_number": "2",
+      "title": "Pictorial index",
+      "area": "Introduction",
+      "function_path": "Introduction / Pictorial index",
+      "pages": [
+        13,
+        14
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "4393c5ccd0b3",
+          "slot": "hmi",
+          "text": "Center information display (→P.17).",
+          "source_text": "Center information display (→P.17)",
+          "strength": "capability",
+          "source": "p.13 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7fc584c41af6",
+          "slot": "hmi",
+          "text": "Steering wheel switches (→P.30).",
+          "source_text": "Steering wheel switches (→P.30)",
+          "strength": "capability",
+          "source": "p.13 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "52199a15c00a",
+          "slot": "hmi",
+          "text": "Microphones (→P.33).",
+          "source_text": "Microphones (→P.33)",
+          "strength": "capability",
+          "source": "p.13 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c492eca87af5",
+          "slot": "hmi",
+          "text": "USB ports (→P.30).",
+          "source_text": "USB ports (→P.30)",
+          "strength": "capability",
+          "source": "p.13 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c7de5105372e",
+          "slot": "hmi",
+          "text": "NB8_北米英語.book 14 ページ.",
+          "source_text": "NB8_北米英語.book 14 ページ",
+          "strength": "capability",
+          "source": "p.14 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    }
+  ]
+}

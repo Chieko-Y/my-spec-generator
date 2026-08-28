@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ app_name }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/vendor/mermaid.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.mermaid) { mermaid.initialize({ startOnLoad: true, securityLevel: "strict" }); }
+    });
+  </script>
+</head>
+<body>
+  <nav class="nav-sidebar">
+    <div class="app-title">{{ app_name }}</div>
+    <a href="/manuals" class="{{ 'active' if active_tab == 'manuals' else '' }}">Manuals</a>
+    <a href="/specifications" class="{{ 'active' if active_tab == 'specifications' else '' }}">Specifications</a>
+    <a href="/thresholds" class="{{ 'active' if active_tab == 'thresholds' else '' }}">Thresholds</a>
+    <a href="/screen-elements" class="{{ 'active' if active_tab == 'screen_elements' else '' }}">Screen elements</a>
+    <a href="/glossary" class="{{ 'active' if active_tab == 'glossary' else '' }}">Glossary</a>
+    {% if makers %}
+    <div class="section-label">Makers</div>
+    {% for m in makers %}
+    <a href="/manuals?maker={{ m.name }}">{{ m.name }} {% if m.count %}({{ m.count }}){% endif %}</a>
+    {% endfor %}
+    {% endif %}
+  </nav>
+  <main class="app-main">
+    {% if flash %}
+    <div class="flash {{ flash_kind or 'ok' }}">{{ flash }}</div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

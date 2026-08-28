@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Thresholds</h1>
+<div class="card">
+  <ul>
+    {% for e in entries %}
+    <li><a href="/thresholds/{{ e.manual_id }}?chapter={{ e.chapter }}"><code>{{ e.manual_id }}</code> — {{ e.chapter }}</a></li>
+    {% else %}
+    <li>No generated chapters yet.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

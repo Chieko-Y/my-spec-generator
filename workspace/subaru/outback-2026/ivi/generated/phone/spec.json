@@ -1,0 +1,2233 @@
+{
+  "manual_id": "subaru/outback-2026/multimedia",
+  "maker": "Subaru",
+  "model": "Outback 2026",
+  "document_title": "",
+  "scope": "phone",
+  "markets": [],
+  "profile_id": "subaru_v1",
+  "meta": {
+    "unmatched_headings": [],
+    "chapter_prefix": "phone",
+    "chapter_slug": "phone",
+    "chapter_label": "phone",
+    "excluded_sections": []
+  },
+  "functions": [
+    {
+      "function_id": "11d1ee65bf2c",
+      "chapter_number": "1",
+      "title": "Phone screen",
+      "area": "Phone",
+      "function_path": "Phone / Phone screen",
+      "pages": [
+        74,
+        75
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "78fb3965860a",
+          "slot": "overview",
+          "text": "The phone screen can be accessed with the following methods:.",
+          "source_text": "The phone screen can be accessed with the following methods:",
+          "strength": "capability",
+          "source": "p.74 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f9f44e53df60",
+          "slot": "requirements",
+          "text": "Touch “ ” of the main menu. (→P.19).",
+          "source_text": "Touch “ ” of the main menu. (→P.19)",
+          "strength": "capability",
+          "source": "p.74 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3ee346f651dc",
+          "slot": "requirements",
+          "text": "Press the switch on the steering wheel.",
+          "source_text": "Press the switch on the steering wheel.",
+          "strength": "capability",
+          "source": "p.74 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d97d662b3553",
+          "slot": "requirements",
+          "text": "If a message is displayed, register/connect according to the content displayed. (→P.55, P.57).",
+          "source_text": "If a message is displayed, register/connect according to the content displayed. (→P.55, P.57)",
+          "strength": "capability",
+          "source": "p.74 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "08d56a83ff3a",
+          "slot": "requirements",
+          "text": "When Apple CarPlay/Android Auto is used, “ ” of the main menu will change to the corresponding icon. Touch “ ” to activate Apple CarPlay. (→P.67) Touch “ ” to activate Android Auto. (→P.70).",
+          "source_text": "When Apple CarPlay/Android Auto is used, “ ” of the main menu will change to the corresponding icon. Touch “ ” to activate Apple CarPlay. (→P.67) Touch “ ” to activate Android Auto. (→P.70)",
+          "strength": "capability",
+          "source": "p.74 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "56d28fb22e85",
+          "slot": "exception",
+          "text": "Display the level of phone reception. If a cellular phone is not connected via Bluetooth, this icon will not be displayed. The level of reception does not always correspond with the level displayed on the cellular phone. The level of reception may not be displayed depending on the phone you have.",
+          "source_text": "Display the level of phone reception. If a cellular phone is not connected via Bluetooth, this icon will not be displayed. The level of reception does not always correspond with the level displayed on the cellular phone. The level of reception may not be displayed depending on the phone you have.",
+          "strength": "constraint",
+          "source": "p.74 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "547a7c368c2c",
+          "slot": "requirements",
+          "text": "Display the remaining of Bluetooth device battery charge. The amount displayed does not always correspond with the amount displayed on the Bluetooth device.",
+          "source_text": "Display the remaining of Bluetooth device battery charge. The amount displayed does not always correspond with the amount displayed on the Bluetooth device.",
+          "strength": "capability",
+          "source": "p.74 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "462e10607254",
+          "slot": "requirements",
+          "text": "Displays the manage device settings screen. (→P.44).",
+          "source_text": "Displays the manage device settings screen. (→P.44)",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "93f72d793c38",
+          "page": 73,
+          "rect": [
+            216.6959991,
+            402.7860037,
+            373.0350036,
+            490.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Touch “ ” to activate Android Auto. (→P.70)",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "fb196b64ed88",
+      "chapter_number": "2",
+      "title": "Functions available using a Bluetooth phone",
+      "area": "Phone",
+      "function_path": "Phone / Functions available using a Bluetooth phone",
+      "pages": [
+        75
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "5e6698373b80",
+          "slot": "overview",
+          "text": "Registering a Bluetooth phone/device: →P.55.",
+          "source_text": "Registering a Bluetooth phone/device: →P.55",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c1fe16024f1a",
+          "slot": "overview",
+          "text": "Calling on the Bluetooth phone: →P.78 Phone operation Receiving on the Bluetooth phone: →P.81.",
+          "source_text": "Calling on the Bluetooth phone: →P.78 Phone operation Receiving on the Bluetooth phone: →P.81",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "48bd21db7537",
+          "slot": "overview",
+          "text": "Talking on the Bluetooth phone: →P.81.",
+          "source_text": "Talking on the Bluetooth phone: →P.81",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fe737b10df21",
+          "slot": "overview",
+          "text": "Message function Using the Bluetooth phone message function: →P.83.",
+          "source_text": "Message function Using the Bluetooth phone message function: →P.83",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "76ac7b611efc",
+          "slot": "overview",
+          "text": "Setting up a phone Setting the Bluetooth phone/device: →P.45.",
+          "source_text": "Setting up a phone Setting the Bluetooth phone/device: →P.45",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "845dbf3bd6f0",
+      "chapter_number": "3",
+      "title": "Some basics",
+      "area": "Phone",
+      "function_path": "Phone / Some basics",
+      "pages": [
+        75,
+        76
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "f00f80a9a260",
+          "slot": "overview",
+          "text": "The hands-free system enables calls to be made and received without having to take your hands off the steering wheel.",
+          "source_text": "The hands-free system enables calls to be made and received without having to take your hands off the steering wheel.",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c1a9199cc5b3",
+          "slot": "overview",
+          "text": "This system supports Bluetooth. Bluetooth is a wireless data system that enables cellular phones to be used without being connected by a cable or placed in a cradle.",
+          "source_text": "This system supports Bluetooth. Bluetooth is a wireless data system that enables cellular phones to be used without being connected by a cable or placed in a cradle.",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a51ac23a68ce",
+          "slot": "overview",
+          "text": "The operating procedure of the phone is explained here.",
+          "source_text": "The operating procedure of the phone is explained here.",
+          "strength": "capability",
+          "source": "p.75 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "35cbe583a59c",
+          "slot": "requirements",
+          "text": "While driving, do not use a cellular phone or connect the Bluetooth phone.",
+          "source_text": "While driving, do not use a cellular phone or connect the Bluetooth phone.",
+          "strength": "capability",
+          "source": "p.75 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6c92f09146e6",
+          "slot": "requirements",
+          "text": "This system is fitted with Bluetooth antennas. People with implantable cardiac pacemakers, cardiac resynchronization therapy-pacemakers or implantable cardioverter defibrillators should maintain a reasonable distance between themselves and the Bluetooth antennas. The radio waves may affect the operation of such devices.",
+          "source_text": "This system is fitted with Bluetooth antennas. People with implantable cardiac pacemakers, cardiac resynchronization therapy-pacemakers or implantable cardioverter defibrillators should maintain a reasonable distance between themselves and the Bluetooth antennas. The radio waves may affect the operation of such devices.",
+          "strength": "capability",
+          "source": "p.75 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1a7975e7540e",
+          "slot": "requirements",
+          "text": "Before using Bluetooth phones, users of any electrical medical device other than implantable cardiac pacemakers, cardiac resynchronization therapy-pacemakers or implantable cardioverter defibrillators should consult the manufacturer of the device for information about its operation under the influence of radio waves. Radio waves could have unexpected effects on the operation of such medical devices.",
+          "source_text": "Before using Bluetooth phones, users of any electrical medical device other than implantable cardiac pacemakers, cardiac resynchronization therapy-pacemakers or implantable cardioverter defibrillators should consult the manufacturer of the device for information about its operation under the influence of radio waves. Radio waves could have unexpected effects on the operation of such medical devices.",
+          "strength": "capability",
+          "source": "p.75 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9b82ccc302d2",
+          "slot": "requirements",
+          "text": "Do not leave your cellular phone in the vehicle. The temperature inside may rise to a level that could damage the phone.",
+          "source_text": "Do not leave your cellular phone in the vehicle. The temperature inside may rise to a level that could damage the phone.",
+          "strength": "capability",
+          "source": "p.75 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e4ca87c7f231",
+          "slot": "exception",
+          "text": "If your cellular phone does not support Bluetooth, this system cannot function. Certain functions may not be available depending on the type of cellular phone.",
+          "source_text": "If your cellular phone does not support Bluetooth, this system cannot function. Certain functions may not be available depending on the type of cellular phone.",
+          "strength": "constraint",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "68a41617cd44",
+          "slot": "exception",
+          "text": "In the following conditions, the system may not function:.",
+          "source_text": "In the following conditions, the system may not function:",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6ba8e2627a0a",
+          "slot": "requirements",
+          "text": "The cellular phone is turned off.",
+          "source_text": "The cellular phone is turned off.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7381e5c1bf8f",
+          "slot": "requirements",
+          "text": "The current position is outside the communication area.",
+          "source_text": "The current position is outside the communication area.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8123ce0bd518",
+          "slot": "requirements",
+          "text": "The cellular phone is not connected.",
+          "source_text": "The cellular phone is not connected.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6d29731f44d7",
+          "slot": "requirements",
+          "text": "The cellular phone has a low battery.",
+          "source_text": "The cellular phone has a low battery.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "02f9b8fcdd60",
+          "slot": "exception",
+          "text": "When using the hands-free function and other Bluetooth functions at the same time, the following problems may occur:.",
+          "source_text": "When using the hands-free function and other Bluetooth functions at the same time, the following problems may occur:",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "37a452956473",
+          "slot": "requirements",
+          "text": "The Bluetooth connection may be cut.",
+          "source_text": "The Bluetooth connection may be cut.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3f1c26714a3a",
+          "slot": "requirements",
+          "text": "Noise may be heard when playing back voice with the Bluetooth function.",
+          "source_text": "Noise may be heard when playing back voice with the Bluetooth function.",
+          "strength": "constraint",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2c697337026b",
+          "slot": "hmi",
+          "text": "The other party’s voice will be heard from the front speakers. The audio system will be muted during phone calls or when hands-free voice commands are used.",
+          "source_text": "The other party’s voice will be heard from the front speakers. The audio system will be muted during phone calls or when hands-free voice commands are used.",
+          "strength": "constraint",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "675343307448",
+          "slot": "exception",
+          "text": "Talk alternately with the other party on the phone. If both parties speak at the same time, the other party may not hear what has been said. (This is not a malfunction.).",
+          "source_text": "Talk alternately with the other party on the phone. If both parties speak at the same time, the other party may not hear what has been said. (This is not a malfunction.)",
+          "strength": "constraint",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ebb60fd555c6",
+          "slot": "requirements",
+          "text": "Keep call volume down. Otherwise, the other party’s voice may be audible outside the vehicle and voice echo may increase. When talking on the phone, speak clearly towards the microphone.",
+          "source_text": "Keep call volume down. Otherwise, the other party’s voice may be audible outside the vehicle and voice echo may increase. When talking on the phone, speak clearly towards the microphone.",
+          "strength": "constraint",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c7f1a9fbe596",
+          "slot": "exception",
+          "text": "The other party may not hear you clearly when:.",
+          "source_text": "The other party may not hear you clearly when:",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "58ba0b685bfc",
+          "slot": "requirements",
+          "text": "Driving on an unpaved road. (Making excessive traffic noise.).",
+          "source_text": "Driving on an unpaved road. (Making excessive traffic noise.)",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bcc683fe9501",
+          "slot": "requirements",
+          "text": "Driving at high speeds.",
+          "source_text": "Driving at high speeds.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0ec5541392b9",
+          "slot": "requirements",
+          "text": "Driving with a window open.",
+          "source_text": "Driving with a window open.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "73739e0f9159",
+          "slot": "requirements",
+          "text": "When air from the ventilator blows directly toward the microphone.",
+          "source_text": "When air from the ventilator blows directly toward the microphone.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "03530fbef123",
+          "slot": "requirements",
+          "text": "The sound of the air conditioning fan is loud.",
+          "source_text": "The sound of the air conditioning fan is loud.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ad982d3391ce",
+          "slot": "requirements",
+          "text": "There is a negative effect on sound quality due to the phone and/or network being used.",
+          "source_text": "There is a negative effect on sound quality due to the phone and/or network being used.",
+          "strength": "capability",
+          "source": "p.76 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "a53695800d68",
+      "chapter_number": "4",
+      "title": "Registering/connecting a Bluetooth phone",
+      "area": "Phone",
+      "function_path": "Phone / Registering/connecting a Bluetooth phone",
+      "pages": [
+        76
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "4c8654a47a98",
+          "slot": "overview",
+          "text": "To use the hands-free system for cellular phones, it is necessary to register a cellular phone with the system. (→P.55).",
+          "source_text": "To use the hands-free system for cellular phones, it is necessary to register a cellular phone with the system. (→P.55)",
+          "strength": "capability",
+          "source": "p.76 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8d3691f4eb0a",
+          "slot": "overview",
+          "text": "Bluetooth phone condition display.",
+          "source_text": "Bluetooth phone condition display",
+          "strength": "capability",
+          "source": "p.76 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8b5751ead67e",
+          "slot": "overview",
+          "text": "The condition of the Bluetooth phone appears on the upper right side of the screen. (→ P.74).",
+          "source_text": "The condition of the Bluetooth phone appears on the upper right side of the screen. (→ P.74)",
+          "strength": "capability",
+          "source": "p.76 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "ad3e9b72ea79",
+      "chapter_number": "5",
+      "title": "Using the phone switch/microphone",
+      "area": "Phone",
+      "function_path": "Phone / Using the phone switch/microphone",
+      "pages": [
+        77
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "420ffdc59c8a",
+          "slot": "overview",
+          "text": "Steering wheel switch By pressing the phone switch, a call can be received or ended without taking your hands off the steering wheel.",
+          "source_text": "Steering wheel switch By pressing the phone switch, a call can be received or ended without taking your hands off the steering wheel.",
+          "strength": "capability",
+          "source": "p.77 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dff16332a372",
+          "slot": "overview",
+          "text": "Off hook switch.",
+          "source_text": "Off hook switch",
+          "strength": "capability",
+          "source": "p.77 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4e8ff11a9dbf",
+          "slot": "overview",
+          "text": "On hook switch 4.",
+          "source_text": "On hook switch 4",
+          "strength": "capability",
+          "source": "p.77 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "496cb3802316",
+          "slot": "overview",
+          "text": "Volume control switch.",
+          "source_text": "Volume control switch",
+          "strength": "capability",
+          "source": "p.77 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9c11119eabfa",
+          "slot": "requirements",
+          "text": "Press the + side to increase the volume.",
+          "source_text": "Press the + side to increase the volume.",
+          "strength": "capability",
+          "source": "p.77 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "19e0cce31db3",
+          "slot": "requirements",
+          "text": "Press the - side to decrease the volume.",
+          "source_text": "Press the - side to decrease the volume.",
+          "strength": "capability",
+          "source": "p.77 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "68b30dae82bb",
+          "slot": "requirements",
+          "text": "Microphone The microphone is used when talking on the phone.",
+          "source_text": "Microphone The microphone is used when talking on the phone.",
+          "strength": "constraint",
+          "source": "p.77 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "1af9a2a5f842",
+      "chapter_number": "6",
+      "title": "About the contacts in the contact list",
+      "area": "Phone",
+      "function_path": "Phone / About the contacts in the contact list",
+      "pages": [
+        78
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "4efd73aa6939",
+          "slot": "exception",
+          "text": "The following data is stored for every registered phone. When another phone is connected, the following registered data cannot be read: - Contact data - Call history data - Favorites data - All phone settings.",
+          "source_text": "The following data is stored for every registered phone. When another phone is connected, the following registered data cannot be read: - Contact data - Call history data - Favorites data - All phone settings",
+          "strength": "constraint",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ad745a099393",
+          "slot": "requirements",
+          "text": "When a phone’s registration is deleted, the above-mentioned data is also deleted.",
+          "source_text": "When a phone’s registration is deleted, the above-mentioned data is also deleted.",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "e0c54d72688b",
+      "chapter_number": "7",
+      "title": "Calling on the Bluetooth phone",
+      "area": "Phone",
+      "function_path": "Phone / Calling on the Bluetooth phone",
+      "pages": [
+        78
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the phone screen. (→P.74)",
+          "sequence": 1,
+          "source": "p.78 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select the desired button to call from.",
+          "sequence": 2,
+          "source": "p.78 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "543c24145264",
+          "slot": "overview",
+          "text": "After a Bluetooth phone has been registered, a call can be made using the hands-free system. There are several methods by which a call can be made, as described below.",
+          "source_text": "After a Bluetooth phone has been registered, a call can be made using the hands-free system. There are several methods by which a call can be made, as described below.",
+          "strength": "capability",
+          "source": "p.78 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "eb7de92cf880",
+          "slot": "requirements",
+          "text": "By recent calls list: →P.78.",
+          "source_text": "By recent calls list: →P.78",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "076e0a60c9aa",
+          "slot": "requirements",
+          "text": "By favorites list: →P.79.",
+          "source_text": "By favorites list: →P.79",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bf4ada842f2d",
+          "slot": "requirements",
+          "text": "By dialpad*1: →P.80.",
+          "source_text": "By dialpad*1: →P.80",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4fdad1e4fddc",
+          "slot": "requirements",
+          "text": "By contacts list: →P.80.",
+          "source_text": "By contacts list: →P.80",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f87fc712719e",
+          "slot": "requirements",
+          "text": "By SMS/MMS: →P.86.",
+          "source_text": "By SMS/MMS: →P.86",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "67b3c1646249",
+          "slot": "requirements",
+          "text": "By POI call*2: →P.127.",
+          "source_text": "By POI call*2: →P.127",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a04ac4067a9c",
+          "slot": "exception",
+          "text": "By voice assistance system: →P.31 *1: The operation cannot be performed while driving. *2: If equipped.",
+          "source_text": "By voice assistance system: →P.31 *1: The operation cannot be performed while driving. *2: If equipped",
+          "strength": "constraint",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "8f58aee8fb6a",
+      "chapter_number": "8",
+      "title": "By recent calls list",
+      "area": "Phone",
+      "function_path": "Phone / By recent calls list",
+      "pages": [
+        78,
+        79
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the phone screen. (→P.74)",
+          "sequence": 1,
+          "source": "p.78 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “Recents”, and then select the desired contact.",
+          "sequence": 2,
+          "source": "p.78 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "b3add07bb36d",
+          "slot": "requirements",
+          "text": "The outgoing call screen is displayed.",
+          "source_text": "The outgoing call screen is displayed.",
+          "strength": "capability",
+          "source": "p.78 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "59d37303a882",
+          "slot": "requirements",
+          "text": "Select to display all latest call history items.",
+          "source_text": "Select to display all latest call history items.",
+          "strength": "capability",
+          "source": "p.79 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d1eb76812c27",
+          "slot": "requirements",
+          "text": "Select to display missed calls.",
+          "source_text": "Select to display missed calls.",
+          "strength": "capability",
+          "source": "p.79 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a9efe1afdb23",
+          "slot": "requirements",
+          "text": "Displays the call type icons. “ ”: Missed call “ ”: Incoming call “ ”: Outgoing call 4.",
+          "source_text": "Displays the call type icons. “ ”: Missed call “ ”: Incoming call “ ”: Outgoing call 4",
+          "strength": "capability",
+          "source": "p.79 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6d34700d1228",
+          "slot": "requirements",
+          "text": "Pressing switch on the steering wheel will make a call to the phone number displayed at the top of the list.",
+          "source_text": "Pressing switch on the steering wheel will make a call to the phone number displayed at the top of the list.",
+          "strength": "capability",
+          "source": "p.79 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "00651ec1f80c",
+          "slot": "requirements",
+          "text": "When a phone number registered in the contact list is received, the name is displayed.",
+          "source_text": "When a phone number registered in the contact list is received, the name is displayed.",
+          "strength": "capability",
+          "source": "p.79 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cf3f13df1608",
+          "slot": "exception",
+          "text": "International phone calls may not be made depending on the type of cellular phone you have.",
+          "source_text": "International phone calls may not be made depending on the type of cellular phone you have.",
+          "strength": "capability",
+          "source": "p.79 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "024a620ca2a6",
+          "page": 78,
+          "rect": [
+            222.2160034,
+            194.70598669999993,
+            378.55500789999996,
+            282.35398929999997
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to display all latest call history items.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "734516c6a60c",
+      "chapter_number": "9",
+      "title": "By favorites list",
+      "area": "Phone",
+      "function_path": "Phone / By favorites list",
+      "pages": [
+        79,
+        80
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the phone screen. (→P.74)",
+          "sequence": 1,
+          "source": "p.79 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “Favorites”, and then select the desired contact.",
+          "sequence": 2,
+          "source": "p.79 / step"
+        },
+        {
+          "number": 3,
+          "text": "Touch “ ” next to the desired number.",
+          "sequence": 3,
+          "source": "p.79 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "cd7d227156d8",
+          "slot": "overview",
+          "text": "Calls can be made to contacts registered as favorites of the connected Bluetooth phone.",
+          "source_text": "Calls can be made to contacts registered as favorites of the connected Bluetooth phone.",
+          "strength": "capability",
+          "source": "p.79 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c93947a8b9b2",
+          "slot": "requirements",
+          "text": "When “ ” is displayed next to the desired contact, selecting it will display the outgoing call screen.",
+          "source_text": "When “ ” is displayed next to the desired contact, selecting it will display the outgoing call screen.",
+          "strength": "capability",
+          "source": "p.79 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b29d5c6a7310",
+          "slot": "requirements",
+          "text": "The outgoing call screen is displayed.",
+          "source_text": "The outgoing call screen is displayed.",
+          "strength": "capability",
+          "source": "p.79 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a585c768b4aa",
+          "slot": "requirements",
+          "text": "Up to 50 favorites can be downloaded and displayed on the favorites screen. (Up to 5 phone numbers per favorite will be downloaded.).",
+          "source_text": "Up to 50 favorites can be downloaded and displayed on the favorites screen. (Up to 5 phone numbers per favorite will be downloaded.)",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9280837d25b8",
+          "slot": "requirements",
+          "text": "When “Sync” is set to on, favorites is downloaded automatically. (→P.45).",
+          "source_text": "When “Sync” is set to on, favorites is downloaded automatically. (→P.45)",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "72e388050f91",
+          "slot": "requirements",
+          "text": "The order of the phonebook list can be sorted by first name or last name. (→P.45).",
+          "source_text": "The order of the phonebook list can be sorted by first name or last name. (→P.45)",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "6dd9380306d4",
+      "chapter_number": "10",
+      "title": "By dialpad",
+      "area": "Phone",
+      "function_path": "Phone / By dialpad",
+      "pages": [
+        80
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the phone screen. (→P.74)",
+          "sequence": 1,
+          "source": "p.80 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “Dialpad”.",
+          "sequence": 2,
+          "source": "p.80 / step"
+        },
+        {
+          "number": 3,
+          "text": "Enter the phone number.",
+          "sequence": 3,
+          "source": "p.80 / step"
+        },
+        {
+          "number": 4,
+          "text": "Touch “Call”.",
+          "sequence": 4,
+          "source": "p.80 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "9fa03d3333c4",
+          "slot": "requirements",
+          "text": "The outgoing call screen is displayed.",
+          "source_text": "The outgoing call screen is displayed.",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6cbc2f55d1c8",
+          "slot": "requirements",
+          "text": "Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone.",
+          "source_text": "Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone.",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "d566453ee3d9",
+      "chapter_number": "11",
+      "title": "By contacts list",
+      "area": "Phone",
+      "function_path": "Phone / By contacts list",
+      "pages": [
+        80
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the phone screen. (→P.74)",
+          "sequence": 1,
+          "source": "p.80 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “Contacts”, and then select the desired contact.",
+          "sequence": 2,
+          "source": "p.80 / step"
+        },
+        {
+          "number": 3,
+          "text": "Touch “ ” next to the desired number.",
+          "sequence": 3,
+          "source": "p.80 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "a4e2713c10d5",
+          "slot": "overview",
+          "text": "Calls can be made by using contact data which is downloaded from the connected Bluetooth phone.",
+          "source_text": "Calls can be made by using contact data which is downloaded from the connected Bluetooth phone.",
+          "strength": "capability",
+          "source": "p.80 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b7da0ac0fd8e",
+          "slot": "requirements",
+          "text": "Numbers may include home, work, mobile and other as categories depending on the phonebook data of the connected cellular phone.",
+          "source_text": "Numbers may include home, work, mobile and other as categories depending on the phonebook data of the connected cellular phone.",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8b37f02d8498",
+          "slot": "requirements",
+          "text": "The outgoing call screen is displayed.",
+          "source_text": "The outgoing call screen is displayed.",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c834671c03a8",
+          "slot": "requirements",
+          "text": "Up to 2000 contacts can be downloaded and displayed on the phonebook screen. (Up to 5 phone numbers per contact will be downloaded.).",
+          "source_text": "Up to 2000 contacts can be downloaded and displayed on the phonebook screen. (Up to 5 phone numbers per contact will be downloaded.)",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8b749ecdf7ac",
+          "slot": "requirements",
+          "text": "When “Sync” is set to on, contacts is downloaded automatically. (→P.45).",
+          "source_text": "When “Sync” is set to on, contacts is downloaded automatically. (→P.45)",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f97f1569b8f2",
+          "slot": "requirements",
+          "text": "The order of the phonebook list can be sorted by first name or last name. (→P.45).",
+          "source_text": "The order of the phonebook list can be sorted by first name or last name. (→P.45)",
+          "strength": "capability",
+          "source": "p.80 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "4f0b7a7ba5b3",
+      "chapter_number": "12",
+      "title": "Incoming calls",
+      "area": "Phone",
+      "function_path": "Phone / Incoming calls",
+      "pages": [
+        81
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “Accept” or press the",
+          "sequence": 1,
+          "source": "p.81 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "781a015c0ea7",
+          "slot": "overview",
+          "text": "When a call is received, the incoming call screen pops up with sound.",
+          "source_text": "When a call is received, the incoming call screen pops up with sound.",
+          "strength": "capability",
+          "source": "p.81 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b8190edfe27f",
+          "slot": "overview",
+          "text": "switch on the steering wheel to talk on the phone. To refuse to receive the call: Touch “Decline” or press the switch on the steering wheel. To adjust the volume of a received call: Turn the VOLUME knob, or use the +/- switch on the steering wheel.",
+          "source_text": "switch on the steering wheel to talk on the phone. To refuse to receive the call: Touch “Decline” or press the switch on the steering wheel. To adjust the volume of a received call: Turn the VOLUME knob, or use the +/- switch on the steering wheel.",
+          "strength": "capability",
+          "source": "p.81 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3e2d2505b24c",
+          "slot": "exception",
+          "text": "During international phone calls, the other party’s name or number may not be displayed cor- 4 rectly depending on the type of cellular phone you have.",
+          "source_text": "During international phone calls, the other party’s name or number may not be displayed cor- 4 rectly depending on the type of cellular phone you have.",
+          "strength": "capability",
+          "source": "p.81 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "903048153ee8",
+          "slot": "requirements",
+          "text": "The ringtone volume can also be set from the sound settings screen.(→P.41).",
+          "source_text": "The ringtone volume can also be set from the sound settings screen.(→P.41)",
+          "strength": "capability",
+          "source": "p.81 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "a21532ccf95e",
+          "page": 80,
+          "rect": [
+            307.4159851,
+            256.1460125,
+            463.5149841,
+            344.03401249999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "“Decline” or press the switch on",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "9e671739c079",
+      "chapter_number": "13",
+      "title": "Talking on the Bluetooth phone",
+      "area": "Phone",
+      "function_path": "Phone / Talking on the Bluetooth phone",
+      "pages": [
+        81,
+        82
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "4b3b3b8c9e01",
+          "slot": "overview",
+          "text": "While talking on the phone, this screen is displayed. The operations outlined below can be performed on this screen.",
+          "source_text": "While talking on the phone, this screen is displayed. The operations outlined below can be performed on this screen.",
+          "strength": "capability",
+          "source": "p.81 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e658c2793500",
+          "slot": "overview",
+          "text": "Select to mute your voice to the other party.",
+          "source_text": "Select to mute your voice to the other party.",
+          "strength": "capability",
+          "source": "p.81 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "47471b5e0d72",
+          "slot": "overview",
+          "text": "Select to enter the desired numbers/output tones.",
+          "source_text": "Select to enter the desired numbers/output tones.",
+          "strength": "capability",
+          "source": "p.81 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d718fd5c2aa3",
+          "slot": "overview",
+          "text": "Select to transfer the call. Touch “Transfer” to change from a hands-free call to a cellular phone call. Touch “Transfer Back” to change from cellular phone call to hands-free call.",
+          "source_text": "Select to transfer the call. Touch “Transfer” to change from a hands-free call to a cellular phone call. Touch “Transfer Back” to change from cellular phone call to hands-free call.",
+          "strength": "capability",
+          "source": "p.82 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3fdfc7330bfe",
+          "slot": "overview",
+          "text": "When a call is put on hold by pressing the switch on the steering wheel: Select to resume the on-hold call.",
+          "source_text": "When a call is put on hold by pressing the switch on the steering wheel: Select to resume the on-hold call.",
+          "strength": "capability",
+          "source": "p.82 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "846eab5a5d69",
+          "slot": "overview",
+          "text": "Select to hang up the phone.",
+          "source_text": "Select to hang up the phone.",
+          "strength": "capability",
+          "source": "p.82 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3613d96849c7",
+          "slot": "requirements",
+          "text": "Pressing switch on the steering wheel during a call will put the call on hold. Pressing switch on the steering wheel again will resume the on-hold call.",
+          "source_text": "Pressing switch on the steering wheel during a call will put the call on hold. Pressing switch on the steering wheel again will resume the on-hold call.",
+          "strength": "capability",
+          "source": "p.82 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d3606783801f",
+          "slot": "requirements",
+          "text": "Changing between cellular phone call and hands-free call can be performed by operating the cellular phone directly. Transferring methods and operations will be different depending on the type of cellular phone you have. For the operation of the cellular phone, see the manual that comes with it.",
+          "source_text": "Changing between cellular phone call and hands-free call can be performed by operating the cellular phone directly. Transferring methods and operations will be different depending on the type of cellular phone you have. For the operation of the cellular phone, see the manual that comes with it.",
+          "strength": "capability",
+          "source": "p.82 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4b44664780a7",
+          "slot": "requirements",
+          "text": "Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the volume of the other party’s voice.",
+          "source_text": "Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the volume of the other party’s voice.",
+          "strength": "capability",
+          "source": "p.82 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "26c16b794085",
+          "page": 80,
+          "rect": [
+            222.2160034,
+            522.3059928,
+            378.55500789999996,
+            609.9539953999999
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to mute your voice to the other party.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "0741d348047c",
+      "chapter_number": "14",
+      "title": "Call waiting",
+      "area": "Phone",
+      "function_path": "Phone / Call waiting",
+      "pages": [
+        82,
+        83
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “Accept” or press the",
+          "sequence": 1,
+          "source": "p.82 / step"
+        },
+        {
+          "number": 2,
+          "text": "Check that the call waiting screen is",
+          "sequence": 2,
+          "source": "p.83 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "957277ecdcc4",
+          "slot": "overview",
+          "text": "When a call is interrupted by a third party while talking, the incoming call screen pops up with sound.",
+          "source_text": "When a call is interrupted by a third party while talking, the incoming call screen pops up with sound.",
+          "strength": "capability",
+          "source": "p.82 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "433de763b3c7",
+          "slot": "overview",
+          "text": "switch on the steering wheel to start talking with the other party.",
+          "source_text": "switch on the steering wheel to start talking with the other party.",
+          "strength": "capability",
+          "source": "p.82 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "92a6b799f882",
+          "slot": "requirements",
+          "text": "The first call is put on hold. To refuse to receive the call: Touch “Decline” or press the switch on the steering wheel. To end both the first call and second call, press and hold switch on the steering wheel.",
+          "source_text": "The first call is put on hold. To refuse to receive the call: Touch “Decline” or press the switch on the steering wheel. To end both the first call and second call, press and hold switch on the steering wheel.",
+          "strength": "capability",
+          "source": "p.82 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6064182c1659",
+          "slot": "requirements",
+          "text": "displayed.",
+          "source_text": "displayed.",
+          "strength": "capability",
+          "source": "p.83 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "109e806adb45",
+          "slot": "requirements",
+          "text": "“Swap”: Select to change parties. Each time “Swap” or name area is selected, or press the switch on the steering wheel, the party who is on hold will be switched.",
+          "source_text": "“Swap”: Select to change parties. Each time “Swap” or name area is selected, or press the switch on the steering wheel, the party who is on hold will be switched.",
+          "strength": "capability",
+          "source": "p.83 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "87c76b826108",
+          "slot": "requirements",
+          "text": "Touch “Merge” or press and hold the switch on the steering wheel to change to a conference call.*.",
+          "source_text": "Touch “Merge” or press and hold the switch on the steering wheel to change to a conference call.*",
+          "strength": "capability",
+          "source": "p.83 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3febebb80d8a",
+          "slot": "requirements",
+          "text": "Touch “End” or press the switch on the steering wheel to end the call and return to the conversation with the party on hold when having a two-way conversation, and to end the call with both parties when having a three-way conversation.",
+          "source_text": "Touch “End” or press the switch on the steering wheel to end the call and return to the conversation with the party on hold when having a two-way conversation, and to end the call with both parties when having a three-way conversation.",
+          "strength": "constraint",
+          "source": "p.83 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "906c8f37c502",
+          "slot": "exception",
+          "text": "To end all of the calls connected, press and hold switch on the steering wheel. *: Depending on the company of the Bluetooth phone that is connected to the system, the conference call function may not be available. 4.",
+          "source_text": "To end all of the calls connected, press and hold switch on the steering wheel. *: Depending on the company of the Bluetooth phone that is connected to the system, the conference call function may not be available. 4",
+          "strength": "capability",
+          "source": "p.83 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "e72ea39a3fa4",
+          "page": 81,
+          "rect": [
+            301.6560059,
+            478.1459891,
+            457.9950104,
+            565.7939917
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "● The first call is put on hold.",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "82f7fe5b6fec",
+          "page": 82,
+          "rect": [
+            307.4159851,
+            192.78600369999992,
+            463.5149841,
+            280.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "who is on hold will be switched.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "558bf00fd6be",
+      "chapter_number": "15",
+      "title": "Bluetooth phone message function",
+      "area": "Phone",
+      "function_path": "Phone / Bluetooth phone message function",
+      "pages": [
+        83,
+        84
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the phone screen. (→P.74)",
+          "sequence": 1,
+          "source": "p.83 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “Messages”.",
+          "sequence": 2,
+          "source": "p.83 / step"
+        },
+        {
+          "number": 3,
+          "text": "Check that the message inbox screen",
+          "sequence": 3,
+          "source": "p.84 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "839c71130ee0",
+          "slot": "overview",
+          "text": "Received messages can be forwarded from the connected Bluetooth phone, enabling checking and replying using the system.",
+          "source_text": "Received messages can be forwarded from the connected Bluetooth phone, enabling checking and replying using the system.",
+          "strength": "capability",
+          "source": "p.83 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c3a67381dad1",
+          "slot": "overview",
+          "text": "Depending on the type of Bluetooth phone connected, received messages may not be transferred to the message inbox.",
+          "source_text": "Depending on the type of Bluetooth phone connected, received messages may not be transferred to the message inbox.",
+          "strength": "capability",
+          "source": "p.83 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cf6ddec47bfc",
+          "slot": "overview",
+          "text": "If the phone does not support the message function, this function cannot be used.",
+          "source_text": "If the phone does not support the message function, this function cannot be used.",
+          "strength": "constraint",
+          "source": "p.83 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "793c034fb2e5",
+          "slot": "overview",
+          "text": "Depending on the Bluetooth phone type, the screen display may differ, and it may not be possible to use certain functions.",
+          "source_text": "Depending on the Bluetooth phone type, the screen display may differ, and it may not be possible to use certain functions.",
+          "strength": "capability",
+          "source": "p.83 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f4b248e9d69a",
+          "slot": "overview",
+          "text": "To use this function, it is necessary to enable “Sync” for messages on the phone settings screen. (→P.45).",
+          "source_text": "To use this function, it is necessary to enable “Sync” for messages on the phone settings screen. (→P.45)",
+          "strength": "capability",
+          "source": "p.83 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5f2226945f2f",
+          "slot": "requirements",
+          "text": "Depending on the model of your Bluetooth phone, the setting of the connected phone may need to be changed. (ex: For iOS or other models, the notification setting may need to be activated.) For details, check the instructions for the connected Bluetooth phone.",
+          "source_text": "Depending on the model of your Bluetooth phone, the setting of the connected phone may need to be changed. (ex: For iOS or other models, the notification setting may need to be activated.) For details, check the instructions for the connected Bluetooth phone.",
+          "strength": "capability",
+          "source": "p.83 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "606a16bd603f",
+          "slot": "requirements",
+          "text": "is displayed.",
+          "source_text": "is displayed.",
+          "strength": "capability",
+          "source": "p.84 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a98e9b3c013c",
+          "slot": "requirements",
+          "text": "“ ”: Unread message icon.",
+          "source_text": "“ ”: Unread message icon",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f26ca89b755b",
+          "slot": "requirements",
+          "text": "Receiving a message: →P.84.",
+          "source_text": "Receiving a message: →P.84",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1632b47ab6cc",
+          "slot": "requirements",
+          "text": "Checking messages: →P.85.",
+          "source_text": "Checking messages: →P.85",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e7dfe7a2d951",
+          "slot": "requirements",
+          "text": "Replying to a message (quick reply): →P.86.",
+          "source_text": "Replying to a message (quick reply): →P.86",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "76f84c948660",
+          "slot": "requirements",
+          "text": "Sending a new short message: → P.86.",
+          "source_text": "Sending a new short message: → P.86",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2e5802a7f9ce",
+          "slot": "requirements",
+          "text": "Calling the message sender: → P.86.",
+          "source_text": "Calling the message sender: → P.86",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "d331ae77cce7",
+          "page": 83,
+          "rect": [
+            301.6560059,
+            192.78600369999992,
+            457.9950104,
+            280.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "reply): →P.86",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "4762ee76e0bb",
+      "chapter_number": "16",
+      "title": "Receiving a message",
+      "area": "Phone",
+      "function_path": "Phone / Receiving a message",
+      "pages": [
+        84,
+        85
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “Listen”.",
+          "sequence": 1,
+          "source": "p.84 / step"
+        },
+        {
+          "number": 2,
+          "text": "The following screen is displayed.",
+          "sequence": 2,
+          "source": "p.85 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "f0e2d2dd1378",
+          "slot": "overview",
+          "text": "When an SMS/MMS is received, the incoming message screen pops up with sound and is ready to be operated on the screen.",
+          "source_text": "When an SMS/MMS is received, the incoming message screen pops up with sound and is ready to be operated on the screen.",
+          "strength": "capability",
+          "source": "p.84 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8a11d157664d",
+          "slot": "requirements",
+          "text": "Touch “Dismiss” to not open the message.",
+          "source_text": "Touch “Dismiss” to not open the message.",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8b7b69244dc9",
+          "slot": "requirements",
+          "text": "If there are any unread messages The following screen is displayed.",
+          "source_text": "If there are any unread messages The following screen is displayed.",
+          "strength": "capability",
+          "source": "p.84 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "db2de998b3eb",
+          "slot": "requirements",
+          "text": "“View”: Select to display the message inbox screen.",
+          "source_text": "“View”: Select to display the message inbox screen.",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "faccdafff0e6",
+          "slot": "requirements",
+          "text": "“Dismiss”: Select to not open the message.",
+          "source_text": "“Dismiss”: Select to not open the message.",
+          "strength": "capability",
+          "source": "p.84 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ac39edcb3db1",
+          "slot": "requirements",
+          "text": "Select to reply the message. (→P.86) *.",
+          "source_text": "Select to reply the message. (→P.86) *",
+          "strength": "capability",
+          "source": "p.85 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f67bd230fd70",
+          "slot": "requirements",
+          "text": "Select to have messages read out.",
+          "source_text": "Select to have messages read out.",
+          "strength": "capability",
+          "source": "p.85 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d261091ab72f",
+          "slot": "requirements",
+          "text": "Touch “Stop” to stop the message read out.",
+          "source_text": "Touch “Stop” to stop the message read out.",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8f9092fc5832",
+          "slot": "requirements",
+          "text": "Select to call the message sender.",
+          "source_text": "Select to call the message sender.",
+          "strength": "capability",
+          "source": "p.85 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "347c75740bf8",
+          "slot": "requirements",
+          "text": "4 *: Depending on the Bluetooth phone that is connected to the audio system, this function is not available.",
+          "source_text": "4 *: Depending on the Bluetooth phone that is connected to the audio system, this function is not available.",
+          "strength": "capability",
+          "source": "p.85 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7ab7d74959e3",
+          "slot": "exception",
+          "text": "Depending on the cellular phone used for receiving messages, or its registration status with the system, some information may not be displayed.",
+          "source_text": "Depending on the cellular phone used for receiving messages, or its registration status with the system, some information may not be displayed.",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ad3cd93c5266",
+          "slot": "requirements",
+          "text": "To notify SMS/MMS reception by message and sound, it is necessary to enable “Incoming Message Notifications” for messages on the phone settings screen. (→P.45).",
+          "source_text": "To notify SMS/MMS reception by message and sound, it is necessary to enable “Incoming Message Notifications” for messages on the phone settings screen. (→P.45)",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "debefc1fe798",
+          "page": 83,
+          "rect": [
+            216.6959991,
+            491.1060039,
+            373.0350036,
+            578.9940039
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "● “View”: Select to display the message inbox screen.",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "882909a74b05",
+          "page": 84,
+          "rect": [
+            307.4159851,
+            192.78600369999992,
+            463.5149841,
+            280.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "2. The following screen is displayed.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "feb57b648071",
+      "chapter_number": "17",
+      "title": "Checking messages",
+      "area": "Phone",
+      "function_path": "Phone / Checking messages",
+      "pages": [
+        85
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the message inbox screen. (→P.83)",
+          "sequence": 1,
+          "source": "p.85 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select the desired message from the list.",
+          "sequence": 2,
+          "source": "p.85 / step"
+        },
+        {
+          "number": 3,
+          "text": "Check the message. (→P.84)",
+          "sequence": 3,
+          "source": "p.85 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "daf7681a4cec",
+          "slot": "requirements",
+          "text": "Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone.",
+          "source_text": "Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone.",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a4c428f3520c",
+          "slot": "requirements",
+          "text": "Only received messages on the connected Bluetooth phone can be displayed.",
+          "source_text": "Only received messages on the connected Bluetooth phone can be displayed.",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1b595d234388",
+          "slot": "requirements",
+          "text": "The text of the message is not displayed while driving.",
+          "source_text": "The text of the message is not displayed while driving.",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "274cb9997495",
+          "slot": "requirements",
+          "text": "Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the message readout volume.",
+          "source_text": "Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the message readout volume.",
+          "strength": "capability",
+          "source": "p.85 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "a161f60cafb3",
+      "chapter_number": "18",
+      "title": "Replying to a message (quick reply)",
+      "area": "Phone",
+      "function_path": "Phone / Replying to a message (quick reply)",
+      "pages": [
+        86
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the message inbox screen. (→P.83)",
+          "sequence": 1,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select the desired message from the list.",
+          "sequence": 2,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ “Reply”",
+          "sequence": 3,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 4,
+          "text": "Select the desired message.",
+          "sequence": 4,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 5,
+          "text": "→ “Send”",
+          "sequence": 5,
+          "source": "p.86 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "ee6c90f1a2b9",
+          "slot": "requirements",
+          "text": "“ ”: Select to change the message.",
+          "source_text": "“ ”: Select to change the message.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0cf18be03f2d",
+          "slot": "requirements",
+          "text": "“Cancel”: Select to cancel sending the message.",
+          "source_text": "“Cancel”: Select to cancel sending the message.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "43372e54c7a4",
+          "slot": "exception",
+          "text": "Depending on the connected Bluetooth phone device, the replying function to a message may not be available.",
+          "source_text": "Depending on the connected Bluetooth phone device, the replying function to a message may not be available.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cb046b3682a0",
+          "slot": "requirements",
+          "text": "10 messages have already been stored.",
+          "source_text": "10 messages have already been stored.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "03f454498380",
+          "slot": "requirements",
+          "text": "Messages can also be edited on the phone settings screen. (→P.45).",
+          "source_text": "Messages can also be edited on the phone settings screen. (→P.45)",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "fad8bc2fec15",
+      "chapter_number": "19",
+      "title": "Sending a new short message",
+      "area": "Phone",
+      "function_path": "Phone / Sending a new short message",
+      "pages": [
+        86
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the favorites detail screen (→P.79), the recent calls list screen (→P.78) or",
+          "sequence": 1,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “ ” next to the desired number.",
+          "sequence": 2,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the desired message.",
+          "sequence": 3,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 4,
+          "text": "→ “Send”",
+          "sequence": 4,
+          "source": "p.86 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "c27e2554b704",
+          "slot": "overview",
+          "text": "the contact detail screen (→P.80).",
+          "source_text": "the contact detail screen (→P.80).",
+          "strength": "capability",
+          "source": "p.86 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f9ea383298de",
+          "slot": "requirements",
+          "text": "“ ”: Select to change the message.",
+          "source_text": "“ ”: Select to change the message.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "24f207f97bfd",
+          "slot": "requirements",
+          "text": "“Cancel”: Select to cancel sending the message.",
+          "source_text": "“Cancel”: Select to cancel sending the message.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "2643da87df48",
+      "chapter_number": "20",
+      "title": "Calling the message sender",
+      "area": "Phone",
+      "function_path": "Phone / Calling the message sender",
+      "pages": [
+        86
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the message inbox screen. (→P.83)",
+          "sequence": 1,
+          "source": "p.86 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “ ” next to the desired sender.",
+          "sequence": 2,
+          "source": "p.86 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "7b05269b0fd5",
+          "slot": "overview",
+          "text": "Calls can be made to an SMS/MMS message sender’s phone number.",
+          "source_text": "Calls can be made to an SMS/MMS message sender’s phone number.",
+          "strength": "capability",
+          "source": "p.86 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "18bf02d17d41",
+          "slot": "requirements",
+          "text": "The outgoing call screen is displayed.",
+          "source_text": "The outgoing call screen is displayed.",
+          "strength": "capability",
+          "source": "p.86 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "821049df1214",
+      "chapter_number": "21",
+      "title": "Displayed on the instrument cluster display",
+      "area": "Phone",
+      "function_path": "Phone / Displayed on the instrument cluster display",
+      "pages": [
+        87
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "2b2068bdd37f",
+          "slot": "overview",
+          "text": "The instrument cluster’s basic screen will display some of the hands-free phone system display that is displayed on the center information display.",
+          "source_text": "The instrument cluster’s basic screen will display some of the hands-free phone system display that is displayed on the center information display.",
+          "strength": "capability",
+          "source": "p.87 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    }
+  ]
+}

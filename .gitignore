@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+src/.pytest_cache/
+tests/.pytest_cache/
+scratch/
+data/library/**/original/*.pdf
+.env
+
+docs/

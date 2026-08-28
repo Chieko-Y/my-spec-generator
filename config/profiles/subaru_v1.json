@@ -1,0 +1,9 @@
+{
+  "profile_id": "subaru_v1",
+  "extends": "generic_v1",
+  "derived_from": "Measured directly against data/library/subaru/outback-2026/original/MSA5M2611A_STIS.pdf (2026-08-25), pages (0-indexed) 12/13/90/91/92/118 sampled with pdfplumber. Every page carries two fixed running-head lines — a production filename artifact ('NB8_...book N ページ') always at top=69.3, and the chapter title (e.g. 'Audio operation') at top~=151.6-154.6, alternating left/right by page parity — and a bare page-number footer always at top=694.5 (page height 842pt). Real body text never started above top=172.6 in the sample. header_boundary_pt/footer_boundary_pt below sit with margin on both sides of those measured bands. Slot rules and section depth are unverified for this manual and are inherited from generic_v1 unchanged; only layout is overridden per CONCEPT.md section 5 ('layoutだけをプロファイルに外出しした').",
+  "layout": {
+    "header_boundary_pt": 165.0,
+    "footer_boundary_pt": 685.0
+  }
+}

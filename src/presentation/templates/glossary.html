@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Glossary</h1>
+<p>Maps manual wording to an in-house term. The manual's own wording is never replaced — this is an annotation layer only.</p>
+
+<div class="card">
+  <h2>Add a term</h2>
+  <form method="post" action="/glossary">
+    <label>In-house term</label>
+    <input type="text" name="in_house_term" required>
+    <label>Category</label>
+    <select name="category">
+      {% for c in categories %}
+      <option value="{{ c.value }}">{{ c.value }}</option>
+      {% endfor %}
+    </select>
+    <label>Manual wordings (comma-separated, at least one)</label>
+    <input type="text" name="manual_wordings" required placeholder="e.g. Map Screen, map view">
+    <label>Evidence</label>
+    <input type="text" name="evidence" required>
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Registered terms</h2>
+  <table>
+    <tr><th>In-house term</th><th>Category</th><th>Manual wordings</th><th>Evidence</th><th></th></tr>
+    {% for t in terms %}
+    <tr>
+      <td>{{ t.in_house_term }}</td>
+      <td>{{ t.category.value }}</td>
+      <td>{{ t.manual_wordings | join(', ') }}</td>
+      <td>{{ t.evidence }}</td>
+      <td>
+        <form method="post" action="/glossary/delete" style="margin:0">
+          <input type="hidden" name="term_id" value="{{ t.term_id }}">
+          <button type="submit" class="danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="5">No terms yet.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

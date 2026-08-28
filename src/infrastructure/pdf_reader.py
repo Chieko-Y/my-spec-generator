@@ -1,0 +1,233 @@
+"""ManualReader implementation. pdfplumber for layout-preserving text extraction,
+pypdfium2 for the bookmark/outline tree (also used later for figure rendering, so one
+less dependency than pulling in a third PDF library).
+
+pypdfium2 wraps PDFium, a native C library that is not safe to call from more than
+one thread. FastAPI's sync route handlers run in Starlette's threadpool
+(`run_in_threadpool`), which can dispatch different requests to different worker
+threads — calling PDFium from whichever thread happens to pick up the request causes
+it to silently return empty/wrong results (get_toc() yielding 0 bookmarks for a real
+207-bookmark PDF, observed directly against a live server) rather than raising an
+error, which is what made a real generate() failure look like "the button does
+nothing" from the browser. Every pypdfium2 call in this module is routed through a
+single dedicated worker thread (_PDFIUM_EXECUTOR) so PDFium is always touched from the
+same OS thread for the life of the process, regardless of which thread the calling
+request landed on.
+"""
+from __future__ import annotations
+
+import re
+import statistics
+from concurrent.futures import ThreadPoolExecutor
+
+import pdfplumber
+import pypdfium2 as pdfium
+
+from domain.manual_parsing import Bookmark, Line
+
+_LINE_TOLERANCE_PT = 3.0
+_PDFIUM_EXECUTOR = ThreadPoolExecutor(max_workers=1, thread_name_prefix="pdfium")
+
+# Manuals use a custom icon font (bullet-style markers ahead of sub-headings, e.g.
+# "Phone commands", "Music commands") mapped into the Unicode Private Use Area.
+# pdfplumber has no glyph for that codepoint and no other font to fall back to, so it
+# extracts the raw PUA codepoint as if it were real text — pdfplumber fuses the icon
+# glyph onto the following word with no space ("Phone commands"), and it then
+# renders as a tofu/box character wherever the output is displayed (confirmed
+# directly against the real Subaru PDF, 2026-08-26: U+F075 ahead of every one of
+# "Phone/Navigation/Music/Climate/Apps/Vehicle commands" and several other
+# sub-headings). It carries no transferable meaning outside that font, so it is
+# stripped rather than kept.
+_ICON_GLYPH_RE = re.compile(r"[-]")
+
+# A numbered-procedure-step marker word by itself, e.g. "1." or "12." -- these
+# routinely render larger/bolder than the step's own body text (a common list-
+# marker typesetting convention), so they are excluded when picking the size that
+# represents a whole line for heading detection (see _build_line_from_words).
+_STEP_MARKER_RE = re.compile(r"^\d{1,2}\.$")
+
+
+# A normal inter-word gap in flowing prose is a few pt (confirmed against real
+# text on the same page as the bug this threshold fixes: 1.8-4.6pt between
+# ordinary adjacent words). A gap this wide between two x0-adjacent words within
+# one already Y-clustered group is a strong signal that two DIFFERENT columns/
+# lanes happened to land at a similar vertical position and got merged by the
+# Y-only clustering pass below -- confirmed directly against the real 2025 Subaru
+# supplement PDF, 2026-08-27, two separate real cases on the same page (79): a
+# lane-A word ending at x1=337.3 and a lane-B word starting at x0=365.7 (28.4pt
+# gap, produced "...it is 2." with a stray step-number fused in), and a lane-A
+# heading ending at x1=309.6 merged with a lane-B heading starting at x0=365.7
+# (56.1pt gap). Trying to prevent this by pre-splitting the whole page's words by
+# a single global x0 gap (tried first) was unreliable: a word's x0 reflects where
+# IT starts, not where its line/lane starts, so a word near the end of a long
+# lane-A sentence can have an x0 close to or past lane B's start -- the true
+# column gutter is not reliably "the widest gap in the whole page's word x0
+# values." Checking the gap only between ADJACENT words already inside one
+# candidate line avoids that: the two false-positive-prone quantities (a whole
+# page's noisy word-x0 spread, or a whole document's occasional outlier lines)
+# never enter the comparison at all.
+_MAX_INTRA_LINE_GAP_PT = 15.0
+
+
+def _split_cross_column_cluster(ws_sorted: list[dict]) -> list[list[dict]]:
+    if len(ws_sorted) < 2:
+        return [ws_sorted]
+    groups: list[list[dict]] = [[ws_sorted[0]]]
+    for prev, cur in zip(ws_sorted, ws_sorted[1:]):
+        if cur["x0"] - prev["x1"] > _MAX_INTRA_LINE_GAP_PT:
+            groups.append([cur])
+        else:
+            groups[-1].append(cur)
+    return groups
+
+
+def _build_line_from_words(ws_sorted: list[dict], page_index: int) -> Line | None:
+    cleaned = [(_ICON_GLYPH_RE.sub("", w["text"]), w) for w in ws_sorted]
+    cleaned = [(t, w) for t, w in cleaned if t]
+    if not cleaned:
+        return None
+    text = " ".join(t for t, _ in cleaned).strip()
+    if not text:
+        return None
+    # Median across every word in the line, not just the first (leftmost) word's
+    # size. BUG FOUND 2026-08-27: using only the first word's size made a numbered
+    # procedure step ("1. Turn the Bluetooth connection setting of your Bluetooth
+    # phone/device on.") look like a section heading to
+    # build_blocks_from_font_headings, purely because its leading "1." marker
+    # renders at a larger size (12pt) than the sentence's own body-sized text
+    # (9pt) -- confirmed against the real 2025 Subaru supplement PDF, page 79. A
+    # median is robust to one or two such outlier marker words; using it also
+    # means each PDF's own font-size fallback (Some PDFs -- confirmed the same
+    # document -- expose no character-level "size" at all, pdfplumber returns the
+    # key present but None rather than omitting it, so this falls back to
+    # "height", the word's own bounding-box height, which is always present) is
+    # applied per-word before taking the median, not just to a single word.
+    #
+    # A leading step-number marker ("1.", "2.", ...) is excluded from the median
+    # when the line has other words: a short step ("3. Select .") can still have
+    # the marker outvote 1-2 real body words even under a median (confirmed
+    # against the same real page, 2026-08-27 -- "3. Select" alone still measured
+    # 10.5, just above the heading threshold). If EVERY word is a marker (a lone
+    # "2." split off on its own, a real residual case from imperfect column
+    # splitting -- see _split_cross_column_cluster above), fall back to using it,
+    # since there is nothing else to represent the line's size with.
+    non_marker = [(t, w) for t, w in cleaned if not _STEP_MARKER_RE.match(t)]
+    size_source = non_marker or cleaned
+    word_sizes = [w.get("size") or w.get("height") or 0.0 for _, w in size_source]
+    return Line(
+        page=page_index,
+        text=text,
+        top=min(w["top"] for _, w in cleaned),
+        x0=min(w["x0"] for _, w in cleaned),
+        size=statistics.median(word_sizes),
+    )
+
+
+def _group_words_into_lines(words: list[dict], page_index: int, columns: int = 1) -> list[Line]:
+    # Cluster by proximity to the first word's top in the current cluster, not by
+    # rounding top/tolerance to a fixed grid. Binning put two words 1.06pt apart —
+    # well inside the 3pt tolerance — into different lines because they straddled a
+    # rounding boundary (423.55 -> bucket 141, 424.61 -> bucket 142), which knocked
+    # the last word of one printed line ("dis-", a line-wrap hyphen) into its own
+    # phantom line and left the real content reassembled out of order (confirmed
+    # directly against the real Subaru PDF, 2026-08-25: "display" split into a
+    # stray "dis-" line and a "play ..." line, with an unrelated sentence between
+    # them once the paragraph text was joined). Proximity to a fixed anchor has no
+    # such boundary.
+    ordered = sorted(words, key=lambda w: w["top"])
+    clusters: list[list[dict]] = []
+    for w in ordered:
+        if clusters and abs(w["top"] - clusters[-1][0]["top"]) <= _LINE_TOLERANCE_PT:
+            clusters[-1].append(w)
+        else:
+            clusters.append([w])
+
+    lines: list[Line] = []
+    for ws in clusters:
+        ws_sorted = sorted(ws, key=lambda w: w["x0"])
+        # columns > 1 only: a Y-cluster can still legitimately contain two
+        # different columns' words (see _MAX_INTRA_LINE_GAP_PT above) -- gated on
+        # columns so the well-tested single-column pipeline's behavior is
+        # unchanged (a genuinely wide gap within one real single-column line, e.g.
+        # a table row, should NOT be split there).
+        groups = _split_cross_column_cluster(ws_sorted) if columns > 1 else [ws_sorted]
+        for group in groups:
+            line = _build_line_from_words(group, page_index)
+            if line is not None:
+                lines.append(line)
+    return lines
+
+
+def _read_bookmarks_unsafe(pdf_path: str) -> list[Bookmark]:
+    """Not thread-safe on its own — call only via _read_bookmarks(), which pins this
+    to the dedicated PDFium thread."""
+    doc = pdfium.PdfDocument(pdf_path)
+    try:
+        out: list[Bookmark] = []
+        for bm in doc.get_toc():
+            dest = bm.get_dest()
+            page_index = dest.get_index() if dest is not None else None
+            if page_index is None:
+                continue
+            out.append(Bookmark(title=bm.get_title().strip(), level=bm.level, page_index=page_index))
+        return out
+    finally:
+        doc.close()
+
+
+def _read_bookmarks(pdf_path: str) -> list[Bookmark]:
+    return _PDFIUM_EXECUTOR.submit(_read_bookmarks_unsafe, pdf_path).result()
+
+
+class PdfManualReader:
+    def read(self, pdf_path: str, columns: int = 1) -> tuple[list[Line], list[Bookmark]]:
+        lines: list[Line] = []
+        with pdfplumber.open(pdf_path) as pdf:
+            for page_index, page in enumerate(pdf.pages):
+                words = page.extract_words(use_text_flow=False, keep_blank_chars=False)
+                lines.extend(_group_words_into_lines(words, page_index, columns))
+        bookmarks = _read_bookmarks(pdf_path)
+        return lines, bookmarks
+
+    def read_image_rects(
+        self, pdf_path: str, page_start: int = 0, page_end: int | None = None
+    ) -> dict[int, list[tuple[float, float, float, float]]]:
+        """page_index -> raw embedded-image bounding boxes (x0, top, x1, bottom),
+        for pages in [page_start, page_end).
+
+        Screen-illustration figures in a real owner's manual are embedded raster
+        images, not vector art assembled from many small shapes — confirmed
+        directly against the Subaru PDF, 2026-08-25: page.images on a page with a
+        known figure returned exactly one large image whose size (312x186pt)
+        matched that figure's published metadata pixel-for-point, alongside a
+        handful of small (~11pt) inline icon images that are not figures at all.
+        Size filtering happens later (domain.figures.is_figure_sized); this just
+        collects candidates.
+
+        page_start/page_end default to the whole document, but a caller generating
+        one chapter should always pass its actual page range: scanning every page
+        of a 140-page manual for one 20-page chapter's figures was the dominant
+        cost in a generate() that otherwise finished in seconds (observed directly,
+        2026-08-25 — phone chapter, 9 real figures, over 2 minutes end to end).
+        """
+        out: dict[int, list[tuple[float, float, float, float]]] = {}
+        with pdfplumber.open(pdf_path) as pdf:
+            pages = pdf.pages[page_start:page_end] if page_end is not None else pdf.pages[page_start:]
+            for offset, page in enumerate(pages):
+                page_index = page_start + offset
+                rects = [(im["x0"], im["top"], im["x1"], im["bottom"]) for im in page.images]
+                if rects:
+                    out[page_index] = rects
+        return out
+
+    def outline_preview(self, pdf_path: str) -> tuple[int, list[Bookmark]]:
+        with pdfplumber.open(pdf_path) as pdf:
+            page_count = len(pdf.pages)
+        bookmarks = _read_bookmarks(pdf_path)
+        return page_count, bookmarks
+
+    def cover_text(self, pdf_path: str) -> str:
+        with pdfplumber.open(pdf_path) as pdf:
+            if not pdf.pages:
+                return ""
+            return pdf.pages[0].extract_text() or ""

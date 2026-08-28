@@ -1,0 +1,2534 @@
+{
+  "manual_id": "subaru/outback-2026/multimedia",
+  "maker": "Subaru",
+  "model": "Outback 2026",
+  "document_title": "",
+  "scope": "basic-operation",
+  "markets": [],
+  "profile_id": "subaru_v1",
+  "meta": {
+    "unmatched_headings": [],
+    "chapter_prefix": "basic-operation",
+    "chapter_slug": "basic-operation",
+    "chapter_label": "basic-operation",
+    "excluded_sections": []
+  },
+  "functions": [
+    {
+      "function_id": "0b6043917d6b",
+      "chapter_number": "1",
+      "title": "Display and control",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Display and control",
+      "pages": [
+        16
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "f8ff89ff6925",
+          "slot": "overview",
+          "text": "Center information display.",
+          "source_text": "Center information display",
+          "strength": "capability",
+          "source": "p.16 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "97b1e233ac0f",
+          "slot": "requirements",
+          "text": "Operate the touch screen by directly touching it.",
+          "source_text": "Operate the touch screen by directly touching it.",
+          "strength": "capability",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4f7c71c9b45e",
+          "slot": "requirements",
+          "text": "VOLUME knob.",
+          "source_text": "VOLUME knob",
+          "strength": "capability",
+          "source": "p.16 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c00c1a1090d9",
+          "slot": "requirements",
+          "text": "Turn the knob to adjust the volume.",
+          "source_text": "Turn the knob to adjust the volume.",
+          "strength": "capability",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "70ac2ac94f56",
+          "slot": "requirements",
+          "text": "Press the knob to turn the volume mute on/off.",
+          "source_text": "Press the knob to turn the volume mute on/off.",
+          "strength": "capability",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "350d77da811c",
+          "slot": "requirements",
+          "text": "Press and hold the knob to turn the audio system off. To turn the audio system on, press and hold the knob again or touch “ ” of the main menu (→P.19).",
+          "source_text": "Press and hold the knob to turn the audio system off. To turn the audio system on, press and hold the knob again or touch “ ” of the main menu (→P.19).",
+          "strength": "capability",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "20c96bb4d92e",
+          "slot": "requirements",
+          "text": "The audio system will remain off if you turn the ignition switch from OFF to ACC/ON while the audio system is off. If you had set the volume to mute, the audio system will remain mute and the track will start playing from where it was last stopped.",
+          "source_text": "The audio system will remain off if you turn the ignition switch from OFF to ACC/ON while the audio system is off. If you had set the volume to mute, the audio system will remain mute and the track will start playing from where it was last stopped.",
+          "strength": "constraint",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "a3dfded138c1",
+      "chapter_number": "2",
+      "title": "Initial screen",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Initial screen",
+      "pages": [
+        16,
+        17
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "When the ignition switch is turned to ACC or ON, the initial screen will be",
+          "sequence": 1,
+          "source": "p.16 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “I Agree”.",
+          "sequence": 2,
+          "source": "p.17 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "58b6301c1826",
+          "slot": "requirements",
+          "text": "When the vehicle is stopped with the engine running, always apply the parking brake for safety.",
+          "source_text": "When the vehicle is stopped with the engine running, always apply the parking brake for safety.",
+          "strength": "capability",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "852d489f8343",
+          "slot": "requirements",
+          "text": "displayed and the system will begin operating.",
+          "source_text": "displayed and the system will begin operating.",
+          "strength": "capability",
+          "source": "p.16 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e87a324fffda",
+          "slot": "exception",
+          "text": "After a few seconds, the “Caution” screen will be displayed.",
+          "source_text": "After a few seconds, the “Caution” screen will be displayed.",
+          "strength": "capability",
+          "source": "p.16 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "5bc832286ec2",
+          "page": 16,
+          "rect": [
+            305.9760132,
+            186.78600369999992,
+            465.1270132,
+            286.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Touch “I Agree”.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "ba79088ce8f0",
+      "chapter_number": "3",
+      "title": "Center information display overview",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Center information display overview",
+      "pages": [
+        17,
+        18
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "9d590bcbb8a7",
+          "slot": "overview",
+          "text": "Main menu Select the desired icon to display the corresponding functions screen on the home screen. (→P.19).",
+          "source_text": "Main menu Select the desired icon to display the corresponding functions screen on the home screen. (→P.19)",
+          "strength": "capability",
+          "source": "p.17 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8e71231038f6",
+          "slot": "overview",
+          "text": "Information bar.",
+          "source_text": "Information bar",
+          "strength": "capability",
+          "source": "p.18 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d8cc26608060",
+          "slot": "requirements",
+          "text": "Displays notification information, such as that of the functions being used.",
+          "source_text": "Displays notification information, such as that of the functions being used.",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "227fe145de04",
+          "slot": "requirements",
+          "text": "For some notification information displayed, select to display the operation screen of the selected category.",
+          "source_text": "For some notification information displayed, select to display the operation screen of the selected category.",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0b535a8269b7",
+          "slot": "requirements",
+          "text": "Status icons.",
+          "source_text": "Status icons",
+          "strength": "capability",
+          "source": "p.18 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "447f723b2945",
+          "slot": "requirements",
+          "text": "The status of the Bluetooth connection, etc. is displayed. (→P.20).",
+          "source_text": "The status of the Bluetooth connection, etc. is displayed. (→P.20)",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c9c18ebe1b4b",
+          "slot": "requirements",
+          "text": "Outside temperature.",
+          "source_text": "Outside temperature",
+          "strength": "capability",
+          "source": "p.18 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0943882f7ffe",
+          "slot": "requirements",
+          "text": "Unit of measurements displayed can be changed. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Unit of measurements displayed can be changed. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1b9a7a4f10b8",
+          "slot": "requirements",
+          "text": "Select to display the clock setting screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the clock setting screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fe625b4bc99f",
+          "slot": "requirements",
+          "text": "Voice assistance button.",
+          "source_text": "Voice assistance button",
+          "strength": "capability",
+          "source": "p.18 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f5e3d9415198",
+          "slot": "requirements",
+          "text": "Start the voice assistance system. (→P.31).",
+          "source_text": "Start the voice assistance system. (→P.31)",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0f775d53a57b",
+          "slot": "requirements",
+          "text": "Home screen.",
+          "source_text": "Home screen",
+          "strength": "capability",
+          "source": "p.18 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d6ba28bfa1ca",
+          "slot": "requirements",
+          "text": "Operate the functions in this display area. (→P.20).",
+          "source_text": "Operate the functions in this display area. (→P.20)",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "6dfc20779521",
+          "page": 16,
+          "rect": [
+            137.9759979,
+            368.70599419999996,
+            456.024002,
+            567.2339941
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Main menu",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "73d3f672bbb2",
+      "chapter_number": "4",
+      "title": "Main menu",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Main menu",
+      "pages": [
+        19,
+        20
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "613eae776615",
+          "slot": "overview",
+          "text": "Display the home screen.",
+          "source_text": "Display the home screen.",
+          "strength": "capability",
+          "source": "p.19 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6e18505e19f4",
+          "slot": "overview",
+          "text": "Display the map screen. (→P.119) *.",
+          "source_text": "Display the map screen. (→P.119) *",
+          "strength": "capability",
+          "source": "p.19 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ed3a85489802",
+          "slot": "overview",
+          "text": "Display the audio control screen. Select the desired audio source. (→P.90).",
+          "source_text": "Display the audio control screen. Select the desired audio source. (→P.90)",
+          "strength": "capability",
+          "source": "p.19 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d0ec358e8ee4",
+          "slot": "overview",
+          "text": "Display the phone screen. (→P.74) When Apple CarPlay/Android AutoTM is used, the Apple CarPlay/Android AutoTM icon will be displayed. (→P.67, 70).",
+          "source_text": "Display the phone screen. (→P.74) When Apple CarPlay/Android AutoTM is used, the Apple CarPlay/Android AutoTM icon will be displayed. (→P.67, 70)",
+          "strength": "constraint",
+          "source": "p.19 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0cbdfc1dc9c0",
+          "slot": "overview",
+          "text": "Display the settings screen. (→P.40).",
+          "source_text": "Display the settings screen. (→P.40)",
+          "strength": "capability",
+          "source": "p.19 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "377d5132d93d",
+          "slot": "overview",
+          "text": "“Driver Profile”: By registering the preferred vehicle conditions and settings of registered drivers in advance, the driver profiles function allows those conditions/settings to be recalled when a registered driver is to drive. Refer to the vehicle Owner’s Manual for details. “Manage Devices”: Display two devices based on the favorites registration and use history conditions. Select the desired device to display its settings screen. (→P.44).",
+          "source_text": "“Driver Profile”: By registering the preferred vehicle conditions and settings of registered drivers in advance, the driver profiles function allows those conditions/settings to be recalled when a registered driver is to drive. Refer to the vehicle Owner’s Manual for details. “Manage Devices”: Display two devices based on the favorites registration and use history conditions. Select the desired device to display its settings screen. (→P.44)",
+          "strength": "constraint",
+          "source": "p.19 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "65fe98964e85",
+          "slot": "overview",
+          "text": "*: If equipped.",
+          "source_text": "*: If equipped",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "b4e70e6f601c",
+          "page": 18,
+          "rect": [
+            146.1360016,
+            223.98600829999998,
+            464.1840057,
+            422.7540137
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Display the home screen.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "2f0869cc5524",
+      "chapter_number": "5",
+      "title": "Status icons",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Status icons",
+      "pages": [
+        20
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "ce1feda34fc9",
+          "slot": "overview",
+          "text": "Displayed when the audio system volume is mute. (→P.16).",
+          "source_text": "Displayed when the audio system volume is mute. (→P.16)",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "59bdf8cff9a1",
+          "slot": "overview",
+          "text": "Poor Excellent *1 Displayed when Wi-Fi® function is on. Displays the level of Wi-Fi® reception.",
+          "source_text": "Poor Excellent *1 Displayed when Wi-Fi® function is on. Displays the level of Wi-Fi® reception.",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c812f2fee5fb",
+          "slot": "overview",
+          "text": "Poor Excellent *1*2 Displayed when Wi-Fi® Hotspot function is on. Displays the level of Wi-Fi® Hotspot reception.",
+          "source_text": "Poor Excellent *1*2 Displayed when Wi-Fi® Hotspot function is on. Displays the level of Wi-Fi® Hotspot reception.",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c3c79b434ca9",
+          "slot": "overview",
+          "text": "Displayed when the Bluetooth connection is established.",
+          "source_text": "Displayed when the Bluetooth connection is established.",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "074738a3df32",
+          "slot": "overview",
+          "text": "Displayed when DCM (Data Communication Module in vehicle cellular connection) is used. *1 Select to display the privacy policy and terms of use.",
+          "source_text": "Displayed when DCM (Data Communication Module in vehicle cellular connection) is used. *1 Select to display the privacy policy and terms of use.",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4109dd4addeb",
+          "slot": "overview",
+          "text": "*1: If equipped *2: Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details.",
+          "source_text": "*1: If equipped *2: Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details.",
+          "strength": "constraint",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "a46b126356eb",
+          "page": 19,
+          "rect": [
+            216.6959991,
+            272.7060172,
+            372.9839935,
+            323.6340186
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Poor Excellent",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "a8a0da08eaf7",
+      "chapter_number": "6",
+      "title": "Screen type",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Screen type",
+      "pages": [
+        20
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "b72a319a1cfc",
+          "slot": "overview",
+          "text": "For screen types, there are widget screen, apps screen, and calm screen.",
+          "source_text": "For screen types, there are widget screen, apps screen, and calm screen.",
+          "strength": "capability",
+          "source": "p.20 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "64b85e0b1ba8",
+      "chapter_number": "7",
+      "title": "Changing the screen type",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Changing the screen type",
+      "pages": [
+        21
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "3f651fd82799",
+          "slot": "overview",
+          "text": "Swipe right/left on the widget screen to change the screen type.",
+          "source_text": "Swipe right/left on the widget screen to change the screen type.",
+          "strength": "capability",
+          "source": "p.21 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "42cda0d7082f",
+      "chapter_number": "8",
+      "title": "Widget screen",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Widget screen",
+      "pages": [
+        21
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "91b67d948e88",
+          "slot": "overview",
+          "text": "Models with navigation system.",
+          "source_text": "Models with navigation system",
+          "strength": "capability",
+          "source": "p.21 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "48963825ce9c",
+          "slot": "overview",
+          "text": "Models without navigation system.",
+          "source_text": "Models without navigation system",
+          "strength": "capability",
+          "source": "p.21 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8172de49822a",
+          "slot": "overview",
+          "text": "Displays the map screen. Simple operations are available on this screen.",
+          "source_text": "Displays the map screen. Simple operations are available on this screen.",
+          "strength": "capability",
+          "source": "p.21 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c70772b0cba2",
+          "slot": "overview",
+          "text": "Displays simple operations screen of the selected audio source. Simple operations are available on this screen. Selecting the upper part displays the audio screen. (→P.89).",
+          "source_text": "Displays simple operations screen of the selected audio source. Simple operations are available on this screen. Selecting the upper part displays the audio screen. (→P.89)",
+          "strength": "capability",
+          "source": "p.21 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b412ed6af605",
+          "slot": "overview",
+          "text": "Displays recent calls. Select to make a call. Selecting the upper part displays the phone screen. (→P.74).",
+          "source_text": "Displays recent calls. Select to make a call. Selecting the upper part displays the phone screen. (→P.74)",
+          "strength": "capability",
+          "source": "p.21 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "65e2d92561bc",
+          "page": 20,
+          "rect": [
+            221.4960022,
+            293.1059881,
+            369.1080017,
+            376.9139868
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Models without navigation system",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "994aa8b89ae4",
+          "page": 20,
+          "rect": [
+            226.5359955,
+            454.6260001,
+            374.2139893,
+            538.6739966
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Displays the map screen. Simple operations are available on this screen.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "bdff27d3fbee",
+      "chapter_number": "9",
+      "title": "Apps screen",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Apps screen",
+      "pages": [
+        22,
+        23
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the apps screen. (→P.21)",
+          "sequence": 1,
+          "source": "p.22 / step"
+        },
+        {
+          "number": 2,
+          "text": "Touch “Add Shortcut”.",
+          "sequence": 2,
+          "source": "p.22 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the desired function.",
+          "sequence": 3,
+          "source": "p.22 / step"
+        },
+        {
+          "number": 4,
+          "text": "Select the desired shortcut function.",
+          "sequence": 4,
+          "source": "p.22 / step"
+        },
+        {
+          "number": 5,
+          "text": "Check that the shortcut icon is displayed on the apps screen.",
+          "sequence": 5,
+          "source": "p.22 / step"
+        },
+        {
+          "number": 1,
+          "text": "Select and hold the shortcut icon to enter edit mode.",
+          "sequence": 6,
+          "source": "p.23 / step"
+        },
+        {
+          "number": 2,
+          "text": "Drag the button to the desired position.",
+          "sequence": 7,
+          "source": "p.23 / step"
+        },
+        {
+          "number": 1,
+          "text": "Select and hold the shortcut icon to enter edit mode.",
+          "sequence": 8,
+          "source": "p.23 / step"
+        },
+        {
+          "number": 2,
+          "text": "Drag the button to “Drag Here to Delete” area.",
+          "sequence": 9,
+          "source": "p.23 / step"
+        },
+        {
+          "number": 3,
+          "text": "Touch “Done”.",
+          "sequence": 10,
+          "source": "p.23 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "4f3cfca0be56",
+          "slot": "overview",
+          "text": "Display the Apple CarPlay screen. (→P.67).",
+          "source_text": "Display the Apple CarPlay screen. (→P.67)",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "aa1006a44830",
+          "slot": "overview",
+          "text": "Display the Android Auto screen. (→P.70).",
+          "source_text": "Display the Android Auto screen. (→P.70)",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d9b8a3ed3682",
+          "slot": "overview",
+          "text": "Display the phone screen. (→P.74).",
+          "source_text": "Display the phone screen. (→P.74)",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5b01024a38b4",
+          "slot": "overview",
+          "text": "Access MySubaru from “MySubaru Connected Services” for a variety of remote services. * Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details.",
+          "source_text": "Access MySubaru from “MySubaru Connected Services” for a variety of remote services. * Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details.",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9f8d252ce92f",
+          "slot": "overview",
+          "text": "Turn the display off. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Turn the display off. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c3e3c1d67e85",
+          "slot": "overview",
+          "text": "Valet mode restricts operations of the system when valet parking is used, to prevent unwanted access to personal information stored in the system. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Valet mode restricts operations of the system when valet parking is used, to prevent unwanted access to personal information stored in the system. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "constraint",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fe1131394f42",
+          "slot": "overview",
+          "text": "Frequently used functions and operations can be added to the apps screen. (→P.22) Button positions can be changed freely. (→P.23).",
+          "source_text": "Frequently used functions and operations can be added to the apps screen. (→P.22) Button positions can be changed freely. (→P.23)",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6dc0e4f4b79f",
+          "slot": "overview",
+          "text": "*: If equipped.",
+          "source_text": "*: If equipped",
+          "strength": "constraint",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "34adcc3e8564",
+          "slot": "overview",
+          "text": "Adding shortcut icons the apps screen.",
+          "source_text": "Adding shortcut icons the apps screen",
+          "strength": "capability",
+          "source": "p.22 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2e881d6306c0",
+          "slot": "requirements",
+          "text": "Depending on the function, select other items and enter necessary information.",
+          "source_text": "Depending on the function, select other items and enter necessary information.",
+          "strength": "capability",
+          "source": "p.22 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "686a2be4fbe5",
+          "slot": "requirements",
+          "text": "When shortcuts are added, the apps screen can be expanded to up to 3 pages. The page can be changed by swiping.",
+          "source_text": "When shortcuts are added, the apps screen can be expanded to up to 3 pages. The page can be changed by swiping.",
+          "strength": "capability",
+          "source": "p.23 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "75331ec32cda",
+          "slot": "requirements",
+          "text": "Moving and deleting shortcut icons.",
+          "source_text": "Moving and deleting shortcut icons",
+          "strength": "capability",
+          "source": "p.23 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ccb4d1e3f76d",
+          "slot": "requirements",
+          "text": "When moving shortcut icons 1.",
+          "source_text": "When moving shortcut icons 1",
+          "strength": "capability",
+          "source": "p.23 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5067c980418c",
+          "slot": "requirements",
+          "text": "User can move buttons to another page by dragging them to the corresponding end of the screen if the number of buttons allows for multiple pages.",
+          "source_text": "User can move buttons to another page by dragging them to the corresponding end of the screen if the number of buttons allows for multiple pages.",
+          "strength": "constraint",
+          "source": "p.23 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "276b74588320",
+          "slot": "requirements",
+          "text": "When deleting shortcut icons.",
+          "source_text": "When deleting shortcut icons",
+          "strength": "capability",
+          "source": "p.23 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "bc174f786021",
+          "page": 21,
+          "rect": [
+            216.6959991,
+            220.38597929999992,
+            373.0820007,
+            308.03398189999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Display the Apple CarPlay screen. (→P.67)",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "da348289ffbc",
+      "chapter_number": "10",
+      "title": "Calm screen",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Calm screen",
+      "pages": [
+        23,
+        24
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "d6473342eca6",
+          "slot": "overview",
+          "text": "Outside temperature.",
+          "source_text": "Outside temperature",
+          "strength": "capability",
+          "source": "p.23 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "550045af6c63",
+          "slot": "requirements",
+          "text": "Unit of measurements displayed can be changed. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Unit of measurements displayed can be changed. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.23 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "73c5d8e7facb",
+          "slot": "requirements",
+          "text": "Select to display the clock setting screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the clock setting screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.24 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4ef58ce0bf95",
+          "slot": "requirements",
+          "text": "Date and day of the week.",
+          "source_text": "Date and day of the week",
+          "strength": "capability",
+          "source": "p.24 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "db0852ce3994",
+          "page": 22,
+          "rect": [
+            221.0160065,
+            492.7859884,
+            380.14201360000004,
+            581.633988
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Outside temperature",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "afec288a4a20",
+      "chapter_number": "11",
+      "title": "Touch screen gestures",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Touch screen gestures",
+      "pages": [
+        24,
+        25,
+        26
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "a223baa46b11",
+          "slot": "overview",
+          "text": "Operations are performed by touching the touch screen directly with your finger.",
+          "source_text": "Operations are performed by touching the touch screen directly with your finger.",
+          "strength": "capability",
+          "source": "p.24 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5d638664a2ae",
+          "slot": "overview",
+          "text": "Touch Quickly touch and release once. Used when changing and selecting various settings.",
+          "source_text": "Touch Quickly touch and release once. Used when changing and selecting various settings.",
+          "strength": "constraint",
+          "source": "p.24 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dda16e32f622",
+          "slot": "overview",
+          "text": "Double touch with one finger*1 Quickly touch and release twice with one finger. Used when enlarging the scale of the map screen.",
+          "source_text": "Double touch with one finger*1 Quickly touch and release twice with one finger. Used when enlarging the scale of the map screen.",
+          "strength": "constraint",
+          "source": "p.24 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6b8c883e514d",
+          "slot": "overview",
+          "text": "Double touch with two fingers*1 Quickly touch and release twice with two fingers. Used when reducing the map scale.",
+          "source_text": "Double touch with two fingers*1 Quickly touch and release twice with two fingers. Used when reducing the map scale.",
+          "strength": "constraint",
+          "source": "p.25 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4500e654d8e9",
+          "slot": "overview",
+          "text": "Drag*2 Touch the screen with your finger, and move the screen to the desired position. Used when scrolling the lists and scrolling the map screen*1.",
+          "source_text": "Drag*2 Touch the screen with your finger, and move the screen to the desired position. Used when scrolling the lists and scrolling the map screen*1.",
+          "strength": "constraint",
+          "source": "p.25 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2b7f9c95e9bf",
+          "slot": "overview",
+          "text": "Drag with two fingers*1 Touch the screen with two fingers and move the displayed screen as desired. Used when changing the displayed angle of the 3D map screen.",
+          "source_text": "Drag with two fingers*1 Touch the screen with two fingers and move the displayed screen as desired. Used when changing the displayed angle of the 3D map screen.",
+          "strength": "constraint",
+          "source": "p.25 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ea0ab3f2021f",
+          "slot": "overview",
+          "text": "Swipe*2 Quickly move the screen by swiping with your finger. Used when scrolling the lists and scrolling the map screen*1.",
+          "source_text": "Swipe*2 Quickly move the screen by swiping with your finger. Used when scrolling the lists and scrolling the map screen*1.",
+          "strength": "constraint",
+          "source": "p.26 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c7d0aa36f42a",
+          "slot": "overview",
+          "text": "Pinch*1 Move your two fingers further apart (pinch-out) to zoom in the map. Move your two fingers closer together (pinch-in) to zoom out the map. Used when changing the scale of the map screen.",
+          "source_text": "Pinch*1 Move your two fingers further apart (pinch-out) to zoom in the map. Move your two fingers closer together (pinch-in) to zoom out the map. Used when changing the scale of the map screen.",
+          "strength": "constraint",
+          "source": "p.26 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bbafe360c798",
+          "slot": "overview",
+          "text": "*1: Models with navigation system only *2: The above operations may not be performed on all screens.",
+          "source_text": "*1: Models with navigation system only *2: The above operations may not be performed on all screens.",
+          "strength": "capability",
+          "source": "p.26 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c23ac1408e2c",
+          "slot": "exception",
+          "text": "Swipe operations may not be performed smoothly in high altitudes.",
+          "source_text": "Swipe operations may not be performed smoothly in high altitudes.",
+          "strength": "capability",
+          "source": "p.26 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "484e008bc732",
+      "chapter_number": "12",
+      "title": "Touch screen operation",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Touch screen operation",
+      "pages": [
+        26,
+        27
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "7bdc9459d4df",
+          "slot": "overview",
+          "text": "This system is operated mainly by the buttons on the screen. (Referred to as screen buttons in this manual.).",
+          "source_text": "This system is operated mainly by the buttons on the screen. (Referred to as screen buttons in this manual.)",
+          "strength": "capability",
+          "source": "p.26 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2ff6822a794b",
+          "slot": "requirements",
+          "text": "When a screen button is touched, a tone sounds. The tone sound can be adjusted. (→P.41).",
+          "source_text": "When a screen button is touched, a tone sounds. The tone sound can be adjusted. (→P.41)",
+          "strength": "capability",
+          "source": "p.26 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1384b2379fe2",
+          "slot": "requirements",
+          "text": "To prevent damaging the screen, lightly touch the screen buttons with your finger.",
+          "source_text": "To prevent damaging the screen, lightly touch the screen buttons with your finger.",
+          "strength": "capability",
+          "source": "p.26 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a86037e997da",
+          "slot": "requirements",
+          "text": "Do not use objects other than your finger to touch the screen.",
+          "source_text": "Do not use objects other than your finger to touch the screen.",
+          "strength": "capability",
+          "source": "p.26 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7f1bd35884eb",
+          "slot": "requirements",
+          "text": "Wipe off fingerprints using a glass cleaning cloth. Do not use chemical cleaners to clean the screen, as they may damage the touch screen.",
+          "source_text": "Wipe off fingerprints using a glass cleaning cloth. Do not use chemical cleaners to clean the screen, as they may damage the touch screen.",
+          "strength": "capability",
+          "source": "p.26 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1b887ad4a16f",
+          "slot": "requirements",
+          "text": "If the system does not respond to touching a screen button, move your finger away from the screen and then touch it again.",
+          "source_text": "If the system does not respond to touching a screen button, move your finger away from the screen and then touch it again.",
+          "strength": "capability",
+          "source": "p.27 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fec841fbde7b",
+          "slot": "exception",
+          "text": "Dimmed screen buttons cannot be operated.",
+          "source_text": "Dimmed screen buttons cannot be operated.",
+          "strength": "constraint",
+          "source": "p.27 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "90dca92cf00e",
+          "slot": "requirements",
+          "text": "The displayed image may become darker and moving images may be slightly distorted when the screen is cold.",
+          "source_text": "The displayed image may become darker and moving images may be slightly distorted when the screen is cold.",
+          "strength": "constraint",
+          "source": "p.27 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "687a9fae6f27",
+          "slot": "exception",
+          "text": "When it is extremely cold, screens may not be displayed properly and the data input by a user may be deleted. Also, the screen buttons may not operate correctly. 1.",
+          "source_text": "When it is extremely cold, screens may not be displayed properly and the data input by a user may be deleted. Also, the screen buttons may not operate correctly. 1",
+          "strength": "capability",
+          "source": "p.27 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "62899d6c9053",
+          "slot": "requirements",
+          "text": "When “ ” is displayed on the screen, touch “ ” to close a pop-up screen.",
+          "source_text": "When “ ” is displayed on the screen, touch “ ” to close a pop-up screen.",
+          "strength": "capability",
+          "source": "p.27 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "043aef6f92f2",
+          "slot": "exception",
+          "text": "If the touch screen is operated while wearing gloves, it may be unresponsive or may not function properly.",
+          "source_text": "If the touch screen is operated while wearing gloves, it may be unresponsive or may not function properly.",
+          "strength": "capability",
+          "source": "p.27 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "acdf12a17752",
+      "chapter_number": "13",
+      "title": "Entering letters and numbers",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Entering letters and numbers",
+      "pages": [
+        27,
+        28
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "334e803dba32",
+          "slot": "overview",
+          "text": "When entering data, letters and numbers can be entered via the screen.",
+          "source_text": "When entering data, letters and numbers can be entered via the screen.",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1007208d6af8",
+          "slot": "overview",
+          "text": "Display predictive entries.*.",
+          "source_text": "Display predictive entries.*",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "51c4f25aa77c",
+          "slot": "overview",
+          "text": "Select to display predictive entries in full screen mode.*.",
+          "source_text": "Select to display predictive entries in full screen mode.*",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0d59b02bb5c9",
+          "slot": "overview",
+          "text": "Select to erase one character.",
+          "source_text": "Select to erase one character.",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ee53a01f8daa",
+          "slot": "overview",
+          "text": "Select to enter the item.",
+          "source_text": "Select to enter the item.",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "23c1c8633fc7",
+          "slot": "overview",
+          "text": "Select to move the cursor.",
+          "source_text": "Select to move the cursor.",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7cd96a72e961",
+          "slot": "overview",
+          "text": "Select to display all of the available symbols.",
+          "source_text": "Select to display all of the available symbols.",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c40bddac62b4",
+          "slot": "overview",
+          "text": "Select to enter symbols.",
+          "source_text": "Select to enter symbols.",
+          "strength": "capability",
+          "source": "p.27 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6f966d0cefd2",
+          "slot": "overview",
+          "text": "Select to enter characters in lower case or in upper case.",
+          "source_text": "Select to enter characters in lower case or in upper case.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e1472c57d94a",
+          "slot": "requirements",
+          "text": "“ ”: Enables capital letter input of one character only.",
+          "source_text": "“ ”: Enables capital letter input of one character only.",
+          "strength": "capability",
+          "source": "p.28 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d2cafed7f77b",
+          "slot": "requirements",
+          "text": "“ ”: Enables capital letter input successively.",
+          "source_text": "“ ”: Enables capital letter input successively.",
+          "strength": "capability",
+          "source": "p.28 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ac5eee14269a",
+          "slot": "exception",
+          "text": "*: Depending on the function used, predictive entries may not be displayed.",
+          "source_text": "*: Depending on the function used, predictive entries may not be displayed.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "7c59a9d8a604",
+          "page": 26,
+          "rect": [
+            229.416,
+            415.98598919999995,
+            371.7810055,
+            463.0739905
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Display predictive entries.*",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "2114e0e510cb",
+      "chapter_number": "14",
+      "title": "List screen operation",
+      "area": "Basic operation",
+      "function_path": "Basic operation / List screen operation",
+      "pages": [
+        28
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "17631ddcfc82",
+          "slot": "overview",
+          "text": "The list screen can be scrolled by a swipe gesture.",
+          "source_text": "The list screen can be scrolled by a swipe gesture.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "297654306e60",
+          "slot": "overview",
+          "text": "For details on the operation: →P.24.",
+          "source_text": "For details on the operation: →P.24",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d9756779482f",
+          "slot": "overview",
+          "text": "Select to skip to the next or previous page.",
+          "source_text": "Select to skip to the next or previous page.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dbca72e54a2e",
+          "slot": "overview",
+          "text": "This indicates the displayed screen’s position. To scroll: Drag the position indicator. To jump: Select the desired position of the rail.",
+          "source_text": "This indicates the displayed screen’s position. To scroll: Drag the position indicator. To jump: Select the desired position of the rail.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f9dde0df5f6a",
+          "slot": "overview",
+          "text": "Some lists contain character screen buttons which allow users to jump directly to list entries that begin with the same letter as the character screen button. Every time the same character screen button is selected, the list starting with the subsequent character is displayed.",
+          "source_text": "Some lists contain character screen buttons which allow users to jump directly to list entries that begin with the same letter as the character screen button. Every time the same character screen button is selected, the list starting with the subsequent character is displayed.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "be731d6b2b51",
+          "page": 27,
+          "rect": [
+            217.8959961,
+            337.506005,
+            363.7480011,
+            419.1540076
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to skip to the next or previous page.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "4c47f7e54ee8",
+      "chapter_number": "15",
+      "title": "Enabling and disabling the settings",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Enabling and disabling the settings",
+      "pages": [
+        28,
+        29
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "0f08889a532c",
+          "slot": "overview",
+          "text": "Select the icon on the right of the desired item.",
+          "source_text": "Select the icon on the right of the desired item.",
+          "strength": "capability",
+          "source": "p.28 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "7d9468609cbe",
+          "page": 28,
+          "rect": [
+            223.6560059,
+            196.62600759999998,
+            373.4589997,
+            280.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "OFF",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "505d2911f05f",
+      "chapter_number": "16",
+      "title": "Adjusting the levels",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Adjusting the levels",
+      "pages": [
+        29
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "573ede8f8b91",
+          "slot": "overview",
+          "text": "To adjust the levels, select the desired place of the screen bar, touch “ ” / “ ”, or drag the icon.",
+          "source_text": "To adjust the levels, select the desired place of the screen bar, touch “ ” / “ ”, or drag the icon.",
+          "strength": "capability",
+          "source": "p.29 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "2b7bd5d9ac38",
+          "page": 28,
+          "rect": [
+            221.0160065,
+            445.26599189999996,
+            380.14201360000004,
+            534.3539893
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "drag the icon.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "f772422068d8",
+      "chapter_number": "17",
+      "title": "Connecting a USB memory device",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Connecting a USB memory device",
+      "pages": [
+        30
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Connect a device.",
+          "sequence": 1,
+          "source": "p.30 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "eddea7399c7d",
+          "slot": "requirements",
+          "text": "Turn on the power of the device if it is not turned on.",
+          "source_text": "Turn on the power of the device if it is not turned on.",
+          "strength": "constraint",
+          "source": "p.30 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bcd8cac7d857",
+          "slot": "requirements",
+          "text": "Compatible USB memory device: →P.113.",
+          "source_text": "Compatible USB memory device: →P.113",
+          "strength": "capability",
+          "source": "p.30 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4fa2df2208a3",
+          "slot": "requirements",
+          "text": "This unit does not support commercially available USB hubs.",
+          "source_text": "This unit does not support commercially available USB hubs.",
+          "strength": "capability",
+          "source": "p.30 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "be69674fe672",
+          "slot": "requirements",
+          "text": "By connecting a device such as a cellular phone, charging starts depending on the device.",
+          "source_text": "By connecting a device such as a cellular phone, charging starts depending on the device.",
+          "strength": "capability",
+          "source": "p.30 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6e80e56b5691",
+          "slot": "requirements",
+          "text": "As the Type-A terminal is for charging only, connect to the Type-C terminal for data/signal communication.",
+          "source_text": "As the Type-A terminal is for charging only, connect to the Type-C terminal for data/signal communication.",
+          "strength": "capability",
+          "source": "p.30 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "7a8fccfad089",
+      "chapter_number": "18",
+      "title": "Steering wheel switches",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Steering wheel switches",
+      "pages": [
+        30,
+        31
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "99d4110e7511",
+          "slot": "overview",
+          "text": "Press the switch to change stations or tracks. Press and hold the switch to seek a station or to fast forward/rewind tracks.",
+          "source_text": "Press the switch to change stations or tracks. Press and hold the switch to seek a station or to fast forward/rewind tracks.",
+          "strength": "capability",
+          "source": "p.30 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fbea7abd6b95",
+          "slot": "overview",
+          "text": "Press the switch to turn on the audio system or change the audio source mode. Press and hold the switch to turn off the audio system.",
+          "source_text": "Press the switch to turn on the audio system or change the audio source mode. Press and hold the switch to turn off the audio system.",
+          "strength": "capability",
+          "source": "p.30 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ba5af8df4317",
+          "slot": "overview",
+          "text": "Press the switch to start the voice assistance system. (→P.31) Press and hold:.",
+          "source_text": "Press the switch to start the voice assistance system. (→P.31) Press and hold:",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d1afdad2b0aa",
+          "slot": "requirements",
+          "text": "When Apple CarPlay/Android Auto is being used, the voice recognition function of the Apple CarPlay/Android Auto will start.",
+          "source_text": "When Apple CarPlay/Android Auto is being used, the voice recognition function of the Apple CarPlay/Android Auto will start.",
+          "strength": "capability",
+          "source": "p.31 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0904996803ca",
+          "slot": "requirements",
+          "text": "When the Apple CarPlay device is connected via Bluetooth, Siri will start.",
+          "source_text": "When the Apple CarPlay device is connected via Bluetooth, Siri will start.",
+          "strength": "capability",
+          "source": "p.31 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "55f0e7d5ce00",
+          "slot": "exception",
+          "text": "When the Bluetooth phone/device is not registered, or when the Bluetooth connection is disabled, the voice recognition system cannot be started. If the registration screen is displayed when the switch is pressed and held, proceed to registration if desired. If the Bluetooth phone/device is already registered, simply connect it. (→P.55, 57) 1 Press the switch to adjust the volume. Press and hold the switch to adjust the volume continuously.",
+          "source_text": "When the Bluetooth phone/device is not registered, or when the Bluetooth connection is disabled, the voice recognition system cannot be started. If the registration screen is displayed when the switch is pressed and held, proceed to registration if desired. If the Bluetooth phone/device is already registered, simply connect it. (→P.55, 57) 1 Press the switch to adjust the volume. Press and hold the switch to adjust the volume continuously.",
+          "strength": "constraint",
+          "source": "p.31 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7eeeb31265fd",
+          "slot": "requirements",
+          "text": "Press the switch to turn the audio volume mute on/off.",
+          "source_text": "Press the switch to turn the audio volume mute on/off.",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9adcb092582b",
+          "slot": "requirements",
+          "text": "Press the switch to receive/end a call. (→P.77).",
+          "source_text": "Press the switch to receive/end a call. (→P.77)",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "a11e89256610",
+      "chapter_number": "19",
+      "title": "Voice assistance system",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Voice assistance system",
+      "pages": [
+        31
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "fa864e588d27",
+          "slot": "overview",
+          "text": "The voice assistance system enables the navigation, audio, hands-free systems, etc. to be operated using voice commands.",
+          "source_text": "The voice assistance system enables the navigation, audio, hands-free systems, etc. to be operated using voice commands.",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5eab654c8f26",
+          "slot": "overview",
+          "text": "Service subscription allows connection to the server for search using the most up-todate map information and versatile voice assistance that responds to various expressions spoken in a command.",
+          "source_text": "Service subscription allows connection to the server for search using the most up-todate map information and versatile voice assistance that responds to various expressions spoken in a command.",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "98d0ef77ec9b",
+          "slot": "overview",
+          "text": "Without subscription, the system operates the normal voice assistance function.",
+          "source_text": "Without subscription, the system operates the normal voice assistance function.",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bdb49d4b5a67",
+          "slot": "overview",
+          "text": "The voice assistance system that uses the server is included in the subscription to the services using the cloud navigation server. (→P.118) Refer to the command list for samples of voice commands. (→P.34).",
+          "source_text": "The voice assistance system that uses the server is included in the subscription to the services using the cloud navigation server. (→P.118) Refer to the command list for samples of voice commands. (→P.34)",
+          "strength": "capability",
+          "source": "p.31 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "62c61ab7995d",
+      "chapter_number": "20",
+      "title": "Using the voice assistance system",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Using the voice assistance system",
+      "pages": [
+        32,
+        33
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Press the voice assistance switch on",
+          "sequence": 1,
+          "source": "p.32 / step"
+        },
+        {
+          "number": 1,
+          "text": "Select the voice assistance button on",
+          "sequence": 2,
+          "source": "p.32 / step"
+        },
+        {
+          "number": 1,
+          "text": "Say SUBARU”.",
+          "sequence": 3,
+          "source": "p.33 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "55e9dd46cae7",
+          "slot": "overview",
+          "text": "Starting with the voice assistance switch on the steering wheel.",
+          "source_text": "Starting with the voice assistance switch on the steering wheel",
+          "strength": "capability",
+          "source": "p.32 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "437b24acc260",
+          "slot": "overview",
+          "text": "the steering wheel.",
+          "source_text": "the steering wheel.",
+          "strength": "capability",
+          "source": "p.32 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a87d2f2a9f16",
+          "slot": "requirements",
+          "text": "To cancel voice assistance, press and hold the voice assistance switch.",
+          "source_text": "To cancel voice assistance, press and hold the voice assistance switch.",
+          "strength": "capability",
+          "source": "p.32 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "778bc1524be2",
+          "slot": "requirements",
+          "text": "When started with the voice assistance switch on the steering wheel, voice assistance from the driver’s side is enabled.",
+          "source_text": "When started with the voice assistance switch on the steering wheel, voice assistance from the driver’s side is enabled.",
+          "strength": "capability",
+          "source": "p.32 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "371c239090fe",
+          "slot": "requirements",
+          "text": "Starting with the voice assistance button on the screen.",
+          "source_text": "Starting with the voice assistance button on the screen",
+          "strength": "capability",
+          "source": "p.32 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6bf5ec37278c",
+          "slot": "requirements",
+          "text": "the screen.",
+          "source_text": "the screen.",
+          "strength": "capability",
+          "source": "p.32 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d2785e8535d7",
+          "slot": "requirements",
+          "text": "When started with the voice assistance button on the screen, voice assistance from the front passenger’s side is enabled.",
+          "source_text": "When started with the voice assistance button on the screen, voice assistance from the front passenger’s side is enabled.",
+          "strength": "capability",
+          "source": "p.32 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9b47b66abc8b",
+          "slot": "requirements",
+          "text": "Starting with the wake up word.",
+          "source_text": "Starting with the wake up word",
+          "strength": "capability",
+          "source": "p.33 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "08aaf3d91865",
+          "slot": "requirements",
+          "text": "When started with the wake up word, voice assistance from the side the command was spoken is enabled.",
+          "source_text": "When started with the wake up word, voice assistance from the side the command was spoken is enabled.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1f7b44e73ed4",
+          "slot": "requirements",
+          "text": "1 The wake up word can be enabled/disabled in the settings. (→P.40).",
+          "source_text": "1 The wake up word can be enabled/disabled in the settings. (→P.40)",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "db94b363d4e3",
+          "slot": "hmi",
+          "text": "The wake up word and a voice command can be spoken in succession.",
+          "source_text": "The wake up word and a voice command can be spoken in succession.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "df3216e9910e",
+          "slot": "requirements",
+          "text": "Microphone.",
+          "source_text": "Microphone",
+          "strength": "capability",
+          "source": "p.33 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "08a8ecb12620",
+          "slot": "requirements",
+          "text": "It is unnecessary to speak directly into the microphone when giving a command.",
+          "source_text": "It is unnecessary to speak directly into the microphone when giving a command.",
+          "strength": "constraint",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "628eaa1a2a07",
+          "slot": "exception",
+          "text": "This function or part of this function may not be available in some languages and countries.",
+          "source_text": "This function or part of this function may not be available in some languages and countries.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "eac059f95cdb",
+          "slot": "requirements",
+          "text": "Wait for the confirmation beep before speaking a command.",
+          "source_text": "Wait for the confirmation beep before speaking a command.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6b60d040c6cf",
+          "slot": "exception",
+          "text": "Voice commands may not be recognized if:.",
+          "source_text": "Voice commands may not be recognized if:",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "291df0df0507",
+          "slot": "requirements",
+          "text": "Spoken too quickly.",
+          "source_text": "Spoken too quickly.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ce00e1ffc5a6",
+          "slot": "requirements",
+          "text": "Spoken at a low or high volume.",
+          "source_text": "Spoken at a low or high volume.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "235d5a5233c7",
+          "slot": "requirements",
+          "text": "Driving with a window open.",
+          "source_text": "Driving with a window open.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a5da1dc6d2d8",
+          "slot": "hmi",
+          "text": "Passengers are talking while voice commands are spoken.",
+          "source_text": "Passengers are talking while voice commands are spoken.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a2b3f6ebe64b",
+          "slot": "requirements",
+          "text": "The air conditioning speed is set high.",
+          "source_text": "The air conditioning speed is set high.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cbbf062139ba",
+          "slot": "requirements",
+          "text": "When air from the ventilator blows directly toward the microphone.",
+          "source_text": "When air from the ventilator blows directly toward the microphone.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "aca2a51f4258",
+          "slot": "exception",
+          "text": "In the following conditions, the system may not recognize the command properly and using voice commands may not be possible:.",
+          "source_text": "In the following conditions, the system may not recognize the command properly and using voice commands may not be possible:",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f246c964dc86",
+          "slot": "requirements",
+          "text": "The command is incorrect or unclear. Note that certain words, accents or speech patterns may be difficult for the system to recognize.",
+          "source_text": "The command is incorrect or unclear. Note that certain words, accents or speech patterns may be difficult for the system to recognize.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d3b4012dd37a",
+          "slot": "requirements",
+          "text": "There is excessive background noise, such as wind noise.",
+          "source_text": "There is excessive background noise, such as wind noise.",
+          "strength": "capability",
+          "source": "p.33 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "e2c181317afe",
+          "page": 31,
+          "rect": [
+            305.256012,
+            468.30601559999997,
+            454.58100890000003,
+            561.4740148999999
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "the screen.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "30e5af535d3e",
+      "chapter_number": "21",
+      "title": "Voice assistance system operation",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Voice assistance system operation",
+      "pages": [
+        34
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Start the voice assistance system. (→P.32)",
+          "sequence": 1,
+          "source": "p.34 / step"
+        },
+        {
+          "number": 2,
+          "text": "Say the command.",
+          "sequence": 2,
+          "source": "p.34 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "84356dde1253",
+          "slot": "requirements",
+          "text": "The voice assistance top screen will be displayed and a beep will sound.",
+          "source_text": "The voice assistance top screen will be displayed and a beep will sound.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d25bbbc5019e",
+          "slot": "requirements",
+          "text": "Touch “Help” or say “Help” to display some of the commands supported by the system by category. If a category name is selected, the selected category command list will be displayed.",
+          "source_text": "Touch “Help” or say “Help” to display some of the commands supported by the system by category. If a category name is selected, the selected category command list will be displayed.",
+          "strength": "constraint",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "35cbc14ac389",
+          "slot": "requirements",
+          "text": "To cancel voice assistance, press and hold the voice assistance switch on the steering wheel, or touch “ ”.",
+          "source_text": "To cancel voice assistance, press and hold the voice assistance switch on the steering wheel, or touch “ ”.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1794cff62731",
+          "slot": "requirements",
+          "text": "Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the speech guidance volume.",
+          "source_text": "Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the speech guidance volume.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "ea03b71a195b",
+          "page": 33,
+          "rect": [
+            305.0159912,
+            252.06600349999997,
+            454.818985,
+            336.114
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "will be displayed.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "50f63cb3d8e5",
+      "chapter_number": "22",
+      "title": "Command list",
+      "area": "Basic operation",
+      "function_path": "Basic operation / Command list",
+      "pages": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "3b103ed757aa",
+          "slot": "overview",
+          "text": "Recognizable voice commands and their actions are shown below.",
+          "source_text": "Recognizable voice commands and their actions are shown below.",
+          "strength": "capability",
+          "source": "p.34 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2bca2206e1f1",
+          "slot": "requirements",
+          "text": "Frequently used commands are listed in the following tables.",
+          "source_text": "Frequently used commands are listed in the following tables.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cfacd8914077",
+          "slot": "exception",
+          "text": "For devices that are not installed in the vehicle, the related commands will not be displayed in the screen. Also, according to conditions, other commands may not be displayed in the screen.",
+          "source_text": "For devices that are not installed in the vehicle, the related commands will not be displayed in the screen. Also, according to conditions, other commands may not be displayed in the screen.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7d5f3624530e",
+          "slot": "requirements",
+          "text": "The functions available may vary according to the system installed.",
+          "source_text": "The functions available may vary according to the system installed.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fe8cea7a571f",
+          "slot": "requirements",
+          "text": "If the system language is changed on the display settings screen, the language of the voice assistance function will also change. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "If the system language is changed on the display settings screen, the language of the voice assistance function will also change. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0a7428bb5b87",
+          "slot": "requirements",
+          "text": "<○○○> descriptions in the command lists below signify numbers/titles/names to be spoken.",
+          "source_text": "<○○○> descriptions in the command lists below signify numbers/titles/names to be spoken.",
+          "strength": "capability",
+          "source": "p.34 / bullet",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5f4fec46680f",
+          "slot": "requirements",
+          "text": "Phone commands.",
+          "source_text": "Phone commands",
+          "strength": "capability",
+          "source": "p.35 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9d726da70dac",
+          "slot": "hmi",
+          "text": "Voice command Function Places a call to the spoken contact name and phone type of the “Call a Contact” contact from the phonebook Places a call to the spoken contact name and phone type of the “Call <Name> <Phone Type>” contact from the phonebook “Pair Phone” Displays manage devices screen Sends the preset message to the spoken contact name and 1 “Send a Text to Contact” phone type of the contact from the phonebook “Dial a Number” Places a call to the spoken phone number “Dial <Number>” Places a call to the spoken phone number “Call Back” Places a call to the phone number of the latest incoming call “Redial” Places a call to the phone number of the latest outgoing call “Show Messages” Displays received text messages “Show Recent Calls” Displays the call history screen “Send a Text to <Number>” Sends a text message to the spoken phone number “Send a Text to Recent Call” Sends a text message by the recent call list “Send a Text to <Name> Sends a text message to the spoken contact name and phone <Phone Type>” type of the contact from the phonebook.",
+          "source_text": "Voice command Function Places a call to the spoken contact name and phone type of the “Call a Contact” contact from the phonebook Places a call to the spoken contact name and phone type of the “Call <Name> <Phone Type>” contact from the phonebook “Pair Phone” Displays manage devices screen Sends the preset message to the spoken contact name and 1 “Send a Text to Contact” phone type of the contact from the phonebook “Dial a Number” Places a call to the spoken phone number “Dial <Number>” Places a call to the spoken phone number “Call Back” Places a call to the phone number of the latest incoming call “Redial” Places a call to the phone number of the latest outgoing call “Show Messages” Displays received text messages “Show Recent Calls” Displays the call history screen “Send a Text to <Number>” Sends a text message to the spoken phone number “Send a Text to Recent Call” Sends a text message by the recent call list “Send a Text to <Name> Sends a text message to the spoken contact name and phone <Phone Type>” type of the contact from the phonebook",
+          "strength": "capability",
+          "source": "p.35 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a7e935c551d0",
+          "slot": "hmi",
+          "text": "Navigation commands* *: If equipped Voice command Function Enables setting a destination by saying the address with city and “Enter an Address” state Enables setting a destination by saying the address with city and “Navigate to <Address>” state “Find <POI>” Displays a list of POI category near the current position “Go Home” Displays the route to home “Go to Work” Displays the route to work “Cancel Route” Cancels route guidance “Navigate to Favorite” Displays the favorite location “Navigate to Favorite <Favor- Displays the favorite location ite Name>”* “Previous Destination” Displays the previous destinations “Delete Destination” Cancels route guidance “Show Map” Displays the map screen.",
+          "source_text": "Navigation commands* *: If equipped Voice command Function Enables setting a destination by saying the address with city and “Enter an Address” state Enables setting a destination by saying the address with city and “Navigate to <Address>” state “Find <POI>” Displays a list of POI category near the current position “Go Home” Displays the route to home “Go to Work” Displays the route to work “Cancel Route” Cancels route guidance “Navigate to Favorite” Displays the favorite location “Navigate to Favorite <Favor- Displays the favorite location ite Name>”* “Previous Destination” Displays the previous destinations “Delete Destination” Cancels route guidance “Show Map” Displays the map screen",
+          "strength": "constraint",
+          "source": "p.35 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d193c932b69f",
+          "slot": "hmi",
+          "text": "Voice command Function “Find <POI> in a City” Displays a list of POI category near the current position “Change Country to <Coun- Changes a country try>” Enables setting a destination by saying three words hit by “Navigate to What3words” “what3words” search.",
+          "source_text": "Voice command Function “Find <POI> in a City” Displays a list of POI category near the current position “Change Country to <Coun- Changes a country try>” Enables setting a destination by saying three words hit by “Navigate to What3words” “what3words” search.",
+          "strength": "capability",
+          "source": "p.36 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "befa3038421f",
+          "slot": "requirements",
+          "text": "*: When speaking the name of registered points, be sure to say it as it is registered.",
+          "source_text": "*: When speaking the name of registered points, be sure to say it as it is registered.",
+          "strength": "constraint",
+          "source": "p.36 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a4c9b059df0e",
+          "slot": "requirements",
+          "text": "Music commands.",
+          "source_text": "Music commands",
+          "strength": "capability",
+          "source": "p.36 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d84bf67f73f4",
+          "slot": "hmi",
+          "text": "Voice command Function “Turn on the Music” Turns music on “Turn off the Music” Turns music off “Play Song <Name>” Plays the selected song “Play Artist <Name>” Plays tracks from the selected artist “Play Playlist <Name>” Plays tracks from the selected playlist “Turn on FM” Switches to FM radio “Turn on AM” Switches to AM radio “Tune to satellite radio” Switches to satellite radio “Radio Frequency” Tunes radio frequency “Tune to a Preset” Selects a preset “Channel <Name>” Switches to a selected satellite radio channel “Play Album <Name>” Plays tracks from the selected album “Browse Artist <Name>” Displays the list of albums of the artist “Browse Playlist <Name>” Displays the list of playlist “Browse Songs” Displays the list of songs “Play USB” Switches source to USB “Play Bluetooth” Switches source to Bluetooth audio “Tune to <Frequency> AM” Tunes AM radio frequency “Tune to <Frequency> FM” Tunes FM radio frequency “Tune to FM <Frequency> HD Tunes FM radio frequency <Subchannel>” “Listen to a Radio Genre - FM Selects a radio genre Radio -” “Listen to a Radio Genre Selects a radio genre <Genre>” “Tune to Preset <Number>” Selects a preset “Tune to Channel Number” Selects a satellite radio channel.",
+          "source_text": "Voice command Function “Turn on the Music” Turns music on “Turn off the Music” Turns music off “Play Song <Name>” Plays the selected song “Play Artist <Name>” Plays tracks from the selected artist “Play Playlist <Name>” Plays tracks from the selected playlist “Turn on FM” Switches to FM radio “Turn on AM” Switches to AM radio “Tune to satellite radio” Switches to satellite radio “Radio Frequency” Tunes radio frequency “Tune to a Preset” Selects a preset “Channel <Name>” Switches to a selected satellite radio channel “Play Album <Name>” Plays tracks from the selected album “Browse Artist <Name>” Displays the list of albums of the artist “Browse Playlist <Name>” Displays the list of playlist “Browse Songs” Displays the list of songs “Play USB” Switches source to USB “Play Bluetooth” Switches source to Bluetooth audio “Tune to <Frequency> AM” Tunes AM radio frequency “Tune to <Frequency> FM” Tunes FM radio frequency “Tune to FM <Frequency> HD Tunes FM radio frequency <Subchannel>” “Listen to a Radio Genre - FM Selects a radio genre Radio -” “Listen to a Radio Genre Selects a radio genre <Genre>” “Tune to Preset <Number>” Selects a preset “Tune to Channel Number” Selects a satellite radio channel",
+          "strength": "capability",
+          "source": "p.36 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7b6fff40d316",
+          "slot": "hmi",
+          "text": "Voice command Function “Tune to Channel Number Selects a satellite radio channel <Number>”.",
+          "source_text": "Voice command Function “Tune to Channel Number Selects a satellite radio channel <Number>”",
+          "strength": "capability",
+          "source": "p.37 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3a28940ad42d",
+          "slot": "requirements",
+          "text": "Climate commands.",
+          "source_text": "Climate commands",
+          "strength": "capability",
+          "source": "p.37 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ef51749aac16",
+          "slot": "hmi",
+          "text": "Voice command Function 1 “Auto AC On” Switches on the auto AC mode on “Increase Temperature the Increases the temperature the driver side Driver Side” “Increase Temperature the Increases the temperature the passenger side Passenger Side” “Decrease temperature the Decreases the temperature the driver side Driver Side” “Decrease temperature the Decreases the temperature the passenger side Passenger Side” “Increase the Fan Speed” Increases the fan speed “Decrease the Fan Speed” Decreases the fan speed “Set Driver Side Temperature Sets the driver side temperature to the spoken temperature to <Temperature>” “Set Passenger Side Tem- Sets the passenger side temperature to the spoken temperature perature to <Temperature>” “Change Driver Side Tempera- Sets the driver side temperature to the spoken temperature ture” “Change Passenger Side Sets the passenger side temperature to the spoken temperature Temperature” “Fan Speed” Sets the fan speed to the spoken fan speed “Turn on Driver Heated Seat” Turns the driver seat heater on “Turn on Passenger Heated Turns the passenger seat heater on Seat” “Turn off Driver Heated Seat” Turns the driver seat heater off “Turn off Passenger Heated Turns the passenger seat heater off Seat” “Set Driver Heated Seat to Sets the level of the driver seat heater intensity <High - Low>” “Set Passenger Heated Seat Sets the level of the passenger seat heater intensity to <High - Low>” “Turn on Driver Ventilated Turns the driver seat ventilator on Seat”*.",
+          "source_text": "Voice command Function 1 “Auto AC On” Switches on the auto AC mode on “Increase Temperature the Increases the temperature the driver side Driver Side” “Increase Temperature the Increases the temperature the passenger side Passenger Side” “Decrease temperature the Decreases the temperature the driver side Driver Side” “Decrease temperature the Decreases the temperature the passenger side Passenger Side” “Increase the Fan Speed” Increases the fan speed “Decrease the Fan Speed” Decreases the fan speed “Set Driver Side Temperature Sets the driver side temperature to the spoken temperature to <Temperature>” “Set Passenger Side Tem- Sets the passenger side temperature to the spoken temperature perature to <Temperature>” “Change Driver Side Tempera- Sets the driver side temperature to the spoken temperature ture” “Change Passenger Side Sets the passenger side temperature to the spoken temperature Temperature” “Fan Speed” Sets the fan speed to the spoken fan speed “Turn on Driver Heated Seat” Turns the driver seat heater on “Turn on Passenger Heated Turns the passenger seat heater on Seat” “Turn off Driver Heated Seat” Turns the driver seat heater off “Turn off Passenger Heated Turns the passenger seat heater off Seat” “Set Driver Heated Seat to Sets the level of the driver seat heater intensity <High - Low>” “Set Passenger Heated Seat Sets the level of the passenger seat heater intensity to <High - Low>” “Turn on Driver Ventilated Turns the driver seat ventilator on Seat”*",
+          "strength": "capability",
+          "source": "p.37 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "12d841b0f9da",
+          "slot": "hmi",
+          "text": "Voice command Function “Turn on Passenger Venti- Turns the passenger seat ventilator on lated Seat”* “Turn off Driver Ventilated Turns the driver seat ventilator off Seat”* “Turn off Passenger Venti- Turns the passenger seat ventilator off lated Seat”* “Set Driver Ventilated Seat to Sets the level of the driver seat ventilator intensity <High - Low>”* “Set Passenger Ventilated Sets the level of the passenger seat ventilator intensity Seat to <High - Low>”*.",
+          "source_text": "Voice command Function “Turn on Passenger Venti- Turns the passenger seat ventilator on lated Seat”* “Turn off Driver Ventilated Turns the driver seat ventilator off Seat”* “Turn off Passenger Venti- Turns the passenger seat ventilator off lated Seat”* “Set Driver Ventilated Seat to Sets the level of the driver seat ventilator intensity <High - Low>”* “Set Passenger Ventilated Sets the level of the passenger seat ventilator intensity Seat to <High - Low>”*",
+          "strength": "capability",
+          "source": "p.38 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9c209dd47573",
+          "slot": "requirements",
+          "text": "*: If equipped.",
+          "source_text": "*: If equipped",
+          "strength": "constraint",
+          "source": "p.38 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2b8aaf886c8e",
+          "slot": "requirements",
+          "text": "Apps commands.",
+          "source_text": "Apps commands",
+          "strength": "capability",
+          "source": "p.38 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b92327af2d7b",
+          "slot": "hmi",
+          "text": "Voice command Function “Launch <App Name>” Changes screen to selected application “Go to CarPlay” Changes screen to Apple CarPlay “Go to Android Auto” Changes screen to Android Auto.",
+          "source_text": "Voice command Function “Launch <App Name>” Changes screen to selected application “Go to CarPlay” Changes screen to Apple CarPlay “Go to Android Auto” Changes screen to Android Auto",
+          "strength": "capability",
+          "source": "p.38 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b24ba317f121",
+          "slot": "requirements",
+          "text": "Vehicle commands.",
+          "source_text": "Vehicle commands",
+          "strength": "capability",
+          "source": "p.38 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0e7eb74719f7",
+          "slot": "hmi",
+          "text": "Voice command Function “Lane Departure Options” Changes the settings of the Lane Departure function “Cruise Control Options” Changes the settings of the Cruise Control function.",
+          "source_text": "Voice command Function “Lane Departure Options” Changes the settings of the Lane Departure function “Cruise Control Options” Changes the settings of the Cruise Control function",
+          "strength": "capability",
+          "source": "p.38 / text",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    }
+  ]
+}

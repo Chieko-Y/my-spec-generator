@@ -1,0 +1,378 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Manuals</h1>
+
+<div class="card">
+  <h2>Register a new owner's manual</h2>
+
+  <div id="dropzone" class="dropzone">
+    Drag &amp; drop a PDF here, or click to choose a file
+    <input id="fileInput" type="file" accept="application/pdf" style="display:none">
+  </div>
+  <div id="uploadStatus" style="font-size:12px;color:#6b6f76;"></div>
+
+  <form id="registerForm" method="post" action="/register">
+    <input type="hidden" name="inbox_path" id="f_inbox_path">
+    <label>Maker</label>
+    <input type="text" name="maker" id="f_maker" required>
+    <label>Model / year</label>
+    <input type="text" name="model" id="f_model" required placeholder="e.g. Outback 2026">
+    <label>Booklet (this becomes the third part of the manual_id, e.g. "multimedia", "navigation")</label>
+    <input type="text" name="booklet" id="f_booklet" required placeholder="e.g. navigation">
+    <label>Document title (as printed on the manual)</label>
+    <input type="text" name="title" id="f_title" placeholder="e.g. 2026 Outback Multimedia Owner's Manual">
+    <label>Source URL</label>
+    <input type="url" name="source_url">
+    <label>Retrieved date</label>
+    <input type="date" name="retrieved_at">
+    <label>Markets (comma-separated)</label>
+    <input type="text" name="markets" placeholder="US, CA">
+    <label>License state</label>
+    <select name="license_state">
+      {% for state in license_states %}
+      <option value="{{ state }}">{{ state }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" disabled id="registerBtn">Register (upload a PDF first)</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Registered manuals</h2>
+  <p style="font-size:13px;color:#6b6f76;">Registering a manual is a one-time action for the whole book. From there, generate as many chapters as you want — each becomes its own document.</p>
+  <table>
+    <tr><th>manual_id</th><th>Maker / Model</th><th>Title</th><th>License</th><th>Edit details</th><th>Generated chapters</th><th>Generate a chapter</th></tr>
+    {% for s in sources %}
+    <tr>
+      <td><code>{{ s.manual_id }}</code></td>
+      <td>{{ s.maker }} / {{ s.model }}</td>
+      <td>{{ s.title or '—' }}</td>
+      <td>
+        <span class="badge {{ 'ready' if s.license_ok else 'unreviewed' }}">{{ s.license_state or 'unreviewed' }}</span>
+      </td>
+      <td>
+        <details style="display:inline-block">
+          <summary style="display:inline;font-size:12px;">edit…</summary>
+          <form method="post" action="/edit-source">
+            <input type="hidden" name="manual_id" value="{{ s.manual_id }}">
+            <label>Maker</label>
+            <input type="text" name="maker" value="{{ s.maker }}" required>
+            <label>Model / year</label>
+            <input type="text" name="model" value="{{ s.model }}" required>
+            <label>Document title</label>
+            <input type="text" name="title" value="{{ s.title or '' }}">
+            <label>Source URL</label>
+            <input type="url" name="source_url" value="{{ s.source_url or '' }}">
+            <label>Retrieved date</label>
+            <input type="date" name="retrieved_at" value="{{ s.retrieved_at or '' }}">
+            <label>Markets (comma-separated)</label>
+            <input type="text" name="markets" value="{{ s.markets | join(', ') if s.markets else '' }}">
+            <label>License state</label>
+            <select name="license_state">
+              {% for state in license_states %}
+              <option value="{{ state }}" {{ 'selected' if (s.license_state or 'unreviewed') == state }}>{{ state }}</option>
+              {% endfor %}
+            </select>
+            <p style="font-size:11px;color:#6b6f76;">manual_id (<code>{{ s.manual_id }}</code>) can't be changed here — it's the folder name on disk.</p>
+            <button type="submit">Save</button>
+          </form>
+        </details>
+      </td>
+      <td>
+        {% for chapter in s.chapters %}
+        <div style="margin-bottom:4px;">
+          <span class="badge ready">{{ chapter }}</span>
+          {% if chapter in s.busy_chapters %}
+          <span class="badge unreviewed">generating/publishing… please wait</span>
+          {% else %}
+          <form method="post" action="/publish" style="display:inline" class="busy-guard-form">
+            <input type="hidden" name="manual_id" value="{{ s.manual_id }}">
+            <input type="hidden" name="chapter" value="{{ chapter }}">
+            <button type="submit" class="secondary">Publish</button>
+          </form>
+          {% endif %}
+          {% if chapter in s.published_chapters and s.license_ok %}
+          <a href="/specifications/{{ s.manual_id }}?chapter={{ chapter }}">View</a>
+          {% elif chapter in s.published_chapters %}
+          <span style="color:#6b6f76;font-size:12px;">published, but license is {{ s.license_state or 'unreviewed' }} — not viewable</span>
+          {% endif %}
+        </div>
+        {% else %}
+        <span style="color:#6b6f76;">none yet</span>
+        {% endfor %}
+      </td>
+      <td>
+        {% if s.busy_chapters %}
+        <span class="badge unreviewed">busy: {{ s.busy_chapters | join(', ') }}</span><br>
+        {% endif %}
+        <details class="generate-details" style="display:inline-block" data-manual-id="{{ s.manual_id }}">
+          <summary style="display:inline">generate…</summary>
+          <div class="chapter-status" style="font-size:12px;color:#6b6f76;">Loading chapters from the PDF…</div>
+          <div class="profile-review" style="display:none;"></div>
+          <form method="post" action="/generate" class="busy-guard-form">
+            <input type="hidden" name="manual_id" value="{{ s.manual_id }}">
+            <label>Chapter (top-level bookmark read from this PDF)</label>
+            <select name="chapter_prefix" class="chapter-select" required disabled>
+              <option value="">(loading…)</option>
+            </select>
+            <label>Chapter label shown in the generated title (optional)</label>
+            <input type="text" name="chapter_label">
+            <button type="submit">Generate</button>
+          </form>
+        </details>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="7">No manuals registered yet.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+
+<script>
+const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('fileInput');
+const status = document.getElementById('uploadStatus');
+const registerBtn = document.getElementById('registerBtn');
+
+function setField(id, value) { const el = document.getElementById(id); if (value) el.value = value; }
+
+async function uploadFile(file) {
+  if (!file) return;
+  status.textContent = 'Uploading ' + file.name + '…';
+  const form = new FormData();
+  form.append('file', file);
+  try {
+    const res = await fetch('/api/upload', { method: 'POST', body: form });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({detail: res.statusText}));
+      status.textContent = 'Upload failed: ' + (err.detail || res.statusText);
+      return;
+    }
+    const data = await res.json();
+    document.getElementById('f_inbox_path').value = data.inbox_path;
+    setField('f_maker', data.identity.maker);
+    setField('f_model', data.identity.model ? (data.identity.model + (data.identity.year ? ' ' + data.identity.year : '')) : (data.identity.year || ''));
+    status.textContent = `Read ${data.page_count} page(s), ${data.bookmark_count} bookmark(s). ` +
+      (data.identity.maker || data.identity.model ? 'Guessed identity — please confirm the fields below.' : 'Could not guess the identity — please fill in the fields below.') +
+      (data.shallow_outline ? ' Warning: bookmarks are shallow; this manual may not split into sections cleanly.' : '');
+    registerBtn.disabled = false;
+    registerBtn.textContent = 'Register';
+  } catch (e) {
+    status.textContent = 'Upload failed: ' + e;
+  }
+}
+
+dropzone.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', (e) => uploadFile(e.target.files[0]));
+
+['dragenter', 'dragover'].forEach(evt =>
+  dropzone.addEventListener(evt, (e) => { e.preventDefault(); dropzone.classList.add('dragover'); }));
+['dragleave', 'drop'].forEach(evt =>
+  dropzone.addEventListener(evt, (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); }));
+dropzone.addEventListener('drop', (e) => {
+  const file = e.dataTransfer.files[0];
+  uploadFile(file);
+});
+
+// Generate/Publish can take 15-30s on a large PDF (pure-Python text extraction has
+// no shortcut). Without a guard, a slow-but-working request looked identical to a
+// dead one, so people clicked again. The server now rejects a second concurrent
+// request for the same manual+chapter outright (and the page shows the true "busy"
+// state on load/reload — see busy_chapters in web.py), but this is the first line
+// of defense on the page that's actually open.
+//
+// Disabling only the submit <button> was reported to still let the button be
+// pressed while "Working…" was showing. Two real gaps in that: (1) a disabled
+// submit button does NOT stop the browser from resubmitting the form via the Enter
+// key while focus is in one of its other inputs (chapter_label here) — the
+// "submit" event fires again regardless of the button's disabled state; (2)
+// disabling only the button gives no strong visual signal since this app doesn't
+// otherwise style :disabled, so it can look unchanged at a glance. Fixed by (a)
+// tracking submission with a flag and calling preventDefault() on any repeat
+// "submit" event no matter what triggered it, and (b) disabling every control in
+// the form, not just the button, so there's nothing left to focus and re-submit
+// from.
+document.querySelectorAll('.busy-guard-form').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    if (form.dataset.submitting === 'true') {
+      event.preventDefault();
+      return;
+    }
+    form.dataset.submitting = 'true';
+    // Disabling fields here, synchronously inside the submit handler, would exclude
+    // them from the browser's own submitted data (disabled controls are dropped from
+    // the form's entry list, and that list is built right after this handler returns)
+    // — every generate/publish would 422 with the fields simply missing, not just a
+    // resubmit. Deferring one tick lets the browser finish submitting the current
+    // click's data first; the dataset flag above still blocks a synchronous resubmit.
+    setTimeout(() => {
+      form.querySelectorAll('button, input, select').forEach((el) => { el.disabled = true; });
+      const btn = form.querySelector('button[type=submit]');
+      if (btn) btn.textContent = 'Working… (can take up to a minute for a large PDF)';
+    }, 0);
+  });
+});
+
+// Populate the chapter dropdown from the resolved profile the first time a
+// "generate…" panel is opened, instead of asking the user to guess a matching
+// string blind — a mistyped chapter prefix used to fail generate() with no
+// obvious feedback, which looked like the Generate button doing nothing.
+// /api/chapters now also resolves which profile this manual should use (see
+// UseCases.resolve_manual_profile): a manual with no confirmed chapter
+// allowlist yet, or that fits no existing profile at all, comes back as
+// status "needs_review" instead of a chapter list — renderReview() below
+// shows what was detected and lets a human confirm it in one click, instead
+// of the CLI dance (profile-derive / profile-derive-toc-chapters /
+// profile-classify-chapters / profile-confirm-chapters) this replaces.
+document.querySelectorAll('.generate-details').forEach((details) => {
+  let loaded = false;
+  const manualId = details.dataset.manualId;
+  const statusEl = details.querySelector('.chapter-status');
+  const select = details.querySelector('.chapter-select');
+  const form = details.querySelector('form');
+  const reviewEl = details.querySelector('.profile-review');
+
+  function renderReview(data) {
+    statusEl.textContent = 'This manual needs a one-time review before it can be generated.';
+    form.style.display = 'none';
+    reviewEl.style.display = '';
+    reviewEl.innerHTML = '';
+
+    if ((data.notes || []).length) {
+      const notesEl = document.createElement('div');
+      notesEl.style.cssText = 'font-size:12px;color:#6b6f76;margin-bottom:6px;';
+      notesEl.innerHTML = data.notes.map((n) => '&middot; ' + n).join('<br>');
+      reviewEl.appendChild(notesEl);
+    }
+
+    let profileIdInput = null;
+    if (data.profile_is_new) {
+      const label = document.createElement('label');
+      label.textContent = 'New profile name (editable)';
+      reviewEl.appendChild(label);
+      profileIdInput = document.createElement('input');
+      profileIdInput.type = 'text';
+      profileIdInput.value = data.profile_id;
+      reviewEl.appendChild(profileIdInput);
+
+      const layoutEl = document.createElement('pre');
+      layoutEl.style.cssText = 'font-size:11px;background:#f5f5f5;padding:6px;overflow-x:auto;';
+      layoutEl.textContent = JSON.stringify(data.layout, null, 2);
+      reviewEl.appendChild(layoutEl);
+    }
+
+    const needsChapters = data.section_source === 'chapter_toc' || data.section_source === 'running_head';
+    const candidates = data.section_source === 'chapter_toc' ? data.toc_chapters : data.running_head_candidates;
+    const checkboxes = [];
+    if (needsChapters) {
+      const listEl = document.createElement('div');
+      listEl.style.cssText = 'max-height:220px;overflow-y:auto;border:1px solid #ddd;padding:4px;margin:6px 0;';
+      for (const c of candidates) {
+        const row = document.createElement('label');
+        row.style.cssText = 'display:block;font-size:12px;';
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        // Table-of-contents chapters are exact (read straight from the
+        // manual's own printed TOC) so default to kept; running-head
+        // candidates can be noise (a repeated footnote, a generic word) so
+        // default to unchecked and let a human pick the real ones.
+        cb.checked = data.section_source === 'chapter_toc';
+        cb.dataset.label = c.label;
+        cb.dataset.pageStart = c.page_start;
+        cb.dataset.pageEnd = c.page_end;
+        row.appendChild(cb);
+        row.append(` ${c.label} (pages ${c.page_start + 1}-${c.page_end})`);
+        listEl.appendChild(row);
+        checkboxes.push(cb);
+      }
+      reviewEl.appendChild(listEl);
+    }
+
+    const confirmBtn = document.createElement('button');
+    confirmBtn.type = 'button';
+    confirmBtn.textContent = 'Confirm & Activate';
+    confirmBtn.addEventListener('click', async () => {
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = 'Activating…';
+      const chapters = needsChapters
+        ? checkboxes.filter((cb) => cb.checked).map((cb) => ({
+            label: cb.dataset.label,
+            page_start: parseInt(cb.dataset.pageStart, 10),
+            page_end: parseInt(cb.dataset.pageEnd, 10),
+          }))
+        : null;
+      const payload = {
+        manual_id: manualId,
+        profile_id: profileIdInput ? profileIdInput.value.trim() : data.profile_id,
+        layout: data.profile_is_new ? data.layout : null,
+        derived_from: data.derived_from,
+        chapters: chapters,
+      };
+      try {
+        const res = await fetch('/api/activate-profile', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({ detail: res.statusText }));
+          statusEl.textContent = 'Activation failed: ' + (err.detail || res.statusText);
+          confirmBtn.disabled = false;
+          confirmBtn.textContent = 'Confirm & Activate';
+          return;
+        }
+        await loadChapters();
+      } catch (e) {
+        statusEl.textContent = 'Activation failed: ' + e;
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = 'Confirm & Activate';
+      }
+    });
+    reviewEl.appendChild(confirmBtn);
+  }
+
+  async function loadChapters() {
+    statusEl.textContent = 'Loading chapters from the PDF…';
+    reviewEl.style.display = 'none';
+    reviewEl.innerHTML = '';
+    form.style.display = '';
+    try {
+      const res = await fetch('/api/chapters/' + manualId);
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({detail: res.statusText}));
+        statusEl.textContent = 'Could not read chapters: ' + (err.detail || res.statusText);
+        return;
+      }
+      const data = await res.json();
+      if (data.status === 'needs_review') {
+        renderReview(data);
+        return;
+      }
+      select.innerHTML = '';
+      if (data.chapters.length === 0) {
+        statusEl.textContent = 'This PDF has no bookmarks at all — generate cannot cut sections from it.';
+        select.innerHTML = '<option value="">(no chapters found)</option>';
+        return;
+      }
+      for (const title of data.chapters) {
+        const opt = document.createElement('option');
+        opt.value = title;
+        opt.textContent = title;
+        select.appendChild(opt);
+      }
+      select.disabled = false;
+      statusEl.textContent = `${data.page_count} page(s), ${data.chapters.length} top-level chapter(s) found.` +
+        (data.shallow_warning ? ' Warning: bookmarks are shallow (few levels) — sections inside the chosen chapter may not split well.' : '');
+    } catch (e) {
+      statusEl.textContent = 'Could not read chapters: ' + e;
+    }
+  }
+
+  details.addEventListener('toggle', async () => {
+    if (!details.open || loaded) return;
+    loaded = true;
+    await loadChapters();
+  });
+});
+</script>
+{% endblock %}

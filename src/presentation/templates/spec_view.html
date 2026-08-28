@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<p><code>{{ manual_id }}</code> — {{ chapter }}</p>
+<div style="display:flex; gap:24px;">
+  <div style="width:220px; flex:none;">
+    <div class="card">
+      <strong>Files</strong>
+      <ul style="padding-left:16px;">
+        <li><a href="/specifications/{{ manual_id }}?chapter={{ chapter }}">README.md</a></li>
+        {% for f in files if f != 'README.md' %}
+        <li><a href="/specifications/{{ manual_id }}/file/{{ f }}?chapter={{ chapter }}">{{ f }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="pub-doc" style="flex:1;">
+    {{ body_html | safe }}
+  </div>
+</div>
+{% endblock %}

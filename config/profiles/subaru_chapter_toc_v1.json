@@ -1,0 +1,11 @@
+{
+  "profile_id": "subaru_chapter_toc_v1",
+  "extends": "generic_v1",
+  "derived_from": "Same PDF and layout facts as subaru_running_head_v1 (data/library/subaru/outback-2025/original/MSA5M2511A_STIS.pdf, columns=2, header_boundary_pt=75.0, footer_boundary_pt=410.0 -- see that profile's derived_from for how those were measured). Created 2026-08-27 to try section_source='chapter_toc' instead of 'running_head': this PDF has its own real printed table of contents (pages 2-3, 9 chapters) which running_head's margin-text-repetition heuristic can't reconstruct (the same 'BASIC OPERATION' margin label is reused for two different real chapters -- see docs/HANDOVER.md 2026-08-27). Rule-based, no AI.",
+  "layout": {
+    "columns": 2,
+    "section_source": "chapter_toc",
+    "header_boundary_pt": 75.0,
+    "footer_boundary_pt": 410.0
+  }
+}

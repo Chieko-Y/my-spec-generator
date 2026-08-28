@@ -1,0 +1,21 @@
+{
+  "profile_id": "generic_v1",
+  "extends": null,
+  "derived_from": "Fallback profile for any manual_id not covered by a maker-specific profile. Not derived from a real requirements document — used only until a specific profile is written for the maker at hand.",
+  "layout": {
+    "section_source": "bookmarks",
+    "section_depth_below_chapter": 2,
+    "columns": 1,
+    "repair_kerning": false,
+    "figure_min_width_pt": 40.0,
+    "figure_min_height_pt": 40.0,
+    "figure_merge_distance_pt": 3.0,
+    "shallow_outline_level": 1
+  },
+  "excluded_section_titles": [
+    "License Agreement",
+    "Software License Agreement",
+    "Copyright",
+    "Trademarks"
+  ]
+}

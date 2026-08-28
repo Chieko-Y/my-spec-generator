@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Screen elements — <code>{{ manual_id }}</code> — {{ chapter }}</h1>
+
+{% if not figures %}
+<div class="flash warn">Figure detection is not implemented in this build yet (planned for a later phase) — there is nothing to transcribe against yet. You can still record an entry manually below if you know the figure_id.</div>
+{% endif %}
+
+<div class="card">
+  <h2>Add / update an element</h2>
+  <p>Only a person who has looked at the figure can say what a legend symbol means — a label cannot be saved without who decided it.</p>
+  <form method="post" action="/screen-elements/{{ manual_id }}">
+    <input type="hidden" name="chapter" value="{{ chapter }}">
+    <label>Figure ID</label>
+    <input type="text" name="figure_id" required>
+    <label>Symbol (e.g. "A")</label>
+    <input type="text" name="symbol" required style="width:60px">
+    <label>Label</label>
+    <input type="text" name="label" required>
+    <label>Note</label>
+    <input type="text" name="note">
+    <label>Decided by</label>
+    <input type="text" name="decided_by" required>
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Recorded elements</h2>
+  <table>
+    <tr><th>Figure</th><th>Symbol</th><th>Label</th><th>Note</th><th>Decided by</th></tr>
+    {% for e in elements %}
+    <tr><td>{{ e.figure_id }}</td><td>{{ e.symbol }}</td><td>{{ e.label }}</td><td>{{ e.note }}</td><td>{{ e.decided_by }}</td></tr>
+    {% else %}
+    <tr><td colspan="5">None recorded yet.</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

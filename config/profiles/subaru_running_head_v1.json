@@ -1,0 +1,11 @@
+{
+  "profile_id": "subaru_running_head_v1",
+  "extends": "generic_v1",
+  "derived_from": "Derived via `profile-derive` from data/library/subaru/outback-2025/original/MSA5M2511A_STIS.pdf (2026-08-27 re-registration, after the original subaru_supplement_v1/subaru_running_head_v1 profile and its data were deleted earlier the same day). This booklet has no usable per-chapter bookmarks (only 2 print-production markers) and a 2-column layout, unlike subaru_v1's single-column bookmark-based booklet -- the reuse boundary is booklet physical structure (section_source/columns), not model/year (see docs/HANDOVER.md 2026-08-26/27). header_boundary_pt/footer_boundary_pt are this run's auto-detected values (75.0/410.0pt); an earlier session had hand-verified 155.0/690.0pt for what was believed to be the same PDF -- not reconciled, flagged for review before this profile is used to generate real output. figure_min_width_pt/figure_min_height_pt are left inherited from generic_v1 (this run's auto-detected 512.8/279.7pt was flagged unreliable -- multi-modal image-size distribution). Slot rules and section depth are unverified for this manual and inherited unchanged from generic_v1.",
+  "layout": {
+    "columns": 2,
+    "section_source": "running_head",
+    "header_boundary_pt": 75.0,
+    "footer_boundary_pt": 410.0
+  }
+}

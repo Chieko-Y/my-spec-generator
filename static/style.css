@@ -1,0 +1,165 @@
+:root {
+  --bg: #f7f7f8;
+  --panel: #ffffff;
+  --border: #dcdde0;
+  --text: #1b1c1f;
+  --muted: #6b6f76;
+  --accent: #2457c5;
+  --warn-bg: #fff6e5;
+  --warn-border: #e8c477;
+  --ok: #1a7f37;
+  --bad: #b3261e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+.nav-sidebar {
+  width: 220px;
+  flex: none;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.nav-sidebar .app-title {
+  font-weight: 700;
+  padding: 0 16px 16px;
+  font-size: 15px;
+}
+
+.nav-sidebar a {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-sidebar a.active { background: #eaf0fe; color: var(--accent); font-weight: 600; }
+.nav-sidebar a:hover { background: #f0f1f3; }
+
+.nav-sidebar .section-label {
+  padding: 16px 16px 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+
+.app-main { flex: 1; min-width: 0; padding: 24px 32px; max-width: 1100px; }
+
+h1 { font-size: 22px; margin-top: 0; }
+h2 { font-size: 17px; }
+
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }
+th, td { border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+th { background: #f0f1f3; }
+
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.dropzone.dragover { border-color: var(--accent); background: #eaf0fe; color: var(--accent); }
+
+label { display: block; font-size: 12px; color: var(--muted); margin: 8px 0 2px; }
+input[type=text], input[type=url], input[type=date], select, textarea {
+  width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px;
+}
+button, input[type=submit] {
+  background: var(--accent); color: white; border: none; border-radius: 4px;
+  padding: 7px 14px; font-size: 13px; cursor: pointer; margin-top: 10px;
+}
+button.secondary { background: #6b6f76; }
+button.danger { background: var(--bad); }
+button:disabled, input:disabled, select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #9aa0a6;
+}
+
+.flash { padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; font-size: 13px; }
+.flash.ok { background: #e8f6ec; border: 1px solid #b7e2c2; color: var(--ok); }
+.flash.error { background: #fdeceb; border: 1px solid #f3b9b4; color: var(--bad); }
+.flash.warn { background: var(--warn-bg); border: 1px solid var(--warn-border); color: #8a6a1a; }
+
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; }
+.badge.ready { background: #e8f6ec; color: var(--ok); }
+.badge.notready { background: #f0f1f3; color: var(--muted); }
+.badge.unreviewed { background: var(--warn-bg); color: #8a6a1a; }
+
+code { background: #f0f1f3; padding: 1px 4px; border-radius: 3px; font-size: 12px; }
+
+.pub-doc {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 20px 28px;
+  /* .pub-doc is a flex child (style="flex:1" in spec_view.html) inside a flex row
+     with the file-list sidebar. A flex child's default min-width is auto, not 0 —
+     it will not shrink below the intrinsic width of whatever is inside it (a wide
+     table, a mermaid SVG with long node labels), so the whole page grows past the
+     viewport and needs horizontal scroll even though nothing inside .pub-doc
+     individually looks oversized (reported directly, 2026-08-25, after the image
+     size itself was already capped — this is the classic flexbox min-width trap,
+     a second, separate cause). min-width: 0 lets this column actually shrink;
+     overflow-x is a fallback so if some single element is still wider than the
+     column, only that box scrolls instead of the whole page. */
+  min-width: 0;
+  overflow-x: auto;
+}
+.pub-doc s, .pub-doc del { color: var(--bad); }
+.pub-doc table { max-width: 100%; }
+.pub-doc pre.mermaid, .pub-doc pre.mermaid svg { max-width: 100%; height: auto; }
+/* Figures are rendered at ~400dpi so the crop matches the manual's own embedded
+   image resolution (reported as too rough before that, 2026-08-25) — but with no
+   display size cap, a 1735x1035px PNG rendered at native size blew far past the
+   ~1100px content column (reported directly the same way, same day). Cap display
+   width to the column, let height follow; the file itself is untouched. */
+.pub-doc img { width: 100%; max-width: 480px; height: auto; display: block; margin: 8px 0; }
+
+.pub-doc h1 {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+.pub-doc h2 {
+  margin-top: 28px;
+  padding: 6px 10px;
+  background: #f0f1f3;
+  border-left: 3px solid var(--accent);
+}
+
+.fn-meta {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.test-ready-yes { color: var(--ok); font-weight: 600; }
+.test-ready-no { color: var(--muted); }
+
+/* Requirement tables: generous cell padding and a visible label/disclaimer/body
+   hierarchy inside each cell, instead of one flat sentence — the flat version was
+   reported to read like raw extracted text rather than a requirements document
+   (2026-08-25). */
+.pub-doc table { font-size: 13px; }
+.pub-doc td, .pub-doc th { padding: 10px 14px; }
+.pub-doc tbody tr:nth-child(even) { background: #fafafb; }
+.pub-doc td:nth-child(2) { line-height: 1.6; }
+.req-label { display: block; font-weight: 700; margin-bottom: 2px; }
+.fn-disclaimer { font-size: 12px; font-style: italic; color: var(--muted); margin: 0 0 8px; }
