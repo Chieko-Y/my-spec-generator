@@ -37,6 +37,38 @@ def test_ordinary_words_are_unaffected():
     assert lines[0].page == 2
 
 
+def test_empty_quoted_icon_reference_gets_a_visible_placeholder():
+    """Confirmed against the real 2026 Subaru supplement: this manual's own
+    convention quotes an on-screen UI element's name ("Network Connection"),
+    but when that element is a bare icon, pdfplumber returns nothing at all for
+    its glyph -- 'Touch “ ” of the main menu.' straight from the PDF, an
+    empty quoted pair with no character left to strip. Left alone this reads as
+    a data-loss bug; a placeholder makes clear a real (untextraceable) icon
+    reference was here."""
+    words = [
+        _word("Touch", top=100.0, x0=10.0),
+        _word("“", top=100.0, x0=50.0),
+        _word("”", top=100.0, x0=70.0),
+        _word("of", top=100.0, x0=90.0),
+        _word("the", top=100.0, x0=110.0),
+        _word("main", top=100.0, x0=130.0),
+        _word("menu.", top=100.0, x0=160.0),
+    ]
+    lines = _group_words_into_lines(words, page_index=0)
+    assert len(lines) == 1
+    assert lines[0].text == "Touch “[icon]” of the main menu."
+
+
+def test_a_quote_pair_with_real_content_is_left_alone():
+    words = [
+        _word("“", top=100.0, x0=10.0),
+        _word("Network", top=100.0, x0=30.0),
+        _word("Connection”", top=100.0, x0=70.0),
+    ]
+    lines = _group_words_into_lines(words, page_index=0)
+    assert lines[0].text == "“ Network Connection”"
+
+
 def test_a_word_that_is_entirely_an_icon_glyph_is_dropped_not_left_as_an_empty_token():
     words = [
         _word("", top=10.0, x0=5.0),  # a lone icon glyph, its own "word"

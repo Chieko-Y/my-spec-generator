@@ -38,7 +38,21 @@ _PDFIUM_EXECUTOR = ThreadPoolExecutor(max_workers=1, thread_name_prefix="pdfium"
 # "Phone/Navigation/Music/Climate/Apps/Vehicle commands" and several other
 # sub-headings). It carries no transferable meaning outside that font, so it is
 # stripped rather than kept.
-_ICON_GLYPH_RE = re.compile(r"[-]")
+_ICON_GLYPH_RE = re.compile(r"[\ue000-\uf8ff]")
+
+# This manual's own printing convention quotes an on-screen UI element's name
+# ("Network Connection", "Wi-Fi Security"). When that element is a bare icon
+# instead of a text label, the icon glyph itself has no extractable text at
+# all -- confirmed directly against the real 2026 Subaru supplement: pdfplumber
+# returns 'Touch \u201c \u201d of the main menu.' (curly quotes, nothing but whitespace
+# between them) straight from the PDF, with no character to strip -- this is a
+# gap in the PDF's own text layer, not something _ICON_GLYPH_RE removes. Left
+# alone, an empty quoted pair reads as a data-loss bug rather than "a real icon
+# reference existed here, the manual just doesn't expose it as text" -- an
+# empty quote pair is otherwise never legitimate prose, so replacing whatever
+# sits between two quote marks with a placeholder when it's empty/whitespace is
+# a safe, purely structural signal, not a guess at the icon's actual meaning.
+_EMPTY_QUOTED_ICON_RE = re.compile(r'([\u201c"])\s*([\u201d"])')
 
 # A numbered-procedure-step marker word by itself, e.g. "1." or "12." -- these
 # routinely render larger/bolder than the step's own body text (a common list-
@@ -87,6 +101,7 @@ def _build_line_from_words(ws_sorted: list[dict], page_index: int) -> Line | Non
     if not cleaned:
         return None
     text = " ".join(t for t, _ in cleaned).strip()
+    text = _EMPTY_QUOTED_ICON_RE.sub(r"\1[icon]\2", text)
     if not text:
         return None
     # Median across every word in the line, not just the first (leftmost) word's

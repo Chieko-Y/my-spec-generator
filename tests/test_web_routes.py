@@ -137,6 +137,57 @@ def test_manuals_page_hides_view_link_when_license_is_not_ok(client):
     assert f'href="/specifications/{manual_id}?chapter=navigation"' in resp.text
     assert ">View</a>" in resp.text
 
+
+def test_register_refuses_to_silently_overwrite_an_existing_manual_id(client, tmp_path):
+    # Regression test: re-registering the same maker/model/booklet combination
+    # (same manual_id) used to silently overwrite both the existing sources.json
+    # row AND the original PDF file on disk (OriginalLibrary.commit_inbox has no
+    # existence check of its own) — picking maker/model from dropdowns instead of
+    # free-typing them makes accidentally reselecting an already-registered
+    # combination much more likely, so this needed an explicit gate.
+    from presentation.web import uc
+
+    manual_id = "toyota/rav4-2026/multimedia"
+    original_row = uc.source_registry.get(manual_id)
+
+    fake_pdf = tmp_path / "fake.pdf"
+    fake_pdf.write_bytes(b"%PDF-1.4 fake")
+
+    resp = client.post(
+        "/register",
+        data={
+            "inbox_path": str(fake_pdf),
+            "maker": "Toyota",
+            "model": "RAV4 2026",
+            "booklet": "multimedia",
+            "title": "A different title entirely",
+        },
+        follow_redirects=False,
+    )
+    assert resp.status_code == 303
+    assert "flash_kind=error" in resp.headers["location"]
+    # refused before ever touching the existing row or the inbox file
+    assert uc.source_registry.get(manual_id) == original_row
+    assert fake_pdf.exists()
+
+    fake_pdf2 = tmp_path / "fake2.pdf"
+    fake_pdf2.write_bytes(b"%PDF-1.4 fake")
+    resp = client.post(
+        "/register",
+        data={
+            "inbox_path": str(fake_pdf2),
+            "maker": "Toyota",
+            "model": "RAV4 2026",
+            "booklet": "multimedia",
+            "title": "A different title entirely",
+            "confirm_overwrite": "1",
+        },
+        follow_redirects=False,
+    )
+    assert resp.status_code == 303
+    assert "flash_kind=error" not in resp.headers["location"]
+    assert uc.source_registry.get(manual_id)["title"] == "A different title entirely"
+
     uc.register_source(manual_id, {"license_state": "unreviewed"})
 
     resp = client.get("/manuals", follow_redirects=False)

@@ -225,6 +225,37 @@ def _index_markdown(spec: ManualSpec) -> str:
     return "\n".join(lines)
 
 
+def combined_markdown(spec: ManualSpec) -> str:
+    """Whole-manual view: the same index summary _index_markdown produces --
+    now over a spec whose .functions is every viewable chapter merged together,
+    so its counts/pie/table are manual-wide totals, not one chapter's -- followed
+    by every function's full detail, one after another, with a divider heading
+    between chapters. Each chapter's own functions all share one FunctionSpec.area
+    value (confirmed against real generated spec.json: every function in one
+    chapter carries that chapter's own display name as `area`), so grouping by
+    `area` here recovers the chapter boundaries without the caller needing to
+    pass them in separately."""
+    parts = [_index_markdown(spec)]
+    grouped: dict[str, list] = {}
+    for f in spec.functions:
+        grouped.setdefault(f.area or "General", []).append(f)
+    for area, functions in grouped.items():
+        parts.append(f"\n---\n\n# {_esc(area)}\n")
+        parts.extend(_function_markdown(f, spec.manual_id) for f in functions)
+    body = "\n\n".join(parts)
+
+    # _function_markdown writes each figure as "../figures/FIG-x.png", a path
+    # meant to be resolved by the browser relative to a per-chapter page at
+    # /specifications/{manual_id}/file/{filename} (one more path segment deep
+    # than manual_id, so ".." lands back on manual_id -- see the routing
+    # comments in web.py). The combined view is served at
+    # /specifications/{manual_id} itself, one level shallower, where the same
+    # ".." would strip a real segment off manual_id instead. Rewritten to an
+    # absolute path here so it resolves correctly regardless of the viewing
+    # page's own depth.
+    return body.replace("](../figures/", f"](/specifications/{spec.manual_id}/figures/")
+
+
 class MarkdownSpecPublisher:
     def __init__(self, workspace_dir: Path):
         self.workspace_dir = Path(workspace_dir)

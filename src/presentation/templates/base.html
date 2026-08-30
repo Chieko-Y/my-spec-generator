@@ -8,6 +8,22 @@
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       if (window.mermaid) { mermaid.initialize({ startOnLoad: true, securityLevel: "strict" }); }
+
+      // This app is server-rendered (full page load per navigation), so a plain
+      // <details> resets closed every time the page re-renders on a new
+      // navigation -- opening a chapter link, for example, always lands on a
+      // freshly-collapsed accordion. Persist every such <details>'s open/closed
+      // state in localStorage so it survives navigation instead of only
+      // toggling within the current page. Not scoped to the sidebar -- the
+      // Specifications page's own chapter accordions (spec_view.html) use the
+      // same data-persist-key convention.
+      document.querySelectorAll("details[data-persist-key]").forEach((details) => {
+        const key = "sidebarOpen:" + details.dataset.persistKey;
+        if (localStorage.getItem(key) === "1") { details.open = true; }
+        details.addEventListener("toggle", () => {
+          try { localStorage.setItem(key, details.open ? "1" : "0"); } catch (e) {}
+        });
+      });
     });
   </script>
 </head>
@@ -22,7 +38,12 @@
     {% if makers %}
     <div class="section-label">Makers</div>
     {% for m in makers %}
-    <a href="/manuals?maker={{ m.name }}">{{ m.name }} {% if m.count %}({{ m.count }}){% endif %}</a>
+    <details class="maker-accordion" data-persist-key="maker:{{ m.name }}">
+      <summary>{{ m.name }} {% if m.count %}({{ m.count }}){% endif %}</summary>
+      {% for man in m.manuals %}
+      <a class="model-link" href="/specifications/{{ man.manual_id }}">{{ man.model }}</a>
+      {% endfor %}
+    </details>
     {% endfor %}
     {% endif %}
   </nav>

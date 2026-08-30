@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<p><code>{{ manual_id }}</code> — {{ chapter }}</p>
+<p><code>{{ manual_id }}</code></p>
 <div style="display:flex; gap:24px;">
-  <div style="width:220px; flex:none;">
-    <div class="card">
-      <strong>Files</strong>
-      <ul style="padding-left:16px;">
-        <li><a href="/specifications/{{ manual_id }}?chapter={{ chapter }}">README.md</a></li>
-        {% for f in files if f != 'README.md' %}
-        <li><a href="/specifications/{{ manual_id }}/file/{{ f }}?chapter={{ chapter }}">{{ f }}</a></li>
+  <div style="width:240px; flex:none;">
+    <div class="card spec-nav">
+      <a class="readme-link {{ 'active' if not chapter else '' }}" href="/specifications/{{ manual_id }}">README (all chapters)</a>
+      {% for c in nav %}
+      <details class="chapter-accordion" {{ 'open' if c.chapter == chapter else '' }} data-persist-key="chapter:{{ manual_id }}:{{ c.chapter }}">
+        <summary>{{ c.chapter }}</summary>
+        <a class="file-link {{ 'active' if chapter == c.chapter and current_file == 'README.md' else '' }}" href="/specifications/{{ manual_id }}?chapter={{ c.chapter }}">README</a>
+        {% for f in c.files %}
+        <a class="file-link {{ 'active' if chapter == c.chapter and current_file == f else '' }}" href="/specifications/{{ manual_id }}/file/{{ f }}?chapter={{ c.chapter }}">{{ f }}</a>
         {% endfor %}
-      </ul>
+      </details>
+      {% endfor %}
     </div>
   </div>
   <div class="pub-doc" style="flex:1;">

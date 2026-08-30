@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import re
 import threading
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 from domain.figures import caption_for, is_figure_sized, merge_rects
 from domain.manual_identity import IdentityGuess, guess_identity
@@ -882,6 +882,42 @@ class UseCases:
 
     def load_spec(self, manual_id: str, chapter_slug: str) -> ManualSpec | None:
         return self.spec_repository.load(manual_id, chapter_slug)
+
+    def load_combined_spec(self, manual_id: str, chapter_slugs: list[str]) -> ManualSpec | None:
+        """Every given chapter's generated spec merged into one ManualSpec
+        representing the whole manual as a single book, for the "combined" spec
+        view -- functions kept in the given chapter order (the caller is
+        responsible for that order; see web._viewable_chapters_in_order),
+        each renumbered "{chapter_index}.{original_number}" so two chapters'
+        own independent "1", "2", ... numbering doesn't collide once
+        concatenated. ManualSpec.counts() then naturally reports whole-book
+        totals, since it only ever looks at .functions. Returns None if none
+        of the given chapters has a generated spec yet."""
+        chapter_specs = [
+            (slug, spec)
+            for slug in chapter_slugs
+            for spec in [self.load_spec(manual_id, slug)]
+            if spec is not None
+        ]
+        if not chapter_specs:
+            return None
+        functions = [
+            replace(f, chapter_number=f"{chapter_index}.{f.chapter_number}")
+            for chapter_index, (_slug, spec) in enumerate(chapter_specs, start=1)
+            for f in spec.functions
+        ]
+        first = chapter_specs[0][1]
+        return ManualSpec(
+            manual_id=manual_id,
+            maker=first.maker,
+            model=first.model,
+            document_title=first.document_title,
+            scope="all chapters (combined)",
+            markets=first.markets,
+            profile_id=first.profile_id,
+            meta={},
+            functions=functions,
+        )
 
     def preview_outline(self, pdf_path: str) -> tuple[int, list]:
         return self.manual_reader.outline_preview(pdf_path)

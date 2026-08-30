@@ -4,8 +4,10 @@ composition.py that is allowed to know about FastAPI/Starlette types.
 """
 from __future__ import annotations
 
+import json
 import re
 import uuid
+from datetime import date
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
@@ -24,9 +26,12 @@ from application.use_cases import (
 from domain.manual_parsing import ConfirmedChapter
 from domain.model import ParameterStatus, TermCategory
 from domain.overlay import FigureElement, GlossaryTerm
+from domain.slug import slugify
+from domain.vehicle_catalog import MAKERS, MODELS_BY_MAKER
 
 from .composition import build_use_cases
 from infrastructure import settings
+from infrastructure.markdown_publisher import combined_markdown
 from infrastructure.markdown_view import render_markdown_to_html
 
 APP_NAME = "Owner's Manual Spec Generator"
@@ -52,12 +57,77 @@ async def _application_error_handler(request: Request, exc: Exception):
     return PlainTextResponse(str(exc), status_code=400)
 
 
+def _registration_years() -> list[int]:
+    """2000 through the current year, newest first -- the form's model-year
+    picker. A manual older than 2000 (or from a maker/model not in
+    vehicle_catalog) is still fully supported via the form's own "Other"
+    free-text fallback."""
+    return list(range(date.today().year, 1999, -1))
+
+
+_chapter_order_cache: dict[str, list[str]] = {}
+
+
+def _chapter_display_order(manual_id: str) -> list[str]:
+    """Chapter slugs in the manual's own order (confirmed TOC/running-head
+    allowlist order, or raw PDF bookmark order), not the alphabetical order
+    list_chapters() returns from sorting generated/ folder names. Cached for
+    the process lifetime -- list_available_chapters() can re-read the PDF, and
+    the sidebar recomputes this on every page render, so re-deriving it per
+    request would mean re-opening every registered manual's PDF on every page
+    load in the app."""
+    if manual_id not in _chapter_order_cache:
+        try:
+            labels = uc.list_available_chapters(manual_id)["chapters"]
+        except Exception:
+            labels = []
+        _chapter_order_cache[manual_id] = [slugify(label) for label in labels]
+    return _chapter_order_cache[manual_id]
+
+
+def _sort_chapters_by_manual_order(manual_id: str, chapter_slugs: list[str]) -> list[str]:
+    order = _chapter_display_order(manual_id)
+    rank = {slug: i for i, slug in enumerate(order)}
+    # A chapter slug that doesn't match anything in `order` (e.g. it was
+    # generated under a hand-typed name that doesn't match the PDF's own
+    # chapter label) still needs to show up somewhere -- sorted alphabetically
+    # after every chapter we could place, rather than dropped.
+    return sorted(chapter_slugs, key=lambda s: (rank.get(s, len(order)), s))
+
+
+def _viewable_chapters_in_order(manual_id: str) -> list[str]:
+    """Published, license-viewable chapter slugs, in the manual's own chapter
+    order -- shared by the sidebar accordion and the combined ("whole book")
+    spec view, so the two can never disagree about which chapters count or
+    what order they come in."""
+    if not _license_ok(manual_id):
+        return []
+    published = set(_published_chapters(manual_id))
+    viewable = [c for c in uc.list_chapters(manual_id) if c in published]
+    return _sort_chapters_by_manual_order(manual_id, viewable)
+
+
 def _makers_for_sidebar() -> list[dict]:
-    counts: dict[str, int] = {}
+    # Just the maker -> model x year list -- one click on a model goes straight
+    # to that manual's own Specifications page (spec_view.html), which has its
+    # own chapter/file navigation. Keeping this sidebar list flat (no nested
+    # per-model chapter list) was an explicit user call: the global sidebar is
+    # for finding a manual, not for browsing inside one.
+    by_maker: dict[str, list[dict]] = {}
     for row in uc.source_registry.list_sources():
         maker = row.get("maker") or "(unknown)"
-        counts[maker] = counts.get(maker, 0) + 1
-    return [{"name": k, "count": v} for k, v in sorted(counts.items())]
+        manual_id = row["manual_id"]
+        by_maker.setdefault(maker, []).append(
+            {"manual_id": manual_id, "model": row.get("model") or manual_id}
+        )
+    return [
+        {
+            "name": maker,
+            "count": len(manuals),
+            "manuals": sorted(manuals, key=lambda m: m["model"]),
+        }
+        for maker, manuals in sorted(by_maker.items())
+    ]
 
 
 def _render(request: Request, template: str, active_tab: str, **ctx) -> HTMLResponse:
@@ -106,7 +176,20 @@ def manuals_page(request: Request):
         s["published_chapters"] = set(_published_chapters(s["manual_id"]))
         s["license_ok"] = is_publishable_license(s.get("license_state") or "unreviewed")
         s["busy_chapters"] = uc.busy_chapters(s["manual_id"])
-    return _render(request, "manuals.html", "manuals", sources=sources, license_states=LICENSE_STATES)
+    return _render(
+        request,
+        "manuals.html",
+        "manuals",
+        sources=sources,
+        license_states=LICENSE_STATES,
+        catalog_makers=MAKERS,
+        catalog_models_json=json.dumps(MODELS_BY_MAKER),
+        registration_years=_registration_years(),
+        # Unfiltered, regardless of ?maker= — the overwrite-warning check (see
+        # manuals.html) needs every registered manual_id, not just whichever
+        # maker the sidebar happens to be filtered to right now.
+        existing_manual_ids_json=json.dumps([row["manual_id"] for row in uc.source_registry.list_sources()]),
+    )
 
 
 @app.post("/api/upload")
@@ -157,11 +240,26 @@ def register(
     retrieved_at: str = Form(""),
     markets: str = Form(""),
     license_state: str = Form("unreviewed"),
+    confirm_overwrite: str = Form(""),
 ):
     from domain.slug import slugify
 
     maker_slug, model_slug, booklet_slug = slugify(maker), slugify(model), slugify(booklet)
     manual_id = f"{maker_slug}/{model_slug}/{booklet_slug}"
+
+    # Registering an already-registered manual_id silently overwrote both its
+    # metadata and its original PDF file on disk (OriginalLibrary.commit_inbox
+    # writes to the same maker/model/original/<filename> path with no existence
+    # check) -- confirmed as a real risk once maker/model became pick-lists,
+    # since it's now easy to reselect an existing combination by accident. The
+    # form's own JS warns and requires a checkbox before submitting, but that is
+    # only a convenience; this is the actual gate, since JS can be skipped/wrong.
+    if confirm_overwrite != "1" and uc.source_registry.get(manual_id) is not None:
+        return _redirect(
+            "/manuals",
+            f"{manual_id} is already registered — check the overwrite-confirmation box and resubmit if this is intentional.",
+            "error",
+        )
 
     try:
         final_path = uc.original_library.commit_inbox(inbox_path, maker, model)
@@ -348,35 +446,35 @@ def _license_ok(manual_id: str) -> bool:
 
 @app.get("/specifications", response_class=HTMLResponse)
 def specifications_page(request: Request):
-    # List every generated chapter, not just published ones — a chapter that was
-    # generated but not yet published used to simply not appear anywhere on this
-    # page, which looked like the Generate step had silently done nothing (reported
-    # directly: "Introduction generated fine but doesn't show up in Specifications").
-    # Showing it here as "not published yet" makes the actual state visible instead
-    # of requiring the user to remember that Generate and Publish are separate steps.
-    #
-    # `viewable` re-checks the CURRENT license state, not just whatever it was at
-    # publish time — publish only gates the one-time act of writing the files, and
-    # without a live re-check here, revoking a license after publishing had zero
-    # effect: the already-written files stayed browsable forever. This doesn't
-    # delete anything (a later re-review just needs to flip the state back), it only
-    # withholds viewing while the state says unreviewed/restricted.
-    entries = []
+    # One row per registered manual, linking straight to its unified spec view
+    # (/specifications/{manual_id}, which defaults to the whole-book combined
+    # README) -- the same manual list the sidebar shows, so the top-nav
+    # "Specifications" link and the sidebar always agree on where a manual's
+    # spec lives instead of the nav link landing on a separate, older flat
+    # per-chapter listing (a real inconsistency reported directly, 2026-08-30).
+    # Per-chapter authoring status (generated/published/Publish button) is the
+    # Manuals tab's job; this page only needs to say whether there's anything
+    # to actually read yet, and why not if not --
+    # `_viewable_chapters_in_order` re-checks the CURRENT license state, not
+    # just whatever it was at publish time, so revoking a license after
+    # publishing is reflected here too, not just advisory.
+    manuals = []
     for s in uc.source_registry.list_sources():
-        published = set(_published_chapters(s["manual_id"]))
-        license_ok = _license_ok(s["manual_id"])
-        for chapter in uc.list_chapters(s["manual_id"]):
-            is_published = chapter in published
-            entries.append(
-                {
-                    "manual_id": s["manual_id"],
-                    "chapter": chapter,
-                    "published": is_published,
-                    "viewable": is_published and license_ok,
-                    "license_state": s.get("license_state") or "unreviewed",
-                }
-            )
-    return _render(request, "specifications.html", "specifications", entries=entries)
+        manual_id = s["manual_id"]
+        viewable_count = len(_viewable_chapters_in_order(manual_id))
+        published_count = len(_published_chapters(manual_id))
+        manuals.append(
+            {
+                "manual_id": manual_id,
+                "maker": s.get("maker") or "",
+                "model": s.get("model") or manual_id,
+                "viewable_count": viewable_count,
+                "license_state": s.get("license_state") or "unreviewed",
+                "blocked": published_count > 0 and viewable_count == 0,
+            }
+        )
+    manuals.sort(key=lambda m: (m["maker"], m["model"]))
+    return _render(request, "specifications.html", "specifications", manuals=manuals)
 
 
 @app.get("/specifications/{manual_id:path}/file/{filename}", response_class=HTMLResponse)
@@ -413,8 +511,32 @@ def specification_figure(manual_id: str, filename: str):
 # reachable (found by clicking an individual function link during manual testing —
 # the sidebar listed all the files correctly, but every one of them 404'd).
 @app.get("/specifications/{manual_id:path}", response_class=HTMLResponse)
-def specification_index(request: Request, manual_id: str, chapter: str):
+def specification_index(request: Request, manual_id: str, chapter: str | None = None):
+    # No ?chapter= at all (as opposed to any specific chapter slug) means "the
+    # whole manual as one book" -- the combined view, and the page's own
+    # default (a maker/model link in the sidebar points straight here). This
+    # is also what the specifications-list "All chapters, combined" link
+    # points at, so a bare manual_id always means the same thing everywhere.
+    if chapter is None:
+        return _view_combined_spec(request, manual_id)
     return _view_published_file(request, manual_id, chapter, "README.md")
+
+
+def _view_combined_spec(request: Request, manual_id: str) -> HTMLResponse:
+    if not _license_ok(manual_id):
+        raise HTTPException(
+            403,
+            f"{manual_id}'s license state is not internal_use_permitted — viewing is "
+            "withheld until it's re-reviewed and set from the Manuals tab. The published "
+            "files themselves have not been deleted.",
+        )
+    chapters = _viewable_chapters_in_order(manual_id)
+    spec = uc.load_combined_spec(manual_id, chapters) if chapters else None
+    if spec is None:
+        raise HTTPException(404, "nothing published yet for this manual — publish at least one chapter first")
+
+    html = render_markdown_to_html(combined_markdown(spec))
+    return _render_spec_view(request, manual_id, html, chapter=None, current_file=None)
 
 
 _LEADING_NUMBER = re.compile(r"^(\d+)-")
@@ -449,16 +571,39 @@ def _view_published_file(request: Request, manual_id: str, chapter: str, filenam
         raise HTTPException(404, "not published yet — run generate then publish for this chapter")
 
     html = render_markdown_to_html(path.read_text(encoding="utf-8"))
-    files = sorted((p.name for p in pub_dir.glob("*.md")), key=_function_file_sort_key)
+    return _render_spec_view(request, manual_id, html, chapter=chapter, current_file=filename)
+
+
+def _spec_nav(manual_id: str) -> list[dict]:
+    """Left-panel data for spec_view.html: every viewable chapter, in manual
+    order, each with its own function files (README excluded -- the template
+    always links to a chapter's README separately, as that chapter
+    accordion's first item) -- computed for every chapter regardless of which
+    one is currently being viewed, so the whole nav tree is always visible,
+    not just the active chapter's files."""
+    nav = []
+    for chapter in _viewable_chapters_in_order(manual_id):
+        pub_dir = settings.WORKSPACE_DIR / manual_id / "published" / chapter
+        files = sorted(
+            (p.name for p in pub_dir.glob("*.md") if p.name != "README.md"),
+            key=_function_file_sort_key,
+        )
+        nav.append({"chapter": chapter, "files": files})
+    return nav
+
+
+def _render_spec_view(
+    request: Request, manual_id: str, body_html: str, chapter: str | None, current_file: str | None
+) -> HTMLResponse:
     resp = _render(
         request,
         "spec_view.html",
         "specifications",
         manual_id=manual_id,
+        nav=_spec_nav(manual_id),
         chapter=chapter,
-        current_file=filename,
-        files=files,
-        body_html=html,
+        current_file=current_file,
+        body_html=body_html,
     )
     resp.headers["Cache-Control"] = "no-cache"
     return resp

@@ -55,6 +55,69 @@ body {
   letter-spacing: .04em;
 }
 
+.nav-sidebar details.maker-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.nav-sidebar details.maker-accordion summary::-webkit-details-marker { display: none; }
+.nav-sidebar details.maker-accordion summary:hover { background: #f0f1f3; }
+.nav-sidebar details.maker-accordion summary::before {
+  content: "▶";
+  font-size: 9px;
+  color: var(--muted);
+  transition: transform .1s ease;
+}
+.nav-sidebar details.maker-accordion[open] > summary::before { transform: rotate(90deg); }
+
+.nav-sidebar .model-link {
+  padding: 6px 16px 6px 28px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.nav-sidebar .model-link:hover { color: var(--text); background: #f0f1f3; }
+
+/* Specifications page's own left panel (spec_view.html): README + one
+   accordion per chapter, each expanding to that chapter's function files.
+   Same caret/accordion look as the maker accordion above, but this list
+   lives in the main content area, not .nav-sidebar. */
+.spec-nav a {
+  display: block;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 4px;
+}
+.spec-nav a:hover { background: #f0f1f3; }
+.spec-nav a.active { background: #eaf0fe; color: var(--accent); font-weight: 600; }
+.spec-nav .readme-link { font-weight: 600; margin-bottom: 4px; }
+
+.spec-nav details.chapter-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.spec-nav details.chapter-accordion summary::-webkit-details-marker { display: none; }
+.spec-nav details.chapter-accordion summary:hover { background: #f0f1f3; }
+.spec-nav details.chapter-accordion summary::before {
+  content: "▶";
+  font-size: 9px;
+  color: var(--muted);
+  transition: transform .1s ease;
+}
+.spec-nav details.chapter-accordion[open] > summary::before { transform: rotate(90deg); }
+.spec-nav details.chapter-accordion .file-link { padding-left: 28px; font-size: 12px; }
+
 .app-main { flex: 1; min-width: 0; padding: 24px 32px; max-width: 1100px; }
 
 h1 { font-size: 22px; margin-top: 0; }

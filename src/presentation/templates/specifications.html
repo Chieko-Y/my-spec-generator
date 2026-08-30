@@ -3,18 +3,19 @@
 <h1>Specifications</h1>
 <div class="card">
   <ul>
-    {% for e in entries %}
+    {% for m in manuals %}
     <li>
-      {% if e.viewable %}
-      <a href="/specifications/{{ e.manual_id }}?chapter={{ e.chapter }}"><code>{{ e.manual_id }}</code> — {{ e.chapter }}</a>
-      {% elif e.published %}
-      <code>{{ e.manual_id }}</code> — {{ e.chapter }} <span class="badge unreviewed">published, but license is {{ e.license_state }}</span> — set the license state to internal_use_permitted on the Manuals tab to view it
+      <a href="/specifications/{{ m.manual_id }}"><code>{{ m.manual_id }}</code> — {{ m.maker }} {{ m.model }}</a>
+      {% if m.viewable_count %}
+      <span class="badge ready">{{ m.viewable_count }} chapter(s) viewable</span>
+      {% elif m.blocked %}
+      <span class="badge unreviewed">published, but license is {{ m.license_state }} — not viewable — set the license state to internal_use_permitted on the Manuals tab to view it</span>
       {% else %}
-      <code>{{ e.manual_id }}</code> — {{ e.chapter }} <span class="badge unreviewed">generated, not published yet</span> — publish it from the Manuals tab to read it here
+      <span class="badge unreviewed">nothing published yet — publish a chapter from the Manuals tab</span>
       {% endif %}
     </li>
     {% else %}
-    <li>Nothing generated yet. Generate a chapter from the Manuals tab.</li>
+    <li>No manuals registered yet. Register one from the Manuals tab.</li>
     {% endfor %}
   </ul>
 </div>

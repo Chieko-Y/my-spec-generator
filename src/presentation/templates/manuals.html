@@ -14,11 +14,39 @@
   <form id="registerForm" method="post" action="/register">
     <input type="hidden" name="inbox_path" id="f_inbox_path">
     <label>Maker</label>
-    <input type="text" name="maker" id="f_maker" required>
-    <label>Model / year</label>
-    <input type="text" name="model" id="f_model" required placeholder="e.g. Outback 2026">
+    <select id="f_maker_select">
+      <option value="">-- select --</option>
+      {% for m in catalog_makers %}
+      <option value="{{ m }}">{{ m }}</option>
+      {% endfor %}
+      <option value="__other__">Other…</option>
+    </select>
+    <input type="text" id="f_maker_other" placeholder="Maker name" style="display:none;">
+    <input type="hidden" name="maker" id="f_maker" required>
+
+    <label>Model</label>
+    <select id="f_model_select" style="display:none;">
+      <option value="">-- select --</option>
+    </select>
+    <input type="text" id="f_model_other" placeholder="Model name (select a maker above for a pick-list)">
+
+    <label>Model year</label>
+    <select id="f_year_select">
+      <option value="">-- select --</option>
+      {% for y in registration_years %}
+      <option value="{{ y }}">{{ y }}</option>
+      {% endfor %}
+      <option value="__other__">Other…</option>
+    </select>
+    <input type="text" id="f_year_other" placeholder="Year" style="display:none;">
+    <input type="hidden" name="model" id="f_model" required>
+
     <label>Booklet (this becomes the third part of the manual_id, e.g. "multimedia", "navigation")</label>
     <input type="text" name="booklet" id="f_booklet" required placeholder="e.g. navigation">
+    <div id="overwriteWarning" style="display:none;color:#a94442;font-size:12px;margin:4px 0;">
+      <label><input type="checkbox" id="f_confirm_overwrite" name="confirm_overwrite" value="1">
+      This manual_id looks already registered — checking this box will overwrite its existing metadata AND original PDF file.</label>
+    </div>
     <label>Document title (as printed on the manual)</label>
     <input type="text" name="title" id="f_title" placeholder="e.g. 2026 Outback Multimedia Owner's Manual">
     <label>Source URL</label>
@@ -136,6 +164,139 @@ const registerBtn = document.getElementById('registerBtn');
 
 function setField(id, value) { const el = document.getElementById(id); if (value) el.value = value; }
 
+// Maker/model/year picker — select-from-a-list instead of free-typing avoids the
+// typo class of bug (the same maker/model spelled two different ways across two
+// registrations, which used to silently create two unrelated-looking entries).
+// Both maker and year fall back to a free-text "Other…" option for anything
+// outside the curated list (see domain/vehicle_catalog.py's own docstring for
+// why that list is deliberately not exhaustive); model has no fixed list of its
+// own at all when the maker isn't one of the catalog's — there's nothing to pick
+// from, so it's just a plain text field in that case.
+const CATALOG_MODELS = {{ catalog_models_json | safe }};
+
+const makerSelect = document.getElementById('f_maker_select');
+const makerOther = document.getElementById('f_maker_other');
+const makerHidden = document.getElementById('f_maker');
+const modelSelect = document.getElementById('f_model_select');
+const modelOther = document.getElementById('f_model_other');
+const yearSelect = document.getElementById('f_year_select');
+const yearOther = document.getElementById('f_year_other');
+const modelHidden = document.getElementById('f_model');
+
+function updateModelOptionsForMaker(maker) {
+  const models = CATALOG_MODELS[maker];
+  if (models) {
+    modelSelect.innerHTML = '<option value="">-- select --</option>' +
+      models.map((m) => `<option value="${m}">${m}</option>`).join('') +
+      '<option value="__other__">Other…</option>';
+    modelSelect.style.display = '';
+    modelOther.style.display = 'none';
+    modelOther.value = '';
+  } else {
+    modelSelect.style.display = 'none';
+    modelOther.style.display = '';
+  }
+}
+
+function syncMakerModelYear() {
+  makerHidden.value = makerSelect.value === '__other__' ? makerOther.value.trim() : makerSelect.value;
+  const modelName = modelSelect.style.display === 'none' || modelSelect.value === '__other__'
+    ? modelOther.value.trim()
+    : modelSelect.value;
+  const year = yearSelect.value === '__other__' ? yearOther.value.trim() : yearSelect.value;
+  modelHidden.value = year ? `${modelName} ${year}`.trim() : modelName;
+  updateOverwriteWarning();
+}
+
+// Registering the same manual_id twice silently overwrites BOTH the existing
+// metadata AND the original PDF file on disk (see UseCases.register_source /
+// OriginalLibrary.commit_inbox) -- no confirmation of its own. This predicts
+// the manual_id client-side (mirroring domain/slug.py's slugify, approximately
+// -- exact Unicode-normalization parity isn't required here, since the server
+// is still the authority: see /register's own check) so the person sees a
+// warning and has to explicitly opt in before that can happen, instead of
+// finding out after the fact.
+const EXISTING_MANUAL_IDS = {{ existing_manual_ids_json | safe }};
+
+function slugifyClientSide(text) {
+  return (text || '')
+    .normalize('NFKD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'untitled';
+}
+
+function updateOverwriteWarning() {
+  const booklet = document.getElementById('f_booklet').value;
+  const predictedId = `${slugifyClientSide(makerHidden.value)}/${slugifyClientSide(modelHidden.value)}/${slugifyClientSide(booklet)}`;
+  const collision = !!(makerHidden.value && modelHidden.value && booklet && EXISTING_MANUAL_IDS.includes(predictedId));
+  const warningEl = document.getElementById('overwriteWarning');
+  warningEl.style.display = collision ? '' : 'none';
+  if (!collision) document.getElementById('f_confirm_overwrite').checked = false;
+}
+
+makerSelect.addEventListener('change', () => {
+  const isOther = makerSelect.value === '__other__';
+  makerOther.style.display = isOther ? '' : 'none';
+  updateModelOptionsForMaker(isOther ? null : makerSelect.value);
+  syncMakerModelYear();
+});
+makerOther.addEventListener('input', syncMakerModelYear);
+modelSelect.addEventListener('change', () => {
+  modelOther.style.display = modelSelect.value === '__other__' ? '' : 'none';
+  if (modelSelect.value === '__other__') modelOther.value = '';
+  syncMakerModelYear();
+});
+modelOther.addEventListener('input', syncMakerModelYear);
+yearSelect.addEventListener('change', () => {
+  yearOther.style.display = yearSelect.value === '__other__' ? '' : 'none';
+  syncMakerModelYear();
+});
+yearOther.addEventListener('input', syncMakerModelYear);
+
+// The maker/model form fields the server actually reads are now type=hidden
+// (browsers never apply `required` validation to a hidden input, even though
+// the attribute is still there), so the equivalent check has to happen here.
+document.getElementById('f_booklet').addEventListener('input', updateOverwriteWarning);
+
+document.getElementById('registerForm').addEventListener('submit', (event) => {
+  syncMakerModelYear();
+  if (!makerHidden.value || !modelHidden.value) {
+    event.preventDefault();
+    alert('Please choose (or type, via "Other…") both a maker and a model before registering.');
+    return;
+  }
+  if (document.getElementById('overwriteWarning').style.display !== 'none'
+      && !document.getElementById('f_confirm_overwrite').checked) {
+    event.preventDefault();
+    alert('This manual_id already looks registered. Check the confirmation box below the booklet field if you really want to overwrite it.');
+  }
+});
+
+// Selects a catalog dropdown option case-insensitively if one matches a guessed
+// value, otherwise falls back to that select's own "Other…" free-text field —
+// used both for the PDF-upload auto-guess below and would apply the same way to
+// any future prefill source.
+// True if the person has already made a real choice for this select+other pair
+// (a catalog option picked, or free text typed into "Other…" / the no-catalog
+// text fallback) — as opposed to it still sitting at its untouched default.
+function isFieldAlreadySet(selectEl, otherEl) {
+  if (selectEl.style.display === 'none') return !!otherEl.value.trim();
+  if (!selectEl.value) return false;
+  if (selectEl.value === '__other__') return !!otherEl.value.trim();
+  return true;
+}
+
+function pickOrOther(selectEl, otherEl, value) {
+  if (!value) return;
+  const match = Array.from(selectEl.options).find((o) => o.value.toLowerCase() === String(value).toLowerCase());
+  if (match) {
+    selectEl.value = match.value;
+  } else {
+    selectEl.value = '__other__';
+    otherEl.value = value;
+    otherEl.style.display = '';
+  }
+}
+
 async function uploadFile(file) {
   if (!file) return;
   status.textContent = 'Uploading ' + file.name + '…';
@@ -150,8 +311,25 @@ async function uploadFile(file) {
     }
     const data = await res.json();
     document.getElementById('f_inbox_path').value = data.inbox_path;
-    setField('f_maker', data.identity.maker);
-    setField('f_model', data.identity.model ? (data.identity.model + (data.identity.year ? ' ' + data.identity.year : '')) : (data.identity.year || ''));
+    // Never clobber a field the person already chose/typed themselves — the
+    // PDF-derived guess (guess_identity, see domain/manual_identity.py) is
+    // frequently wrong, and filling in the real values first, then attaching
+    // the PDF, used to have the guess silently overwrite them right back.
+    if (!isFieldAlreadySet(makerSelect, makerOther)) {
+      pickOrOther(makerSelect, makerOther, data.identity.maker);
+      updateModelOptionsForMaker(makerSelect.value === '__other__' ? null : makerSelect.value);
+    }
+    if (!isFieldAlreadySet(modelSelect, modelOther)) {
+      if (modelSelect.style.display !== 'none') {
+        pickOrOther(modelSelect, modelOther, data.identity.model);
+      } else if (data.identity.model) {
+        modelOther.value = data.identity.model;
+      }
+    }
+    if (!isFieldAlreadySet(yearSelect, yearOther)) {
+      pickOrOther(yearSelect, yearOther, data.identity.year);
+    }
+    syncMakerModelYear();
     status.textContent = `Read ${data.page_count} page(s), ${data.bookmark_count} bookmark(s). ` +
       (data.identity.maker || data.identity.model ? 'Guessed identity — please confirm the fields below.' : 'Could not guess the identity — please fill in the fields below.') +
       (data.shallow_outline ? ' Warning: bookmarks are shallow; this manual may not split into sections cleanly.' : '');
