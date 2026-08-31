@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=e0d980f912a6 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=5584790bd13c (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 20. Overview
 
 <div class="fn-meta"><b>Function path:</b> Audio / Overview<br><b>Source:</b> printed page 108, 109<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-d2a5520be6ef.png)
+![figure](../figures/FIG-0c94a7fe8a63.png)
 - Figure 20-1 source: p.108
 - (Copied from OM) Select to change audio modes.
 
@@ -40,23 +40,5 @@
 | 1 | <span class="req-label">Step -</span>When playing music on an Apple CarPlay device, operate the Apple CarPlay device from the system. Furthermore, depending on the connected Apple CarPlay device, certain functions may not be available. | capability | p.109 / bullet |
 | 2 | <span class="req-label">Step -</span>Depending on the Apple CarPlay device or music file being played, the cover art may not be displayed. | capability | p.109 / bullet |
 | 3 | <span class="req-label">Step -</span>Tracks selected by operating a connected Apple CarPlay device may not be recognized or displayed properly. | capability | p.109 / bullet |
-<!-- GENERATED:END function=e0d980f912a6 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=5584790bd13c -->
 

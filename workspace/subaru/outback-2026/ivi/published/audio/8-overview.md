@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=e0d980f912a6 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=5584790bd13c (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 8. Overview
 
 <div class="fn-meta"><b>Function path:</b> Audio / Overview<br><b>Source:</b> printed page 94, 95, 96<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-7ccb62bb93cc.png)
+![figure](../figures/FIG-1b28b5f467c6.png)
 - Figure 8-1 source: p.95
 - (Copied from OM) Select to change audio modes. 5
 
@@ -38,31 +38,13 @@
 | 13 | <span class="req-label">Step -</span>“Direct Tune”: The channel list screen can be changed to channel number entering screen to search a channel. | capability | p.96 / bullet |
 | 14 | <span class="req-label">Step -</span>“Categories”: Touch “Music”/“Sports”/“News”/“Talk” to display the contents of the selected category. | capability | p.96 / bullet |
 | 15 | <span class="req-label">Overview</span>Select to operate previous content of the currently selected channel that is cashed in the system. | capability | p.96 / text |
-| 16 | <span class="req-label">Step -</span>“ ”: Select to skip back the cashed content. | capability | p.96 / bullet |
-| 17 | <span class="req-label">Step -</span>“ ”/“ ”: Select to pause/release pause of the cached content playback. | capability | p.96 / bullet |
-| 18 | <span class="req-label">Step -</span>“ ”: Select to skip forward the cashed content. | capability | p.96 / bullet |
+| 16 | <span class="req-label">Step -</span>“[icon]”: Select to skip back the cashed content. | capability | p.96 / bullet |
+| 17 | <span class="req-label">Step -</span>“[icon]”/“[icon]”: Select to pause/release pause of the cached content playback. | capability | p.96 / bullet |
+| 18 | <span class="req-label">Step -</span>“[icon]”: Select to skip forward the cashed content. | capability | p.96 / bullet |
 | 19 | <span class="req-label">Overview</span>Select to enable/disable notification of registered sports teams or music artists/tunes, such as their game match starting time or tune to be played. | capability | p.96 / text |
 | 20 | <span class="req-label">Overview</span>Select to display a list of contents related to the current content you are listening to. *. | capability | p.96 / text |
 | 21 | <span class="req-label">Overview</span>Select to scroll the list of preset buttons. | capability | p.96 / text |
 | 22 | <span class="req-label">Overview</span>Select to tune to preset channels. (Preset channels can also be changed using the / switch on the steering wheel.) The preset channel list can be scrolled by swiping the list. | capability | p.96 / text |
 | 23 | <span class="req-label">Overview</span>*: For content distributed on-demand and online, “More Episodes” may be displayed instead of “Related” on this screen button. | capability | p.96 / text |
-<!-- GENERATED:END function=e0d980f912a6 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=5584790bd13c -->
 

@@ -24,6 +24,11 @@ class OverlayEntry:
             raise ValueError("OverlayEntry requires evidence — a threshold cannot be confirmed without it")
         if not self.filled_by:
             raise ValueError("OverlayEntry requires filled_by")
+        # A blank value is only meaningful for a deliberate revert (status back to
+        # UNFILLED) -- any other status claims to be a real confirmed/derived
+        # number, so it must actually carry one.
+        if self.status != ParameterStatus.UNFILLED and not self.value:
+            raise ValueError("OverlayEntry requires a value unless status is being reverted to unfilled")
 
 
 @dataclass
@@ -79,13 +84,21 @@ def apply_thresholds(spec: ManualSpec, entries: list[OverlayEntry]) -> MergeRepo
 
 
 def existing_threshold_overlay(spec: ManualSpec) -> list[OverlayEntry]:
-    """Extract the currently-filled thresholds back out as overlay entries, so a
-    re-`generate` can read-then-write without losing them (invariant 3)."""
+    """Extract the currently human-touched thresholds back out as overlay entries,
+    so a re-`generate` can read-then-write without losing them (invariant 3).
+
+    Keyed on "has a human actually vouched for this" (evidence + filled_by), not
+    on status -- a deliberate revert-to-unfilled (a tester correcting a mistaken
+    confirmation, evidence recording why) is just as much human input as a normal
+    fill and must round-trip the same way. Only a NEVER-touched, freshly-detected
+    unfilled threshold (no evidence/filled_by yet) is skipped here, since that one
+    doesn't need round-tripping -- generate() will produce it fresh either way.
+    """
     out: list[OverlayEntry] = []
     for function in spec.functions:
         for requirement in function.requirements:
             for threshold in requirement.thresholds:
-                if threshold.status != ParameterStatus.UNFILLED and threshold.evidence and threshold.filled_by:
+                if threshold.evidence and threshold.filled_by:
                     out.append(
                         OverlayEntry(
                             threshold_id=threshold.threshold_id,

@@ -2,7 +2,8 @@
   "mapping": {
     "toyota": "tmc_navi_v1",
     "subaru/outback-2026/ivi": "subaru_v1",
-    "subaru/outback-2025/ivi": "subaru_chapter_toc_v1"
+    "subaru/outback-2025/ivi": "subaru_chapter_toc_v1",
+    "subaru/ascent-2026/ivi": "subaru_chapter_toc_v1"
   },
   "default_profile_id": "generic_v1"
 }

@@ -1,9 +1,19 @@
-<!-- GENERATED:START function=c3f45c0f7ba7 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=b342fe8f6eb1 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 22. Limitations of the navigation system
 
 <div class="fn-meta"><b>Function path:</b> Navigation (if equipped) / Limitations of the navigation system<br><b>Source:</b> printed page 135, 136, 137, 138<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
+
+## Numeric thresholds (filled in by a tester)
+Filled: 2 / unfilled: 2
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| f0c7df61be2d | a few seconds | duration | seconds | 3 s | measured | Verified in the actual vehicle | Chieko |
+| bc86c5c11874 | a certain level of inaccuracy | quantity | as stated | 100 m | from_manual | Stated in the OM: "100 m" | Chieko |
+| 98818e8ddaf3 | high speed | speed | speed | **unfilled** | unfilled | — | — |
+| f7924a31f439 | high speed | speed | speed | **unfilled** | unfilled | — | — |
 
 ## 22-2-1. Service overview
 
@@ -57,27 +67,7 @@
 | 4 | <span class="req-label">Step -</span>When a route cannot be searched. | constraint | p.137 / bullet |
 | 5 | <span class="req-label">Step -</span>If the route to your destination includes gravel, unpaved roads or alleys, the route guidance may not be shown. | capability | p.137 / bullet |
 | 6 | <span class="req-label">Step -</span>The road and map data stored in the navigation system may not be complete or may not be the latest version. | capability | p.137 / bullet |
-<!-- GENERATED:END function=c3f45c0f7ba7 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=b342fe8f6eb1 -->
 
 
 

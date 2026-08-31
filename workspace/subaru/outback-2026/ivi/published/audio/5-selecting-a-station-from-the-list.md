@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=590fc61581be (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=a42c74459897 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 5. Selecting a station from the list
 
 <div class="fn-meta"><b>Function path:</b> Audio / Selecting a station from the list<br><b>Source:</b> printed page 92<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -31,27 +31,9 @@ flowchart TD
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>“ ”: Select to update the station list. | capability | p.92 / bullet |
+| 1 | <span class="req-label">Step -</span>“[icon]”: Select to update the station list. | capability | p.92 / bullet |
 | 2 | <span class="req-label">Selecting a station from the list</span>FM radio only. | capability | p.92 / text |
 | 3 | <span class="req-label">Step -</span>“All”: Select to display all stations. | capability | p.92 / bullet |
 | 4 | <span class="req-label">Step -</span>“Genres”: Select to display categories. | capability | p.92 / bullet |
-<!-- GENERATED:END function=590fc61581be -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=a42c74459897 -->
 

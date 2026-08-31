@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=feb57b648071 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=7a58369e0ec2 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 17. Checking messages
 
 <div class="fn-meta"><b>Function path:</b> Phone / Checking messages<br><b>Source:</b> printed page 85<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -29,24 +29,4 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>Only received messages on the connected Bluetooth phone can be displayed. | capability | p.85 / bullet |
 | 3 | <span class="req-label">Step -</span>The text of the message is not displayed while driving. | capability | p.85 / bullet |
 | 4 | <span class="req-label">Step -</span>Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the message readout volume. | capability | p.85 / bullet |
-<!-- GENERATED:END function=feb57b648071 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=7a58369e0ec2 -->

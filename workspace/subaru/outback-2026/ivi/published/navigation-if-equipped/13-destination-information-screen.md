@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=d4da308ef66e (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=26a0bbe8768f (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 13. Destination information screen
 
 <div class="fn-meta"><b>Function path:</b> Navigation (if equipped) / Destination information screen<br><b>Source:</b> printed page 127, 128<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-6846003c6a18.png)
+![figure](../figures/FIG-b766782b6428.png)
 - Figure 13-1 source: p.127
 - (Copied from OM) and touch “Search here”. Then a new search will be performed.
 
@@ -28,27 +28,7 @@
 | 1 | <span class="req-label">Step -</span>Select the phone number to make a phone call. | capability | p.128 / bullet |
 | 2 | <span class="req-label">Destination information screen</span>Select to start route guidance. (→P.133). | capability | p.128 / text |
 | 3 | <span class="req-label">Destination information screen</span>Displays expected time and distance to the destination. | capability | p.128 / text |
-<!-- GENERATED:END function=d4da308ef66e -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=26a0bbe8768f -->
 
 
 

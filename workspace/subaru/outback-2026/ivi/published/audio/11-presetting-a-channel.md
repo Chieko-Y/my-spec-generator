@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=0e3649e05573 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=e53e889b3220 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 11. Presetting a channel
 
 <div class="fn-meta"><b>Function path:</b> Audio / Presetting a channel<br><b>Source:</b> printed page 99<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -29,23 +29,5 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>To change the preset station to a different one, follow the same procedure. | capability | p.99 / bullet |
-<!-- GENERATED:END function=0e3649e05573 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=e53e889b3220 -->
 

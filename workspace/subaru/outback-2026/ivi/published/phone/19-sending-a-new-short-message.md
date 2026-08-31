@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=fad8bc2fec15 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=b8bfdc423001 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 19. Sending a new short message
 
 <div class="fn-meta"><b>Function path:</b> Phone / Sending a new short message<br><b>Source:</b> printed page 86<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -9,7 +9,7 @@
 ```mermaid
 flowchart TD
     S1["1. Display the favorites detail screen (→P.79), the recent …"]
-    S2["2. Touch “ ” next to the desired number."]
+    S2["2. Touch “[icon]” next to the desired number."]
     S3["3. Select the desired message."]
     S4["4. → “Send”"]
     S1 --> S2
@@ -19,41 +19,15 @@ flowchart TD
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | Display the favorites detail screen (→P.79), the recent calls list screen (→P.78) or | p.86 / step |
-| 2 | 2 | Touch “ ” next to the desired number. | p.86 / step |
+| 1 | 1 | Display the favorites detail screen (→P.79), the recent calls list screen (→P.78) or the contact detail screen (→P.80). | p.86 / step |
+| 2 | 2 | Touch “[icon]” next to the desired number. | p.86 / step |
 | 3 | 3 | Select the desired message. | p.86 / step |
 | 4 | 4 | → “Send” | p.86 / step |
-
-## 19-2-1. Service overview
-
-| # | Presumed requirement | Strength | Source |
-|---|---|---|---|
-| 1 | <span class="req-label">Sending a new short message</span>the contact detail screen (→P.80). | capability | p.86 / text |
 
 ## 19-2-2. Service requirements
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>“ ”: Select to change the message. | capability | p.86 / bullet |
+| 1 | <span class="req-label">Step -</span>“[icon]”: Select to change the message. | capability | p.86 / bullet |
 | 2 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
-<!-- GENERATED:END function=fad8bc2fec15 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=b8bfdc423001 -->

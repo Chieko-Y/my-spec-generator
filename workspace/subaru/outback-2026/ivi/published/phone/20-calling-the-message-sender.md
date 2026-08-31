@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=2643da87df48 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=396f0680313c (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 20. Calling the message sender
 
 <div class="fn-meta"><b>Function path:</b> Phone / Calling the message sender<br><b>Source:</b> printed page 86<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -9,14 +9,14 @@
 ```mermaid
 flowchart TD
     S1["1. Display the message inbox screen. (→P.83)"]
-    S2["2. Touch “ ” next to the desired sender."]
+    S2["2. Touch “[icon]” next to the desired sender."]
     S1 --> S2
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the message inbox screen. (→P.83) | p.86 / step |
-| 2 | 2 | Touch “ ” next to the desired sender. | p.86 / step |
+| 2 | 2 | Touch “[icon]” next to the desired sender. | p.86 / step |
 
 ## 20-2-1. Service overview
 
@@ -29,24 +29,4 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.86 / bullet |
-<!-- GENERATED:END function=2643da87df48 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=396f0680313c -->

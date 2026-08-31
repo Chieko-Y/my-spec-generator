@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=9e671739c079 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=26fd43965619 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 13. Talking on the Bluetooth phone
 
 <div class="fn-meta"><b>Function path:</b> Phone / Talking on the Bluetooth phone<br><b>Source:</b> printed page 81, 82<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-26c16b794085.png)
+![figure](../figures/FIG-2e19987f2d8d.png)
 - Figure 13-1 source: p.81
 - (Copied from OM) Select to mute your voice to the other party.
 
@@ -28,24 +28,4 @@
 | 1 | <span class="req-label">Step -</span>Pressing switch on the steering wheel during a call will put the call on hold. Pressing switch on the steering wheel again will resume the on-hold call. | capability | p.82 / bullet |
 | 2 | <span class="req-label">Step -</span>Changing between cellular phone call and hands-free call can be performed by operating the cellular phone directly. Transferring methods and operations will be different depending on the type of cellular phone you have. For the operation of the cellular phone, see the manual that comes with it. | capability | p.82 / bullet |
 | 3 | <span class="req-label">Step -</span>Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the volume of the other party’s voice. | capability | p.82 / bullet |
-<!-- GENERATED:END function=9e671739c079 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=26fd43965619 -->

@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=5d7f14dae731 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=1371954c350e (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 25. Radio
 
 <div class="fn-meta"><b>Function path:</b> Audio / Radio<br><b>Source:</b> printed page 112, 113<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,11 +6,11 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Numeric thresholds (filled in by a tester)
-Filled: 1 / unfilled: 1
+Filled: 0 / unfilled: 2
 
 | Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
 |---|---|---|---|---|---|---|---|
-| b0c980c6d3b7 | nearby | distance | distance | 5 | measured | test | tester1 |
+| b0c980c6d3b7 | nearby | distance | distance | **unfilled** | unfilled | input error | Chieko |
 | 43ba52f2c1cb | nearby | distance | distance | **unfilled** | unfilled | — | — |
 
 ## 25-2-1. Service overview
@@ -28,23 +28,5 @@ Filled: 1 / unfilled: 1
 | 9 | <span class="req-label">Radio</span>SiriusXM®. | capability | p.112 / text |
 | 10 | <span class="req-label">Radio</span>Cargo loaded on the roof luggage carrier, especially metal objects, may adversely affect the reception of SiriusXM®. | capability | p.112 / text |
 | 11 | <span class="req-label">Radio</span>Alternation or modifications carried out without appropriate authorization may invalidate the user’s right to operate the equipment. | capability | p.113 / text |
-<!-- GENERATED:END function=5d7f14dae731 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=1371954c350e -->
 

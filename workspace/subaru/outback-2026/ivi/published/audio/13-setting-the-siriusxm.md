@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=4d100939a321 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=0b1461817628 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 13. Setting the SiriusXM®
 
 <div class="fn-meta"><b>Function path:</b> Audio / Setting the SiriusXM®<br><b>Source:</b> printed page 100, 101, 102<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -6,31 +6,25 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-ef055aacbb46.png)
+![figure](../figures/FIG-b95baf822334.png)
 - Figure 13-1 source: p.101
 - (Copied from OM) 2. Select the desired item to be set.
-![figure](../figures/FIG-45db2b993ef5.png)
+![figure](../figures/FIG-0abb8e9c4940.png)
 - Figure 13-2 source: p.102
 - (Copied from OM) Select to change avatars.
 
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. SiriusXM® control screen. (→P.94)"]
+    S1["1. SiriusXM® control screen. (→P.94) Touch “[icon]” on the"]
     S2["2. Select the desired item to be set."]
     S1 --> S2
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | SiriusXM® control screen. (→P.94) | p.100 / step |
+| 1 | 1 | SiriusXM® control screen. (→P.94) Touch “[icon]” on the | p.100 / step |
 | 2 | 2 | Select the desired item to be set. | p.101 / step |
-
-## 13-2-1. Service overview
-
-| # | Presumed requirement | Strength | Source |
-|---|---|---|---|
-| 1 | <span class="req-label">Setting the SiriusXM®</span>Touch “ ” on the. | capability | p.100 / text |
 
 ## 13-2-2. Service requirements
 
@@ -55,23 +49,5 @@ flowchart TD
 | 17 | <span class="req-label">Setting the SiriusXM®</span>Contents registered to the favorites will be registered to smart favorites automatically, with the content data cached. “Tune Start” With this function on, when contents are changed to one registered to the favorites, the tune currently aired can be listened to from the beginning. | constraint | p.102 / text |
 | 18 | <span class="req-label">Setting the SiriusXM®</span>“Start Up Recommenda- Select to enable/disable the start up recommendations function. tions”. | capability | p.102 / text |
 | 19 | <span class="req-label">Setting the SiriusXM®</span>“Reset History” Select to delete all the listening history. | capability | p.102 / text |
-<!-- GENERATED:END function=4d100939a321 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=0b1461817628 -->
 

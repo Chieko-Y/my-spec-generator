@@ -23,7 +23,7 @@ flowchart TD
     S8["2. Select (Map Update) on the navigation settings screen. (…"]
     S9["3. → (Wi-Fi) Wi-Fi"]
     S10["4. Select the regions for which maps are to be updated."]
-    S11["5. → (Update XX MB) Update XX MB"]
+    S11["5. → (Update XX MB)"]
     S12["6. After the updates have been completed, turn the ignition…"]
     S13["7. Close the driver’s door and lock the doors, then move at…"]
     S14["8. After at least 5 minutes have elapsed, start the engine …"]
@@ -54,7 +54,7 @@ flowchart TD
 | 8 | 2 | Select (Map Update) on the navigation settings screen. (→P.219) | p.225 / step |
 | 9 | 3 | → (Wi-Fi) Wi-Fi | p.225 / step |
 | 10 | 4 | Select the regions for which maps are to be updated. | p.225 / step |
-| 11 | 5 | → (Update XX MB) Update XX MB | p.225 / step |
+| 11 | 5 | → (Update XX MB) | p.225 / step |
 | 12 | 6 | After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle. | p.225 / step |
 | 13 | 7 | Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering. | p.225 / step |
 | 14 | 8 | After at least 5 minutes have elapsed, start the engine again. | p.225 / step |
@@ -76,3 +76,4 @@ flowchart TD
 | 4 | <span class="req-label">Step -</span>The update for the selected region will be automatically downloaded and installed. | capability | p.225 / bullet |
 | 5 | <span class="req-label">Step -</span>The new map data will be applied. | capability | p.225 / bullet |
 <!-- GENERATED:END function=9ae9005224fc -->
+

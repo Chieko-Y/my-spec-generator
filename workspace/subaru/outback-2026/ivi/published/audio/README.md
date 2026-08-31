@@ -7,17 +7,17 @@
 |---|---|
 | Maker / Model | Subaru / Outback 2026 |
 | Scope | audio |
-| Markets | — |
+| Markets | US, CA |
 | Profile | subaru_v1 |
-| Manual ID | subaru/outback-2026/multimedia |
+| Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 1 / Unfilled: 1
+Filled: 0 / Unfilled: 2
 
 ```mermaid
 pie showData
-    "Filled" : 1
-    "Unfilled" : 1
+    "Filled" : 0
+    "Unfilled" : 2
 ```
 
 ## Figures in the manual
@@ -69,10 +69,10 @@ flowchart LR
 | 7 | Available HD Radio™ technology | Audio | 12 | 0 | 0 | o |
 | 8 | Overview | Audio | 27 | 1 | 0 | - |
 | 9 | How to subscribe to SiriusXM® | Audio | 14 | 0 | 0 | - |
-| 10 | Displaying the radio ID | Audio | 3 | 0 | 0 | o |
+| 10 | Displaying the radio ID | Audio | 2 | 0 | 0 | o |
 | 11 | Presetting a channel | Audio | 2 | 0 | 0 | o |
-| 12 | Searching for a current content | Audio | 20 | 1 | 0 | o |
-| 13 | Setting the SiriusXM® | Audio | 20 | 2 | 0 | o |
+| 12 | Searching for a current content | Audio | 18 | 1 | 0 | o |
+| 13 | Setting the SiriusXM® | Audio | 19 | 2 | 0 | o |
 | 14 | USB memory | Audio | 1 | 0 | 0 | - |
 | 15 | Overview | Audio | 19 | 1 | 0 | - |
 | 16 | Bluetooth audio | Audio | 3 | 0 | 0 | - |
@@ -84,10 +84,12 @@ flowchart LR
 | 22 | Connecting an Android Auto device | Audio | 0 | 0 | 0 | o |
 | 23 | Overview | Audio | 15 | 1 | 0 | - |
 | 24 | Operating information | Audio | 2 | 0 | 0 | - |
-| 25 | Radio | Audio | 11 | 0 | 1 | - |
+| 25 | Radio | Audio | 11 | 0 | 2 | - |
 | 26 | USB memory device | Audio | 3 | 0 | 0 | - |
 | 27 | File information | Audio | 17 | 1 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

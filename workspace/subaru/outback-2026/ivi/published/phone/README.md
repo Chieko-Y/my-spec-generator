@@ -7,9 +7,9 @@
 |---|---|
 | Maker / Model | Subaru / Outback 2026 |
 | Scope | phone |
-| Markets | — |
+| Markets | US, CA |
 | Profile | subaru_v1 |
-| Manual ID | subaru/outback-2026/multimedia |
+| Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
 Filled: 0 / Unfilled: 0
@@ -65,17 +65,18 @@ flowchart LR
 | 9 | By favorites list | Phone | 6 | 0 | 0 | o |
 | 10 | By dialpad | Phone | 2 | 0 | 0 | o |
 | 11 | By contacts list | Phone | 6 | 0 | 0 | o |
-| 12 | Incoming calls | Phone | 4 | 1 | 0 | o |
+| 12 | Incoming calls | Phone | 3 | 1 | 0 | o |
 | 13 | Talking on the Bluetooth phone | Phone | 9 | 1 | 0 | - |
-| 14 | Call waiting | Phone | 8 | 2 | 0 | o |
-| 15 | Bluetooth phone message function | Phone | 13 | 1 | 0 | o |
+| 14 | Call waiting | Phone | 6 | 2 | 0 | o |
+| 15 | Bluetooth phone message function | Phone | 12 | 1 | 0 | o |
 | 16 | Receiving a message | Phone | 12 | 2 | 0 | o |
 | 17 | Checking messages | Phone | 4 | 0 | 0 | o |
 | 18 | Replying to a message (quick reply) | Phone | 5 | 0 | 0 | o |
-| 19 | Sending a new short message | Phone | 3 | 0 | 0 | o |
+| 19 | Sending a new short message | Phone | 2 | 0 | 0 | o |
 | 20 | Calling the message sender | Phone | 2 | 0 | 0 | o |
 | 21 | Displayed on the instrument cluster display | Phone | 1 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
 
 
 

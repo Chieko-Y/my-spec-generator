@@ -1,1 +1,11 @@
-thresholds: []
+thresholds:
+- threshold_id: f0c7df61be2d
+  value: 3 s
+  status: measured
+  evidence: Verified in the actual vehicle
+  filled_by: Chieko
+- threshold_id: bc86c5c11874
+  value: 100 m
+  status: from_manual
+  evidence: 'Stated in the OM: "100 m"'
+  filled_by: Chieko

@@ -121,6 +121,36 @@ def filter_page_furniture(
     return kept
 
 
+_PRODUCTION_FILENAME_RE = re.compile(r"\.(book|fm|mif|indd|docx?|framemaker)\b", re.IGNORECASE)
+# The real Subaru PDF's header band carries two distinct printed lines: a
+# production-filename+page-number artifact ("NB8_北米英語.book 17 ページ",
+# redundant with the p.<n> citation already shown alongside it -- this is a
+# FrameMaker book-file name, the DTP tool this manual set was produced in) and
+# the chapter/section running-head label itself (e.g. "Basic information
+# before operation" -- the actually useful part). Dropped by matching the
+# filename SHAPE (a known DTP source-file extension), not by language --
+# a Japanese-market manual's real running-head text must not be discarded
+# just because it's Japanese; the filename artifact is junk because it's a
+# filename, not because of what script it's written in.
+
+
+def capture_page_running_head(lines: list[Line], header_boundary_pt: float) -> dict[int, str]:
+    """Snapshot each page's header-band text -- the PDF's own printed running-head
+    label (e.g. a chapter/section title repeated in the margin) -- before
+    filter_page_furniture drops it as noise. Kept separately as citation metadata
+    only (see RequirementItem.page_citation), never fed back into body content:
+    it lets a reviewer find the exact spot in the source manual. Lines that look
+    like a production filename artifact are skipped (see
+    _PRODUCTION_FILENAME_RE) -- confirmed against the real Subaru Outback 2026
+    PDF, 2026-08-31, to be redundant DTP-tool furniture, not manual content.
+    """
+    by_page: dict[int, list[str]] = {}
+    for l in lines:
+        if l.top < header_boundary_pt and l.text.strip() and not _PRODUCTION_FILENAME_RE.search(l.text):
+            by_page.setdefault(l.page, []).append(l.text)
+    return {page: " ".join(texts) for page, texts in by_page.items()}
+
+
 def _normalize(text: str) -> str:
     text = text.lower()
     text = re.sub(r"[‒–—―\-–—]+", " ", text)  # dashes -> space

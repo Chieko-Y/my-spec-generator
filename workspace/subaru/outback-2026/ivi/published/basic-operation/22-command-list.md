@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=50f63cb3d8e5 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=1f76c1dbfa2c (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 22. Command list
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Command list<br><b>Source:</b> printed page 34, 35, 36, 37, 38<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -46,24 +46,6 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>For devices that are not installed in the vehicle, the related commands will not be displayed in the screen. Also, according to conditions, other commands may not be displayed in the screen. | capability | p.34 / bullet |
-<!-- GENERATED:END function=50f63cb3d8e5 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=1f76c1dbfa2c -->
 
 

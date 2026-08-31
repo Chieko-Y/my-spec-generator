@@ -7,17 +7,17 @@
 |---|---|
 | Maker / Model | Subaru / Outback 2026 |
 | Scope | basic-operation |
-| Markets | — |
+| Markets | US, CA |
 | Profile | subaru_v1 |
-| Manual ID | subaru/outback-2026/multimedia |
+| Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 0
+Filled: 0 / Unfilled: 1
 
 ```mermaid
 pie showData
     "Filled" : 0
-    "Unfilled" : 0
+    "Unfilled" : 1
 ```
 
 ## Figures in the manual
@@ -30,7 +30,7 @@ flowchart LR
     ROOT["Subaru Outback 2026 — basic-operation"]
     ROOT --> A1["Basic operation"]
     A1 --> A1F1["1 Display and control ⚠"]
-    A1 --> A1F2["2 Initial screen"]
+    A1 --> A1F2["2 Initial screen ⚠"]
     A1 --> A1F3["3 Center information display overview ⚠"]
     A1 --> A1F4["4 Main menu ⚠"]
     A1 --> A1F5["5 Status icons ⚠"]
@@ -56,7 +56,7 @@ flowchart LR
 | No. | Function | Area | Requirements | Figures | Unfilled thresholds | Test-ready |
 |---|---|---|---|---|---|---|
 | 1 | Display and control | Basic operation | 7 | 0 | 0 | - |
-| 2 | Initial screen | Basic operation | 3 | 1 | 0 | o |
+| 2 | Initial screen | Basic operation | 2 | 1 | 1 | - |
 | 3 | Center information display overview | Basic operation | 13 | 1 | 0 | - |
 | 4 | Main menu | Basic operation | 7 | 1 | 0 | - |
 | 5 | Status icons | Basic operation | 6 | 1 | 0 | - |
@@ -74,10 +74,13 @@ flowchart LR
 | 17 | Connecting a USB memory device | Basic operation | 5 | 0 | 0 | o |
 | 18 | Steering wheel switches | Basic operation | 8 | 0 | 0 | - |
 | 19 | Voice assistance system | Basic operation | 4 | 0 | 0 | - |
-| 20 | Using the voice assistance system | Basic operation | 25 | 1 | 0 | o |
+| 20 | Using the voice assistance system | Basic operation | 23 | 1 | 0 | o |
 | 21 | Voice assistance system operation | Basic operation | 4 | 1 | 0 | o |
 | 22 | Command list | Basic operation | 22 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
+
 
 
 

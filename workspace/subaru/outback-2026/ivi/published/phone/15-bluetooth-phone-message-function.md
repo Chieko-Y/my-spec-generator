@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=558bf00fd6be (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=4e595c9321c1 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 15. Bluetooth phone message function
 
 <div class="fn-meta"><b>Function path:</b> Phone / Bluetooth phone message function<br><b>Source:</b> printed page 83, 84<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-d331ae77cce7.png)
+![figure](../figures/FIG-854a25790d95.png)
 - Figure 15-1 source: p.84
 - (Copied from OM) reply): →P.86
 
@@ -15,7 +15,7 @@
 flowchart TD
     S1["1. Display the phone screen. (→P.74)"]
     S2["2. Touch “Messages”."]
-    S3["3. Check that the message inbox screen"]
+    S3["3. Check that the message inbox screen is displayed."]
     S1 --> S2
     S2 --> S3
 ```
@@ -24,7 +24,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.83 / step |
 | 2 | 2 | Touch “Messages”. | p.83 / step |
-| 3 | 3 | Check that the message inbox screen | p.84 / step |
+| 3 | 3 | Check that the message inbox screen is displayed. | p.84 / step |
 
 ## 15-2-1. Service overview
 
@@ -41,31 +41,10 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the model of your Bluetooth phone, the setting of the connected phone may need to be changed. (ex: For iOS or other models, the notification setting may need to be activated.) For details, check the instructions for the connected Bluetooth phone. | capability | p.83 / bullet |
-| 2 | <span class="req-label">Bluetooth phone message function</span>is displayed. | capability | p.84 / text |
-| 3 | <span class="req-label">Step -</span>“ ”: Unread message icon. | capability | p.84 / bullet |
-| 4 | <span class="req-label">Step -</span>Receiving a message: →P.84. | capability | p.84 / bullet |
-| 5 | <span class="req-label">Step -</span>Checking messages: →P.85. | capability | p.84 / bullet |
-| 6 | <span class="req-label">Step -</span>Replying to a message (quick reply): →P.86. | capability | p.84 / bullet |
-| 7 | <span class="req-label">Step -</span>Sending a new short message: → P.86. | capability | p.84 / bullet |
-| 8 | <span class="req-label">Step -</span>Calling the message sender: → P.86. | capability | p.84 / bullet |
-<!-- GENERATED:END function=558bf00fd6be -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| 2 | <span class="req-label">Step -</span>“[icon]”: Unread message icon. | capability | p.84 / bullet |
+| 3 | <span class="req-label">Step -</span>Receiving a message: →P.84. | capability | p.84 / bullet |
+| 4 | <span class="req-label">Step -</span>Checking messages: →P.85. | capability | p.84 / bullet |
+| 5 | <span class="req-label">Step -</span>Replying to a message (quick reply): →P.86. | capability | p.84 / bullet |
+| 6 | <span class="req-label">Step -</span>Sending a new short message: → P.86. | capability | p.84 / bullet |
+| 7 | <span class="req-label">Step -</span>Calling the message sender: → P.86. | capability | p.84 / bullet |
+<!-- GENERATED:END function=4e595c9321c1 -->

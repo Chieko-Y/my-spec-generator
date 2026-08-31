@@ -5,6 +5,16 @@
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
+## Numeric thresholds (filled in by a tester)
+Filled: 1 / unfilled: 3
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| 99e4c6901789 | a few seconds | duration | seconds | **unfilled** | unfilled | — | — |
+| 236284653a08 | a certain level of inaccuracy | quantity | as stated | 100 m | from_manual | Stated in the OM: "100 m" | — |
+| 7f5b88cd5a44 | high speed | speed | speed | **unfilled** | unfilled | — | — |
+| 59429d5bddf1 | high speed | speed | speed | **unfilled** | unfilled | — | — |
+
 ## 21-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -51,6 +61,7 @@
 | 3 | <span class="req-label">Step -</span>When a route cannot be searched. | constraint | p.222 / bullet |
 | 4 | <span class="req-label">Step -</span>If the route to your destination includes gravel, unpaved roads or alleys, the route guidance may not be shown. | capability | p.222 / bullet |
 <!-- GENERATED:END function=ed6bea1285ce -->
+
 
 
 

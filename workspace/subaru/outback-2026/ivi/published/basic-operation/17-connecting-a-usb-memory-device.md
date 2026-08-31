@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=f772422068d8 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=c2b5b68d872a (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 17. Connecting a USB memory device
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Connecting a USB memory device<br><b>Source:</b> printed page 30<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -24,24 +24,6 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>This unit does not support commercially available USB hubs. | capability | p.30 / bullet |
 | 4 | <span class="req-label">Step -</span>By connecting a device such as a cellular phone, charging starts depending on the device. | capability | p.30 / bullet |
 | 5 | <span class="req-label">Step -</span>As the Type-A terminal is for charging only, connect to the Type-C terminal for data/signal communication. | capability | p.30 / bullet |
-<!-- GENERATED:END function=f772422068d8 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=c2b5b68d872a -->
 
 

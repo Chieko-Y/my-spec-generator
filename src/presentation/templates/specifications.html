@@ -2,21 +2,26 @@
 {% block content %}
 <h1>Specifications</h1>
 <div class="card">
-  <ul>
-    {% for m in manuals %}
-    <li>
-      <a href="/specifications/{{ m.manual_id }}"><code>{{ m.manual_id }}</code> — {{ m.maker }} {{ m.model }}</a>
-      {% if m.viewable_count %}
-      <span class="badge ready">{{ m.viewable_count }} chapter(s) viewable</span>
-      {% elif m.blocked %}
-      <span class="badge unreviewed">published, but license is {{ m.license_state }} — not viewable — set the license state to internal_use_permitted on the Manuals tab to view it</span>
-      {% else %}
-      <span class="badge unreviewed">nothing published yet — publish a chapter from the Manuals tab</span>
-      {% endif %}
-    </li>
-    {% else %}
-    <li>No manuals registered yet. Register one from the Manuals tab.</li>
-    {% endfor %}
-  </ul>
+  {% for maker in grouped %}
+  <details class="maker-accordion" data-persist-key="specifications-maker:{{ maker.name }}">
+    <summary>{{ maker.name }} ({{ maker.manuals | length }})</summary>
+    <ul>
+      {% for m in maker.manuals %}
+      <li>
+        <a href="/specifications/{{ m.manual_id }}"><code>{{ m.manual_id }}</code> — {{ m.maker }} {{ m.model }}</a>
+        {% if m.viewable_count %}
+        <span class="badge ready">{{ m.viewable_count }} chapter(s) viewable</span>
+        {% elif m.blocked %}
+        <span class="badge unreviewed">published, but license is {{ m.license_state }} — not viewable — set the license state to internal_use_permitted on the Manuals tab to view it</span>
+        {% else %}
+        <span class="badge unreviewed">nothing published yet — publish a chapter from the Manuals tab</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+  {% else %}
+  <p>No manuals registered yet. Register one from the Manuals tab.</p>
+  {% endfor %}
 </div>
 {% endblock %}

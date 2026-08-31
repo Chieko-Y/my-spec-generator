@@ -1,0 +1,33 @@
+<!-- GENERATED:START function=729a1cf60ec8 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+# 15. Download update
+
+<div class="fn-meta"><b>Function path:</b> Settings / Download update<br><b>Source:</b> printed page 50, 51<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
+
+<p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
+
+## Procedure
+```mermaid
+flowchart TD
+    S1["1. When a message asking if downloading is desired or not i…"]
+```
+
+| Seq | Step | Operation (Copied from OM) | Source |
+|---|---|---|---|
+| 1 | 1 | When a message asking if downloading is desired or not is displayed, touch | p.50 / step |
+
+## 15-2-1. Service overview
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Download update</span>“Download”. | capability | p.50 / text |
+
+## 15-2-2. Service requirements
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Step -</span>Downloading will take several minutes. | capability | p.50 / bullet |
+| 2 | <span class="req-label">Step -</span>“Remind Me”: Select to extend the downloading timing. | capability | p.51 / bullet |
+| 3 | <span class="req-label">Step -</span>When download is completed, a message asking if installation is desired or not will be displayed. (→P.51). | constraint | p.51 / bullet |
+<!-- GENERATED:END function=729a1cf60ec8 -->
+
+

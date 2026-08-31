@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=e0c54d72688b (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=5168905a394b (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 7. Calling on the Bluetooth phone
 
 <div class="fn-meta"><b>Function path:</b> Phone / Calling on the Bluetooth phone<br><b>Source:</b> printed page 78<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -40,24 +40,4 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>By voice assistance system: →P.31 *1: The operation cannot be performed while driving. *2: If equipped. | constraint | p.78 / bullet |
-<!-- GENERATED:END function=e0c54d72688b -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=5168905a394b -->

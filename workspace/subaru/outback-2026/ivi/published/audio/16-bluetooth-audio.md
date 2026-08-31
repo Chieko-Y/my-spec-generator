@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=d59e4d2f9cab (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=6ec54feab39d (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 16. Bluetooth audio
 
 <div class="fn-meta"><b>Function path:</b> Audio / Bluetooth audio<br><b>Source:</b> printed page 104<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -17,23 +17,5 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>When Apple CarPlay/Android Auto is used, Bluetooth audio of the same Bluetooth phone/device cannot be used. | constraint | p.104 / bullet |
-<!-- GENERATED:END function=d59e4d2f9cab -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=6ec54feab39d -->
 

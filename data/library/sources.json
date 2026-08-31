@@ -5,13 +5,29 @@
     "title": "",
     "local_path": "",
     "source_url": "",
-    "retrieved_at": "",
-    "markets": [],
+    "retrieved_at": "2026-08-28",
+    "markets": [
+      "US",
+      "CA"
+    ],
     "license_state": "internal_use_permitted"
   },
   "subaru/outback-2025/ivi": {
     "maker": "Subaru",
     "model": "Outback 2025",
+    "title": "",
+    "local_path": "",
+    "source_url": "",
+    "retrieved_at": "2026-08-28",
+    "markets": [
+      "US",
+      "CA"
+    ],
+    "license_state": "internal_use_permitted"
+  },
+  "subaru/ascent-2026/ivi": {
+    "maker": "Subaru",
+    "model": "Ascent 2026",
     "title": "",
     "local_path": "",
     "source_url": "",

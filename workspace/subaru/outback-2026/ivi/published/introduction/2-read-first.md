@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=185c2572352e (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=58a4a0bf94b9 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 2. Read first
 
 <div class="fn-meta"><b>Function path:</b> Introduction / Read first<br><b>Source:</b> printed page 5<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -22,24 +22,4 @@
 | 1 | <span class="req-label">Step -</span>This sign indicates a situation in which incorrect handling through disregard of written information might result in death or serious personal injury. | capability | p.5 / bullet |
 | 2 | <span class="req-label">Step -</span>This sign indicates a situation in which incorrect handling through disregard of written information might result in personal injury or damage to property. | capability | p.5 / bullet |
 | 3 | <span class="req-label">Step -</span>Useful information for the user is described. | capability | p.5 / bullet |
-<!-- GENERATED:END function=185c2572352e -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=58a4a0bf94b9 -->

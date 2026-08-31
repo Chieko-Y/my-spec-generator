@@ -1,0 +1,2045 @@
+{
+  "manual_id": "subaru/outback-2026/ivi",
+  "maker": "Subaru",
+  "model": "Outback 2026",
+  "document_title": "",
+  "scope": "settings",
+  "markets": [
+    "US",
+    "CA"
+  ],
+  "profile_id": "subaru_v1",
+  "meta": {
+    "unmatched_headings": [],
+    "chapter_prefix": "settings",
+    "chapter_slug": "settings",
+    "chapter_label": "settings",
+    "excluded_sections": []
+  },
+  "functions": [
+    {
+      "function_id": "e0f9d8f184e3",
+      "chapter_number": "1",
+      "title": "Displaying the settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Displaying the settings screen",
+      "pages": [
+        40,
+        41
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19)",
+          "sequence": 1,
+          "source": "p.40 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select the items to be set.",
+          "sequence": 2,
+          "source": "p.40 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "8c508d00f91c",
+          "slot": "overview",
+          "text": "Select to display the sound settings screen. (→P.41).",
+          "source_text": "Select to display the sound settings screen. (→P.41)",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6f2d2befbe67",
+          "slot": "overview",
+          "text": "Select to display the driver profiles settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the driver profiles settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "190d9ab633df",
+          "slot": "overview",
+          "text": "Select to display the EyeSight/driving assistance settings screen. Refer to the Owner’s Manual supplement for the EyeSight system for details.",
+          "source_text": "Select to display the EyeSight/driving assistance settings screen. Refer to the Owner’s Manual supplement for the EyeSight system for details.",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8aebace74aad",
+          "slot": "overview",
+          "text": "Display the manage devices screen. (→P.44).",
+          "source_text": "Display the manage devices screen. (→P.44)",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b04ebdad6a8b",
+          "slot": "overview",
+          "text": "Select to display the display settings screen. (→P.44).",
+          "source_text": "Select to display the display settings screen. (→P.44)",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0e676c69e726",
+          "slot": "overview",
+          "text": "Select to display the phone settings screen. (→P.45).",
+          "source_text": "Select to display the phone settings screen. (→P.45)",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cb433c928b1d",
+          "slot": "overview",
+          "text": "Select to display the vehicle settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the vehicle settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "194dc53a3340",
+          "slot": "overview",
+          "text": "Select to display the time/date settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the time/date settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f7f288d46ffe",
+          "slot": "overview",
+          "text": "Select to display the maintenance settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the maintenance settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6f944bdcd1db",
+          "slot": "overview",
+          "text": "“Wake Up Word: Hi SUBARU”: When this function is activated, say “Hi SUBARU” to activate the voice assistance function.",
+          "source_text": "“Wake Up Word: Hi SUBARU”: When this function is activated, say “Hi SUBARU” to activate the voice assistance function.",
+          "strength": "constraint",
+          "source": "p.40 / text",
+          "page_citation": "Settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "905741f0c6dd",
+          "slot": "overview",
+          "text": "Select to display the valet mode settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "Select to display the valet mode settings screen. Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.41 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4268672fd99e",
+          "slot": "overview",
+          "text": "Select to display the network connection settings screen. (→P.47).",
+          "source_text": "Select to display the network connection settings screen. (→P.47)",
+          "strength": "capability",
+          "source": "p.41 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d9d7f5b49089",
+          "slot": "overview",
+          "text": "Select to display the software settings screen. (→P.48).",
+          "source_text": "Select to display the software settings screen. (→P.48)",
+          "strength": "capability",
+          "source": "p.41 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "b38bd96fd185",
+          "page": 39,
+          "rect": [
+            121.6559982,
+            282.06601020000005,
+            281.0559921,
+            371.1540076
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to display the sound settings screen. (→P.41)",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "c42f781ac0fd",
+          "page": 39,
+          "rect": [
+            298.5360107,
+            282.7860036999999,
+            454.9220123,
+            370.43400629999996
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to display the sound settings screen. (→P.41)",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "26c4d1ead423",
+      "chapter_number": "2",
+      "title": "Sound settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Sound settings screen",
+      "pages": [
+        41,
+        42
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19) 2",
+          "sequence": 1,
+          "source": "p.41 / step"
+        },
+        {
+          "number": 2,
+          "text": "→ “Sound”",
+          "sequence": 2,
+          "source": "p.41 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the items to be set.",
+          "sequence": 3,
+          "source": "p.41 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "0389294955e0",
+          "slot": "overview",
+          "text": "Select to display the equalizer/balance and fade settings “Equalizer/Balance and Fade” screen. (→P.43, 43).",
+          "source_text": "Select to display the equalizer/balance and fade settings “Equalizer/Balance and Fade” screen. (→P.43, 43)",
+          "strength": "capability",
+          "source": "p.41 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f2fe454ccf4b",
+          "slot": "overview",
+          "text": "Select to display the volume controls settings screen.",
+          "source_text": "Select to display the volume controls settings screen.",
+          "strength": "capability",
+          "source": "p.42 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8e703a376af8",
+          "slot": "requirements",
+          "text": "“Navigation Guidance Volume”*1: Select to adjust the volume level of the voice guidance when the navigation system is used.",
+          "source_text": "“Navigation Guidance Volume”*1: Select to adjust the volume level of the voice guidance when the navigation system is used.",
+          "strength": "constraint",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bc72fdb77526",
+          "slot": "requirements",
+          "text": "“System Notification Volume”*1: Select to adjust the volume level of sound notifications.",
+          "source_text": "“System Notification Volume”*1: Select to adjust the volume level of sound notifications.",
+          "strength": "capability",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "28d65ef786f3",
+          "slot": "requirements",
+          "text": "“Touchscreen Beep”: Select to turn the beep sound on/off.",
+          "source_text": "“Touchscreen Beep”: Select to turn the beep sound on/off.",
+          "strength": "capability",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "aa2621a1bc99",
+          "slot": "requirements",
+          "text": "“Touchscreen Beep Volume”: Select to adjust the volume level of beep sound.",
+          "source_text": "“Touchscreen Beep Volume”: Select to adjust the volume level of beep sound.",
+          "strength": "capability",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f04cbf8a96de",
+          "slot": "exception",
+          "text": "“Safety Warning Volume”: Select to adjust the warning volume level. Refer to the vehicle Owner’s Manual for “Volume Controls” details.",
+          "source_text": "“Safety Warning Volume”: Select to adjust the warning volume level. Refer to the vehicle Owner’s Manual for “Volume Controls” details.",
+          "strength": "capability",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1992dd84a62e",
+          "slot": "requirements",
+          "text": "“Ringtone Volume”: Select to adjust the volume level of the ringtone when the hands-free phone system is used.",
+          "source_text": "“Ringtone Volume”: Select to adjust the volume level of the ringtone when the hands-free phone system is used.",
+          "strength": "constraint",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fa4ccef8ac91",
+          "slot": "requirements",
+          "text": "“Caller Voice Volume”: Select to adjust the volume level of your speaking voice when the hands-free phone system is used.",
+          "source_text": "“Caller Voice Volume”: Select to adjust the volume level of your speaking voice when the hands-free phone system is used.",
+          "strength": "constraint",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4a54c2ec4f36",
+          "slot": "requirements",
+          "text": "“In-Call Voice Volume”: Select to adjust the volume level of the interlocutor’s voice when the hands-free phone system is used.",
+          "source_text": "“In-Call Voice Volume”: Select to adjust the volume level of the interlocutor’s voice when the hands-free phone system is used.",
+          "strength": "constraint",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bf4f04dda023",
+          "slot": "requirements",
+          "text": "“Voice Assistance Volume”: Select to adjust the volume level of the voice guidance when the voice assistance system is used.",
+          "source_text": "“Voice Assistance Volume”: Select to adjust the volume level of the voice guidance when the voice assistance system is used.",
+          "strength": "constraint",
+          "source": "p.42 / bullet",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "978e8536178c",
+          "slot": "requirements",
+          "text": "Select to enable/disable the function. When enabled, high-pitched sound is compensated to “Harmonizer”*2 compressed music files, allowing a playback at a similar sound quality level of the original sound before compression.",
+          "source_text": "Select to enable/disable the function. When enabled, high-pitched sound is compensated to “Harmonizer”*2 compressed music files, allowing a playback at a similar sound quality level of the original sound before compression.",
+          "strength": "constraint",
+          "source": "p.42 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c910c73ba26d",
+          "slot": "requirements",
+          "text": "Select to set the speed volume. The system adjusts to the optimum volume and tone Control”*2 quality according to vehicle speed to compensate for “Speed Volume increased vehicle noise. On vehicles with a Harman/Kardon® audio system, this function is constantly enabled.",
+          "source_text": "Select to set the speed volume. The system adjusts to the optimum volume and tone Control”*2 quality according to vehicle speed to compensate for “Speed Volume increased vehicle noise. On vehicles with a Harman/Kardon® audio system, this function is constantly enabled.",
+          "strength": "capability",
+          "source": "p.42 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cb25b47d3bdd",
+          "slot": "requirements",
+          "text": "Select to enable/disable the function. When enabled and when the ignition switch is turned “Volume Level Memory” from OFF to ACC/ON, the volume level of the audio source last used will be recalled.",
+          "source_text": "Select to enable/disable the function. When enabled and when the ignition switch is turned “Volume Level Memory” from OFF to ACC/ON, the volume level of the audio source last used will be recalled.",
+          "strength": "constraint",
+          "source": "p.42 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "31b1382c0c1b",
+          "slot": "requirements",
+          "text": "*1: If equipped *2: Not displayed on vehicles with a Harman/Kardon® audio system.",
+          "source_text": "*1: If equipped *2: Not displayed on vehicles with a Harman/Kardon® audio system.",
+          "strength": "constraint",
+          "source": "p.42 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "be01f0431f08",
+          "page": 40,
+          "rect": [
+            307.4159851,
+            354.3059928,
+            463.4789886,
+            441.9539954
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "3. Select the items to be set.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "de4f4a203b7a",
+      "chapter_number": "3",
+      "title": "Equalizer settings",
+      "area": "Settings",
+      "function_path": "Settings / Equalizer settings",
+      "pages": [
+        43
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "19305c155666",
+          "slot": "overview",
+          "text": "How good an audio program sounds is largely determined by the mix of the treble, mid and bass levels. In fact, different kinds of music and vocal programs usually sound better with different mixes of treble, mid and bass.",
+          "source_text": "How good an audio program sounds is largely determined by the mix of the treble, mid and bass levels. In fact, different kinds of music and vocal programs usually sound better with different mixes of treble, mid and bass.",
+          "strength": "capability",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "99139393a3dc",
+          "slot": "overview",
+          "text": "Select to reset all setup items.",
+          "source_text": "Select to reset all setup items.",
+          "strength": "capability",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1f0ef81bd1f3",
+          "slot": "overview",
+          "text": "Select to adjust high-pitched tones.",
+          "source_text": "Select to adjust high-pitched tones.",
+          "strength": "capability",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "833551ec2800",
+          "slot": "overview",
+          "text": "Select to adjust mid-pitched tones.",
+          "source_text": "Select to adjust mid-pitched tones.",
+          "strength": "capability",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3da41cb39d56",
+          "slot": "overview",
+          "text": "Select to adjust low-pitched tones.",
+          "source_text": "Select to adjust low-pitched tones.",
+          "strength": "capability",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "f6402b8633fa",
+          "page": 42,
+          "rect": [
+            223.6560059,
+            256.8660056,
+            380.1340027,
+            344.2740027
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to reset all setup items.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "6965bcaf7c57",
+      "chapter_number": "4",
+      "title": "Balance/fader settings",
+      "area": "Settings",
+      "function_path": "Settings / Balance/fader settings",
+      "pages": [
+        43,
+        44
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "f1c77a36c375",
+          "slot": "overview",
+          "text": "A good balance of the left and right stereo channels and of the front and rear sound levels is also important.",
+          "source_text": "A good balance of the left and right stereo channels and of the front and rear sound levels is also important.",
+          "strength": "capability",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3d47fef6c3ce",
+          "slot": "overview",
+          "text": "Keep in mind that when listening to a stereo recording or broadcast, changing the right/left balance will increase the volume of 1 group of sounds while decreasing the volume of another.",
+          "source_text": "Keep in mind that when listening to a stereo recording or broadcast, changing the right/left balance will increase the volume of 1 group of sounds while decreasing the volume of another.",
+          "strength": "constraint",
+          "source": "p.43 / text",
+          "page_citation": "Sound settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1d7e10d9d275",
+          "slot": "overview",
+          "text": "Select to reset the adjusted position.",
+          "source_text": "Select to reset the adjusted position.",
+          "strength": "capability",
+          "source": "p.44 / text",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a6ae23639dd9",
+          "slot": "overview",
+          "text": "Select the icon to adjust sound balance.",
+          "source_text": "Select the icon to adjust sound balance.",
+          "strength": "capability",
+          "source": "p.44 / text",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "158dea2bdbdf",
+          "page": 43,
+          "rect": [
+            215.2559967,
+            193.98602360000007,
+            374.3820038,
+            283.074021
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to reset the adjusted position.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "c52baa2a8a2f",
+      "chapter_number": "5",
+      "title": "Manage devices settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Manage devices settings screen",
+      "pages": [
+        44
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19)",
+          "sequence": 1,
+          "source": "p.44 / step"
+        },
+        {
+          "number": 2,
+          "text": "→ “Manage Devices”",
+          "sequence": 2,
+          "source": "p.44 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the items to be set.",
+          "sequence": 3,
+          "source": "p.44 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "bed6632c1a2a",
+          "slot": "requirements",
+          "text": "Registering a Bluetooth phone/device: →P.55.",
+          "source_text": "Registering a Bluetooth phone/device: →P.55",
+          "strength": "capability",
+          "source": "p.44 / bullet",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "020cf6c06499",
+          "slot": "requirements",
+          "text": "Connecting or disconnecting Bluetooth phones/devices: →P.57.",
+          "source_text": "Connecting or disconnecting Bluetooth phones/devices: →P.57",
+          "strength": "capability",
+          "source": "p.44 / bullet",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "eaba344c50bc",
+          "slot": "requirements",
+          "text": "Deleting Bluetooth phones/devices: →P.59.",
+          "source_text": "Deleting Bluetooth phones/devices: →P.59",
+          "strength": "capability",
+          "source": "p.44 / bullet",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "214f9158e97a",
+      "chapter_number": "6",
+      "title": "Displays settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Displays settings screen",
+      "pages": [
+        44,
+        45
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19)",
+          "sequence": 1,
+          "source": "p.44 / step"
+        },
+        {
+          "number": 2,
+          "text": "→ “Displays”",
+          "sequence": 2,
+          "source": "p.44 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the items to be set.",
+          "sequence": 3,
+          "source": "p.45 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "4936ecd54e6e",
+          "slot": "overview",
+          "text": "“Display Off” Refer to the vehicle Owner’s Manual for details. 2.",
+          "source_text": "“Display Off” Refer to the vehicle Owner’s Manual for details. 2",
+          "strength": "capability",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "485062f66c95",
+          "slot": "overview",
+          "text": "“Brightness/Contrast” Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "“Brightness/Contrast” Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "922db9742193",
+          "slot": "overview",
+          "text": "“Home Screen Settings”: Select to enter home screen “Center Screen” edit mode. (→P.23).",
+          "source_text": "“Home Screen Settings”: Select to enter home screen “Center Screen” edit mode. (→P.23)",
+          "strength": "capability",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d733a884d5cd",
+          "slot": "requirements",
+          "text": "“Header Options”: Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "“Header Options”: Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.45 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5a383900473c",
+          "slot": "requirements",
+          "text": "“Display Mode”: Refer to the vehicle Owner’s Manual “Instrument Cluster” for details.",
+          "source_text": "“Display Mode”: Refer to the vehicle Owner’s Manual “Instrument Cluster” for details.",
+          "strength": "capability",
+          "source": "p.45 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9f6673c9a5c5",
+          "slot": "requirements",
+          "text": "“Route Guidance Alerts”*: Select to enable/disable a turn-by-turn pop-up display on the combination meter.",
+          "source_text": "“Route Guidance Alerts”*: Select to enable/disable a turn-by-turn pop-up display on the combination meter.",
+          "strength": "capability",
+          "source": "p.45 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e892434aeda1",
+          "slot": "requirements",
+          "text": "“Units” Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "“Units” Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "22f8a5f7c603",
+          "slot": "requirements",
+          "text": "“Language” Refer to the vehicle Owner’s Manual for details.",
+          "source_text": "“Language” Refer to the vehicle Owner’s Manual for details.",
+          "strength": "capability",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0dfd1b1c74f3",
+          "slot": "requirements",
+          "text": "*: If equipped.",
+          "source_text": "*: If equipped",
+          "strength": "constraint",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "b9366f7f5736",
+          "page": 44,
+          "rect": [
+            305.9760132,
+            192.06597969999996,
+            465.10202030000005,
+            281.1539771
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "3. Select the items to be set.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "450ed13667f8",
+      "chapter_number": "7",
+      "title": "Phone settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Phone settings screen",
+      "pages": [
+        45,
+        46
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19)",
+          "sequence": 1,
+          "source": "p.45 / step"
+        },
+        {
+          "number": 2,
+          "text": "→ “Phone”",
+          "sequence": 2,
+          "source": "p.45 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the items to be set.",
+          "sequence": 3,
+          "source": "p.46 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "45067bddf428",
+          "slot": "requirements",
+          "text": "“Sync”: When this function is activated, the history, favorites, phonebook of the connected Bluetooth phone will be synchronized with the system “Recents/Favorites/Contacts” automatically.",
+          "source_text": "“Sync”: When this function is activated, the history, favorites, phonebook of the connected Bluetooth phone will be synchronized with the system “Recents/Favorites/Contacts” automatically.",
+          "strength": "constraint",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4c8b3cabab91",
+          "slot": "requirements",
+          "text": "“Sort By Name”: The order of the list synchronized with the connected Bluetooth phone can be sorted by first name or last name. Select the desired sorting criteria.",
+          "source_text": "“Sort By Name”: The order of the list synchronized with the connected Bluetooth phone can be sorted by first name or last name. Select the desired sorting criteria.",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e3f8eadcc9ba",
+          "slot": "requirements",
+          "text": "“Sync”: When this function is activated, the message function of the connected Bluetooth phone can be used on the system.",
+          "source_text": "“Sync”: When this function is activated, the message function of the connected Bluetooth phone can be used on the system.",
+          "strength": "constraint",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1aaeaa9f863f",
+          "slot": "requirements",
+          "text": "“Incoming Message Notifications”: When this function “Messages” is activated, the arrival of a new message will be notified via sound and a message on screen.",
+          "source_text": "“Incoming Message Notifications”: When this function “Messages” is activated, the arrival of a new message will be notified via sound and a message on screen.",
+          "strength": "constraint",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "11e36454cf00",
+          "slot": "requirements",
+          "text": "“Quick Replies”: Select to edit quick reply messages. (→P.47).",
+          "source_text": "“Quick Replies”: Select to edit quick reply messages. (→P.47)",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4119db2aa9da",
+          "slot": "requirements",
+          "text": "“Change Vehicle Name” Select to change the vehicle name.",
+          "source_text": "“Change Vehicle Name” Select to change the vehicle name.",
+          "strength": "capability",
+          "source": "p.46 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "58e70e78879f",
+          "slot": "requirements",
+          "text": "“Wi-Fi Password”: Select to display current Wi-Fi® pass- “Android Auto” word.",
+          "source_text": "“Wi-Fi Password”: Select to display current Wi-Fi® pass- “Android Auto” word.",
+          "strength": "capability",
+          "source": "p.46 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a9b6b4a05a26",
+          "slot": "requirements",
+          "text": "“Generate”: Generates a new password.",
+          "source_text": "“Generate”: Generates a new password.",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "736748a48847",
+          "slot": "exception",
+          "text": "The profile version of the connected Bluetooth phone may not be compatible with downloading phonebook data. For details, contact your SUBARU dealer.",
+          "source_text": "The profile version of the connected Bluetooth phone may not be compatible with downloading phonebook data. For details, contact your SUBARU dealer.",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1c88bdce022c",
+          "slot": "requirements",
+          "text": "Up to 2000 contacts can be downloaded and displayed on the phonebook screen. (Up to 5 phone numbers per contact will be downloaded.).",
+          "source_text": "Up to 2000 contacts can be downloaded and displayed on the phonebook screen. (Up to 5 phone numbers per contact will be downloaded.)",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6ba86b4fd16b",
+          "slot": "requirements",
+          "text": "Up to 50 favorites can be downloaded and displayed on the favorites screen. (Up to 5 phone numbers per favorite will be downloaded.).",
+          "source_text": "Up to 50 favorites can be downloaded and displayed on the favorites screen. (Up to 5 phone numbers per favorite will be downloaded.)",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "65312b8138ec",
+          "slot": "requirements",
+          "text": "The notification setting on the Bluetooth phone may need to be activated in order to download the phonebook. For details, check the instructions for the connected Bluetooth phone.",
+          "source_text": "The notification setting on the Bluetooth phone may need to be activated in order to download the phonebook. For details, check the instructions for the connected Bluetooth phone.",
+          "strength": "capability",
+          "source": "p.46 / bullet",
+          "page_citation": "Phone settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "95a4d181a798",
+          "page": 45,
+          "rect": [
+            300.2160034,
+            192.06597969999996,
+            459.6159973,
+            281.1539771
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "3. Select the items to be set.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "f8e5422cfa46",
+      "chapter_number": "8",
+      "title": "Editing the quick reply message",
+      "area": "Settings",
+      "function_path": "Settings / Editing the quick reply message",
+      "pages": [
+        47
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “Edit”.",
+          "sequence": 1,
+          "source": "p.47 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select the desired message.",
+          "sequence": 2,
+          "source": "p.47 / step"
+        },
+        {
+          "number": 3,
+          "text": "Enter the message.",
+          "sequence": 3,
+          "source": "p.47 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "41b9a01293e5",
+          "slot": "requirements",
+          "text": "“Add”: Select to add new message.",
+          "source_text": "“Add”: Select to add new message.",
+          "strength": "capability",
+          "source": "p.47 / bullet",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": "2. Select the desired message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "74452d85dd9d",
+          "slot": "requirements",
+          "text": "“[icon]”: Select to delete the message.",
+          "source_text": "“[icon]”: Select to delete the message.",
+          "strength": "capability",
+          "source": "p.47 / bullet",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": "3. Enter the message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fae3ec7fc89a",
+          "slot": "requirements",
+          "text": "2 Before adding a new message, delete an already registered message.",
+          "source_text": "2 Before adding a new message, delete an already registered message.",
+          "strength": "capability",
+          "source": "p.47 / bullet",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "fac4ff375d3b",
+      "chapter_number": "9",
+      "title": "Network connection settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Network connection settings screen",
+      "pages": [
+        47
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19)",
+          "sequence": 1,
+          "source": "p.47 / step"
+        },
+        {
+          "number": 2,
+          "text": "→ “Network Connection”",
+          "sequence": 2,
+          "source": "p.47 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the items to be set.",
+          "sequence": 3,
+          "source": "p.47 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "59b88d95f6ed",
+          "slot": "overview",
+          "text": "“Wi-Fi Settings for Software Select to set the Wi-Fi® function settings. (→P.59) Update/Map Update”*.",
+          "source_text": "“Wi-Fi Settings for Software Select to set the Wi-Fi® function settings. (→P.59) Update/Map Update”*",
+          "strength": "capability",
+          "source": "p.47 / text",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "67044ca58073",
+          "slot": "overview",
+          "text": "Select to display Wi-Fi® security type that wireless Apple “Wi-Fi Security” CarPlay or wireless Android Auto uses.",
+          "source_text": "Select to display Wi-Fi® security type that wireless Apple “Wi-Fi Security” CarPlay or wireless Android Auto uses.",
+          "strength": "capability",
+          "source": "p.47 / text",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8463f8240f03",
+          "slot": "overview",
+          "text": "Select to set the Wi-Fi® Hotspot function settings. “Wi-Fi Hotspot”* Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details.",
+          "source_text": "Select to set the Wi-Fi® Hotspot function settings. “Wi-Fi Hotspot”* Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details.",
+          "strength": "capability",
+          "source": "p.47 / text",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "09f8ca742e6e",
+          "slot": "overview",
+          "text": "*: If equipped.",
+          "source_text": "*: If equipped",
+          "strength": "constraint",
+          "source": "p.47 / text",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "c49ca48c25f6",
+          "page": 46,
+          "rect": [
+            305.9760132,
+            430.1460043,
+            465.10202030000005,
+            518.9940039
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "3. Select the items to be set.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "70a5c8b94926",
+      "chapter_number": "10",
+      "title": "Software settings screen",
+      "area": "Settings",
+      "function_path": "Settings / Software settings screen",
+      "pages": [
+        48,
+        49
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Touch “[icon]” of the main menu. (→P.19)",
+          "sequence": 1,
+          "source": "p.48 / step"
+        },
+        {
+          "number": 2,
+          "text": "→ “Software”",
+          "sequence": 2,
+          "source": "p.48 / step"
+        },
+        {
+          "number": 3,
+          "text": "Select the items to be set.",
+          "sequence": 3,
+          "source": "p.48 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "ecdd1ce9b546",
+          "slot": "overview",
+          "text": "“Subaru Connected Services System Select to display the Subaru connected services system Update” update screen. (→P.49).",
+          "source_text": "“Subaru Connected Services System Select to display the Subaru connected services system Update” update screen. (→P.49)",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9cb3129b23bf",
+          "slot": "overview",
+          "text": "Select to display the vehicle’s systems other than the “Other System Update” Subaru connected services system update screen. (→P.50).",
+          "source_text": "Select to display the vehicle’s systems other than the “Other System Update” Subaru connected services system update screen. (→P.50)",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "89c73364956a",
+          "slot": "overview",
+          "text": "“System Information” Select to display the system information.",
+          "source_text": "“System Information” Select to display the system information.",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a754cabeeeda",
+          "slot": "overview",
+          "text": "“Free/Open Source Information” Select to display the free/open source software information.",
+          "source_text": "“Free/Open Source Information” Select to display the free/open source software information.",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "15f6e723358c",
+          "slot": "overview",
+          "text": "Select to display the version of the 3D high definition map data. “3D HD Map Data”* Refer to the Owner’s Manual supplement for the Eye- Sight system for details.",
+          "source_text": "Select to display the version of the 3D high definition map data. “3D HD Map Data”* Refer to the Owner’s Manual supplement for the Eye- Sight system for details.",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "90853698c382",
+          "slot": "overview",
+          "text": "Select to enable/disable the services using the cloud navigation server.",
+          "source_text": "Select to enable/disable the services using the cloud navigation server.",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e66e25214345",
+          "slot": "requirements",
+          "text": "To use the services using the cloud navigation server, “Location Based Cloud Services”* it is necessary to enable the setting.",
+          "source_text": "To use the services using the cloud navigation server, “Location Based Cloud Services”* it is necessary to enable the setting.",
+          "strength": "capability",
+          "source": "p.48 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "54a7bad9a58c",
+          "slot": "requirements",
+          "text": "When the services using the cloud navigation server are not to be used, disable the settings, check the message displayed and then touch “Continue”.",
+          "source_text": "When the services using the cloud navigation server are not to be used, disable the settings, check the message displayed and then touch “Continue”.",
+          "strength": "capability",
+          "source": "p.48 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f49452422776",
+          "slot": "requirements",
+          "text": "“Reset”: Select to reset all setup items. The audio system restarts automatically after resetting factory data. “Factory Data Reset” To complete the reset process, turn the ignition switch to OFF after the audio system has restarted, and then turn to ACC or ON after approximately 3 minutes.",
+          "source_text": "“Reset”: Select to reset all setup items. The audio system restarts automatically after resetting factory data. “Factory Data Reset” To complete the reset process, turn the ignition switch to OFF after the audio system has restarted, and then turn to ACC or ON after approximately 3 minutes.",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "12197ce3f5c0",
+          "slot": "requirements",
+          "text": "*: If equipped.",
+          "source_text": "*: If equipped",
+          "strength": "constraint",
+          "source": "p.49 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "31639b85a17c",
+          "page": 47,
+          "rect": [
+            300.2160034,
+            259.02600259999997,
+            459.6159973,
+            348.114
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "3. Select the items to be set.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "e5e40677a1ec",
+      "chapter_number": "11",
+      "title": "Updating the Subaru connected services system",
+      "area": "Settings",
+      "function_path": "Settings / Updating the Subaru connected services system",
+      "pages": [
+        49
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "2f7044056d51",
+          "slot": "overview",
+          "text": "Please ask your dealer to update the system software*1.",
+          "source_text": "Please ask your dealer to update the system software*1.",
+          "strength": "capability",
+          "source": "p.49 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fab88d7e9fa2",
+          "slot": "overview",
+          "text": "System equipped with DCM (Data Communication Module in vehicle cellular connection) only: You may also update the system software via DCM (Data Communication Module in vehicle cellular connection). The update process involves downloading and installing a software update*2. Note that system functionality will be restricted during installation.",
+          "source_text": "System equipped with DCM (Data Communication Module in vehicle cellular connection) only: You may also update the system software via DCM (Data Communication Module in vehicle cellular connection). The update process involves downloading and installing a software update*2. Note that system functionality will be restricted during installation.",
+          "strength": "capability",
+          "source": "p.49 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e5eba96a621e",
+          "slot": "overview",
+          "text": "*1:Please check with your dealer for specific details on the update content. 2 *2:Depending on the software update content, your radio station presets and volume settings may be reset by the update process.",
+          "source_text": "*1:Please check with your dealer for specific details on the update content. 2 *2:Depending on the software update content, your radio station presets and volume settings may be reset by the update process.",
+          "strength": "capability",
+          "source": "p.49 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "be4f55cd6283",
+          "slot": "exception",
+          "text": "Update using DCM (Data Communication Module in vehicle cellular connection) may not be available in some countries.",
+          "source_text": "Update using DCM (Data Communication Module in vehicle cellular connection) may not be available in some countries.",
+          "strength": "capability",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "729a1cf60ec8",
+      "chapter_number": "12",
+      "title": "Download update",
+      "area": "Settings",
+      "function_path": "Settings / Download update",
+      "pages": [
+        49
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "0311fab74ef1",
+          "slot": "overview",
+          "text": "Updated software will be downloaded automatically.",
+          "source_text": "Updated software will be downloaded automatically.",
+          "strength": "capability",
+          "source": "p.49 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8fd5695b246c",
+          "slot": "overview",
+          "text": "When download is completed, a message asking if installation is desired or not will be displayed. (→P.49).",
+          "source_text": "When download is completed, a message asking if installation is desired or not will be displayed. (→P.49)",
+          "strength": "constraint",
+          "source": "p.49 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "da4a9da87eda",
+      "chapter_number": "13",
+      "title": "Update installation",
+      "area": "Settings",
+      "function_path": "Settings / Update installation",
+      "pages": [
+        49,
+        50
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "When a message asking if installation is desired or not is displayed, touch “Install",
+          "sequence": 1,
+          "source": "p.49 / step"
+        },
+        {
+          "number": 2,
+          "text": "When installation is complete, touch “Close” on the confirmation message.",
+          "sequence": 2,
+          "source": "p.50 / step"
+        },
+        {
+          "number": 3,
+          "text": "Turn the ignition switch to OFF and exit the vehicle.",
+          "sequence": 3,
+          "source": "p.50 / step"
+        },
+        {
+          "number": 4,
+          "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
+          "sequence": 4,
+          "source": "p.50 / step"
+        },
+        {
+          "number": 5,
+          "text": "After at least 5 minutes have elapsed, start the engine again.",
+          "sequence": 5,
+          "source": "p.50 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "4d0e764f6ccf",
+          "slot": "requirements",
+          "text": "Park your vehicle in a safe place when installing the update.",
+          "source_text": "Park your vehicle in a safe place when installing the update.",
+          "strength": "constraint",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8bf2c0553b73",
+          "slot": "requirements",
+          "text": "The following system functions are restricted during the update installation.",
+          "source_text": "The following system functions are restricted during the update installation.",
+          "strength": "capability",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "096d361fbb1c",
+          "slot": "requirements",
+          "text": "It will not be possible to use general system functions.",
+          "source_text": "It will not be possible to use general system functions.",
+          "strength": "capability",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1eb7f03c0a3a",
+          "slot": "requirements",
+          "text": "Only the rear view camera image will be displayed. Or the image will disappear temporarily.",
+          "source_text": "Only the rear view camera image will be displayed. Or the image will disappear temporarily.",
+          "strength": "capability",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "28ded2797891",
+          "slot": "requirements",
+          "text": "Installation will take several minutes.",
+          "source_text": "Installation will take several minutes.",
+          "strength": "capability",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "2. When installation is complete, touch “Close” on the confirmation message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3f579c7a805c",
+          "slot": "requirements",
+          "text": "“Remind Me”: Select to extend the installation timing by up to twice.",
+          "source_text": "“Remind Me”: Select to extend the installation timing by up to twice.",
+          "strength": "capability",
+          "source": "p.49 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "2. When installation is complete, touch “Close” on the confirmation message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "50e61dbd95a7",
+          "slot": "exception",
+          "text": "During software update installation, the screen may flicker. However, this is not a malfunction.",
+          "source_text": "During software update installation, the screen may flicker. However, this is not a malfunction.",
+          "strength": "capability",
+          "source": "p.50 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "2. When installation is complete, touch “Close” on the confirmation message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f04b711b7709",
+          "slot": "exception",
+          "text": "If the update procedure fails, refer to the “Troubleshooting” section. (→P.156).",
+          "source_text": "If the update procedure fails, refer to the “Troubleshooting” section. (→P.156)",
+          "strength": "capability",
+          "source": "p.50 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "3. Turn the ignition switch to OFF and exit the vehicle.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7170887e1045",
+          "slot": "requirements",
+          "text": "The new software will be applied.",
+          "source_text": "The new software will be applied.",
+          "strength": "capability",
+          "source": "p.50 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "d121663abb2b",
+      "chapter_number": "14",
+      "title": "Updating the vehicle’s systems other than the Subaru connected services system",
+      "area": "Settings",
+      "function_path": "Settings / Updating the vehicle’s systems other than the Subaru connected services system",
+      "pages": [
+        50
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "eda3f89f95f2",
+          "slot": "overview",
+          "text": "Subaru connected services system.",
+          "source_text": "Subaru connected services system",
+          "strength": "capability",
+          "source": "p.50 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5283ea2ead33",
+          "slot": "overview",
+          "text": "Please ask your dealer to update the vehicle’s software, such as the DCM (Data Communication Module in vehicle cellular connection) software and the 3D high definition map data software*1.",
+          "source_text": "Please ask your dealer to update the vehicle’s software, such as the DCM (Data Communication Module in vehicle cellular connection) software and the 3D high definition map data software*1.",
+          "strength": "capability",
+          "source": "p.50 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7ccdabb69f7c",
+          "slot": "overview",
+          "text": "System equipped with DCM (Data Communication Module in vehicle cellular connection) only: You may also update the system software via DCM (Data Communication Module in vehicle cellular connection). The update process involves downloading and installing a software update*2. Note that system functionality will be restricted during installation.",
+          "source_text": "System equipped with DCM (Data Communication Module in vehicle cellular connection) only: You may also update the system software via DCM (Data Communication Module in vehicle cellular connection). The update process involves downloading and installing a software update*2. Note that system functionality will be restricted during installation.",
+          "strength": "capability",
+          "source": "p.50 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8348ffce344f",
+          "slot": "overview",
+          "text": "*1:Please check with your dealer for specific details on the update content. *2:Depending on the software update content, your radio station presets and volume settings may be reset by the update process.",
+          "source_text": "*1:Please check with your dealer for specific details on the update content. *2:Depending on the software update content, your radio station presets and volume settings may be reset by the update process.",
+          "strength": "capability",
+          "source": "p.50 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ede939aba4bd",
+          "slot": "exception",
+          "text": "Update using DCM (Data Communication Module in vehicle cellular connection) may not be available in some countries.",
+          "source_text": "Update using DCM (Data Communication Module in vehicle cellular connection) may not be available in some countries.",
+          "strength": "capability",
+          "source": "p.50 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "729a1cf60ec8",
+      "chapter_number": "15",
+      "title": "Download update",
+      "area": "Settings",
+      "function_path": "Settings / Download update",
+      "pages": [
+        50,
+        51
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "When a message asking if downloading is desired or not is displayed, touch",
+          "sequence": 1,
+          "source": "p.50 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "c9c6e944b555",
+          "slot": "overview",
+          "text": "“Download”.",
+          "source_text": "“Download”.",
+          "strength": "capability",
+          "source": "p.50 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bdb28b96d39d",
+          "slot": "requirements",
+          "text": "Downloading will take several minutes.",
+          "source_text": "Downloading will take several minutes.",
+          "strength": "capability",
+          "source": "p.50 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d45de3933207",
+          "slot": "requirements",
+          "text": "“Remind Me”: Select to extend the downloading timing.",
+          "source_text": "“Remind Me”: Select to extend the downloading timing.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6cb5c2a89daa",
+          "slot": "requirements",
+          "text": "When download is completed, a message asking if installation is desired or not will be displayed. (→P.51).",
+          "source_text": "When download is completed, a message asking if installation is desired or not will be displayed. (→P.51)",
+          "strength": "constraint",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "da4a9da87eda",
+      "chapter_number": "16",
+      "title": "Update installation",
+      "area": "Settings",
+      "function_path": "Settings / Update installation",
+      "pages": [
+        51
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "When a message asking if installation is desired or not is displayed, touch “Install",
+          "sequence": 1,
+          "source": "p.51 / step"
+        },
+        {
+          "number": 2,
+          "text": "When installation is complete, touch “Close” on the confirmation message.",
+          "sequence": 2,
+          "source": "p.51 / step"
+        },
+        {
+          "number": 3,
+          "text": "Turn the ignition switch to OFF and exit the vehicle.",
+          "sequence": 3,
+          "source": "p.51 / step"
+        },
+        {
+          "number": 4,
+          "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
+          "sequence": 4,
+          "source": "p.51 / step"
+        },
+        {
+          "number": 5,
+          "text": "After at least 5 minutes have elapsed, start the engine again.",
+          "sequence": 5,
+          "source": "p.51 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "4d0e764f6ccf",
+          "slot": "requirements",
+          "text": "Park your vehicle in a safe place when installing the update.",
+          "source_text": "Park your vehicle in a safe place when installing the update.",
+          "strength": "constraint",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8bf2c0553b73",
+          "slot": "requirements",
+          "text": "The following system functions are restricted during the update installation.",
+          "source_text": "The following system functions are restricted during the update installation.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e949bdca7819",
+          "slot": "requirements",
+          "text": "It will not be possible to use general system functions. 2.",
+          "source_text": "It will not be possible to use general system functions. 2",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1eb7f03c0a3a",
+          "slot": "requirements",
+          "text": "Only the rear view camera image will be displayed. Or the image will disappear temporarily.",
+          "source_text": "Only the rear view camera image will be displayed. Or the image will disappear temporarily.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "1. When a message asking if installation is desired or not is displayed, touch “Install",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "28ded2797891",
+          "slot": "requirements",
+          "text": "Installation will take several minutes.",
+          "source_text": "Installation will take several minutes.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "2. When installation is complete, touch “Close” on the confirmation message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "abdf6f8926a6",
+          "slot": "requirements",
+          "text": "“Remind Me”: Select to extend the installation timing.",
+          "source_text": "“Remind Me”: Select to extend the installation timing.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "2. When installation is complete, touch “Close” on the confirmation message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "50e61dbd95a7",
+          "slot": "exception",
+          "text": "During software update installation, the screen may flicker. However, this is not a malfunction.",
+          "source_text": "During software update installation, the screen may flicker. However, this is not a malfunction.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "2. When installation is complete, touch “Close” on the confirmation message.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f04b711b7709",
+          "slot": "exception",
+          "text": "If the update procedure fails, refer to the “Troubleshooting” section. (→P.156).",
+          "source_text": "If the update procedure fails, refer to the “Troubleshooting” section. (→P.156)",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": "3. Turn the ignition switch to OFF and exit the vehicle.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7170887e1045",
+          "slot": "requirements",
+          "text": "The new software will be applied.",
+          "source_text": "The new software will be applied.",
+          "strength": "capability",
+          "source": "p.51 / bullet",
+          "page_citation": "Software settings screen",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    }
+  ]
+}

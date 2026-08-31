@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=056ac4a5c2bc (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=4566aae3fd96 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 8. Pictorial index
 
 <div class="fn-meta"><b>Function path:</b> Introduction / Pictorial index<br><b>Source:</b> printed page 13<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -13,24 +13,4 @@
 | 2 | <span class="req-label">Pictorial index</span>Steering wheel switches (→P.30). | capability | p.13 / text |
 | 3 | <span class="req-label">Pictorial index</span>Microphones (→P.33). | capability | p.13 / text |
 | 4 | <span class="req-label">Pictorial index</span>USB ports (→P.30). | capability | p.13 / text |
-<!-- GENERATED:END function=056ac4a5c2bc -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=4566aae3fd96 -->

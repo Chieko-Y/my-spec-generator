@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=afec288a4a20 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=d669966f085b (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 11. Touch screen gestures
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Touch screen gestures<br><b>Source:</b> printed page 24, 25, 26<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -24,24 +24,6 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Swipe operations may not be performed smoothly in high altitudes. | capability | p.26 / bullet |
-<!-- GENERATED:END function=afec288a4a20 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=d669966f085b -->
 
 

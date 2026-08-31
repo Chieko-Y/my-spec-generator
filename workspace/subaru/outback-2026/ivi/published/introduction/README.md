@@ -7,9 +7,9 @@
 |---|---|
 | Maker / Model | Subaru / Outback 2026 |
 | Scope | introduction |
-| Markets | — |
+| Markets | US, CA |
 | Profile | subaru_v1 |
-| Manual ID | subaru/outback-2026/multimedia |
+| Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
 Filled: 0 / Unfilled: 2
@@ -50,6 +50,7 @@ flowchart LR
 | 7 | How to read this manual | Introduction | 2 | 1 | 0 | - |
 | 8 | Pictorial index | Introduction | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
 
 
 

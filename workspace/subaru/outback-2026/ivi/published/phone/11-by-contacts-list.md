@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=d566453ee3d9 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=526da5f90ca8 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 11. By contacts list
 
 <div class="fn-meta"><b>Function path:</b> Phone / By contacts list<br><b>Source:</b> printed page 80<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -10,7 +10,7 @@
 flowchart TD
     S1["1. Display the phone screen. (→P.74)"]
     S2["2. Touch “Contacts”, and then select the desired contact."]
-    S3["3. Touch “ ” next to the desired number."]
+    S3["3. Touch “[icon]” next to the desired number."]
     S1 --> S2
     S2 --> S3
 ```
@@ -19,7 +19,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.80 / step |
 | 2 | 2 | Touch “Contacts”, and then select the desired contact. | p.80 / step |
-| 3 | 3 | Touch “ ” next to the desired number. | p.80 / step |
+| 3 | 3 | Touch “[icon]” next to the desired number. | p.80 / step |
 
 ## 11-2-1. Service overview
 
@@ -36,24 +36,4 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>Up to 2000 contacts can be downloaded and displayed on the phonebook screen. (Up to 5 phone numbers per contact will be downloaded.). | capability | p.80 / bullet |
 | 4 | <span class="req-label">Step -</span>When “Sync” is set to on, contacts is downloaded automatically. (→P.45). | capability | p.80 / bullet |
 | 5 | <span class="req-label">Step -</span>The order of the phonebook list can be sorted by first name or last name. (→P.45). | capability | p.80 / bullet |
-<!-- GENERATED:END function=d566453ee3d9 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=526da5f90ca8 -->

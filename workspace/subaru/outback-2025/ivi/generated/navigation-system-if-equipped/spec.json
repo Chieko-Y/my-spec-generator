@@ -3,7 +3,7 @@
   "maker": "Subaru",
   "model": "Outback 2025",
   "document_title": "",
-  "scope": "Navigation System (If equipped)",
+  "scope": "navigation-system-if-equipped",
   "markets": [
     "US",
     "CA"
@@ -22,9 +22,9 @@
       "Typical Voice Guidance Prompts",
       "Map Data"
     ],
-    "chapter_prefix": "Navigation System (If equipped)",
+    "chapter_prefix": "navigation-system-if-equipped",
     "chapter_slug": "navigation-system-if-equipped",
-    "chapter_label": "Navigation System (If equipped)",
+    "chapter_label": "navigation-system-if-equipped",
     "excluded_sections": []
   },
   "functions": [
@@ -59,6 +59,8 @@
           "source_text": "The map screen can be displayed using the following method:",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": "1. Select .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -70,6 +72,8 @@
           "source_text": "Select to display the search screen. (→P.205)",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -81,6 +85,8 @@
           "source_text": "Select to increase the size of the map screen. Select to reduce the size of the map screen.",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -92,6 +98,8 @@
           "source_text": "Displays the current vehicle position. Select to display the following pop-up:",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -103,6 +111,8 @@
           "source_text": "Add to Favorites (Add to Favorites): Select to register your current location as a favorite.",
           "strength": "capability",
           "source": "p.196 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -114,6 +124,8 @@
           "source_text": "Avoid Blocked Road (Avoid Blocked Road)*: Select to display the alternate route screen and search for 3 additional routes to the selected destination. (→P.210)",
           "strength": "capability",
           "source": "p.196 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -125,6 +137,8 @@
           "source_text": "Current Location (Current Location): Select to display the current position information.",
           "strength": "capability",
           "source": "p.196 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -136,6 +150,8 @@
           "source_text": "Displays the speed limit for the road currently being traveled on.",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -147,6 +163,8 @@
           "source_text": "Displays the current street name.",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -158,6 +176,8 @@
           "source_text": "Select to display the main menu screen. (→P.203)",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -169,6 +189,8 @@
           "source_text": "Select to set a voice guidance.",
           "strength": "capability",
           "source": "p.196 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -180,6 +202,8 @@
           "source_text": ": Enables voice guidance",
           "strength": "capability",
           "source": "p.196 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -191,6 +215,8 @@
           "source_text": ": Enables the voice guidance of alerts only",
           "strength": "capability",
           "source": "p.196 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -202,6 +228,8 @@
           "source_text": ": Disables voice guidance",
           "strength": "capability",
           "source": "p.196 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -242,6 +270,8 @@
           "source_text": "north-up, 2D heading-up, or 3D heading-up. (→P.199)",
           "strength": "capability",
           "source": "p.197 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -253,6 +283,8 @@
           "source_text": "*: This item can only be displayed when a route is set.",
           "strength": "constraint",
           "source": "p.197 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -278,6 +310,8 @@
           "source_text": "The map screen buttons can be accessed by selecting any point on the map.",
           "strength": "capability",
           "source": "p.197 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -289,6 +323,8 @@
           "source_text": "Select to change the scale of the map screen. (→P.198)",
           "strength": "capability",
           "source": "p.197 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -329,6 +365,8 @@
           "source_text": "After moving the map, Re-center (Re-center) may be displayed. Select Re-center (Re-center) to return the map to the current position.",
           "strength": "capability",
           "source": "p.197 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -340,7 +378,21 @@
           "source_text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
           "strength": "constraint",
           "source": "p.197 / text",
-          "thresholds": [],
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "ec36984985b7",
+              "matching_text": "a certain amount of time",
+              "kind": "quantity",
+              "unit": "as stated",
+              "context": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         }
@@ -378,6 +430,8 @@
           "source_text": "When the automatic zoom function is on (→P.219) during route guidance, the map is zoomed in automatically when approaching intersections or turning points.",
           "strength": "constraint",
           "source": "p.198 / bullet",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -389,6 +443,8 @@
           "source_text": "NOTE l The scale of the map screen can also be changed with the double touch or pinch operation. (→P.71) l If the map scale has been changed after moving the map, the map scale will return to previous scale when the map is returned to the current position. l The automatic zoom function may not operate if the map scale is adjusted manually during route guidance. To reenable the automatic zoom function, change the orientation of the map screen. (→P.199)",
           "strength": "constraint",
           "source": "p.198 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -400,6 +456,8 @@
           "source_text": "The location menu pop-up can be displayed using the following methods:",
           "strength": "capability",
           "source": "p.198 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -411,6 +469,8 @@
           "source_text": "Select and hold any point on the map. Select a point from a list. ● ● Select a POI icon.",
           "strength": "capability",
           "source": "p.198 / bullet",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -422,6 +482,8 @@
           "source_text": "Select Go (Go) to search for a route to the selected point and display the route calculation screen. (→P.210)",
           "strength": "capability",
           "source": "p.198 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -433,6 +495,8 @@
           "source_text": "During a route guidance, selecting Add Stop (Add Stop) will add a waypoint.",
           "strength": "capability",
           "source": "p.198 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -481,6 +545,8 @@
           "source_text": "Select to register the selected point as Add to Favorites a favorite. (Add to Favorites)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -492,6 +558,8 @@
           "source_text": "Select to search for a route to the selected point and display the route Go (Go) calculation screen. (→P.210)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -503,6 +571,8 @@
           "source_text": "Select to display the search screen Search Near Here and search near the selected point. (Search Near Here) (→P.205)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -514,6 +584,8 @@
           "source_text": "Select to display detailed information about the selected point or POI. : Select to call the registered More Information phone number of POI. (More Information) : Select to search for a route to the selected point or POI and display the route calculation screen. (→P.210)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -525,6 +597,8 @@
           "source_text": "Select to edit the point registered as Edit Location home/work. (Edit Location)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -536,6 +610,8 @@
           "source_text": "Select to erase the point registered as Remove Location home/work. (Remove Location)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -547,6 +623,8 @@
           "source_text": "Select to change the name of a registered favorite. (Rename)",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -558,6 +636,8 @@
           "source_text": "The orientation of the map can be changed between 2D northup, 2D heading-up, and 3D heading-up.",
           "strength": "capability",
           "source": "p.199 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -569,6 +649,8 @@
           "source_text": "Each time the symbol is selected, the orientation of the map changes. X 2D north-up",
           "strength": "capability",
           "source": "p.199 / bullet",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -580,6 +662,8 @@
           "source_text": "Regardless of the direction of vehicle travel, north is always up.",
           "strength": "capability",
           "source": "p.199 / bullet",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -591,6 +675,8 @@
           "source_text": "The direction of vehicle travel is always up.",
           "strength": "capability",
           "source": "p.200 / bullet",
+          "page_citation": "BASIC OPERATION X 3D heading-up X 2D heading-up",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -602,6 +688,8 @@
           "source_text": "The direction of vehicle travel is always up.",
           "strength": "capability",
           "source": "p.200 / bullet",
+          "page_citation": "BASIC OPERATION X 3D heading-up X 2D heading-up",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -670,6 +758,8 @@
           "source_text": "Gas stations, parking lots and rest areas can be displayed on the route. Their location can also be set as a destination.",
           "strength": "capability",
           "source": "p.201 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -681,6 +771,8 @@
           "source_text": "The display of gas station/parking lots/rest area icons can be turned on/off. (→P.219)",
           "strength": "capability",
           "source": "p.201 / bullet",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -692,6 +784,8 @@
           "source_text": "*: Use of this function may not be possible depending on country and vehicle. Road sections affected by traffic conditions are displayed in a different color on the map, and a small icon representing the type of traffic condition is displayed above the road.",
           "strength": "capability",
           "source": "p.201 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -703,6 +797,8 @@
           "source_text": "This feature is available at certain map scales.",
           "strength": "capability",
           "source": "p.201 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -714,6 +810,8 @@
           "source_text": "To receive the data service information in the vehicle, a subscription to the SiriusXM® Radio Service is necessary following a free trial. (→P.161)",
           "strength": "capability",
           "source": "p.201 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -768,6 +866,8 @@
           "source_text": "A pop-up screen will be displayed based on the driving situation, etc.",
           "strength": "capability",
           "source": "p.202 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -779,6 +879,8 @@
           "source_text": "X Low fuel warning",
           "strength": "capability",
           "source": "p.202 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -790,6 +892,8 @@
           "source_text": "When the fuel level is low, a warning message will pop up on the screen.",
           "strength": "capability",
           "source": "p.202 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -801,6 +905,8 @@
           "source_text": "(Search): Select to search for gas stations.",
           "strength": "capability",
           "source": "p.202 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -812,6 +918,8 @@
           "source_text": "(Ignore): Select to delete the message.",
           "strength": "capability",
           "source": "p.202 / bullet",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -823,6 +931,8 @@
           "source_text": "If the system determines, based on the driver’s condition, that a rest may be necessary, a pop-up message will be displayed on the screen.",
           "strength": "capability",
           "source": "p.202 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -834,6 +944,8 @@
           "source_text": "(Search): Select to search for rest areas.",
           "strength": "capability",
           "source": "p.202 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -845,6 +957,8 @@
           "source_text": "(Ignore): Select to delete the message. ● ● Pop-up screens can be turned on/off using the “Periodic Rest Notification” setting on the general settings screen. (→P.94)",
           "strength": "capability",
           "source": "p.202 / bullet",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -913,6 +1027,8 @@
           "source_text": "The main menu screen can be displayed using the following method:",
           "strength": "capability",
           "source": "p.203 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": "1. Display the map screen. (→P.196)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -924,6 +1040,8 @@
           "source_text": "(Search) (→P.205)",
           "strength": "capability",
           "source": "p.203 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -935,6 +1053,8 @@
           "source_text": "(Add Home): Select to register a point as home. (→P.209) (Add Home)*1/ Drive Home (Drive Home): Select to Drive Home set the point registered as home as the (Drive Home)*2 destination.",
           "strength": "capability",
           "source": "p.203 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -946,6 +1066,8 @@
           "source_text": "(Add Work): Select to register a point as work. (→P.209) (Add Work)*3/ Drive to Work (Drive to Work): Select Drive to Work to set the point registered as work as the (Drive to Work)*4 destination.",
           "strength": "capability",
           "source": "p.203 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -957,6 +1079,8 @@
           "source_text": "Select to display a list of recently set destinations. Then select a point from the list. Location Recent Destinations menu pop-up for the point will be displayed on the map screen. (→P.198) (Recent Destinations)",
           "strength": "capability",
           "source": "p.203 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -968,6 +1092,8 @@
           "source_text": "Edit List (Edit List): Select to display the edit list screen. (→P.210)",
           "strength": "capability",
           "source": "p.203 / bullet",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -979,6 +1105,8 @@
           "source_text": "Select to display the favorite screen. Favorites (→P.207) (Favorites)",
           "strength": "capability",
           "source": "p.203 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -990,6 +1118,8 @@
           "source_text": "and register it so that it can be used repeatedly. (→P.215) My route name: Select a registered route My Routes to display the route calculation screen. (My Routes)*5 (→P.210) Edit List (Edit List): Select to display the edit list screen. (→P.210)",
           "strength": "capability",
           "source": "p.204 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1001,6 +1131,8 @@
           "source_text": "Select to display the map update screen. Maps (Maps) (→P.225)",
           "strength": "capability",
           "source": "p.204 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1012,6 +1144,8 @@
           "source_text": "Select to display the legal information Legal Information screen. (Legal Information)",
           "strength": "capability",
           "source": "p.204 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1023,6 +1157,8 @@
           "source_text": "Selecrt to display the navigation settings Settings (Settings) screen. (→P.219)",
           "strength": "capability",
           "source": "p.204 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1034,6 +1170,8 @@
           "source_text": "To display frequently set destinations, select “Keep trip history on this device for optional features” and “Predict Privacy (Privacy) frequent destinations” to on then select Frequent destinations (Frequent destinations).",
           "strength": "capability",
           "source": "p.204 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1045,6 +1183,8 @@
           "source_text": "*2: If a point has been registered as home. *3: If a point has not been registered as work. *4: If a point has been registered as work. *5: This item can only be selected when a route has been registered to My Routes.",
           "strength": "constraint",
           "source": "p.204 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1087,6 +1227,8 @@
           "source_text": "Destinations can be set by address, category, POI, etc.",
           "strength": "capability",
           "source": "p.205 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1098,6 +1240,8 @@
           "source_text": "By entering three words hit by search using the “what3words” function, destinations can be set for places where postal address is not precisely allocated.",
           "strength": "capability",
           "source": "p.205 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1109,6 +1253,8 @@
           "source_text": "Enter keyword(s) to search for a destination. To use “what3words”, enter “ . ” in-between the three words. Search results screen will be displayed. (→P.206)",
           "strength": "capability",
           "source": "p.205 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1120,6 +1266,8 @@
           "source_text": "Select to set the radius filter. Once the radius filter has been set, a search will only be performed for items within that radius.",
           "strength": "capability",
           "source": "p.205 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1131,6 +1279,8 @@
           "source_text": "Select to display the current vehicle position.",
           "strength": "capability",
           "source": "p.205 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1142,6 +1292,8 @@
           "source_text": "Select to select a POI category. Search will be performed within the radius filter set. Search results screen will be displayed. (→P.206)",
           "strength": "capability",
           "source": "p.205 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1153,6 +1305,8 @@
           "source_text": "Show Subcategories (Show Subcategories): Select to display more detailed categories. Select to display other POI categories.",
           "strength": "capability",
           "source": "p.205 / bullet",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1164,6 +1318,8 @@
           "source_text": "Browse Categories (Browse Categories): Select to display all of the POI categories.",
           "strength": "capability",
           "source": "p.205 / bullet",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1175,6 +1331,8 @@
           "source_text": "(Add Home): Select to register a point as home. (→P.209) Home (Home): Select to set the point registered as home as the destination.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1186,6 +1344,8 @@
           "source_text": "Go (Go ): Select to display the route calculation screen. (→P.210)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1197,6 +1357,8 @@
           "source_text": ": Select to display location menu pop-up. (→P.198)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1208,6 +1370,8 @@
           "source_text": "(Add Work): Select to register a point as work. (→P.209) Work (Work): Select to set the point registered as work as the destination.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1219,6 +1383,8 @@
           "source_text": "Go (Go ): Select to display the route calculation screen. (→P.210)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1230,6 +1396,8 @@
           "source_text": ": Select to display location menu pop-up. (→P.198)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1241,6 +1409,8 @@
           "source_text": ": Select to display the last set destination.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1252,6 +1422,8 @@
           "source_text": "Go (Go ): Select to display the route calculation screen. (→P.210)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1263,6 +1435,8 @@
           "source_text": ": Select to display location menu pop-up. (→P.198)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1274,6 +1448,8 @@
           "source_text": ": Select to display the favorite screen. (→P.207)",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1285,6 +1461,8 @@
           "source_text": ": Select to display a list of recently set destinations. Then select a point from the list. Location menu pop-up for the point will be displayed on the map screen. (→P.198)",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1296,6 +1474,8 @@
           "source_text": "Edit List (Edit List): Select to display the edit list screen. (→P.210)",
           "strength": "capability",
           "source": "p.206 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1307,6 +1487,8 @@
           "source_text": "keyboard.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1318,6 +1500,8 @@
           "source_text": "Select to display the search map screen.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1329,6 +1513,8 @@
           "source_text": "Select to display the search list screen.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1340,6 +1526,8 @@
           "source_text": "SEARCH RESULTS SCREEN",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1351,6 +1539,8 @@
           "source_text": "Select to narrow down the list by POI category.",
           "strength": "capability",
           "source": "p.206 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1362,6 +1552,8 @@
           "source_text": "input characters. The location menu pop-up is displayed on the map screen when an item is selected. (→P.198) If a non-specific point is selected, such as a street name, the following items will be displayed.",
           "strength": "constraint",
           "source": "p.207 / text",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1373,6 +1565,8 @@
           "source_text": "Show on Map (Show on Map): Select to display the location menu pop-up on the map screen. (→P.198)",
           "strength": "capability",
           "source": "p.207 / bullet",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1384,6 +1578,8 @@
           "source_text": "Add Crossroad (Add Crossroad): Select to select an intersecting road and further refine the results.",
           "strength": "capability",
           "source": "p.207 / bullet",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1395,6 +1591,8 @@
           "source_text": "Go (Go ): Select to search for a route to the selected destination. (→P.210)",
           "strength": "capability",
           "source": "p.207 / bullet",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1406,6 +1604,8 @@
           "source_text": "The desired point can be registered as home, work, or favorite. The registered points can be set as a destination. Registered points can be added, changed and deleted on the",
           "strength": "capability",
           "source": "p.207 / text",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1499,6 +1699,8 @@
           "source_text": "The favorites screen can be accessed with the following method:",
           "strength": "capability",
           "source": "p.207 / text",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": "1. Display the map screen. (→P.196)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1510,6 +1712,8 @@
           "source_text": "(Add Home): Select to register the home. (→P.209) Home (Home): Select to display the location menu pop-up for the point registered as home on the map screen. (→P. 198)",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1521,6 +1725,8 @@
           "source_text": "(Add Work): Select to register the work. (→P.209) Work (Work): Select to display the location menu pop-up for the point registered as work on the map screen. (→P. 198)",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1532,6 +1738,8 @@
           "source_text": "Select to display the recent destination screen. Recent destinations: Select a recent destination to display the location menu pop-up for that point on the map screen. (→P. 198) Edit List (Edit List): Select to display the edit list screen to delete the recent destinations. (→P.210)",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1543,6 +1751,8 @@
           "source_text": "Select to display information of the current location.",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1554,6 +1764,8 @@
           "source_text": "Select a favorite to display the location menu pop-up for that point on the map screen. (→P. 198)",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1565,6 +1777,8 @@
           "source_text": "Select to display the edit list screen to delete the Edit List favorites. (→P.210) (Edit List)",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1576,6 +1790,8 @@
           "source_text": "Select to register the favorite. (→P.209) (Add)",
           "strength": "capability",
           "source": "p.208 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1587,6 +1803,8 @@
           "source_text": "Select and select the desired point from the destination history.",
           "strength": "capability",
           "source": "p.209 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1598,6 +1816,8 @@
           "source_text": "Select Set from map (Set from map) and select the desired point on the map.",
           "strength": "capability",
           "source": "p.209 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1609,6 +1829,8 @@
           "source_text": "Enter keyword(s) in the keyword entry section and select the desired point from the candidates list.",
           "strength": "capability",
           "source": "p.209 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1620,6 +1842,8 @@
           "source_text": "(Add Work)/",
           "strength": "capability",
           "source": "p.209 / text",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1631,6 +1855,8 @@
           "source_text": "To register a favorite, enter a name.",
           "strength": "capability",
           "source": "p.209 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1642,6 +1868,8 @@
           "source_text": "Icons will be displayed on the map to indicate registered points.",
           "strength": "capability",
           "source": "p.209 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1696,6 +1924,8 @@
           "source_text": "Unnecessary items can be deleted on the edit list screen.",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1707,6 +1937,8 @@
           "source_text": "Select for the item you wish to delete.",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1718,6 +1950,8 @@
           "source_text": "Select to skip to the next or previous page.",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1729,6 +1963,8 @@
           "source_text": "Select to delete selected item(s).",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1740,6 +1976,8 @@
           "source_text": "Select to select all items. Select again to deselect all items.",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1781,6 +2019,8 @@
           "source_text": "Up to 3 candidate routes searched are displayed according to conditions preset by the user.",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1792,6 +2032,8 @@
           "source_text": "Candidate route overview",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1803,6 +2045,8 @@
           "source_text": "Route search conditions A route search condition ( “Fastest Route”, “Shortest Route”, or “Most Eco-friendly Route”) can be pre-set on the navigation settings screen. (→P.219)",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1814,6 +2058,8 @@
           "source_text": "Select to cancel route confirmation.",
           "strength": "capability",
           "source": "p.210 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1825,6 +2071,8 @@
           "source_text": "Displays estimated time of arrival and remaining distance of each candidate route displayed. If traffic jam is detected on the route, expected delay time will also be displayed. Select Go (Go) to start route guidance.",
           "strength": "constraint",
           "source": "p.211 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1836,6 +2084,8 @@
           "source_text": "l Be sure to obey traffic regulations and keep road conditions in mind while driving. If a traffic sign on the road has been changed, the route guidance may not indicate such changed information.",
           "strength": "constraint",
           "source": "p.211 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1847,6 +2097,8 @@
           "source_text": "NOTE l The route for returning may not be the same as that for going. l The route guidance to the destination may not be the shortest route or a route without traffic congestion. l Route guidance may not be available if there is no road data for the specified location. l If a destination that is not located on a road is set, the vehicle will be guided to the point on a road nearest to the destination. The road nearest to the selected point is set as the destination.",
           "strength": "constraint",
           "source": "p.211 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1889,6 +2141,8 @@
           "source_text": "During route guidance, various types of guidance screens can be displayed depending on conditions.",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1900,6 +2154,8 @@
           "source_text": "Select to stopping route guidance.",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1911,6 +2167,8 @@
           "source_text": "Select to enable/disable voice guidance. (→P.196)",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1922,6 +2180,8 @@
           "source_text": "Guidance route To display the current route screen, select the guidance route then and Manage Route (Manage Route). (→P.215)",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1933,6 +2193,8 @@
           "source_text": "Current position",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1944,6 +2206,8 @@
           "source_text": "Guidance display after next",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1955,6 +2219,8 @@
           "source_text": "Next guidance display Displays the next street name, distance to the next turn, and an arrow indicating the turning direction. Select to display the route event list screen.",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1966,6 +2232,8 @@
           "source_text": "Estimated time of arrival Select to change the displayed information between a waypoint and the destination.",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1977,6 +2245,8 @@
           "source_text": "Select and hold to turn display of the route bar on/off.",
           "strength": "capability",
           "source": "p.212 / bullet",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1988,6 +2258,8 @@
           "source_text": "If “Auto-Hide Route Bar” on the navigation settings screen is turned on, the route bar will automatically be hidden and will only be displayed when new route information is available.",
           "strength": "constraint",
           "source": "p.212 / bullet",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1999,6 +2271,8 @@
           "source_text": "Remaining distance and/or remaining time The displayed details can be changed on the navigation settings screen. (→P.219)",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2010,6 +2284,8 @@
           "source_text": "Displays the amount of travel time to be changed due to the traffic information received.",
           "strength": "capability",
           "source": "p.212 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2021,6 +2297,8 @@
           "source_text": "Select to display the traffic information pop-up. Avoid (Avoid): Select to avoid a section of the current route based on traffic information. More Information (More Information): Select to display detailed information for the selected traffic information.",
           "strength": "capability",
           "source": "p.213 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2032,6 +2310,8 @@
           "source_text": "Select to display the waypoint information pop-up. Delete This Stop (Delete This Stop) :Select to delete the selected waypoint from the route.",
           "strength": "capability",
           "source": "p.213 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2043,6 +2323,8 @@
           "source_text": "Displays a POI on the route. Select a displayed icon to display the location menu pop-up. (→P.198)",
           "strength": "capability",
           "source": "p.213 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2054,6 +2336,8 @@
           "source_text": "Select to display route option screen. (→P.214)",
           "strength": "capability",
           "source": "p.213 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2065,6 +2349,8 @@
           "source_text": "When approaching an expressway exit or a complicated intersection, the map switches to a 3D display if the necessary information can be displayed. An arrow indicates the lane in which you should drive. Signs are also displayed if the information is available.",
           "strength": "constraint",
           "source": "p.213 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2076,6 +2362,8 @@
           "source_text": "This function can be turned on/off on the navigation settings screen. (→P.219)",
           "strength": "capability",
           "source": "p.213 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2087,6 +2375,8 @@
           "source_text": "When approaching a turning point, the lane recommendation will be displayed automatically.",
           "strength": "capability",
           "source": "p.214 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2098,6 +2388,8 @@
           "source_text": "NOTE l If the vehicle goes off the guidance route, the route is searched again. l For some areas, the roads have not been completely digitized in our database. For this reason, the route guidance may select a road that should not be traveled on.",
           "strength": "constraint",
           "source": "p.214 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2109,6 +2401,8 @@
           "source_text": "Select to enable search for a parking place near the destination or a gas station or restaurant along the route.",
           "strength": "capability",
           "source": "p.214 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2120,6 +2414,8 @@
           "source_text": "Select to display the search screen. (→P.205)",
           "strength": "capability",
           "source": "p.214 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2131,6 +2427,8 @@
           "source_text": "Select to display the change route screen.",
           "strength": "capability",
           "source": "p.214 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2142,6 +2440,8 @@
           "source_text": "Show Alternatives (Show Alternatives): Displays up to 3 candidate routes searched according to conditions preset by the user. (→P.210)",
           "strength": "capability",
           "source": "p.214 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2153,6 +2453,8 @@
           "source_text": "Avoid Part of Route (Avoid Part of Route): Select to display a list of sections of the current route. (→P.215)",
           "strength": "capability",
           "source": "p.214 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2164,6 +2466,8 @@
           "source_text": "Reorder Stops (Reorder Stops): Select to change the order of the currently set destination and waypoints. (→P.215)",
           "strength": "capability",
           "source": "p.214 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2266,6 +2570,8 @@
           "source_text": "Select to display the route details confirmation screen.",
           "strength": "capability",
           "source": "p.215 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": "1. Select a guidance route on the route guidance screen.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2277,6 +2583,8 @@
           "source_text": "Select to display the navigation settings screen. (→P.219)",
           "strength": "capability",
           "source": "p.215 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": "1. Select a guidance route on the route guidance screen.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2288,6 +2596,8 @@
           "source_text": "The current route screen can be displayed using the following method:",
           "strength": "capability",
           "source": "p.215 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": "1. Select a guidance route on the route guidance screen.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2299,6 +2609,8 @@
           "source_text": "Clear Route Select to stop the route guidance. (Clear Route)",
           "strength": "capability",
           "source": "p.215 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2310,6 +2622,8 @@
           "source_text": "Select to display the alternate route screen and search for 3 Find Alternative additional routes to the selected (Find Alternative) destination. (→P.210)",
           "strength": "capability",
           "source": "p.215 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2321,6 +2635,8 @@
           "source_text": "route screen and search for 3 Avoid Blocked Road additional routes which avoid the (Avoid Blocked Road) current road. (→P.210)",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2332,6 +2648,8 @@
           "source_text": "Select to display a list of sections of the current route. Select the Avoid Part of Route section you wish to avoid and (Avoid Part of Route) then select to search for a new route.",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2343,6 +2661,8 @@
           "source_text": "Select to change the avoidance criteria for the current route and search for a different route. When avoidance criteria are changed and OK (OK) is selected, Avoid on This Route the route calculation screen will be (Avoid on This Route) displayed. (→P.210) This item can only be selected when the current route has a section which is included in the avoidance criteria.",
           "strength": "constraint",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2354,6 +2674,8 @@
           "source_text": "S e le c t to d is p l a y t h e route details Show Instructions co n fi r m a t io n s c re e n . (Show Instructions)",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2365,6 +2687,8 @@
           "source_text": "Select to search for a waypoint on the map or search screen Add Stop to Route (→P.205) and then select (Add Stop to Route) to add it to the current route (→P.210).",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2376,6 +2700,8 @@
           "source_text": "Select to name the current route Add to My Routes and register it to My Routes. (Add to My Routes)",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2387,6 +2713,8 @@
           "source_text": "the current route and search for a new route. Change Route Type When route types are changed, (Change Route Type) the route calculation screen will be displayed. (→P.210)",
           "strength": "constraint",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2398,6 +2726,8 @@
           "source_text": "Select to change the order of the currently set destination and waypoints. Select a destination, select or to change its position in Reorder Stops the list, and then select Done (Reorder Stops) (Done) to confirm the change. Edit Stops (Edit Stops): Select to display the edit stops screen. To delete a waypoint, select then Delete (Delete).",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2409,6 +2739,8 @@
           "source_text": "Play Route Preview (Play Route Preview): Select Play Route Preview t o e n t e r route preview mode. (Play Route Preview)/ (→ P .2 1 7 ) Stop Route Preview Stop Route Preview (Stop Route Preview) (Stop Route Preview): Select to exit route preview mode.",
           "strength": "capability",
           "source": "p.216 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2449,6 +2781,8 @@
           "source_text": "A selected route can be previewed. The speed of the preview can be changed.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2460,6 +2794,8 @@
           "source_text": "Select to change the preview speed to “1X”/“2X”/“4X”.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2471,6 +2807,8 @@
           "source_text": "Select to temporarily stop the preview.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2482,6 +2820,8 @@
           "source_text": "The following table shows the most frequently displayed route events.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2493,6 +2833,8 @@
           "source_text": "Turn left/right",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2504,6 +2846,8 @@
           "source_text": "Keep left/right at the fork in the road.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2515,6 +2859,8 @@
           "source_text": "Turn left/right & sharp curve.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2526,6 +2872,8 @@
           "source_text": "Stay in the left/right lane.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2537,6 +2885,8 @@
           "source_text": "Go straight ahead at the intersection.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2548,6 +2898,8 @@
           "source_text": "Exit the junction",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2559,6 +2911,8 @@
           "source_text": "Roundabout",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2570,6 +2924,8 @@
           "source_text": "You have arrived at your destination.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2581,6 +2937,8 @@
           "source_text": "You have arrived at your waypoint.",
           "strength": "capability",
           "source": "p.217 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2621,6 +2979,8 @@
           "source_text": "Toll road",
           "strength": "capability",
           "source": "p.218 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2632,6 +2992,8 @@
           "source_text": "Ferry trip",
           "strength": "capability",
           "source": "p.218 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2643,6 +3005,8 @@
           "source_text": "As the vehicle approaches an intersection, or point, where maneuvering the vehicle is necessary, the system’s voice guidance will provide various messages.",
           "strength": "capability",
           "source": "p.218 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2654,6 +3018,8 @@
           "source_text": "l Be sure to obey the traffic regulations and keep the road condition in mind, especially when driving on IPD roads (roads that are not completely included in the map database). The route guidance may not have the most up-to-date information, such as the direction of a one way street.",
           "strength": "constraint",
           "source": "p.218 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2665,6 +3031,8 @@
           "source_text": "NOTE l To adjust the voice guidance volume: →P.100 l Setting voice guidance: →P.196 l Voice guidance may be made early or late. l If the system cannot determine the current position correctly, you may not hear voice guidance or may not see the magnified intersection on the screen.",
           "strength": "constraint",
           "source": "p.218 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2729,6 +3097,8 @@
           "source_text": "POI Icons on Map” is turned on and up to 5 POI icon types have been selected.",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2740,6 +3110,8 @@
           "source_text": "Select to turn the display for parking lots, gas stations and rest areas on/off for the route being traveled during route guidance.",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2751,6 +3123,8 @@
           "source_text": "Select to set the displays for the estimated remaining distance and estimated remaining time to the destination. (→P.212)",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2762,6 +3136,8 @@
           "source_text": "Select to turn the freeway exit preview on/off.",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2773,6 +3149,8 @@
           "source_text": "Select to set whether to automatically enlarge the map when approaching intersections or turning points during route guidance.",
           "strength": "constraint",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2784,6 +3162,8 @@
           "source_text": "Select to turn the route bar auto-hide function on/off. (→P.212)",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2795,6 +3175,8 @@
           "source_text": "Select to change the preferred route type when searching for a new route.",
           "strength": "constraint",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2806,6 +3188,8 @@
           "source_text": "Select to set avoidance criteria for the route calculation.",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2817,6 +3201,8 @@
           "source_text": "Select to turn the traffic alert sound on/off.",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2828,6 +3214,8 @@
           "source_text": "During a route guidance: Select to display route option screen. (→P.214) Not during a route guidance: Select to display the main menu screen. (→P.203)",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2839,6 +3227,8 @@
           "source_text": "Select to set the updating of map data. (→P.223)",
           "strength": "capability",
           "source": "p.220 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2879,6 +3269,8 @@
           "source_text": "REGARDING ERRORS IN CURRENT POSITION DISPLAY",
           "strength": "capability",
           "source": "p.221 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2890,6 +3282,8 @@
           "source_text": "The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors.",
           "strength": "constraint",
           "source": "p.221 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2916,6 +3310,8 @@
           "source_text": "This navigation system calculates the current position using satellite signals, various vehicle signals, map data, etc. However, an accurate position may not be shown depending on satellite conditions, road configuration, vehicle condition or other circumstances.",
           "strength": "capability",
           "source": "p.221 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2927,7 +3323,32 @@
           "source_text": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
           "strength": "constraint",
           "source": "p.221 / text",
-          "thresholds": [],
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "99e4c6901789",
+              "matching_text": "a few seconds",
+              "kind": "duration",
+              "unit": "seconds",
+              "context": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            },
+            {
+              "threshold_id": "236284653a08",
+              "matching_text": "a certain level of inaccuracy",
+              "kind": "quantity",
+              "unit": "as stated",
+              "context": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
+              "value": "100 m",
+              "status": "from_manual",
+              "evidence": "Stated in the OM: \"100 m\"",
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -2938,6 +3359,8 @@
           "source_text": "l The installation of window tinting may obstruct the GPS signals. Most window tinting contains some metallic content that will interfere with GPS signal reception of the antenna in the instrument panel. We advise against the use of window tinting on vehicles equipped with navigation systems.",
           "strength": "capability",
           "source": "p.221 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2949,6 +3372,8 @@
           "source_text": "following cases:",
           "strength": "capability",
           "source": "p.222 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2960,6 +3385,8 @@
           "source_text": "When driving on a small angled Y-shaped road.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2971,6 +3398,8 @@
           "source_text": "When driving on a winding road.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2982,6 +3411,8 @@
           "source_text": "When driving on a slippery road such as in sand, gravel, snow, etc.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2993,6 +3424,8 @@
           "source_text": "When driving on a long straight road.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3004,6 +3437,8 @@
           "source_text": "When freeway and surface streets run in parallel.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3015,6 +3450,8 @@
           "source_text": "After moving by ferry or vehicle carrier.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3026,7 +3463,21 @@
           "source_text": "When a long route is searched during high speed driving.",
           "strength": "capability",
           "source": "p.222 / bullet",
-          "thresholds": [],
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "7f5b88cd5a44",
+              "matching_text": "high speed",
+              "kind": "speed",
+              "unit": "speed",
+              "context": "When a long route is searched during high speed driving.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -3037,6 +3488,8 @@
           "source_text": "After repeating a change of direction by going forward and backward, or turning on a turntable in a parking lot.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3048,6 +3501,8 @@
           "source_text": "When leaving a covered parking lot or parking garage.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3059,6 +3514,8 @@
           "source_text": "When a roof carrier is installed.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3070,6 +3527,8 @@
           "source_text": "When driving with tire chains installed.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3081,6 +3540,8 @@
           "source_text": "When the tires are worn.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3092,6 +3553,8 @@
           "source_text": "After replacing a tire or tires.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3103,6 +3566,8 @@
           "source_text": "When using tires that are smaller or larger than the factory specifications.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3114,6 +3579,8 @@
           "source_text": "When the tire pressure in any of the 4 tires is not correct.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3125,6 +3592,8 @@
           "source_text": "When turning at an intersection off the designated route guidance.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3136,6 +3605,8 @@
           "source_text": "If you set more than 1 destination but skip any of them, auto reroute will display a route returning to the destination on the previous route.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3147,6 +3618,8 @@
           "source_text": "When turning at an intersection for which there is no route guidance.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3158,6 +3631,8 @@
           "source_text": "When passing through an intersection for which there is no route guidance.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3169,6 +3644,8 @@
           "source_text": "During auto reroute, the route guidance may not be available for the next turn to the right or left.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3180,7 +3657,21 @@
           "source_text": "During high speed driving, it may take a long time for auto reroute to operate. In auto reroute, a detour route may be shown.",
           "strength": "capability",
           "source": "p.222 / bullet",
-          "thresholds": [],
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "59429d5bddf1",
+              "matching_text": "high speed",
+              "kind": "speed",
+              "unit": "speed",
+              "context": "During high speed driving, it may take a long time for auto reroute to operate. In auto reroute, a detour route may be shown.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -3191,6 +3682,8 @@
           "source_text": "After auto reroute, the route may not be changed.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3202,6 +3695,8 @@
           "source_text": "If an unnecessary U-turn is shown or announced.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3213,6 +3708,8 @@
           "source_text": "If a location has multiple names and the system announces 1 or more of them.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3224,6 +3721,8 @@
           "source_text": "When a route cannot be searched.",
           "strength": "constraint",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3235,6 +3734,8 @@
           "source_text": "If the route to your destination includes gravel, unpaved roads or alleys, the route guidance may not be shown.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3246,6 +3747,8 @@
           "source_text": "Your destination point might be shown on the opposite side of the street.",
           "strength": "capability",
           "source": "p.222 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3271,6 +3774,8 @@
           "source_text": "prohibiting the entry of the vehicle that vary by time or season or other reasons.",
           "strength": "capability",
           "source": "p.223 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3282,6 +3787,8 @@
           "source_text": "The road and map data stored in the navigation system may not be complete or may not be the latest version.",
           "strength": "capability",
           "source": "p.223 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3293,6 +3800,8 @@
           "source_text": "NOTE l This navigation system uses tire turning data and is designed to work with factory-specified tires for the vehicle. Installing tires that are larger or smaller than the originally equipped diameter may cause inaccurate display of the current position. The tire pressure also affects the diameter of the tires, so make sure that the tire pressure of all 4 tires is correct.",
           "strength": "capability",
           "source": "p.223 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3318,6 +3827,8 @@
           "source_text": "When maps are created, land surveys are conducted and information on road improvements and reopening is collected to provide the most accurate information possible. However, modifications to roads, place names and facilities may be carried out at any time. Consequently, we cannot guarantee that map data contains no errors in road positions, configuration and names, or in facility names.",
           "strength": "constraint",
           "source": "p.223 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3344,6 +3855,8 @@
           "source_text": "Map data can be updated using the following methods:",
           "strength": "capability",
           "source": "p.223 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3355,6 +3868,8 @@
           "source_text": "USB memory: All map data can be updated at once. →P.224",
           "strength": "capability",
           "source": "p.223 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3366,6 +3881,8 @@
           "source_text": "Wi-Fi®: Individual regions can be selected and their map data updated.* →P.225, 226 *: Up to 8 regions can be selected for the automatic update function.",
           "strength": "capability",
           "source": "p.223 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3377,13 +3894,15 @@
           "source_text": "l Map update using Wi-Fi® may not be available in some countries. l For the best possible navigation experience, regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may result in inaccurate map information during interstate travel. Updates made using a USB memory device will update map information for all states. Please visit Subaru.com for more information and the latest updates. l If the map update fails or cannot be performed when using Wi-Fi®, check the communication status of the connected device. If there is a problem with communication, perform the procedure again using a different Wi-Fi® access point. l If the map update procedure fails, refer to the “TROUBLESHOOTING” section. (→P.252) l Subaru may terminate or suspend your access to all or part of these services for any or no reason, including without limitation, any violation of the terms detailed at: https://subaru-maps.com/#/termsofuse",
           "strength": "constraint",
           "source": "p.224 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": null,
           "thresholds": [
             {
               "threshold_id": "c3a95adb0e61",
               "matching_text": "nearby",
               "kind": "distance",
               "unit": "distance",
-              "context": "regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may r",
+              "context": "l Map update using Wi-Fi® may not be available in some countries. l For the best possible navigation experience, regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may result in inaccurate map information during interstate travel. Updates made using a USB memory device will update map information for all states. Please visit Subaru.com for more information and the latest updates. l If the map update fails or cannot be performed when using Wi-Fi®, check the communication status of the connected device. If there is a problem with communication, perform the procedure again using a different Wi-Fi® access point. l If the map update procedure fails, refer to the “TROUBLESHOOTING” section. (→P.252) l Subaru may terminate or suspend your access to all or part of these services for any or no reason, including without limitation, any violation of the terms detailed at: https://subaru-maps.com/#/termsofuse",
               "value": null,
               "status": "unfilled",
               "evidence": null,
@@ -3500,6 +4019,8 @@
           "source_text": "Maps can be updated using a USB memory device.",
           "strength": "capability",
           "source": "p.224 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": "1. Connect to a USB memory device. (→P.70)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3511,6 +4032,8 @@
           "source_text": "For details and to download update data, refer to the following URL: https://subaru-maps.com/",
           "strength": "capability",
           "source": "p.224 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": "1. Connect to a USB memory device. (→P.70)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3522,6 +4045,8 @@
           "source_text": "The new map data will be applied.",
           "strength": "capability",
           "source": "p.224 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.96)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3533,6 +4058,8 @@
           "source_text": "UPDATING THE MAP DATA MANUALLY USING Wi-Fi®",
           "strength": "capability",
           "source": "p.225 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.96)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3544,6 +4071,8 @@
           "source_text": "The map data may also be updated via Wi-Fi® network.",
           "strength": "capability",
           "source": "p.225 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.96)",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3555,6 +4084,8 @@
           "source_text": "The update for the selected region will be automatically downloaded and installed.",
           "strength": "capability",
           "source": "p.225 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": "6. After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3566,6 +4097,8 @@
           "source_text": "The new map data will be applied.",
           "strength": "capability",
           "source": "p.225 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3649,6 +4182,8 @@
           "source_text": "The new map data will be applied.",
           "strength": "capability",
           "source": "p.226 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM UPDATING THE MAP DATA AUTOMATICALLY",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -3660,6 +4195,8 @@
           "source_text": "(Automatic Update).",
           "strength": "capability",
           "source": "p.226 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM UPDATING THE MAP DATA AUTOMATICALLY",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null

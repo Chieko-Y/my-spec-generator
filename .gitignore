@@ -5,7 +5,9 @@ __pycache__/
 src/.pytest_cache/
 tests/.pytest_cache/
 scratch/
+scratchpad/
 data/library/**/original/*.pdf
+data/library/_inbox/
 .env
 
 docs/

@@ -2,12 +2,24 @@
 {% block content %}
 <h1>Screen elements</h1>
 <div class="card">
-  <ul>
-    {% for e in entries %}
-    <li><a href="/screen-elements/{{ e.manual_id }}?chapter={{ e.chapter }}"><code>{{ e.manual_id }}</code> — {{ e.chapter }}</a></li>
-    {% else %}
-    <li>No generated chapters yet.</li>
+  {% for maker in grouped %}
+  <details class="maker-accordion" data-persist-key="screen-elements-maker:{{ maker.name }}">
+    <summary>{{ maker.name }} ({{ maker.manuals | length }})</summary>
+    {% for man in maker.manuals %}
+    <details data-persist-key="screen-elements-manual:{{ man.manual_id }}" style="margin-left:1em">
+      <summary>{{ man.model }}</summary>
+      <ul>
+        {% for chapter in man.chapters %}
+        <li><a href="/screen-elements/{{ man.manual_id }}?chapter={{ chapter }}">{{ chapter }}</a></li>
+        {% else %}
+        <li>No generated chapters yet.</li>
+        {% endfor %}
+      </ul>
+    </details>
     {% endfor %}
-  </ul>
+  </details>
+  {% else %}
+  <p>No generated chapters yet.</p>
+  {% endfor %}
 </div>
 {% endblock %}

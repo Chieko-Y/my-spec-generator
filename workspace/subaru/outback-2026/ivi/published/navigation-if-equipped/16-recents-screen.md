@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=c3c5570b6353 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=32fd032a21f2 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 16. Recents screen
 
 <div class="fn-meta"><b>Function path:</b> Navigation (if equipped) / Recents screen<br><b>Source:</b> printed page 130, 131<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-82e2518b8591.png)
+![figure](../figures/FIG-3e46f886f9d0.png)
 - Figure 16-1 source: p.131
 - (Copied from OM) List of past destinations
 
@@ -22,30 +22,10 @@
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>“ ”: Select to delete the past destination(s). 6. | capability | p.131 / bullet |
-| 2 | <span class="req-label">Step -</span>“ ”: Select to register the past destination(s) to the favorites screen. | capability | p.131 / bullet |
+| 1 | <span class="req-label">Step -</span>“[icon]”: Select to delete the past destination(s). 6. | capability | p.131 / bullet |
+| 2 | <span class="req-label">Step -</span>“[icon]”: Select to register the past destination(s) to the favorites screen. | capability | p.131 / bullet |
 | 3 | <span class="req-label">Recents screen</span>Select to delete all destinations history. | capability | p.131 / text |
-<!-- GENERATED:END function=c3c5570b6353 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=32fd032a21f2 -->
 
 
 

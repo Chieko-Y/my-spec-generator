@@ -5,6 +5,8 @@ layering rules.
 """
 from __future__ import annotations
 
+import re
+
 from domain.manual_parsing import Line
 
 Rect = tuple[float, float, float, float]  # (x0, top, x1, bottom)
@@ -57,6 +59,23 @@ def merge_rects(rects: list[Rect], distance_pt: float = 3.0) -> list[Rect]:
 def is_figure_sized(rect: Rect, min_width_pt: float, min_height_pt: float) -> bool:
     x0, top, x1, bottom = rect
     return (x1 - x0) >= min_width_pt and (bottom - top) >= min_height_pt
+
+
+_BARE_URL_RE = re.compile(r"^\s*https?://\S+\s*$", re.IGNORECASE)
+
+
+def is_qr_code_caption(caption_text: str | None) -> bool:
+    """A figure whose nearest-line "caption" is nothing but a bare URL is a
+    printed QR code (a marketing insert linking to that URL), not a real screen
+    illustration -- confirmed against a real Subaru case, 2026-08-31: two small
+    (57x57pt) images captioned exactly "https://www.mysubaru.com/connect.html"
+    and ".ca/connect.html" respectively, which the original app's own output
+    for this manual does not include as figures at all. A QR code has no
+    on-screen icons/symbols to transcribe, so it doesn't belong in the Screen
+    elements review either way -- filtered at extraction, not just hidden from
+    one screen, so figure counts everywhere (published Markdown included) match.
+    """
+    return bool(caption_text and _BARE_URL_RE.match(caption_text))
 
 
 def caption_for(rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 20.0) -> Line | None:

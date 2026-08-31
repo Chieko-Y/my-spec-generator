@@ -165,9 +165,12 @@ def _merge_orphan_step_numbers(lines: list[Line]) -> list[Line]:
     return merged
 
 
-def _split_lines(section: Section) -> tuple[list[tuple[int, int, str]], list[list]]:
+def _split_lines(section: Section) -> tuple[list[tuple[int, int, float, str]], list[list]]:
     """Return (numbered_steps, paragraph_line_groups). Each numbered step is
-    (number, page, text). Each paragraph group is a list of Line.
+    (number, page, top, text) -- top is the step number's own line position,
+    kept so a requirement can be matched to "whichever step comes next" by
+    plain (page, top) reading-order comparison (see build_function_spec's
+    nearby-step citation). Each paragraph group is a list of Line.
 
     A step's own operation text can wrap onto following physical lines that
     don't repeat the number (e.g. "7. Close the driver's door and lock the
@@ -197,7 +200,7 @@ def _split_lines(section: Section) -> tuple[list[tuple[int, int, str]], list[lis
             continue
         m = _NUMBERED_STEP.match(text)
         if m:
-            steps.append([int(m.group(1)), line.page, m.group(2).strip()])
+            steps.append([int(m.group(1)), line.page, line.top, m.group(2).strip()])
             open_step_idx = len(steps) - 1
         elif (
             open_step_idx is not None
@@ -206,13 +209,13 @@ def _split_lines(section: Section) -> tuple[list[tuple[int, int, str]], list[lis
             and prev_top is not None
             and (line.top - prev_top) <= _PARAGRAPH_GAP_PT
         ):
-            steps[open_step_idx][2] += " " + text
+            steps[open_step_idx][3] += " " + text
         else:
             open_step_idx = None
             prose_lines.append(line)
         prev_top = line.top
         prev_page = line.page
-    steps = [(number, page, text) for number, page, text in steps]
+    steps = [(number, page, top, text) for number, page, top, text in steps]
 
     groups: list[list] = []
     current: list = []
@@ -246,6 +249,7 @@ def build_function_spec(
     area_title: str,
     sequence_in_area: int,
     figures: list | None = None,
+    page_running_head: dict[int, str] | None = None,
 ) -> FunctionSpec:
     title = _clean_title(section.title)
     chapter_number = str(sequence_in_area)
@@ -254,9 +258,25 @@ def build_function_spec(
     function_path = f"{area_title} / {title}" if area_title else title
 
     steps_raw, paragraph_groups = _split_lines(section)
+    # (page, top, "N. text") per step, in reading-order -- used below to cite
+    # "whichever step comes next" alongside a requirement. Confirmed against
+    # the real Subaru Outback 2026 PDF, 2026-08-31: a requirement/exception
+    # line's own page can be BEFORE the step it logically leads into (e.g.
+    # "After a few seconds, the Caution screen will be displayed." sits right
+    # after step 1 at the bottom of one page, describing what happens before
+    # step 2, printed at the top of the next page) -- "the step the reader
+    # does next" is the useful citation here, not "the nearest step by raw
+    # position" (step 1 is closer on the page but already done by this point).
+    step_positions = sorted((page, top, f"{number}. {text}") for number, page, top, text in steps_raw)
+
+    def _next_step_after(pos: tuple[int, float]) -> str | None:
+        for page, top, label in step_positions:
+            if (page, top) > pos:
+                return label
+        return None
 
     procedure: list[ProcedureStep] = []
-    for seq, (number, page, text) in enumerate(steps_raw, start=1):
+    for seq, (number, page, top, text) in enumerate(steps_raw, start=1):
         procedure.append(
             ProcedureStep(number=number, text=text, sequence=seq, source=f"p.{page + 1} / step")
         )
@@ -279,6 +299,7 @@ def build_function_spec(
         if len(paragraph) < 8:
             continue
         page = group[0].page
+        next_step_text = _next_step_after((group[0].page, group[0].top))
 
         # A paragraph that itself uses "shall/must" wording is kept, verbatim, like
         # any other paragraph — dropping it would silently discard information the
@@ -292,6 +313,7 @@ def build_function_spec(
             req_text = item if item.endswith((".", "!", "?")) else item + "."
             req_id = content_id("requirement", manual_id, section.title, item[:120])
             source = f"p.{page + 1} / {'bullet' if is_bullet else 'text'}"
+            page_citation = page_running_head.get(page) if page_running_head else None
 
             if is_bullet:
                 seen_bullet_in_section = True
@@ -314,6 +336,8 @@ def build_function_spec(
                     source_text=item,
                     strength=_classify_strength(item),
                     source=source,
+                    page_citation=page_citation,
+                    next_step_text=next_step_text,
                     thresholds=thresholds,
                 )
             )
@@ -339,6 +363,7 @@ def build_manual_spec_functions(
     manual_id: str,
     area_title: str,
     figures_by_section: list[list] | None = None,
+    page_running_head: dict[int, str] | None = None,
 ) -> list[FunctionSpec]:
     return [
         build_function_spec(
@@ -348,6 +373,7 @@ def build_manual_spec_functions(
             area_title,
             i + 1,
             figures_by_section[i] if figures_by_section else None,
+            page_running_head,
         )
         for i, section in enumerate(sections)
     ]

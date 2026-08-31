@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=4762ee76e0bb (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=347befe594c3 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 16. Receiving a message
 
 <div class="fn-meta"><b>Function path:</b> Phone / Receiving a message<br><b>Source:</b> printed page 84, 85<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -6,10 +6,10 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-debefc1fe798.png)
+![figure](../figures/FIG-58b4b37b593b.png)
 - Figure 16-1 source: p.84
 - (Copied from OM) ● “View”: Select to display the message inbox screen.
-![figure](../figures/FIG-882909a74b05.png)
+![figure](../figures/FIG-6ca68ebee38e.png)
 - Figure 16-2 source: p.85
 - (Copied from OM) 2. The following screen is displayed.
 
@@ -52,24 +52,4 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the cellular phone used for receiving messages, or its registration status with the system, some information may not be displayed. | capability | p.85 / bullet |
-<!-- GENERATED:END function=4762ee76e0bb -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=347befe594c3 -->

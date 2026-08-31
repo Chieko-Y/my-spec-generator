@@ -23,3 +23,4 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The road and map data stored in the navigation system may not be complete or may not be the latest version. | capability | p.223 / bullet |
 <!-- GENERATED:END function=e92a5665ed72 -->
+

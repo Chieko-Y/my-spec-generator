@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=fb196b64ed88 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=807340c4f66d (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 2. Functions available using a Bluetooth phone
 
 <div class="fn-meta"><b>Function path:</b> Phone / Functions available using a Bluetooth phone<br><b>Source:</b> printed page 75<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -14,24 +14,4 @@
 | 3 | <span class="req-label">Functions available using a Bluetooth phone</span>Talking on the Bluetooth phone: →P.81. | capability | p.75 / text |
 | 4 | <span class="req-label">Functions available using a Bluetooth phone</span>Message function Using the Bluetooth phone message function: →P.83. | capability | p.75 / text |
 | 5 | <span class="req-label">Functions available using a Bluetooth phone</span>Setting up a phone Setting the Bluetooth phone/device: →P.45. | capability | p.75 / text |
-<!-- GENERATED:END function=fb196b64ed88 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=807340c4f66d -->

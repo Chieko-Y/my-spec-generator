@@ -1,6 +1,6 @@
 thresholds:
 - threshold_id: b0c980c6d3b7
-  value: '5'
-  status: measured
-  evidence: test
-  filled_by: tester1
+  value: ''
+  status: unfilled
+  evidence: input error
+  filled_by: Chieko

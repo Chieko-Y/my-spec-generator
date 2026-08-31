@@ -42,7 +42,7 @@
 | 12 | <span class="req-label">Search Screen</span>: Select to display the favorite screen. (→P.207). | capability | p.206 / text |
 | 13 | <span class="req-label">Search Screen</span>: Select to display a list of recently set destinations. Then select a point from the list. Location menu pop-up for the point will be displayed on the map screen. (→P.198). | capability | p.206 / text |
 | 14 | <span class="req-label">Step -</span>Edit List (Edit List): Select to display the edit list screen. (→P.210). | capability | p.206 / bullet |
-| 15 | <span class="req-label">Search Screen</span>Each time the button is selected, select to display/hide the keyboard. | capability | p.206 / text |
+| 15 | <span class="req-label">Search Screen</span>keyboard. | capability | p.206 / text |
 | 16 | <span class="req-label">Search Screen</span>Select to display the search map screen. | capability | p.206 / text |
 | 17 | <span class="req-label">Search Screen</span>Select to display the search list screen. | capability | p.206 / text |
 | 18 | <span class="req-label">Search Screen</span>SEARCH RESULTS SCREEN. | capability | p.206 / text |
@@ -53,6 +53,7 @@
 | 23 | <span class="req-label">Step -</span>Go (Go ): Select to search for a route to the selected destination. (→P.210). | capability | p.207 / bullet |
 | 24 | <span class="req-label">Search Screen</span>The desired point can be registered as home, work, or favorite. The registered points can be set as a destination. Registered points can be added, changed and deleted on the. | capability | p.207 / text |
 <!-- GENERATED:END function=c9c3c92a3ccd -->
+
 
 
 

@@ -1,0 +1,4260 @@
+{
+  "manual_id": "subaru/ascent-2026/ivi",
+  "maker": "Subaru",
+  "model": "Ascent 2026",
+  "document_title": "",
+  "scope": "navigation-system-if-equipped",
+  "markets": [
+    "US",
+    "CA"
+  ],
+  "profile_id": "subaru_chapter_toc_v1",
+  "meta": {
+    "unmatched_headings": [
+      "Map Screen Operation",
+      "Location Menu Pop-up",
+      "Orientation Of The Map",
+      "Other Information",
+      "Search Screen",
+      "Edit List Screen",
+      "Current Route Screen",
+      "Standard Map Icon",
+      "Typical Voice Guidance Prompts",
+      "Map Data"
+    ],
+    "chapter_prefix": "navigation-system-if-equipped",
+    "chapter_slug": "navigation-system-if-equipped",
+    "chapter_label": "navigation-system-if-equipped",
+    "excluded_sections": []
+  },
+  "functions": [
+    {
+      "function_id": "2965db789d1a",
+      "chapter_number": "1",
+      "title": "Map Screen Overview",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Map Screen Overview",
+      "pages": [
+        158
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Select .",
+          "sequence": 1,
+          "source": "p.158 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select (Map).",
+          "sequence": 2,
+          "source": "p.158 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "5bd68c19d0c8",
+          "slot": "overview",
+          "text": "The map screen can be displayed using the following method:.",
+          "source_text": "The map screen can be displayed using the following method:",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": "1. Select .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "45230a493adb",
+          "slot": "overview",
+          "text": "Select to display the search screen. (→P.167).",
+          "source_text": "Select to display the search screen. (→P.167)",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1c02e054e548",
+          "slot": "overview",
+          "text": "Select to increase the size of the map screen. Select to reduce the size of the map screen.",
+          "source_text": "Select to increase the size of the map screen. Select to reduce the size of the map screen.",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bd0606976a55",
+          "slot": "overview",
+          "text": "Displays the current vehicle position. Select to display the following pop-up:.",
+          "source_text": "Displays the current vehicle position. Select to display the following pop-up:",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e3a8bc39b7fa",
+          "slot": "requirements",
+          "text": "Add to Favorites (Add to Favorites): Select to register your current location as a favorite.",
+          "source_text": "Add to Favorites (Add to Favorites): Select to register your current location as a favorite.",
+          "strength": "capability",
+          "source": "p.158 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9abe37d02251",
+          "slot": "requirements",
+          "text": "Avoid Blocked Road (Avoid Blocked Road)*: Select to display the alternate route screen and search for 3 additional routes to the selected destination. (→P.172).",
+          "source_text": "Avoid Blocked Road (Avoid Blocked Road)*: Select to display the alternate route screen and search for 3 additional routes to the selected destination. (→P.172)",
+          "strength": "capability",
+          "source": "p.158 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e459ec747edb",
+          "slot": "requirements",
+          "text": "Current Location (Current Location): Select to display the current position information.",
+          "source_text": "Current Location (Current Location): Select to display the current position information.",
+          "strength": "capability",
+          "source": "p.158 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8af0d424a837",
+          "slot": "requirements",
+          "text": "Displays the speed limit for the road currently being traveled on.",
+          "source_text": "Displays the speed limit for the road currently being traveled on.",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7b0da8ed971e",
+          "slot": "requirements",
+          "text": "Displays the current street name.",
+          "source_text": "Displays the current street name.",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e6c31faf9866",
+          "slot": "requirements",
+          "text": "Select to display the main menu screen. (→P.165).",
+          "source_text": "Select to display the main menu screen. (→P.165)",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a89a129dec65",
+          "slot": "requirements",
+          "text": "Select to set a voice guidance.",
+          "source_text": "Select to set a voice guidance.",
+          "strength": "capability",
+          "source": "p.158 / text",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "de83494e275d",
+          "slot": "requirements",
+          "text": ": Enables voice guidance.",
+          "source_text": ": Enables voice guidance",
+          "strength": "capability",
+          "source": "p.158 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7a5784f83b91",
+          "slot": "requirements",
+          "text": ": Enables the voice guidance of alerts only.",
+          "source_text": ": Enables the voice guidance of alerts only",
+          "strength": "capability",
+          "source": "p.158 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "999e5163ce9b",
+          "slot": "requirements",
+          "text": ": Disables voice guidance.",
+          "source_text": ": Disables voice guidance",
+          "strength": "capability",
+          "source": "p.158 / bullet",
+          "page_citation": "BASIC OPERATION BASIC OPERATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "708baa7600d8",
+          "page": 157,
+          "rect": [
+            148.9048157,
+            198.8244598,
+            285.1288452,
+            346.56846310000003
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "(Map).",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "d3e7f8d900a0",
+      "chapter_number": "2",
+      "title": "Map Screen Operation",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Map Screen Operation",
+      "pages": [
+        159
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "b44aa8d1a202",
+          "slot": "overview",
+          "text": "north-up, 2D heading-up, or 3D heading-up. (→P.161).",
+          "source_text": "north-up, 2D heading-up, or 3D heading-up. (→P.161)",
+          "strength": "capability",
+          "source": "p.159 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "614d5f9d906c",
+          "slot": "overview",
+          "text": "*: This item can only be displayed when a route is set.",
+          "source_text": "*: This item can only be displayed when a route is set.",
+          "strength": "constraint",
+          "source": "p.159 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "1ac4e177a544",
+      "chapter_number": "3",
+      "title": "Map Screen Buttons Overview",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Map Screen Buttons Overview",
+      "pages": [
+        159
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "f56a918de5af",
+          "slot": "overview",
+          "text": "The map screen buttons can be accessed by selecting any point on the map.",
+          "source_text": "The map screen buttons can be accessed by selecting any point on the map.",
+          "strength": "capability",
+          "source": "p.159 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a450aadcfd34",
+          "slot": "overview",
+          "text": "Select to change the scale of the map screen. (→P.160).",
+          "source_text": "Select to change the scale of the map screen. (→P.160)",
+          "strength": "capability",
+          "source": "p.159 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "904d15ec6cad",
+          "page": 158,
+          "rect": [
+            131.8969727,
+            176.381955,
+            268.1210022,
+            324.1259583
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to change the scale of the map screen. (→P.160)",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "20ecd8b23bf4",
+      "chapter_number": "4",
+      "title": "Current Position Display",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Current Position Display",
+      "pages": [
+        159
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "ecee9120342e",
+          "slot": "overview",
+          "text": "After moving the map, Re-center (Re-center) may be displayed. Select Re-center (Re-center) to return the map to the current position.",
+          "source_text": "After moving the map, Re-center (Re-center) may be displayed. Select Re-center (Re-center) to return the map to the current position.",
+          "strength": "capability",
+          "source": "p.159 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b3c4837d317f",
+          "slot": "overview",
+          "text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+          "source_text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+          "strength": "constraint",
+          "source": "p.159 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "b86464dba73e",
+              "matching_text": "a certain amount of time",
+              "kind": "quantity",
+              "unit": "as stated",
+              "context": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "94bc31e5480c",
+      "chapter_number": "5",
+      "title": "Location Menu Pop-up",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Location Menu Pop-up",
+      "pages": [
+        160
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Select any point on the map.",
+          "sequence": 1,
+          "source": "p.160 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select or to change the scale of the map screen.",
+          "sequence": 2,
+          "source": "p.160 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "8a419930f964",
+          "slot": "requirements",
+          "text": "When the automatic zoom function is on (→P.181) during route guidance, the map is zoomed in automatically when approaching intersections or turning points.",
+          "source_text": "When the automatic zoom function is on (→P.181) during route guidance, the map is zoomed in automatically when approaching intersections or turning points.",
+          "strength": "constraint",
+          "source": "p.160 / bullet",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8af045b480df",
+          "slot": "exception",
+          "text": "NOTE l The scale of the map screen can also be changed with the double touch or pinch operation. (→P.45) l If the map scale has been changed after moving the map, the map scale will return to previous scale when the map is returned to the current position. l The automatic zoom function may not operate if the map scale is adjusted manually during route guidance. To reenable the automatic zoom function, change the orientation of the map screen. (→P.161).",
+          "source_text": "NOTE l The scale of the map screen can also be changed with the double touch or pinch operation. (→P.45) l If the map scale has been changed after moving the map, the map scale will return to previous scale when the map is returned to the current position. l The automatic zoom function may not operate if the map scale is adjusted manually during route guidance. To reenable the automatic zoom function, change the orientation of the map screen. (→P.161)",
+          "strength": "constraint",
+          "source": "p.160 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9395f8cfb79a",
+          "slot": "requirements",
+          "text": "The location menu pop-up can be displayed using the following methods:.",
+          "source_text": "The location menu pop-up can be displayed using the following methods:",
+          "strength": "capability",
+          "source": "p.160 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e2fd55036cd3",
+          "slot": "requirements",
+          "text": "Select and hold any point on the map. Select a point from a list. ● ● Select a POI icon.",
+          "source_text": "Select and hold any point on the map. Select a point from a list. ● ● Select a POI icon.",
+          "strength": "capability",
+          "source": "p.160 / bullet",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "30cd989b1e70",
+          "slot": "requirements",
+          "text": "Select Go (Go) to search for a route to the selected point and display the route calculation screen. (→P.172).",
+          "source_text": "Select Go (Go) to search for a route to the selected point and display the route calculation screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.160 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b8336929017e",
+          "slot": "requirements",
+          "text": "During a route guidance, selecting Add Stop (Add Stop) will add a waypoint.",
+          "source_text": "During a route guidance, selecting Add Stop (Add Stop) will add a waypoint.",
+          "strength": "capability",
+          "source": "p.160 / text",
+          "page_citation": "BASIC OPERATION MAP SCALE LOCATION MENU POP-UP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "8891829ca2ac",
+          "page": 159,
+          "rect": [
+            418.1012878,
+            169.50318599999997,
+            554.1812896,
+            317.1031921
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "adjusted manually during route guidance. To reenable the automatic",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "9c26ec3fccd3",
+      "chapter_number": "6",
+      "title": "Orientation Of The Map",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Orientation Of The Map",
+      "pages": [
+        161,
+        162
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Select , ,or .",
+          "sequence": 1,
+          "source": "p.161 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "4a3c33ebe71d",
+          "slot": "overview",
+          "text": "Select to register the selected point as Add to Favorites a favorite. (Add to Favorites).",
+          "source_text": "Select to register the selected point as Add to Favorites a favorite. (Add to Favorites)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9b8869fde686",
+          "slot": "overview",
+          "text": "Select to search for a route to the selected point and display the route Go (Go) calculation screen. (→P.172).",
+          "source_text": "Select to search for a route to the selected point and display the route Go (Go) calculation screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d89ee358dc57",
+          "slot": "overview",
+          "text": "Select to display the search screen Search Near Here and search near the selected point. (Search Near Here) (→P.167).",
+          "source_text": "Select to display the search screen Search Near Here and search near the selected point. (Search Near Here) (→P.167)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "82cca45fe1db",
+          "slot": "overview",
+          "text": "Select to display detailed information about the selected point or POI. : Select to call the registered More Information phone number of POI. (More Information) : Select to search for a route to the selected point or POI and display the route calculation screen. (→P.172).",
+          "source_text": "Select to display detailed information about the selected point or POI. : Select to call the registered More Information phone number of POI. (More Information) : Select to search for a route to the selected point or POI and display the route calculation screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c3e7a170ece7",
+          "slot": "overview",
+          "text": "Select to edit the point registered as Edit Location home/work. (Edit Location).",
+          "source_text": "Select to edit the point registered as Edit Location home/work. (Edit Location)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "719a634c7129",
+          "slot": "overview",
+          "text": "Select to erase the point registered as Remove Location home/work. (Remove Location).",
+          "source_text": "Select to erase the point registered as Remove Location home/work. (Remove Location)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "42bcafa0c901",
+          "slot": "overview",
+          "text": "Select to change the name of a registered favorite. (Rename).",
+          "source_text": "Select to change the name of a registered favorite. (Rename)",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "19c817076232",
+          "slot": "overview",
+          "text": "The orientation of the map can be changed between 2D northup, 2D heading-up, and 3D heading-up.",
+          "source_text": "The orientation of the map can be changed between 2D northup, 2D heading-up, and 3D heading-up.",
+          "strength": "capability",
+          "source": "p.161 / text",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": "1. Select , ,or .",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d20f3ca6fc49",
+          "slot": "requirements",
+          "text": "Each time the symbol is selected, the orientation of the map changes. X 2D north-up.",
+          "source_text": "Each time the symbol is selected, the orientation of the map changes. X 2D north-up",
+          "strength": "capability",
+          "source": "p.161 / bullet",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "68be74f593bd",
+          "slot": "requirements",
+          "text": "Regardless of the direction of vehicle travel, north is always up.",
+          "source_text": "Regardless of the direction of vehicle travel, north is always up.",
+          "strength": "capability",
+          "source": "p.161 / bullet",
+          "page_citation": "BASIC OPERATION Select to display the following options. ORIENTATION OF THE MAP",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "61d45070bb25",
+          "slot": "requirements",
+          "text": "The direction of vehicle travel is always up.",
+          "source_text": "The direction of vehicle travel is always up.",
+          "strength": "capability",
+          "source": "p.162 / bullet",
+          "page_citation": "BASIC OPERATION X 3D heading-up X 2D heading-up",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "61d45070bb25",
+          "slot": "requirements",
+          "text": "The direction of vehicle travel is always up.",
+          "source_text": "The direction of vehicle travel is always up.",
+          "strength": "capability",
+          "source": "p.162 / bullet",
+          "page_citation": "BASIC OPERATION X 3D heading-up X 2D heading-up",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "0e58de970313",
+          "page": 160,
+          "rect": [
+            392.6334534,
+            178.66850000000005,
+            545.6334534,
+            331.6685
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "always up.",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "aa5a9529ab98",
+          "page": 161,
+          "rect": [
+            140.3499146,
+            80.88233640000004,
+            293.34991460000003,
+            233.8823364
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "● The direction of vehicle travel is always up.",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "bfdfde5fb088",
+          "page": 161,
+          "rect": [
+            409.6412659,
+            80.88233640000004,
+            562.6412659,
+            233.8823364
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "● The direction of vehicle travel is always up.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "edd172cb3c30",
+      "chapter_number": "7",
+      "title": "Gas Station/Parking Lot/Rest Area Icons",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Gas Station/Parking Lot/Rest Area Icons",
+      "pages": [
+        163
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "a7b0aebb0991",
+          "slot": "overview",
+          "text": "Gas stations, parking lots and rest areas can be displayed on the route. Their location can also be set as a destination.",
+          "source_text": "Gas stations, parking lots and rest areas can be displayed on the route. Their location can also be set as a destination.",
+          "strength": "capability",
+          "source": "p.163 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "75cf0dfec0c3",
+          "slot": "requirements",
+          "text": "The display of gas station/parking lots/rest area icons can be turned on/off. (→P.181).",
+          "source_text": "The display of gas station/parking lots/rest area icons can be turned on/off. (→P.181)",
+          "strength": "capability",
+          "source": "p.163 / bullet",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "371949100994",
+          "slot": "exception",
+          "text": "*: Use of this function may not be possible depending on country and vehicle. Road sections affected by traffic conditions are displayed in a different color on the map, and a small icon representing the type of traffic condition is displayed above the road.",
+          "source_text": "*: Use of this function may not be possible depending on country and vehicle. Road sections affected by traffic conditions are displayed in a different color on the map, and a small icon representing the type of traffic condition is displayed above the road.",
+          "strength": "capability",
+          "source": "p.163 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "919ca23e6169",
+          "slot": "requirements",
+          "text": "This feature is available at certain map scales.",
+          "source_text": "This feature is available at certain map scales.",
+          "strength": "capability",
+          "source": "p.163 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "faf6cdf0c0a5",
+          "slot": "requirements",
+          "text": "To receive the data service information in the vehicle, a subscription to the SiriusXM® Radio Service is necessary following a free trial. (→P.131).",
+          "source_text": "To receive the data service information in the vehicle, a subscription to the SiriusXM® Radio Service is necessary following a free trial. (→P.131)",
+          "strength": "capability",
+          "source": "p.163 / text",
+          "page_citation": "BASIC OPERATION MAP SCREEN INFORMATION TRAFFIC INFORMATION*",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "d603d4a57e78",
+          "page": 162,
+          "rect": [
+            131.802063,
+            150.4378479,
+            267.88206479999997,
+            298.03785400000004
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "To receive the data service information in the vehicle, a",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "0407eaa07606",
+          "page": 162,
+          "rect": [
+            401.0934448,
+            205.5031555,
+            537.1734466,
+            349.3231628
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "System",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "d218bff863dd",
+      "chapter_number": "8",
+      "title": "Other Information",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Other Information",
+      "pages": [
+        164
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "220f93567fb7",
+          "slot": "overview",
+          "text": "A pop-up screen will be displayed based on the driving situation, etc.",
+          "source_text": "A pop-up screen will be displayed based on the driving situation, etc.",
+          "strength": "capability",
+          "source": "p.164 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4281f09c7d43",
+          "slot": "overview",
+          "text": "X Low fuel warning.",
+          "source_text": "X Low fuel warning",
+          "strength": "capability",
+          "source": "p.164 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "84020c7ae0ad",
+          "slot": "overview",
+          "text": "When the fuel level is low, a warning message will pop up on the screen.",
+          "source_text": "When the fuel level is low, a warning message will pop up on the screen.",
+          "strength": "capability",
+          "source": "p.164 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e15fa2ed204b",
+          "slot": "overview",
+          "text": "(Search): Select to search for gas stations.",
+          "source_text": "(Search): Select to search for gas stations.",
+          "strength": "capability",
+          "source": "p.164 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f349f7a813ff",
+          "slot": "requirements",
+          "text": "(Ignore): Select to delete the message.",
+          "source_text": "(Ignore): Select to delete the message.",
+          "strength": "capability",
+          "source": "p.164 / bullet",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "97d7885a2ef2",
+          "slot": "requirements",
+          "text": "If the system determines, based on the driver’s condition, that a rest may be necessary, a pop-up message will be displayed on the screen.",
+          "source_text": "If the system determines, based on the driver’s condition, that a rest may be necessary, a pop-up message will be displayed on the screen.",
+          "strength": "capability",
+          "source": "p.164 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d5844f456e10",
+          "slot": "requirements",
+          "text": "(Search): Select to search for rest areas.",
+          "source_text": "(Search): Select to search for rest areas.",
+          "strength": "capability",
+          "source": "p.164 / text",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b03ddd5e9170",
+          "slot": "requirements",
+          "text": "(Ignore): Select to delete the message. ● ● Pop-up screens can be turned on/off using the “Periodic Rest Notification” setting on the general settings screen. (→P.66).",
+          "source_text": "(Ignore): Select to delete the message. ● ● Pop-up screens can be turned on/off using the “Periodic Rest Notification” setting on the general settings screen. (→P.66)",
+          "strength": "capability",
+          "source": "p.164 / bullet",
+          "page_citation": "BASIC OPERATION X Periodic rest notification OTHER INFORMATION",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "ef3edd85a099",
+          "page": 163,
+          "rect": [
+            148.809906,
+            166.23389880000002,
+            284.8899078,
+            216.4539
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "(Search): Select to search for gas stations.",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "e56299af74cb",
+          "page": 163,
+          "rect": [
+            418.1012573,
+            122.55161800000002,
+            554.1812591,
+            185.91161800000003
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "(Search): Select to search for rest areas.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "c8141c83164d",
+      "chapter_number": "9",
+      "title": "Main Menu Screen Overview",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Main Menu Screen Overview",
+      "pages": [
+        165,
+        166
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the map screen. (→P.158)",
+          "sequence": 1,
+          "source": "p.165 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select (Menu). Menu",
+          "sequence": 2,
+          "source": "p.165 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "d7d31a721146",
+          "slot": "overview",
+          "text": "The main menu screen can be displayed using the following method:.",
+          "source_text": "The main menu screen can be displayed using the following method:",
+          "strength": "capability",
+          "source": "p.165 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": "1. Display the map screen. (→P.158)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "afac5894d0c2",
+          "slot": "overview",
+          "text": "(Search) (→P.167).",
+          "source_text": "(Search) (→P.167)",
+          "strength": "capability",
+          "source": "p.165 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1085338eaed6",
+          "slot": "overview",
+          "text": "(Add Home): Select to register a point as home. (→P.171) (Add Home)*1/ Drive Home (Drive Home): Select to Drive Home set the point registered as home as the (Drive Home)*2 destination.",
+          "source_text": "(Add Home): Select to register a point as home. (→P.171) (Add Home)*1/ Drive Home (Drive Home): Select to Drive Home set the point registered as home as the (Drive Home)*2 destination.",
+          "strength": "capability",
+          "source": "p.165 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8ed4be93c9f3",
+          "slot": "overview",
+          "text": "(Add Work): Select to register a point as work. (→P.171) (Add Work)*3/ Drive to Work (Drive to Work): Select Drive to Work to set the point registered as work as the (Drive to Work)*4 destination.",
+          "source_text": "(Add Work): Select to register a point as work. (→P.171) (Add Work)*3/ Drive to Work (Drive to Work): Select Drive to Work to set the point registered as work as the (Drive to Work)*4 destination.",
+          "strength": "capability",
+          "source": "p.165 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c29a943d0014",
+          "slot": "overview",
+          "text": "Select to display a list of recently set destinations. Then select a point from the list. Location Recent Destinations menu pop-up for the point will be displayed on the map screen. (→P.160) (Recent Destinations).",
+          "source_text": "Select to display a list of recently set destinations. Then select a point from the list. Location Recent Destinations menu pop-up for the point will be displayed on the map screen. (→P.160) (Recent Destinations)",
+          "strength": "capability",
+          "source": "p.165 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "565fcf660d1e",
+          "slot": "requirements",
+          "text": "Edit List (Edit List): Select to display the edit list screen. (→P.172).",
+          "source_text": "Edit List (Edit List): Select to display the edit list screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.165 / bullet",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d4e1a7aedae6",
+          "slot": "requirements",
+          "text": "Select to display the favorite screen. Favorites (→P.169) (Favorites).",
+          "source_text": "Select to display the favorite screen. Favorites (→P.169) (Favorites)",
+          "strength": "capability",
+          "source": "p.165 / text",
+          "page_citation": "BASIC OPERATION MAIN MENU SCREEN Select to display the search screen.",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "abd235572da3",
+          "slot": "requirements",
+          "text": "and register it so that it can be used repeatedly. (→P.177) My route name: Select a registered route My Routes to display the route calculation screen. (My Routes)*5 (→P.172) Edit List (Edit List): Select to display the edit list screen. (→P.172).",
+          "source_text": "and register it so that it can be used repeatedly. (→P.177) My route name: Select a registered route My Routes to display the route calculation screen. (My Routes)*5 (→P.172) Edit List (Edit List): Select to display the edit list screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.166 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5eee48dd2311",
+          "slot": "requirements",
+          "text": "Select to display the map update screen. Maps (Maps) (→P.187).",
+          "source_text": "Select to display the map update screen. Maps (Maps) (→P.187)",
+          "strength": "capability",
+          "source": "p.166 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "954fe02b0d3f",
+          "slot": "requirements",
+          "text": "Select to display the legal information Legal Information screen. (Legal Information).",
+          "source_text": "Select to display the legal information Legal Information screen. (Legal Information)",
+          "strength": "capability",
+          "source": "p.166 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a997d38ff3e0",
+          "slot": "requirements",
+          "text": "Selecrt to display the navigation settings Settings (Settings) screen. (→P.181).",
+          "source_text": "Selecrt to display the navigation settings Settings (Settings) screen. (→P.181)",
+          "strength": "capability",
+          "source": "p.166 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d5f35830e858",
+          "slot": "requirements",
+          "text": "To display frequently set destinations, select “Keep trip history on this device for optional features” and “Predict Privacy (Privacy) frequent destinations” to on then select Frequent destinations (Frequent destinations).",
+          "source_text": "To display frequently set destinations, select “Keep trip history on this device for optional features” and “Predict Privacy (Privacy) frequent destinations” to on then select Frequent destinations (Frequent destinations).",
+          "strength": "capability",
+          "source": "p.166 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1b3f8973c674",
+          "slot": "requirements",
+          "text": "*2: If a point has been registered as home. *3: If a point has not been registered as work. *4: If a point has been registered as work. *5: This item can only be selected when a route has been registered to My Routes.",
+          "source_text": "*2: If a point has been registered as home. *3: If a point has not been registered as work. *4: If a point has been registered as work. *5: This item can only be selected when a route has been registered to My Routes.",
+          "strength": "constraint",
+          "source": "p.166 / text",
+          "page_citation": "BASIC OPERATION *1: If a point has not been registered as home. Select to name the current route",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "eae72afc9a07",
+          "page": 164,
+          "rect": [
+            131.8020935,
+            187.45045169999997,
+            267.8820953,
+            335.0504578
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Menu",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "998542289335",
+      "chapter_number": "10",
+      "title": "Search Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Search Screen",
+      "pages": [
+        167,
+        168,
+        169
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "c3d869606653",
+          "slot": "overview",
+          "text": "Destinations can be set by address, category, POI, etc.",
+          "source_text": "Destinations can be set by address, category, POI, etc.",
+          "strength": "capability",
+          "source": "p.167 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9169603ef03a",
+          "slot": "overview",
+          "text": "By entering three words hit by search using the “what3words” function, destinations can be set for places where postal address is not precisely allocated.",
+          "source_text": "By entering three words hit by search using the “what3words” function, destinations can be set for places where postal address is not precisely allocated.",
+          "strength": "capability",
+          "source": "p.167 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0921c5441e04",
+          "slot": "overview",
+          "text": "Enter keyword(s) to search for a destination. To use “what3words”, enter “ . ” in-between the three words. Search results screen will be displayed. (→P.168).",
+          "source_text": "Enter keyword(s) to search for a destination. To use “what3words”, enter “ . ” in-between the three words. Search results screen will be displayed. (→P.168)",
+          "strength": "capability",
+          "source": "p.167 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1592edf20857",
+          "slot": "overview",
+          "text": "Select to set the radius filter. Once the radius filter has been set, a search will only be performed for items within that radius.",
+          "source_text": "Select to set the radius filter. Once the radius filter has been set, a search will only be performed for items within that radius.",
+          "strength": "capability",
+          "source": "p.167 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2fa978c5785c",
+          "slot": "overview",
+          "text": "Select to display the current vehicle position.",
+          "source_text": "Select to display the current vehicle position.",
+          "strength": "capability",
+          "source": "p.167 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "543b96822340",
+          "slot": "overview",
+          "text": "Select to select a POI category. Search will be performed within the radius filter set. Search results screen will be displayed. (→P.168).",
+          "source_text": "Select to select a POI category. Search will be performed within the radius filter set. Search results screen will be displayed. (→P.168)",
+          "strength": "capability",
+          "source": "p.167 / text",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "26def4921d59",
+          "slot": "requirements",
+          "text": "Show Subcategories (Show Subcategories): Select to display more detailed categories. Select to display other POI categories.",
+          "source_text": "Show Subcategories (Show Subcategories): Select to display more detailed categories. Select to display other POI categories.",
+          "strength": "capability",
+          "source": "p.167 / bullet",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "46edc15e6ee3",
+          "slot": "requirements",
+          "text": "Browse Categories (Browse Categories): Select to display all of the POI categories.",
+          "source_text": "Browse Categories (Browse Categories): Select to display all of the POI categories.",
+          "strength": "capability",
+          "source": "p.167 / bullet",
+          "page_citation": "BASIC OPERATION SEARCH SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fbcfe3b1fe72",
+          "slot": "requirements",
+          "text": "(Add Home): Select to register a point as home. (→P.171) Home (Home): Select to set the point registered as home as the destination.",
+          "source_text": "(Add Home): Select to register a point as home. (→P.171) Home (Home): Select to set the point registered as home as the destination.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4c3cdf6cc3fd",
+          "slot": "requirements",
+          "text": "Go (Go ): Select to display the route calculation screen. (→P.172).",
+          "source_text": "Go (Go ): Select to display the route calculation screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2d6ba6b0eaaa",
+          "slot": "requirements",
+          "text": ": Select to display location menu pop-up. (→P.160).",
+          "source_text": ": Select to display location menu pop-up. (→P.160)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d2d2de551a7b",
+          "slot": "requirements",
+          "text": "(Add Work): Select to register a point as work. (→P.171) Work (Work): Select to set the point registered as work as the destination.",
+          "source_text": "(Add Work): Select to register a point as work. (→P.171) Work (Work): Select to set the point registered as work as the destination.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4c3cdf6cc3fd",
+          "slot": "requirements",
+          "text": "Go (Go ): Select to display the route calculation screen. (→P.172).",
+          "source_text": "Go (Go ): Select to display the route calculation screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2d6ba6b0eaaa",
+          "slot": "requirements",
+          "text": ": Select to display location menu pop-up. (→P.160).",
+          "source_text": ": Select to display location menu pop-up. (→P.160)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8cbb3565fe8b",
+          "slot": "requirements",
+          "text": ": Select to display the last set destination.",
+          "source_text": ": Select to display the last set destination.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4c3cdf6cc3fd",
+          "slot": "requirements",
+          "text": "Go (Go ): Select to display the route calculation screen. (→P.172).",
+          "source_text": "Go (Go ): Select to display the route calculation screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2d6ba6b0eaaa",
+          "slot": "requirements",
+          "text": ": Select to display location menu pop-up. (→P.160).",
+          "source_text": ": Select to display location menu pop-up. (→P.160)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2a93ce9b61e8",
+          "slot": "requirements",
+          "text": ": Select to display the favorite screen. (→P.169).",
+          "source_text": ": Select to display the favorite screen. (→P.169)",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "78334829bd0c",
+          "slot": "requirements",
+          "text": ": Select to display a list of recently set destinations. Then select a point from the list. Location menu pop-up for the point will be displayed on the map screen. (→P.160).",
+          "source_text": ": Select to display a list of recently set destinations. Then select a point from the list. Location menu pop-up for the point will be displayed on the map screen. (→P.160)",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "23e63843e16b",
+          "slot": "requirements",
+          "text": "Edit List (Edit List): Select to display the edit list screen. (→P.172).",
+          "source_text": "Edit List (Edit List): Select to display the edit list screen. (→P.172)",
+          "strength": "capability",
+          "source": "p.168 / bullet",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7c8810030a6a",
+          "slot": "requirements",
+          "text": "keyboard.",
+          "source_text": "keyboard.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bb905b55c743",
+          "slot": "requirements",
+          "text": "Select to display the search map screen.",
+          "source_text": "Select to display the search map screen.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "49b418b71b9c",
+          "slot": "requirements",
+          "text": "Select to display the search list screen.",
+          "source_text": "Select to display the search list screen.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ae447608db9c",
+          "slot": "requirements",
+          "text": "SEARCH RESULTS SCREEN.",
+          "source_text": "SEARCH RESULTS SCREEN",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7c3548aa9243",
+          "slot": "requirements",
+          "text": "Select to narrow down the list by POI category.",
+          "source_text": "Select to narrow down the list by POI category.",
+          "strength": "capability",
+          "source": "p.168 / text",
+          "page_citation": "BASIC OPERATION Each time the button is selected, select to display/hide the",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "25290d1ee29e",
+          "slot": "requirements",
+          "text": "input characters. The location menu pop-up is displayed on the map screen when an item is selected. (→P.160) If a non-specific point is selected, such as a street name, the following items will be displayed.",
+          "source_text": "input characters. The location menu pop-up is displayed on the map screen when an item is selected. (→P.160) If a non-specific point is selected, such as a street name, the following items will be displayed.",
+          "strength": "constraint",
+          "source": "p.169 / text",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0a378e8b10cd",
+          "slot": "requirements",
+          "text": "Show on Map (Show on Map): Select to display the location menu pop-up on the map screen. (→P.160).",
+          "source_text": "Show on Map (Show on Map): Select to display the location menu pop-up on the map screen. (→P.160)",
+          "strength": "capability",
+          "source": "p.169 / bullet",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2514ea6ad540",
+          "slot": "requirements",
+          "text": "Add Crossroad (Add Crossroad): Select to select an intersecting road and further refine the results.",
+          "source_text": "Add Crossroad (Add Crossroad): Select to select an intersecting road and further refine the results.",
+          "strength": "capability",
+          "source": "p.169 / bullet",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "49783407f4d7",
+          "slot": "requirements",
+          "text": "Go (Go ): Select to search for a route to the selected destination. (→P.172).",
+          "source_text": "Go (Go ): Select to search for a route to the selected destination. (→P.172)",
+          "strength": "capability",
+          "source": "p.169 / bullet",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f011ca6ac8de",
+          "slot": "requirements",
+          "text": "The desired point can be registered as home, work, or favorite. The registered points can be set as a destination. Registered points can be added, changed and deleted on the.",
+          "source_text": "The desired point can be registered as home, work, or favorite. The registered points can be set as a destination. Registered points can be added, changed and deleted on the",
+          "strength": "capability",
+          "source": "p.169 / text",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "195a9dc4dfc1",
+          "page": 166,
+          "rect": [
+            128.1574097,
+            158.24375609999998,
+            264.2614289,
+            306.34776
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Enter keyword(s) to search for a destination.",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "499f2920c604",
+          "page": 167,
+          "rect": [
+            412.1864319,
+            167.43868709999998,
+            548.2904511,
+            315.0627258
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to narrow down the list by POI category.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "d430a9e07e0c",
+      "chapter_number": "11",
+      "title": "Favorites Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Favorites Screen",
+      "pages": [
+        169,
+        170,
+        171
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Display the map screen. (→P.158)",
+          "sequence": 1,
+          "source": "p.169 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select (Menu). Menu",
+          "sequence": 2,
+          "source": "p.169 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ Favorites (Favorites)",
+          "sequence": 3,
+          "source": "p.169 / step"
+        },
+        {
+          "number": 1,
+          "text": "Select (Add Home)/ (Add).",
+          "sequence": 4,
+          "source": "p.171 / step"
+        },
+        {
+          "number": 2,
+          "text": "Perform any of the following to display a point you wish to register:",
+          "sequence": 5,
+          "source": "p.171 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ / /",
+          "sequence": 6,
+          "source": "p.171 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "29131d0af97f",
+          "slot": "overview",
+          "text": "The favorites screen can be accessed with the following method:.",
+          "source_text": "The favorites screen can be accessed with the following method:",
+          "strength": "capability",
+          "source": "p.169 / text",
+          "page_citation": "BASIC OPERATION Some candidate destinations are displayed based on the FAVORITES SCREEN",
+          "next_step_text": "1. Display the map screen. (→P.158)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f1a16053cc3f",
+          "slot": "overview",
+          "text": "(Add Home): Select to register the home. (→P.171) Home (Home): Select to display the location menu pop-up for the point registered as home on the map screen. (→P. 160).",
+          "source_text": "(Add Home): Select to register the home. (→P.171) Home (Home): Select to display the location menu pop-up for the point registered as home on the map screen. (→P. 160)",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d3cd8c97aabf",
+          "slot": "overview",
+          "text": "(Add Work): Select to register the work. (→P.171) Work (Work): Select to display the location menu pop-up for the point registered as work on the map screen. (→P. 160).",
+          "source_text": "(Add Work): Select to register the work. (→P.171) Work (Work): Select to display the location menu pop-up for the point registered as work on the map screen. (→P. 160)",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "81729f1927ce",
+          "slot": "overview",
+          "text": "Select to display the recent destination screen. Recent destinations: Select a recent destination to display the location menu pop-up for that point on the map screen. (→P. 160) Edit List (Edit List): Select to display the edit list screen to delete the recent destinations. (→P.172).",
+          "source_text": "Select to display the recent destination screen. Recent destinations: Select a recent destination to display the location menu pop-up for that point on the map screen. (→P. 160) Edit List (Edit List): Select to display the edit list screen to delete the recent destinations. (→P.172)",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "47811338e91e",
+          "slot": "overview",
+          "text": "Select to display information of the current location.",
+          "source_text": "Select to display information of the current location.",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1453ff311ef6",
+          "slot": "overview",
+          "text": "Select a favorite to display the location menu pop-up for that point on the map screen. (→P. 160).",
+          "source_text": "Select a favorite to display the location menu pop-up for that point on the map screen. (→P. 160)",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dd628a10c9ea",
+          "slot": "overview",
+          "text": "Select to display the edit list screen to delete the Edit List favorites. (→P.172) (Edit List).",
+          "source_text": "Select to display the edit list screen to delete the Edit List favorites. (→P.172) (Edit List)",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8f3c8d66393d",
+          "slot": "overview",
+          "text": "Select to register the favorite. (→P.171) (Add).",
+          "source_text": "Select to register the favorite. (→P.171) (Add)",
+          "strength": "capability",
+          "source": "p.170 / text",
+          "page_citation": "BASIC OPERATION",
+          "next_step_text": "1. Select (Add Home)/ (Add).",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b397f3867b1c",
+          "slot": "requirements",
+          "text": "Select and select the desired point from the destination history.",
+          "source_text": "Select and select the desired point from the destination history.",
+          "strength": "capability",
+          "source": "p.171 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dfcded161318",
+          "slot": "requirements",
+          "text": "Select Set from map (Set from map) and select the desired point on the map.",
+          "source_text": "Select Set from map (Set from map) and select the desired point on the map.",
+          "strength": "capability",
+          "source": "p.171 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "77f1b66cb5ec",
+          "slot": "requirements",
+          "text": "Enter keyword(s) in the keyword entry section and select the desired point from the candidates list.",
+          "source_text": "Enter keyword(s) in the keyword entry section and select the desired point from the candidates list.",
+          "strength": "capability",
+          "source": "p.171 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f4a949e23f7e",
+          "slot": "requirements",
+          "text": "(Add Work)/.",
+          "source_text": "(Add Work)/",
+          "strength": "capability",
+          "source": "p.171 / text",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": "3. → / /",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "58a690ec5418",
+          "slot": "requirements",
+          "text": "To register a favorite, enter a name.",
+          "source_text": "To register a favorite, enter a name.",
+          "strength": "capability",
+          "source": "p.171 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "381dba615c7a",
+          "slot": "requirements",
+          "text": "Icons will be displayed on the map to indicate registered points.",
+          "source_text": "Icons will be displayed on the map to indicate registered points.",
+          "strength": "capability",
+          "source": "p.171 / bullet",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "86c76b3f45ce",
+          "page": 168,
+          "rect": [
+            401.0934753,
+            217.6071442,
+            537.1734771,
+            365.2071503
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Menu",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "75c06824dd61",
+          "page": 170,
+          "rect": [
+            401.0934143,
+            80.88233640000004,
+            537.1734160999999,
+            253.14234620000002
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "(Add Work)/",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "87e88702083a",
+      "chapter_number": "12",
+      "title": "Edit List Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Edit List Screen",
+      "pages": [
+        172
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "4573e25ecc59",
+          "slot": "overview",
+          "text": "Unnecessary items can be deleted on the edit list screen.",
+          "source_text": "Unnecessary items can be deleted on the edit list screen.",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1a74c231a9f5",
+          "slot": "overview",
+          "text": "Select for the item you wish to delete.",
+          "source_text": "Select for the item you wish to delete.",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8190a164a05b",
+          "slot": "overview",
+          "text": "Select to skip to the next or previous page.",
+          "source_text": "Select to skip to the next or previous page.",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fb3fbb508208",
+          "slot": "overview",
+          "text": "Select to delete selected item(s).",
+          "source_text": "Select to delete selected item(s).",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6affae769a59",
+          "slot": "overview",
+          "text": "Select to select all items. Select again to deselect all items.",
+          "source_text": "Select to select all items. Select again to deselect all items.",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "5ded6dbf7bfd",
+          "page": 171,
+          "rect": [
+            148.4919891,
+            116.5777405,
+            284.7159729,
+            264.3217743
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select for the item you wish to delete.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "1387f7a81882",
+      "chapter_number": "13",
+      "title": "Route Calculation Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Route Calculation Screen",
+      "pages": [
+        172,
+        173
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "afbd9e3726e3",
+          "slot": "overview",
+          "text": "Up to 3 candidate routes searched are displayed according to conditions preset by the user.",
+          "source_text": "Up to 3 candidate routes searched are displayed according to conditions preset by the user.",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4a9f6bfe95e6",
+          "slot": "overview",
+          "text": "Candidate route overview.",
+          "source_text": "Candidate route overview",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ac7218ecc959",
+          "slot": "overview",
+          "text": "Route search conditions A route search condition ( “Fastest Route”, “Shortest Route”, or “Most Eco-friendly Route”) can be pre-set on the navigation settings screen. (→P.181).",
+          "source_text": "Route search conditions A route search condition ( “Fastest Route”, “Shortest Route”, or “Most Eco-friendly Route”) can be pre-set on the navigation settings screen. (→P.181)",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7c981c2d793f",
+          "slot": "overview",
+          "text": "Select to cancel route confirmation.",
+          "source_text": "Select to cancel route confirmation.",
+          "strength": "capability",
+          "source": "p.172 / text",
+          "page_citation": "BASIC OPERATION ROUTE CALCULATION EDIT LIST SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8f6c4df40bed",
+          "slot": "overview",
+          "text": "Displays estimated time of arrival and remaining distance of each candidate route displayed. Select Go (Go) to start route guidance.",
+          "source_text": "Displays estimated time of arrival and remaining distance of each candidate route displayed. Select Go (Go) to start route guidance.",
+          "strength": "capability",
+          "source": "p.173 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7808ee01e4fe",
+          "slot": "overview",
+          "text": "If traffic jam is detected on the route, expected delay time will also be displayed. *.",
+          "source_text": "If traffic jam is detected on the route, expected delay time will also be displayed. *",
+          "strength": "capability",
+          "source": "p.173 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1b693054f613",
+          "slot": "overview",
+          "text": "*: Use of this function may not be possible depending on country and vehicle.",
+          "source_text": "*: Use of this function may not be possible depending on country and vehicle.",
+          "strength": "capability",
+          "source": "p.173 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0679df5d5ec9",
+          "slot": "overview",
+          "text": "l Be sure to obey traffic regulations and keep road conditions in mind while driving. If a traffic sign on the road has been changed, the route guidance may not indicate such changed information.",
+          "source_text": "l Be sure to obey traffic regulations and keep road conditions in mind while driving. If a traffic sign on the road has been changed, the route guidance may not indicate such changed information.",
+          "strength": "constraint",
+          "source": "p.173 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4409a26a9044",
+          "slot": "overview",
+          "text": "NOTE l The route for returning may not be the same as that for going. l The route guidance to the destination may not be the shortest route or a route without traffic congestion. l Route guidance may not be available if there is no road data for the specified location. l If a destination that is not located on a road is set, the vehicle will be guided to the point on a road nearest to the destination. The road nearest to the selected point is set as the destination.",
+          "source_text": "NOTE l The route for returning may not be the same as that for going. l The route guidance to the destination may not be the shortest route or a route without traffic congestion. l Route guidance may not be available if there is no road data for the specified location. l If a destination that is not located on a road is set, the vehicle will be guided to the point on a road nearest to the destination. The road nearest to the selected point is set as the destination.",
+          "strength": "constraint",
+          "source": "p.173 / text",
+          "page_citation": "BASIC OPERATION Candidate routes (max. 3 routes)",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "92ebecde91d0",
+          "page": 171,
+          "rect": [
+            410.8024597,
+            150.3111541,
+            546.9065094,
+            296.61518550000005
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Candidate route overview",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "0e54f7635911",
+      "chapter_number": "14",
+      "title": "Route Guidance Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Route Guidance Screen",
+      "pages": [
+        174,
+        175,
+        176
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "d8aa453e64d1",
+          "slot": "overview",
+          "text": "During route guidance, various types of guidance screens can be displayed depending on conditions.",
+          "source_text": "During route guidance, various types of guidance screens can be displayed depending on conditions.",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f7e2f75d267a",
+          "slot": "overview",
+          "text": "Select to stopping route guidance.",
+          "source_text": "Select to stopping route guidance.",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ce5f85b9c6fe",
+          "slot": "overview",
+          "text": "Select to enable/disable voice guidance. (→P.158).",
+          "source_text": "Select to enable/disable voice guidance. (→P.158)",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "29e819d8fb59",
+          "slot": "overview",
+          "text": "Guidance route To display the current route screen, select the guidance route then and Manage Route (Manage Route). (→P.177).",
+          "source_text": "Guidance route To display the current route screen, select the guidance route then and Manage Route (Manage Route). (→P.177)",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7358620d55bc",
+          "slot": "overview",
+          "text": "Current position.",
+          "source_text": "Current position",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "84669d5bfcad",
+          "slot": "overview",
+          "text": "Guidance display after next.",
+          "source_text": "Guidance display after next",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "661138c25687",
+          "slot": "overview",
+          "text": "Next guidance display Displays the next street name, distance to the next turn, and an arrow indicating the turning direction. Select to display the route event list screen.",
+          "source_text": "Next guidance display Displays the next street name, distance to the next turn, and an arrow indicating the turning direction. Select to display the route event list screen.",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "97913c39b0a3",
+          "slot": "overview",
+          "text": "Estimated time of arrival Select to change the displayed information between a waypoint and the destination.",
+          "source_text": "Estimated time of arrival Select to change the displayed information between a waypoint and the destination.",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "933848194206",
+          "slot": "requirements",
+          "text": "Select and hold to turn display of the route bar on/off.",
+          "source_text": "Select and hold to turn display of the route bar on/off.",
+          "strength": "capability",
+          "source": "p.174 / bullet",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c9d3bfa4c4fc",
+          "slot": "requirements",
+          "text": "If “Auto-Hide Route Bar” on the navigation settings screen is turned on, the route bar will automatically be hidden and will only be displayed when new route information is available.",
+          "source_text": "If “Auto-Hide Route Bar” on the navigation settings screen is turned on, the route bar will automatically be hidden and will only be displayed when new route information is available.",
+          "strength": "constraint",
+          "source": "p.174 / bullet",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "719444d5a31c",
+          "slot": "requirements",
+          "text": "Remaining distance and/or remaining time The displayed details can be changed on the navigation settings screen. (→P.181).",
+          "source_text": "Remaining distance and/or remaining time The displayed details can be changed on the navigation settings screen. (→P.181)",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "54d4f44fc688",
+          "slot": "requirements",
+          "text": "Displays the amount of travel time to be changed due to the traffic information received. *.",
+          "source_text": "Displays the amount of travel time to be changed due to the traffic information received. *",
+          "strength": "capability",
+          "source": "p.174 / text",
+          "page_citation": "ROUTE GUIDANCE ROUTE GUIDANCE",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "90729029b19d",
+          "slot": "requirements",
+          "text": "Select to display the traffic information pop-up. Avoid (Avoid): Select to avoid a section of the current route based on traffic information. * More Information (More Information): Select to display detailed information for the selected traffic information.",
+          "source_text": "Select to display the traffic information pop-up. Avoid (Avoid): Select to avoid a section of the current route based on traffic information. * More Information (More Information): Select to display detailed information for the selected traffic information.",
+          "strength": "capability",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4b2ccde02fa9",
+          "slot": "requirements",
+          "text": "Select to display the waypoint information pop-up. Delete This Stop (Delete This Stop) :Select to delete the selected waypoint from the route.",
+          "source_text": "Select to display the waypoint information pop-up. Delete This Stop (Delete This Stop) :Select to delete the selected waypoint from the route.",
+          "strength": "capability",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bb16c289be89",
+          "slot": "requirements",
+          "text": "Displays a POI on the route. Select a displayed icon to display the location menu pop-up. (→P.160).",
+          "source_text": "Displays a POI on the route. Select a displayed icon to display the location menu pop-up. (→P.160)",
+          "strength": "capability",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dbd95cad652a",
+          "slot": "requirements",
+          "text": "Select to display route option screen. (→P.176).",
+          "source_text": "Select to display route option screen. (→P.176)",
+          "strength": "capability",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a875d05a4087",
+          "slot": "exception",
+          "text": "*: Use of this function may not be possible depending on country and vehicle.",
+          "source_text": "*: Use of this function may not be possible depending on country and vehicle.",
+          "strength": "capability",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4fb4cab518e3",
+          "slot": "requirements",
+          "text": "NOTE l During route guidance, if the Apple CarPlay/Android Auto maps app is operated for route guidance, the system’s route guidance will be canceled.",
+          "source_text": "NOTE l During route guidance, if the Apple CarPlay/Android Auto maps app is operated for route guidance, the system’s route guidance will be canceled.",
+          "strength": "constraint",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "21610cc2f221",
+          "slot": "requirements",
+          "text": "When approaching an expressway exit or a complicated intersection, the map switches to a 3D display if the necessary information can be displayed. An arrow indicates the lane in which you should drive. Signs are also displayed if the information is available.",
+          "source_text": "When approaching an expressway exit or a complicated intersection, the map switches to a 3D display if the necessary information can be displayed. An arrow indicates the lane in which you should drive. Signs are also displayed if the information is available.",
+          "strength": "constraint",
+          "source": "p.175 / text",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "481a5bdb5127",
+          "slot": "requirements",
+          "text": "This function can be turned on/off on the navigation settings screen. (→P.181).",
+          "source_text": "This function can be turned on/off on the navigation settings screen. (→P.181)",
+          "strength": "capability",
+          "source": "p.175 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Junction screen Traffic information icon",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "280e8e7546d2",
+          "slot": "requirements",
+          "text": "When approaching a turning point, the lane recommendation will be displayed automatically.",
+          "source_text": "When approaching a turning point, the lane recommendation will be displayed automatically.",
+          "strength": "capability",
+          "source": "p.176 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9236a7bd69f8",
+          "slot": "requirements",
+          "text": "NOTE l If the vehicle goes off the guidance route, the route is searched again. l For some areas, the roads have not been completely digitized in our database. For this reason, the route guidance may select a road that should not be traveled on.",
+          "source_text": "NOTE l If the vehicle goes off the guidance route, the route is searched again. l For some areas, the roads have not been completely digitized in our database. For this reason, the route guidance may select a road that should not be traveled on.",
+          "strength": "constraint",
+          "source": "p.176 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e43e4a7cac07",
+          "slot": "requirements",
+          "text": "Select to enable search for a parking place near the destination or a gas station or restaurant along the route.",
+          "source_text": "Select to enable search for a parking place near the destination or a gas station or restaurant along the route.",
+          "strength": "capability",
+          "source": "p.176 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4e11b160ebcf",
+          "slot": "requirements",
+          "text": "Select to display the search screen. (→P.167).",
+          "source_text": "Select to display the search screen. (→P.167)",
+          "strength": "capability",
+          "source": "p.176 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "819e0d7aa95c",
+          "slot": "requirements",
+          "text": "Select to display the change route screen.",
+          "source_text": "Select to display the change route screen.",
+          "strength": "capability",
+          "source": "p.176 / text",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2ee4fb73358f",
+          "slot": "requirements",
+          "text": "Show Alternatives (Show Alternatives): Displays up to 3 candidate routes searched according to conditions preset by the user. (→P.172).",
+          "source_text": "Show Alternatives (Show Alternatives): Displays up to 3 candidate routes searched according to conditions preset by the user. (→P.172)",
+          "strength": "capability",
+          "source": "p.176 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dd493b65e0db",
+          "slot": "requirements",
+          "text": "Avoid Part of Route (Avoid Part of Route): Select to display a list of sections of the current route. (→P.177).",
+          "source_text": "Avoid Part of Route (Avoid Part of Route): Select to display a list of sections of the current route. (→P.177)",
+          "strength": "capability",
+          "source": "p.176 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "12bd4fc47dc0",
+          "slot": "requirements",
+          "text": "Reorder Stops (Reorder Stops): Select to change the order of the currently set destination and waypoints. (→P.177).",
+          "source_text": "Reorder Stops (Reorder Stops): Select to change the order of the currently set destination and waypoints. (→P.177)",
+          "strength": "capability",
+          "source": "p.176 / bullet",
+          "page_citation": "ROUTE GUIDANCE X Lane recommendation screen ROUTE OPTION SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "2a90872ab4be",
+          "page": 173,
+          "rect": [
+            148.8314972,
+            176.03143010000002,
+            285.05551149999997,
+            323.7754639
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Current position",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "ea8712e57aca",
+          "page": 174,
+          "rect": [
+            401.0934143,
+            146.55161750000002,
+            537.1734160999999,
+            293.97163090000004
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Navigation",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "ba31583754f1",
+          "page": 175,
+          "rect": [
+            148.809906,
+            110.5516174,
+            284.8899078,
+            258.1516235
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to enable search for a parking place near the",
+          "image_path": null,
+          "legend_requirements": []
+        },
+        {
+          "figure_id": "17d5b5296322",
+          "page": 175,
+          "rect": [
+            410.8020935,
+            87.87588190000002,
+            546.9061127,
+            235.619931
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to enable search for a parking place near the",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "d508f963e83c",
+      "chapter_number": "15",
+      "title": "Current Route Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Current Route Screen",
+      "pages": [
+        177,
+        178
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Select a guidance route on the route guidance screen.",
+          "sequence": 1,
+          "source": "p.177 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select .",
+          "sequence": 2,
+          "source": "p.177 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ (Manage Route) Manage Route",
+          "sequence": 3,
+          "source": "p.177 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "f5e9c292da44",
+          "slot": "overview",
+          "text": "Select to display the route details confirmation screen.",
+          "source_text": "Select to display the route details confirmation screen.",
+          "strength": "capability",
+          "source": "p.177 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": "1. Select a guidance route on the route guidance screen.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "99379fea9d08",
+          "slot": "overview",
+          "text": "Select to display the navigation settings screen. (→P.181).",
+          "source_text": "Select to display the navigation settings screen. (→P.181)",
+          "strength": "capability",
+          "source": "p.177 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": "1. Select a guidance route on the route guidance screen.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "94cafd5486f4",
+          "slot": "overview",
+          "text": "The current route screen can be displayed using the following method:.",
+          "source_text": "The current route screen can be displayed using the following method:",
+          "strength": "capability",
+          "source": "p.177 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": "1. Select a guidance route on the route guidance screen.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "150389685fcf",
+          "slot": "overview",
+          "text": "Clear Route Select to stop the route guidance. (Clear Route).",
+          "source_text": "Clear Route Select to stop the route guidance. (Clear Route)",
+          "strength": "capability",
+          "source": "p.177 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "70fc509f1784",
+          "slot": "overview",
+          "text": "Select to display the alternate route screen and search for 3 Find Alternative additional routes to the selected (Find Alternative) destination. (→P.172).",
+          "source_text": "Select to display the alternate route screen and search for 3 Find Alternative additional routes to the selected (Find Alternative) destination. (→P.172)",
+          "strength": "capability",
+          "source": "p.177 / text",
+          "page_citation": "ROUTE GUIDANCE CURRENT ROUTE SCREEN",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0fd24e947e7c",
+          "slot": "overview",
+          "text": "route screen and search for 3 Avoid Blocked Road additional routes which avoid the (Avoid Blocked Road) current road. (→P.172).",
+          "source_text": "route screen and search for 3 Avoid Blocked Road additional routes which avoid the (Avoid Blocked Road) current road. (→P.172)",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "df2733afa9b6",
+          "slot": "overview",
+          "text": "Select to display a list of sections of the current route. Select the Avoid Part of Route section you wish to avoid and (Avoid Part of Route) then select to search for a new route.",
+          "source_text": "Select to display a list of sections of the current route. Select the Avoid Part of Route section you wish to avoid and (Avoid Part of Route) then select to search for a new route.",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "67273b35ad4f",
+          "slot": "overview",
+          "text": "Select to change the avoidance criteria for the current route and search for a different route. When avoidance criteria are changed and OK (OK) is selected, Avoid on This Route the route calculation screen will be (Avoid on This Route) displayed. (→P.172) This item can only be selected when the current route has a section which is included in the avoidance criteria.",
+          "source_text": "Select to change the avoidance criteria for the current route and search for a different route. When avoidance criteria are changed and OK (OK) is selected, Avoid on This Route the route calculation screen will be (Avoid on This Route) displayed. (→P.172) This item can only be selected when the current route has a section which is included in the avoidance criteria.",
+          "strength": "constraint",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7c19d375f98e",
+          "slot": "overview",
+          "text": "S e le c t to d is p l a y t h e route details Show Instructions co n fi r m a t io n s c re e n . (Show Instructions).",
+          "source_text": "S e le c t to d is p l a y t h e route details Show Instructions co n fi r m a t io n s c re e n . (Show Instructions)",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ef173b513f12",
+          "slot": "overview",
+          "text": "Select to search for a waypoint on the map or search screen Add Stop to Route (→P.167) and then select (Add Stop to Route) to add it to the current route (→P.172).",
+          "source_text": "Select to search for a waypoint on the map or search screen Add Stop to Route (→P.167) and then select (Add Stop to Route) to add it to the current route (→P.172).",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "189c0a9c0c42",
+          "slot": "overview",
+          "text": "Select to name the current route Add to My Routes and register it to My Routes. (Add to My Routes).",
+          "source_text": "Select to name the current route Add to My Routes and register it to My Routes. (Add to My Routes)",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1e2f45235743",
+          "slot": "overview",
+          "text": "the current route and search for a new route. Change Route Type When route types are changed, (Change Route Type) the route calculation screen will be displayed. (→P.172).",
+          "source_text": "the current route and search for a new route. Change Route Type When route types are changed, (Change Route Type) the route calculation screen will be displayed. (→P.172)",
+          "strength": "constraint",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a2cdad884221",
+          "slot": "overview",
+          "text": "Select to change the order of the currently set destination and waypoints. Select a destination, select or to change its position in Reorder Stops the list, and then select Done (Reorder Stops) (Done) to confirm the change. Edit Stops (Edit Stops): Select to display the edit stops screen. To delete a waypoint, select then Delete (Delete).",
+          "source_text": "Select to change the order of the currently set destination and waypoints. Select a destination, select or to change its position in Reorder Stops the list, and then select Done (Reorder Stops) (Done) to confirm the change. Edit Stops (Edit Stops): Select to display the edit stops screen. To delete a waypoint, select then Delete (Delete).",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1249e247473d",
+          "slot": "overview",
+          "text": "Play Route Preview (Play Route Preview): Select Play Route Preview t o e n t e r route preview mode. (Play Route Preview)/ (→ P .1 7 9 ) Stop Route Preview Stop Route Preview (Stop Route Preview) (Stop Route Preview): Select to exit route preview mode.",
+          "source_text": "Play Route Preview (Play Route Preview): Select Play Route Preview t o e n t e r route preview mode. (Play Route Preview)/ (→ P .1 7 9 ) Stop Route Preview Stop Route Preview (Stop Route Preview) (Stop Route Preview): Select to exit route preview mode.",
+          "strength": "capability",
+          "source": "p.178 / text",
+          "page_citation": "ROUTE GUIDANCE Select to display the alternate Select to change the route type of",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "0f809c0562d0",
+          "page": 176,
+          "rect": [
+            401.0934753,
+            173.1032227,
+            537.1734771,
+            320.5232361
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "(Manage Route)",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "e61003cc8210",
+      "chapter_number": "16",
+      "title": "Standard Map Icon",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Standard Map Icon",
+      "pages": [
+        179
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "ef6cfecea672",
+          "slot": "overview",
+          "text": "A selected route can be previewed. The speed of the preview can be changed.",
+          "source_text": "A selected route can be previewed. The speed of the preview can be changed.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2a32aeda9cd9",
+          "slot": "overview",
+          "text": "Select to change the preview speed to “1X”/“2X”/“4X”.",
+          "source_text": "Select to change the preview speed to “1X”/“2X”/“4X”.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "a99aadffdda0",
+          "slot": "overview",
+          "text": "Select to temporarily stop the preview.",
+          "source_text": "Select to temporarily stop the preview.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "665da4826047",
+          "slot": "overview",
+          "text": "The following table shows the most frequently displayed route events.",
+          "source_text": "The following table shows the most frequently displayed route events.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "01e90fd795ad",
+          "slot": "overview",
+          "text": "Turn left/right.",
+          "source_text": "Turn left/right",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f86efa55eda1",
+          "slot": "overview",
+          "text": "Keep left/right at the fork in the road.",
+          "source_text": "Keep left/right at the fork in the road.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "f42167da1247",
+          "slot": "overview",
+          "text": "Turn left/right & sharp curve.",
+          "source_text": "Turn left/right & sharp curve.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b6fd7b25ebf1",
+          "slot": "overview",
+          "text": "Stay in the left/right lane.",
+          "source_text": "Stay in the left/right lane.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7051e330faec",
+          "slot": "overview",
+          "text": "Go straight ahead at the intersection.",
+          "source_text": "Go straight ahead at the intersection.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4b848126133b",
+          "slot": "overview",
+          "text": "Exit the junction.",
+          "source_text": "Exit the junction",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1a728c7653e3",
+          "slot": "overview",
+          "text": "Roundabout.",
+          "source_text": "Roundabout",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "97e4bcf814d4",
+          "slot": "overview",
+          "text": "You have arrived at your destination.",
+          "source_text": "You have arrived at your destination.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d8cb32766969",
+          "slot": "overview",
+          "text": "You have arrived at your waypoint.",
+          "source_text": "You have arrived at your waypoint.",
+          "strength": "capability",
+          "source": "p.179 / text",
+          "page_citation": "ROUTE GUIDANCE PREVIEWING THE ROUTE STANDARD MAP ICON",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "e4bfcfa9bef5",
+          "page": 178,
+          "rect": [
+            129.3714905,
+            120.3201416,
+            265.47554019999995,
+            267.94418029999997
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Select to change the preview speed to “1X”/“2X”/“4X”.",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "16d5a7b4e2ce",
+      "chapter_number": "17",
+      "title": "Typical Voice Guidance Prompts",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Typical Voice Guidance Prompts",
+      "pages": [
+        180
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "f52cad88feaa",
+          "slot": "overview",
+          "text": "Toll road.",
+          "source_text": "Toll road",
+          "strength": "capability",
+          "source": "p.180 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1319a59ca2f4",
+          "slot": "overview",
+          "text": "Ferry trip.",
+          "source_text": "Ferry trip",
+          "strength": "capability",
+          "source": "p.180 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "1298a092b816",
+          "slot": "overview",
+          "text": "As the vehicle approaches an intersection, or point, where maneuvering the vehicle is necessary, the system’s voice guidance will provide various messages.",
+          "source_text": "As the vehicle approaches an intersection, or point, where maneuvering the vehicle is necessary, the system’s voice guidance will provide various messages.",
+          "strength": "capability",
+          "source": "p.180 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "853487377aad",
+          "slot": "overview",
+          "text": "l Be sure to obey the traffic regulations and keep the road condition in mind, especially when driving on IPD roads (roads that are not completely included in the map database). The route guidance may not have the most up-to-date information, such as the direction of a one way street.",
+          "source_text": "l Be sure to obey the traffic regulations and keep the road condition in mind, especially when driving on IPD roads (roads that are not completely included in the map database). The route guidance may not have the most up-to-date information, such as the direction of a one way street.",
+          "strength": "constraint",
+          "source": "p.180 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7a6e4c36c698",
+          "slot": "overview",
+          "text": "NOTE l To adjust the voice guidance volume: →P.73 l Setting voice guidance: →P.158 l Voice guidance may be made early or late. l If the system cannot determine the current position correctly, you may not hear voice guidance or may not see the magnified intersection on the screen.",
+          "source_text": "NOTE l To adjust the voice guidance volume: →P.73 l Setting voice guidance: →P.158 l Voice guidance may be made early or late. l If the system cannot determine the current position correctly, you may not hear voice guidance or may not see the magnified intersection on the screen.",
+          "strength": "constraint",
+          "source": "p.180 / text",
+          "page_citation": "ROUTE GUIDANCE TYPICAL VOICE GUIDANCE PROMPTS",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "f0cf986827e0",
+      "chapter_number": "18",
+      "title": "Navigation Settings",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Navigation Settings",
+      "pages": [
+        181
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Select .",
+          "sequence": 1,
+          "source": "p.181 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select (Settings). Settings",
+          "sequence": 2,
+          "source": "p.181 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ (Navigation)",
+          "sequence": 3,
+          "source": "p.181 / step"
+        },
+        {
+          "number": 4,
+          "text": "Select the desired item to be set.",
+          "sequence": 4,
+          "source": "p.181 / step"
+        }
+      ],
+      "requirements": [],
+      "figures": []
+    },
+    {
+      "function_id": "04968bfa3b27",
+      "chapter_number": "19",
+      "title": "Navigation Settings Screen",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Navigation Settings Screen",
+      "pages": [
+        181,
+        182
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "0c6d80a0a4b6",
+          "slot": "overview",
+          "text": "POI Icons on Map” is turned on and up to 5 POI icon types have been selected.",
+          "source_text": "POI Icons on Map” is turned on and up to 5 POI icon types have been selected.",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "644533034ad5",
+          "slot": "overview",
+          "text": "Select to turn the display for parking lots, gas stations and rest areas on/off for the route being traveled during route guidance.",
+          "source_text": "Select to turn the display for parking lots, gas stations and rest areas on/off for the route being traveled during route guidance.",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2ec43e332caa",
+          "slot": "overview",
+          "text": "Select to set the displays for the estimated remaining distance and estimated remaining time to the destination. (→P.174).",
+          "source_text": "Select to set the displays for the estimated remaining distance and estimated remaining time to the destination. (→P.174)",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ef5c95b3f033",
+          "slot": "overview",
+          "text": "Select to turn the freeway exit preview on/off.",
+          "source_text": "Select to turn the freeway exit preview on/off.",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3bce777f2d88",
+          "slot": "overview",
+          "text": "Select to set whether to automatically enlarge the map when approaching intersections or turning points during route guidance.",
+          "source_text": "Select to set whether to automatically enlarge the map when approaching intersections or turning points during route guidance.",
+          "strength": "constraint",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6fd3753cd185",
+          "slot": "overview",
+          "text": "Select to turn the route bar auto-hide function on/off. (→P.174).",
+          "source_text": "Select to turn the route bar auto-hide function on/off. (→P.174)",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "85f6a33dc89f",
+          "slot": "overview",
+          "text": "Select to change the preferred route type when searching for a new route.",
+          "source_text": "Select to change the preferred route type when searching for a new route.",
+          "strength": "constraint",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "90955f39f249",
+          "slot": "overview",
+          "text": "Select to set avoidance criteria for the route calculation.",
+          "source_text": "Select to set avoidance criteria for the route calculation.",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "655de068e51f",
+          "slot": "overview",
+          "text": "Select to turn the traffic alert sound on/off.",
+          "source_text": "Select to turn the traffic alert sound on/off.",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7227c7c828ec",
+          "slot": "overview",
+          "text": "During a route guidance: Select to display route option screen. (→P.176) Not during a route guidance: Select to display the main menu screen. (→P.165).",
+          "source_text": "During a route guidance: Select to display route option screen. (→P.176) Not during a route guidance: Select to display the main menu screen. (→P.165)",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3484c0fe5da0",
+          "slot": "overview",
+          "text": "Select to set the updating of map data. (→P.185).",
+          "source_text": "Select to set the updating of map data. (→P.185)",
+          "strength": "capability",
+          "source": "p.182 / text",
+          "page_citation": "SETUP POI icons can be displayed on the map screen when “Show",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "4a5cbead9b58",
+          "page": 180,
+          "rect": [
+            401.0813293,
+            120.71613770000005,
+            537.185379,
+            352.34016110000005
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "Navigation",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "dc91ee6d82a1",
+      "chapter_number": "20",
+      "title": "GPS (Global Positioning System)",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / GPS (Global Positioning System)",
+      "pages": [
+        183
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "bc8ddb35bd1e",
+          "slot": "overview",
+          "text": "REGARDING ERRORS IN CURRENT POSITION DISPLAY.",
+          "source_text": "REGARDING ERRORS IN CURRENT POSITION DISPLAY",
+          "strength": "capability",
+          "source": "p.183 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dc607c0a34e4",
+          "slot": "overview",
+          "text": "The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors.",
+          "source_text": "The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors.",
+          "strength": "constraint",
+          "source": "p.183 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "8f19b45109a8",
+      "chapter_number": "21",
+      "title": "Limitations Of The Navigation System",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Limitations Of The Navigation System",
+      "pages": [
+        183,
+        184
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "dd157f511222",
+          "slot": "overview",
+          "text": "This navigation system calculates the current position using satellite signals, various vehicle signals, map data, etc. However, an accurate position may not be shown depending on satellite conditions, road configuration, vehicle condition or other circumstances.",
+          "source_text": "This navigation system calculates the current position using satellite signals, various vehicle signals, map data, etc. However, an accurate position may not be shown depending on satellite conditions, road configuration, vehicle condition or other circumstances.",
+          "strength": "capability",
+          "source": "p.183 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "830b9a8f7e29",
+          "slot": "overview",
+          "text": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
+          "source_text": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
+          "strength": "constraint",
+          "source": "p.183 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "e03e56c1e2b2",
+              "matching_text": "a few seconds",
+              "kind": "duration",
+              "unit": "seconds",
+              "context": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            },
+            {
+              "threshold_id": "b167d845a21e",
+              "matching_text": "a certain level of inaccuracy",
+              "kind": "quantity",
+              "unit": "as stated",
+              "context": "The Global Positioning System (GPS) developed and operated by the U.S. Department of Defense provides an accurate current position, normally using 4 or more satellites, and in some case 3 satellites. The GPS system has a certain level of inaccuracy. While the navigation system compensates for this most of the time, occasional positioning errors of up to 300 feet (100 m) can and should be expected. Generally, position errors will be corrected within a few seconds. The GPS signal may be physically obstructed, leading to inaccurate vehicle position on the map screen. Tunnels, tall buildings, trucks, or even the placement of objects on the instrument panel may obstruct the GPS signals. The GPS satellites may not send signals due to repairs or improvements being made to them. Even when the navigation system is receiving clear GPS signals, the vehicle position may not be shown accurately or inappropriate route guidance may occur in some cases.",
+              "value": "100 m",
+              "status": "from_manual",
+              "evidence": "Stated in the OM: \"100 m\"",
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "30845425e8e7",
+          "slot": "overview",
+          "text": "l The installation of window tinting may obstruct the GPS signals. Most window tinting contains some metallic content that will interfere with GPS signal reception of the antenna in the instrument panel. We advise against the use of window tinting on vehicles equipped with navigation systems.",
+          "source_text": "l The installation of window tinting may obstruct the GPS signals. Most window tinting contains some metallic content that will interfere with GPS signal reception of the antenna in the instrument panel. We advise against the use of window tinting on vehicles equipped with navigation systems.",
+          "strength": "capability",
+          "source": "p.183 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "82def954a04d",
+          "slot": "overview",
+          "text": "following cases:.",
+          "source_text": "following cases:",
+          "strength": "capability",
+          "source": "p.184 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "529c7dfc14b5",
+          "slot": "requirements",
+          "text": "When driving on a small angled Y-shaped road.",
+          "source_text": "When driving on a small angled Y-shaped road.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "c09755eef79a",
+          "slot": "requirements",
+          "text": "When driving on a winding road.",
+          "source_text": "When driving on a winding road.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "01e145216a58",
+          "slot": "requirements",
+          "text": "When driving on a slippery road such as in sand, gravel, snow, etc.",
+          "source_text": "When driving on a slippery road such as in sand, gravel, snow, etc.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4974fed322f5",
+          "slot": "requirements",
+          "text": "When driving on a long straight road.",
+          "source_text": "When driving on a long straight road.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d8bafb6937f7",
+          "slot": "requirements",
+          "text": "When freeway and surface streets run in parallel.",
+          "source_text": "When freeway and surface streets run in parallel.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "772c7eb4189c",
+          "slot": "requirements",
+          "text": "After moving by ferry or vehicle carrier.",
+          "source_text": "After moving by ferry or vehicle carrier.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "91e6946da33e",
+          "slot": "requirements",
+          "text": "When a long route is searched during high speed driving.",
+          "source_text": "When a long route is searched during high speed driving.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "c47b6a43fde3",
+              "matching_text": "high speed",
+              "kind": "speed",
+              "unit": "speed",
+              "context": "When a long route is searched during high speed driving.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d038a16a4416",
+          "slot": "requirements",
+          "text": "After repeating a change of direction by going forward and backward, or turning on a turntable in a parking lot.",
+          "source_text": "After repeating a change of direction by going forward and backward, or turning on a turntable in a parking lot.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "049c891a7086",
+          "slot": "requirements",
+          "text": "When leaving a covered parking lot or parking garage.",
+          "source_text": "When leaving a covered parking lot or parking garage.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "91bd2e685798",
+          "slot": "requirements",
+          "text": "When a roof carrier is installed.",
+          "source_text": "When a roof carrier is installed.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "83de124b558d",
+          "slot": "requirements",
+          "text": "When driving with tire chains installed.",
+          "source_text": "When driving with tire chains installed.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4eff7f23018d",
+          "slot": "requirements",
+          "text": "When the tires are worn.",
+          "source_text": "When the tires are worn.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e528c63cc31d",
+          "slot": "requirements",
+          "text": "After replacing a tire or tires.",
+          "source_text": "After replacing a tire or tires.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "40134293716b",
+          "slot": "requirements",
+          "text": "When using tires that are smaller or larger than the factory specifications.",
+          "source_text": "When using tires that are smaller or larger than the factory specifications.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "35acc7727c0d",
+          "slot": "requirements",
+          "text": "When the tire pressure in any of the 4 tires is not correct.",
+          "source_text": "When the tire pressure in any of the 4 tires is not correct.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9c016920ec65",
+          "slot": "requirements",
+          "text": "When turning at an intersection off the designated route guidance.",
+          "source_text": "When turning at an intersection off the designated route guidance.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2ee00b4fab13",
+          "slot": "requirements",
+          "text": "If you set more than 1 destination but skip any of them, auto reroute will display a route returning to the destination on the previous route.",
+          "source_text": "If you set more than 1 destination but skip any of them, auto reroute will display a route returning to the destination on the previous route.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9677f03a33a2",
+          "slot": "requirements",
+          "text": "When turning at an intersection for which there is no route guidance.",
+          "source_text": "When turning at an intersection for which there is no route guidance.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b02e12259e4f",
+          "slot": "requirements",
+          "text": "When passing through an intersection for which there is no route guidance.",
+          "source_text": "When passing through an intersection for which there is no route guidance.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "2d82ab0266cf",
+          "slot": "exception",
+          "text": "During auto reroute, the route guidance may not be available for the next turn to the right or left.",
+          "source_text": "During auto reroute, the route guidance may not be available for the next turn to the right or left.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "66768965115f",
+          "slot": "requirements",
+          "text": "During high speed driving, it may take a long time for auto reroute to operate. In auto reroute, a detour route may be shown.",
+          "source_text": "During high speed driving, it may take a long time for auto reroute to operate. In auto reroute, a detour route may be shown.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "bbc39c5e172d",
+              "matching_text": "high speed",
+              "kind": "speed",
+              "unit": "speed",
+              "context": "During high speed driving, it may take a long time for auto reroute to operate. In auto reroute, a detour route may be shown.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b470ec498448",
+          "slot": "exception",
+          "text": "After auto reroute, the route may not be changed.",
+          "source_text": "After auto reroute, the route may not be changed.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "707341c11ecb",
+          "slot": "requirements",
+          "text": "If an unnecessary U-turn is shown or announced.",
+          "source_text": "If an unnecessary U-turn is shown or announced.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0e59043cd11f",
+          "slot": "requirements",
+          "text": "If a location has multiple names and the system announces 1 or more of them.",
+          "source_text": "If a location has multiple names and the system announces 1 or more of them.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "94e821bb70e6",
+          "slot": "exception",
+          "text": "When a route cannot be searched.",
+          "source_text": "When a route cannot be searched.",
+          "strength": "constraint",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ffad8ee7c6f1",
+          "slot": "exception",
+          "text": "If the route to your destination includes gravel, unpaved roads or alleys, the route guidance may not be shown.",
+          "source_text": "If the route to your destination includes gravel, unpaved roads or alleys, the route guidance may not be shown.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "5fb53a640138",
+          "slot": "requirements",
+          "text": "Your destination point might be shown on the opposite side of the street.",
+          "source_text": "Your destination point might be shown on the opposite side of the street.",
+          "strength": "capability",
+          "source": "p.184 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM ● Accurate current position may not be shown in the ● Inappropriate route guidance may occur in the following",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "9457398cc3f7",
+      "chapter_number": "22",
+      "title": "Map Data",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Map Data",
+      "pages": [
+        185
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "bc82f2ca648d",
+          "slot": "overview",
+          "text": "prohibiting the entry of the vehicle that vary by time or season or other reasons.",
+          "source_text": "prohibiting the entry of the vehicle that vary by time or season or other reasons.",
+          "strength": "capability",
+          "source": "p.185 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3b71089fabe4",
+          "slot": "exception",
+          "text": "The road and map data stored in the navigation system may not be complete or may not be the latest version.",
+          "source_text": "The road and map data stored in the navigation system may not be complete or may not be the latest version.",
+          "strength": "capability",
+          "source": "p.185 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dbf0b4afd6a1",
+          "slot": "requirements",
+          "text": "NOTE l This navigation system uses tire turning data and is designed to work with factory-specified tires for the vehicle. Installing tires that are larger or smaller than the originally equipped diameter may cause inaccurate display of the current position. The tire pressure also affects the diameter of the tires, so make sure that the tire pressure of all 4 tires is correct.",
+          "source_text": "NOTE l This navigation system uses tire turning data and is designed to work with factory-specified tires for the vehicle. Installing tires that are larger or smaller than the originally equipped diameter may cause inaccurate display of the current position. The tire pressure also affects the diameter of the tires, so make sure that the tire pressure of all 4 tires is correct.",
+          "strength": "capability",
+          "source": "p.185 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "aca7076c4b16",
+      "chapter_number": "23",
+      "title": "Regarding Roads And Place Name Data",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Regarding Roads And Place Name Data",
+      "pages": [
+        185
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "476b171cac45",
+          "slot": "overview",
+          "text": "When maps are created, land surveys are conducted and information on road improvements and reopening is collected to provide the most accurate information possible. However, modifications to roads, place names and facilities may be carried out at any time. Consequently, we cannot guarantee that map data contains no errors in road positions, configuration and names, or in facility names.",
+          "source_text": "When maps are created, land surveys are conducted and information on road improvements and reopening is collected to provide the most accurate information possible. However, modifications to roads, place names and facilities may be carried out at any time. Consequently, we cannot guarantee that map data contains no errors in road positions, configuration and names, or in facility names.",
+          "strength": "constraint",
+          "source": "p.185 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "ae140e615516",
+      "chapter_number": "24",
+      "title": "SUBARU Map Update",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / SUBARU Map Update",
+      "pages": [
+        185,
+        186
+      ],
+      "procedure": [],
+      "requirements": [
+        {
+          "req_id": "ba0964dc49b2",
+          "slot": "overview",
+          "text": "Map data can be updated using the following methods:.",
+          "source_text": "Map data can be updated using the following methods:",
+          "strength": "capability",
+          "source": "p.185 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7b0f59249b41",
+          "slot": "requirements",
+          "text": "USB memory: All map data can be updated at once. →P.186.",
+          "source_text": "USB memory: All map data can be updated at once. →P.186",
+          "strength": "capability",
+          "source": "p.185 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7fcde0e5b1ca",
+          "slot": "requirements",
+          "text": "Wi-Fi®: Individual regions can be selected and their map data updated.* →P.187, 188 *: Up to 8 regions can be selected for the automatic update function.",
+          "source_text": "Wi-Fi®: Individual regions can be selected and their map data updated.* →P.187, 188 *: Up to 8 regions can be selected for the automatic update function.",
+          "strength": "capability",
+          "source": "p.185 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM • When a portion of the route has regulations MAP DATA",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dfefaa94d25a",
+          "slot": "exception",
+          "text": "l Map update using Wi-Fi® may not be available in some countries. l For the best possible navigation experience, regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may result in inaccurate map information during interstate travel. Updates made using a USB memory device will update map information for all states. Please visit Subaru.com for more information and the latest updates. l If the map update fails or cannot be performed when using Wi-Fi®, check the communication status of the connected device. If there is a problem with communication, perform the procedure again using a different Wi-Fi® access point. l If the map update procedure fails, refer to the “TROUBLESHOOTING” section. (→P.213) l Subaru may terminate or suspend your access to all or part of these services for any or no reason, including without limitation, any violation of the terms detailed at: https://subaru-maps.com/#/termsofuse.",
+          "source_text": "l Map update using Wi-Fi® may not be available in some countries. l For the best possible navigation experience, regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may result in inaccurate map information during interstate travel. Updates made using a USB memory device will update map information for all states. Please visit Subaru.com for more information and the latest updates. l If the map update fails or cannot be performed when using Wi-Fi®, check the communication status of the connected device. If there is a problem with communication, perform the procedure again using a different Wi-Fi® access point. l If the map update procedure fails, refer to the “TROUBLESHOOTING” section. (→P.213) l Subaru may terminate or suspend your access to all or part of these services for any or no reason, including without limitation, any violation of the terms detailed at: https://subaru-maps.com/#/termsofuse",
+          "strength": "constraint",
+          "source": "p.186 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": null,
+          "thresholds": [
+            {
+              "threshold_id": "4ffd88ecdd16",
+              "matching_text": "nearby",
+              "kind": "distance",
+              "unit": "distance",
+              "context": "l Map update using Wi-Fi® may not be available in some countries. l For the best possible navigation experience, regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may result in inaccurate map information during interstate travel. Updates made using a USB memory device will update map information for all states. Please visit Subaru.com for more information and the latest updates. l If the map update fails or cannot be performed when using Wi-Fi®, check the communication status of the connected device. If there is a problem with communication, perform the procedure again using a different Wi-Fi® access point. l If the map update procedure fails, refer to the “TROUBLESHOOTING” section. (→P.213) l Subaru may terminate or suspend your access to all or part of these services for any or no reason, including without limitation, any violation of the terms detailed at: https://subaru-maps.com/#/termsofuse",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    },
+    {
+      "function_id": "5a5f0a20f2c8",
+      "chapter_number": "25",
+      "title": "Using A USB Memory Device",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Using A USB Memory Device",
+      "pages": [
+        186,
+        187
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Connect to a USB memory device. (→P.45)",
+          "sequence": 1,
+          "source": "p.186 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select (Map Update) on the navigation settings screen. (→P.181)",
+          "sequence": 2,
+          "source": "p.186 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ (USB) USB",
+          "sequence": 3,
+          "source": "p.186 / step"
+        },
+        {
+          "number": 4,
+          "text": "After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
+          "sequence": 4,
+          "source": "p.186 / step"
+        },
+        {
+          "number": 5,
+          "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
+          "sequence": 5,
+          "source": "p.186 / step"
+        },
+        {
+          "number": 6,
+          "text": "After at least 5 minutes have elapsed, start the engine again.",
+          "sequence": 6,
+          "source": "p.186 / step"
+        },
+        {
+          "number": 1,
+          "text": "Connect to a Wi-Fi® network. (→P.69)",
+          "sequence": 7,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select (Map Update) on the navigation settings screen. (→P.181)",
+          "sequence": 8,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 3,
+          "text": "→ (Wi-Fi) Wi-Fi",
+          "sequence": 9,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 4,
+          "text": "Select the regions for which maps are to be updated.",
+          "sequence": 10,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 5,
+          "text": "→ (Update XX MB)",
+          "sequence": 11,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 6,
+          "text": "After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
+          "sequence": 12,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 7,
+          "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
+          "sequence": 13,
+          "source": "p.187 / step"
+        },
+        {
+          "number": 8,
+          "text": "After at least 5 minutes have elapsed, start the engine again.",
+          "sequence": 14,
+          "source": "p.187 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "b1a55ac41e28",
+          "slot": "overview",
+          "text": "Maps can be updated using a USB memory device.",
+          "source_text": "Maps can be updated using a USB memory device.",
+          "strength": "capability",
+          "source": "p.186 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": "1. Connect to a USB memory device. (→P.45)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "d9f7b4bd9450",
+          "slot": "overview",
+          "text": "For details and to download update data, refer to the following URL: https://subaru-maps.com/.",
+          "source_text": "For details and to download update data, refer to the following URL: https://subaru-maps.com/",
+          "strength": "capability",
+          "source": "p.186 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": "1. Connect to a USB memory device. (→P.45)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e297428e17c9",
+          "slot": "requirements",
+          "text": "The new map data will be applied.",
+          "source_text": "The new map data will be applied.",
+          "strength": "capability",
+          "source": "p.186 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
+          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.69)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "65e3eb5421ae",
+          "slot": "requirements",
+          "text": "UPDATING THE MAP DATA MANUALLY USING Wi-Fi®.",
+          "source_text": "UPDATING THE MAP DATA MANUALLY USING Wi-Fi®",
+          "strength": "capability",
+          "source": "p.187 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.69)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "84948cb15ebb",
+          "slot": "requirements",
+          "text": "The map data may also be updated via Wi-Fi® network.",
+          "source_text": "The map data may also be updated via Wi-Fi® network.",
+          "strength": "capability",
+          "source": "p.187 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.69)",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9307e17db4a5",
+          "slot": "requirements",
+          "text": "The update for the selected region will be automatically downloaded and installed.",
+          "source_text": "The update for the selected region will be automatically downloaded and installed.",
+          "strength": "capability",
+          "source": "p.187 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": "6. After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e297428e17c9",
+          "slot": "requirements",
+          "text": "The new map data will be applied.",
+          "source_text": "The new map data will be applied.",
+          "strength": "capability",
+          "source": "p.187 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "f88c3527a8d4",
+          "page": 186,
+          "rect": [
+            131.802063,
+            195.2685669,
+            267.88206479999997,
+            342.868573
+          ],
+          "caption_source": "pdf_image",
+          "caption_text": "(Wi-Fi)",
+          "image_path": null,
+          "legend_requirements": []
+        }
+      ]
+    },
+    {
+      "function_id": "00ab97eb39c3",
+      "chapter_number": "26",
+      "title": "Using Wi-Fi®",
+      "area": "Navigation System (If equipped)",
+      "function_path": "Navigation System (If equipped) / Using Wi-Fi®",
+      "pages": [
+        188
+      ],
+      "procedure": [
+        {
+          "number": 1,
+          "text": "Follow STEPS 1 to 3 in “UPDATING THE MAP DATA MANUALLY USING Wi-Fi®”. (→P.187)",
+          "sequence": 1,
+          "source": "p.188 / step"
+        },
+        {
+          "number": 2,
+          "text": "Select Automatic Update",
+          "sequence": 2,
+          "source": "p.188 / step"
+        },
+        {
+          "number": 3,
+          "text": "Set “Update maps automatically (at most 8 maps can be selected)”.",
+          "sequence": 3,
+          "source": "p.188 / step"
+        },
+        {
+          "number": 4,
+          "text": "Select the regions that you would like to be updated.",
+          "sequence": 4,
+          "source": "p.188 / step"
+        },
+        {
+          "number": 5,
+          "text": "After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
+          "sequence": 5,
+          "source": "p.188 / step"
+        },
+        {
+          "number": 6,
+          "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
+          "sequence": 6,
+          "source": "p.188 / step"
+        },
+        {
+          "number": 7,
+          "text": "After at least 5 minutes have elapsed, start the engine again.",
+          "sequence": 7,
+          "source": "p.188 / step"
+        }
+      ],
+      "requirements": [
+        {
+          "req_id": "1a2bef31b226",
+          "slot": "requirements",
+          "text": "The new map data will be applied.",
+          "source_text": "The new map data will be applied.",
+          "strength": "capability",
+          "source": "p.188 / bullet",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM UPDATING THE MAP DATA AUTOMATICALLY",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "97d404b96fc1",
+          "slot": "requirements",
+          "text": "(Automatic Update).",
+          "source_text": "(Automatic Update).",
+          "strength": "capability",
+          "source": "p.188 / text",
+          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM UPDATING THE MAP DATA AUTOMATICALLY",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        }
+      ],
+      "figures": []
+    }
+  ]
+}

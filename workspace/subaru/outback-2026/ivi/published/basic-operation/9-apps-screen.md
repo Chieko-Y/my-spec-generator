@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=bdff27d3fbee (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=d0183e16e02e (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 9. Apps screen
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Apps screen<br><b>Source:</b> printed page 22, 23<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-bc174f786021.png)
+![figure](../figures/FIG-8a392088d7cb.png)
 - Figure 9-1 source: p.22
 - (Copied from OM) Display the Apple CarPlay screen. (→P.67)
 
@@ -71,24 +71,6 @@ flowchart TD
 | 4 | <span class="req-label">Apps screen</span>When moving shortcut icons 1. | capability | p.23 / text |
 | 5 | <span class="req-label">Step -</span>User can move buttons to another page by dragging them to the corresponding end of the screen if the number of buttons allows for multiple pages. | constraint | p.23 / bullet |
 | 6 | <span class="req-label">Apps screen</span>When deleting shortcut icons. | capability | p.23 / text |
-<!-- GENERATED:END function=bdff27d3fbee -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=d0183e16e02e -->
 
 

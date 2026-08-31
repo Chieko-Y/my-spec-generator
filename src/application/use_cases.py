@@ -9,7 +9,7 @@ import re
 import threading
 from dataclasses import dataclass, field, replace
 
-from domain.figures import caption_for, is_figure_sized, merge_rects
+from domain.figures import caption_for, is_figure_sized, is_qr_code_caption, merge_rects
 from domain.manual_identity import IdentityGuess, guess_identity
 from domain.manual_parsing import (
     ChapterClassification,
@@ -21,6 +21,7 @@ from domain.manual_parsing import (
     build_blocks,
     build_blocks_from_font_headings,
     build_blocks_from_item_index,
+    capture_page_running_head,
     detect_item_index_entries,
     detect_running_head_chapters,
     detect_toc_chapters,
@@ -256,6 +257,12 @@ class UseCases:
         # afterward. See pdf_reader.py::_group_words_into_lines for the real case
         # this fixes (2026-08-27, 2025 Subaru supplement).
         lines, bookmarks = self.manual_reader.read(pdf_path, columns=profile.layout.columns)
+        # Snapshot each page's own printed running-head/footer text (production
+        # filename + page number) before filter_page_furniture (below, per branch)
+        # drops it as noise -- kept only as citation metadata on each requirement
+        # (RequirementItem.page_citation), never fed back into body content. See
+        # domain.manual_parsing.capture_page_running_head.
+        page_running_head = capture_page_running_head(lines, profile.layout.header_boundary_pt)
 
         if profile.layout.section_source == "running_head":
             # A confirmed allowlist (see classify_running_head_chapters /
@@ -405,7 +412,7 @@ class UseCases:
         area_title = blocks.chapter_title or chapter_prefix or ""
         figures_by_section = self._extract_figures(pdf_path, manual_id, profile, blocks.sections, lines)
         functions = build_manual_spec_functions(
-            blocks.sections, profile, manual_id, area_title, figures_by_section
+            blocks.sections, profile, manual_id, area_title, figures_by_section, page_running_head
         )
 
         meta = {
@@ -754,12 +761,14 @@ class UseCases:
                         break
                 if section_idx is None:
                     continue
+                nearest_line = caption_for(rect, page_index, lines)
+                if is_qr_code_caption(nearest_line.text if nearest_line else None):
+                    continue
                 figure_id = content_id(
                     "figure", manual_id, str(page_index), ",".join(f"{v:.1f}" for v in rect)
                 )
                 if not self.figure_renderer.render(pdf_path, manual_id, figure_id, page_index, rect):
                     continue  # rect had no area within the page -- see FigureRenderer's docstring
-                nearest_line = caption_for(rect, page_index, lines)
                 figures_by_section[section_idx].append(
                     FigureRef(
                         figure_id=figure_id,
@@ -835,14 +844,29 @@ class UseCases:
 
     # ------------------------------------------------------------- figure elements
     def add_figure_element(self, manual_id: str, chapter_slug: str, element: FigureElement) -> None:
+        # Keyed on (figure_id, symbol, label), not (figure_id, symbol) alone --
+        # several icons in the same figure can legitimately have no symbol at
+        # all (a diagram with no A/B/1 legend), and keying on symbol alone made
+        # a second unlabeled icon silently overwrite the first one instead of
+        # coexisting. label is the part that actually distinguishes them in
+        # that case (real Subaru example, 2026-08-31: an unlabeled "Map icon"
+        # on the main menu figure).
         elements = self.figure_element_repository.load(manual_id, chapter_slug)
-        elements = [e for e in elements if e.figure_id != element.figure_id or e.symbol != element.symbol]
+        elements = [
+            e
+            for e in elements
+            if not (e.figure_id == element.figure_id and e.symbol == element.symbol and e.label == element.label)
+        ]
         elements.append(element)
         self.figure_element_repository.save(manual_id, chapter_slug, elements)
 
-    def remove_figure_element(self, manual_id: str, chapter_slug: str, figure_id: str, symbol: str) -> None:
+    def remove_figure_element(
+        self, manual_id: str, chapter_slug: str, figure_id: str, symbol: str, label: str
+    ) -> None:
         elements = self.figure_element_repository.load(manual_id, chapter_slug)
-        elements = [e for e in elements if not (e.figure_id == figure_id and e.symbol == symbol)]
+        elements = [
+            e for e in elements if not (e.figure_id == figure_id and e.symbol == symbol and e.label == label)
+        ]
         self.figure_element_repository.save(manual_id, chapter_slug, elements)
 
     def load_figure_elements(self, manual_id: str, chapter_slug: str) -> list[FigureElement]:

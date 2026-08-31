@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=e351d85cb050 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=4144f73a8257 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 2. Starting the navigation system
 
 <div class="fn-meta"><b>Function path:</b> Navigation (if equipped) / Starting the navigation system<br><b>Source:</b> printed page 119<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -8,14 +8,14 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “ ” of the main menu. (→P.19)"]
+    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
     S2["2. On the guidance screen, touch “Permit” or “Don’t Permit”."]
     S1 --> S2
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | Touch “ ” of the main menu. (→P.19) | p.119 / step |
+| 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.119 / step |
 | 2 | 2 | On the guidance screen, touch “Permit” or “Don’t Permit”. | p.119 / step |
 
 ## 2-2-2. Service requirements
@@ -30,31 +30,7 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>When “Don’t Permit” is selected on the guidance screen, functions using the cloud navigation server cannot be used. Functions using the system’s data only are available. | constraint | p.119 / bullet |
-<!-- GENERATED:END function=e351d85cb050 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=4144f73a8257 -->
 
 
 

@@ -1,17 +1,9 @@
-<!-- GENERATED:START function=724ebb112aeb (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=455400d4993f (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 1. About Subaru connected navigation
 
 <div class="fn-meta"><b>Function path:</b> Navigation (if equipped) / About Subaru connected navigation<br><b>Source:</b> printed page 118<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
-
-## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-c99eada8b2c7.png)
-- Figure 1-1 source: p.118
-- (Copied from OM) https://www.mysubaru.com/connect.html
-![figure](../figures/FIG-f9640a92ae1e.png)
-- Figure 1-2 source: p.118
-- (Copied from OM) https://www.mysubaru.ca/connect.html
 
 ## 1-2-1. Service overview
 
@@ -32,31 +24,7 @@
 | 7 | <span class="req-label">About Subaru connected navigation</span>https://www.mysubaru.com/connect.html. | capability | p.118 / text |
 | 8 | <span class="req-label">About Subaru connected navigation</span>https://www.mysubaru.ca/connect.html. | capability | p.118 / text |
 | 9 | <span class="req-label">Step -</span>The voice assistance system that uses the cloud navigation server is included in the subscription to the services using the cloud navigation server. (→P.31). | capability | p.118 / bullet |
-<!-- GENERATED:END function=724ebb112aeb -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=455400d4993f -->
 
 
 

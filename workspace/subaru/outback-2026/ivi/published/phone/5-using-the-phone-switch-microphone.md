@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=ad3e9b72ea79 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=f69afd6c062b (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 5. Using the phone switch/microphone
 
 <div class="fn-meta"><b>Function path:</b> Phone / Using the phone switch/microphone<br><b>Source:</b> printed page 77<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -21,24 +21,4 @@
 | 1 | <span class="req-label">Step -</span>Press the + side to increase the volume. | capability | p.77 / bullet |
 | 2 | <span class="req-label">Step -</span>Press the - side to decrease the volume. | capability | p.77 / bullet |
 | 3 | <span class="req-label">Using the phone switch/microphone</span>Microphone The microphone is used when talking on the phone. | constraint | p.77 / text |
-<!-- GENERATED:END function=ad3e9b72ea79 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=f69afd6c062b -->

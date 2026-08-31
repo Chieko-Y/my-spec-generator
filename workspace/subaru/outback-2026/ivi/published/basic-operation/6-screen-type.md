@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=a8a0da08eaf7 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=066a75385a7e (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 6. Screen type
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Screen type<br><b>Source:</b> printed page 20<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -10,24 +10,6 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Screen type</span>For screen types, there are widget screen, apps screen, and calm screen. | capability | p.20 / text |
-<!-- GENERATED:END function=a8a0da08eaf7 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=066a75385a7e -->
 
 

@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=a161f60cafb3 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=55e6ab7b677a (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 18. Replying to a message (quick reply)
 
 <div class="fn-meta"><b>Function path:</b> Phone / Replying to a message (quick reply)<br><b>Source:</b> printed page 86<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -31,7 +31,7 @@ flowchart TD
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>“ ”: Select to change the message. | capability | p.86 / bullet |
+| 1 | <span class="req-label">Step -</span>“[icon]”: Select to change the message. | capability | p.86 / bullet |
 | 2 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
 | 3 | <span class="req-label">Step -</span>10 messages have already been stored. | capability | p.86 / bullet |
 | 4 | <span class="req-label">Step -</span>Messages can also be edited on the phone settings screen. (→P.45). | capability | p.86 / bullet |
@@ -41,24 +41,4 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the connected Bluetooth phone device, the replying function to a message may not be available. | capability | p.86 / bullet |
-<!-- GENERATED:END function=a161f60cafb3 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=55e6ab7b677a -->

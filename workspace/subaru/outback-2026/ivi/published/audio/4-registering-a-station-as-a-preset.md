@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=6c1a97b9b726 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=0d02ef758518 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 4. Registering a station as a preset
 
 <div class="fn-meta"><b>Function path:</b> Audio / Registering a station as a preset<br><b>Source:</b> printed page 92<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -29,23 +29,5 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>To change the preset station to a different one, follow the same procedure. | capability | p.92 / bullet |
-<!-- GENERATED:END function=6c1a97b9b726 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=0d02ef758518 -->
 

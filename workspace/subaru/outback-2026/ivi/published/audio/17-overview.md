@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=e0d980f912a6 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=5584790bd13c (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 17. Overview
 
 <div class="fn-meta"><b>Function path:</b> Audio / Overview<br><b>Source:</b> printed page 105, 106, 107<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-2854c91df859.png)
+![figure](../figures/FIG-3b3793fe7de8.png)
 - Figure 17-1 source: p.105
 - (Copied from OM) Select to change audio modes.
 
@@ -37,7 +37,7 @@
 | 15 | <span class="req-label">Step -</span>Before using Bluetooth devices, users of any electrical medical device other than implantable cardiac pacemakers, cardiac resynchronization therapy-pacemakers or implantable cardioverter defibrillators should consult the manufacturer of the device for information about its operation under the influence of radio waves. Radio waves could have unexpected effects on the operation of such medical devices. | capability | p.106 / bullet |
 | 16 | <span class="req-label">Step -</span>Do not leave your portable player in the vehicle. In particular, high temperatures inside the vehicle may damage the portable player. | capability | p.107 / bullet |
 | 17 | <span class="req-label">Step -</span>Depending on the Bluetooth device that is connected to the system, the music may start. | capability | p.107 / bullet |
-| 18 | <span class="req-label">Overview</span>playing when touching “ ” while it is paused. Conversely, the music may pause when touching “ ” while it is playing. | constraint | p.107 / text |
+| 18 | <span class="req-label">Overview</span>playing when touching “[icon]” while it is paused. Conversely, the music may pause when touching “[icon]” while it is playing. | constraint | p.107 / text |
 | 19 | <span class="req-label">Step -</span>The Bluetooth device is turned off. | capability | p.107 / bullet |
 | 20 | <span class="req-label">Step -</span>The Bluetooth device is not connected. | capability | p.107 / bullet |
 | 21 | <span class="req-label">Step -</span>The Bluetooth device has a low battery. | capability | p.107 / bullet |
@@ -60,23 +60,5 @@
 | 3 | <span class="req-label">Step -</span>Depending on the Bluetooth device or music file being played, the cover art may not be displayed. | capability | p.107 / bullet |
 | 4 | <span class="req-label">Step -</span>Depending on the music playback application of a Bluetooth device, the Bluetooth audio may not operate properly. | capability | p.107 / bullet |
 | 5 | <span class="req-label">Step -</span>If the specifications or profile of the connected Bluetooth device is lower than recommended or not compatible, the Bluetooth device may not function properly. | capability | p.107 / bullet |
-<!-- GENERATED:END function=e0d980f912a6 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=5584790bd13c -->
 

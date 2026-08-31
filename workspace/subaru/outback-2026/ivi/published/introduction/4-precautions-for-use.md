@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=b97daa03657d (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=2b3ea8867e5d (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 4. Precautions for use
 
 <div class="fn-meta"><b>Function path:</b> Introduction / Precautions for use<br><b>Source:</b> printed page 7, 8, 9<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -66,24 +66,4 @@ Filled: 0 / unfilled: 1
 | 8 | <span class="req-label">Step -</span>Functions that cannot be operated while driving have their colors toned down when the vehicle is being driven, and their operation is disabled. Selecting a disabled button may result in the display of an operation prohibited message on the screen. | constraint | p.9 / bullet |
 | 9 | <span class="req-label">Step -</span>When using the unit for the first time after purchase, or after the battery was removed for a long time, the current position may not be displayed correctly. Wait a short time until the GPS positioning corrects the displayed position. | capability | p.9 / bullet |
 | 10 | <span class="req-label">Step -</span>If a device that uses wireless communication is installed in the vehicle, functions using a Bluetooth device, the radio broadcast receiver, navigation system, etc. may not operate properly. | capability | p.9 / bullet |
-<!-- GENERATED:END function=b97daa03657d -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=2b3ea8867e5d -->

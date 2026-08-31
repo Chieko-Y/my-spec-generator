@@ -1,39 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Screen elements — <code>{{ manual_id }}</code> — {{ chapter }}</h1>
+<p>{{ figure_count }} figure(s) / {{ element_count }} transcribed. Write the label exactly as it appears on screen — do not translate or paraphrase.</p>
 
-{% if not figures %}
-<div class="flash warn">Figure detection is not implemented in this build yet (planned for a later phase) — there is nothing to transcribe against yet. You can still record an entry manually below if you know the figure_id.</div>
+{% if not rows %}
+<div class="flash warn">No figures detected for this chapter — nothing to transcribe against yet.</div>
 {% endif %}
 
+{% for row in rows %}
+{% set fig = row.figure %}
 <div class="card">
-  <h2>Add / update an element</h2>
-  <p>Only a person who has looked at the figure can say what a legend symbol means — a label cannot be saved without who decided it.</p>
-  <form method="post" action="/screen-elements/{{ manual_id }}">
-    <input type="hidden" name="chapter" value="{{ chapter }}">
-    <label>Figure ID</label>
-    <input type="text" name="figure_id" required>
-    <label>Symbol (e.g. "A")</label>
-    <input type="text" name="symbol" required style="width:60px">
-    <label>Label</label>
-    <input type="text" name="label" required>
-    <label>Note</label>
-    <input type="text" name="note">
-    <label>Decided by</label>
-    <input type="text" name="decided_by" required>
-    <button type="submit">Save</button>
-  </form>
-</div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border)">
+    <h3 style="margin:0">{{ row.function_number }}. {{ row.function_title }}</h3>
+    <small style="color:#6b6f76">Figure {{ row.index }} / p.{{ fig.page + 1 }} / {{ row.width }}×{{ row.height }}pt</small>
+  </div>
+  <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-top:12px">
+    <img src="/specifications/{{ manual_id }}/figures/{{ row.image_filename }}" style="max-width:420px;max-height:380px;border:1px solid var(--border);border-radius:4px;flex-shrink:0">
+    <div style="flex:1;min-width:280px">
+      {% if fig.caption_text %}
+      <p><small style="color:#6b6f76">(Copied from OM) {{ fig.caption_text }}</small></p>
+      {% endif %}
 
-<div class="card">
-  <h2>Recorded elements</h2>
-  <table>
-    <tr><th>Figure</th><th>Symbol</th><th>Label</th><th>Note</th><th>Decided by</th></tr>
-    {% for e in elements %}
-    <tr><td>{{ e.figure_id }}</td><td>{{ e.symbol }}</td><td>{{ e.label }}</td><td>{{ e.note }}</td><td>{{ e.decided_by }}</td></tr>
-    {% else %}
-    <tr><td colspan="5">None recorded yet.</td></tr>
-    {% endfor %}
-  </table>
+      <table>
+        <tr><th>Symbol</th><th>Label</th><th>Note</th><th>Decided by</th><th></th></tr>
+        {% for e in row.elements %}
+        <tr>
+          <td>{{ e.symbol }}</td><td>{{ e.label }}</td><td>{{ e.note }}</td><td>{{ e.decided_by }}</td>
+          <td>
+            <form method="post" action="/screen-elements/{{ manual_id }}/delete" style="display:inline" onsubmit="return confirm('Delete this element?');">
+              <input type="hidden" name="chapter" value="{{ chapter }}">
+              <input type="hidden" name="figure_id" value="{{ fig.figure_id }}">
+              <input type="hidden" name="symbol" value="{{ e.symbol }}">
+              <input type="hidden" name="label" value="{{ e.label }}">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5">Not yet transcribed.</td></tr>
+        {% endfor %}
+      </table>
+
+      <form method="post" action="/screen-elements/{{ manual_id }}">
+        <input type="hidden" name="chapter" value="{{ chapter }}">
+        <input type="hidden" name="figure_id" value="{{ fig.figure_id }}">
+        <input type="text" name="symbol" placeholder="symbol (e.g. A / 1, blank if none)" style="width:100%;max-width:260px;display:block;margin-bottom:6px">
+        <input type="text" name="label" placeholder="label (exactly as shown on screen)" required style="width:100%;max-width:260px;display:block;margin-bottom:6px">
+        <input type="text" name="decided_by" placeholder="your name (required)" required style="width:100%;max-width:260px;display:block;margin-bottom:6px">
+        <input type="text" name="note" placeholder="note — what this element does (optional)" style="width:100%;max-width:260px;display:block;margin-bottom:6px">
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
 </div>
+{% endfor %}
 {% endblock %}

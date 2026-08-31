@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=bb7788aa3ff3 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=846cb7c22cde (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 9. How to subscribe to SiriusXM®
 
 <div class="fn-meta"><b>Function path:</b> Audio / How to subscribe to SiriusXM®<br><b>Source:</b> printed page 96, 97, 98<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -28,23 +28,5 @@
 | 7 | <span class="req-label">Step -</span>It is prohibited to copy, decompile, disassemble, reverse engineer, hack, manipulate, or otherwise make available any technology or software incorporated in receivers compatible with the SiriusXM® Services or that support the SiriusXM website, the Streaming Service or any of its content. Furthermore, the AMBE® voice compression software included in this product is protected by intellectual property rights including patent rights, copyrights, and trade secrets of Digital Voice Systems, Inc. | capability | p.98 / bullet |
 | 8 | <span class="req-label">Step -</span>Note: this applies to SiriusXM® receivers only and not SiriusXM Ready devices. | capability | p.98 / bullet |
 | 9 | <span class="req-label">Step -</span>About SiriusXM Trial Subscription ABOUT The SiriusXM Platinum Plan is the ultimate entertainment experience, featuring expertly curated ad-free music and exclusive artist created music channels, premium sports coverage with live play-by-play from every major sport, and sports talk including all of our official league and college conference channels. It also includes exclusive comedy, talk and news. Discover even more when you stream on the SXM App, with Xtra music channels for any mood or activity, podcasts including SiriusXM originals, all included with your trial. SiriusXM also delivers a wide variety of services such as Weather, Sports Scores, Movie Listings, Fuel Prices, Stock Prices to navigation equipped vehicles. For a list of available features in your vehicle, visit siriusxm.com/infotainment and get the most out of your driving experience. RADIO OPERATION Look for the Sirius, XM, SXM, Band, SAT, AUX, Radio or Source button and you’re in. If you can’t hear us, it’s easy to get started: - Locate your Radio ID/ESN by turning to Channel 0. If you don’t see your number there, go to Siriusxm.com/activationhelp to find it. - Visit siriusxm.com/refresh or call 1-855-MYREFRESH (697-3373) to send a refresh signal to your radio. Canadian Customers: - Locate your Radio ID/ESN by turning to Channel 0. - Visit siriusxm.ca/refresh to send a refresh signal to your radio or call 1-888-539-7474 for service. | constraint | p.98 / bullet |
-<!-- GENERATED:END function=bb7788aa3ff3 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=846cb7c22cde -->
 

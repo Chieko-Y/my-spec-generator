@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=39e9634322cc (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=9f626bfcadf7 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 12. Searching for a current content
 
 <div class="fn-meta"><b>Function path:</b> Audio / Searching for a current content<br><b>Source:</b> printed page 99, 100<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -6,22 +6,22 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-dd65fff6ec90.png)
+![figure](../figures/FIG-9c56bfb9bb35.png)
 - Figure 12-1 source: p.100
 - (Copied from OM) phone icon or text message.
 
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. SiriusXM® control"]
-    S2["2. Speak when the search screen is"]
+    S1["1. SiriusXM® control Touch “[icon]” on the screen. (→P.94)"]
+    S2["2. Speak when the search screen is displayed and a beep is …"]
     S1 --> S2
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | SiriusXM® control | p.100 / step |
-| 2 | 2 | Speak when the search screen is | p.100 / step |
+| 1 | 1 | SiriusXM® control Touch “[icon]” on the screen. (→P.94) | p.100 / step |
+| 2 | 2 | Speak when the search screen is displayed and a beep is heard. | p.100 / step |
 
 ## 12-2-1. Service overview
 
@@ -44,11 +44,9 @@ flowchart TD
 | 7 | <span class="req-label">Step -</span>The current position is outside the communication area. | capability | p.100 / bullet |
 | 8 | <span class="req-label">Step -</span>When air from the ventilator blows directly toward the microphone. | capability | p.100 / bullet |
 | 9 | <span class="req-label">Searching for a current content</span>Searching for the desired content. | capability | p.100 / text |
-| 10 | <span class="req-label">Searching for a current content</span>Touch “ ” on the screen. (→P.94). | capability | p.100 / text |
-| 11 | <span class="req-label">Searching for a current content</span>displayed and a beep is heard. | capability | p.100 / text |
-| 12 | <span class="req-label">Step -</span>Displays the status of voice recognition, searching, etc. with a microphone icon or text message. | capability | p.100 / bullet |
-| 13 | <span class="req-label">Step -</span>“ ”: Select to display keyboard to enter text for search. | capability | p.100 / bullet |
-| 14 | <span class="req-label">Step -</span>Select the microphone icon to refresh speech recognition. | capability | p.100 / bullet |
+| 10 | <span class="req-label">Step -</span>Displays the status of voice recognition, searching, etc. with a microphone icon or text message. | capability | p.100 / bullet |
+| 11 | <span class="req-label">Step -</span>“[icon]”: Select to display keyboard to enter text for search. | capability | p.100 / bullet |
+| 12 | <span class="req-label">Step -</span>Select the microphone icon to refresh speech recognition. | capability | p.100 / bullet |
 
 ## 12-3. Requirements for HMI
 
@@ -62,23 +60,5 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Voice commands may not be recognized if:. | capability | p.100 / bullet |
 | 2 | <span class="req-label">Step -</span>If there is excessive background noise, such as wind noise, the system may not recognize the command properly and using voice commands may not be possible. | capability | p.100 / bullet |
-<!-- GENERATED:END function=39e9634322cc -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=9f626bfcadf7 -->
 

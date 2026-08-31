@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Thresholds — <code>{{ manual_id }}</code> — {{ chapter }}</h1>
-<p>A value can only be saved with evidence and who filled it in — the manual never states the number itself, so a person has to vouch for it.</p>
+<p>A value can only be saved with evidence and who filled it in — the manual never states the number itself, so a person has to vouch for it. Setting status back to <code>unfilled</code> reverts a threshold that was confirmed by mistake — evidence/filled_by are still required, so the revert itself stays on record.</p>
 <table>
-  <tr><th>Function</th><th>Matching text</th><th>Kind / Unit</th><th>Current value</th><th>Status</th><th>Set new value</th></tr>
+  <tr><th>Function</th><th>Source</th><th>Matching text</th><th>Kind / Unit</th><th>Current value</th><th>Status</th><th>Set new value</th></tr>
   {% for row in rows %}
   {% set t = row.threshold %}
   <tr>
     <td>{{ row.function }}</td>
+    <td>{{ row.source }}<br><small style="color:#6b6f76">{{ row.function_path }}{% if row.page_citation %} — {{ row.page_citation }}{% endif %}{% if row.next_step_text %} {{ row.next_step_text }}{% endif %}</small></td>
     <td>{{ t.matching_text }}<br><small style="color:#6b6f76">{{ t.context }}</small></td>
     <td>{{ t.kind }} / {{ t.unit or '—' }}</td>
     <td>{{ t.value or '—' }}</td>
@@ -16,9 +17,9 @@
       <form method="post" action="/thresholds/{{ manual_id }}">
         <input type="hidden" name="chapter" value="{{ chapter }}">
         <input type="hidden" name="threshold_id" value="{{ t.threshold_id }}">
-        <input type="text" name="value" placeholder="value" required style="width:70px;display:inline-block">
+        <input type="text" name="value" placeholder="value (blank if reverting)" style="width:160px;display:inline-block">
         <select name="status" style="width:120px;display:inline-block">
-          {% for s in statuses if s.value != 'unfilled' %}
+          {% for s in statuses %}
           <option value="{{ s.value }}">{{ s.value }}</option>
           {% endfor %}
         </select>
@@ -30,7 +31,7 @@
     </td>
   </tr>
   {% else %}
-  <tr><td colspan="6">No numeric thresholds detected in this manual.</td></tr>
+  <tr><td colspan="7">No numeric thresholds detected in this manual.</td></tr>
   {% endfor %}
 </table>
 {% endblock %}

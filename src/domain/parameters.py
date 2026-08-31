@@ -24,11 +24,39 @@ class ParameterPattern:
     kind: str
     regex: re.Pattern
     unit_hint: str | None = None
+    # "quantity"-kind phrases (e.g. "a certain level of inaccuracy") have no
+    # fixed physical dimension of their own -- unlike duration/speed/distance,
+    # there's no single natural unit to report. When a nearby number+unit IS
+    # found, keep the whole matched span ("100 m") as one value and report the
+    # unit as the literal "as stated" rather than the parsed unit group, since
+    # "as stated" here means "whatever the manual itself wrote", not a
+    # category this pattern already knows to expect.
+    combined_value_unit: bool = False
 
+
+_UNIT_ALTERNATION = (
+    r"seconds?|sec\.?|minutes?|min\.?|hours?|hrs?|"
+    r"miles?|mi\.?|km|kilometers?|feet|ft\.?|meters?|m\b|%|percent"
+)
 
 NUMBER_WITH_UNIT = re.compile(
-    r"(?P<value>\d+(?:\.\d+)?)\s*(?P<unit>seconds?|sec\.?|minutes?|min\.?|hours?|hrs?|"
-    r"miles?|mi\.?|km|kilometers?|feet|ft\.?|meters?|m\b|%|percent)",
+    rf"(?P<value>\d+(?:\.\d+)?)\s*(?P<unit>{_UNIT_ALTERNATION})",
+    re.IGNORECASE,
+)
+
+# A number+unit that sits in parentheses, e.g. "300 feet (100 m)" -- the
+# manual's own converted/precise equivalent, printed right next to the
+# primary figure. Confirmed against the real Subaru Outback 2026 PDF,
+# 2026-08-31: "The GPS system has a certain level of inaccuracy. ... errors of
+# up to 300 feet (100 m) can and should be expected." -- the parenthetical
+# "100 m" is the value worth surfacing, not "300 feet" (which sits closer to
+# the vague phrase and would otherwise win a plain nearest-match search) and
+# not reachable at all within the normal +/-60-char window this module
+# otherwise uses (117 chars away in this real sentence). Used only as a
+# fallback for "quantity"-kind patterns, scoped narrowly to avoid changing
+# already-working behavior for duration/speed/etc. patterns.
+_PAREN_NUMBER_WITH_UNIT = re.compile(
+    rf"\(\s*(?P<value>\d+(?:\.\d+)?)\s*(?P<unit>{_UNIT_ALTERNATION})\s*\)",
     re.IGNORECASE,
 )
 
@@ -68,6 +96,31 @@ PATTERNS: list[ParameterPattern] = [
         re.compile(r"\b(?:periodically|from\s+time\s+to\s+time|occasionally)\b", re.IGNORECASE),
         None,
     ),
+    ParameterPattern(
+        "vague_few_duration",
+        "duration",
+        re.compile(
+            r"\ba\s+few\s+(?P<unit>seconds?|sec\.?|minutes?|min\.?|hours?|hrs?)\b",
+            re.IGNORECASE,
+        ),
+        "time",
+    ),
+    ParameterPattern(
+        "vague_certain_quantity",
+        "quantity",
+        re.compile(
+            r"\ba\s+certain\s+(?:level|degree|amount)\s+of\s+[A-Za-z]+\b",
+            re.IGNORECASE,
+        ),
+        "as stated",
+        combined_value_unit=True,
+    ),
+    ParameterPattern(
+        "vague_speed",
+        "speed",
+        re.compile(r"\b(?:high|low)\s+speed\b", re.IGNORECASE),
+        "speed",
+    ),
 ]
 
 
@@ -79,33 +132,51 @@ def detect_parameters(text: str, source: str) -> list[ThresholdParameter]:
     for pattern in PATTERNS:
         for match in pattern.regex.finditer(text):
             matching_text = match.group(0)
+            # A narrow window, used ONLY to decide whether a nearby number should
+            # seed a value -- kept small so an unrelated number elsewhere in a
+            # long paragraph doesn't get picked up. The reviewer-facing citation
+            # is the full requirement text instead (see `context` below): a
+            # fixed-width slice can start or end mid-word/mid-sentence, which a
+            # real user flagged as confusing when reviewing a real threshold
+            # (2026-08-31, Navigation chapter: a snippet started "pected." --
+            # the tail of "expected." cut off by the window boundary).
             window_start = max(0, match.start() - 60)
             window_end = min(len(text), match.end() + 60)
-            context = text[window_start:window_end].strip()
+            search_window = text[window_start:window_end].strip()
+            context = text.strip()
 
-            number_match = NUMBER_WITH_UNIT.search(context)
+            number_match = NUMBER_WITH_UNIT.search(search_window)
+            if number_match is None and pattern.combined_value_unit:
+                number_match = _PAREN_NUMBER_WITH_UNIT.search(text)
             threshold_id = content_id("threshold", source, matching_text, str(match.start()))
 
             if number_match:
+                if pattern.combined_value_unit:
+                    value = f"{number_match.group('value')} {number_match.group('unit')}"
+                    unit = pattern.unit_hint
+                else:
+                    value = number_match.group("value")
+                    unit = number_match.group("unit")
                 found.append(
                     ThresholdParameter(
                         threshold_id=threshold_id,
                         matching_text=matching_text,
                         kind=pattern.kind,
-                        unit=number_match.group("unit"),
+                        unit=unit,
                         context=context,
-                        value=number_match.group("value"),
+                        value=value,
                         status=ParameterStatus.FROM_MANUAL,
-                        evidence=context,
+                        evidence=f'Stated in the OM: "{value}"',
                     )
                 )
             else:
+                named_unit = match.groupdict().get("unit")
                 found.append(
                     ThresholdParameter(
                         threshold_id=threshold_id,
                         matching_text=matching_text,
                         kind=pattern.kind,
-                        unit=pattern.unit_hint,
+                        unit=named_unit or pattern.unit_hint,
                         context=context,
                     )
                 )

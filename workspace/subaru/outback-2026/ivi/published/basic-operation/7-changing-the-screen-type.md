@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=64b85e0b1ba8 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=d150ea23fb95 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 7. Changing the screen type
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Changing the screen type<br><b>Source:</b> printed page 21<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -10,24 +10,6 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Changing the screen type</span>Swipe right/left on the widget screen to change the screen type. | capability | p.21 / text |
-<!-- GENERATED:END function=64b85e0b1ba8 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=d150ea23fb95 -->
 
 

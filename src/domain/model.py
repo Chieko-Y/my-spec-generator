@@ -118,6 +118,20 @@ class RequirementItem:
     source_text: str
     strength: RequirementStrength
     source: str
+    # The PDF's own printed running-head/footer text for this requirement's page
+    # (e.g. a production filename + page number: "NB8_....book 17 ページ"), kept as
+    # citation metadata only -- never body content. Lets a reviewer find the exact
+    # spot in the source manual, same purpose the original app's own book/page
+    # citation served (docs/CONCEPT.md: no AI here, this is literally printed on
+    # the page and was previously discarded as page furniture, never stored).
+    page_citation: str | None = None
+    # The procedure step the reader performs next after this requirement, e.g.
+    # "2. Touch \"I Agree\"." -- reading-order position, not raw page/line
+    # distance (see spec_building.build_function_spec's _next_step_after: a
+    # requirement can sit physically closer to an earlier, already-completed
+    # step). Citation metadata only, same as page_citation -- never rewrites
+    # what a requirement's own text says.
+    next_step_text: str | None = None
     thresholds: list[ThresholdParameter] = field(default_factory=list)
     change: RevisionChange | None = None
     previous_text: str | None = None

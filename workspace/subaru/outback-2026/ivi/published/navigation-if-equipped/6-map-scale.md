@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=d9c117bedad6 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=b7a406faf502 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 6. Map scale
 
 <div class="fn-meta"><b>Function path:</b> Navigation (if equipped) / Map scale<br><b>Source:</b> printed page 121<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -9,14 +9,14 @@
 ```mermaid
 flowchart TD
     S1["1. Select any point on the map."]
-    S2["2. Touch “ ” or “ ” to change the scale of the map screen."]
+    S2["2. Touch “[icon]” or “[icon]” to change the scale of the ma…"]
     S1 --> S2
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select any point on the map. | p.121 / step |
-| 2 | 2 | Touch “ ” or “ ” to change the scale of the map screen. | p.121 / step |
+| 2 | 2 | Touch “[icon]” or “[icon]” to change the scale of the map screen. | p.121 / step |
 
 ## 6-2-2. Service requirements
 
@@ -31,27 +31,7 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>If the map scale is adjusted manually during route guidance, the map may not be zoomed in automatically. To reenable the automatic zoom function, touch “Re-center” or change the orientation of the map screen. (→P.121). | capability | p.121 / bullet |
-<!-- GENERATED:END function=d9c117bedad6 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=b7a406faf502 -->
 
 
 

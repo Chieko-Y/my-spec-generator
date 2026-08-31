@@ -11,7 +11,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from domain.manual_parsing import Line, Section
-from domain.spec_building import _split_lines
+from domain.model import SpecSlot
+from domain.profile import LayoutConfig, Profile
+from domain.spec_building import build_function_spec, _split_lines
 
 
 def _section(lines: list[Line]) -> Section:
@@ -46,6 +48,7 @@ def test_a_wrapped_step_continuation_is_merged_into_the_step():
         (
             7,
             0,
+            100.0,
             "Close the driver's door and lock the doors, then move at least 10 feet "
             "(3 m) away from the vehicle to prevent the key from interfering.",
         )
@@ -67,7 +70,7 @@ def test_a_bullet_line_breaks_the_continuation_instead_of_merging():
 
     steps, groups = _split_lines(_section(lines))
 
-    assert steps == [(8, 0, "After at least 5 minutes have elapsed, start the engine again.")]
+    assert steps == [(8, 0, 100.0, "After at least 5 minutes have elapsed, start the engine again.")]
     assert len(groups) == 1
     assert [l.text for l in groups[0]] == ["● The new map data will be applied."]
 
@@ -80,7 +83,7 @@ def test_unrelated_prose_far_from_any_step_is_left_alone():
 
     steps, groups = _split_lines(_section(lines))
 
-    assert steps == [(1, 0, "Select the menu icon.")]
+    assert steps == [(1, 0, 100.0, "Select the menu icon.")]
     assert len(groups) == 1
     assert [l.text for l in groups[0]] == ["This paragraph is unrelated body text."]
 
@@ -93,6 +96,30 @@ def test_a_continuation_never_crosses_a_page_boundary():
 
     steps, groups = _split_lines(_section(lines))
 
-    assert steps == [(1, 0, "Select the menu icon.")]
+    assert steps == [(1, 0, 100.0, "Select the menu icon.")]
     assert len(groups) == 1
     assert [l.text for l in groups[0]] == ["A caption on the next page."]
+
+
+def _profile() -> Profile:
+    return Profile(profile_id="test", extends=None, derived_from="fixture", slot_rules=[], layout=LayoutConfig())
+
+
+def test_requirement_between_two_steps_cites_the_step_it_leads_into():
+    """Reproduces the real Subaru Outback 2026 case (Basic Operation, p.16-17,
+    2026-08-31): "After a few seconds, the Caution screen will be displayed."
+    sits right after step 1, physically closer to it than to step 2 (which is
+    on the next page) -- but it describes what happens BEFORE step 2, so the
+    useful citation is "the step the reader does next" (step 2), not the
+    nearest step by raw position (step 1, already completed by this point)."""
+    lines = [
+        Line(page=0, text="1. When the ignition switch is turned to ACC or ON, the initial", top=634.5),
+        Line(page=0, text="screen will be displayed and the system will begin operating.", top=649.0),
+        Line(page=0, text="● After a few seconds, the “Caution” screen will be displayed.", top=666.0),
+        Line(page=1, text="2. Touch “I Agree”.", top=170.8),
+    ]
+
+    spec = build_function_spec(_section(lines), _profile(), "manual", "Basic operation", 1)
+
+    req = next(r for r in spec.requirements if "Caution" in r.text)
+    assert req.next_step_text == "2. Touch “I Agree”."

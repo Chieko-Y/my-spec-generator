@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=eaa7655ff5b2 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=6ca5be67099a (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 3. Symbols used in illustrations
 
 <div class="fn-meta"><b>Function path:</b> Introduction / Symbols used in illustrations<br><b>Source:</b> printed page 6<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -13,24 +13,4 @@
 | 2 | <span class="req-label">Symbols used in illustrations</span>The symbol of a circle with a slash through it means “Do not”, “Do not do this” or “Do not let this happen”. | define | p.6 / text |
 | 3 | <span class="req-label">Symbols used in illustrations</span>Arrows indicating operations. | capability | p.6 / text |
 | 4 | <span class="req-label">Symbols used in illustrations</span>Indicates the action (pressing, turning, etc.) used to operate switches and other devices. | capability | p.6 / text |
-<!-- GENERATED:END function=eaa7655ff5b2 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=6ca5be67099a -->

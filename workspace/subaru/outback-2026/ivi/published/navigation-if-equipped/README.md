@@ -7,21 +7,21 @@
 |---|---|
 | Maker / Model | Subaru / Outback 2026 |
 | Scope | navigation-if-equipped |
-| Markets | — |
+| Markets | US, CA |
 | Profile | subaru_v1 |
-| Manual ID | subaru/outback-2026/multimedia |
+| Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 0
+Filled: 2 / Unfilled: 2
 
 ```mermaid
 pie showData
-    "Filled" : 0
-    "Unfilled" : 0
+    "Filled" : 2
+    "Unfilled" : 2
 ```
 
 ## Figures in the manual
-17 figure area(s) detected.
+15 figure area(s) detected.
 
 ## Functions
 
@@ -56,7 +56,7 @@ flowchart LR
 
 | No. | Function | Area | Requirements | Figures | Unfilled thresholds | Test-ready |
 |---|---|---|---|---|---|---|
-| 1 | About Subaru connected navigation | Navigation (if equipped) | 10 | 2 | 0 | - |
+| 1 | About Subaru connected navigation | Navigation (if equipped) | 10 | 0 | 0 | - |
 | 2 | Starting the navigation system | Navigation (if equipped) | 3 | 0 | 0 | o |
 | 3 | Map screen overview | Navigation (if equipped) | 10 | 1 | 0 | o |
 | 4 | Map scrolling operation | Navigation (if equipped) | 2 | 0 | 0 | - |
@@ -70,16 +70,20 @@ flowchart LR
 | 12 | Search screen | Navigation (if equipped) | 6 | 1 | 0 | - |
 | 13 | Destination information screen | Navigation (if equipped) | 9 | 1 | 0 | - |
 | 14 | Favorites screen | Navigation (if equipped) | 12 | 1 | 0 | - |
-| 15 | Registering home/work/favorite point | Navigation (if equipped) | 5 | 0 | 0 | o |
+| 15 | Registering home/work/favorite point | Navigation (if equipped) | 3 | 0 | 0 | o |
 | 16 | Recents screen | Navigation (if equipped) | 6 | 1 | 0 | - |
 | 17 | Route calculation screen | Navigation (if equipped) | 11 | 1 | 0 | - |
 | 18 | Route guidance screen | Navigation (if equipped) | 18 | 1 | 0 | - |
 | 19 | Typical voice guidance prompts | Navigation (if equipped) | 6 | 0 | 0 | - |
 | 20 | Navigation settings screen | Navigation (if equipped) | 1 | 0 | 0 | o |
 | 21 | Regarding errors in current position display | Navigation (if equipped) | 1 | 0 | 0 | - |
-| 22 | Limitations of the navigation system | Navigation (if equipped) | 38 | 0 | 0 | - |
+| 22 | Limitations of the navigation system | Navigation (if equipped) | 38 | 0 | 2 | - |
 | 23 | Regarding roads and place name data | Navigation (if equipped) | 1 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
+
+
 
 
 

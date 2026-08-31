@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=7a8fccfad089 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=1cfa88ca26d2 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 18. Steering wheel switches
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Steering wheel switches<br><b>Source:</b> printed page 30, 31<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -27,24 +27,6 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>When the Bluetooth phone/device is not registered, or when the Bluetooth connection is disabled, the voice recognition system cannot be started. If the registration screen is displayed when the switch is pressed and held, proceed to registration if desired. If the Bluetooth phone/device is already registered, simply connect it. (→P.55, 57) 1 Press the switch to adjust the volume. Press and hold the switch to adjust the volume continuously. | constraint | p.31 / bullet |
-<!-- GENERATED:END function=7a8fccfad089 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=1cfa88ca26d2 -->
 
 

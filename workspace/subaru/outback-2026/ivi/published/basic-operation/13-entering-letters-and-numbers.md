@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=acdf12a17752 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=cf904db19713 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 13. Entering letters and numbers
 
 <div class="fn-meta"><b>Function path:</b> Basic operation / Entering letters and numbers<br><b>Source:</b> printed page 27, 28<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -6,7 +6,7 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
-![figure](../figures/FIG-7c59a9d8a604.png)
+![figure](../figures/FIG-3b9f4d94dc3b.png)
 - Figure 13-1 source: p.27
 - (Copied from OM) Display predictive entries.*
 
@@ -28,32 +28,14 @@
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>“ ”: Enables capital letter input of one character only. | capability | p.28 / bullet |
-| 2 | <span class="req-label">Step -</span>“ ”: Enables capital letter input successively. | capability | p.28 / bullet |
+| 1 | <span class="req-label">Step -</span>“[icon]”: Enables capital letter input of one character only. | capability | p.28 / bullet |
+| 2 | <span class="req-label">Step -</span>“[icon]”: Enables capital letter input successively. | capability | p.28 / bullet |
 
 ## 13-5. Exception operation
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Entering letters and numbers</span>*: Depending on the function used, predictive entries may not be displayed. | capability | p.28 / text |
-<!-- GENERATED:END function=acdf12a17752 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=cf904db19713 -->
 
 

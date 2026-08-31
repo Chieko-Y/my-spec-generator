@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=6dd9380306d4 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=b1554f940f00 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 10. By dialpad
 
 <div class="fn-meta"><b>Function path:</b> Phone / By dialpad<br><b>Source:</b> printed page 80<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -30,24 +30,4 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.80 / bullet |
 | 2 | <span class="req-label">Step -</span>Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone. | capability | p.80 / bullet |
-<!-- GENERATED:END function=6dd9380306d4 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=b1554f940f00 -->

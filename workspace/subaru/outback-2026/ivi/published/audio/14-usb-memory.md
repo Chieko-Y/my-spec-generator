@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=781720b2e1f1 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=6a1538a92882 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 14. USB memory
 
 <div class="fn-meta"><b>Function path:</b> Audio / USB memory<br><b>Source:</b> printed page 102<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -10,23 +10,5 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">USB memory</span>Audio files on a USB memory device can be played back. | capability | p.102 / text |
-<!-- GENERATED:END function=781720b2e1f1 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=6a1538a92882 -->
 

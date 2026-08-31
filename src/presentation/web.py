@@ -133,7 +133,7 @@ def _makers_for_sidebar() -> list[dict]:
 def _render(request: Request, template: str, active_tab: str, **ctx) -> HTMLResponse:
     flash = request.query_params.get("flash")
     flash_kind = request.query_params.get("flash_kind", "ok")
-    return templates.TemplateResponse(
+    resp = templates.TemplateResponse(
         request,
         template,
         {
@@ -145,6 +145,15 @@ def _render(request: Request, template: str, active_tab: str, **ctx) -> HTMLResp
             **ctx,
         },
     )
+    # Every page here reflects on-disk generated/overlay state that changes
+    # between requests (re-generate, save a threshold, etc.) -- without this,
+    # a browser can serve a stale cached copy after data changes underneath
+    # it (confirmed report, 2026-08-31: Thresholds looked unchanged after a
+    # real fix landed and the page was reloaded). _render_spec_view used to
+    # set this only for itself; centralizing it here covers every page
+    # (Thresholds/Screen elements/Glossary included) the same way.
+    resp.headers["Cache-Control"] = "no-cache"
+    return resp
 
 
 def _redirect(path: str, flash: str, kind: str = "ok") -> RedirectResponse:
@@ -474,7 +483,11 @@ def specifications_page(request: Request):
             }
         )
     manuals.sort(key=lambda m: (m["maker"], m["model"]))
-    return _render(request, "specifications.html", "specifications", manuals=manuals)
+    by_maker: dict[str, list[dict]] = {}
+    for m in manuals:
+        by_maker.setdefault(m["maker"] or "(unknown)", []).append(m)
+    grouped = [{"name": maker, "manuals": rows} for maker, rows in sorted(by_maker.items())]
+    return _render(request, "specifications.html", "specifications", grouped=grouped)
 
 
 @app.get("/specifications/{manual_id:path}/file/{filename}", response_class=HTMLResponse)
@@ -595,7 +608,7 @@ def _spec_nav(manual_id: str) -> list[dict]:
 def _render_spec_view(
     request: Request, manual_id: str, body_html: str, chapter: str | None, current_file: str | None
 ) -> HTMLResponse:
-    resp = _render(
+    return _render(
         request,
         "spec_view.html",
         "specifications",
@@ -605,18 +618,37 @@ def _render_spec_view(
         current_file=current_file,
         body_html=body_html,
     )
-    resp.headers["Cache-Control"] = "no-cache"
-    return resp
+
+
+def _chapters_by_maker_and_manual() -> list[dict]:
+    """Every registered manual's chapters, grouped maker -> model x year -> chapter
+    -- one level deeper than _makers_for_sidebar (which stops at model, since the
+    sidebar only needs to find a manual). Used by the Thresholds index so a tester
+    can find "this maker's this model's this chapter" the same way the sidebar
+    already groups manuals, rather than scanning one long flat list."""
+    by_maker: dict[str, dict[str, dict]] = {}
+    for row in uc.source_registry.list_sources():
+        maker = row.get("maker") or "(unknown)"
+        manual_id = row["manual_id"]
+        manuals = by_maker.setdefault(maker, {})
+        manuals[manual_id] = {
+            "manual_id": manual_id,
+            "model": row.get("model") or manual_id,
+            "chapters": list(uc.list_chapters(manual_id)),
+        }
+    return [
+        {
+            "name": maker,
+            "manuals": sorted(manuals.values(), key=lambda m: m["model"]),
+        }
+        for maker, manuals in sorted(by_maker.items())
+    ]
 
 
 # ------------------------------------------------------------------------ Thresholds
 @app.get("/thresholds", response_class=HTMLResponse)
 def thresholds_page(request: Request):
-    entries = []
-    for s in uc.source_registry.list_sources():
-        for chapter in uc.list_chapters(s["manual_id"]):
-            entries.append({"manual_id": s["manual_id"], "chapter": chapter})
-    return _render(request, "thresholds_index.html", "thresholds", entries=entries)
+    return _render(request, "thresholds_index.html", "thresholds", grouped=_chapters_by_maker_and_manual())
 
 
 @app.get("/thresholds/{manual_id:path}", response_class=HTMLResponse)
@@ -628,7 +660,14 @@ def thresholds_manual(request: Request, manual_id: str, chapter: str):
     for f in spec.functions:
         for r in f.requirements:
             for t in r.thresholds:
-                rows.append({"function": f.title, "threshold": t})
+                rows.append({
+                    "function": f.title,
+                    "function_path": f.function_path,
+                    "source": r.source,
+                    "page_citation": r.page_citation,
+                    "next_step_text": r.next_step_text,
+                    "threshold": t,
+                })
     return _render(
         request, "thresholds.html", "thresholds",
         manual_id=manual_id, chapter=chapter, rows=rows, statuses=list(ParameterStatus),
@@ -640,7 +679,7 @@ def set_threshold(
     manual_id: str,
     chapter: str = Form(...),
     threshold_id: str = Form(...),
-    value: str = Form(...),
+    value: str = Form(""),
     status: str = Form(...),
     evidence: str = Form(...),
     filled_by: str = Form(...),
@@ -655,11 +694,10 @@ def set_threshold(
 # -------------------------------------------------------------------- Screen elements
 @app.get("/screen-elements", response_class=HTMLResponse)
 def screen_elements_page(request: Request):
-    entries = []
-    for s in uc.source_registry.list_sources():
-        for chapter in uc.list_chapters(s["manual_id"]):
-            entries.append({"manual_id": s["manual_id"], "chapter": chapter})
-    return _render(request, "screen_elements_index.html", "screen_elements", entries=entries)
+    return _render(
+        request, "screen_elements_index.html", "screen_elements",
+        grouped=_chapters_by_maker_and_manual(),
+    )
 
 
 @app.get("/screen-elements/{manual_id:path}", response_class=HTMLResponse)
@@ -667,12 +705,45 @@ def screen_elements_manual(request: Request, manual_id: str, chapter: str):
     spec = uc.load_spec(manual_id, chapter)
     if spec is None:
         raise HTTPException(404, "generate this chapter first")
-    figures = [(f.title, fig) for f in spec.functions for fig in f.figures]
     elements = uc.load_figure_elements(manual_id, chapter)
+    elements_by_figure: dict[str, list] = {}
+    for e in elements:
+        elements_by_figure.setdefault(e.figure_id, []).append(e)
+
+    rows = []
+    for f in spec.functions:
+        for i, fig in enumerate(f.figures, start=1):
+            rows.append({
+                "function_number": f.chapter_number,
+                "function_title": f.title,
+                "index": i,
+                "figure": fig,
+                "image_filename": f"FIG-{fig.figure_id}.png",
+                "width": round(fig.rect[2] - fig.rect[0]),
+                "height": round(fig.rect[3] - fig.rect[1]),
+                "elements": elements_by_figure.get(fig.figure_id, []),
+            })
     return _render(
         request, "screen_elements.html", "screen_elements",
-        manual_id=manual_id, chapter=chapter, figures=figures, elements=elements,
+        manual_id=manual_id, chapter=chapter, rows=rows,
+        figure_count=len(rows), element_count=len(elements),
     )
+
+
+# {manual_id:path} is greedy, same trap as specification_file above -- a POST to
+# .../delete would otherwise be swallowed by add_screen_element's own
+# {manual_id:path} route (treating "...manual_id.../delete" as the manual_id
+# itself). This more-specific route must be registered first.
+@app.post("/screen-elements/{manual_id:path}/delete")
+def delete_screen_element(
+    manual_id: str,
+    chapter: str = Form(...),
+    figure_id: str = Form(...),
+    symbol: str = Form(""),
+    label: str = Form(...),
+):
+    uc.remove_figure_element(manual_id, chapter, figure_id, symbol, label)
+    return _redirect(f"/screen-elements/{manual_id}?chapter={chapter}", "deleted")
 
 
 @app.post("/screen-elements/{manual_id:path}")
@@ -680,7 +751,7 @@ def add_screen_element(
     manual_id: str,
     chapter: str = Form(...),
     figure_id: str = Form(...),
-    symbol: str = Form(...),
+    symbol: str = Form(""),
     label: str = Form(...),
     note: str = Form(""),
     decided_by: str = Form(...),

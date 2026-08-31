@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=845dbf3bd6f0 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=2e4da25eb588 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 3. Some basics
 
 <div class="fn-meta"><b>Function path:</b> Phone / Some basics<br><b>Source:</b> printed page 75, 76<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -50,24 +50,4 @@
 | 3 | <span class="req-label">Step -</span>When using the hands-free function and other Bluetooth functions at the same time, the following problems may occur:. | capability | p.76 / bullet |
 | 4 | <span class="req-label">Step -</span>Talk alternately with the other party on the phone. If both parties speak at the same time, the other party may not hear what has been said. (This is not a malfunction.). | constraint | p.76 / bullet |
 | 5 | <span class="req-label">Step -</span>The other party may not hear you clearly when:. | capability | p.76 / bullet |
-<!-- GENERATED:END function=845dbf3bd6f0 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=2e4da25eb588 -->

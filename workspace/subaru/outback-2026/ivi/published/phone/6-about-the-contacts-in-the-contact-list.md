@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=1af9a2a5f842 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=a823e232a672 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 6. About the contacts in the contact list
 
 <div class="fn-meta"><b>Function path:</b> Phone / About the contacts in the contact list<br><b>Source:</b> printed page 78<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
@@ -16,24 +16,4 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The following data is stored for every registered phone. When another phone is connected, the following registered data cannot be read: - Contact data - Call history data - Favorites data - All phone settings. | constraint | p.78 / bullet |
-<!-- GENERATED:END function=1af9a2a5f842 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=a823e232a672 -->

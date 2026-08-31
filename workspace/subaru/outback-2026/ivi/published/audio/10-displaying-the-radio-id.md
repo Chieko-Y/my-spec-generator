@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=1d0899c0937b (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=9b967ec8460d (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 10. Displaying the radio ID
 
 <div class="fn-meta"><b>Function path:</b> Audio / Displaying the radio ID<br><b>Source:</b> printed page 98<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -8,14 +8,14 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. SiriusXM® control screen. (→P.94)"]
+    S1["1. SiriusXM® control screen. (→P.94) Touch “[icon]” on the"]
     S2["2. Touch “System Information”."]
     S1 --> S2
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | SiriusXM® control screen. (→P.94) | p.98 / step |
+| 1 | 1 | SiriusXM® control screen. (→P.94) Touch “[icon]” on the | p.98 / step |
 | 2 | 2 | Touch “System Information”. | p.98 / step |
 
 ## 10-2-1. Service overview
@@ -23,30 +23,11 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Displaying the radio ID</span>Each SiriusXM tuner is identified with a unique radio ID. The radio ID is required when activating your SiriusXM or when reporting a problem. | constraint | p.98 / text |
-| 2 | <span class="req-label">Displaying the radio ID</span>Touch “ ” on the. | capability | p.98 / text |
 
 ## 10-2-2. Service requirements
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Your radio ID will be displayed. | capability | p.98 / bullet |
-<!-- GENERATED:END function=1d0899c0937b -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=9b967ec8460d -->
 

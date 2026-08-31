@@ -1,4 +1,4 @@
-<!-- GENERATED:START function=734516c6a60c (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+<!-- GENERATED:START function=28b77a7d6b88 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 9. By favorites list
 
 <div class="fn-meta"><b>Function path:</b> Phone / By favorites list<br><b>Source:</b> printed page 79, 80<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
@@ -10,7 +10,7 @@
 flowchart TD
     S1["1. Display the phone screen. (→P.74)"]
     S2["2. Touch “Favorites”, and then select the desired contact."]
-    S3["3. Touch “ ” next to the desired number."]
+    S3["3. Touch “[icon]” next to the desired number."]
     S1 --> S2
     S2 --> S3
 ```
@@ -19,7 +19,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.79 / step |
 | 2 | 2 | Touch “Favorites”, and then select the desired contact. | p.79 / step |
-| 3 | 3 | Touch “ ” next to the desired number. | p.79 / step |
+| 3 | 3 | Touch “[icon]” next to the desired number. | p.79 / step |
 
 ## 9-2-1. Service overview
 
@@ -31,29 +31,9 @@ flowchart TD
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>When “ ” is displayed next to the desired contact, selecting it will display the outgoing call screen. | capability | p.79 / bullet |
+| 1 | <span class="req-label">Step -</span>When “[icon]” is displayed next to the desired contact, selecting it will display the outgoing call screen. | capability | p.79 / bullet |
 | 2 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.79 / bullet |
 | 3 | <span class="req-label">Step -</span>Up to 50 favorites can be downloaded and displayed on the favorites screen. (Up to 5 phone numbers per favorite will be downloaded.). | capability | p.80 / bullet |
 | 4 | <span class="req-label">Step -</span>When “Sync” is set to on, favorites is downloaded automatically. (→P.45). | capability | p.80 / bullet |
 | 5 | <span class="req-label">Step -</span>The order of the phonebook list can be sorted by first name or last name. (→P.45). | capability | p.80 / bullet |
-<!-- GENERATED:END function=734516c6a60c -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GENERATED:END function=28b77a7d6b88 -->

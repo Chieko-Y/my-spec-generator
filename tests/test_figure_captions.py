@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from domain.figures import caption_for
+from domain.figures import caption_for, is_qr_code_caption
 from domain.manual_parsing import Line
 
 
@@ -56,3 +56,20 @@ def test_returns_none_when_every_candidate_on_the_page_is_too_short():
 def test_returns_none_when_page_has_no_lines_at_all():
     rect = (0.0, 0.0, 10.0, 10.0)
     assert caption_for(rect, page=5, lines=[]) is None
+
+
+def test_is_qr_code_caption_flags_a_bare_url():
+    """Real Subaru Outback 2026 case, 2026-08-31: two small (57x57pt) images
+    captioned exactly a bare URL ("https://www.mysubaru.com/connect.html")
+    are printed QR codes, not real screen illustrations -- the original app's
+    own output for this manual (Navigation, "About Subaru connected
+    navigation") does not include them as figures at all."""
+    assert is_qr_code_caption("https://www.mysubaru.com/connect.html") is True
+    assert is_qr_code_caption("https://www.mysubaru.ca/connect.html") is True
+
+
+def test_is_qr_code_caption_does_not_flag_real_captions():
+    assert is_qr_code_caption("Select to change audio modes.") is False
+    assert is_qr_code_caption("Visit https://www.mysubaru.com for details.") is False
+    assert is_qr_code_caption(None) is False
+    assert is_qr_code_caption("") is False
