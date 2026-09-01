@@ -159,6 +159,15 @@ class FunctionSpec:
     procedure: list[ProcedureStep] = field(default_factory=list)
     requirements: list[RequirementItem] = field(default_factory=list)
     figures: list[FigureRef] = field(default_factory=list)
+    # Only ever set by use_cases.load_combined_spec (never persisted in spec.json)
+    # -- this function's own already-published page, as an absolute route path.
+    # Needed because load_combined_spec renumbers chapter_number so two chapters
+    # don't both show "1", "2", ... once merged into one book -- by the time
+    # markdown_publisher builds the combined Functions table, chapter_number can
+    # no longer be used to reconstruct the real on-disk filename (built from the
+    # ORIGINAL, un-renumbered chapter_number), so the correct href is captured
+    # here instead, before renumbering happens.
+    published_href: str = ""
 
     @property
     def all_thresholds(self) -> list[ThresholdParameter]:

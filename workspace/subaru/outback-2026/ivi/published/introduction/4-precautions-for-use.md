@@ -67,3 +67,6 @@ Filled: 0 / unfilled: 1
 | 9 | <span class="req-label">Step -</span>When using the unit for the first time after purchase, or after the battery was removed for a long time, the current position may not be displayed correctly. Wait a short time until the GPS positioning corrects the displayed position. | capability | p.9 / bullet |
 | 10 | <span class="req-label">Step -</span>If a device that uses wireless communication is installed in the vehicle, functions using a Bluetooth device, the radio broadcast receiver, navigation system, etc. may not operate properly. | capability | p.9 / bullet |
 <!-- GENERATED:END function=2b3ea8867e5d -->
+
+
+

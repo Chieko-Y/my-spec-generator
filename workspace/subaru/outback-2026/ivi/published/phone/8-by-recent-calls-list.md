@@ -40,3 +40,6 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>International phone calls may not be made depending on the type of cellular phone you have. | capability | p.79 / bullet |
 <!-- GENERATED:END function=08f7dd64b1da -->
+
+
+

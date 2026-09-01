@@ -27,3 +27,6 @@
 | 11 | <span class="req-label">Navigation Settings Screen</span>Select to set the updating of map data. (→P.185). | capability | p.182 / text |
 <!-- GENERATED:END function=04968bfa3b27 -->
 
+
+
+

@@ -29,3 +29,6 @@
 | 1 | <span class="req-label">Step -</span>Search: Enables search content by voice command or by using keypad/ keyboard. P.159. | capability | p.57 / bullet |
 <!-- GENERATED:END function=51ff53923268 -->
 
+
+
+

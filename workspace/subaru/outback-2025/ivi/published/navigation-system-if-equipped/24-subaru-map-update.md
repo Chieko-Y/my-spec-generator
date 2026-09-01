@@ -32,3 +32,5 @@ Filled: 0 / unfilled: 1
 | 1 | <span class="req-label">SUBARU Map Update</span>l Map update using Wi-Fi® may not be available in some countries. l For the best possible navigation experience, regularly update maps for all frequented regions, including nearby states. Failure to update maps for surrounding states may result in inaccurate map information during interstate travel. Updates made using a USB memory device will update map information for all states. Please visit Subaru.com for more information and the latest updates. l If the map update fails or cannot be performed when using Wi-Fi®, check the communication status of the connected device. If there is a problem with communication, perform the procedure again using a different Wi-Fi® access point. l If the map update procedure fails, refer to the “TROUBLESHOOTING” section. (→P.252) l Subaru may terminate or suspend your access to all or part of these services for any or no reason, including without limitation, any violation of the terms detailed at: https://subaru-maps.com/#/termsofuse. | constraint | p.224 / text |
 <!-- GENERATED:END function=a9e398d368a8 -->
 
+
+

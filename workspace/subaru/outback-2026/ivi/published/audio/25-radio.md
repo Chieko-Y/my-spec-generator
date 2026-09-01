@@ -30,3 +30,6 @@ Filled: 0 / unfilled: 2
 | 11 | <span class="req-label">Radio</span>Alternation or modifications carried out without appropriate authorization may invalidate the user’s right to operate the equipment. | capability | p.113 / text |
 <!-- GENERATED:END function=1371954c350e -->
 
+
+
+

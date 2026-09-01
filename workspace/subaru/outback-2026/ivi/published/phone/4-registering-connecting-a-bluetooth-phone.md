@@ -13,3 +13,6 @@
 | 2 | <span class="req-label">Registering/connecting a Bluetooth phone</span>Bluetooth phone condition display. | capability | p.76 / text |
 | 3 | <span class="req-label">Registering/connecting a Bluetooth phone</span>The condition of the Bluetooth phone appears on the upper right side of the screen. (→ P.74). | capability | p.76 / text |
 <!-- GENERATED:END function=57c93cd02ed7 -->
+
+
+

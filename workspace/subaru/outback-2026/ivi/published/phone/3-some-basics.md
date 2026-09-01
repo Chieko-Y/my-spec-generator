@@ -51,3 +51,6 @@
 | 4 | <span class="req-label">Step -</span>Talk alternately with the other party on the phone. If both parties speak at the same time, the other party may not hear what has been said. (This is not a malfunction.). | constraint | p.76 / bullet |
 | 5 | <span class="req-label">Step -</span>The other party may not hear you clearly when:. | capability | p.76 / bullet |
 <!-- GENERATED:END function=2e4da25eb588 -->
+
+
+

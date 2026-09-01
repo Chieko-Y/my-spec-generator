@@ -62,3 +62,6 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>If there is excessive background noise, such as wind noise, the system may not recognize the command properly and using voice commands may not be possible. | capability | p.100 / bullet |
 <!-- GENERATED:END function=9f626bfcadf7 -->
 
+
+
+

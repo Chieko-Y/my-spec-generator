@@ -21,7 +21,18 @@ pie showData
 ```
 
 ## Figures in the manual
-9 figure area(s) detected.
+
+- Figures: **9** / images rendered: **9**
+
+Each image is a rendering of the corresponding area of the original PDF. **Images are not kept in the repository** (they are copies of another company's manual); `publish` creates them under `../figures/` on the machine that runs it.
+
+## Glossary (registered by a reviewer)
+
+How wording in the manual maps to the in-house term. **The original text is not rewritten** — the mapping is only annotated here. Register terms on the Glossary screen. Evidence (why the mapping holds) is required.
+
+| In-house term | Category | Wording in the manual | Hits | Evidence |
+|---|---|---|---:|---|
+| AA | abbreviation | `Android Auto` | 3 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
 
 ## Functions
 
@@ -54,28 +65,31 @@ flowchart LR
 
 | No. | Function | Area | Requirements | Figures | Unfilled thresholds | Test-ready |
 |---|---|---|---|---|---|---|
-| 1 | Phone screen | Phone | 8 | 1 | 0 | - |
-| 2 | Functions available using a Bluetooth phone | Phone | 5 | 0 | 0 | - |
-| 3 | Some basics | Phone | 26 | 0 | 0 | - |
-| 4 | Registering/connecting a Bluetooth phone | Phone | 3 | 0 | 0 | - |
-| 5 | Using the phone switch/microphone | Phone | 7 | 0 | 0 | - |
-| 6 | About the contacts in the contact list | Phone | 2 | 0 | 0 | - |
-| 7 | Calling on the Bluetooth phone | Phone | 8 | 0 | 0 | o |
-| 8 | By recent calls list | Phone | 7 | 1 | 0 | o |
-| 9 | By favorites list | Phone | 6 | 0 | 0 | o |
-| 10 | By dialpad | Phone | 2 | 0 | 0 | o |
-| 11 | By contacts list | Phone | 6 | 0 | 0 | o |
-| 12 | Incoming calls | Phone | 3 | 1 | 0 | o |
-| 13 | Talking on the Bluetooth phone | Phone | 9 | 1 | 0 | - |
-| 14 | Call waiting | Phone | 6 | 2 | 0 | o |
-| 15 | Bluetooth phone message function | Phone | 12 | 1 | 0 | o |
-| 16 | Receiving a message | Phone | 12 | 2 | 0 | o |
-| 17 | Checking messages | Phone | 4 | 0 | 0 | o |
-| 18 | Replying to a message (quick reply) | Phone | 5 | 0 | 0 | o |
-| 19 | Sending a new short message | Phone | 2 | 0 | 0 | o |
-| 20 | Calling the message sender | Phone | 2 | 0 | 0 | o |
-| 21 | Displayed on the instrument cluster display | Phone | 1 | 0 | 0 | - |
+| 1 | [Phone screen](/specifications/subaru/outback-2026/ivi/file/1-phone-screen.md?chapter=phone) | Phone | 8 | 1 | 0 | - |
+| 2 | [Functions available using a Bluetooth phone](/specifications/subaru/outback-2026/ivi/file/2-functions-available-using-a-bluetooth-phone.md?chapter=phone) | Phone | 5 | 0 | 0 | - |
+| 3 | [Some basics](/specifications/subaru/outback-2026/ivi/file/3-some-basics.md?chapter=phone) | Phone | 26 | 0 | 0 | - |
+| 4 | [Registering/connecting a Bluetooth phone](/specifications/subaru/outback-2026/ivi/file/4-registering-connecting-a-bluetooth-phone.md?chapter=phone) | Phone | 3 | 0 | 0 | - |
+| 5 | [Using the phone switch/microphone](/specifications/subaru/outback-2026/ivi/file/5-using-the-phone-switch-microphone.md?chapter=phone) | Phone | 7 | 0 | 0 | - |
+| 6 | [About the contacts in the contact list](/specifications/subaru/outback-2026/ivi/file/6-about-the-contacts-in-the-contact-list.md?chapter=phone) | Phone | 2 | 0 | 0 | - |
+| 7 | [Calling on the Bluetooth phone](/specifications/subaru/outback-2026/ivi/file/7-calling-on-the-bluetooth-phone.md?chapter=phone) | Phone | 8 | 0 | 0 | o |
+| 8 | [By recent calls list](/specifications/subaru/outback-2026/ivi/file/8-by-recent-calls-list.md?chapter=phone) | Phone | 7 | 1 | 0 | o |
+| 9 | [By favorites list](/specifications/subaru/outback-2026/ivi/file/9-by-favorites-list.md?chapter=phone) | Phone | 6 | 0 | 0 | o |
+| 10 | [By dialpad](/specifications/subaru/outback-2026/ivi/file/10-by-dialpad.md?chapter=phone) | Phone | 2 | 0 | 0 | o |
+| 11 | [By contacts list](/specifications/subaru/outback-2026/ivi/file/11-by-contacts-list.md?chapter=phone) | Phone | 6 | 0 | 0 | o |
+| 12 | [Incoming calls](/specifications/subaru/outback-2026/ivi/file/12-incoming-calls.md?chapter=phone) | Phone | 3 | 1 | 0 | o |
+| 13 | [Talking on the Bluetooth phone](/specifications/subaru/outback-2026/ivi/file/13-talking-on-the-bluetooth-phone.md?chapter=phone) | Phone | 9 | 1 | 0 | - |
+| 14 | [Call waiting](/specifications/subaru/outback-2026/ivi/file/14-call-waiting.md?chapter=phone) | Phone | 6 | 2 | 0 | o |
+| 15 | [Bluetooth phone message function](/specifications/subaru/outback-2026/ivi/file/15-bluetooth-phone-message-function.md?chapter=phone) | Phone | 12 | 1 | 0 | o |
+| 16 | [Receiving a message](/specifications/subaru/outback-2026/ivi/file/16-receiving-a-message.md?chapter=phone) | Phone | 12 | 2 | 0 | o |
+| 17 | [Checking messages](/specifications/subaru/outback-2026/ivi/file/17-checking-messages.md?chapter=phone) | Phone | 4 | 0 | 0 | o |
+| 18 | [Replying to a message (quick reply)](/specifications/subaru/outback-2026/ivi/file/18-replying-to-a-message-quick-reply.md?chapter=phone) | Phone | 5 | 0 | 0 | o |
+| 19 | [Sending a new short message](/specifications/subaru/outback-2026/ivi/file/19-sending-a-new-short-message.md?chapter=phone) | Phone | 2 | 0 | 0 | o |
+| 20 | [Calling the message sender](/specifications/subaru/outback-2026/ivi/file/20-calling-the-message-sender.md?chapter=phone) | Phone | 2 | 0 | 0 | o |
+| 21 | [Displayed on the instrument cluster display](/specifications/subaru/outback-2026/ivi/file/21-displayed-on-the-instrument-cluster-display.md?chapter=phone) | Phone | 1 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
+
 
 
 

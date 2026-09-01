@@ -20,3 +20,6 @@ Filled: 0 / unfilled: 1
 | 2 | <span class="req-label">Current Position Display</span>NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position. | constraint | p.159 / text |
 <!-- GENERATED:END function=20ecd8b23bf4 -->
 
+
+
+

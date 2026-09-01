@@ -21,7 +21,18 @@ pie showData
 ```
 
 ## Figures in the manual
-159 figure area(s) detected.
+
+- Figures: **159** / images rendered: **159**
+
+Each image is a rendering of the corresponding area of the original PDF. **Images are not kept in the repository** (they are copies of another company's manual); `publish` creates them under `../figures/` on the machine that runs it.
+
+## Glossary (registered by a reviewer)
+
+How wording in the manual maps to the in-house term. **The original text is not rewritten** — the mapping is only annotated here. Register terms on the Glossary screen. Evidence (why the mapping holds) is required.
+
+| In-house term | Category | Wording in the manual | Hits | Evidence |
+|---|---|---|---:|---|
+| AA | abbreviation | `Android Auto` | 24 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
 
 ## Headings not matched to body text
 These bookmark entries could not be located in the extracted body text and were not turned into functions. Reported instead of silently dropped.
@@ -78,36 +89,39 @@ flowchart LR
 
 | No. | Function | Area | Requirements | Figures | Unfilled thresholds | Test-ready |
 |---|---|---|---|---|---|---|
-| 1 | Button Overview | Quick Guide | 8 | 0 | 0 | - |
-| 2 | Home Screen | Quick Guide | 10 | 8 | 0 | - |
-| 3 | Car Information/Climate Control Screen | Quick Guide | 8 | 2 | 0 | - |
-| 4 | With A Bluetooth Phone/Device | Quick Guide | 7 | 2 | 0 | - |
-| 5 | Adding A Bluetooth Phone/Device | Quick Guide | 2 | 4 | 0 | - |
-| 6 | Create A Driver Profile | Quick Guide | 5 | 7 | 0 | - |
-| 7 | Phone Screen | Quick Guide | 22 | 13 | 0 | - |
-| 8 | Apps Screen | Quick Guide | 12 | 9 | 0 | - |
-| 9 | Radio Screen | Quick Guide | 8 | 3 | 0 | - |
-| 10 | Useful SiriusXM® Radio Functions | Quick Guide | 6 | 1 | 0 | - |
-| 11 | Media Screen | Quick Guide | 4 | 1 | 0 | - |
-| 12 | Loading And Unloading A Disc | Quick Guide | 5 | 2 | 0 | - |
-| 13 | Portable Device | Quick Guide | 3 | 2 | 0 | - |
-| 14 | Settings Screen | Quick Guide | 6 | 9 | 0 | - |
-| 15 | Steering Wheel Controls | Quick Guide | 43 | 12 | 0 | - |
-| 16 | Overview | Quick Guide | 11 | 1 | 0 | - |
-| 17 | Home Screen | Quick Guide | 14 | 10 | 0 | - |
-| 18 | With A Bluetooth Phone/Device | Quick Guide | 5 | 4 | 0 | - |
-| 19 | Managing A Bluetooth Phone/Device | Quick Guide | 3 | 3 | 0 | - |
-| 20 | Create A Driver Profile | Quick Guide | 5 | 7 | 0 | - |
-| 21 | Car Information Screen | Quick Guide | 2 | 2 | 0 | - |
-| 22 | Phone Screen | Quick Guide | 25 | 14 | 0 | - |
-| 23 | Map Screen  | Quick Guide | 20 | 13 | 0 | - |
-| 24 | Radio Screen | Quick Guide | 9 | 3 | 0 | - |
-| 25 | Useful SiriusXM® Radio Functions | Quick Guide | 8 | 1 | 0 | - |
-| 26 | Media Screen | Quick Guide | 6 | 1 | 0 | - |
-| 27 | Loading And Unloading A Disc | Quick Guide | 5 | 2 | 0 | - |
-| 28 | Portable Device | Quick Guide | 3 | 2 | 0 | - |
-| 29 | Apps Screen | Quick Guide | 14 | 10 | 0 | - |
-| 30 | Settings Screen | Quick Guide | 7 | 11 | 0 | - |
-| 31 | Steering Wheel Controls | Quick Guide | 4 | 0 | 0 | - |
+| 1 | [Button Overview](/specifications/subaru/outback-2025/ivi/file/1-button-overview.md?chapter=quick-guide) | Quick Guide | 8 | 0 | 0 | - |
+| 2 | [Home Screen](/specifications/subaru/outback-2025/ivi/file/2-home-screen.md?chapter=quick-guide) | Quick Guide | 10 | 8 | 0 | - |
+| 3 | [Car Information/Climate Control Screen](/specifications/subaru/outback-2025/ivi/file/3-car-information-climate-control-screen.md?chapter=quick-guide) | Quick Guide | 8 | 2 | 0 | - |
+| 4 | [With A Bluetooth Phone/Device](/specifications/subaru/outback-2025/ivi/file/4-with-a-bluetooth-phone-device.md?chapter=quick-guide) | Quick Guide | 7 | 2 | 0 | - |
+| 5 | [Adding A Bluetooth Phone/Device](/specifications/subaru/outback-2025/ivi/file/5-adding-a-bluetooth-phone-device.md?chapter=quick-guide) | Quick Guide | 2 | 4 | 0 | - |
+| 6 | [Create A Driver Profile](/specifications/subaru/outback-2025/ivi/file/6-create-a-driver-profile.md?chapter=quick-guide) | Quick Guide | 5 | 7 | 0 | - |
+| 7 | [Phone Screen](/specifications/subaru/outback-2025/ivi/file/7-phone-screen.md?chapter=quick-guide) | Quick Guide | 22 | 13 | 0 | - |
+| 8 | [Apps Screen](/specifications/subaru/outback-2025/ivi/file/8-apps-screen.md?chapter=quick-guide) | Quick Guide | 12 | 9 | 0 | - |
+| 9 | [Radio Screen](/specifications/subaru/outback-2025/ivi/file/9-radio-screen.md?chapter=quick-guide) | Quick Guide | 8 | 3 | 0 | - |
+| 10 | [Useful SiriusXM® Radio Functions](/specifications/subaru/outback-2025/ivi/file/10-useful-siriusxm-radio-functions.md?chapter=quick-guide) | Quick Guide | 6 | 1 | 0 | - |
+| 11 | [Media Screen](/specifications/subaru/outback-2025/ivi/file/11-media-screen.md?chapter=quick-guide) | Quick Guide | 4 | 1 | 0 | - |
+| 12 | [Loading And Unloading A Disc](/specifications/subaru/outback-2025/ivi/file/12-loading-and-unloading-a-disc.md?chapter=quick-guide) | Quick Guide | 5 | 2 | 0 | - |
+| 13 | [Portable Device](/specifications/subaru/outback-2025/ivi/file/13-portable-device.md?chapter=quick-guide) | Quick Guide | 3 | 2 | 0 | - |
+| 14 | [Settings Screen](/specifications/subaru/outback-2025/ivi/file/14-settings-screen.md?chapter=quick-guide) | Quick Guide | 6 | 9 | 0 | - |
+| 15 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/15-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 43 | 12 | 0 | - |
+| 16 | [Overview](/specifications/subaru/outback-2025/ivi/file/16-overview.md?chapter=quick-guide) | Quick Guide | 11 | 1 | 0 | - |
+| 17 | [Home Screen](/specifications/subaru/outback-2025/ivi/file/17-home-screen.md?chapter=quick-guide) | Quick Guide | 14 | 10 | 0 | - |
+| 18 | [With A Bluetooth Phone/Device](/specifications/subaru/outback-2025/ivi/file/18-with-a-bluetooth-phone-device.md?chapter=quick-guide) | Quick Guide | 5 | 4 | 0 | - |
+| 19 | [Managing A Bluetooth Phone/Device](/specifications/subaru/outback-2025/ivi/file/19-managing-a-bluetooth-phone-device.md?chapter=quick-guide) | Quick Guide | 3 | 3 | 0 | - |
+| 20 | [Create A Driver Profile](/specifications/subaru/outback-2025/ivi/file/20-create-a-driver-profile.md?chapter=quick-guide) | Quick Guide | 5 | 7 | 0 | - |
+| 21 | [Car Information Screen](/specifications/subaru/outback-2025/ivi/file/21-car-information-screen.md?chapter=quick-guide) | Quick Guide | 2 | 2 | 0 | - |
+| 22 | [Phone Screen](/specifications/subaru/outback-2025/ivi/file/22-phone-screen.md?chapter=quick-guide) | Quick Guide | 25 | 14 | 0 | - |
+| 23 | [Map Screen ](/specifications/subaru/outback-2025/ivi/file/23-map-screen.md?chapter=quick-guide) | Quick Guide | 20 | 13 | 0 | - |
+| 24 | [Radio Screen](/specifications/subaru/outback-2025/ivi/file/24-radio-screen.md?chapter=quick-guide) | Quick Guide | 9 | 3 | 0 | - |
+| 25 | [Useful SiriusXM® Radio Functions](/specifications/subaru/outback-2025/ivi/file/25-useful-siriusxm-radio-functions.md?chapter=quick-guide) | Quick Guide | 8 | 1 | 0 | - |
+| 26 | [Media Screen](/specifications/subaru/outback-2025/ivi/file/26-media-screen.md?chapter=quick-guide) | Quick Guide | 6 | 1 | 0 | - |
+| 27 | [Loading And Unloading A Disc](/specifications/subaru/outback-2025/ivi/file/27-loading-and-unloading-a-disc.md?chapter=quick-guide) | Quick Guide | 5 | 2 | 0 | - |
+| 28 | [Portable Device](/specifications/subaru/outback-2025/ivi/file/28-portable-device.md?chapter=quick-guide) | Quick Guide | 3 | 2 | 0 | - |
+| 29 | [Apps Screen](/specifications/subaru/outback-2025/ivi/file/29-apps-screen.md?chapter=quick-guide) | Quick Guide | 14 | 10 | 0 | - |
+| 30 | [Settings Screen](/specifications/subaru/outback-2025/ivi/file/30-settings-screen.md?chapter=quick-guide) | Quick Guide | 7 | 11 | 0 | - |
+| 31 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/31-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
+
 

@@ -53,3 +53,6 @@
 | 7 | <span class="req-label">Settings Screen</span>*1: 11.6-inch display with Navi system *2: 11.6-inch display system with SUBARU STARLINK Safety and Security *3: 11.6-inch display system without SUBARU STARLINK Safety and Security. | capability | p.64 / text |
 <!-- GENERATED:END function=5dba5365b523 -->
 
+
+
+

@@ -31,3 +31,6 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>“[icon]”: Select to change the message. | capability | p.86 / bullet |
 | 2 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
 <!-- GENERATED:END function=b8bfdc423001 -->
+
+
+

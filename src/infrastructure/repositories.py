@@ -13,7 +13,7 @@ import yaml
 
 from domain.manual_parsing import ConfirmedChapter
 from domain.model import ManualSpec, TermCategory
-from domain.overlay import FigureElement, GlossaryTerm, OverlayEntry, ParameterStatus
+from domain.overlay import FigureElement, GlossaryTerm, ManualWording, OverlayEntry, ParameterStatus
 from domain.slug import slugify
 
 from .serialization import spec_from_dict, spec_to_dict
@@ -189,9 +189,15 @@ class JsonGlossaryRepository:
             GlossaryTerm(
                 term_id=item["term_id"],
                 in_house_term=item["in_house_term"],
+                meaning=item.get("meaning", ""),
                 category=TermCategory(item["category"]),
-                manual_wordings=item["manual_wordings"],
+                manual_wordings=[
+                    ManualWording(text=w["text"], maker=w.get("maker", ""))
+                    for w in item["manual_wordings"]
+                ],
                 evidence=item["evidence"],
+                filled_by=item.get("filled_by", ""),
+                notes=item.get("notes", ""),
             )
             for item in raw.get("terms", [])
         ]
@@ -203,9 +209,14 @@ class JsonGlossaryRepository:
                 {
                     "term_id": t.term_id,
                     "in_house_term": t.in_house_term,
+                    "meaning": t.meaning,
                     "category": t.category.value,
-                    "manual_wordings": t.manual_wordings,
+                    "manual_wordings": [
+                        {"text": w.text, "maker": w.maker} for w in t.manual_wordings
+                    ],
                     "evidence": t.evidence,
+                    "filled_by": t.filled_by,
+                    "notes": t.notes,
                 }
                 for t in terms
             ]

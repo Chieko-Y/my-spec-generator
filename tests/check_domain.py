@@ -237,6 +237,43 @@ def test_obligation_wording_kept_verbatim_not_dropped() -> None:
         )
 
 
+def test_glossary_term_requires_filled_by() -> None:
+    # Matches OverlayEntry/FigureElement: every one of the app's 3 human-input
+    # types must always carry both evidence and filled_by (see CLAUDE.md's own
+    # "「人が入れた判断」は現在3種類ある。いずれも根拠と記入者を必ず持つ").
+    from domain.overlay import GlossaryTerm, ManualWording
+    from domain.model import TermCategory
+
+    raised = False
+    try:
+        GlossaryTerm(
+            term_id="t1", in_house_term="Select operation", meaning="",
+            category=TermCategory.OPERATION, manual_wordings=[ManualWording(text="Touch")],
+            evidence="seen in manual", filled_by="",
+        )
+    except ValueError:
+        raised = True
+    check("9-4. GlossaryTerm rejects empty filled_by", raised)
+
+
+def test_glossary_has_no_rewrite_function() -> None:
+    # 9-5 (original app's own invariant, re-derived here): the glossary dictionary
+    # is an annotation layer only — it must never gain a function that produces a
+    # rewritten copy of manual text. Any real highlighting/substitution belongs in
+    # infrastructure (see markdown_view.highlight_glossary_terms), never here.
+    import inspect
+
+    from domain import glossary as glossary_module
+
+    banned = ("replace", "substitute", "translate", "rewrite")
+    offenders = [
+        name
+        for name, _ in inspect.getmembers(glossary_module, inspect.isfunction)
+        if any(word in name.lower() for word in banned)
+    ]
+    check("9-5. domain/glossary.py has no replace/substitute/translate/rewrite function", not offenders, str(offenders))
+
+
 def main() -> int:
     test_no_must_shall_in_type()
     test_threshold_requires_evidence()
@@ -247,6 +284,8 @@ def main() -> int:
     test_title_reflects_generated_chapter_scope()
     test_unmatched_headings_are_reported_not_dropped()
     test_obligation_wording_kept_verbatim_not_dropped()
+    test_glossary_term_requires_filled_by()
+    test_glossary_has_no_rewrite_function()
 
     print()
     if _FAILURES:

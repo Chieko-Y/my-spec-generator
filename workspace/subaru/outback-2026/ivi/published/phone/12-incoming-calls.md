@@ -38,3 +38,6 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>During international phone calls, the other party’s name or number may not be displayed cor- 4 rectly depending on the type of cellular phone you have. | capability | p.81 / bullet |
 <!-- GENERATED:END function=b1c71e386534 -->
+
+
+

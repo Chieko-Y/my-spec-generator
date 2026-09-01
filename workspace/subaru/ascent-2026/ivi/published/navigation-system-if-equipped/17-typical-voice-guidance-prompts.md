@@ -16,3 +16,6 @@
 | 5 | <span class="req-label">Typical Voice Guidance Prompts</span>NOTE l To adjust the voice guidance volume: →P.73 l Setting voice guidance: →P.158 l Voice guidance may be made early or late. l If the system cannot determine the current position correctly, you may not hear voice guidance or may not see the magnified intersection on the screen. | constraint | p.180 / text |
 <!-- GENERATED:END function=16d5a7b4e2ce -->
 
+
+
+

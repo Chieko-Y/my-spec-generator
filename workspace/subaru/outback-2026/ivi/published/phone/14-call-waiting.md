@@ -47,3 +47,6 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>To end all of the calls connected, press and hold switch on the steering wheel. *: Depending on the company of the Bluetooth phone that is connected to the system, the conference call function may not be available. 4. | capability | p.83 / bullet |
 <!-- GENERATED:END function=2dd38fc77be2 -->
+
+
+

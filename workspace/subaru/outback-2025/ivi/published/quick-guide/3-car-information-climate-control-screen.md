@@ -27,3 +27,6 @@
 | 8 | <span class="req-label">Car Information/Climate Control Screen</span>Displays the operating status of vehicle functions, vehicle status, and vehicle inclination. Refer to the vehicle Owner’s Manual. | capability | p.22 / text |
 <!-- GENERATED:END function=3a27b00af556 -->
 
+
+
+

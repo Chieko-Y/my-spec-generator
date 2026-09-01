@@ -141,6 +141,12 @@ th { background: #f0f1f3; }
 .dropzone.dragover { border-color: var(--accent); background: #eaf0fe; color: var(--accent); }
 
 label { display: block; font-size: 12px; color: var(--muted); margin: 8px 0 2px; }
+.muted { color: var(--muted); font-size: 12px; }
+
+.wording-row { display: flex; gap: 6px; margin-bottom: 4px; }
+.wording-row input[type=text] { flex: 1; }
+.wording-row select { width: 160px; }
+.wording-row button { margin-top: 0; padding: 6px 10px; }
 input[type=text], input[type=url], input[type=date], select, textarea {
   width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px;
 }
@@ -184,8 +190,24 @@ code { background: #f0f1f3; padding: 1px 4px; border-radius: 3px; font-size: 12p
   overflow-x: auto;
 }
 .pub-doc s, .pub-doc del { color: var(--bad); }
+/* Glossary term highlight -- a matched manual wording, hover shows the
+   in-house term (and its meaning, if one was filled in) via the native
+   title attribute, no extra JS needed. */
+.pub-doc mark.glossary-term {
+  background: #fdf3b0; cursor: help; padding: 0 1px;
+  text-decoration: underline dotted; text-underline-offset: 3px;
+}
 .pub-doc table { max-width: 100%; }
-.pub-doc pre.mermaid, .pub-doc pre.mermaid svg { max-width: 100%; height: auto; }
+/* A mermaid diagram's own height follows its content (many functions under one
+   area stack vertically even in a left-to-right flowchart), so with no height
+   cap the Function tree at the top of a README could grow taller than the
+   viewport and push everything else down the page, forcing a long scroll just
+   to get past it (reported directly, 2026-09-01). Capping pre.mermaid's own
+   height and giving IT the scrollbar keeps the diagram browsable without
+   dominating the page; the svg still scales to the container's width first
+   (max-width: 100%), it's only capped taller than that which now scrolls. */
+.pub-doc pre.mermaid { max-width: 100%; max-height: 480px; overflow: auto; }
+.pub-doc pre.mermaid svg { max-width: 100%; height: auto; }
 /* Figures are rendered at ~400dpi so the crop matches the manual's own embedded
    image resolution (reported as too rough before that, 2026-08-25) — but with no
    display size cap, a 1735x1035px PNG rendered at native size blew far past the

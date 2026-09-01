@@ -42,3 +42,6 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the connected Bluetooth phone device, the replying function to a message may not be available. | capability | p.86 / bullet |
 <!-- GENERATED:END function=55e6ab7b677a -->
+
+
+

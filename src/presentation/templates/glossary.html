@@ -1,37 +1,125 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Glossary</h1>
-<p>Maps manual wording to an in-house term. The manual's own wording is never replaced — this is an annotation layer only.</p>
+<p>Maps each maker's own wording to an in-house term. The manual's own wording is never replaced — this is an annotation layer only, and shows up as a highlight (hover for the in-house term) in the Specifications viewer.</p>
 
 <div class="card">
   <h2>Add a term</h2>
-  <form method="post" action="/glossary">
-    <label>In-house term</label>
+  <form method="post" action="/glossary" onsubmit="glossarySyncWordings(this)">
+    <label>In-house term (as used in the requirements spec)</label>
     <input type="text" name="in_house_term" required>
+    <label>Meaning (our own definition — do not copy the manual's own wording)</label>
+    <input type="text" name="meaning" placeholder="e.g. Operation that selects an item shown on the screen">
     <label>Category</label>
     <select name="category">
       {% for c in categories %}
       <option value="{{ c.value }}">{{ c.value }}</option>
       {% endfor %}
     </select>
-    <label>Manual wordings (comma-separated, at least one)</label>
-    <input type="text" name="manual_wordings" required placeholder="e.g. Map Screen, map view">
-    <label>Evidence</label>
+    <label>Manual wordings (at least one) — the wording as printed, and which maker it's scoped to</label>
+    <div id="wording-rows"></div>
+    <button type="button" onclick="glossaryAddWordingRow()">+ Add wording</button>
+    <textarea name="manual_wordings" id="manual_wordings" style="display:none"></textarea>
+    <label>Evidence (required — why these wordings mean the same thing)</label>
     <input type="text" name="evidence" required>
+    <label>Filled by (required)</label>
+    <input type="text" name="filled_by" required>
+    <label>Notes</label>
+    <input type="text" name="notes">
     <button type="submit">Save</button>
   </form>
 </div>
 
+<script>
+  // The maker on a wording is picked from makers that actually have a manual
+  // registered (server-computed), not the full 36-maker onboarding catalog --
+  // the wording text itself stays free text since the manual's own printed
+  // word isn't a fixed list. Rows are collected into the hidden textarea just
+  // before submit, in the same "<text>" / "<text> | <maker>" shape the server
+  // already parses (server-side parsing untouched by this UI change).
+  const GLOSSARY_MAKERS = {{ registered_makers | tojson }};
+
+  function glossaryMakeRow(text, maker) {
+    const row = document.createElement('div');
+    row.className = 'wording-row';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'e.g. Touch';
+    input.value = text || '';
+
+    const select = document.createElement('select');
+    GLOSSARY_MAKERS.forEach((m) => {
+      const opt = document.createElement('option');
+      opt.value = m;
+      opt.textContent = m;
+      select.appendChild(opt);
+    });
+    // Listed last on purpose: this scopes a wording to EVERY maker at once, so
+    // picking it by accident (e.g. leaving the default selection alone without
+    // looking) is the highest-blast-radius mistake in this dropdown -- putting
+    // it at the bottom means only a deliberate scroll-past-the-real-makers
+    // selects it.
+    const allOpt = document.createElement('option');
+    allOpt.value = '';
+    allOpt.textContent = 'All makers';
+    select.appendChild(allOpt);
+    // Default a new row to the first real maker, never to "All makers" --
+    // setting .value = '' would select "All makers" regardless of where it
+    // sits in the list (a <select>'s value lookup ignores DOM order), silently
+    // undoing the point of moving it to the bottom. Editing an existing
+    // wording (maker passed in) still restores its real saved scope, "" included.
+    select.value = maker !== undefined ? maker : (GLOSSARY_MAKERS[0] || '');
+
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.className = 'danger';
+    removeBtn.textContent = '×';
+    removeBtn.onclick = () => row.remove();
+
+    row.appendChild(input);
+    row.appendChild(select);
+    row.appendChild(removeBtn);
+    return row;
+  }
+
+  function glossaryAddWordingRow(text, maker) {
+    document.getElementById('wording-rows').appendChild(glossaryMakeRow(text, maker));
+  }
+
+  function glossarySyncWordings(form) {
+    const lines = [];
+    form.querySelectorAll('.wording-row').forEach((row) => {
+      const text = row.querySelector('input').value.trim();
+      if (!text) return;
+      const maker = row.querySelector('select').value;
+      lines.push(maker ? `${text} | ${maker}` : text);
+    });
+    form.querySelector('#manual_wordings').value = lines.join('\n');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => glossaryAddWordingRow());
+</script>
+
+{% for g in groups %}
 <div class="card">
-  <h2>Registered terms</h2>
+  <h2>{{ g.category.value }} <span class="muted">({{ g.terms | length }})</span></h2>
   <table>
-    <tr><th>In-house term</th><th>Category</th><th>Manual wordings</th><th>Evidence</th><th></th></tr>
-    {% for t in terms %}
+    <tr><th>In-house term</th><th>Manual wordings</th><th>Evidence</th><th>Filled by</th><th>Notes</th><th></th></tr>
+    {% for t in g.terms %}
     <tr>
-      <td>{{ t.in_house_term }}</td>
-      <td>{{ t.category.value }}</td>
-      <td>{{ t.manual_wordings | join(', ') }}</td>
+      <td>
+        <b>{{ t.in_house_term }}</b>
+        {% if t.meaning %}<br><span class="muted">{{ t.meaning }}</span>{% endif %}
+      </td>
+      <td>
+        {% for w in t.manual_wordings %}
+        <div>{{ w.text }} <span class="muted">{{ w.maker or 'all makers' }}</span></div>
+        {% endfor %}
+      </td>
       <td>{{ t.evidence }}</td>
+      <td>{{ t.filled_by }}</td>
+      <td>{{ t.notes }}</td>
       <td>
         <form method="post" action="/glossary/delete" style="margin:0">
           <input type="hidden" name="term_id" value="{{ t.term_id }}">
@@ -39,9 +127,10 @@
         </form>
       </td>
     </tr>
-    {% else %}
-    <tr><td colspan="5">No terms yet.</td></tr>
     {% endfor %}
   </table>
 </div>
+{% else %}
+<div class="card">No terms yet.</div>
+{% endfor %}
 {% endblock %}

@@ -21,7 +21,10 @@ pie showData
 ```
 
 ## Figures in the manual
-2 figure area(s) detected.
+
+- Figures: **2** / images rendered: **2**
+
+Each image is a rendering of the corresponding area of the original PDF. **Images are not kept in the repository** (they are copies of another company's manual); `publish` creates them under `../figures/` on the machine that runs it.
 
 ## Functions
 
@@ -41,15 +44,18 @@ flowchart LR
 
 | No. | Function | Area | Requirements | Figures | Unfilled thresholds | Test-ready |
 |---|---|---|---|---|---|---|
-| 1 | Introduction | Introduction | 3 | 0 | 0 | - |
-| 2 | Read first | Introduction | 8 | 0 | 0 | - |
-| 3 | Symbols used in illustrations | Introduction | 4 | 0 | 0 | - |
-| 4 | Precautions for use | Introduction | 45 | 0 | 1 | - |
-| 5 | When transferring ownership of the vehicle | Introduction | 1 | 0 | 0 | - |
-| 6 | Safety instruction | Introduction | 11 | 1 | 1 | - |
-| 7 | How to read this manual | Introduction | 2 | 1 | 0 | - |
-| 8 | Pictorial index | Introduction | 4 | 0 | 0 | - |
+| 1 | [Introduction](/specifications/subaru/outback-2026/ivi/file/1-introduction.md?chapter=introduction) | Introduction | 3 | 0 | 0 | - |
+| 2 | [Read first](/specifications/subaru/outback-2026/ivi/file/2-read-first.md?chapter=introduction) | Introduction | 8 | 0 | 0 | - |
+| 3 | [Symbols used in illustrations](/specifications/subaru/outback-2026/ivi/file/3-symbols-used-in-illustrations.md?chapter=introduction) | Introduction | 4 | 0 | 0 | - |
+| 4 | [Precautions for use](/specifications/subaru/outback-2026/ivi/file/4-precautions-for-use.md?chapter=introduction) | Introduction | 45 | 0 | 1 | - |
+| 5 | [When transferring ownership of the vehicle](/specifications/subaru/outback-2026/ivi/file/5-when-transferring-ownership-of-the-vehicle.md?chapter=introduction) | Introduction | 1 | 0 | 0 | - |
+| 6 | [Safety instruction](/specifications/subaru/outback-2026/ivi/file/6-safety-instruction.md?chapter=introduction) | Introduction | 11 | 1 | 1 | - |
+| 7 | [How to read this manual](/specifications/subaru/outback-2026/ivi/file/7-how-to-read-this-manual.md?chapter=introduction) | Introduction | 2 | 1 | 0 | - |
+| 8 | [Pictorial index](/specifications/subaru/outback-2026/ivi/file/8-pictorial-index.md?chapter=introduction) | Introduction | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
+
 
 
 

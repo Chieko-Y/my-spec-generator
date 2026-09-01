@@ -14,3 +14,6 @@
 | 3 | <span class="req-label">Pictorial index</span>Microphones (→P.33). | capability | p.13 / text |
 | 4 | <span class="req-label">Pictorial index</span>USB ports (→P.30). | capability | p.13 / text |
 <!-- GENERATED:END function=4566aae3fd96 -->
+
+
+

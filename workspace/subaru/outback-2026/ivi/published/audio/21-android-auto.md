@@ -12,3 +12,6 @@
 | 1 | <span class="req-label">Android Auto</span>When a device compatible with Android Auto is connected, audio files in the device can be played back. | capability | p.109 / text |
 <!-- GENERATED:END function=8379f0d3e964 -->
 
+
+
+

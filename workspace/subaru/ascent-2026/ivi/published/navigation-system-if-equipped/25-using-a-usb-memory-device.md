@@ -77,3 +77,6 @@ flowchart TD
 | 5 | <span class="req-label">Step -</span>The new map data will be applied. | capability | p.187 / bullet |
 <!-- GENERATED:END function=5a5f0a20f2c8 -->
 
+
+
+

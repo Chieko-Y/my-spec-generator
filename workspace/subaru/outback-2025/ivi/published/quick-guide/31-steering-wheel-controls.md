@@ -15,3 +15,6 @@
 | 4 | <span class="req-label">Steering Wheel Controls</span>Press: Start the voice recognition system P.228 Press and hold: Start the Apple CarPlay/Android Auto Press: Volume up/down voice recognition function Press and hold: Volume When an Apple CarPlay/Android Auto is not used, the up/down continuously registration screen of a Bluetooth phone/device will be displayed. P.84. | constraint | p.65 / text |
 <!-- GENERATED:END function=200b388acc33 -->
 
+
+
+

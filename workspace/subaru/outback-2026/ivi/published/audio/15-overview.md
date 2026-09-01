@@ -45,3 +45,6 @@
 | 1 | <span class="req-label">Step -</span>Depending on the device or music file being played, the cover art may not be displayed. | capability | p.104 / bullet |
 <!-- GENERATED:END function=5584790bd13c -->
 
+
+
+

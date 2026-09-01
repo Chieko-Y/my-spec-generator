@@ -12,3 +12,6 @@
 | 1 | <span class="req-label">Apple CarPlay</span>When a device compatible with Apple CarPlay is connected, audio files in the device can be played back. | capability | p.108 / text |
 <!-- GENERATED:END function=220de78c9636 -->
 
+
+
+

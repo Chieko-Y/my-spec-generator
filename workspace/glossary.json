@@ -1,0 +1,19 @@
+{
+  "terms": [
+    {
+      "term_id": "58bb119c3551",
+      "in_house_term": "AA",
+      "meaning": "Android Auto",
+      "category": "abbreviation",
+      "manual_wordings": [
+        {
+          "text": "Android Auto",
+          "maker": ""
+        }
+      ],
+      "evidence": "Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full (\"Android Auto\") — no abbreviated form appears in the manual text; \"AA\" is an in-house-only abbreviation.",
+      "filled_by": "Chieko",
+      "notes": ""
+    }
+  ]
+}

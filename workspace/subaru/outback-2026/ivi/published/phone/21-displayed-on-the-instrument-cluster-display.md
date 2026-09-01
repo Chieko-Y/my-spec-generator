@@ -11,3 +11,6 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Displayed on the instrument cluster display</span>The instrument cluster’s basic screen will display some of the hands-free phone system display that is displayed on the center information display. | capability | p.87 / text |
 <!-- GENERATED:END function=d763f9e581b6 -->
+
+
+

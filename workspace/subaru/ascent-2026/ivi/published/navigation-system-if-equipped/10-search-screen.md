@@ -54,3 +54,6 @@
 | 24 | <span class="req-label">Search Screen</span>The desired point can be registered as home, work, or favorite. The registered points can be set as a destination. Registered points can be added, changed and deleted on the. | capability | p.169 / text |
 <!-- GENERATED:END function=998542289335 -->
 
+
+
+

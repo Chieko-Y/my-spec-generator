@@ -21,7 +21,10 @@ pie showData
 ```
 
 ## Figures in the manual
-25 figure area(s) detected.
+
+- Figures: **25** / images rendered: **25**
+
+Each image is a rendering of the corresponding area of the original PDF. **Images are not kept in the repository** (they are copies of another company's manual); `publish` creates them under `../figures/` on the machine that runs it.
 
 ## Headings not matched to body text
 These bookmark entries could not be located in the extracted body text and were not turned into functions. Reported instead of silently dropped.
@@ -72,33 +75,35 @@ flowchart LR
 
 | No. | Function | Area | Requirements | Figures | Unfilled thresholds | Test-ready |
 |---|---|---|---|---|---|---|
-| 1 | Map Screen Overview | Navigation System (If equipped) | 14 | 1 | 0 | o |
-| 2 | Map Screen Operation | Navigation System (If equipped) | 2 | 0 | 0 | - |
-| 3 | Map Screen Buttons Overview | Navigation System (If equipped) | 2 | 1 | 0 | - |
-| 4 | Current Position Display | Navigation System (If equipped) | 2 | 0 | 1 | - |
-| 5 | Location Menu Pop-up | Navigation System (If equipped) | 6 | 1 | 0 | o |
-| 6 | Orientation Of The Map | Navigation System (If equipped) | 12 | 3 | 0 | o |
-| 7 | Gas Station/Parking Lot/Rest Area Icons | Navigation System (If equipped) | 5 | 2 | 0 | - |
-| 8 | Other Information | Navigation System (If equipped) | 8 | 2 | 0 | - |
-| 9 | Main Menu Screen Overview | Navigation System (If equipped) | 13 | 1 | 0 | o |
-| 10 | Search Screen | Navigation System (If equipped) | 30 | 2 | 0 | - |
-| 11 | Favorites Screen | Navigation System (If equipped) | 14 | 2 | 0 | o |
-| 12 | Edit List Screen | Navigation System (If equipped) | 5 | 1 | 0 | - |
-| 13 | Route Calculation Screen | Navigation System (If equipped) | 7 | 1 | 0 | - |
-| 14 | Route Guidance Screen | Navigation System (If equipped) | 26 | 4 | 0 | - |
-| 15 | Current Route Screen | Navigation System (If equipped) | 14 | 1 | 0 | o |
-| 16 | Standard Map Icon | Navigation System (If equipped) | 13 | 1 | 0 | - |
-| 17 | Typical Voice Guidance Prompts | Navigation System (If equipped) | 5 | 0 | 0 | - |
-| 18 | Navigation Settings | Navigation System (If equipped) | 0 | 0 | 0 | o |
-| 19 | Navigation Settings Screen | Navigation System (If equipped) | 11 | 1 | 0 | - |
-| 20 | GPS (Global Positioning System) | Navigation System (If equipped) | 2 | 0 | 0 | - |
-| 21 | Limitations Of The Navigation System | Navigation System (If equipped) | 31 | 0 | 3 | - |
-| 22 | Map Data | Navigation System (If equipped) | 3 | 0 | 0 | - |
-| 23 | Regarding Roads And Place Name Data | Navigation System (If equipped) | 1 | 0 | 0 | - |
-| 24 | SUBARU Map Update | Navigation System (If equipped) | 4 | 0 | 1 | - |
-| 25 | Using A USB Memory Device | Navigation System (If equipped) | 7 | 1 | 0 | o |
-| 26 | Using Wi-Fi® | Navigation System (If equipped) | 2 | 0 | 0 | o |
+| 1 | [Map Screen Overview](/specifications/subaru/outback-2025/ivi/file/1-map-screen-overview.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 14 | 1 | 0 | o |
+| 2 | [Map Screen Operation](/specifications/subaru/outback-2025/ivi/file/2-map-screen-operation.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | - |
+| 3 | [Map Screen Buttons Overview](/specifications/subaru/outback-2025/ivi/file/3-map-screen-buttons-overview.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 1 | 0 | - |
+| 4 | [Current Position Display](/specifications/subaru/outback-2025/ivi/file/4-current-position-display.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 1 | - |
+| 5 | [Location Menu Pop-up](/specifications/subaru/outback-2025/ivi/file/5-location-menu-pop-up.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 6 | 1 | 0 | o |
+| 6 | [Orientation Of The Map](/specifications/subaru/outback-2025/ivi/file/6-orientation-of-the-map.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 12 | 3 | 0 | o |
+| 7 | [Gas Station/Parking Lot/Rest Area Icons](/specifications/subaru/outback-2025/ivi/file/7-gas-station-parking-lot-rest-area-icons.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 5 | 2 | 0 | - |
+| 8 | [Other Information](/specifications/subaru/outback-2025/ivi/file/8-other-information.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 8 | 2 | 0 | - |
+| 9 | [Main Menu Screen Overview](/specifications/subaru/outback-2025/ivi/file/9-main-menu-screen-overview.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 13 | 1 | 0 | o |
+| 10 | [Search Screen](/specifications/subaru/outback-2025/ivi/file/10-search-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 30 | 2 | 0 | - |
+| 11 | [Favorites Screen](/specifications/subaru/outback-2025/ivi/file/11-favorites-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 14 | 2 | 0 | o |
+| 12 | [Edit List Screen](/specifications/subaru/outback-2025/ivi/file/12-edit-list-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 5 | 1 | 0 | - |
+| 13 | [Route Calculation Screen](/specifications/subaru/outback-2025/ivi/file/13-route-calculation-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 7 | 1 | 0 | - |
+| 14 | [Route Guidance Screen](/specifications/subaru/outback-2025/ivi/file/14-route-guidance-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 26 | 4 | 0 | - |
+| 15 | [Current Route Screen](/specifications/subaru/outback-2025/ivi/file/15-current-route-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 14 | 1 | 0 | o |
+| 16 | [Standard Map Icon](/specifications/subaru/outback-2025/ivi/file/16-standard-map-icon.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 13 | 1 | 0 | - |
+| 17 | [Typical Voice Guidance Prompts](/specifications/subaru/outback-2025/ivi/file/17-typical-voice-guidance-prompts.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 5 | 0 | 0 | - |
+| 18 | [Navigation Settings](/specifications/subaru/outback-2025/ivi/file/18-navigation-settings.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 0 | 0 | 0 | o |
+| 19 | [Navigation Settings Screen](/specifications/subaru/outback-2025/ivi/file/19-navigation-settings-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 11 | 1 | 0 | - |
+| 20 | [GPS (Global Positioning System)](/specifications/subaru/outback-2025/ivi/file/20-gps-global-positioning-system.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | - |
+| 21 | [Limitations Of The Navigation System](/specifications/subaru/outback-2025/ivi/file/21-limitations-of-the-navigation-system.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 31 | 0 | 3 | - |
+| 22 | [Map Data](/specifications/subaru/outback-2025/ivi/file/22-map-data.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 3 | 0 | 0 | - |
+| 23 | [Regarding Roads And Place Name Data](/specifications/subaru/outback-2025/ivi/file/23-regarding-roads-and-place-name-data.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 1 | 0 | 0 | - |
+| 24 | [SUBARU Map Update](/specifications/subaru/outback-2025/ivi/file/24-subaru-map-update.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 4 | 0 | 1 | - |
+| 25 | [Using A USB Memory Device](/specifications/subaru/outback-2025/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 7 | 1 | 0 | o |
+| 26 | [Using Wi-Fi®](/specifications/subaru/outback-2025/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
+
 
 
 

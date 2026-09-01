@@ -13,3 +13,6 @@
 | 2 | <span class="req-label">GPS (Global Positioning System)</span>The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors. | constraint | p.183 / text |
 <!-- GENERATED:END function=dc91ee6d82a1 -->
 
+
+
+

@@ -63,3 +63,6 @@ flowchart TD
 | 6 | <span class="req-label">Step -</span>Icons will be displayed on the map to indicate registered points. | capability | p.171 / bullet |
 <!-- GENERATED:END function=d430a9e07e0c -->
 
+
+
+

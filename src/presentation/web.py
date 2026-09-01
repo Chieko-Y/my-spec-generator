@@ -25,14 +25,14 @@ from application.use_cases import (
 )
 from domain.manual_parsing import ConfirmedChapter
 from domain.model import ParameterStatus, TermCategory
-from domain.overlay import FigureElement, GlossaryTerm
+from domain.overlay import FigureElement, GlossaryTerm, ManualWording
 from domain.slug import slugify
 from domain.vehicle_catalog import MAKERS, MODELS_BY_MAKER
 
 from .composition import build_use_cases
 from infrastructure import settings
 from infrastructure.markdown_publisher import combined_markdown
-from infrastructure.markdown_view import render_markdown_to_html
+from infrastructure.markdown_view import highlight_glossary_terms, render_markdown_to_html
 
 APP_NAME = "Owner's Manual Spec Generator"
 
@@ -453,6 +453,11 @@ def _license_ok(manual_id: str) -> bool:
     return is_publishable_license(license_state)
 
 
+def _manual_maker(manual_id: str) -> str:
+    row = uc.source_registry.get(manual_id)
+    return (row or {}).get("maker") or ""
+
+
 @app.get("/specifications", response_class=HTMLResponse)
 def specifications_page(request: Request):
     # One row per registered manual, linking straight to its unified spec view
@@ -548,7 +553,9 @@ def _view_combined_spec(request: Request, manual_id: str) -> HTMLResponse:
     if spec is None:
         raise HTTPException(404, "nothing published yet for this manual — publish at least one chapter first")
 
-    html = render_markdown_to_html(combined_markdown(spec))
+    terms = uc.load_glossary()
+    html = render_markdown_to_html(combined_markdown(spec, terms))
+    html = highlight_glossary_terms(html, terms, spec.maker)
     return _render_spec_view(request, manual_id, html, chapter=None, current_file=None)
 
 
@@ -584,6 +591,7 @@ def _view_published_file(request: Request, manual_id: str, chapter: str, filenam
         raise HTTPException(404, "not published yet — run generate then publish for this chapter")
 
     html = render_markdown_to_html(path.read_text(encoding="utf-8"))
+    html = highlight_glossary_terms(html, uc.load_glossary(), _manual_maker(manual_id))
     return _render_spec_view(request, manual_id, html, chapter=chapter, current_file=filename)
 
 
@@ -770,25 +778,48 @@ def add_screen_element(
 @app.get("/glossary", response_class=HTMLResponse)
 def glossary_page(request: Request):
     terms = uc.load_glossary()
-    return _render(request, "glossary.html", "glossary", terms=terms, categories=list(TermCategory))
+    by_category: dict[TermCategory, list] = {c: [] for c in TermCategory}
+    for t in terms:
+        by_category[t.category].append(t)
+    groups = [{"category": c, "terms": ts} for c, ts in by_category.items() if ts]
+    # Only makers that actually have a manual registered -- the maker picker on
+    # this form is for scoping a wording to one of THOSE, not the full 36-maker
+    # catalog the Manuals tab uses to register a new source.
+    registered_makers = sorted({s["maker"] for s in uc.source_registry.list_sources() if s.get("maker")})
+    return _render(
+        request, "glossary.html", "glossary",
+        groups=groups, categories=list(TermCategory), registered_makers=registered_makers,
+    )
 
 
 @app.post("/glossary")
 def add_term(
     in_house_term: str = Form(...),
+    meaning: str = Form(""),
     category: str = Form(...),
     manual_wordings: str = Form(...),
     evidence: str = Form(...),
+    filled_by: str = Form(...),
+    notes: str = Form(""),
 ):
     import hashlib
 
     term_id = hashlib.sha256(in_house_term.encode("utf-8")).hexdigest()[:12]
-    wordings = [w.strip() for w in manual_wordings.split(",") if w.strip()]
+    # One wording per line, "<text>" or "<text> | <maker>" (maker omitted = every
+    # maker) -- matches the original app's own registration form shape.
+    wordings = []
+    for line in manual_wordings.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        text, _, maker = line.partition("|")
+        wordings.append(ManualWording(text=text.strip(), maker=maker.strip().lower()))
     try:
         uc.set_term(
             GlossaryTerm(
-                term_id=term_id, in_house_term=in_house_term, category=TermCategory(category),
-                manual_wordings=wordings, evidence=evidence,
+                term_id=term_id, in_house_term=in_house_term, meaning=meaning,
+                category=TermCategory(category), manual_wordings=wordings,
+                evidence=evidence, filled_by=filled_by, notes=notes,
             )
         )
     except (ValueError, ValidationError) as e:

@@ -22,3 +22,6 @@
 | 2 | <span class="req-label">Step -</span>Press the - side to decrease the volume. | capability | p.77 / bullet |
 | 3 | <span class="req-label">Using the phone switch/microphone</span>Microphone The microphone is used when talking on the phone. | constraint | p.77 / text |
 <!-- GENERATED:END function=f69afd6c062b -->
+
+
+

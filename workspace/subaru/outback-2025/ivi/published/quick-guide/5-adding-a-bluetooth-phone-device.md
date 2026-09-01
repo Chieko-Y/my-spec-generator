@@ -27,3 +27,6 @@
 | 2 | <span class="req-label">Adding A Bluetooth Phone/Device</span>Adding from the Adding from the Bluetooth audio screen settings screen. | capability | p.24 / text |
 <!-- GENERATED:END function=ced471fbdeea -->
 
+
+
+

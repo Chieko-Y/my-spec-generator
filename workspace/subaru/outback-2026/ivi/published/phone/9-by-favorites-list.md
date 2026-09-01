@@ -37,3 +37,6 @@ flowchart TD
 | 4 | <span class="req-label">Step -</span>When “Sync” is set to on, favorites is downloaded automatically. (→P.45). | capability | p.80 / bullet |
 | 5 | <span class="req-label">Step -</span>The order of the phonebook list can be sorted by first name or last name. (→P.45). | capability | p.80 / bullet |
 <!-- GENERATED:END function=28b77a7d6b88 -->
+
+
+

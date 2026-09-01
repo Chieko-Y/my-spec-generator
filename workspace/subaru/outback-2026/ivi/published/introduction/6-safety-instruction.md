@@ -43,3 +43,6 @@ Filled: 0 / unfilled: 1
 | 2 | <span class="req-label">Safety instruction</span>While driving, listen to the voice instructions as much as possible and glance at the screen briefly and only when it is safe. However, do not totally rely on voice guidance. Use it just for reference. If the system cannot determine the current position correctly, there is a possibility of incorrect, late, or non-voice guidance. | constraint | p.11 / text |
 | 3 | <span class="req-label">Safety instruction</span>This system cannot warn about such things as the safety of an area, condition of streets, and availability of emergency services. If unsure about the safety of an area, do not drive into it. Under no circumstances is this system a substitute for the driver’s personal judgement. | constraint | p.11 / text |
 <!-- GENERATED:END function=9fca8af24e52 -->
+
+
+

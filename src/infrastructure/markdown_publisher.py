@@ -13,8 +13,9 @@ import html
 import re
 from pathlib import Path
 
-from domain import mermaid
+from domain import glossary, mermaid
 from domain.model import ManualSpec, ParameterStatus
+from domain.overlay import GlossaryTerm
 from domain.profile import SLOT_DISPLAY
 
 from .repositories import slugify
@@ -66,6 +67,51 @@ def _threshold_table(thresholds) -> str:
         rows.append(
             f"| {t.threshold_id} | {_esc(t.matching_text)} | {t.kind} | {t.unit or '—'} | "
             f"{value} | {t.status.value} | {evidence} | {filled_by} |"
+        )
+    return "\n".join(rows)
+
+
+def _manual_body_text(spec: ManualSpec) -> str:
+    """Every piece of real manual-quoted ("Copied from OM") text this spec
+    carries, joined into one string for glossary.annotate to search — the same
+    kind of text a reviewer would be reading when they registered a term's
+    evidence in the first place."""
+    pieces: list[str] = []
+    for f in spec.functions:
+        for r in f.requirements:
+            pieces.append(r.text)
+            if r.previous_text:
+                pieces.append(r.previous_text)
+        pieces.extend(step.text for step in f.procedure)
+        pieces.extend(fig.caption_text for fig in f.figures if fig.caption_text)
+    return "\n".join(pieces)
+
+
+def _glossary_table(spec: ManualSpec, terms: list[GlossaryTerm]) -> str:
+    if not terms:
+        return ""
+    matches = glossary.annotate(_manual_body_text(spec), terms, maker=spec.maker)
+    if not matches:
+        return ""
+    by_id = {t.term_id: t for t in terms}
+    hits: dict[str, int] = {}
+    wordings: dict[str, list[str]] = {}
+    for m in matches:
+        hits[m.term_id] = hits.get(m.term_id, 0) + m.count
+        seen = wordings.setdefault(m.term_id, [])
+        if m.manual_wording not in seen:
+            seen.append(m.manual_wording)
+
+    rows = [
+        "| In-house term | Category | Wording in the manual | Hits | Evidence |",
+        "|---|---|---|---:|---|",
+    ]
+    for term_id, count in sorted(hits.items(), key=lambda kv: -kv[1]):
+        term = by_id[term_id]
+        wording_cell = ", ".join(f"`{w}`" for w in wordings[term_id])
+        rows.append(
+            f"| {_esc(term.in_house_term)} | {term.category.value} | {wording_cell} | "
+            f"{count} | {_esc(term.evidence)} |"
         )
     return "\n".join(rows)
 
@@ -173,7 +219,18 @@ def _function_markdown(function, manual_id: str) -> str:
     return "\n".join(lines)
 
 
-def _index_markdown(spec: ManualSpec) -> str:
+def _index_markdown(
+    spec: ManualSpec, terms: list[GlossaryTerm], *, combined: bool, chapter_slug: str | None = None
+) -> str:
+    # Functions table row links jump straight to that function's own published
+    # page (_function_filename, a separate file from this index). In a
+    # per-chapter README every row shares the same chapter_slug (given by the
+    # caller) and chapter_number is still the original, so _function_filename
+    # gives the right on-disk name directly. In the combined (whole-manual)
+    # view chapter_number has been renumbered to avoid collisions across
+    # chapters (see load_combined_spec) and no longer matches the real
+    # filename, so FunctionSpec.published_href (set only there) is used as-is
+    # instead of being recomputed here.
     counts = spec.counts()
     lines = [
         f"# {_esc(spec.display_title)} — Presumed specification",
@@ -196,9 +253,29 @@ def _index_markdown(spec: ManualSpec) -> str:
         mermaid.threshold_pie(counts["thresholds_filled"], counts["thresholds_unfilled"]),
         "",
         "## Figures in the manual",
-        f"{counts['figures']} figure area(s) detected.",
+        "",
+        f"- Figures: **{counts['figures']}** / images rendered: **{counts['figures']}**",
+        "",
+        "Each image is a rendering of the corresponding area of the original PDF. "
+        "**Images are not kept in the repository** (they are copies of another "
+        "company's manual); `publish` creates them under `../figures/` on the "
+        "machine that runs it.",
         "",
     ]
+
+    glossary_table = _glossary_table(spec, terms)
+    if glossary_table:
+        lines.append("## Glossary (registered by a reviewer)")
+        lines.append("")
+        lines.append(
+            "How wording in the manual maps to the in-house term. **The original "
+            "text is not rewritten** — the mapping is only annotated here. "
+            "Register terms on the Glossary screen. Evidence (why the mapping "
+            "holds) is required."
+        )
+        lines.append("")
+        lines.append(glossary_table)
+        lines.append("")
 
     if spec.meta.get("unmatched_headings"):
         lines.append("## Headings not matched to body text")
@@ -218,49 +295,39 @@ def _index_markdown(spec: ManualSpec) -> str:
     lines.append("|---|---|---|---|---|---|---|")
     for f in spec.functions:
         unfilled = sum(1 for t in f.all_thresholds if t.status == ParameterStatus.UNFILLED)
+        link = (
+            f.published_href
+            if combined
+            else f"/specifications/{spec.manual_id}/file/{_function_filename(f)}?chapter={chapter_slug}"
+        )
         lines.append(
-            f"| {f.chapter_number} | {_esc(f.title)} | {_esc(f.area)} | {len(f.requirements)} | "
+            f"| {f.chapter_number} | [{_esc(f.title)}]({link}) | {_esc(f.area)} | {len(f.requirements)} | "
             f"{len(f.figures)} | {unfilled} | {'o' if f.is_test_ready else '-'} |"
         )
+
     return "\n".join(lines)
 
 
-def combined_markdown(spec: ManualSpec) -> str:
-    """Whole-manual view: the same index summary _index_markdown produces --
-    now over a spec whose .functions is every viewable chapter merged together,
-    so its counts/pie/table are manual-wide totals, not one chapter's -- followed
-    by every function's full detail, one after another, with a divider heading
-    between chapters. Each chapter's own functions all share one FunctionSpec.area
-    value (confirmed against real generated spec.json: every function in one
-    chapter carries that chapter's own display name as `area`), so grouping by
-    `area` here recovers the chapter boundaries without the caller needing to
-    pass them in separately."""
-    parts = [_index_markdown(spec)]
-    grouped: dict[str, list] = {}
-    for f in spec.functions:
-        grouped.setdefault(f.area or "General", []).append(f)
-    for area, functions in grouped.items():
-        parts.append(f"\n---\n\n# {_esc(area)}\n")
-        parts.extend(_function_markdown(f, spec.manual_id) for f in functions)
-    body = "\n\n".join(parts)
-
-    # _function_markdown writes each figure as "../figures/FIG-x.png", a path
-    # meant to be resolved by the browser relative to a per-chapter page at
-    # /specifications/{manual_id}/file/{filename} (one more path segment deep
-    # than manual_id, so ".." lands back on manual_id -- see the routing
-    # comments in web.py). The combined view is served at
-    # /specifications/{manual_id} itself, one level shallower, where the same
-    # ".." would strip a real segment off manual_id instead. Rewritten to an
-    # absolute path here so it resolves correctly regardless of the viewing
-    # page's own depth.
-    return body.replace("](../figures/", f"](/specifications/{spec.manual_id}/figures/")
+def combined_markdown(spec: ManualSpec, terms: list[GlossaryTerm]) -> str:
+    """Whole-manual view: the same index summary _index_markdown produces, over
+    a spec whose .functions is every viewable chapter merged together, so its
+    counts/pie/table/tree are manual-wide totals, not one chapter's. Stays a
+    single index/summary page -- it used to also re-print every function's
+    full markdown inline below the table, one after another; dropped
+    (2026-09-01) since the Functions table already links each row to that
+    function's own already-published page, and re-printing everything inline
+    on top of that made the page very tall and slow to scroll to the bottom
+    of for no reason."""
+    return _index_markdown(spec, terms, combined=True)
 
 
 class MarkdownSpecPublisher:
     def __init__(self, workspace_dir: Path):
         self.workspace_dir = Path(workspace_dir)
 
-    def publish(self, spec: ManualSpec, chapter_slug: str, allow_restricted: bool) -> list[str]:
+    def publish(
+        self, spec: ManualSpec, chapter_slug: str, allow_restricted: bool, terms: list[GlossaryTerm] = ()
+    ) -> list[str]:
         published_dir = self.workspace_dir / spec.manual_id / "published" / chapter_slug
         published_dir.mkdir(parents=True, exist_ok=True)
 
@@ -277,7 +344,11 @@ class MarkdownSpecPublisher:
             written.append(str(path))
 
         readme_path = published_dir / "README.md"
-        readme_content = _wrap_generated("index", _index_markdown(spec), readme_path)
+        readme_content = _wrap_generated(
+            "index",
+            _index_markdown(spec, list(terms), combined=False, chapter_slug=chapter_slug),
+            readme_path,
+        )
         readme_path.write_text(readme_content, encoding="utf-8")
         written.append(str(readme_path))
 

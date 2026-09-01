@@ -21,3 +21,6 @@
 | 5 | <span class="req-label">Edit List Screen</span>Select to select all items. Select again to deselect all items. | capability | p.172 / text |
 <!-- GENERATED:END function=87e88702083a -->
 
+
+
+

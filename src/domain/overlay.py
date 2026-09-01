@@ -45,18 +45,35 @@ class FigureElement:
 
 
 @dataclass
+class ManualWording:
+    text: str
+    # "" means "used by every maker"; a real value (e.g. "toyota") scopes this
+    # one wording to that maker only -- two terms can then both legitimately
+    # claim the same printed word if each is scoped to a different maker (the
+    # original's own real example: "Touch" is Toyota's word for the same
+    # operation GM also happens to print as "Touch" -- not restricted per
+    # maker there, on purpose, but a Honda-only abbreviation like "HFL" is).
+    maker: str = ""
+
+
+@dataclass
 class GlossaryTerm:
     term_id: str
     in_house_term: str
+    meaning: str
     category: TermCategory
-    manual_wordings: list[str]
+    manual_wordings: list[ManualWording]
     evidence: str
+    filled_by: str
+    notes: str = ""
 
     def __post_init__(self) -> None:
         if not self.manual_wordings:
             raise ValueError("GlossaryTerm requires at least one manual wording (alias)")
         if not self.evidence:
             raise ValueError("GlossaryTerm requires evidence")
+        if not self.filled_by:
+            raise ValueError("GlossaryTerm requires filled_by")
 
 
 @dataclass

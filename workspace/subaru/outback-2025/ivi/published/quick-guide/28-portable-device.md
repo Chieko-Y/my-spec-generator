@@ -22,3 +22,6 @@
 | 3 | <span class="req-label">Portable Device</span>Depending on the audio source, several items from these categories are displayed in a list. | capability | p.59 / text |
 <!-- GENERATED:END function=c7354a95c02b -->
 
+
+
+

@@ -14,3 +14,6 @@
 | 3 | <span class="req-label">Symbols used in illustrations</span>Arrows indicating operations. | capability | p.6 / text |
 | 4 | <span class="req-label">Symbols used in illustrations</span>Indicates the action (pressing, turning, etc.) used to operate switches and other devices. | capability | p.6 / text |
 <!-- GENERATED:END function=6ca5be67099a -->
+
+
+

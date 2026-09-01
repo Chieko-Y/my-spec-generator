@@ -23,3 +23,6 @@
 | 2 | <span class="req-label">Step -</span>This sign indicates a situation in which incorrect handling through disregard of written information might result in personal injury or damage to property. | capability | p.5 / bullet |
 | 3 | <span class="req-label">Step -</span>Useful information for the user is described. | capability | p.5 / bullet |
 <!-- GENERATED:END function=58a4a0bf94b9 -->
+
+
+

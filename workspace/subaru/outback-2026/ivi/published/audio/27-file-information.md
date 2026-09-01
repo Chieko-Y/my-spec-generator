@@ -43,3 +43,6 @@
 | 2 | <span class="req-label">Step -</span>MP3 files are compatible with the ID3 Tag Ver. 1.0, Ver. 1.1, Ver. 2.2 and Ver. 2.3 formats. This system cannot display folder name, file name and artist name in other formats. | constraint | p.114 / bullet |
 <!-- GENERATED:END function=086a1af648b8 -->
 
+
+
+

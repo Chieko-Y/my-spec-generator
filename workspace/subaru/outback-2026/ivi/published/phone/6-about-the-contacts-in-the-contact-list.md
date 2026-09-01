@@ -17,3 +17,6 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The following data is stored for every registered phone. When another phone is connected, the following registered data cannot be read: - Contact data - Call history data - Favorites data - All phone settings. | constraint | p.78 / bullet |
 <!-- GENERATED:END function=a823e232a672 -->
+
+
+

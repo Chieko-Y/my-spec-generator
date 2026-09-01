@@ -26,3 +26,6 @@
 | 7 | <span class="req-label">With A Bluetooth Phone/Device</span>If unable to pair, check whether your Bluetooth phone/device is compatible with the system. | capability | p.23 / text |
 <!-- GENERATED:END function=f7cb3194f8a8 -->
 
+
+
+

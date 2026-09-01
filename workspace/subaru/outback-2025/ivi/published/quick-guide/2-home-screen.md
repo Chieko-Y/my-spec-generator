@@ -47,3 +47,6 @@
 | 10 | <span class="req-label">Home Screen</span>Frequently used functions and operations can be added to the home screen. P.77 Button positions can be changed freely. P.78. | capability | p.21 / text |
 <!-- GENERATED:END function=1173e3d1d4a6 -->
 
+
+
+

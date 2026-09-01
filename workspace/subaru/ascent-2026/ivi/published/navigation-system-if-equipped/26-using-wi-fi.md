@@ -41,3 +41,6 @@ flowchart TD
 | 2 | <span class="req-label">Using Wi-Fi®</span>(Automatic Update). | capability | p.188 / text |
 <!-- GENERATED:END function=00ab97eb39c3 -->
 
+
+
+

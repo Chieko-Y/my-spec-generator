@@ -62,3 +62,6 @@
 | 5 | <span class="req-label">Step -</span>If the specifications or profile of the connected Bluetooth device is lower than recommended or not compatible, the Bluetooth device may not function properly. | capability | p.107 / bullet |
 <!-- GENERATED:END function=5584790bd13c -->
 
+
+
+

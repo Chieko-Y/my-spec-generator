@@ -40,3 +40,6 @@ flowchart TD
 | 1 | <span class="req-label">Location Menu Pop-up</span>NOTE l The scale of the map screen can also be changed with the double touch or pinch operation. (→P.45) l If the map scale has been changed after moving the map, the map scale will return to previous scale when the map is returned to the current position. l The automatic zoom function may not operate if the map scale is adjusted manually during route guidance. To reenable the automatic zoom function, change the orientation of the map screen. (→P.161). | constraint | p.160 / text |
 <!-- GENERATED:END function=94bc31e5480c -->
 
+
+
+

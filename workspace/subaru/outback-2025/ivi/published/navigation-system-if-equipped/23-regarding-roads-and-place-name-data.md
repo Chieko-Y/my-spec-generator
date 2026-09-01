@@ -12,3 +12,5 @@
 | 1 | <span class="req-label">Regarding Roads And Place Name Data</span>When maps are created, land surveys are conducted and information on road improvements and reopening is collected to provide the most accurate information possible. However, modifications to roads, place names and facilities may be carried out at any time. Consequently, we cannot guarantee that map data contains no errors in road positions, configuration and names, or in facility names. | constraint | p.223 / text |
 <!-- GENERATED:END function=8664d69c3209 -->
 
+
+

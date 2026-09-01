@@ -25,3 +25,6 @@
 | 9 | <span class="req-label">Route Calculation Screen</span>NOTE l The route for returning may not be the same as that for going. l The route guidance to the destination may not be the shortest route or a route without traffic congestion. l Route guidance may not be available if there is no road data for the specified location. l If a destination that is not located on a road is set, the vehicle will be guided to the point on a road nearest to the destination. The road nearest to the selected point is set as the destination. | constraint | p.173 / text |
 <!-- GENERATED:END function=1387f7a81882 -->
 
+
+
+

@@ -18,3 +18,6 @@
 | 2 | <span class="req-label">Map Screen Buttons Overview</span>Select to change the scale of the map screen. (→P.160). | capability | p.159 / text |
 <!-- GENERATED:END function=1ac4e177a544 -->
 
+
+
+

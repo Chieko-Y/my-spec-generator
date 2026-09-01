@@ -29,3 +29,6 @@
 | 13 | <span class="req-label">Standard Map Icon</span>You have arrived at your waypoint. | capability | p.179 / text |
 <!-- GENERATED:END function=e61003cc8210 -->
 
+
+
+

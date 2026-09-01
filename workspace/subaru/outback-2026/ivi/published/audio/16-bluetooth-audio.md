@@ -19,3 +19,6 @@
 | 1 | <span class="req-label">Step -</span>When Apple CarPlay/Android Auto is used, Bluetooth audio of the same Bluetooth phone/device cannot be used. | constraint | p.104 / bullet |
 <!-- GENERATED:END function=6ec54feab39d -->
 
+
+
+

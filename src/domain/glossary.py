@@ -18,20 +18,25 @@ class GlossaryMatch:
     count: int
 
 
-def annotate(text: str, terms: list[GlossaryTerm]) -> list[GlossaryMatch]:
-    """Return the match positions/counts only. Does not alter `text`."""
+def annotate(text: str, terms: list[GlossaryTerm], maker: str = "") -> list[GlossaryMatch]:
+    """Return the match counts only. Does not alter `text`. A wording scoped to
+    one maker (ManualWording.maker) is only counted when `maker` matches it
+    (case-insensitive); a wording with no maker (used by every maker) always
+    counts. Pass maker="" to count every wording regardless of scope."""
     matches: list[GlossaryMatch] = []
     for term in terms:
         for wording in term.manual_wordings:
-            if not wording:
+            if not wording.text:
                 continue
-            count = len(re.findall(re.escape(wording), text, flags=re.IGNORECASE))
+            if maker and wording.maker and wording.maker.lower() != maker.lower():
+                continue
+            count = len(re.findall(re.escape(wording.text), text, flags=re.IGNORECASE))
             if count:
                 matches.append(
                     GlossaryMatch(
                         term_id=term.term_id,
                         in_house_term=term.in_house_term,
-                        manual_wording=wording,
+                        manual_wording=wording.text,
                         count=count,
                     )
                 )

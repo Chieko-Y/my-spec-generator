@@ -15,3 +15,6 @@
 | 4 | <span class="req-label">Functions available using a Bluetooth phone</span>Message function Using the Bluetooth phone message function: →P.83. | capability | p.75 / text |
 | 5 | <span class="req-label">Functions available using a Bluetooth phone</span>Setting up a phone Setting the Bluetooth phone/device: →P.45. | capability | p.75 / text |
 <!-- GENERATED:END function=807340c4f66d -->
+
+
+

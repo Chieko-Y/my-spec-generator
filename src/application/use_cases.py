@@ -808,7 +808,9 @@ class UseCases:
         if spec is None:
             raise PublishBlockedError(f"no generated spec for {manual_id} ({chapter_slug}); run generate first")
 
-        return self.spec_publisher.publish(spec, chapter_slug=chapter_slug, allow_restricted=allow_restricted)
+        return self.spec_publisher.publish(
+            spec, chapter_slug=chapter_slug, allow_restricted=allow_restricted, terms=self.glossary_repository.load_all()
+        )
 
     def list_chapters(self, manual_id: str) -> list[str]:
         """Chapter slugs that have a generated spec for this manual_id — what the
@@ -878,15 +880,23 @@ class UseCases:
         for existing in terms:
             if existing.term_id == term.term_id:
                 continue
-            overlap = set(w.lower() for w in existing.manual_wordings) & set(
-                w.lower() for w in term.manual_wordings
-            )
-            if overlap:
-                # F-3-7: the same manual wording cannot be claimed by two in-house terms —
-                # which one is meant is a human judgement call, not a machine one.
-                raise ValidationError(
-                    f"wording {sorted(overlap)} already registered under {existing.in_house_term!r}"
-                )
+            for a in existing.manual_wordings:
+                for b in term.manual_wordings:
+                    if a.text.lower() != b.text.lower():
+                        continue
+                    # A wording scoped to one maker (e.g. "HFL" for honda only)
+                    # doesn't collide with the same word scoped to a different
+                    # maker -- only an actual overlap in maker scope is
+                    # ambiguous (either side blank means "every maker", so it
+                    # always overlaps).
+                    if a.maker and b.maker and a.maker.lower() != b.maker.lower():
+                        continue
+                    # F-3-7: the same manual wording cannot be claimed by two
+                    # in-house terms — which one is meant is a human judgement
+                    # call, not a machine one.
+                    raise ValidationError(
+                        f"wording {a.text!r} already registered under {existing.in_house_term!r}"
+                    )
         terms = [t for t in terms if t.term_id != term.term_id]
         terms.append(term)
         self.glossary_repository.save_all(terms)
@@ -926,8 +936,15 @@ class UseCases:
         if not chapter_specs:
             return None
         functions = [
-            replace(f, chapter_number=f"{chapter_index}.{f.chapter_number}")
-            for chapter_index, (_slug, spec) in enumerate(chapter_specs, start=1)
+            replace(
+                f,
+                chapter_number=f"{chapter_index}.{f.chapter_number}",
+                published_href=(
+                    f"/specifications/{manual_id}/file/{f.chapter_number}-{slugify(f.title)}.md"
+                    f"?chapter={slug}"
+                ),
+            )
+            for chapter_index, (slug, spec) in enumerate(chapter_specs, start=1)
             for f in spec.functions
         ]
         first = chapter_specs[0][1]

@@ -31,3 +31,6 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.80 / bullet |
 | 2 | <span class="req-label">Step -</span>Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone. | capability | p.80 / bullet |
 <!-- GENERATED:END function=b1554f940f00 -->
+
+
+

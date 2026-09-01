@@ -46,3 +46,6 @@ flowchart TD
 | 14 | <span class="req-label">Current Route Screen</span>Play Route Preview (Play Route Preview): Select Play Route Preview t o e n t e r route preview mode. (Play Route Preview)/ (→ P .1 7 9 ) Stop Route Preview Stop Route Preview (Stop Route Preview) (Stop Route Preview): Select to exit route preview mode. | capability | p.178 / text |
 <!-- GENERATED:END function=d508f963e83c -->
 
+
+
+

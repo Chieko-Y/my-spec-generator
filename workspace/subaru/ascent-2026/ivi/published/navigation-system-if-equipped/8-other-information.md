@@ -32,3 +32,6 @@
 | 4 | <span class="req-label">Step -</span>(Ignore): Select to delete the message. ● ● Pop-up screens can be turned on/off using the “Periodic Rest Notification” setting on the general settings screen. (→P.66). | capability | p.164 / bullet |
 <!-- GENERATED:END function=d218bff863dd -->
 
+
+
+

@@ -105,7 +105,9 @@ class GlossaryRepository(Protocol):
 
 
 class SpecPublisher(Protocol):
-    def publish(self, spec: ManualSpec, chapter_slug: str, allow_restricted: bool) -> list[str]: ...
+    def publish(
+        self, spec: ManualSpec, chapter_slug: str, allow_restricted: bool, terms: list[GlossaryTerm]
+    ) -> list[str]: ...
 
 
 class FigureRenderer(Protocol):

@@ -53,3 +53,6 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the cellular phone used for receiving messages, or its registration status with the system, some information may not be displayed. | capability | p.85 / bullet |
 <!-- GENERATED:END function=347befe594c3 -->
+
+
+

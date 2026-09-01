@@ -25,3 +25,6 @@
 | 3 | <span class="req-label">Managing A Bluetooth Phone/Device</span>Delete the device Add the device. | capability | p.47 / text |
 <!-- GENERATED:END function=19219705fa35 -->
 
+
+
+

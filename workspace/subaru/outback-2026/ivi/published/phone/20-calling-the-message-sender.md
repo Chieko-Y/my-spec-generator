@@ -30,3 +30,6 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.86 / bullet |
 <!-- GENERATED:END function=396f0680313c -->
+
+
+

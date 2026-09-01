@@ -34,3 +34,6 @@
 | 1 | <span class="req-label">Gas Station/Parking Lot/Rest Area Icons</span>*: Use of this function may not be possible depending on country and vehicle. Road sections affected by traffic conditions are displayed in a different color on the map, and a small icon representing the type of traffic condition is displayed above the road. | capability | p.163 / text |
 <!-- GENERATED:END function=edd172cb3c30 -->
 
+
+
+

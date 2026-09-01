@@ -22,3 +22,6 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>In this manual, screen buttons and displays are described as “○○○”. In Owner’s Manuals of some languages, they are described as “○○○ (○○ ○)”. Displays after languages are changed in the settings screen are described as “(○○○)”. | capability | p.12 / bullet |
 <!-- GENERATED:END function=930596c459f4 -->
+
+
+
