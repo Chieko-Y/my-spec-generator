@@ -1,0 +1,17 @@
+<!-- GENERATED:START function=5d1a70b7617d (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+# 3. Audio System Theft Protection
+
+<div class="fn-meta"><b>Function path:</b> Features / Audio System Theft Protection<br><b>Source:</b> printed page 269<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
+
+<p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
+
+## 3-2-1. Service overview
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Audio System Theft Protection</span>The audio system is disabled when it is disconnected from the power source, such as when the battery is disconnected or goes dead. In certain conditions, the system may display a code entry screen. If this occurs, reactivate the audio system. | constraint | p.269 / text |
+| 2 | <span class="req-label">Audio System Theft Protection</span>■Reactivating the audio system 1.Set the power mode to ON. 2.Turn on the audio system. 3.Press and hold the audio system power knob for more than two seconds. uThe audio system is reactivated when the audio control unit establishes a connection with the vehicle control unit. If the control unit fails to recognize the audio unit, you must go to a dealer and have the audio unit checked. | constraint | p.269 / text |
+<!-- GENERATED:END function=5d1a70b7617d -->
+
+
+

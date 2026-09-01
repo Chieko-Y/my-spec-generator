@@ -248,7 +248,15 @@ def _index_markdown(
         f"| Manual ID | {_esc(spec.manual_id)} |",
         "",
         "## Numeric thresholds",
-        f"Filled: {counts['thresholds_filled']} / Unfilled: {counts['thresholds_unfilled']}",
+        "",
+        f"- Thresholds detected: **{counts['thresholds']}**",
+        f"- Filled: **{counts['thresholds_filled']}** / unfilled: **{counts['thresholds_unfilled']}**",
+        f"- Test-ready functions: **{counts['test_ready']} / {counts['functions']}**",
+        "",
+        "The manual states almost no numbers, so a tester fills the thresholds in. "
+        "A function that still has an unfilled threshold cannot become a test "
+        "specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` "
+        "or on the screen.",
         "",
         mermaid.threshold_pie(counts["thresholds_filled"], counts["thresholds_unfilled"]),
         "",

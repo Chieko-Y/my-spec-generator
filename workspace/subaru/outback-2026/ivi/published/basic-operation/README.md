@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 1
+
+- Thresholds detected: **1**
+- Filled: **0** / unfilled: **1**
+- Test-ready functions: **4 / 22**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -37,6 +42,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2026 — basic-operation"]
     ROOT --> A1["Basic operation"]
@@ -89,6 +95,8 @@ flowchart LR
 | 21 | [Voice assistance system operation](/specifications/subaru/outback-2026/ivi/file/21-voice-assistance-system-operation.md?chapter=basic-operation) | Basic operation | 4 | 1 | 0 | o |
 | 22 | [Command list](/specifications/subaru/outback-2026/ivi/file/22-command-list.md?chapter=basic-operation) | Basic operation | 22 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

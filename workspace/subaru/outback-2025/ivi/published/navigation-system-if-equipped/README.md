@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2025/ivi |
 
 ## Numeric thresholds
-Filled: 1 / Unfilled: 5
+
+- Thresholds detected: **6**
+- Filled: **1** / unfilled: **5**
+- Test-ready functions: **9 / 26**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -42,6 +47,7 @@ These bookmark entries could not be located in the extracted body text and were 
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2025 — navigation-system-if-equipped"]
     ROOT --> A1["Navigation System (If equipped)"]
@@ -102,6 +108,8 @@ flowchart LR
 | 25 | [Using A USB Memory Device](/specifications/subaru/outback-2025/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 7 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/outback-2025/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
+
 
 
 

@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 0
+
+- Thresholds detected: **0**
+- Filled: **0** / unfilled: **0**
+- Test-ready functions: **13 / 21**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -37,6 +42,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2026 — phone"]
     ROOT --> A1["Phone"]
@@ -87,6 +93,8 @@ flowchart LR
 | 20 | [Calling the message sender](/specifications/subaru/outback-2026/ivi/file/20-calling-the-message-sender.md?chapter=phone) | Phone | 2 | 0 | 0 | o |
 | 21 | [Displayed on the instrument cluster display](/specifications/subaru/outback-2026/ivi/file/21-displayed-on-the-instrument-cluster-display.md?chapter=phone) | Phone | 1 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

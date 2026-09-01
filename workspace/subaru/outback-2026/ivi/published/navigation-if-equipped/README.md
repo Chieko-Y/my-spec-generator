@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 2 / Unfilled: 2
+
+- Thresholds detected: **4**
+- Filled: **2** / unfilled: **2**
+- Test-ready functions: **6 / 23**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -29,6 +34,7 @@ Each image is a rendering of the corresponding area of the original PDF. **Image
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2026 — navigation-if-equipped"]
     ROOT --> A1["Navigation (if equipped)"]
@@ -83,6 +89,8 @@ flowchart LR
 | 22 | [Limitations of the navigation system](/specifications/subaru/outback-2026/ivi/file/22-limitations-of-the-navigation-system.md?chapter=navigation-if-equipped) | Navigation (if equipped) | 38 | 0 | 2 | - |
 | 23 | [Regarding roads and place name data](/specifications/subaru/outback-2026/ivi/file/23-regarding-roads-and-place-name-data.md?chapter=navigation-if-equipped) | Navigation (if equipped) | 1 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

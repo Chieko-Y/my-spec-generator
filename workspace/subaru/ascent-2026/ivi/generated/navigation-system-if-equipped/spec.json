@@ -3304,31 +3304,18 @@
       ]
     },
     {
-      "function_id": "dc91ee6d82a1",
+      "function_id": "ec4904ae94bd",
       "chapter_number": "20",
-      "title": "GPS (Global Positioning System)",
+      "title": "Regarding Errors In Current Position Display",
       "area": "Navigation System (If equipped)",
-      "function_path": "Navigation System (If equipped) / GPS (Global Positioning System)",
+      "function_path": "Navigation System (If equipped) / Regarding Errors In Current Position Display",
       "pages": [
         183
       ],
       "procedure": [],
       "requirements": [
         {
-          "req_id": "bc8ddb35bd1e",
-          "slot": "overview",
-          "text": "REGARDING ERRORS IN CURRENT POSITION DISPLAY.",
-          "source_text": "REGARDING ERRORS IN CURRENT POSITION DISPLAY",
-          "strength": "capability",
-          "source": "p.183 / text",
-          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM TIPS FOR THE NAVIGATION SYSTEM",
-          "next_step_text": null,
-          "thresholds": [],
-          "change": null,
-          "previous_text": null
-        },
-        {
-          "req_id": "dc607c0a34e4",
+          "req_id": "a7f8349a91e0",
           "slot": "overview",
           "text": "The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors.",
           "source_text": "The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors.",

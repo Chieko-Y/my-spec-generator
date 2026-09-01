@@ -139,6 +139,14 @@ th { background: #f0f1f3; }
   margin-bottom: 12px;
 }
 .dropzone.dragover { border-color: var(--accent); background: #eaf0fe; color: var(--accent); }
+/* Persists after a drop/click finishes (unlike .dragover, which only lasts
+   while dragging) -- a successful drop used to leave the dropzone looking
+   completely unchanged, with the only feedback a small gray status line
+   below it that was easy to miss (reported directly, 2026-09-01). Solid
+   border (not dashed) + green also reads as "done" at a glance, not just on
+   close reading of the text. */
+.dropzone.has-file { border-style: solid; border-color: var(--ok); background: #e8f6ec; color: var(--ok); }
+.dropzone.has-error { border-style: solid; border-color: var(--bad); background: #fdeceb; color: var(--bad); }
 
 label { display: block; font-size: 12px; color: var(--muted); margin: 8px 0 2px; }
 .muted { color: var(--muted); font-size: 12px; }
@@ -204,10 +212,18 @@ code { background: #f0f1f3; padding: 1px 4px; border-radius: 3px; font-size: 12p
    viewport and push everything else down the page, forcing a long scroll just
    to get past it (reported directly, 2026-09-01). Capping pre.mermaid's own
    height and giving IT the scrollbar keeps the diagram browsable without
-   dominating the page; the svg still scales to the container's width first
-   (max-width: 100%), it's only capped taller than that which now scrolls. */
+   dominating the page.
+   The svg itself is deliberately NOT stretched to the container's width
+   anymore (that used to be svg{max-width:100%}) -- mermaid already renders
+   each diagram at a size that fits its own content (e.g. a 2-slice pie chart
+   is naturally small), so forcing it to fill the ~1100px content column blew
+   a simple pie chart up to a comically large size (reported directly, same
+   day as this note). Letting it render at its natural size and only
+   scrolling/cropping via the container when that's bigger than the column
+   fixes both the oversized pie AND keeps a many-node tree diagram's labels
+   legible instead of being squeezed to fit. */
 .pub-doc pre.mermaid { max-width: 100%; max-height: 480px; overflow: auto; }
-.pub-doc pre.mermaid svg { max-width: 100%; height: auto; }
+.pub-doc pre.mermaid svg { max-width: none; height: auto; }
 /* Figures are rendered at ~400dpi so the crop matches the manual's own embedded
    image resolution (reported as too rough before that, 2026-08-25) — but with no
    display size cap, a 1735x1035px PNG rendered at native size blew far past the

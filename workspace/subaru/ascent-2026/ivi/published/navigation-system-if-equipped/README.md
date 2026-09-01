@@ -12,7 +12,12 @@
 | Manual ID | subaru/ascent-2026/ivi |
 
 ## Numeric thresholds
-Filled: 1 / Unfilled: 5
+
+- Thresholds detected: **6**
+- Filled: **1** / unfilled: **5**
+- Test-ready functions: **9 / 26**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -50,6 +55,7 @@ These bookmark entries could not be located in the extracted body text and were 
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Ascent 2026 — navigation-system-if-equipped"]
     ROOT --> A1["Navigation System (If equipped)"]
@@ -72,7 +78,7 @@ flowchart LR
     A1 --> A1F17["17 Typical Voice Guidance Prompts ⚠"]
     A1 --> A1F18["18 Navigation Settings"]
     A1 --> A1F19["19 Navigation Settings Screen ⚠"]
-    A1 --> A1F20["20 GPS (Global Positioning System) ⚠"]
+    A1 --> A1F20["20 Regarding Errors In Current Position Display ⚠"]
     A1 --> A1F21["21 Limitations Of The Navigation System ⚠"]
     A1 --> A1F22["22 Map Data ⚠"]
     A1 --> A1F23["23 Regarding Roads And Place Name Data ⚠"]
@@ -102,7 +108,7 @@ flowchart LR
 | 17 | [Typical Voice Guidance Prompts](/specifications/subaru/ascent-2026/ivi/file/17-typical-voice-guidance-prompts.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 5 | 0 | 0 | - |
 | 18 | [Navigation Settings](/specifications/subaru/ascent-2026/ivi/file/18-navigation-settings.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 0 | 0 | 0 | o |
 | 19 | [Navigation Settings Screen](/specifications/subaru/ascent-2026/ivi/file/19-navigation-settings-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 11 | 1 | 0 | - |
-| 20 | [GPS (Global Positioning System)](/specifications/subaru/ascent-2026/ivi/file/20-gps-global-positioning-system.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | - |
+| 20 | [Regarding Errors In Current Position Display](/specifications/subaru/ascent-2026/ivi/file/20-regarding-errors-in-current-position-display.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 1 | 0 | 0 | - |
 | 21 | [Limitations Of The Navigation System](/specifications/subaru/ascent-2026/ivi/file/21-limitations-of-the-navigation-system.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 31 | 0 | 3 | - |
 | 22 | [Map Data](/specifications/subaru/ascent-2026/ivi/file/22-map-data.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 3 | 0 | 0 | - |
 | 23 | [Regarding Roads And Place Name Data](/specifications/subaru/ascent-2026/ivi/file/23-regarding-roads-and-place-name-data.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 1 | 0 | 0 | - |
@@ -110,6 +116,8 @@ flowchart LR
 | 25 | [Using A USB Memory Device](/specifications/subaru/ascent-2026/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 7 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/ascent-2026/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
+
 
 
 

@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2025/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 0
+
+- Thresholds detected: **0**
+- Filled: **0** / unfilled: **0**
+- Test-ready functions: **0 / 31**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -51,6 +56,7 @@ These bookmark entries could not be located in the extracted body text and were 
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2025 — quick-guide"]
     ROOT --> A1["Quick Guide"]
@@ -121,6 +127,8 @@ flowchart LR
 | 30 | [Settings Screen](/specifications/subaru/outback-2025/ivi/file/30-settings-screen.md?chapter=quick-guide) | Quick Guide | 7 | 11 | 0 | - |
 | 31 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/31-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

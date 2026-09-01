@@ -6,7 +6,7 @@
   <h2>Register a new owner's manual</h2>
 
   <div id="dropzone" class="dropzone">
-    Drag &amp; drop a PDF here, or click to choose a file
+    <span id="dropzoneLabel">Drag &amp; drop a PDF here, or click to choose a file</span>
     <input id="fileInput" type="file" accept="application/pdf" style="display:none">
   </div>
   <div id="uploadStatus" style="font-size:12px;color:#6b6f76;"></div>
@@ -158,6 +158,7 @@
 
 <script>
 const dropzone = document.getElementById('dropzone');
+const dropzoneLabel = document.getElementById('dropzoneLabel');
 const fileInput = document.getElementById('fileInput');
 const status = document.getElementById('uploadStatus');
 const registerBtn = document.getElementById('registerBtn');
@@ -299,6 +300,7 @@ function pickOrOther(selectEl, otherEl, value) {
 
 async function uploadFile(file) {
   if (!file) return;
+  dropzone.classList.remove('has-file', 'has-error');
   status.textContent = 'Uploading ' + file.name + '…';
   const form = new FormData();
   form.append('file', file);
@@ -307,6 +309,8 @@ async function uploadFile(file) {
     if (!res.ok) {
       const err = await res.json().catch(() => ({detail: res.statusText}));
       status.textContent = 'Upload failed: ' + (err.detail || res.statusText);
+      dropzone.classList.add('has-error');
+      dropzoneLabel.textContent = '✗ ' + file.name + ' — upload failed, try again';
       return;
     }
     const data = await res.json();
@@ -333,10 +337,14 @@ async function uploadFile(file) {
     status.textContent = `Read ${data.page_count} page(s), ${data.bookmark_count} bookmark(s). ` +
       (data.identity.maker || data.identity.model ? 'Guessed identity — please confirm the fields below.' : 'Could not guess the identity — please fill in the fields below.') +
       (data.shallow_outline ? ' Warning: bookmarks are shallow; this manual may not split into sections cleanly.' : '');
+    dropzone.classList.add('has-file');
+    dropzoneLabel.textContent = '✓ ' + file.name + ' loaded — drop another PDF to replace it';
     registerBtn.disabled = false;
     registerBtn.textContent = 'Register';
   } catch (e) {
     status.textContent = 'Upload failed: ' + e;
+    dropzone.classList.add('has-error');
+    dropzoneLabel.textContent = '✗ ' + file.name + ' — upload failed, try again';
   }
 }
 

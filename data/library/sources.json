@@ -37,5 +37,18 @@
       "CA"
     ],
     "license_state": "internal_use_permitted"
+  },
+  "honda/pilot-2026/ivi": {
+    "maker": "Honda",
+    "model": "Pilot 2026",
+    "title": "2026 Honda Pilot Owner's Manual (AT902626OMEN)",
+    "local_path": "",
+    "source_url": "",
+    "retrieved_at": "2026-09-01",
+    "markets": [
+      "US",
+      "CA"
+    ],
+    "license_state": "internal_use_permitted"
   }
 }

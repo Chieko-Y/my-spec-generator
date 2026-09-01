@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 2
+
+- Thresholds detected: **2**
+- Filled: **0** / unfilled: **2**
+- Test-ready functions: **10 / 27**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -37,6 +42,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2026 — audio"]
     ROOT --> A1["Audio"]
@@ -99,6 +105,8 @@ flowchart LR
 | 26 | [USB memory device](/specifications/subaru/outback-2026/ivi/file/26-usb-memory-device.md?chapter=audio) | Audio | 3 | 0 | 0 | - |
 | 27 | [File information](/specifications/subaru/outback-2026/ivi/file/27-file-information.md?chapter=audio) | Audio | 17 | 1 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

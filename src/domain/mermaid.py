@@ -41,7 +41,19 @@ def threshold_pie(filled: int, unfilled: int) -> str:
 
 
 def function_tree(spec: ManualSpec) -> str:
-    lines = ["```mermaid", "flowchart LR", f"    ROOT[{label(spec.display_title)}]"]
+    # A manual with many functions makes for many nodes -- at mermaid's default
+    # font size the whole tree renders very large even scaled to fit its own
+    # content (not just "too wide for the page", reported directly 2026-09-01,
+    # after the page-width-stretch issue was already fixed separately). A
+    # smaller font shrinks every node (and so the whole diagram) without
+    # touching the pie chart elsewhere, which has its own default size and
+    # doesn't need this.
+    lines = [
+        "```mermaid",
+        '%%{init: {"themeVariables": {"fontSize": "11px"}}}%%',
+        "flowchart LR",
+        f"    ROOT[{label(spec.display_title)}]",
+    ]
     areas: dict[str, list[FunctionSpec]] = {}
     for function in spec.functions:
         areas.setdefault(function.area or "General", []).append(function)

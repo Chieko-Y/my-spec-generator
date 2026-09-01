@@ -1,0 +1,13 @@
+{
+  "profile_id": "honda_v1",
+  "extends": "generic_v1",
+  "derived_from": "Auto-derived from honda/pilot-2026/ivi via derive_layout -- review before activating.",
+  "layout": {
+    "columns": 2,
+    "section_source": "bookmarks",
+    "header_boundary_pt": 75,
+    "footer_boundary_pt": 450,
+    "figure_min_width_pt": 516.513,
+    "figure_min_height_pt": 298.554
+  }
+}

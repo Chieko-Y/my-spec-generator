@@ -12,7 +12,12 @@
 | Manual ID | subaru/outback-2026/ivi |
 
 ## Numeric thresholds
-Filled: 0 / Unfilled: 2
+
+- Thresholds detected: **2**
+- Filled: **0** / unfilled: **2**
+- Test-ready functions: **0 / 8**
+
+The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
@@ -29,6 +34,7 @@ Each image is a rendering of the corresponding area of the original PDF. **Image
 ## Functions
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
     ROOT["Subaru Outback 2026 — introduction"]
     ROOT --> A1["Introduction"]
@@ -53,6 +59,8 @@ flowchart LR
 | 7 | [How to read this manual](/specifications/subaru/outback-2026/ivi/file/7-how-to-read-this-manual.md?chapter=introduction) | Introduction | 2 | 1 | 0 | - |
 | 8 | [Pictorial index](/specifications/subaru/outback-2026/ivi/file/8-pictorial-index.md?chapter=introduction) | Introduction | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

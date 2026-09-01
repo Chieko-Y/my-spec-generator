@@ -302,6 +302,29 @@ def build_blocks(
         if (next_chapter is None or bookmarks.index(b) < bookmarks.index(next_chapter))
     ]
 
+    if not candidates:
+        # This chapter has zero nested bookmarks of its own -- confirmed against
+        # a real PDF (2026-09-01, Honda Pilot): "Features" spans 124 pages
+        # (p.264-388) with not a single child bookmark between it and the next
+        # top-level chapter, while sibling chapters in the very same PDF (e.g.
+        # "Controls") do have real nested bookmarks. There's nothing to
+        # text-match here, so fall back the same way a running_head-sourced
+        # manual with no bookmarks at all does: try this chapter's own printed
+        # item index first (exact, real page numbers -- see
+        # detect_item_index_entries), and only guess from font size if that
+        # index doesn't exist or doesn't check out. A hard failure for a
+        # chapter a human can clearly see listed right there in the picker was
+        # the wrong call when the manual gives us a real index to read instead.
+        chapter_range = RunningHeadChapter(
+            label=chapter.title, page_start=chapter.page_index, page_end=chapter_end_page
+        )
+        item_index_entries = detect_item_index_entries(lines, chapter.page_index, chapter_end_page)
+        if item_index_entries is not None:
+            indexed = build_blocks_from_item_index(lines, chapter_range, item_index_entries)
+            if indexed is not None:
+                return indexed
+        return build_blocks_from_font_headings(lines, chapter_range)
+
     # Pass 1: resolve where each candidate's own heading line actually starts. The
     # search window is bounded by the *next* candidate (any level) so a heading with a
     # tight, same-page neighbor can't accidentally text-match something further down.
@@ -546,6 +569,17 @@ _RUNNING_HEAD_MAX_LEN = 30
 # English- or maker-specific.
 _HAS_LETTER_RE = re.compile(r"[a-zA-Z]")
 
+# A line starting with "■" is a sub-heading WITHIN a function's own content,
+# not a new function boundary -- confirmed against a real Honda Pilot manual
+# (2026-09-01): every real function heading (e.g. "Audio System Theft
+# Protection", ~13pt) was clean text with no such prefix, while callouts like
+# "■Status Bar" / "■Scan" / "■Selecting an Audio Source" (~11-12pt, still
+# comfortably above the size_ratio threshold on their own) were real
+# UI-element/step headings a reader sees INSIDE one function's own page
+# range, not separate functions -- font size alone couldn't tell the two
+# apart cleanly here, but the marker glyph does.
+_SUBHEADING_MARKER_RE = re.compile(r"^■")
+
 
 @dataclass
 class RunningHeadChapter:
@@ -731,7 +765,9 @@ def build_blocks_from_font_headings(
         (
             l
             for l in chapter_lines
-            if l.size >= body_size * size_ratio and _HAS_LETTER_RE.search(l.text)
+            if l.size >= body_size * size_ratio
+            and _HAS_LETTER_RE.search(l.text)
+            and not _SUBHEADING_MARKER_RE.match(l.text.strip())
         ),
         key=lambda l: (l.page, l.top),
     )
@@ -980,10 +1016,17 @@ def detect_toc_chapters(lines: list[Line], page_count: int) -> list[TocChapterCa
 # no row-clustering is needed, only a per-line regex.
 # ---------------------------------------------------------------------------
 
-_ITEM_INDEX_ENTRY_RE = re.compile(r"^(.+?)[^\w\s]{6,}\s*(\d{1,4})\s*$")
-# 6+ leader characters distinguishes a real dot-leader run from ordinary prose
-# punctuation (an ellipsis is at most 3-4 dots) -- deliberately not "." specific,
-# since this manual's leader is a private-use glyph, not a literal period.
+_ITEM_INDEX_ENTRY_RE = re.compile(r"^(.+?)[^\w\s]{3,}\s*(\d{1,4})\s*$")
+# 3+ leader characters distinguishes a real dot-leader run from ordinary prose
+# punctuation -- deliberately not "." specific, since this manual's leader is a
+# private-use glyph, not a literal period. Originally 6+, but a real Honda
+# Pilot index entry ("Music Playback via Wired Connection...291") only had 3
+# dots -- this index right-aligns the page number in a fixed-width column, so
+# a longer name genuinely leaves less room for the leader than a short one
+# (confirmed 2026-09-01: shorter names on the same page have 20+ dots). Still
+# not 1-2, which would be indistinguishable from ordinary sentence-ending
+# punctuation; _ITEM_INDEX_MIN_ENTRIES below is the other line of defense
+# against an occasional stray false match.
 _ITEM_INDEX_MIN_ENTRIES = 5  # same spirit as _TOC_MIN_CHAPTER_ROWS: a couple of
 # incidental matches could be noise, five is a real list.
 _ITEM_INDEX_NAME_MAX_LEN = 80  # matches _TOC_CHAPTER_NAME_MAX_LEN's reasoning
