@@ -8,18 +8,24 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. → “Manage Devices”"]
-    S3["3. Select the items to be set."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_3["3. Select the items to be set."]
+    S1_1 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.44 / step |
-| 2 | 2 | → “Manage Devices” | p.44 / step |
-| 3 | 3 | Select the items to be set. | p.44 / step |
+| 1 | 3 | Select the items to be set. | p.44 / step |
+
+## 5-2-1. Service overview
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Manage devices settings screen</span>2. → “Manage Devices”. | capability | p.44 / text |
 
 ## 5-2-2. Service requirements
 
@@ -29,6 +35,7 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>Connecting or disconnecting Bluetooth phones/devices: →P.57. | capability | p.44 / bullet |
 | 3 | <span class="req-label">Step -</span>Deleting Bluetooth phones/devices: →P.59. | capability | p.44 / bullet |
 <!-- GENERATED:END function=c52baa2a8a2f -->
+
 
 
 

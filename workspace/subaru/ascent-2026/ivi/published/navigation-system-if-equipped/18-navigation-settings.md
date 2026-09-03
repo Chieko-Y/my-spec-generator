@@ -6,23 +6,24 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Select ."]
-    S2["2. Select (Settings). Settings"]
-    S3["3. → (Navigation)"]
-    S4["4. Select the desired item to be set."]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Select ."]
+    S1_2["2. Select (Settings). Settings 3. → (Navigation)"]
+    S1_4["4. Select the desired item to be set."]
+    S1_1 --> S1_2
+    S1_2 --> S1_4
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select . | p.181 / step |
-| 2 | 2 | Select (Settings). Settings | p.181 / step |
-| 3 | 3 | → (Navigation) | p.181 / step |
-| 4 | 4 | Select the desired item to be set. | p.181 / step |
+| 1 | 2 | Select (Settings). Settings 3. → (Navigation) | p.181 / step |
+| 1 | 4 | Select the desired item to be set. | p.181 / step |
 
 <!-- GENERATED:END function=f0cf986827e0 -->
+
 
 
 

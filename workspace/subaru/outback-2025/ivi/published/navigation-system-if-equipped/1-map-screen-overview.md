@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Select ."]
-    S2["2. Select (Map)."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Select ."]
+    S1_2["2. Select (Map)."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select . | p.196 / step |
-| 2 | 2 | Select (Map). | p.196 / step |
+| 1 | 2 | Select (Map). | p.196 / step |
 
 ## 1-2-1. Service overview
 
@@ -47,6 +50,7 @@ flowchart TD
 | 9 | <span class="req-label">Step -</span>: Enables the voice guidance of alerts only. | capability | p.196 / bullet |
 | 10 | <span class="req-label">Step -</span>: Disables voice guidance. | capability | p.196 / bullet |
 <!-- GENERATED:END function=9574fdd9e191 -->
+
 
 
 

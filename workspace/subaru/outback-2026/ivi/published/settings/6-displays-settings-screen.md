@@ -13,26 +13,27 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. → “Displays”"]
-    S3["3. Select the items to be set."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_3["3. Select the items to be set."]
+    S1_1 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.44 / step |
-| 2 | 2 | → “Displays” | p.44 / step |
-| 3 | 3 | Select the items to be set. | p.45 / step |
+| 1 | 3 | Select the items to be set. | p.45 / step |
 
 ## 6-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Displays settings screen</span>“Display Off” Refer to the vehicle Owner’s Manual for details. 2. | capability | p.45 / text |
-| 2 | <span class="req-label">Displays settings screen</span>“Brightness/Contrast” Refer to the vehicle Owner’s Manual for details. | capability | p.45 / text |
-| 3 | <span class="req-label">Displays settings screen</span>“Home Screen Settings”: Select to enter home screen “Center Screen” edit mode. (→P.23). | capability | p.45 / text |
+| 1 | <span class="req-label">Displays settings screen</span>2. → “Displays”. | capability | p.44 / text |
+| 2 | <span class="req-label">Displays settings screen</span>“Display Off” Refer to the vehicle Owner’s Manual for details. 2. | capability | p.45 / text |
+| 3 | <span class="req-label">Displays settings screen</span>“Brightness/Contrast” Refer to the vehicle Owner’s Manual for details. | capability | p.45 / text |
+| 4 | <span class="req-label">Displays settings screen</span>“Home Screen Settings”: Select to enter home screen “Center Screen” edit mode. (→P.23). | capability | p.45 / text |
 
 ## 6-2-2. Service requirements
 
@@ -45,6 +46,7 @@ flowchart TD
 | 5 | <span class="req-label">Displays settings screen</span>“Language” Refer to the vehicle Owner’s Manual for details. | capability | p.45 / text |
 | 6 | <span class="req-label">Displays settings screen</span>*: If equipped. | constraint | p.45 / text |
 <!-- GENERATED:END function=214f9158e97a -->
+
 
 
 

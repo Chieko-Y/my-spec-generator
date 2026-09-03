@@ -37,7 +37,7 @@
         {
           "number": 2,
           "text": "Select the items to be set.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.40 / step"
         }
       ],
@@ -216,6 +216,7 @@
         {
           "figure_id": "b38bd96fd185",
           "page": 39,
+          "printed_page": 40,
           "rect": [
             121.6559982,
             282.06601020000005,
@@ -230,6 +231,7 @@
         {
           "figure_id": "c42f781ac0fd",
           "page": 39,
+          "printed_page": 40,
           "rect": [
             298.5360107,
             282.7860036999999,
@@ -256,20 +258,14 @@
       "procedure": [
         {
           "number": 1,
-          "text": "Touch “[icon]” of the main menu. (→P.19) 2",
+          "text": "Touch “[icon]” of the main menu. (→P.19) 2 2. → “Sound”",
           "sequence": 1,
-          "source": "p.41 / step"
-        },
-        {
-          "number": 2,
-          "text": "→ “Sound”",
-          "sequence": 2,
           "source": "p.41 / step"
         },
         {
           "number": 3,
           "text": "Select the items to be set.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.41 / step"
         }
       ],
@@ -474,6 +470,7 @@
         {
           "figure_id": "be01f0431f08",
           "page": 40,
+          "printed_page": 41,
           "rect": [
             307.4159851,
             354.3059928,
@@ -568,6 +565,7 @@
         {
           "figure_id": "f6402b8633fa",
           "page": 42,
+          "printed_page": 43,
           "rect": [
             223.6560059,
             256.8660056,
@@ -650,6 +648,7 @@
         {
           "figure_id": "158dea2bdbdf",
           "page": 43,
+          "printed_page": 44,
           "rect": [
             215.2559967,
             193.98602360000007,
@@ -680,19 +679,26 @@
           "source": "p.44 / step"
         },
         {
-          "number": 2,
-          "text": "→ “Manage Devices”",
-          "sequence": 2,
-          "source": "p.44 / step"
-        },
-        {
           "number": 3,
           "text": "Select the items to be set.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.44 / step"
         }
       ],
       "requirements": [
+        {
+          "req_id": "1ee5f43dda9e",
+          "slot": "overview",
+          "text": "2. → “Manage Devices”.",
+          "source_text": "2. → “Manage Devices”",
+          "strength": "capability",
+          "source": "p.44 / text",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": "3. Select the items to be set.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
         {
           "req_id": "bed6632c1a2a",
           "slot": "requirements",
@@ -753,19 +759,26 @@
           "source": "p.44 / step"
         },
         {
-          "number": 2,
-          "text": "→ “Displays”",
-          "sequence": 2,
-          "source": "p.44 / step"
-        },
-        {
           "number": 3,
           "text": "Select the items to be set.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.45 / step"
         }
       ],
       "requirements": [
+        {
+          "req_id": "bb781565fea2",
+          "slot": "overview",
+          "text": "2. → “Displays”.",
+          "source_text": "2. → “Displays”",
+          "strength": "capability",
+          "source": "p.44 / text",
+          "page_citation": "Manage devices settings screen",
+          "next_step_text": "3. Select the items to be set.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
         {
           "req_id": "4936ecd54e6e",
           "slot": "overview",
@@ -888,6 +901,7 @@
         {
           "figure_id": "b9366f7f5736",
           "page": 44,
+          "printed_page": 45,
           "rect": [
             305.9760132,
             192.06597969999996,
@@ -919,19 +933,26 @@
           "source": "p.45 / step"
         },
         {
-          "number": 2,
-          "text": "→ “Phone”",
-          "sequence": 2,
-          "source": "p.45 / step"
-        },
-        {
           "number": 3,
           "text": "Select the items to be set.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.46 / step"
         }
       ],
       "requirements": [
+        {
+          "req_id": "a3114e298ccb",
+          "slot": "overview",
+          "text": "2. → “Phone”.",
+          "source_text": "2. → “Phone”",
+          "strength": "capability",
+          "source": "p.45 / text",
+          "page_citation": "Phone settings screen",
+          "next_step_text": "3. Select the items to be set.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
         {
           "req_id": "45067bddf428",
           "slot": "requirements",
@@ -1093,6 +1114,7 @@
         {
           "figure_id": "95a4d181a798",
           "page": 45,
+          "printed_page": 46,
           "rect": [
             300.2160034,
             192.06597969999996,
@@ -1125,13 +1147,13 @@
         {
           "number": 2,
           "text": "Select the desired message.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.47 / step"
         },
         {
           "number": 3,
           "text": "Enter the message.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.47 / step"
         }
       ],
@@ -1195,19 +1217,26 @@
           "source": "p.47 / step"
         },
         {
-          "number": 2,
-          "text": "→ “Network Connection”",
-          "sequence": 2,
-          "source": "p.47 / step"
-        },
-        {
           "number": 3,
           "text": "Select the items to be set.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.47 / step"
         }
       ],
       "requirements": [
+        {
+          "req_id": "6b3fd3104a67",
+          "slot": "overview",
+          "text": "2. → “Network Connection”.",
+          "source_text": "2. → “Network Connection”",
+          "strength": "capability",
+          "source": "p.47 / text",
+          "page_citation": "Network connection settings screen",
+          "next_step_text": "3. Select the items to be set.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
         {
           "req_id": "59b88d95f6ed",
           "slot": "overview",
@@ -1265,6 +1294,7 @@
         {
           "figure_id": "c49ca48c25f6",
           "page": 46,
+          "printed_page": 47,
           "rect": [
             305.9760132,
             430.1460043,
@@ -1296,19 +1326,26 @@
           "source": "p.48 / step"
         },
         {
-          "number": 2,
-          "text": "→ “Software”",
-          "sequence": 2,
-          "source": "p.48 / step"
-        },
-        {
           "number": 3,
           "text": "Select the items to be set.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.48 / step"
         }
       ],
       "requirements": [
+        {
+          "req_id": "5bf1f6b6d12d",
+          "slot": "overview",
+          "text": "2. → “Software”.",
+          "source_text": "2. → “Software”",
+          "strength": "capability",
+          "source": "p.48 / text",
+          "page_citation": "Software settings screen",
+          "next_step_text": "3. Select the items to be set.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
         {
           "req_id": "ecdd1ce9b546",
           "slot": "overview",
@@ -1444,6 +1481,7 @@
         {
           "figure_id": "31639b85a17c",
           "page": 47,
+          "printed_page": 48,
           "rect": [
             300.2160034,
             259.02600259999997,
@@ -1583,25 +1621,25 @@
         {
           "number": 2,
           "text": "When installation is complete, touch “Close” on the confirmation message.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.50 / step"
         },
         {
           "number": 3,
           "text": "Turn the ignition switch to OFF and exit the vehicle.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.50 / step"
         },
         {
           "number": 4,
           "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
-          "sequence": 4,
+          "sequence": 1,
           "source": "p.50 / step"
         },
         {
           "number": 5,
           "text": "After at least 5 minutes have elapsed, start the engine again.",
-          "sequence": 5,
+          "sequence": 1,
           "source": "p.50 / step"
         }
       ],
@@ -1898,25 +1936,25 @@
         {
           "number": 2,
           "text": "When installation is complete, touch “Close” on the confirmation message.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.51 / step"
         },
         {
           "number": 3,
           "text": "Turn the ignition switch to OFF and exit the vehicle.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.51 / step"
         },
         {
           "number": 4,
           "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
-          "sequence": 4,
+          "sequence": 1,
           "source": "p.51 / step"
         },
         {
           "number": 5,
           "text": "After at least 5 minutes have elapsed, start the engine again.",
-          "sequence": 5,
+          "sequence": 1,
           "source": "p.51 / step"
         }
       ],

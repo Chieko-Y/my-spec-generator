@@ -13,18 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Select a guidance route on the route guidance screen."]
-    S2["2. Select ."]
-    S3["3. → (Manage Route) Manage Route"]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Select a guidance route on the route guidance screen."]
+    S1_2["2. Select . 3. → (Manage Route) Manage Route"]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select a guidance route on the route guidance screen. | p.177 / step |
-| 2 | 2 | Select . | p.177 / step |
-| 3 | 3 | → (Manage Route) Manage Route | p.177 / step |
+| 1 | 2 | Select . 3. → (Manage Route) Manage Route | p.177 / step |
 
 ## 15-2-1. Service overview
 
@@ -45,6 +45,7 @@ flowchart TD
 | 13 | <span class="req-label">Current Route Screen</span>Select to change the order of the currently set destination and waypoints. Select a destination, select or to change its position in Reorder Stops the list, and then select Done (Reorder Stops) (Done) to confirm the change. Edit Stops (Edit Stops): Select to display the edit stops screen. To delete a waypoint, select then Delete (Delete). | capability | p.178 / text |
 | 14 | <span class="req-label">Current Route Screen</span>Play Route Preview (Play Route Preview): Select Play Route Preview t o e n t e r route preview mode. (Play Route Preview)/ (→ P .1 7 9 ) Stop Route Preview Stop Route Preview (Stop Route Preview) (Stop Route Preview): Select to exit route preview mode. | capability | p.178 / text |
 <!-- GENERATED:END function=d508f963e83c -->
+
 
 
 

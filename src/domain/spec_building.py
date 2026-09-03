@@ -21,7 +21,20 @@ from .model import (
 from .parameters import detect_parameters
 from .profile import Profile
 
-_NUMBERED_STEP = re.compile(r"^\s*(\d{1,2})[.)]\s+(.+?)\s*$")
+_NUMBERED_STEP = re.compile(r"^\s*(\d{1,2})[.)]\s*(?=[A-Z])(.+?)\s*$")
+# The space after the step number's punctuation is OPTIONAL -- confirmed real,
+# Honda Pilot, 2026-09-03: every numbered step in this manual's real PDF is set
+# with NO space at all ("1.Select Home.", "2.Select General Settings.", ...),
+# unlike Subaru's spaced style ("1. Select the menu icon."). Requiring `\s+`
+# here meant _split_lines never recognized ANY of Honda Pilot's own numbered
+# steps as steps at all -- they fell through to plain paragraph/prose grouping
+# instead, so `build_function_spec`'s `procedure` list came out empty (no
+# Procedure section, no test-readiness) for functions whose real content is
+# entirely step-driven (confirmed: "27. HFL Menus", 372-384, 0 procedure steps
+# despite pages full of "N.Do X." lines). The lookahead requiring a capital
+# letter right after (rather than just requiring the whitespace) is what keeps
+# this from also matching an unrelated decimal number at the start of its own
+# line (e.g. "3.5 V" -- "5" isn't a capital letter, so this doesn't fire).
 _LEADING_NUMBERING = re.compile(r"^\s*[\d.\-]+\s+")
 # A trailing "(→P.19)"-style page reference can end up clustered onto the SAME
 # line as the orphan number rather than the continuation text that follows it —
@@ -314,9 +327,25 @@ def build_function_spec(
 
     offset = profile.layout.page_number_offset
     procedure: list[ProcedureStep] = []
-    for seq, (number, page, top, text) in enumerate(steps_raw, start=1):
+    sequence = 0
+    prev_number: int | None = None
+    for number, page, top, text in steps_raw:
+        # A real step's own number never decreases within one procedure -- a
+        # drop back to 1 (or any non-increase) means the manual restarted the
+        # numbering for a NEW, unrelated procedure (confirmed real, Honda
+        # Pilot "Defaulting All the Settings": "...6.Select Reset again..."
+        # immediately followed by "1.Select Home." starting a second,
+        # distinct procedure on the same page). This used to be a flat
+        # per-step counter (`enumerate(steps_raw, start=1)`), so every step
+        # got its OWN unique "sequence" -- procedure_flowchart then chained
+        # every step in the whole function into one continuous flowchart
+        # regardless of these restarts, wrongly drawing an arrow from one
+        # procedure's last step into an unrelated procedure's first step.
+        if prev_number is None or number <= prev_number:
+            sequence += 1
+        prev_number = number
         procedure.append(
-            ProcedureStep(number=number, text=text, sequence=seq, source=f"p.{page + offset} / step")
+            ProcedureStep(number=number, text=text, sequence=sequence, source=f"p.{page + offset} / step")
         )
 
     requirements: list[RequirementItem] = []

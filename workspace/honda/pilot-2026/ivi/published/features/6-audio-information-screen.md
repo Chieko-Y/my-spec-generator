@@ -25,27 +25,135 @@
 - Figure 6-6 source: p.281
 - (Copied from OM) Status Area
 
-## Procedure
+## Procedure (7 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
-    S1["1. Select and hold an icon."]
-    S2["2. Select Edit Shortcuts."]
-    S3["3. Select an icon."]
-    S4["4. Select shortcut location."]
-    S5["5. Select Home or Back."]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Connect the USB flash drive to the USB port. 2 USB Ports…"]
+    S1_2["2. Select Clock."]
+    S1_3["3. Select Menu."]
+    S1_4["4. Select Clock Faces."]
+    S1_5["5. Select Add More."]
+    S1_6["6. Import a desired picture. uMultiple pictures can be impo…"]
+    S1_7["7. Select Select Files."]
+    S1_8["8. Select Add Files. uThe display will return to the Clock …"]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    S1_3 --> S1_4
+    S1_4 --> S1_5
+    S1_5 --> S1_6
+    S1_6 --> S1_7
+    S1_7 --> S1_8
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Select Clock."]
+    S2_2["2. Select Menu."]
+    S2_3["3. Select Clock Faces."]
+    S2_4["4. Select a desired wallpaper."]
+    S2_5["5. Select Save. uThe display will return to the Clock Faces…"]
+    S2_1 --> S2_2
+    S2_2 --> S2_3
+    S2_3 --> S2_4
+    S2_4 --> S2_5
+    end
+    subgraph SEQ3["Sequence 3"]
+    direction TB
+    S3_1["1. Select Clock."]
+    S3_2["2. Select Menu."]
+    S3_3["3. Select Clock Faces."]
+    S3_4["4. Select Delete Files."]
+    S3_5["5. Select Select Files to Delete. uWhen you want to delete …"]
+    S3_6["6. Select a desired wallpaper."]
+    S3_7["7. Select Select Files."]
+    S3_8["8. Select Delete Files. uThe display will return to the Clo…"]
+    S3_1 --> S3_2
+    S3_2 --> S3_3
+    S3_3 --> S3_4
+    S3_4 --> S3_5
+    S3_5 --> S3_6
+    S3_6 --> S3_7
+    S3_7 --> S3_8
+    end
+    subgraph SEQ4["Sequence 4"]
+    direction TB
+    S4_1["1. Select Home."]
+    S4_2["2. Select All Apps."]
+    S4_3["3. Select an app to check or uncheck it."]
+    S4_1 --> S4_2
+    S4_2 --> S4_3
+    end
+    subgraph SEQ5["Sequence 5"]
+    direction TB
+    S5_1["1. Select and hold an icon. Hide uThe screen switches to th…"]
+    S5_2["2. Drag and drop the icon to where you want it to be. uDrag…"]
+    S5_3["3. Select Home or Back. uThe screen will return to the home…"]
+    S5_1 --> S5_2
+    S5_2 --> S5_3
+    end
+    subgraph SEQ6["Sequence 6"]
+    direction TB
+    S6_1["1. Select and hold an icon. uThe screen switches to the cus…"]
+    S6_2["2. Select Edit Shortcuts."]
+    S6_3["3. Drag and drop the icon you want to store to the left of …"]
+    S6_4["4. Select Home or Back. uThe screen will return to the home…"]
+    S6_1 --> S6_2
+    S6_2 --> S6_3
+    S6_3 --> S6_4
+    end
+    subgraph SEQ7["Sequence 7"]
+    direction TB
+    S7_1["1. Select and hold an icon."]
+    S7_2["2. Select Edit Shortcuts."]
+    S7_3["3. Select an icon."]
+    S7_4["4. Select shortcut location."]
+    S7_5["5. Select Home or Back."]
+    S7_1 --> S7_2
+    S7_2 --> S7_3
+    S7_3 --> S7_4
+    S7_4 --> S7_5
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | Select and hold an icon. | p.281 / step |
-| 2 | 2 | Select Edit Shortcuts. | p.281 / step |
-| 3 | 3 | Select an icon. | p.281 / step |
-| 4 | 4 | Select shortcut location. | p.281 / step |
-| 5 | 5 | Select Home or Back. | p.281 / step |
+| 1 | 1 | Connect the USB flash drive to the USB port. 2 USB Ports P.265 | p.277 / step |
+| 1 | 2 | Select Clock. | p.277 / step |
+| 1 | 3 | Select Menu. | p.277 / step |
+| 1 | 4 | Select Clock Faces. | p.277 / step |
+| 1 | 5 | Select Add More. | p.277 / step |
+| 1 | 6 | Import a desired picture. uMultiple pictures can be imported at the same time. | p.277 / step |
+| 1 | 7 | Select Select Files. | p.277 / step |
+| 1 | 8 | Select Add Files. uThe display will return to the Clock Faces screen. | p.277 / step |
+| 2 | 1 | Select Clock. | p.278 / step |
+| 2 | 2 | Select Menu. | p.278 / step |
+| 2 | 3 | Select Clock Faces. | p.278 / step |
+| 2 | 4 | Select a desired wallpaper. | p.278 / step |
+| 2 | 5 | Select Save. uThe display will return to the Clock Faces screen. | p.278 / step |
+| 3 | 1 | Select Clock. | p.278 / step |
+| 3 | 2 | Select Menu. | p.278 / step |
+| 3 | 3 | Select Clock Faces. | p.278 / step |
+| 3 | 4 | Select Delete Files. | p.278 / step |
+| 3 | 5 | Select Select Files to Delete. uWhen you want to delete everything wallpaper. Select Delete All Files. | p.278 / step |
+| 3 | 6 | Select a desired wallpaper. | p.278 / step |
+| 3 | 7 | Select Select Files. | p.278 / step |
+| 3 | 8 | Select Delete Files. uThe display will return to the Clock Faces screen. | p.278 / step |
+| 4 | 1 | Select Home. | p.280 / step |
+| 4 | 2 | Select All Apps. | p.280 / step |
+| 4 | 3 | Select an app to check or uncheck it. | p.280 / step |
+| 5 | 1 | Select and hold an icon. Hide uThe screen switches to the customization screen. | p.280 / step |
+| 5 | 2 | Drag and drop the icon to where you want it to be. uDrag and drop the icon to Hide to remove from the home screen. | p.280 / step |
+| 5 | 3 | Select Home or Back. uThe screen will return to the home screen. | p.280 / step |
+| 6 | 1 | Select and hold an icon. uThe screen switches to the customization screen. | p.281 / step |
+| 6 | 2 | Select Edit Shortcuts. | p.281 / step |
+| 6 | 3 | Drag and drop the icon you want to store to the left of the home screen. Drag and drop to uThe icon is stored as a shortcut. preset icon. | p.281 / step |
+| 6 | 4 | Select Home or Back. uThe screen will return to the home screen. | p.281 / step |
+| 7 | 1 | Select and hold an icon. | p.281 / step |
+| 7 | 2 | Select Edit Shortcuts. | p.281 / step |
+| 7 | 3 | Select an icon. | p.281 / step |
+| 7 | 4 | Select shortcut location. | p.281 / step |
+| 7 | 5 | Select Home or Back. | p.281 / step |
 
 ## 6-2-1. Service overview
 
@@ -90,35 +198,32 @@ flowchart TD
 | 25 | <span class="req-label">Audio/Information Screen</span>Wallpaper Setup. | capability | p.277 / text |
 | 26 | <span class="req-label">Audio/Information Screen</span>You can change, store, and delete the wallpaper on the audio/information screen. | capability | p.277 / text |
 | 27 | <span class="req-label">Audio/Information Screen</span>Import wallpaper. | capability | p.277 / text |
-| 28 | <span class="req-label">Audio/Information Screen</span>1.Connect the USB flash drive to the USB port. 2 USB Ports P.265 2.Select Clock. 3.Select Menu. 4.Select Clock Faces. 5.Select Add More. 6.Import a desired picture. uMultiple pictures can be imported at the same time. 7.Select Select Files. 8.Select Add Files. uThe display will return to the Clock Faces screen. | capability | p.277 / text |
-| 29 | <span class="req-label">Step -</span>The file name must be fewer than 64 bytes. | capability | p.277 / bullet |
-| 30 | <span class="req-label">Step -</span>The file format of the image that can be imported is BMP (bmp) or JPEG (jpg). | capability | p.277 / bullet |
-| 31 | <span class="req-label">Step -</span>Up to 11 pictures can be imported. | capability | p.277 / bullet |
-| 32 | <span class="req-label">Step -</span>The maximum image size is 4,096 × 2,304 pixels. If the image size is less, the image is displayed in the middle of the screen with the extra area appearing in black. | constraint | p.277 / bullet |
-| 33 | <span class="req-label">Audio/Information Screen</span>Select wallpaper. | capability | p.278 / text |
-| 34 | <span class="req-label">Audio/Information Screen</span>1.Select Clock. 2.Select Menu. 3.Select Clock Faces. 4.Select a desired wallpaper. 5.Select Save. uThe display will return to the Clock Faces screen. | capability | p.278 / text |
-| 35 | <span class="req-label">Audio/Information Screen</span>Delete wallpaper. | capability | p.278 / text |
-| 36 | <span class="req-label">Audio/Information Screen</span>1.Select Clock. 2.Select Menu. 3.Select Clock Faces. 4.Select Delete Files. 5.Select Select Files to Delete. uWhen you want to delete everything wallpaper. Select Delete All Files. 6.Select a desired wallpaper. 7.Select Select Files. 8.Select Delete Files. uThe display will return to the Clock Faces screen. | capability | p.278 / text |
-| 37 | <span class="req-label">Audio/Information Screen</span>Home Screen. | capability | p.279 / text |
-| 38 | <span class="req-label">Audio/Information Screen</span>To move to the next screen. | capability | p.279 / text |
-| 39 | <span class="req-label">Audio/Information Screen</span>Swiping the screen left or right changes to the next screen. | capability | p.279 / text |
-| 40 | <span class="req-label">Audio/Information Screen</span>Current page position. | capability | p.279 / text |
-| 41 | <span class="req-label">Audio/Information Screen</span>1Home Screen The home screen can contain up to six pages. | capability | p.279 / text |
-| 42 | <span class="req-label">Audio/Information Screen</span>Select Home to go directly back to the first page of the home screen from any page. | capability | p.279 / text |
-| 43 | <span class="req-label">Audio/Information Screen</span>To add/remove app icons on the home screen. | capability | p.280 / text |
-| 44 | <span class="req-label">Audio/Information Screen</span>App icons can be added or deleted on the home screen. 1.Select Home. 2.Select All Apps. 3.Select an app to check or uncheck it. | capability | p.280 / text |
-| 45 | <span class="req-label">Audio/Information Screen</span>To move/remove icons on the home screen. | capability | p.280 / text |
-| 46 | <span class="req-label">Audio/Information Screen</span>You can change icon locations on the home screen. 1.Select and hold an icon. Hide uThe screen switches to the customization screen. 2.Drag and drop the icon to where you want it to be. uDrag and drop the icon to Hide to remove from the home screen. 3.Select Home or Back. uThe screen will return to the home screen. | capability | p.280 / text |
-| 47 | <span class="req-label">Audio/Information Screen</span>1To add/remove app icons on the home screen Apps will not be deleted by deleting the icon on the home screen. | capability | p.280 / text |
-| 48 | <span class="req-label">Audio/Information Screen</span>1To move/remove icons on the home screen Apps will not be deleted by deleting the icon on the home screen. | capability | p.280 / text |
-| 49 | <span class="req-label">Audio/Information Screen</span>Select Tips to show tips. To hide them, select it again. | capability | p.280 / text |
-| 50 | <span class="req-label">Audio/Information Screen</span>To shortcut icons on the home screen. | capability | p.281 / text |
-| 51 | <span class="req-label">Audio/Information Screen</span>You can store up to three icons on the mode change switch bar. 1.Select and hold an icon. uThe screen switches to the customization screen. 2.Select Edit Shortcuts. 3.Drag and drop the icon you want to store to the left of the home screen. Drag and drop to uThe icon is stored as a shortcut. preset icon. 4.Select Home or Back. uThe screen will return to the home screen. | capability | p.281 / text |
-| 52 | <span class="req-label">Audio/Information Screen</span>Status Bar. | capability | p.281 / text |
-| 53 | <span class="req-label">Audio/Information Screen</span>Shows the indicators of the information for the vehicle, connected phones, etc. in the header area. You can confirm the detail information shown in the status area by selecting the status bar. | capability | p.281 / text |
-| 54 | <span class="req-label">Audio/Information Screen</span>Status Area. | capability | p.281 / text |
-| 55 | <span class="req-label">Audio/Information Screen</span>1To shortcut icons on the home screen Select Tips to show tips. To hide them, select it again. | capability | p.281 / text |
-| 56 | <span class="req-label">Audio/Information Screen</span>You can also to shortcut icons on the home screen the following procedure. | capability | p.281 / text |
+| 28 | <span class="req-label">Step -</span>The file name must be fewer than 64 bytes. | capability | p.277 / bullet |
+| 29 | <span class="req-label">Step -</span>The file format of the image that can be imported is BMP (bmp) or JPEG (jpg). | capability | p.277 / bullet |
+| 30 | <span class="req-label">Step -</span>Up to 11 pictures can be imported. | capability | p.277 / bullet |
+| 31 | <span class="req-label">Step -</span>The maximum image size is 4,096 × 2,304 pixels. If the image size is less, the image is displayed in the middle of the screen with the extra area appearing in black. | constraint | p.277 / bullet |
+| 32 | <span class="req-label">Audio/Information Screen</span>Select wallpaper. | capability | p.278 / text |
+| 33 | <span class="req-label">Audio/Information Screen</span>Delete wallpaper. | capability | p.278 / text |
+| 34 | <span class="req-label">Audio/Information Screen</span>Home Screen. | capability | p.279 / text |
+| 35 | <span class="req-label">Audio/Information Screen</span>To move to the next screen. | capability | p.279 / text |
+| 36 | <span class="req-label">Audio/Information Screen</span>Swiping the screen left or right changes to the next screen. | capability | p.279 / text |
+| 37 | <span class="req-label">Audio/Information Screen</span>Current page position. | capability | p.279 / text |
+| 38 | <span class="req-label">Audio/Information Screen</span>1Home Screen The home screen can contain up to six pages. | capability | p.279 / text |
+| 39 | <span class="req-label">Audio/Information Screen</span>Select Home to go directly back to the first page of the home screen from any page. | capability | p.279 / text |
+| 40 | <span class="req-label">Audio/Information Screen</span>To add/remove app icons on the home screen. | capability | p.280 / text |
+| 41 | <span class="req-label">Audio/Information Screen</span>App icons can be added or deleted on the home screen. | capability | p.280 / text |
+| 42 | <span class="req-label">Audio/Information Screen</span>To move/remove icons on the home screen. | capability | p.280 / text |
+| 43 | <span class="req-label">Audio/Information Screen</span>You can change icon locations on the home screen. | capability | p.280 / text |
+| 44 | <span class="req-label">Audio/Information Screen</span>1To add/remove app icons on the home screen Apps will not be deleted by deleting the icon on the home screen. | capability | p.280 / text |
+| 45 | <span class="req-label">Audio/Information Screen</span>1To move/remove icons on the home screen Apps will not be deleted by deleting the icon on the home screen. | capability | p.280 / text |
+| 46 | <span class="req-label">Audio/Information Screen</span>Select Tips to show tips. To hide them, select it again. | capability | p.280 / text |
+| 47 | <span class="req-label">Audio/Information Screen</span>To shortcut icons on the home screen. | capability | p.281 / text |
+| 48 | <span class="req-label">Audio/Information Screen</span>You can store up to three icons on the mode change switch bar. | capability | p.281 / text |
+| 49 | <span class="req-label">Audio/Information Screen</span>Status Bar. | capability | p.281 / text |
+| 50 | <span class="req-label">Audio/Information Screen</span>Shows the indicators of the information for the vehicle, connected phones, etc. in the header area. You can confirm the detail information shown in the status area by selecting the status bar. | capability | p.281 / text |
+| 51 | <span class="req-label">Audio/Information Screen</span>Status Area. | capability | p.281 / text |
+| 52 | <span class="req-label">Audio/Information Screen</span>1To shortcut icons on the home screen Select Tips to show tips. To hide them, select it again. | capability | p.281 / text |
+| 53 | <span class="req-label">Audio/Information Screen</span>You can also to shortcut icons on the home screen the following procedure. | capability | p.281 / text |
 
 ## 6-3. Requirements for HMI
 
@@ -145,5 +250,6 @@ flowchart TD
 | 4 | <span class="req-label">Step -</span>When importing wallpaper files, the image must be in the USB flash drive’s root directory. Images in a folder cannot be imported. | constraint | p.277 / bullet |
 | 5 | <span class="req-label">Audio/Information Screen</span>1Wallpaper Setup You cannot delete the initially imported wallpapers. | constraint | p.278 / text |
 <!-- GENERATED:END function=022558815f1e -->
+
 
 

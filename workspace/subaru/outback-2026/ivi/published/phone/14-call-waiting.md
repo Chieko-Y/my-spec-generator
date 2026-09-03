@@ -16,15 +16,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “Accept” or press the switch on the steering wheel…"]
-    S2["2. Check that the call waiting screen is displayed."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “Accept” or press the switch on the steering wheel…"]
+    S1_2["2. Check that the call waiting screen is displayed."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “Accept” or press the switch on the steering wheel to start talking with the other party. | p.82 / step |
-| 2 | 2 | Check that the call waiting screen is displayed. | p.83 / step |
+| 1 | 2 | Check that the call waiting screen is displayed. | p.83 / step |
 
 ## 14-2-1. Service overview
 
@@ -47,6 +50,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>To end all of the calls connected, press and hold switch on the steering wheel. *: Depending on the company of the Bluetooth phone that is connected to the system, the conference call function may not be available. 4. | capability | p.83 / bullet |
 <!-- GENERATED:END function=2dd38fc77be2 -->
+
 
 
 

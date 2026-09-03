@@ -8,24 +8,27 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. When a message asking if installation is desired or not …"]
-    S2["2. When installation is complete, touch “Close” on the conf…"]
-    S3["3. Turn the ignition switch to OFF and exit the vehicle."]
-    S4["4. Close the driver’s door and lock the doors, then move at…"]
-    S5["5. After at least 5 minutes have elapsed, start the engine …"]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. When a message asking if installation is desired or not …"]
+    S1_2["2. When installation is complete, touch “Close” on the conf…"]
+    S1_3["3. Turn the ignition switch to OFF and exit the vehicle."]
+    S1_4["4. Close the driver’s door and lock the doors, then move at…"]
+    S1_5["5. After at least 5 minutes have elapsed, start the engine …"]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    S1_3 --> S1_4
+    S1_4 --> S1_5
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | When a message asking if installation is desired or not is displayed, touch “Install | p.51 / step |
-| 2 | 2 | When installation is complete, touch “Close” on the confirmation message. | p.51 / step |
-| 3 | 3 | Turn the ignition switch to OFF and exit the vehicle. | p.51 / step |
-| 4 | 4 | Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering. | p.51 / step |
-| 5 | 5 | After at least 5 minutes have elapsed, start the engine again. | p.51 / step |
+| 1 | 2 | When installation is complete, touch “Close” on the confirmation message. | p.51 / step |
+| 1 | 3 | Turn the ignition switch to OFF and exit the vehicle. | p.51 / step |
+| 1 | 4 | Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering. | p.51 / step |
+| 1 | 5 | After at least 5 minutes have elapsed, start the engine again. | p.51 / step |
 
 ## 16-2-2. Service requirements
 
@@ -46,6 +49,7 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>During software update installation, the screen may flicker. However, this is not a malfunction. | capability | p.51 / bullet |
 | 2 | <span class="req-label">Step -</span>If the update procedure fails, refer to the “Troubleshooting” section. (→P.156). | capability | p.51 / bullet |
 <!-- GENERATED:END function=da4a9da87eda -->
+
 
 
 

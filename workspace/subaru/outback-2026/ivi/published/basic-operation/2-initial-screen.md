@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. When the ignition switch is turned to ACC or ON, the ini…"]
-    S2["2. Touch “I Agree”."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. When the ignition switch is turned to ACC or ON, the ini…"]
+    S1_2["2. Touch “I Agree”."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | When the ignition switch is turned to ACC or ON, the initial screen will be displayed and the system will begin operating. | p.16 / step |
-| 2 | 2 | Touch “I Agree”. | p.17 / step |
+| 1 | 2 | Touch “I Agree”. | p.17 / step |
 
 ## Numeric thresholds (filled in by a tester)
 Filled: 0 / unfilled: 1
@@ -42,6 +45,7 @@ Filled: 0 / unfilled: 1
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>After a few seconds, the “Caution” screen will be displayed. | capability | p.16 / bullet |
 <!-- GENERATED:END function=b91711464c99 -->
+
 
 
 

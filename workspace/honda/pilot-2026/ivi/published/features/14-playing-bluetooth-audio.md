@@ -1,7 +1,7 @@
 <!-- GENERATED:START function=a78de7491615 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 14. Playing Bluetooth® Audio
 
-<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Playing Bluetooth® Audio<br><b>Source:</b> printed page 297, 298, 299<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
+<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Playing Bluetooth® Audio<br><b>Source:</b> printed page 297, 298, 299<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
@@ -9,6 +9,33 @@
 ![figure](../figures/FIG-2a6653f67072.png)
 - Figure 14-1 source: p.297
 - (Copied from OM) Play/Pause Icon
+
+## Procedure (2 sequences; the manual restarts the numbering)
+```mermaid
+flowchart TD
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Make sure that your phone is paired and connected to the…"]
+    S1_2["2. Select the Bluetooth® Audio mode."]
+    S1_1 --> S1_2
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Select Music Library."]
+    S2_2["2. Select a search category (e.g., Albums)."]
+    S2_3["3. Select an item. uThe selection begins playing."]
+    S2_1 --> S2_2
+    S2_2 --> S2_3
+    end
+```
+
+| Seq | Step | Operation (Copied from OM) | Source |
+|---|---|---|---|
+| 1 | 1 | Make sure that your phone is paired and connected to the system. 2 Phone Setup P.373 | p.298 / step |
+| 1 | 2 | Select the Bluetooth® Audio mode. | p.298 / step |
+| 2 | 1 | Select Music Library. | p.298 / step |
+| 2 | 2 | Select a search category (e.g., Albums). | p.298 / step |
+| 2 | 3 | Select an item. uThe selection begins playing. | p.298 / step |
 
 ## 14-2-1. Service overview
 
@@ -34,18 +61,16 @@
 | 5 | <span class="req-label">Playing Bluetooth® Audio</span>The connected phone for Bluetooth® Audio can be different. | capability | p.297 / text |
 | 6 | <span class="req-label">Playing Bluetooth® Audio</span>If more than one phone is paired to the HFL system, there may be a delay before the system begins to play. | capability | p.297 / text |
 | 7 | <span class="req-label">Playing Bluetooth® Audio</span>To Play Bluetooth® Audio Files. | capability | p.298 / text |
-| 8 | <span class="req-label">Playing Bluetooth® Audio</span>1.Make sure that your phone is paired and connected to the system. 2 Phone Setup P.373 2.Select the Bluetooth® Audio mode. | capability | p.298 / text |
-| 9 | <span class="req-label">Playing Bluetooth® Audio</span>If the phone is not recognized, another HFL-compatible phone, which is not compatible for Bluetooth® Audio, may already be connected. | capability | p.298 / text |
-| 10 | <span class="req-label">Playing Bluetooth® Audio</span>Searching for Music. | capability | p.298 / text |
-| 11 | <span class="req-label">Playing Bluetooth® Audio</span>1.Select Music Library. 2.Select a search category (e.g., Albums). 3.Select an item. uThe selection begins playing. | capability | p.298 / text |
-| 12 | <span class="req-label">Playing Bluetooth® Audio</span>1To Play Bluetooth® Audio Files To play the audio files, you may need to operate your phone. If so, follow the phone maker’s operating instructions. | constraint | p.298 / text |
-| 13 | <span class="req-label">Playing Bluetooth® Audio</span>Switching to another mode pauses the music playing from your phone. | capability | p.298 / text |
-| 14 | <span class="req-label">Playing Bluetooth® Audio</span>You can change the connected phone by selecting Change Devices. 2 Phone Setup P.373. | capability | p.298 / text |
-| 15 | <span class="req-label">Playing Bluetooth® Audio</span>How to Select a Play Mode. | capability | p.299 / text |
-| 16 | <span class="req-label">Playing Bluetooth® Audio</span>You can select shuffle and repeat modes when playing a file. | constraint | p.299 / text |
-| 17 | <span class="req-label">Playing Bluetooth® Audio</span>Shuffle/Repeat. | capability | p.299 / text |
-| 18 | <span class="req-label">Playing Bluetooth® Audio</span>Shuffle Shuffle off: Shuffle mode to off. Shuffle all files: Plays all available files in a selected list in random order. | capability | p.299 / text |
-| 19 | <span class="req-label">Playing Bluetooth® Audio</span>Repeat Repeat off: Repeat mode to off. Repeat file: Repeats the current file. Repeat group: Repeats the current group. Repeat all: Repeats all files. | capability | p.299 / text |
+| 8 | <span class="req-label">Playing Bluetooth® Audio</span>If the phone is not recognized, another HFL-compatible phone, which is not compatible for Bluetooth® Audio, may already be connected. | capability | p.298 / text |
+| 9 | <span class="req-label">Playing Bluetooth® Audio</span>Searching for Music. | capability | p.298 / text |
+| 10 | <span class="req-label">Playing Bluetooth® Audio</span>1To Play Bluetooth® Audio Files To play the audio files, you may need to operate your phone. If so, follow the phone maker’s operating instructions. | constraint | p.298 / text |
+| 11 | <span class="req-label">Playing Bluetooth® Audio</span>Switching to another mode pauses the music playing from your phone. | capability | p.298 / text |
+| 12 | <span class="req-label">Playing Bluetooth® Audio</span>You can change the connected phone by selecting Change Devices. 2 Phone Setup P.373. | capability | p.298 / text |
+| 13 | <span class="req-label">Playing Bluetooth® Audio</span>How to Select a Play Mode. | capability | p.299 / text |
+| 14 | <span class="req-label">Playing Bluetooth® Audio</span>You can select shuffle and repeat modes when playing a file. | constraint | p.299 / text |
+| 15 | <span class="req-label">Playing Bluetooth® Audio</span>Shuffle/Repeat. | capability | p.299 / text |
+| 16 | <span class="req-label">Playing Bluetooth® Audio</span>Shuffle Shuffle off: Shuffle mode to off. Shuffle all files: Plays all available files in a selected list in random order. | capability | p.299 / text |
+| 17 | <span class="req-label">Playing Bluetooth® Audio</span>Repeat Repeat off: Repeat mode to off. Repeat file: Repeats the current file. Repeat group: Repeats the current group. Repeat all: Repeats all files. | capability | p.299 / text |
 
 ## 14-4. User settings
 
@@ -63,5 +88,6 @@
 | 4 | <span class="req-label">Playing Bluetooth® Audio</span>1Searching for Music Depending on the Bluetooth® device you connect, some or all of the lists may not be displayed. | capability | p.298 / text |
 | 5 | <span class="req-label">Playing Bluetooth® Audio</span>1How to Select a Play Mode Depending on the Bluetooth® device you connect, some or all of the functions may not be displayed. | capability | p.299 / text |
 <!-- GENERATED:END function=a78de7491615 -->
+
 
 

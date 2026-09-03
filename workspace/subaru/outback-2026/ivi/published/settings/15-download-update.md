@@ -8,7 +8,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. When a message asking if downloading is desired or not i…"]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. When a message asking if downloading is desired or not i…"]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -29,6 +32,7 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>“Remind Me”: Select to extend the downloading timing. | capability | p.51 / bullet |
 | 3 | <span class="req-label">Step -</span>When download is completed, a message asking if installation is desired or not will be displayed. (→P.51). | constraint | p.51 / bullet |
 <!-- GENERATED:END function=729a1cf60ec8 -->
+
 
 
 

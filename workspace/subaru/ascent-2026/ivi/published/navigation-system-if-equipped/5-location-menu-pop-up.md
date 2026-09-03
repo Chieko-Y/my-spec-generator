@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Select any point on the map."]
-    S2["2. Select or to change the scale of the map screen."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Select any point on the map."]
+    S1_2["2. Select or to change the scale of the map screen."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select any point on the map. | p.160 / step |
-| 2 | 2 | Select or to change the scale of the map screen. | p.160 / step |
+| 1 | 2 | Select or to change the scale of the map screen. | p.160 / step |
 
 ## 5-2-2. Service requirements
 
@@ -39,6 +42,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Location Menu Pop-up</span>NOTE l The scale of the map screen can also be changed with the double touch or pinch operation. (→P.45) l If the map scale has been changed after moving the map, the map scale will return to previous scale when the map is returned to the current position. l The automatic zoom function may not operate if the map scale is adjusted manually during route guidance. To reenable the automatic zoom function, change the orientation of the map screen. (→P.161). | constraint | p.160 / text |
 <!-- GENERATED:END function=94bc31e5480c -->
+
 
 
 

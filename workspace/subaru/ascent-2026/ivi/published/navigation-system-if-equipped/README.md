@@ -99,7 +99,7 @@ flowchart LR
 | 8 | [Other Information](/specifications/subaru/ascent-2026/ivi/file/8-other-information.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 8 | 2 | 0 | - |
 | 9 | [Main Menu Screen Overview](/specifications/subaru/ascent-2026/ivi/file/9-main-menu-screen-overview.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 13 | 1 | 0 | o |
 | 10 | [Search Screen](/specifications/subaru/ascent-2026/ivi/file/10-search-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 30 | 2 | 0 | - |
-| 11 | [Favorites Screen](/specifications/subaru/ascent-2026/ivi/file/11-favorites-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 14 | 2 | 0 | o |
+| 11 | [Favorites Screen](/specifications/subaru/ascent-2026/ivi/file/11-favorites-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 15 | 2 | 0 | o |
 | 12 | [Edit List Screen](/specifications/subaru/ascent-2026/ivi/file/12-edit-list-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 5 | 1 | 0 | - |
 | 13 | [Route Calculation Screen](/specifications/subaru/ascent-2026/ivi/file/13-route-calculation-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 9 | 1 | 0 | - |
 | 14 | [Route Guidance Screen](/specifications/subaru/ascent-2026/ivi/file/14-route-guidance-screen.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 28 | 4 | 0 | - |
@@ -113,9 +113,10 @@ flowchart LR
 | 22 | [Map Data](/specifications/subaru/ascent-2026/ivi/file/22-map-data.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 3 | 0 | 0 | - |
 | 23 | [Regarding Roads And Place Name Data](/specifications/subaru/ascent-2026/ivi/file/23-regarding-roads-and-place-name-data.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 1 | 0 | 0 | - |
 | 24 | [SUBARU Map Update](/specifications/subaru/ascent-2026/ivi/file/24-subaru-map-update.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 4 | 0 | 1 | - |
-| 25 | [Using A USB Memory Device](/specifications/subaru/ascent-2026/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 7 | 1 | 0 | o |
+| 25 | [Using A USB Memory Device](/specifications/subaru/ascent-2026/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 6 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/ascent-2026/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
 
 
 

@@ -69,7 +69,14 @@ class BuildBlocksResult:
     unmatched_headings: list[str] = field(default_factory=list)
 
 
-_STEP_LINE_RE = re.compile(r"^\s*\d{1,2}[.)]\s+\S")
+_STEP_LINE_RE = re.compile(r"^\s*\d{1,2}[.)]\s*[A-Z]")
+# The space between the step number's punctuation and its text is OPTIONAL --
+# confirmed real, Honda Pilot, 2026-09-03: this manual's own steps are set
+# tight, with no space at all ("1.Select Home."), unlike Subaru's spaced style
+# ("1. Select Home."). Requiring a capital letter right after (rather than just
+# requiring SOME whitespace) is what keeps this from also matching an unrelated
+# decimal number sitting at the start of its own line (e.g. "3.5 V" -- "5" is
+# not a capital letter, so this doesn't fire).
 # A numbered procedure step never IS header/footer furniture, only ever sits near
 # it by coincidence -- confirmed against the real 2025 Subaru supplement: step "5.
 # ->" of a right-column map-update procedure prints at top=67.8pt, just inside the

@@ -27,7 +27,7 @@ pie showData
 
 ## Figures in the manual
 
-- Figures: **159** / images rendered: **159**
+- Figures: **158** / images rendered: **158**
 
 Each image is a rendering of the corresponding area of the original PDF. **Images are not kept in the repository** (they are copies of another company's manual); `publish` creates them under `../figures/` on the machine that runs it.
 
@@ -109,7 +109,7 @@ flowchart LR
 | 12 | [Loading And Unloading A Disc](/specifications/subaru/outback-2025/ivi/file/12-loading-and-unloading-a-disc.md?chapter=quick-guide) | Quick Guide | 5 | 2 | 0 | - |
 | 13 | [Portable Device](/specifications/subaru/outback-2025/ivi/file/13-portable-device.md?chapter=quick-guide) | Quick Guide | 3 | 2 | 0 | - |
 | 14 | [Settings Screen](/specifications/subaru/outback-2025/ivi/file/14-settings-screen.md?chapter=quick-guide) | Quick Guide | 6 | 9 | 0 | - |
-| 15 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/15-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 43 | 12 | 0 | - |
+| 15 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/15-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 43 | 11 | 0 | - |
 | 16 | [Overview](/specifications/subaru/outback-2025/ivi/file/16-overview.md?chapter=quick-guide) | Quick Guide | 11 | 1 | 0 | - |
 | 17 | [Home Screen](/specifications/subaru/outback-2025/ivi/file/17-home-screen.md?chapter=quick-guide) | Quick Guide | 14 | 10 | 0 | - |
 | 18 | [With A Bluetooth Phone/Device](/specifications/subaru/outback-2025/ivi/file/18-with-a-bluetooth-phone-device.md?chapter=quick-guide) | Quick Guide | 5 | 4 | 0 | - |
@@ -127,6 +127,7 @@ flowchart LR
 | 30 | [Settings Screen](/specifications/subaru/outback-2025/ivi/file/30-settings-screen.md?chapter=quick-guide) | Quick Guide | 7 | 11 | 0 | - |
 | 31 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/31-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
 
 
 

@@ -10,42 +10,49 @@
 - Figure 9-1 source: p.22
 - (Copied from OM) Display the Apple CarPlay screen. (→P.67)
 
-## Procedure
+## Procedure (3 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
-    S1["1. Display the apps screen. (→P.21)"]
-    S2["2. Touch “Add Shortcut”."]
-    S3["3. Select the desired function."]
-    S4["4. Select the desired shortcut function."]
-    S5["5. Check that the shortcut icon is displayed on the apps sc…"]
-    S6["1. Select and hold the shortcut icon to enter edit mode."]
-    S7["2. Drag the button to the desired position."]
-    S8["1. Select and hold the shortcut icon to enter edit mode."]
-    S9["2. Drag the button to “Drag Here to Delete” area."]
-    S10["3. Touch “Done”."]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
-    S5 --> S6
-    S6 --> S7
-    S7 --> S8
-    S8 --> S9
-    S9 --> S10
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the apps screen. (→P.21)"]
+    S1_2["2. Touch “Add Shortcut”."]
+    S1_3["3. Select the desired function."]
+    S1_4["4. Select the desired shortcut function."]
+    S1_5["5. Check that the shortcut icon is displayed on the apps sc…"]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    S1_3 --> S1_4
+    S1_4 --> S1_5
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Select and hold the shortcut icon to enter edit mode."]
+    S2_2["2. Drag the button to the desired position."]
+    S2_1 --> S2_2
+    end
+    subgraph SEQ3["Sequence 3"]
+    direction TB
+    S3_1["1. Select and hold the shortcut icon to enter edit mode."]
+    S3_2["2. Drag the button to “Drag Here to Delete” area."]
+    S3_3["3. Touch “Done”."]
+    S3_1 --> S3_2
+    S3_2 --> S3_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the apps screen. (→P.21) | p.22 / step |
-| 2 | 2 | Touch “Add Shortcut”. | p.22 / step |
-| 3 | 3 | Select the desired function. | p.22 / step |
-| 4 | 4 | Select the desired shortcut function. | p.22 / step |
-| 5 | 5 | Check that the shortcut icon is displayed on the apps screen. | p.22 / step |
-| 6 | 1 | Select and hold the shortcut icon to enter edit mode. | p.23 / step |
-| 7 | 2 | Drag the button to the desired position. | p.23 / step |
-| 8 | 1 | Select and hold the shortcut icon to enter edit mode. | p.23 / step |
-| 9 | 2 | Drag the button to “Drag Here to Delete” area. | p.23 / step |
-| 10 | 3 | Touch “Done”. | p.23 / step |
+| 1 | 2 | Touch “Add Shortcut”. | p.22 / step |
+| 1 | 3 | Select the desired function. | p.22 / step |
+| 1 | 4 | Select the desired shortcut function. | p.22 / step |
+| 1 | 5 | Check that the shortcut icon is displayed on the apps screen. | p.22 / step |
+| 2 | 1 | Select and hold the shortcut icon to enter edit mode. | p.23 / step |
+| 2 | 2 | Drag the button to the desired position. | p.23 / step |
+| 3 | 1 | Select and hold the shortcut icon to enter edit mode. | p.23 / step |
+| 3 | 2 | Drag the button to “Drag Here to Delete” area. | p.23 / step |
+| 3 | 3 | Touch “Done”. | p.23 / step |
 
 ## 9-2-1. Service overview
 
@@ -72,6 +79,7 @@ flowchart TD
 | 5 | <span class="req-label">Step -</span>User can move buttons to another page by dragging them to the corresponding end of the screen if the number of buttons allows for multiple pages. | constraint | p.23 / bullet |
 | 6 | <span class="req-label">Apps screen</span>When deleting shortcut icons. | capability | p.23 / text |
 <!-- GENERATED:END function=d0183e16e02e -->
+
 
 
 

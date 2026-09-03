@@ -8,7 +8,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]”."]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]”."]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -37,6 +40,7 @@ flowchart TD
 | 8 | <span class="req-label">Step -</span>As a user works through the analog radio stations, (where applicable) the radio receiver will automatically tune from an analog signal to a digital signal within 5 seconds. | capability | p.94 / bullet |
 | 9 | <span class="req-label">Step -</span>Visual information related to content being played on your HD Radio receiver, such as Album Art, historical photographs, still art from live broadcasts, among other related content. | capability | p.94 / bullet |
 <!-- GENERATED:END function=10e2f3c48b21 -->
+
 
 
 

@@ -47,7 +47,7 @@
         {
           "number": 2,
           "text": "Select (Map).",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.158 / step"
         }
       ],
@@ -239,6 +239,7 @@
         {
           "figure_id": "708baa7600d8",
           "page": 157,
+          "printed_page": 158,
           "rect": [
             148.9048157,
             198.8244598,
@@ -334,6 +335,7 @@
         {
           "figure_id": "904d15ec6cad",
           "page": 158,
+          "printed_page": 159,
           "rect": [
             131.8969727,
             176.381955,
@@ -418,7 +420,7 @@
         {
           "number": 2,
           "text": "Select or to change the scale of the map screen.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.160 / step"
         }
       ],
@@ -506,6 +508,7 @@
         {
           "figure_id": "8891829ca2ac",
           "page": 159,
+          "printed_page": 160,
           "rect": [
             418.1012878,
             169.50318599999997,
@@ -699,6 +702,7 @@
         {
           "figure_id": "0e58de970313",
           "page": 160,
+          "printed_page": 161,
           "rect": [
             392.6334534,
             178.66850000000005,
@@ -713,6 +717,7 @@
         {
           "figure_id": "aa5a9529ab98",
           "page": 161,
+          "printed_page": 162,
           "rect": [
             140.3499146,
             80.88233640000004,
@@ -727,6 +732,7 @@
         {
           "figure_id": "bfdfde5fb088",
           "page": 161,
+          "printed_page": 162,
           "rect": [
             409.6412659,
             80.88233640000004,
@@ -821,6 +827,7 @@
         {
           "figure_id": "d603d4a57e78",
           "page": 162,
+          "printed_page": 163,
           "rect": [
             131.802063,
             150.4378479,
@@ -835,6 +842,7 @@
         {
           "figure_id": "0407eaa07606",
           "page": 162,
+          "printed_page": 163,
           "rect": [
             401.0934448,
             205.5031555,
@@ -968,6 +976,7 @@
         {
           "figure_id": "ef3edd85a099",
           "page": 163,
+          "printed_page": 164,
           "rect": [
             148.809906,
             166.23389880000002,
@@ -982,6 +991,7 @@
         {
           "figure_id": "e56299af74cb",
           "page": 163,
+          "printed_page": 164,
           "rect": [
             418.1012573,
             122.55161800000002,
@@ -1015,7 +1025,7 @@
         {
           "number": 2,
           "text": "Select (Menu). Menu",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.165 / step"
         }
       ],
@@ -1194,6 +1204,7 @@
         {
           "figure_id": "eae72afc9a07",
           "page": 164,
+          "printed_page": 165,
           "rect": [
             131.8020935,
             187.45045169999997,
@@ -1615,6 +1626,7 @@
         {
           "figure_id": "195a9dc4dfc1",
           "page": 166,
+          "printed_page": 167,
           "rect": [
             128.1574097,
             158.24375609999998,
@@ -1629,6 +1641,7 @@
         {
           "figure_id": "499f2920c604",
           "page": 167,
+          "printed_page": 168,
           "rect": [
             412.1864319,
             167.43868709999998,
@@ -1662,32 +1675,20 @@
         },
         {
           "number": 2,
-          "text": "Select (Menu). Menu",
-          "sequence": 2,
-          "source": "p.169 / step"
-        },
-        {
-          "number": 3,
-          "text": "→ Favorites (Favorites)",
-          "sequence": 3,
+          "text": "Select (Menu). Menu 3. → Favorites (Favorites)",
+          "sequence": 1,
           "source": "p.169 / step"
         },
         {
           "number": 1,
           "text": "Select (Add Home)/ (Add).",
-          "sequence": 4,
+          "sequence": 2,
           "source": "p.171 / step"
         },
         {
           "number": 2,
           "text": "Perform any of the following to display a point you wish to register:",
-          "sequence": 5,
-          "source": "p.171 / step"
-        },
-        {
-          "number": 3,
-          "text": "→ / /",
-          "sequence": 6,
+          "sequence": 2,
           "source": "p.171 / step"
         }
       ],
@@ -1804,7 +1805,7 @@
           "strength": "capability",
           "source": "p.171 / bullet",
           "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
-          "next_step_text": "3. → / /",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1817,7 +1818,7 @@
           "strength": "capability",
           "source": "p.171 / bullet",
           "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
-          "next_step_text": "3. → / /",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1830,7 +1831,7 @@
           "strength": "capability",
           "source": "p.171 / bullet",
           "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
-          "next_step_text": "3. → / /",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1843,7 +1844,20 @@
           "strength": "capability",
           "source": "p.171 / text",
           "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
-          "next_step_text": "3. → / /",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "41d848218f07",
+          "slot": "requirements",
+          "text": "3. → / /.",
+          "source_text": "3. → / /",
+          "strength": "capability",
+          "source": "p.171 / text",
+          "page_citation": "BASIC OPERATION ● Select the desired point on the map. REGISTERING HOME/WORK/FAVORITE POINT",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1879,6 +1893,7 @@
         {
           "figure_id": "86c76b3f45ce",
           "page": 168,
+          "printed_page": 169,
           "rect": [
             401.0934753,
             217.6071442,
@@ -1893,6 +1908,7 @@
         {
           "figure_id": "75c06824dd61",
           "page": 170,
+          "printed_page": 171,
           "rect": [
             401.0934143,
             80.88233640000004,
@@ -1987,6 +2003,7 @@
         {
           "figure_id": "5ded6dbf7bfd",
           "page": 171,
+          "printed_page": 172,
           "rect": [
             148.4919891,
             116.5777405,
@@ -2134,6 +2151,7 @@
         {
           "figure_id": "92ebecde91d0",
           "page": 171,
+          "printed_page": 172,
           "rect": [
             410.8024597,
             150.3111541,
@@ -2529,6 +2547,7 @@
         {
           "figure_id": "2a90872ab4be",
           "page": 173,
+          "printed_page": 174,
           "rect": [
             148.8314972,
             176.03143010000002,
@@ -2543,6 +2562,7 @@
         {
           "figure_id": "ea8712e57aca",
           "page": 174,
+          "printed_page": 175,
           "rect": [
             401.0934143,
             146.55161750000002,
@@ -2557,6 +2577,7 @@
         {
           "figure_id": "ba31583754f1",
           "page": 175,
+          "printed_page": 176,
           "rect": [
             148.809906,
             110.5516174,
@@ -2571,6 +2592,7 @@
         {
           "figure_id": "17d5b5296322",
           "page": 175,
+          "printed_page": 176,
           "rect": [
             410.8020935,
             87.87588190000002,
@@ -2603,14 +2625,8 @@
         },
         {
           "number": 2,
-          "text": "Select .",
-          "sequence": 2,
-          "source": "p.177 / step"
-        },
-        {
-          "number": 3,
-          "text": "→ (Manage Route) Manage Route",
-          "sequence": 3,
+          "text": "Select . 3. → (Manage Route) Manage Route",
+          "sequence": 1,
           "source": "p.177 / step"
         }
       ],
@@ -2802,6 +2818,7 @@
         {
           "figure_id": "0f809c0562d0",
           "page": 176,
+          "printed_page": 177,
           "rect": [
             401.0934753,
             173.1032227,
@@ -3000,6 +3017,7 @@
         {
           "figure_id": "e4bfcfa9bef5",
           "page": 178,
+          "printed_page": 179,
           "rect": [
             129.3714905,
             120.3201416,
@@ -3110,20 +3128,14 @@
         },
         {
           "number": 2,
-          "text": "Select (Settings). Settings",
-          "sequence": 2,
-          "source": "p.181 / step"
-        },
-        {
-          "number": 3,
-          "text": "→ (Navigation)",
-          "sequence": 3,
+          "text": "Select (Settings). Settings 3. → (Navigation)",
+          "sequence": 1,
           "source": "p.181 / step"
         },
         {
           "number": 4,
           "text": "Select the desired item to be set.",
-          "sequence": 4,
+          "sequence": 1,
           "source": "p.181 / step"
         }
       ],
@@ -3290,6 +3302,7 @@
         {
           "figure_id": "4a5cbead9b58",
           "page": 180,
+          "printed_page": 181,
           "rect": [
             401.0813293,
             120.71613770000005,
@@ -3973,80 +3986,62 @@
         },
         {
           "number": 2,
-          "text": "Select (Map Update) on the navigation settings screen. (→P.181)",
-          "sequence": 2,
-          "source": "p.186 / step"
-        },
-        {
-          "number": 3,
-          "text": "→ (USB) USB",
-          "sequence": 3,
+          "text": "Select (Map Update) on the navigation settings screen. (→P.181) 3. → (USB) USB",
+          "sequence": 1,
           "source": "p.186 / step"
         },
         {
           "number": 4,
           "text": "After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
-          "sequence": 4,
+          "sequence": 1,
           "source": "p.186 / step"
         },
         {
           "number": 5,
           "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
-          "sequence": 5,
+          "sequence": 1,
           "source": "p.186 / step"
         },
         {
           "number": 6,
           "text": "After at least 5 minutes have elapsed, start the engine again.",
-          "sequence": 6,
+          "sequence": 1,
           "source": "p.186 / step"
         },
         {
           "number": 1,
           "text": "Connect to a Wi-Fi® network. (→P.69)",
-          "sequence": 7,
+          "sequence": 2,
           "source": "p.187 / step"
         },
         {
           "number": 2,
-          "text": "Select (Map Update) on the navigation settings screen. (→P.181)",
-          "sequence": 8,
-          "source": "p.187 / step"
-        },
-        {
-          "number": 3,
-          "text": "→ (Wi-Fi) Wi-Fi",
-          "sequence": 9,
+          "text": "Select (Map Update) on the navigation settings screen. (→P.181) 3. → (Wi-Fi) Wi-Fi",
+          "sequence": 2,
           "source": "p.187 / step"
         },
         {
           "number": 4,
           "text": "Select the regions for which maps are to be updated.",
-          "sequence": 10,
-          "source": "p.187 / step"
-        },
-        {
-          "number": 5,
-          "text": "→ (Update XX MB)",
-          "sequence": 11,
+          "sequence": 2,
           "source": "p.187 / step"
         },
         {
           "number": 6,
           "text": "After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
-          "sequence": 12,
+          "sequence": 2,
           "source": "p.187 / step"
         },
         {
           "number": 7,
           "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
-          "sequence": 13,
+          "sequence": 2,
           "source": "p.187 / step"
         },
         {
           "number": 8,
           "text": "After at least 5 minutes have elapsed, start the engine again.",
-          "sequence": 14,
+          "sequence": 2,
           "source": "p.187 / step"
         }
       ],
@@ -4085,19 +4080,6 @@
           "strength": "capability",
           "source": "p.186 / bullet",
           "page_citation": "TIPS FOR THE NAVIGATION SYSTEM NOTE UPDATING THE MAP DATA MANUALLY USING A",
-          "next_step_text": "1. Connect to a Wi-Fi® network. (→P.69)",
-          "thresholds": [],
-          "change": null,
-          "previous_text": null
-        },
-        {
-          "req_id": "65e3eb5421ae",
-          "slot": "requirements",
-          "text": "UPDATING THE MAP DATA MANUALLY USING Wi-Fi®.",
-          "source_text": "UPDATING THE MAP DATA MANUALLY USING Wi-Fi®",
-          "strength": "capability",
-          "source": "p.187 / text",
-          "page_citation": "TIPS FOR THE NAVIGATION SYSTEM 5. → (Update XX MB) UPDATING THE MAP DATA MANUALLY USING Update XX MB",
           "next_step_text": "1. Connect to a Wi-Fi® network. (→P.69)",
           "thresholds": [],
           "change": null,
@@ -4147,6 +4129,7 @@
         {
           "figure_id": "f88c3527a8d4",
           "page": 186,
+          "printed_page": 187,
           "rect": [
             131.802063,
             195.2685669,
@@ -4179,37 +4162,37 @@
         {
           "number": 2,
           "text": "Select Automatic Update",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.188 / step"
         },
         {
           "number": 3,
           "text": "Set “Update maps automatically (at most 8 maps can be selected)”.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.188 / step"
         },
         {
           "number": 4,
           "text": "Select the regions that you would like to be updated.",
-          "sequence": 4,
+          "sequence": 1,
           "source": "p.188 / step"
         },
         {
           "number": 5,
           "text": "After the updates have been completed, turn the ignition switch to the “LOCK”/“OFF” position and exit the vehicle.",
-          "sequence": 5,
+          "sequence": 1,
           "source": "p.188 / step"
         },
         {
           "number": 6,
           "text": "Close the driver’s door and lock the doors, then move at least 10 feet (3 m) away from the vehicle to prevent the key from interfering.",
-          "sequence": 6,
+          "sequence": 1,
           "source": "p.188 / step"
         },
         {
           "number": 7,
           "text": "After at least 5 minutes have elapsed, start the engine again.",
-          "sequence": 7,
+          "sequence": 1,
           "source": "p.188 / step"
         }
       ],

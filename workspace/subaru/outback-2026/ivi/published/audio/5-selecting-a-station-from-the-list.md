@@ -8,18 +8,21 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “Station List”."]
-    S2["2. Select the desired list."]
-    S3["3. Select the desired station."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “Station List”."]
+    S1_2["2. Select the desired list."]
+    S1_3["3. Select the desired station."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “Station List”. | p.92 / step |
-| 2 | 2 | Select the desired list. | p.92 / step |
-| 3 | 3 | Select the desired station. | p.92 / step |
+| 1 | 2 | Select the desired list. | p.92 / step |
+| 1 | 3 | Select the desired station. | p.92 / step |
 
 ## 5-2-1. Service overview
 
@@ -36,6 +39,7 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>“All”: Select to display all stations. | capability | p.92 / bullet |
 | 4 | <span class="req-label">Step -</span>“Genres”: Select to display categories. | capability | p.92 / bullet |
 <!-- GENERATED:END function=a42c74459897 -->
+
 
 
 

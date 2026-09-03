@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the map screen. (→P.158)"]
-    S2["2. Select (Menu). Menu"]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the map screen. (→P.158)"]
+    S1_2["2. Select (Menu). Menu"]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the map screen. (→P.158) | p.165 / step |
-| 2 | 2 | Select (Menu). Menu | p.165 / step |
+| 1 | 2 | Select (Menu). Menu | p.165 / step |
 
 ## 9-2-1. Service overview
 
@@ -46,6 +49,7 @@ flowchart TD
 | 7 | <span class="req-label">Main Menu Screen Overview</span>To display frequently set destinations, select “Keep trip history on this device for optional features” and “Predict Privacy (Privacy) frequent destinations” to on then select Frequent destinations (Frequent destinations). | capability | p.166 / text |
 | 8 | <span class="req-label">Main Menu Screen Overview</span>*2: If a point has been registered as home. *3: If a point has not been registered as work. *4: If a point has been registered as work. *5: This item can only be selected when a route has been registered to My Routes. | constraint | p.166 / text |
 <!-- GENERATED:END function=c8141c83164d -->
+
 
 
 

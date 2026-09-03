@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Start the voice assistance system. (→P.32)"]
-    S2["2. Say the command."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Start the voice assistance system. (→P.32)"]
+    S1_2["2. Say the command."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Start the voice assistance system. (→P.32) | p.34 / step |
-| 2 | 2 | Say the command. | p.34 / step |
+| 1 | 2 | Say the command. | p.34 / step |
 
 ## 21-2-2. Service requirements
 
@@ -32,6 +35,7 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>To cancel voice assistance, press and hold the voice assistance switch on the steering wheel, or touch “[icon]”. | capability | p.34 / bullet |
 | 4 | <span class="req-label">Step -</span>Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the speech guidance volume. | capability | p.34 / bullet |
 <!-- GENERATED:END function=938ec02b730c -->
+
 
 
 

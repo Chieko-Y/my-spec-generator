@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the phone screen. (→P.74)"]
-    S2["2. Touch “Recents”, and then select the desired contact."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the phone screen. (→P.74)"]
+    S1_2["2. Touch “Recents”, and then select the desired contact."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.78 / step |
-| 2 | 2 | Touch “Recents”, and then select the desired contact. | p.78 / step |
+| 1 | 2 | Touch “Recents”, and then select the desired contact. | p.78 / step |
 
 ## 8-2-2. Service requirements
 
@@ -40,6 +43,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>International phone calls may not be made depending on the type of cellular phone you have. | capability | p.79 / bullet |
 <!-- GENERATED:END function=08f7dd64b1da -->
+
 
 
 

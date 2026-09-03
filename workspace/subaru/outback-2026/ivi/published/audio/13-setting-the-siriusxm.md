@@ -16,15 +16,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. SiriusXM® control screen. (→P.94) Touch “[icon]” on the"]
-    S2["2. Select the desired item to be set."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. SiriusXM® control screen. (→P.94) Touch “[icon]” on the"]
+    S1_2["2. Select the desired item to be set."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | SiriusXM® control screen. (→P.94) Touch “[icon]” on the | p.100 / step |
-| 2 | 2 | Select the desired item to be set. | p.101 / step |
+| 1 | 2 | Select the desired item to be set. | p.101 / step |
 
 ## 13-2-2. Service requirements
 
@@ -50,6 +53,7 @@ flowchart TD
 | 18 | <span class="req-label">Setting the SiriusXM®</span>“Start Up Recommenda- Select to enable/disable the start up recommendations function. tions”. | capability | p.102 / text |
 | 19 | <span class="req-label">Setting the SiriusXM®</span>“Reset History” Select to delete all the listening history. | capability | p.102 / text |
 <!-- GENERATED:END function=0b1461817628 -->
+
 
 
 

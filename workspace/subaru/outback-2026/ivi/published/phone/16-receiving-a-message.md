@@ -16,15 +16,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “Listen”."]
-    S2["2. The following screen is displayed."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “Listen”."]
+    S1_2["2. The following screen is displayed."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “Listen”. | p.84 / step |
-| 2 | 2 | The following screen is displayed. | p.85 / step |
+| 1 | 2 | The following screen is displayed. | p.85 / step |
 
 ## 16-2-1. Service overview
 
@@ -53,6 +56,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the cellular phone used for receiving messages, or its registration status with the system, some information may not be displayed. | capability | p.85 / bullet |
 <!-- GENERATED:END function=347befe594c3 -->
+
 
 
 

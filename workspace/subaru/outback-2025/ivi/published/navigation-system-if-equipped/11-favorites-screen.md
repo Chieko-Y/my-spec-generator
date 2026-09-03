@@ -13,30 +13,29 @@
 - Figure 11-2 source: p.209
 - (Copied from OM) (Add Work)/
 
-## Procedure
+## Procedure (2 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
-    S1["1. Display the map screen. (→P.196)"]
-    S2["2. Select (Menu). Menu"]
-    S3["3. → Favorites (Favorites)"]
-    S4["1. Select (Add Home)/ (Add)."]
-    S5["2. Perform any of the following to display a point you wish…"]
-    S6["3. → / /"]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
-    S5 --> S6
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the map screen. (→P.196)"]
+    S1_2["2. Select (Menu). Menu 3. → Favorites (Favorites)"]
+    S1_1 --> S1_2
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Select (Add Home)/ (Add)."]
+    S2_2["2. Perform any of the following to display a point you wish…"]
+    S2_1 --> S2_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the map screen. (→P.196) | p.207 / step |
-| 2 | 2 | Select (Menu). Menu | p.207 / step |
-| 3 | 3 | → Favorites (Favorites) | p.207 / step |
-| 4 | 1 | Select (Add Home)/ (Add). | p.209 / step |
-| 5 | 2 | Perform any of the following to display a point you wish to register: | p.209 / step |
-| 6 | 3 | → / / | p.209 / step |
+| 1 | 2 | Select (Menu). Menu 3. → Favorites (Favorites) | p.207 / step |
+| 2 | 1 | Select (Add Home)/ (Add). | p.209 / step |
+| 2 | 2 | Perform any of the following to display a point you wish to register: | p.209 / step |
 
 ## 11-2-1. Service overview
 
@@ -59,9 +58,11 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>Select Set from map (Set from map) and select the desired point on the map. | capability | p.209 / bullet |
 | 3 | <span class="req-label">Step -</span>Enter keyword(s) in the keyword entry section and select the desired point from the candidates list. | capability | p.209 / bullet |
 | 4 | <span class="req-label">Favorites Screen</span>(Add Work)/. | capability | p.209 / text |
-| 5 | <span class="req-label">Step -</span>To register a favorite, enter a name. | capability | p.209 / bullet |
-| 6 | <span class="req-label">Step -</span>Icons will be displayed on the map to indicate registered points. | capability | p.209 / bullet |
+| 5 | <span class="req-label">Favorites Screen</span>3. → / /. | capability | p.209 / text |
+| 6 | <span class="req-label">Step -</span>To register a favorite, enter a name. | capability | p.209 / bullet |
+| 7 | <span class="req-label">Step -</span>Icons will be displayed on the map to indicate registered points. | capability | p.209 / bullet |
 <!-- GENERATED:END function=528ffede5880 -->
+
 
 
 

@@ -8,15 +8,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. SiriusXM® control screen. (→P.94) Touch “[icon]” on the"]
-    S2["2. Touch “System Information”."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. SiriusXM® control screen. (→P.94) Touch “[icon]” on the"]
+    S1_2["2. Touch “System Information”."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | SiriusXM® control screen. (→P.94) Touch “[icon]” on the | p.98 / step |
-| 2 | 2 | Touch “System Information”. | p.98 / step |
+| 1 | 2 | Touch “System Information”. | p.98 / step |
 
 ## 10-2-1. Service overview
 
@@ -30,6 +33,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Your radio ID will be displayed. | capability | p.98 / bullet |
 <!-- GENERATED:END function=9b967ec8460d -->
+
 
 
 

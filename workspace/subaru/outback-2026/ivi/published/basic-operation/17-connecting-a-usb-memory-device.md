@@ -8,7 +8,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Connect a device."]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Connect a device."]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -25,6 +28,7 @@ flowchart TD
 | 4 | <span class="req-label">Step -</span>By connecting a device such as a cellular phone, charging starts depending on the device. | capability | p.30 / bullet |
 | 5 | <span class="req-label">Step -</span>As the Type-A terminal is for charging only, connect to the Type-C terminal for data/signal communication. | capability | p.30 / bullet |
 <!-- GENERATED:END function=c2b5b68d872a -->
+
 
 
 

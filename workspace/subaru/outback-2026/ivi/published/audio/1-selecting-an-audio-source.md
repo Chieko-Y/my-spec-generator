@@ -6,17 +6,21 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. Select the desired audio source."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_2["2. Select the desired audio source."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.90 / step |
-| 2 | 2 | Select the desired audio source. | p.90 / step |
+| 1 | 2 | Select the desired audio source. | p.90 / step |
 
 <!-- GENERATED:END function=6a194ed9769e -->
+
 
 
 

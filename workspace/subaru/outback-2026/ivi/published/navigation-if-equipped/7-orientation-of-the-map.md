@@ -19,7 +19,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]”, “[icon]”, or “[icon]”."]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]”, “[icon]”, or “[icon]”."]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -44,6 +47,7 @@ flowchart TD
 | 6 | <span class="req-label">Orientation of the map</span>2D heading-up. | capability | p.122 / text |
 | 7 | <span class="req-label">Step -</span>The direction of vehicle travel is always up. | capability | p.122 / bullet |
 <!-- GENERATED:END function=f07b78057f98 -->
+
 
 
 

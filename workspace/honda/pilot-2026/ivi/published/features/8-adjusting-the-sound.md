@@ -5,20 +5,48 @@
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
-## Procedure
+## Procedure (3 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
-    S1["1. Select Home."]
-    S2["2. Select General Settings."]
-    S3["3. Select Sound."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Select Home."]
+    S1_2["2. Select an audio source icon."]
+    S1_3["3. Select Menu."]
+    S1_4["4. Select Sound Settings."]
+    S1_5["5. Select the setting you want."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    S1_3 --> S1_4
+    S1_4 --> S1_5
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_3["3. Select Sound."]
+    S2_4["4. Select the setting you want. Select an item from the fol…"]
+    S2_3 --> S2_4
+    end
+    subgraph SEQ3["Sequence 3"]
+    direction TB
+    S3_1["1. Select Home."]
+    S3_2["2. Select General Settings."]
+    S3_3["3. Select Sound."]
+    S3_1 --> S3_2
+    S3_2 --> S3_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select Home. | p.284 / step |
-| 2 | 2 | Select General Settings. | p.284 / step |
+| 1 | 2 | Select an audio source icon. | p.284 / step |
+| 1 | 3 | Select Menu. | p.284 / step |
+| 1 | 4 | Select Sound Settings. | p.284 / step |
+| 1 | 5 | Select the setting you want. | p.284 / step |
+| 2 | 3 | Select Sound. | p.284 / step |
+| 2 | 4 | Select the setting you want. Select an item from the following choices: | p.284 / step |
+| 3 | 1 | Select Home. | p.284 / step |
+| 3 | 2 | Select General Settings. | p.284 / step |
 | 3 | 3 | Select Sound. | p.284 / step |
 
 ## 8-2-1. Service overview
@@ -26,9 +54,8 @@ flowchart TD
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Adjusting the Sound</span>Adjusting the Sound. | capability | p.284 / text |
-| 2 | <span class="req-label">Adjusting the Sound</span>1.Select Home. 2.Select an audio source icon. | capability | p.284 / text |
-| 3 | <span class="req-label">Adjusting the Sound</span>AM/FM Radio mode 3.Select Menu. 4.Select Sound Settings. 5.Select the setting you want. | capability | p.284 / text |
-| 4 | <span class="req-label">Adjusting the Sound</span>USB Audio, Bluetooth Audio mode 3.Select Sound. 4.Select the setting you want. Select an item from the following choices:. | capability | p.284 / text |
+| 2 | <span class="req-label">Adjusting the Sound</span>AM/FM Radio mode. | capability | p.284 / text |
+| 3 | <span class="req-label">Adjusting the Sound</span>USB Audio, Bluetooth Audio mode. | capability | p.284 / text |
 
 ## 8-2-2. Service requirements
 
@@ -45,5 +72,6 @@ flowchart TD
 | 9 | <span class="req-label">Adjusting the Sound</span>You can also adjust the sound the following procedure. | capability | p.284 / text |
 | 10 | <span class="req-label">Adjusting the Sound</span>To reset each setting for Bass / Mid / Treble, Balance / Fader*2, Audio Zones &amp; Balance / Fader*1 and Speed Volume Compensation*2 select Reset to Default in each setting item. | capability | p.284 / text |
 <!-- GENERATED:END function=6ecea6a09b6d -->
+
 
 

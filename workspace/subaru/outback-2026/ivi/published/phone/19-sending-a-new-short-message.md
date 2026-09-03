@@ -8,29 +8,31 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the favorites detail screen (→P.79), the recent …"]
-    S2["2. Touch “[icon]” next to the desired number."]
-    S3["3. Select the desired message."]
-    S4["4. → “Send”"]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the favorites detail screen (→P.79), the recent …"]
+    S1_2["2. Touch “[icon]” next to the desired number."]
+    S1_3["3. Select the desired message."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the favorites detail screen (→P.79), the recent calls list screen (→P.78) or the contact detail screen (→P.80). | p.86 / step |
-| 2 | 2 | Touch “[icon]” next to the desired number. | p.86 / step |
-| 3 | 3 | Select the desired message. | p.86 / step |
-| 4 | 4 | → “Send” | p.86 / step |
+| 1 | 2 | Touch “[icon]” next to the desired number. | p.86 / step |
+| 1 | 3 | Select the desired message. | p.86 / step |
 
 ## 19-2-2. Service requirements
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>“[icon]”: Select to change the message. | capability | p.86 / bullet |
-| 2 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
+| 2 | <span class="req-label">Sending a new short message</span>4. → “Send”. | capability | p.86 / text |
+| 3 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
 <!-- GENERATED:END function=b8bfdc423001 -->
+
 
 
 

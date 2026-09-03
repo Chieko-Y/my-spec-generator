@@ -19,7 +19,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Select , ,or ."]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Select , ,or ."]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -48,6 +51,7 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>The direction of vehicle travel is always up. | capability | p.200 / bullet |
 | 4 | <span class="req-label">Step -</span>The direction of vehicle travel is always up. | capability | p.200 / bullet |
 <!-- GENERATED:END function=aef19ba52346 -->
+
 
 
 

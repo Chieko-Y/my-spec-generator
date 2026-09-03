@@ -8,33 +8,37 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the message inbox screen. (→P.83)"]
-    S2["2. Select the desired message from the list."]
-    S3["3. → “Reply”"]
-    S4["4. Select the desired message."]
-    S5["5. → “Send”"]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the message inbox screen. (→P.83)"]
+    S1_2["2. Select the desired message from the list."]
+    S1_4["4. Select the desired message."]
+    S1_1 --> S1_2
+    S1_2 --> S1_4
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the message inbox screen. (→P.83) | p.86 / step |
-| 2 | 2 | Select the desired message from the list. | p.86 / step |
-| 3 | 3 | → “Reply” | p.86 / step |
-| 4 | 4 | Select the desired message. | p.86 / step |
-| 5 | 5 | → “Send” | p.86 / step |
+| 1 | 2 | Select the desired message from the list. | p.86 / step |
+| 1 | 4 | Select the desired message. | p.86 / step |
+
+## 18-2-1. Service overview
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Replying to a message (quick reply)</span>3. → “Reply”. | capability | p.86 / text |
 
 ## 18-2-2. Service requirements
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>“[icon]”: Select to change the message. | capability | p.86 / bullet |
-| 2 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
-| 3 | <span class="req-label">Step -</span>10 messages have already been stored. | capability | p.86 / bullet |
-| 4 | <span class="req-label">Step -</span>Messages can also be edited on the phone settings screen. (→P.45). | capability | p.86 / bullet |
+| 2 | <span class="req-label">Replying to a message (quick reply)</span>5. → “Send”. | capability | p.86 / text |
+| 3 | <span class="req-label">Step -</span>“Cancel”: Select to cancel sending the message. | capability | p.86 / bullet |
+| 4 | <span class="req-label">Step -</span>10 messages have already been stored. | capability | p.86 / bullet |
+| 5 | <span class="req-label">Step -</span>Messages can also be edited on the phone settings screen. (→P.45). | capability | p.86 / bullet |
 
 ## 18-5. Exception operation
 
@@ -42,6 +46,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the connected Bluetooth phone device, the replying function to a message may not be available. | capability | p.86 / bullet |
 <!-- GENERATED:END function=55e6ab7b677a -->
+
 
 
 

@@ -8,18 +8,21 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the message inbox screen. (→P.83)"]
-    S2["2. Select the desired message from the list."]
-    S3["3. Check the message. (→P.84)"]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the message inbox screen. (→P.83)"]
+    S1_2["2. Select the desired message from the list."]
+    S1_3["3. Check the message. (→P.84)"]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the message inbox screen. (→P.83) | p.85 / step |
-| 2 | 2 | Select the desired message from the list. | p.85 / step |
-| 3 | 3 | Check the message. (→P.84) | p.85 / step |
+| 1 | 2 | Select the desired message from the list. | p.85 / step |
+| 1 | 3 | Check the message. (→P.84) | p.85 / step |
 
 ## 17-2-2. Service requirements
 
@@ -30,6 +33,7 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>The text of the message is not displayed while driving. | capability | p.85 / bullet |
 | 4 | <span class="req-label">Step -</span>Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the message readout volume. | capability | p.85 / bullet |
 <!-- GENERATED:END function=7a58369e0ec2 -->
+
 
 
 

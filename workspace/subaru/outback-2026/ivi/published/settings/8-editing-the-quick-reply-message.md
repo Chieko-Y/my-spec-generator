@@ -8,18 +8,21 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “Edit”."]
-    S2["2. Select the desired message."]
-    S3["3. Enter the message."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “Edit”."]
+    S1_2["2. Select the desired message."]
+    S1_3["3. Enter the message."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “Edit”. | p.47 / step |
-| 2 | 2 | Select the desired message. | p.47 / step |
-| 3 | 3 | Enter the message. | p.47 / step |
+| 1 | 2 | Select the desired message. | p.47 / step |
+| 1 | 3 | Enter the message. | p.47 / step |
 
 ## 8-2-2. Service requirements
 
@@ -29,6 +32,7 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>“[icon]”: Select to delete the message. | capability | p.47 / bullet |
 | 3 | <span class="req-label">Step -</span>2 Before adding a new message, delete an already registered message. | capability | p.47 / bullet |
 <!-- GENERATED:END function=f8e5422cfa46 -->
+
 
 
 

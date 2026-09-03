@@ -13,29 +13,30 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. → “Software”"]
-    S3["3. Select the items to be set."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_3["3. Select the items to be set."]
+    S1_1 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.48 / step |
-| 2 | 2 | → “Software” | p.48 / step |
-| 3 | 3 | Select the items to be set. | p.48 / step |
+| 1 | 3 | Select the items to be set. | p.48 / step |
 
 ## 10-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Software settings screen</span>“Subaru Connected Services System Select to display the Subaru connected services system Update” update screen. (→P.49). | capability | p.48 / text |
-| 2 | <span class="req-label">Software settings screen</span>Select to display the vehicle’s systems other than the “Other System Update” Subaru connected services system update screen. (→P.50). | capability | p.48 / text |
-| 3 | <span class="req-label">Software settings screen</span>“System Information” Select to display the system information. | capability | p.48 / text |
-| 4 | <span class="req-label">Software settings screen</span>“Free/Open Source Information” Select to display the free/open source software information. | capability | p.48 / text |
-| 5 | <span class="req-label">Software settings screen</span>Select to display the version of the 3D high definition map data. “3D HD Map Data”* Refer to the Owner’s Manual supplement for the Eye- Sight system for details. | capability | p.48 / text |
-| 6 | <span class="req-label">Software settings screen</span>Select to enable/disable the services using the cloud navigation server. | capability | p.48 / text |
+| 1 | <span class="req-label">Software settings screen</span>2. → “Software”. | capability | p.48 / text |
+| 2 | <span class="req-label">Software settings screen</span>“Subaru Connected Services System Select to display the Subaru connected services system Update” update screen. (→P.49). | capability | p.48 / text |
+| 3 | <span class="req-label">Software settings screen</span>Select to display the vehicle’s systems other than the “Other System Update” Subaru connected services system update screen. (→P.50). | capability | p.48 / text |
+| 4 | <span class="req-label">Software settings screen</span>“System Information” Select to display the system information. | capability | p.48 / text |
+| 5 | <span class="req-label">Software settings screen</span>“Free/Open Source Information” Select to display the free/open source software information. | capability | p.48 / text |
+| 6 | <span class="req-label">Software settings screen</span>Select to display the version of the 3D high definition map data. “3D HD Map Data”* Refer to the Owner’s Manual supplement for the Eye- Sight system for details. | capability | p.48 / text |
+| 7 | <span class="req-label">Software settings screen</span>Select to enable/disable the services using the cloud navigation server. | capability | p.48 / text |
 
 ## 10-2-2. Service requirements
 
@@ -46,6 +47,7 @@ flowchart TD
 | 3 | <span class="req-label">Software settings screen</span>“Reset”: Select to reset all setup items. The audio system restarts automatically after resetting factory data. “Factory Data Reset” To complete the reset process, turn the ignition switch to OFF after the audio system has restarted, and then turn to ACC or ON after approximately 3 minutes. | capability | p.48 / text |
 | 4 | <span class="req-label">Software settings screen</span>*: If equipped. | constraint | p.49 / text |
 <!-- GENERATED:END function=70a5c8b94926 -->
+
 
 
 

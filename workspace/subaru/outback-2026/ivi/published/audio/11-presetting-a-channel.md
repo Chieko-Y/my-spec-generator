@@ -8,15 +8,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Tune to the desired channel."]
-    S2["2. Select and hold one of the desired preset station button…"]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Tune to the desired channel."]
+    S1_2["2. Select and hold one of the desired preset station button…"]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Tune to the desired channel. | p.99 / step |
-| 2 | 2 | Select and hold one of the desired preset station buttons. | p.99 / step |
+| 1 | 2 | Select and hold one of the desired preset station buttons. | p.99 / step |
 
 ## 11-2-1. Service overview
 
@@ -30,6 +33,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>To change the preset station to a different one, follow the same procedure. | capability | p.99 / bullet |
 <!-- GENERATED:END function=e53e889b3220 -->
+
 
 
 

@@ -13,15 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. SiriusXM® control Touch “[icon]” on the screen. (→P.94)"]
-    S2["2. Speak when the search screen is displayed and a beep is …"]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. SiriusXM® control Touch “[icon]” on the screen. (→P.94)"]
+    S1_2["2. Speak when the search screen is displayed and a beep is …"]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | SiriusXM® control Touch “[icon]” on the screen. (→P.94) | p.100 / step |
-| 2 | 2 | Speak when the search screen is displayed and a beep is heard. | p.100 / step |
+| 1 | 2 | Speak when the search screen is displayed and a beep is heard. | p.100 / step |
 
 ## 12-2-1. Service overview
 
@@ -61,6 +64,7 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>Voice commands may not be recognized if:. | capability | p.100 / bullet |
 | 2 | <span class="req-label">Step -</span>If there is excessive background noise, such as wind noise, the system may not recognize the command properly and using voice commands may not be possible. | capability | p.100 / bullet |
 <!-- GENERATED:END function=9f626bfcadf7 -->
+
 
 
 

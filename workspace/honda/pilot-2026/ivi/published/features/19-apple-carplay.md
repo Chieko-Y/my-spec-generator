@@ -1,9 +1,42 @@
 <!-- GENERATED:START function=8aa01a78a644 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 19. Apple CarPlay
 
-<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Apple CarPlay<br><b>Source:</b> printed page 309, 310, 311, 312<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
+<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Apple CarPlay<br><b>Source:</b> printed page 309, 310, 311, 312<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
+
+## Procedure (2 sequences; the manual restarts the numbering)
+```mermaid
+flowchart TD
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Connect the iPhone to the USB charging/connector port. 2…"]
+    S1_2["2. Select Yes. uIf you do not allow this consent, select No."]
+    S1_1 --> S1_2
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Select Home."]
+    S2_2["2. Select Apple CarPlay."]
+    S2_3["3. Select Check Device List or Connect New Phone."]
+    S2_4["4. Pair the iPhone to the vehicle’s Bluetooth® HandsFreeLin…"]
+    S2_5["5. Select Yes."]
+    S2_1 --> S2_2
+    S2_2 --> S2_3
+    S2_3 --> S2_4
+    S2_4 --> S2_5
+    end
+```
+
+| Seq | Step | Operation (Copied from OM) | Source |
+|---|---|---|---|
+| 1 | 1 | Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed. | p.311 / step |
+| 1 | 2 | Select Yes. uIf you do not allow this consent, select No. | p.311 / step |
+| 2 | 1 | Select Home. | p.311 / step |
+| 2 | 2 | Select Apple CarPlay. | p.311 / step |
+| 2 | 3 | Select Check Device List or Connect New Phone. | p.311 / step |
+| 2 | 4 | Pair the iPhone to the vehicle’s Bluetooth® HandsFreeLink® (HFL) system. 2 Phone Setup P.373 | p.311 / step |
+| 2 | 5 | Select Yes. | p.311 / step |
 
 ## 19-2-1. Service overview
 
@@ -24,18 +57,16 @@
 | 13 | <span class="req-label">Apple CarPlay</span>Changes in operating systems, hardware, software, and other technology integral to providing Apple CarPlay functionality, as well as new or revised governmental regulations, may result in a decrease or cessation of Apple CarPlay functionality and services. Honda cannot and does not provide any warranty or guarantee of future Apple CarPlay performance or functionality. | constraint | p.310 / text |
 | 14 | <span class="req-label">Apple CarPlay</span>It is possible to use third-party apps if they are compatible with Apple CarPlay. Refer to the Apple website for information on compatible apps. | constraint | p.310 / text |
 | 15 | <span class="req-label">Apple CarPlay</span>Connect Apple CarPlay Using the USB Cable. | capability | p.311 / text |
-| 16 | <span class="req-label">Apple CarPlay</span>1.Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed. 2.Select Yes. uIf you do not allow this consent, select No. | capability | p.311 / text |
-| 17 | <span class="req-label">Apple CarPlay</span>You may change the consent settings under the Connections settings menu. | capability | p.311 / text |
-| 18 | <span class="req-label">Apple CarPlay</span>Connect Apple CarPlay Wirelessly. | capability | p.311 / text |
-| 19 | <span class="req-label">Apple CarPlay</span>1.Select Home. 2.Select Apple CarPlay. 3.Select Check Device List or Connect New Phone. 4.Pair the iPhone to the vehicle’s Bluetooth® HandsFreeLink® (HFL) system. 2 Phone Setup P.373 5.Select Yes. | capability | p.311 / text |
-| 20 | <span class="req-label">Apple CarPlay</span>1Apple CarPlay Only initialize Apple CarPlay when you are safely parked. When Apple CarPlay first detects your iPhone, you will need to set up your iPhone. Refer to the instruction manual that came with your iPhone. | constraint | p.311 / text |
-| 21 | <span class="req-label">Apple CarPlay</span>You can also use the method below to set up Apple CarPlay: Select Home General Settings Connections Manage Device Connections Select Device. | capability | p.311 / text |
-| 22 | <span class="req-label">Apple CarPlay</span>Use of user and vehicle information The use and handling of user and vehicle information transmitted to/from your iPhone by Apple CarPlay is governed by the Apple iOS terms and conditions and Apple’s Privacy Policy. | capability | p.311 / text |
-| 23 | <span class="req-label">Apple CarPlay</span>If there is a problem with the connection of your iPhone, an error code will be displayed. 2 Customized Features P.346. | capability | p.311 / text |
-| 24 | <span class="req-label">Apple CarPlay</span>Wireless Apple CarPlay and AT&amp;T Hotspot cannot be used at the same time. When using Apple CarPlay and AT&amp;T Hotspot at the same time, connect to Apple CarPlay with a USB cable. | constraint | p.311 / text |
-| 25 | <span class="req-label">Apple CarPlay</span>Operating Apple CarPlay with Siri. | capability | p.312 / text |
-| 26 | <span class="req-label">Apple CarPlay</span>Press and hold the (Talk) button to activate Siri. Press again to deactivate Siri. Press and release to activate standard voice recognition system. | capability | p.312 / text |
-| 27 | <span class="req-label">Apple CarPlay</span>1Operating Apple CarPlay with Siri Below are examples of questions and commands for Siri:. | capability | p.312 / text |
+| 16 | <span class="req-label">Apple CarPlay</span>You may change the consent settings under the Connections settings menu. | capability | p.311 / text |
+| 17 | <span class="req-label">Apple CarPlay</span>Connect Apple CarPlay Wirelessly. | capability | p.311 / text |
+| 18 | <span class="req-label">Apple CarPlay</span>1Apple CarPlay Only initialize Apple CarPlay when you are safely parked. When Apple CarPlay first detects your iPhone, you will need to set up your iPhone. Refer to the instruction manual that came with your iPhone. | constraint | p.311 / text |
+| 19 | <span class="req-label">Apple CarPlay</span>You can also use the method below to set up Apple CarPlay: Select Home General Settings Connections Manage Device Connections Select Device. | capability | p.311 / text |
+| 20 | <span class="req-label">Apple CarPlay</span>Use of user and vehicle information The use and handling of user and vehicle information transmitted to/from your iPhone by Apple CarPlay is governed by the Apple iOS terms and conditions and Apple’s Privacy Policy. | capability | p.311 / text |
+| 21 | <span class="req-label">Apple CarPlay</span>If there is a problem with the connection of your iPhone, an error code will be displayed. 2 Customized Features P.346. | capability | p.311 / text |
+| 22 | <span class="req-label">Apple CarPlay</span>Wireless Apple CarPlay and AT&amp;T Hotspot cannot be used at the same time. When using Apple CarPlay and AT&amp;T Hotspot at the same time, connect to Apple CarPlay with a USB cable. | constraint | p.311 / text |
+| 23 | <span class="req-label">Apple CarPlay</span>Operating Apple CarPlay with Siri. | capability | p.312 / text |
+| 24 | <span class="req-label">Apple CarPlay</span>Press and hold the (Talk) button to activate Siri. Press again to deactivate Siri. Press and release to activate standard voice recognition system. | capability | p.312 / text |
+| 25 | <span class="req-label">Apple CarPlay</span>1Operating Apple CarPlay with Siri Below are examples of questions and commands for Siri:. | capability | p.312 / text |
 
 ## 19-2-2. Service requirements
 
@@ -48,5 +79,6 @@
 | 5 | <span class="req-label">Step -</span>Read my latest email. | capability | p.312 / bullet |
 | 6 | <span class="req-label">Apple CarPlay</span>For more information, please visit www.apple.com/ios/siri. | capability | p.312 / text |
 <!-- GENERATED:END function=8aa01a78a644 -->
+
 
 

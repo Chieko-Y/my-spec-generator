@@ -8,15 +8,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the phone screen. (→P.74)"]
-    S2["2. Select the desired button to call from."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the phone screen. (→P.74)"]
+    S1_2["2. Select the desired button to call from."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.78 / step |
-| 2 | 2 | Select the desired button to call from. | p.78 / step |
+| 1 | 2 | Select the desired button to call from. | p.78 / step |
 
 ## 7-2-1. Service overview
 
@@ -41,6 +44,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>By voice assistance system: →P.31 *1: The operation cannot be performed while driving. *2: If equipped. | constraint | p.78 / bullet |
 <!-- GENERATED:END function=5168905a394b -->
+
 
 
 

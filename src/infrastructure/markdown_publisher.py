@@ -197,7 +197,11 @@ def _function_markdown(function, manual_id: str) -> str:
         lines.append("")
 
     if function.procedure:
-        lines.append("## Procedure")
+        sequence_count = len({step.sequence for step in function.procedure})
+        heading = "## Procedure"
+        if sequence_count > 1:
+            heading += f" ({sequence_count} sequences; the manual restarts the numbering)"
+        lines.append(heading)
         lines.append(mermaid.procedure_flowchart(function.function_id, function.procedure))
         lines.append("")
         lines.append("| Seq | Step | Operation (Copied from OM) | Source |")

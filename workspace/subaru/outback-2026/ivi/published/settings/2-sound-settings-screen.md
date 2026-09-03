@@ -13,18 +13,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19) 2"]
-    S2["2. → “Sound”"]
-    S3["3. Select the items to be set."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19) 2 2. → “Sound”"]
+    S1_3["3. Select the items to be set."]
+    S1_1 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
-| 1 | 1 | Touch “[icon]” of the main menu. (→P.19) 2 | p.41 / step |
-| 2 | 2 | → “Sound” | p.41 / step |
-| 3 | 3 | Select the items to be set. | p.41 / step |
+| 1 | 1 | Touch “[icon]” of the main menu. (→P.19) 2 2. → “Sound” | p.41 / step |
+| 1 | 3 | Select the items to be set. | p.41 / step |
 
 ## 2-2-1. Service overview
 
@@ -56,6 +56,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>“Safety Warning Volume”: Select to adjust the warning volume level. Refer to the vehicle Owner’s Manual for “Volume Controls” details. | capability | p.42 / bullet |
 <!-- GENERATED:END function=26c4d1ead423 -->
+
 
 
 

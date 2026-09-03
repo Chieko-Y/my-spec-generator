@@ -70,12 +70,12 @@ flowchart LR
 | 2 | [Sound settings screen](/specifications/subaru/outback-2026/ivi/file/2-sound-settings-screen.md?chapter=settings) | Settings | 15 | 1 | 0 | o |
 | 3 | [Equalizer settings](/specifications/subaru/outback-2026/ivi/file/3-equalizer-settings.md?chapter=settings) | Settings | 5 | 1 | 0 | - |
 | 4 | [Balance/fader settings](/specifications/subaru/outback-2026/ivi/file/4-balance-fader-settings.md?chapter=settings) | Settings | 4 | 1 | 0 | - |
-| 5 | [Manage devices settings screen](/specifications/subaru/outback-2026/ivi/file/5-manage-devices-settings-screen.md?chapter=settings) | Settings | 3 | 0 | 0 | o |
-| 6 | [Displays settings screen](/specifications/subaru/outback-2026/ivi/file/6-displays-settings-screen.md?chapter=settings) | Settings | 9 | 1 | 0 | o |
-| 7 | [Phone settings screen](/specifications/subaru/outback-2026/ivi/file/7-phone-settings-screen.md?chapter=settings) | Settings | 12 | 1 | 0 | o |
+| 5 | [Manage devices settings screen](/specifications/subaru/outback-2026/ivi/file/5-manage-devices-settings-screen.md?chapter=settings) | Settings | 4 | 0 | 0 | o |
+| 6 | [Displays settings screen](/specifications/subaru/outback-2026/ivi/file/6-displays-settings-screen.md?chapter=settings) | Settings | 10 | 1 | 0 | o |
+| 7 | [Phone settings screen](/specifications/subaru/outback-2026/ivi/file/7-phone-settings-screen.md?chapter=settings) | Settings | 13 | 1 | 0 | o |
 | 8 | [Editing the quick reply message](/specifications/subaru/outback-2026/ivi/file/8-editing-the-quick-reply-message.md?chapter=settings) | Settings | 3 | 0 | 0 | o |
-| 9 | [Network connection settings screen](/specifications/subaru/outback-2026/ivi/file/9-network-connection-settings-screen.md?chapter=settings) | Settings | 4 | 1 | 0 | o |
-| 10 | [Software settings screen](/specifications/subaru/outback-2026/ivi/file/10-software-settings-screen.md?chapter=settings) | Settings | 10 | 1 | 0 | o |
+| 9 | [Network connection settings screen](/specifications/subaru/outback-2026/ivi/file/9-network-connection-settings-screen.md?chapter=settings) | Settings | 5 | 1 | 0 | o |
+| 10 | [Software settings screen](/specifications/subaru/outback-2026/ivi/file/10-software-settings-screen.md?chapter=settings) | Settings | 11 | 1 | 0 | o |
 | 11 | [Updating the Subaru connected services system](/specifications/subaru/outback-2026/ivi/file/11-updating-the-subaru-connected-services-system.md?chapter=settings) | Settings | 4 | 0 | 0 | - |
 | 12 | [Download update](/specifications/subaru/outback-2026/ivi/file/12-download-update.md?chapter=settings) | Settings | 2 | 0 | 0 | - |
 | 13 | [Update installation](/specifications/subaru/outback-2026/ivi/file/13-update-installation.md?chapter=settings) | Settings | 9 | 0 | 0 | o |
@@ -83,6 +83,7 @@ flowchart LR
 | 15 | [Download update](/specifications/subaru/outback-2026/ivi/file/15-download-update.md?chapter=settings) | Settings | 4 | 0 | 0 | o |
 | 16 | [Update installation](/specifications/subaru/outback-2026/ivi/file/16-update-installation.md?chapter=settings) | Settings | 9 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
 
 
 

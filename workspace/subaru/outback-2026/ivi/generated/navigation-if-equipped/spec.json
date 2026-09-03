@@ -180,7 +180,7 @@
         {
           "number": 2,
           "text": "On the guidance screen, touch “Permit” or “Don’t Permit”.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.119 / step"
         }
       ],
@@ -381,6 +381,7 @@
         {
           "figure_id": "fb77d7f6885c",
           "page": 118,
+          "printed_page": 119,
           "rect": [
             137.9759979,
             469.2660071,
@@ -506,7 +507,7 @@
         {
           "number": 2,
           "text": "Touch “[icon]” or “[icon]” to change the scale of the map screen.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.121 / step"
         }
       ],
@@ -694,6 +695,7 @@
         {
           "figure_id": "559959908fc0",
           "page": 120,
+          "printed_page": 121,
           "rect": [
             222.2160034,
             514.8660056,
@@ -708,6 +710,7 @@
         {
           "figure_id": "6d12f40f6e7d",
           "page": 121,
+          "printed_page": 122,
           "rect": [
             216.6959991,
             205.9859778,
@@ -722,6 +725,7 @@
         {
           "figure_id": "6062a8e8bca4",
           "page": 121,
+          "printed_page": 122,
           "rect": [
             216.6959991,
             381.6660009,
@@ -830,6 +834,7 @@
         {
           "figure_id": "5e178e9143b2",
           "page": 122,
+          "printed_page": 123,
           "rect": [
             222.2160034,
             192.0659948,
@@ -964,6 +969,7 @@
         {
           "figure_id": "c31a47252526",
           "page": 122,
+          "printed_page": 123,
           "rect": [
             222.2160034,
             537.6660085999999,
@@ -978,6 +984,7 @@
         {
           "figure_id": "1541e3bdc548",
           "page": 123,
+          "printed_page": 124,
           "rect": [
             216.6959991,
             246.54599829999995,
@@ -1033,6 +1040,7 @@
         {
           "figure_id": "8615f60bf2bd",
           "page": 124,
+          "printed_page": 125,
           "rect": [
             222.2160034,
             214.1459777,
@@ -1180,6 +1188,7 @@
         {
           "figure_id": "e156468d74ab",
           "page": 124,
+          "printed_page": 125,
           "rect": [
             150.6959991,
             429.1859899,
@@ -1288,6 +1297,7 @@
         {
           "figure_id": "18c40a1a14b6",
           "page": 125,
+          "printed_page": 126,
           "rect": [
             144.9360046,
             440.7060095,
@@ -1435,6 +1445,7 @@
         {
           "figure_id": "b766782b6428",
           "page": 126,
+          "printed_page": 127,
           "rect": [
             150.6959991,
             461.3459936,
@@ -1621,6 +1632,7 @@
         {
           "figure_id": "309a543469ce",
           "page": 128,
+          "printed_page": 129,
           "rect": [
             150.6959991,
             207.90599120000002,
@@ -1653,25 +1665,25 @@
         {
           "number": 2,
           "text": "Enter keyword(s) in the keyword entry section and select the desired point from the candidates list to register it.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.130 / step"
         },
         {
           "number": 1,
           "text": "Touch “Add favorite”.",
-          "sequence": 3,
+          "sequence": 2,
           "source": "p.130 / step"
         },
         {
           "number": 2,
           "text": "Enter keyword(s) in the keyword entry section and select the desired point from the candidates list.",
-          "sequence": 4,
+          "sequence": 2,
           "source": "p.130 / step"
         },
         {
           "number": 3,
           "text": "Enter a favorite point name and the touch “Save”.",
-          "sequence": 5,
+          "sequence": 2,
           "source": "p.130 / step"
         }
       ],
@@ -1813,6 +1825,7 @@
         {
           "figure_id": "3e46f886f9d0",
           "page": 130,
+          "printed_page": 131,
           "rect": [
             150.6959991,
             215.34599360000004,
@@ -1986,6 +1999,7 @@
         {
           "figure_id": "043a8e99b712",
           "page": 131,
+          "printed_page": 132,
           "rect": [
             144.9360046,
             215.34599360000004,
@@ -2250,6 +2264,7 @@
         {
           "figure_id": "a6aad30752b7",
           "page": 132,
+          "printed_page": 133,
           "rect": [
             151.6560059,
             310.8659979,
@@ -2375,13 +2390,13 @@
         {
           "number": 2,
           "text": "Touch “Map & Display”/“Planning & Travel”/“Sounds & Alerts”/“Privacy & Data”.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.135 / step"
         },
         {
           "number": 3,
           "text": "Change settings by referring to the instructions displayed.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.135 / step"
         }
       ],

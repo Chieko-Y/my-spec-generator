@@ -13,28 +13,30 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. → “Network Connection”"]
-    S3["3. Select the items to be set."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_3["3. Select the items to be set."]
+    S1_1 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.47 / step |
-| 2 | 2 | → “Network Connection” | p.47 / step |
-| 3 | 3 | Select the items to be set. | p.47 / step |
+| 1 | 3 | Select the items to be set. | p.47 / step |
 
 ## 9-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Network connection settings screen</span>“Wi-Fi Settings for Software Select to set the Wi-Fi® function settings. (→P.59) Update/Map Update”*. | capability | p.47 / text |
-| 2 | <span class="req-label">Network connection settings screen</span>Select to display Wi-Fi® security type that wireless Apple “Wi-Fi Security” CarPlay or wireless Android Auto uses. | capability | p.47 / text |
-| 3 | <span class="req-label">Network connection settings screen</span>Select to set the Wi-Fi® Hotspot function settings. “Wi-Fi Hotspot”* Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details. | capability | p.47 / text |
-| 4 | <span class="req-label">Network connection settings screen</span>*: If equipped. | constraint | p.47 / text |
+| 1 | <span class="req-label">Network connection settings screen</span>2. → “Network Connection”. | capability | p.47 / text |
+| 2 | <span class="req-label">Network connection settings screen</span>“Wi-Fi Settings for Software Select to set the Wi-Fi® function settings. (→P.59) Update/Map Update”*. | capability | p.47 / text |
+| 3 | <span class="req-label">Network connection settings screen</span>Select to display Wi-Fi® security type that wireless Apple “Wi-Fi Security” CarPlay or wireless Android Auto uses. | capability | p.47 / text |
+| 4 | <span class="req-label">Network connection settings screen</span>Select to set the Wi-Fi® Hotspot function settings. “Wi-Fi Hotspot”* Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details. | capability | p.47 / text |
+| 5 | <span class="req-label">Network connection settings screen</span>*: If equipped. | constraint | p.47 / text |
 <!-- GENERATED:END function=fac4ff375d3b -->
+
 
 
 

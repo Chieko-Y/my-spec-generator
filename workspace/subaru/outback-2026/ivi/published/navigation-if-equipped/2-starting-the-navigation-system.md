@@ -8,15 +8,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. On the guidance screen, touch “Permit” or “Don’t Permit”."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_2["2. On the guidance screen, touch “Permit” or “Don’t Permit”."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.119 / step |
-| 2 | 2 | On the guidance screen, touch “Permit” or “Don’t Permit”. | p.119 / step |
+| 1 | 2 | On the guidance screen, touch “Permit” or “Don’t Permit”. | p.119 / step |
 
 ## 2-2-2. Service requirements
 
@@ -31,6 +34,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>When “Don’t Permit” is selected on the guidance screen, functions using the cloud navigation server cannot be used. Functions using the system’s data only are available. | constraint | p.119 / bullet |
 <!-- GENERATED:END function=4144f73a8257 -->
+
 
 
 

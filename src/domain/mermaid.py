@@ -15,16 +15,31 @@ def label(text: str, max_len: int = 60) -> str:
 
 
 def procedure_flowchart(function_id: str, steps: list[ProcedureStep]) -> str:
+    """One subgraph per `ProcedureStep.sequence`, steps chained only within
+    their own sequence -- a manual restarting its step numbering (2, 3, ...
+    procedures under one function, see build_function_spec) means step 1 of
+    procedure 2 is NOT a continuation of the last step of procedure 1, and
+    must not be drawn as one. Confirmed real, Honda Pilot "Defaulting All the
+    Settings": a flat chain across all of a function's steps regardless of
+    sequence wrongly drew "...6.Select Reset again..." --> "1.Select Home."
+    as if the second procedure continued the first."""
     if not steps:
         return ""
     lines = ["```mermaid", "flowchart TD"]
-    node_ids = []
+    sequences: dict[int, list[ProcedureStep]] = {}
     for step in steps:
-        node_id = f"S{step.sequence}"
-        node_ids.append(node_id)
-        lines.append(f"    {node_id}[{label(f'{step.number}. {step.text}')}]")
-    for a, b in zip(node_ids, node_ids[1:]):
-        lines.append(f"    {a} --> {b}")
+        sequences.setdefault(step.sequence, []).append(step)
+    for seq, seq_steps in sequences.items():
+        lines.append(f'    subgraph SEQ{seq}["Sequence {seq}"]')
+        lines.append("    direction TB")
+        node_ids = []
+        for step in seq_steps:
+            node_id = f"S{seq}_{step.number}"
+            node_ids.append(node_id)
+            lines.append(f"    {node_id}[{label(f'{step.number}. {step.text}')}]")
+        for a, b in zip(node_ids, node_ids[1:]):
+            lines.append(f"    {a} --> {b}")
+        lines.append("    end")
     lines.append("```")
     return "\n".join(lines)
 

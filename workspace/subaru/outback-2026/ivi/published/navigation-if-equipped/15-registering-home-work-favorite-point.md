@@ -5,27 +5,32 @@
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
-## Procedure
+## Procedure (2 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
-    S1["1. Touch “Add home”/“Add work”."]
-    S2["2. Enter keyword(s) in the keyword entry section and select…"]
-    S3["1. Touch “Add favorite”."]
-    S4["2. Enter keyword(s) in the keyword entry section and select…"]
-    S5["3. Enter a favorite point name and the touch “Save”."]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “Add home”/“Add work”."]
+    S1_2["2. Enter keyword(s) in the keyword entry section and select…"]
+    S1_1 --> S1_2
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Touch “Add favorite”."]
+    S2_2["2. Enter keyword(s) in the keyword entry section and select…"]
+    S2_3["3. Enter a favorite point name and the touch “Save”."]
+    S2_1 --> S2_2
+    S2_2 --> S2_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “Add home”/“Add work”. | p.130 / step |
-| 2 | 2 | Enter keyword(s) in the keyword entry section and select the desired point from the candidates list to register it. | p.130 / step |
-| 3 | 1 | Touch “Add favorite”. | p.130 / step |
-| 4 | 2 | Enter keyword(s) in the keyword entry section and select the desired point from the candidates list. | p.130 / step |
-| 5 | 3 | Enter a favorite point name and the touch “Save”. | p.130 / step |
+| 1 | 2 | Enter keyword(s) in the keyword entry section and select the desired point from the candidates list to register it. | p.130 / step |
+| 2 | 1 | Touch “Add favorite”. | p.130 / step |
+| 2 | 2 | Enter keyword(s) in the keyword entry section and select the desired point from the candidates list. | p.130 / step |
+| 2 | 3 | Enter a favorite point name and the touch “Save”. | p.130 / step |
 
 ## 15-2-1. Service overview
 
@@ -40,6 +45,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>A point to be registered as favorite can also be selected from the recents screen. (→P.130). | capability | p.130 / bullet |
 <!-- GENERATED:END function=47abf9f059c4 -->
+
 
 
 

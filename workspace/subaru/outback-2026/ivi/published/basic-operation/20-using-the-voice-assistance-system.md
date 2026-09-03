@@ -10,14 +10,21 @@
 - Figure 20-1 source: p.32
 - (Copied from OM) the screen.
 
-## Procedure
+## Procedure (3 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
-    S1["1. Press the voice assistance switch on the steering wheel."]
-    S2["1. Select the voice assistance button on the screen."]
-    S3["1. Say SUBARU”. “Hi"]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Press the voice assistance switch on the steering wheel."]
+    end
+    subgraph SEQ2["Sequence 2"]
+    direction TB
+    S2_1["1. Select the voice assistance button on the screen."]
+    end
+    subgraph SEQ3["Sequence 3"]
+    direction TB
+    S3_1["1. Say SUBARU”. “Hi"]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -69,6 +76,7 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>Voice commands may not be recognized if:. | capability | p.33 / bullet |
 | 3 | <span class="req-label">Step -</span>In the following conditions, the system may not recognize the command properly and using voice commands may not be possible:. | capability | p.33 / bullet |
 <!-- GENERATED:END function=ecf8ca696b8a -->
+
 
 
 

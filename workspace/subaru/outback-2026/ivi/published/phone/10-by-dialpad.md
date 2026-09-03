@@ -8,21 +8,24 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the phone screen. (→P.74)"]
-    S2["2. Touch “Dialpad”."]
-    S3["3. Enter the phone number."]
-    S4["4. Touch “Call”."]
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the phone screen. (→P.74)"]
+    S1_2["2. Touch “Dialpad”."]
+    S1_3["3. Enter the phone number."]
+    S1_4["4. Touch “Call”."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    S1_3 --> S1_4
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.80 / step |
-| 2 | 2 | Touch “Dialpad”. | p.80 / step |
-| 3 | 3 | Enter the phone number. | p.80 / step |
-| 4 | 4 | Touch “Call”. | p.80 / step |
+| 1 | 2 | Touch “Dialpad”. | p.80 / step |
+| 1 | 3 | Enter the phone number. | p.80 / step |
+| 1 | 4 | Touch “Call”. | p.80 / step |
 
 ## 10-2-2. Service requirements
 
@@ -31,6 +34,7 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.80 / bullet |
 | 2 | <span class="req-label">Step -</span>Depending on the type of Bluetooth phone being connected, it may be necessary to perform additional steps on the phone. | capability | p.80 / bullet |
 <!-- GENERATED:END function=b1554f940f00 -->
+
 
 
 

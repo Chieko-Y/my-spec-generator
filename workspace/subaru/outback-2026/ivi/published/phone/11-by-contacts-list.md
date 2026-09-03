@@ -8,18 +8,21 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the phone screen. (→P.74)"]
-    S2["2. Touch “Contacts”, and then select the desired contact."]
-    S3["3. Touch “[icon]” next to the desired number."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the phone screen. (→P.74)"]
+    S1_2["2. Touch “Contacts”, and then select the desired contact."]
+    S1_3["3. Touch “[icon]” next to the desired number."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.80 / step |
-| 2 | 2 | Touch “Contacts”, and then select the desired contact. | p.80 / step |
-| 3 | 3 | Touch “[icon]” next to the desired number. | p.80 / step |
+| 1 | 2 | Touch “Contacts”, and then select the desired contact. | p.80 / step |
+| 1 | 3 | Touch “[icon]” next to the desired number. | p.80 / step |
 
 ## 11-2-1. Service overview
 
@@ -37,6 +40,7 @@ flowchart TD
 | 4 | <span class="req-label">Step -</span>When “Sync” is set to on, contacts is downloaded automatically. (→P.45). | capability | p.80 / bullet |
 | 5 | <span class="req-label">Step -</span>The order of the phonebook list can be sorted by first name or last name. (→P.45). | capability | p.80 / bullet |
 <!-- GENERATED:END function=526da5f90ca8 -->
+
 
 
 

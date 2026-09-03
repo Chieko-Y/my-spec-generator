@@ -8,15 +8,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the message inbox screen. (→P.83)"]
-    S2["2. Touch “[icon]” next to the desired sender."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the message inbox screen. (→P.83)"]
+    S1_2["2. Touch “[icon]” next to the desired sender."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the message inbox screen. (→P.83) | p.86 / step |
-| 2 | 2 | Touch “[icon]” next to the desired sender. | p.86 / step |
+| 1 | 2 | Touch “[icon]” next to the desired sender. | p.86 / step |
 
 ## 20-2-1. Service overview
 
@@ -30,6 +33,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The outgoing call screen is displayed. | capability | p.86 / bullet |
 <!-- GENERATED:END function=396f0680313c -->
+
 
 
 

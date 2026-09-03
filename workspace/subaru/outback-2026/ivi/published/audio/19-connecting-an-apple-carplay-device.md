@@ -6,7 +6,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Connect a device compatible with Apple CarPlay. (→P.65, …"]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Connect a device compatible with Apple CarPlay. (→P.65, …"]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -14,6 +17,7 @@ flowchart TD
 | 1 | 1 | Connect a device compatible with Apple CarPlay. (→P.65, 65) | p.108 / step |
 
 <!-- GENERATED:END function=68b79193ef52 -->
+
 
 
 

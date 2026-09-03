@@ -56,6 +56,39 @@ def test_a_wrapped_step_continuation_is_merged_into_the_step():
     assert groups == []
 
 
+def test_a_step_with_no_space_after_the_number_is_still_recognized():
+    """Confirmed against the real Honda Pilot PDF, 2026-09-03: this manual's
+    own numbered steps are set with NO space at all ("1.Select Home.",
+    "2.Select General Settings.") unlike Subaru's spaced style. Before this
+    fix, _NUMBERED_STEP required at least one space after the number's
+    punctuation, so every one of this manual's own steps fell through to
+    plain paragraph grouping instead -- `procedure` came out empty for
+    functions whose real content is entirely step-driven (e.g. "HFL Menus",
+    0 procedure steps despite 13 pages full of "N.Do X." lines)."""
+    lines = [
+        Line(page=0, text="1.Select Home.", top=100.0),
+        Line(page=0, text="2.Select General Settings.", top=110.0),
+    ]
+
+    steps, groups = _split_lines(_section(lines))
+
+    assert steps == [(1, 0, 100.0, "Select Home."), (2, 0, 110.0, "Select General Settings.")]
+    assert groups == []
+
+
+def test_a_decimal_number_is_not_mistaken_for_a_step():
+    """The no-space fix above must not turn "3.5 V" into step 3 with text
+    "5 V" -- a real step's text always starts with a capital letter (an
+    imperative instruction like "Select"/"Press"), a decimal fraction's
+    digit does not."""
+    lines = [Line(page=0, text="3.5 V is the nominal battery voltage.", top=100.0)]
+
+    steps, groups = _split_lines(_section(lines))
+
+    assert steps == []
+    assert [l.text for l in groups[0]] == ["3.5 V is the nominal battery voltage."]
+
+
 def test_a_bullet_line_breaks_the_continuation_instead_of_merging():
     """Confirmed against the real 2025 Subaru supplement: step 8's real
     continuation ("start the engine again.") sits 13.7pt above an unrelated
@@ -123,6 +156,29 @@ def test_requirement_between_two_steps_cites_the_step_it_leads_into():
 
     req = next(r for r in spec.requirements if "Caution" in r.text)
     assert req.next_step_text == "2. Touch “I Agree”."
+
+
+def test_a_restarted_step_number_starts_a_new_sequence():
+    """Confirmed real, Honda Pilot "Defaulting All the Settings", 2026-09-03:
+    a function can contain multiple, unrelated procedures back to back, each
+    restarting its own step numbering at 1. Before this fix, `sequence` was
+    just each step's own position in the whole function (a flat counter),
+    so every step got a different "sequence" and the mermaid flowchart later
+    chained ALL of them into one continuous procedure regardless -- step 1
+    of the second procedure looked like it continued the first procedure's
+    last step."""
+    lines = [
+        Line(page=0, text="1.Select Home.", top=100.0),
+        Line(page=0, text="2.Select General Settings.", top=110.0),
+        Line(page=0, text="3.Select Reset again to reset the settings.", top=120.0),
+        Line(page=0, text="1.Select Home.", top=200.0),
+        Line(page=0, text="2.Select Vehicle Settings.", top=210.0),
+    ]
+
+    spec = build_function_spec(_section(lines), _profile(), "manual", "Area", 1)
+
+    sequences = [step.sequence for step in spec.procedure]
+    assert sequences == [1, 1, 1, 2, 2]
 
 
 def test_page_citations_use_the_profiles_page_number_offset():

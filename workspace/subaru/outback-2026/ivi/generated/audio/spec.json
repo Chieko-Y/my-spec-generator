@@ -36,7 +36,7 @@
         {
           "number": 2,
           "text": "Select the desired audio source.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.90 / step"
         }
       ],
@@ -283,6 +283,7 @@
         {
           "figure_id": "cbb3424f6f77",
           "page": 90,
+          "printed_page": 91,
           "rect": [
             165.576004,
             225.18599000000006,
@@ -315,7 +316,7 @@
         {
           "number": 2,
           "text": "Select and hold one of the desired preset station buttons.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.92 / step"
         }
       ],
@@ -368,13 +369,13 @@
         {
           "number": 2,
           "text": "Select the desired list.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.92 / step"
         },
         {
           "number": 3,
           "text": "Select the desired station.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.92 / step"
         }
       ],
@@ -1048,6 +1049,7 @@
         {
           "figure_id": "1b28b5f467c6",
           "page": 94,
+          "printed_page": 95,
           "rect": [
             165.576004,
             225.18599000000006,
@@ -1278,7 +1280,7 @@
         {
           "number": 2,
           "text": "Touch “System Information”.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.98 / step"
         }
       ],
@@ -1331,7 +1333,7 @@
         {
           "number": 2,
           "text": "Select and hold one of the desired preset station buttons.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.99 / step"
         }
       ],
@@ -1385,7 +1387,7 @@
         {
           "number": 2,
           "text": "Speak when the search screen is displayed and a beep is heard.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.100 / step"
         }
       ],
@@ -1629,6 +1631,7 @@
         {
           "figure_id": "9c56bfb9bb35",
           "page": 99,
+          "printed_page": 100,
           "rect": [
             301.6560059,
             389.3459941,
@@ -1663,7 +1666,7 @@
         {
           "number": 2,
           "text": "Select the desired item to be set.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.101 / step"
         }
       ],
@@ -1920,6 +1923,7 @@
         {
           "figure_id": "b95baf822334",
           "page": 100,
+          "printed_page": 101,
           "rect": [
             307.4159851,
             192.78600369999992,
@@ -1934,6 +1938,7 @@
         {
           "figure_id": "0abb8e9c4940",
           "page": 101,
+          "printed_page": 102,
           "rect": [
             216.6959991,
             219.42601839999998,
@@ -2238,6 +2243,7 @@
         {
           "figure_id": "094d589ab91e",
           "page": 102,
+          "printed_page": 103,
           "rect": [
             165.576004,
             329.8259893999999,
@@ -2790,6 +2796,7 @@
         {
           "figure_id": "3b3793fe7de8",
           "page": 104,
+          "printed_page": 105,
           "rect": [
             165.576004,
             353.34600889999996,
@@ -3075,6 +3082,7 @@
         {
           "figure_id": "0c94a7fe8a63",
           "page": 107,
+          "printed_page": 108,
           "rect": [
             160.0559998,
             392.2259985,
@@ -3347,6 +3355,7 @@
         {
           "figure_id": "03dddad1aaae",
           "page": 109,
+          "printed_page": 110,
           "rect": [
             160.0559998,
             321.18599000000006,
@@ -3874,6 +3883,7 @@
         {
           "figure_id": "9b6a7d5d29cd",
           "page": 113,
+          "printed_page": 114,
           "rect": [
             215.2559967,
             472.6260076,

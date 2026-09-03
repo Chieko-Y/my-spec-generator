@@ -88,11 +88,12 @@ flowchart LR
 | 15 | [Bluetooth phone message function](/specifications/subaru/outback-2026/ivi/file/15-bluetooth-phone-message-function.md?chapter=phone) | Phone | 12 | 1 | 0 | o |
 | 16 | [Receiving a message](/specifications/subaru/outback-2026/ivi/file/16-receiving-a-message.md?chapter=phone) | Phone | 12 | 2 | 0 | o |
 | 17 | [Checking messages](/specifications/subaru/outback-2026/ivi/file/17-checking-messages.md?chapter=phone) | Phone | 4 | 0 | 0 | o |
-| 18 | [Replying to a message (quick reply)](/specifications/subaru/outback-2026/ivi/file/18-replying-to-a-message-quick-reply.md?chapter=phone) | Phone | 5 | 0 | 0 | o |
-| 19 | [Sending a new short message](/specifications/subaru/outback-2026/ivi/file/19-sending-a-new-short-message.md?chapter=phone) | Phone | 2 | 0 | 0 | o |
+| 18 | [Replying to a message (quick reply)](/specifications/subaru/outback-2026/ivi/file/18-replying-to-a-message-quick-reply.md?chapter=phone) | Phone | 7 | 0 | 0 | o |
+| 19 | [Sending a new short message](/specifications/subaru/outback-2026/ivi/file/19-sending-a-new-short-message.md?chapter=phone) | Phone | 3 | 0 | 0 | o |
 | 20 | [Calling the message sender](/specifications/subaru/outback-2026/ivi/file/20-calling-the-message-sender.md?chapter=phone) | Phone | 2 | 0 | 0 | o |
 | 21 | [Displayed on the instrument cluster display](/specifications/subaru/outback-2026/ivi/file/21-displayed-on-the-instrument-cluster-display.md?chapter=phone) | Phone | 1 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
 
 
 

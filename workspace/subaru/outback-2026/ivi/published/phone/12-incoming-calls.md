@@ -13,7 +13,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “Accept” or press the switch on the steering wheel…"]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “Accept” or press the switch on the steering wheel…"]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -38,6 +41,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>During international phone calls, the other party’s name or number may not be displayed cor- 4 rectly depending on the type of cellular phone you have. | capability | p.81 / bullet |
 <!-- GENERATED:END function=b1c71e386534 -->
+
 
 
 

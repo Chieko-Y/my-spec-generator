@@ -13,18 +13,21 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Display the phone screen. (→P.74)"]
-    S2["2. Touch “Messages”."]
-    S3["3. Check that the message inbox screen is displayed."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Display the phone screen. (→P.74)"]
+    S1_2["2. Touch “Messages”."]
+    S1_3["3. Check that the message inbox screen is displayed."]
+    S1_1 --> S1_2
+    S1_2 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the phone screen. (→P.74) | p.83 / step |
-| 2 | 2 | Touch “Messages”. | p.83 / step |
-| 3 | 3 | Check that the message inbox screen is displayed. | p.84 / step |
+| 1 | 2 | Touch “Messages”. | p.83 / step |
+| 1 | 3 | Check that the message inbox screen is displayed. | p.84 / step |
 
 ## 15-2-1. Service overview
 
@@ -48,6 +51,7 @@ flowchart TD
 | 6 | <span class="req-label">Step -</span>Sending a new short message: → P.86. | capability | p.84 / bullet |
 | 7 | <span class="req-label">Step -</span>Calling the message sender: → P.86. | capability | p.84 / bullet |
 <!-- GENERATED:END function=4e595c9321c1 -->
+
 
 
 

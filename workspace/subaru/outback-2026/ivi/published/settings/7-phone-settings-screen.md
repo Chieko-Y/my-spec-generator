@@ -13,18 +13,24 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. → “Phone”"]
-    S3["3. Select the items to be set."]
-    S1 --> S2
-    S2 --> S3
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_3["3. Select the items to be set."]
+    S1_1 --> S1_3
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.45 / step |
-| 2 | 2 | → “Phone” | p.45 / step |
-| 3 | 3 | Select the items to be set. | p.46 / step |
+| 1 | 3 | Select the items to be set. | p.46 / step |
+
+## 7-2-1. Service overview
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Phone settings screen</span>2. → “Phone”. | capability | p.45 / text |
 
 ## 7-2-2. Service requirements
 
@@ -48,6 +54,7 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The profile version of the connected Bluetooth phone may not be compatible with downloading phonebook data. For details, contact your SUBARU dealer. | capability | p.46 / bullet |
 <!-- GENERATED:END function=450ed13667f8 -->
+
 
 
 

@@ -142,7 +142,7 @@
         {
           "number": 2,
           "text": "Touch “I Agree”.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.17 / step"
         }
       ],
@@ -190,6 +190,7 @@
         {
           "figure_id": "0d45001bce84",
           "page": 16,
+          "printed_page": 17,
           "rect": [
             305.9760132,
             186.78600369999992,
@@ -389,6 +390,7 @@
         {
           "figure_id": "2a509ae40bd6",
           "page": 16,
+          "printed_page": 17,
           "rect": [
             137.9759979,
             368.70599419999996,
@@ -510,6 +512,7 @@
         {
           "figure_id": "2d07f834e2f7",
           "page": 18,
+          "printed_page": 19,
           "rect": [
             146.1360016,
             223.98600829999998,
@@ -617,6 +620,7 @@
         {
           "figure_id": "f4d12a45db60",
           "page": 19,
+          "printed_page": 20,
           "rect": [
             216.6959991,
             272.7060172,
@@ -765,6 +769,7 @@
         {
           "figure_id": "29dac9675fed",
           "page": 20,
+          "printed_page": 21,
           "rect": [
             221.4960022,
             293.1059881,
@@ -779,6 +784,7 @@
         {
           "figure_id": "d070bfe078d1",
           "page": 20,
+          "printed_page": 21,
           "rect": [
             226.5359955,
             454.6260001,
@@ -812,55 +818,55 @@
         {
           "number": 2,
           "text": "Touch “Add Shortcut”.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.22 / step"
         },
         {
           "number": 3,
           "text": "Select the desired function.",
-          "sequence": 3,
+          "sequence": 1,
           "source": "p.22 / step"
         },
         {
           "number": 4,
           "text": "Select the desired shortcut function.",
-          "sequence": 4,
+          "sequence": 1,
           "source": "p.22 / step"
         },
         {
           "number": 5,
           "text": "Check that the shortcut icon is displayed on the apps screen.",
-          "sequence": 5,
+          "sequence": 1,
           "source": "p.22 / step"
         },
         {
           "number": 1,
           "text": "Select and hold the shortcut icon to enter edit mode.",
-          "sequence": 6,
+          "sequence": 2,
           "source": "p.23 / step"
         },
         {
           "number": 2,
           "text": "Drag the button to the desired position.",
-          "sequence": 7,
+          "sequence": 2,
           "source": "p.23 / step"
         },
         {
           "number": 1,
           "text": "Select and hold the shortcut icon to enter edit mode.",
-          "sequence": 8,
+          "sequence": 3,
           "source": "p.23 / step"
         },
         {
           "number": 2,
           "text": "Drag the button to “Drag Here to Delete” area.",
-          "sequence": 9,
+          "sequence": 3,
           "source": "p.23 / step"
         },
         {
           "number": 3,
           "text": "Touch “Done”.",
-          "sequence": 10,
+          "sequence": 3,
           "source": "p.23 / step"
         }
       ],
@@ -1065,6 +1071,7 @@
         {
           "figure_id": "8a392088d7cb",
           "page": 21,
+          "printed_page": 22,
           "rect": [
             216.6959991,
             220.38597929999992,
@@ -1147,6 +1154,7 @@
         {
           "figure_id": "c8ec5d29ab19",
           "page": 22,
+          "printed_page": 23,
           "rect": [
             221.0160065,
             492.7859884,
@@ -1637,6 +1645,7 @@
         {
           "figure_id": "3b9f4d94dc3b",
           "page": 26,
+          "printed_page": 27,
           "rect": [
             229.416,
             415.98598919999995,
@@ -1731,6 +1740,7 @@
         {
           "figure_id": "ae1bf91b3342",
           "page": 27,
+          "printed_page": 28,
           "rect": [
             217.8959961,
             337.506005,
@@ -1774,6 +1784,7 @@
         {
           "figure_id": "c49f3ebebf8e",
           "page": 28,
+          "printed_page": 29,
           "rect": [
             223.6560059,
             196.62600759999998,
@@ -1816,6 +1827,7 @@
         {
           "figure_id": "2ec1b9686456",
           "page": 28,
+          "printed_page": 29,
           "rect": [
             221.0160065,
             445.26599189999996,
@@ -2435,6 +2447,7 @@
         {
           "figure_id": "3a429e2cb5b8",
           "page": 31,
+          "printed_page": 32,
           "rect": [
             305.256012,
             468.30601559999997,
@@ -2467,7 +2480,7 @@
         {
           "number": 2,
           "text": "Say the command.",
-          "sequence": 2,
+          "sequence": 1,
           "source": "p.34 / step"
         }
       ],
@@ -2529,6 +2542,7 @@
         {
           "figure_id": "b77130649520",
           "page": 33,
+          "printed_page": 34,
           "rect": [
             305.0159912,
             252.06600349999997,

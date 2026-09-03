@@ -6,7 +6,10 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Connect a device compatible with Android Auto. (→P.68, 6…"]
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Connect a device compatible with Android Auto. (→P.68, 6…"]
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
@@ -14,6 +17,7 @@ flowchart TD
 | 1 | 1 | Connect a device compatible with Android Auto. (→P.68, 69) | p.110 / step |
 
 <!-- GENERATED:END function=a822f17914bd -->
+
 
 
 

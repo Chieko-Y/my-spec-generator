@@ -16,15 +16,18 @@
 ## Procedure
 ```mermaid
 flowchart TD
-    S1["1. Touch “[icon]” of the main menu. (→P.19)"]
-    S2["2. Select the items to be set."]
-    S1 --> S2
+    subgraph SEQ1["Sequence 1"]
+    direction TB
+    S1_1["1. Touch “[icon]” of the main menu. (→P.19)"]
+    S1_2["2. Select the items to be set."]
+    S1_1 --> S1_2
+    end
 ```
 
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Touch “[icon]” of the main menu. (→P.19) | p.40 / step |
-| 2 | 2 | Select the items to be set. | p.40 / step |
+| 1 | 2 | Select the items to be set. | p.40 / step |
 
 ## 1-2-1. Service overview
 
@@ -44,6 +47,7 @@ flowchart TD
 | 12 | <span class="req-label">Displaying the settings screen</span>Select to display the network connection settings screen. (→P.47). | capability | p.41 / text |
 | 13 | <span class="req-label">Displaying the settings screen</span>Select to display the software settings screen. (→P.48). | capability | p.41 / text |
 <!-- GENERATED:END function=e0f9d8f184e3 -->
+
 
 
 
