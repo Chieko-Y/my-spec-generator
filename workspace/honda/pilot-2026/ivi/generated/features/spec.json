@@ -2475,7 +2475,19 @@
           "source": "p.282 / text",
           "page_citation": "uuAudio System Basic OperationuSystem Updates",
           "next_step_text": "3. The next time the power mode is turned to ON, the system update results screen 1Performing/Scheduling System Updates will be displayed.",
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "84c549b9e9a2",
+              "matching_text": "a certain number of times",
+              "kind": "count",
+              "unit": "times",
+              "context": "NOTICE For important updates, Remind me Later will stop displaying after it has been selected a certain number of times.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -3812,7 +3824,19 @@
           "source": "p.289 / text",
           "page_citation": "uuAudio System Basic OperationuPlaying AM/FM Radio",
           "next_step_text": "1. Select Station List to display a list while listening to an FM station.",
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "f6e829c5d602",
+              "matching_text": "for 10 seconds",
+              "kind": "duration",
+              "unit": "seconds",
+              "context": "Samples each of the strongest stations on the selected band for 10 seconds. To turn off scan, select Stop or Back.",
+              "value": "10",
+              "status": "from_manual",
+              "evidence": "Stated in the OM: \"10\"",
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -4240,7 +4264,19 @@
           "source": "p.293 / text",
           "page_citation": "uuAudio System Basic OperationuMusic Playback via Wired Connection",
           "next_step_text": null,
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "38abf883a6fa",
+              "matching_text": "Repeatedly select the shuffle or repeat icon until",
+              "kind": "count",
+              "unit": "times",
+              "context": "Repeatedly select the shuffle or repeat icon until you find a play mode option of your preference.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -4525,7 +4561,19 @@
           "source": "p.296 / text",
           "page_citation": "uuAudio System Basic OperationuMusic Playback via USB Flash Drive",
           "next_step_text": null,
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "360cc73f9051",
+              "matching_text": "repeatedly until",
+              "kind": "count",
+              "unit": "times",
+              "context": "Select random or repeat icon repeatedly until a desired mode.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -4978,7 +5026,19 @@
           "source": "p.299 / text",
           "page_citation": "uuAudio System Basic OperationuPlaying Bluetooth® Audio",
           "next_step_text": null,
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "a2ddfabcf5b1",
+              "matching_text": "Repeatedly select the shuffle or repeat icon until",
+              "kind": "count",
+              "unit": "times",
+              "context": "Repeatedly select the shuffle or repeat icon until you find a play mode option of your preference.",
+              "value": null,
+              "status": "unfilled",
+              "evidence": null,
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -5641,7 +5701,19 @@
           "source": "p.304 / bullet",
           "page_citation": "uuAudio System Basic OperationuHondaLink® Service",
           "next_step_text": null,
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "2e0958d2d059",
+              "matching_text": "30 seconds have elapsed",
+              "kind": "duration",
+              "unit": "seconds",
+              "context": "When 30 seconds have elapsed.",
+              "value": "30",
+              "status": "from_manual",
+              "evidence": "Stated in the OM: \"30\"",
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },

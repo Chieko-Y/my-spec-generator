@@ -13,16 +13,16 @@
 
 ## Numeric thresholds
 
-- Thresholds detected: **1**
-- Filled: **0** / unfilled: **1**
-- Test-ready functions: **18 / 28**
+- Thresholds detected: **7**
+- Filled: **2** / unfilled: **5**
+- Test-ready functions: **14 / 28**
 
 The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
-    "Filled" : 0
-    "Unfilled" : 1
+    "Filled" : 2
+    "Unfilled" : 5
 ```
 
 ## Figures in the manual
@@ -53,14 +53,14 @@ flowchart LR
     A2 --> A2F1["4 Start Up ⚠"]
     A2 --> A2F2["5 Reboot Audio"]
     A2 --> A2F3["6 Audio/Information Screen"]
-    A2 --> A2F4["7 System Updates"]
+    A2 --> A2F4["7 System Updates ⚠"]
     A2 --> A2F5["8 Adjusting the Sound"]
     A2 --> A2F6["9 Display Setup"]
     A2 --> A2F7["10 Alexa Built-In ⚠"]
     A2 --> A2F8["11 Playing AM/FM Radio"]
-    A2 --> A2F9["12 Music Playback via Wired Connection"]
-    A2 --> A2F10["13 Music Playback via USB Flash Drive"]
-    A2 --> A2F11["14 Playing Bluetooth® Audio"]
+    A2 --> A2F9["12 Music Playback via Wired Connection ⚠"]
+    A2 --> A2F10["13 Music Playback via USB Flash Drive ⚠"]
+    A2 --> A2F11["14 Playing Bluetooth® Audio ⚠"]
     A2 --> A2F12["15 HondaLink®"]
     A2 --> A2F13["16 HondaLink® Service ⚠"]
     A2 --> A2F14["17 Wi-Fi Connection"]
@@ -88,14 +88,14 @@ flowchart LR
 | 4 | [Start Up](/specifications/honda/pilot-2026/ivi/file/4-start-up.md?chapter=features) | Audio System Basic Operation | 15 | 3 | 1 | - |
 | 5 | [Reboot Audio](/specifications/honda/pilot-2026/ivi/file/5-reboot-audio.md?chapter=features) | Audio System Basic Operation | 2 | 0 | 0 | o |
 | 6 | [Audio/Information Screen](/specifications/honda/pilot-2026/ivi/file/6-audio-information-screen.md?chapter=features) | Audio System Basic Operation | 70 | 6 | 0 | o |
-| 7 | [System Updates](/specifications/honda/pilot-2026/ivi/file/7-system-updates.md?chapter=features) | Audio System Basic Operation | 29 | 0 | 0 | o |
+| 7 | [System Updates](/specifications/honda/pilot-2026/ivi/file/7-system-updates.md?chapter=features) | Audio System Basic Operation | 29 | 0 | 1 | - |
 | 8 | [Adjusting the Sound](/specifications/honda/pilot-2026/ivi/file/8-adjusting-the-sound.md?chapter=features) | Audio System Basic Operation | 13 | 0 | 0 | o |
 | 9 | [Display Setup](/specifications/honda/pilot-2026/ivi/file/9-display-setup.md?chapter=features) | Audio System Basic Operation | 7 | 1 | 0 | o |
 | 10 | [Alexa Built-In](/specifications/honda/pilot-2026/ivi/file/10-alexa-built-in.md?chapter=features) | Audio System Basic Operation | 22 | 0 | 0 | - |
 | 11 | [Playing AM/FM Radio](/specifications/honda/pilot-2026/ivi/file/11-playing-am-fm-radio.md?chapter=features) | Audio System Basic Operation | 35 | 1 | 0 | o |
-| 12 | [Music Playback via Wired Connection](/specifications/honda/pilot-2026/ivi/file/12-music-playback-via-wired-connection.md?chapter=features) | Audio System Basic Operation | 19 | 1 | 0 | o |
-| 13 | [Music Playback via USB Flash Drive](/specifications/honda/pilot-2026/ivi/file/13-music-playback-via-usb-flash-drive.md?chapter=features) | Audio System Basic Operation | 18 | 1 | 0 | o |
-| 14 | [Playing Bluetooth® Audio](/specifications/honda/pilot-2026/ivi/file/14-playing-bluetooth-audio.md?chapter=features) | Audio System Basic Operation | 31 | 1 | 0 | o |
+| 12 | [Music Playback via Wired Connection](/specifications/honda/pilot-2026/ivi/file/12-music-playback-via-wired-connection.md?chapter=features) | Audio System Basic Operation | 19 | 1 | 1 | - |
+| 13 | [Music Playback via USB Flash Drive](/specifications/honda/pilot-2026/ivi/file/13-music-playback-via-usb-flash-drive.md?chapter=features) | Audio System Basic Operation | 18 | 1 | 1 | - |
+| 14 | [Playing Bluetooth® Audio](/specifications/honda/pilot-2026/ivi/file/14-playing-bluetooth-audio.md?chapter=features) | Audio System Basic Operation | 31 | 1 | 1 | - |
 | 15 | [HondaLink®](/specifications/honda/pilot-2026/ivi/file/15-hondalink.md?chapter=features) | Audio System Basic Operation | 20 | 3 | 0 | o |
 | 16 | [HondaLink® Service](/specifications/honda/pilot-2026/ivi/file/16-hondalink-service.md?chapter=features) | Audio System Basic Operation | 36 | 0 | 0 | - |
 | 17 | [Wi-Fi Connection](/specifications/honda/pilot-2026/ivi/file/17-wi-fi-connection.md?chapter=features) | Audio System Basic Operation | 17 | 0 | 0 | o |
@@ -111,6 +111,8 @@ flowchart LR
 | 27 | [HFL Menus](/specifications/honda/pilot-2026/ivi/file/27-hfl-menus.md?chapter=features) | Bluetooth® HandsFreeLink® | 68 | 4 | 0 | o |
 | 28 | [CabinTalk®](/specifications/honda/pilot-2026/ivi/file/28-cabintalk.md?chapter=features) | Features | 3 | 1 | 0 | o |
 <!-- GENERATED:END index -->
+
+
 
 
 

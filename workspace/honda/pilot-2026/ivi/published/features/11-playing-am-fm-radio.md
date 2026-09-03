@@ -74,6 +74,13 @@ flowchart TD
 | 7 | 1 | Select Menu. | p.290 / step |
 | 7 | 2 | Select an option. | p.290 / step |
 
+## Numeric thresholds (filled in by a tester)
+Filled: 1 / unfilled: 0
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| f6e829c5d602 | for 10 seconds | duration | seconds | 10 | from_manual | Stated in the OM: "10" | — |
+
 ## 11-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -119,6 +126,8 @@ flowchart TD
 | 21 | <span class="req-label">Step -</span>HD Radio: Automatically choose a digital or an analog channel, or listen to analog only. | capability | p.290 / bullet |
 | 22 | <span class="req-label">Step -</span>Artwork: Turns the artwork display on and off. | capability | p.290 / bullet |
 <!-- GENERATED:END function=35b7539e28da -->
+
+
 
 
 

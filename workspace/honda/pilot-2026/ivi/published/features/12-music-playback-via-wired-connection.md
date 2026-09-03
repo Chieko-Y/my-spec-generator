@@ -1,7 +1,7 @@
 <!-- GENERATED:START function=0ea47a2b9199 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 12. Music Playback via Wired Connection
 
-<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Music Playback via Wired Connection<br><b>Source:</b> printed page 291, 292, 293<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
+<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Music Playback via Wired Connection<br><b>Source:</b> printed page 291, 292, 293<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
@@ -29,6 +29,13 @@ flowchart TD
 | 1 | 2 | Select a search category (e.g., Artists, Albums, etc.). | p.292 / step |
 | 1 | 3 | Continue making selections until you find the song of your choice. | p.292 / step |
 
+## Numeric thresholds (filled in by a tester)
+Filled: 0 / unfilled: 1
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| 38abf883a6fa | Repeatedly select the shuffle or repeat icon until | count | times | **unfilled** | unfilled | — | — |
+
 ## 12-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -53,6 +60,8 @@ flowchart TD
 | 18 | <span class="req-label">Music Playback via Wired Connection</span>Play Mode Menu Items Shuffle Shuffle off: Shuffle mode turns off. Shuffle all songs: Plays all available songs in a selected list in random order. | capability | p.293 / text |
 | 19 | <span class="req-label">Music Playback via Wired Connection</span>Repeat Repeat off: Repeat mode turns off. Repeat song: Repeats the current song. Repeat all: Repeats all available songs in a selected list. | capability | p.293 / text |
 <!-- GENERATED:END function=0ea47a2b9199 -->
+
+
 
 
 

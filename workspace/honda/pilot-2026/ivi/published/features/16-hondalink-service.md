@@ -5,6 +5,13 @@
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
+## Numeric thresholds (filled in by a tester)
+Filled: 1 / unfilled: 0
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| 2e0958d2d059 | 30 seconds have elapsed | duration | seconds | 30 | from_manual | Stated in the OM: "30" | — |
+
 ## 16-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -51,6 +58,8 @@
 | 19 | <span class="req-label">HondaLink® Service</span>Vehicle provides a cellular network environment as a Wi-Fi router to use a tablet or a smartphone in your vehicle. | capability | p.305 / text |
 | 20 | <span class="req-label">HondaLink® Service</span>1Convenient Features To learn more about these features, please visit: U.S.: https://mygarage.honda.com/s/hondalinkmarketing Canada: https://www.honda.ca/en/hondalink (English) https://www.honda.ca/fr/hondalink (French). | capability | p.305 / text |
 <!-- GENERATED:END function=8cc21447dd32 -->
+
+
 
 
 

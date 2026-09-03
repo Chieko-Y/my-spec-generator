@@ -1,7 +1,7 @@
 <!-- GENERATED:START function=3ce66144a074 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 7. System Updates
 
-<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / System Updates<br><b>Source:</b> printed page 282, 283<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
+<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / System Updates<br><b>Source:</b> printed page 282, 283<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
@@ -37,6 +37,13 @@ flowchart TD
 | 2 | 2 | Select System Updates. | p.283 / step |
 | 2 | 3 | Select Settings. | p.283 / step |
 | 2 | 4 | Select the option you want to change or confirm. | p.283 / step |
+
+## Numeric thresholds (filled in by a tester)
+Filled: 0 / unfilled: 1
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| 84c549b9e9a2 | a certain number of times | count | times | **unfilled** | unfilled | — | — |
 
 ## 7-2-1. Service overview
 
@@ -77,6 +84,8 @@ flowchart TD
 | 13 | <span class="req-label">Step -</span>Agreement to terms of use is required. If you are disconnected from the network, the download will be stopped. Download is resumed when a new network connection is established. | constraint | p.283 / bullet |
 | 14 | <span class="req-label">System Updates</span>1System Updates Settings To perform a system update via Wi-Fi, change settings for connecting to Wi-Fi. 2 Wi-Fi Connection P.306. | capability | p.283 / text |
 <!-- GENERATED:END function=3ce66144a074 -->
+
+
 
 
 

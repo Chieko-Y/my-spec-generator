@@ -121,6 +121,64 @@ PATTERNS: list[ParameterPattern] = [
         re.compile(r"\b(?:high|low)\s+speed\b", re.IGNORECASE),
         "speed",
     ),
+    ParameterPattern(
+        "vague_repeatedly",
+        "count",
+        # Confirmed real, Honda Pilot 2026-09-03: "Repeatedly select the shuffle
+        # or repeat icon until you find a play mode..." and "Select random or
+        # repeat icon repeatedly until a desired mode." -- both name a repeated
+        # action with no stated count, bounded only by "until <some state>".
+        # Matches either word order (the "repeatedly" can land before or after
+        # the verb it modifies), scoped to one sentence (`[^.]` gap) so an
+        # unrelated "until" much later in the same paragraph doesn't pair up.
+        re.compile(r"\brepeatedly\b[^.]{0,80}\buntil\b|\buntil\b[^.]{0,80}\brepeatedly\b", re.IGNORECASE),
+        "times",
+    ),
+    ParameterPattern(
+        "vague_certain_count",
+        "count",
+        # Confirmed real, Honda Pilot 2026-09-03: "Remind me Later will stop
+        # displaying after it has been selected a certain number of times." --
+        # same shape as vague_certain_quantity ("a certain level/degree/amount
+        # of X") but for a bare repeat count, which that pattern's noun-phrase
+        # shape doesn't cover.
+        re.compile(r"\ba\s+certain\s+number\s+of\s+times\b", re.IGNORECASE),
+        "times",
+    ),
+    ParameterPattern(
+        "vague_stated_duration",
+        "duration",
+        # NOT a vague phrase -- the manual DOES state a number ("for 10
+        # seconds", "30 seconds have elapsed") -- but the original app's own
+        # real output still flags these as thresholds (status=from_manual,
+        # "Stated in the OM"), confirmed real, Honda Pilot 2026-09-03 (a scan
+        # duration and an auto-off timeout). A documented timing spec is worth
+        # verifying against the real vehicle even when the manual already
+        # states a value -- unlike the other patterns here, the match IS the
+        # number+unit itself, so `detect_parameters`'s own nearby-number
+        # search always finds it and seeds `status=from_manual` automatically.
+        re.compile(
+            r"\bfor\s+\d+\s+(?:seconds?|sec\.?|minutes?|min\.?|hours?|hrs?)\b|"
+            r"\b\d+\s+(?:seconds?|sec\.?|minutes?|min\.?|hours?|hrs?)\s+(?:have\s+)?elapsed\b",
+            re.IGNORECASE,
+        ),
+        "time",
+    ),
+    # A bare "immediately" pattern was tried and deliberately dropped,
+    # 2026-09-03: the original app's own real output has ONE genuine hit for
+    # it ("the system update begins immediately", Honda Pilot System
+    # Updates -- this rebuild's own text extraction currently drops that
+    # exact sentence, a separate still-open bug), but a real regenerate
+    # against Subaru's own manuals showed this word overwhelmingly appears
+    # in generic safety-precaution boilerplate instead ("stop using the unit
+    # immediately", "wipe off immediately") -- not a testable system
+    # response time at all. Unlike this file's other patterns, that noise
+    # isn't a handful of one-off false positives a reviewer occasionally
+    # dismisses; it's the DOMINANT real-world match for the bare word, so it
+    # was left out rather than accepted per the usual "when in doubt, add
+    # it" policy. Revisit only with a narrower trigger (e.g. requiring
+    # "begins/starts immediately", closer to the one real confirmed case)
+    # if a future manual makes this worth another look.
 ]
 
 

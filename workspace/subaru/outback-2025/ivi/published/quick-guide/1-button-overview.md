@@ -5,6 +5,13 @@
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
+## Numeric thresholds (filled in by a tester)
+Filled: 1 / unfilled: 0
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| a53d19b3d2e4 | for 10 seconds | duration | seconds | 10 | from_manual | Stated in the OM: "10" | — |
+
 ## 1-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -18,6 +25,7 @@
 | 7 | <span class="req-label">Button Overview</span>Phone P.26. | capability | p.19 / text |
 | 8 | <span class="req-label">Button Overview</span>Apps P.29. | capability | p.19 / text |
 <!-- GENERATED:END function=f5c99552a2e6 -->
+
 
 
 

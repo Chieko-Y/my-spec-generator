@@ -62,7 +62,19 @@
           "source": "p.19 / text",
           "page_citation": "BASIC FUNCTION BASIC FUNCTION Display the home screen.",
           "next_step_text": null,
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "a53d19b3d2e4",
+              "matching_text": "for 10 seconds",
+              "kind": "duration",
+              "unit": "seconds",
+              "context": "Turn the knob to adjust the volume. Press the knob to turn the volume mute on/off. Press and hold the knob to turn the audio system off. To turn the audio system on, press and hold the knob again or press . Press and hold the knob for 10 seconds or longer to reset the system if the touch screens become unresponsive during operation or if any other system error occurs.",
+              "value": "10",
+              "status": "from_manual",
+              "evidence": "Stated in the OM: \"10\"",
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },
@@ -3344,7 +3356,19 @@
           "source": "p.43 / text",
           "page_citation": "BASIC FUNCTION BASIC FUNCTION",
           "next_step_text": null,
-          "thresholds": [],
+          "thresholds": [
+            {
+              "threshold_id": "c8a7c7c7e7dd",
+              "matching_text": "for 10 seconds",
+              "kind": "duration",
+              "unit": "seconds",
+              "context": "Turn the knob to adjust the volume. Press the knob to turn the volume mute on/off. Press and hold the knob to turn the audio system off. To turn the audio system on, press and hold the knob again or touch the screen to display and select it. Press and hold the knob for 10 seconds or longer to reset the system if the touch screen becomes unresponsive during operation or if Car settings icon* any other system error occurs.",
+              "value": "10",
+              "status": "from_manual",
+              "evidence": "Stated in the OM: \"10\"",
+              "filled_by": null
+            }
+          ],
           "change": null,
           "previous_text": null
         },

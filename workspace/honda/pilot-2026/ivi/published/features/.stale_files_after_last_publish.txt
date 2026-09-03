@@ -1,4 +1,0 @@
-29-defaulting-all-the-settings.md
-30-using-hfl.md
-31-hfl-menus.md
-32-cabintalk.md

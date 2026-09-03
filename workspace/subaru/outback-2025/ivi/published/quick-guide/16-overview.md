@@ -10,6 +10,13 @@
 - Figure 16-1 source: p.43
 - (Copied from OM) Car settings icon*
 
+## Numeric thresholds (filled in by a tester)
+Filled: 1 / unfilled: 0
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| c8a7c7c7e7dd | for 10 seconds | duration | seconds | 10 | from_manual | Stated in the OM: "10" | — |
+
 ## 16-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -26,6 +33,7 @@
 | 10 | <span class="req-label">Overview</span>Climate control screen*. | capability | p.43 / text |
 | 11 | <span class="req-label">Overview</span>*: Refer to the vehicle Owner’s Manual. 43. | capability | p.43 / text |
 <!-- GENERATED:END function=9ba4dbfb5bfe -->
+
 
 
 

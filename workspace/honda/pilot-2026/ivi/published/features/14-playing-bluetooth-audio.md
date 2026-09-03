@@ -1,7 +1,7 @@
 <!-- GENERATED:START function=a78de7491615 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
 # 14. Playing Bluetooth® Audio
 
-<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Playing Bluetooth® Audio<br><b>Source:</b> printed page 297, 298, 299<br><b>Test-ready:</b> <span class="test-ready-yes">yes — no unfilled thresholds and a procedure is present</span></div>
+<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / Playing Bluetooth® Audio<br><b>Source:</b> printed page 297, 298, 299<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
 
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
@@ -36,6 +36,13 @@ flowchart TD
 | 2 | 1 | Select Music Library. | p.298 / step |
 | 2 | 2 | Select a search category (e.g., Albums). | p.298 / step |
 | 2 | 3 | Select an item. uThe selection begins playing. | p.298 / step |
+
+## Numeric thresholds (filled in by a tester)
+Filled: 0 / unfilled: 1
+
+| Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
+|---|---|---|---|---|---|---|---|
+| a2ddfabcf5b1 | Repeatedly select the shuffle or repeat icon until | count | times | **unfilled** | unfilled | — | — |
 
 ## 14-2-1. Service overview
 
@@ -88,6 +95,8 @@ flowchart TD
 | 4 | <span class="req-label">Playing Bluetooth® Audio</span>1Searching for Music Depending on the Bluetooth® device you connect, some or all of the lists may not be displayed. | capability | p.298 / text |
 | 5 | <span class="req-label">Playing Bluetooth® Audio</span>1How to Select a Play Mode Depending on the Bluetooth® device you connect, some or all of the functions may not be displayed. | capability | p.299 / text |
 <!-- GENERATED:END function=a78de7491615 -->
+
+
 
 
 
