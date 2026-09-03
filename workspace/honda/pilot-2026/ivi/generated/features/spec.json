@@ -192,11 +192,24 @@
           "previous_text": null
         },
         {
-          "req_id": "eddf04c0e323",
+          "req_id": "75a29917e537",
           "slot": "requirements",
-          "text": "We recommend that you use a USB cable if you are uTo prevent any potential issues, be sure attaching a USB flash drive to the USB port. to use an Apple MFi Certified Lightning.",
-          "source_text": "We recommend that you use a USB cable if you are uTo prevent any potential issues, be sure attaching a USB flash drive to the USB port. to use an Apple MFi Certified Lightning",
+          "text": "We recommend that you use a USB cable if you are.",
+          "source_text": "We recommend that you use a USB cable if you are",
           "strength": "constraint",
+          "source": "p.265 / bullet",
+          "page_citation": "uuAudio SystemuUSB Ports",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "db211a5636f6",
+          "slot": "requirements",
+          "text": "To prevent any potential issues, be sure attaching a USB flash drive to the USB port. to use an Apple MFi Certified Lightning.",
+          "source_text": "To prevent any potential issues, be sure attaching a USB flash drive to the USB port. to use an Apple MFi Certified Lightning",
+          "strength": "capability",
           "source": "p.265 / bullet",
           "page_citation": "uuAudio SystemuUSB Ports",
           "next_step_text": null,
@@ -283,10 +296,23 @@
           "previous_text": null
         },
         {
-          "req_id": "1b71a2e413af",
+          "req_id": "acb7ae186114",
           "slot": "exception",
-          "text": "Some devices may not work even if they are uYou cannot play music even if you have connected to the USB ports. connected music players to it. Supplementary information about USB Charging:.",
-          "source_text": "Some devices may not work even if they are uYou cannot play music even if you have connected to the USB ports. connected music players to it. Supplementary information about USB Charging:",
+          "text": "Some devices may not work even if they are.",
+          "source_text": "Some devices may not work even if they are",
+          "strength": "constraint",
+          "source": "p.265 / bullet",
+          "page_citation": "uuAudio SystemuUSB Ports",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3d75003d52a1",
+          "slot": "exception",
+          "text": "You cannot play music even if you have connected to the USB ports. connected music players to it. Supplementary information about USB Charging:.",
+          "source_text": "You cannot play music even if you have connected to the USB ports. connected music players to it. Supplementary information about USB Charging:",
           "strength": "constraint",
           "source": "p.265 / bullet",
           "page_citation": "uuAudio SystemuUSB Ports",
@@ -374,12 +400,38 @@
           "previous_text": null
         },
         {
-          "req_id": "d71b91f64060",
-          "slot": "exception",
-          "text": "third row seats ( )* The USB port (3.0A) is only for charging devices. uThe USB port can supply up to 3.0A of power. It does not output 3.0A unless requested by the device. uYou cannot play music even if you have connected music players to it.",
-          "source_text": "third row seats ( )* The USB port (3.0A) is only for charging devices. uThe USB port can supply up to 3.0A of power. It does not output 3.0A unless requested by the device. uYou cannot play music even if you have connected music players to it.",
-          "strength": "constraint",
+          "req_id": "b24d9fa03f45",
+          "slot": "requirements",
+          "text": "third row seats ( )* The USB port (3.0A) is only for charging devices.",
+          "source_text": "third row seats ( )* The USB port (3.0A) is only for charging devices.",
+          "strength": "capability",
           "source": "p.266 / text",
+          "page_citation": "uuAudio SystemuUSB Ports",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ef96707fc9a1",
+          "slot": "requirements",
+          "text": "The USB port can supply up to 3.0A of power. It does not output 3.0A unless requested by the device.",
+          "source_text": "The USB port can supply up to 3.0A of power. It does not output 3.0A unless requested by the device.",
+          "strength": "constraint",
+          "source": "p.266 / bullet",
+          "page_citation": "uuAudio SystemuUSB Ports",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "240178b977e0",
+          "slot": "exception",
+          "text": "You cannot play music even if you have connected music players to it.",
+          "source_text": "You cannot play music even if you have connected music players to it.",
+          "strength": "constraint",
+          "source": "p.266 / bullet",
           "page_citation": "uuAudio SystemuUSB Ports",
           "next_step_text": null,
           "thresholds": [],
@@ -474,7 +526,7 @@
         },
         {
           "number": 3,
-          "text": "Press and hold the audio system power knob for more than two seconds. uThe audio system is reactivated when the audio control unit establishes a connection with the vehicle control unit. If the control unit fails to recognize the audio unit, you must go to a dealer and have the audio unit checked.",
+          "text": "Press and hold the audio system power knob for more than two seconds.",
           "sequence": 1,
           "source": "p.267 / step"
         }
@@ -515,6 +567,19 @@
           "source": "p.267 / text",
           "page_citation": "uuAudio SystemuAudio System Theft Protection",
           "next_step_text": "1. Set the power mode to ON.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "7d74ad87fde1",
+          "slot": "requirements",
+          "text": "The audio system is reactivated when the audio control unit establishes a connection with the vehicle control unit. If the control unit fails to recognize the audio unit, you must go to a dealer and have the audio unit checked.",
+          "source_text": "The audio system is reactivated when the audio control unit establishes a connection with the vehicle control unit. If the control unit fails to recognize the audio unit, you must go to a dealer and have the audio unit checked.",
+          "strength": "constraint",
+          "source": "p.267 / bullet",
+          "page_citation": "uuAudio SystemuAudio System Theft Protection",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -626,10 +691,23 @@
           "previous_text": null
         },
         {
-          "req_id": "f778b10162f0",
+          "req_id": "a595fd9c5315",
           "slot": "requirements",
-          "text": "When listening to a wired connection, USB flash drive, or Bluetooth® Audio, or Smartphone Connection uDepending on a connected device, operations may be changed. : To skip to the next song. Press : To go back to the beginning of the current or previous song. Press.",
-          "source_text": "When listening to a wired connection, USB flash drive, or Bluetooth® Audio, or Smartphone Connection uDepending on a connected device, operations may be changed. : To skip to the next song. Press : To go back to the beginning of the current or previous song. Press",
+          "text": "When listening to a wired connection, USB flash drive, or Bluetooth® Audio, or Smartphone Connection.",
+          "source_text": "When listening to a wired connection, USB flash drive, or Bluetooth® Audio, or Smartphone Connection",
+          "strength": "capability",
+          "source": "p.269 / bullet",
+          "page_citation": "uuAudio SystemuAudio Remote Controls",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "92780026fbe9",
+          "slot": "requirements",
+          "text": "Depending on a connected device, operations may be changed. : To skip to the next song. Press : To go back to the beginning of the current or previous song. Press.",
+          "source_text": "Depending on a connected device, operations may be changed. : To skip to the next song. Press : To go back to the beginning of the current or previous song. Press",
           "strength": "capability",
           "source": "p.269 / bullet",
           "page_citation": "uuAudio SystemuAudio Remote Controls",
@@ -703,7 +781,7 @@
         },
         {
           "number": 2,
-          "text": "Select Set up profile. uIf you want to change the language, select English (United States).",
+          "text": "Select Set up profile.",
           "sequence": 1,
           "source": "p.272 / step"
         },
@@ -727,7 +805,7 @@
         },
         {
           "number": 6,
-          "text": "Select Done for now. uBy selecting Profile lock, you can set security settings for your profile. uBy selecting Set up Google Assistant and apps, you can customize settings related to Google. An internet connection is required to change settings. 2 Wi-Fi Connection P.306",
+          "text": "Select Done for now.",
           "sequence": 1,
           "source": "p.272 / step"
         }
@@ -851,21 +929,47 @@
           "previous_text": null
         },
         {
-          "req_id": "afcd60153ba7",
+          "req_id": "c8bf23fb69d9",
           "slot": "overview",
-          "text": "Select OK on the disclaimer screen. uIf you want to change the settings for data upload, select Data Sharing with Honda, then select the Enable/Disable settings on the Data Sharing with Honda screen. uIf you do not select OK, the system will automatically be switched to the home screen, or the top screen of the last executed application, after a certain period of time. uIf there is no registered device, select OK and the Bluetooth® pairing screen will be displayed. uIf you check the box with Do not show this again, this screen will not be displayed.",
-          "source_text": "Select OK on the disclaimer screen. uIf you want to change the settings for data upload, select Data Sharing with Honda, then select the Enable/Disable settings on the Data Sharing with Honda screen. uIf you do not select OK, the system will automatically be switched to the home screen, or the top screen of the last executed application, after a certain period of time. uIf there is no registered device, select OK and the Bluetooth® pairing screen will be displayed. uIf you check the box with Do not show this again, this screen will not be displayed.",
+          "text": "Select OK on the disclaimer screen.",
+          "source_text": "Select OK on the disclaimer screen.",
           "strength": "capability",
           "source": "p.271 / text",
           "page_citation": "uuAudio System Basic OperationuStart Up",
           "next_step_text": "1. Read the disclaimer screen and select OK.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "62a659d90949",
+          "slot": "requirements",
+          "text": "If you want to change the settings for data upload, select Data Sharing with Honda, then select the Enable/Disable settings on the Data Sharing with Honda screen.",
+          "source_text": "If you want to change the settings for data upload, select Data Sharing with Honda, then select the Enable/Disable settings on the Data Sharing with Honda screen.",
+          "strength": "capability",
+          "source": "p.271 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": "1. Read the disclaimer screen and select OK.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "579a78e18b96",
+          "slot": "requirements",
+          "text": "If you do not select OK, the system will automatically be switched to the home screen, or the top screen of the last executed application, after a certain period of time.",
+          "source_text": "If you do not select OK, the system will automatically be switched to the home screen, or the top screen of the last executed application, after a certain period of time.",
+          "strength": "capability",
+          "source": "p.271 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": "1. Read the disclaimer screen and select OK.",
           "thresholds": [
             {
-              "threshold_id": "d5fd615c6264",
+              "threshold_id": "b3bbaa1114ac",
               "matching_text": "a certain period of time",
               "kind": "duration",
               "unit": "time",
-              "context": "Select OK on the disclaimer screen. uIf you want to change the settings for data upload, select Data Sharing with Honda, then select the Enable/Disable settings on the Data Sharing with Honda screen. uIf you do not select OK, the system will automatically be switched to the home screen, or the top screen of the last executed application, after a certain period of time. uIf there is no registered device, select OK and the Bluetooth® pairing screen will be displayed. uIf you check the box with Do not show this again, this screen will not be displayed.",
+              "context": "If you do not select OK, the system will automatically be switched to the home screen, or the top screen of the last executed application, after a certain period of time.",
               "value": null,
               "status": "unfilled",
               "evidence": null,
@@ -876,8 +980,34 @@
           "previous_text": null
         },
         {
+          "req_id": "27ba48c2555c",
+          "slot": "requirements",
+          "text": "If there is no registered device, select OK and the Bluetooth® pairing screen will be displayed.",
+          "source_text": "If there is no registered device, select OK and the Bluetooth® pairing screen will be displayed.",
+          "strength": "capability",
+          "source": "p.271 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": "1. Read the disclaimer screen and select OK.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "6bbb1455822e",
+          "slot": "requirements",
+          "text": "If you check the box with Do not show this again, this screen will not be displayed.",
+          "source_text": "If you check the box with Do not show this again, this screen will not be displayed.",
+          "strength": "capability",
+          "source": "p.271 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": "1. Read the disclaimer screen and select OK.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "bab699c5a1bc",
-          "slot": "overview",
+          "slot": "exception",
           "text": "Data Sharing with Honda Enable: Data communication available. Disable: Data communication unavailable.",
           "source_text": "Data Sharing with Honda Enable: Data communication available. Disable: Data communication unavailable.",
           "strength": "capability",
@@ -890,7 +1020,7 @@
         },
         {
           "req_id": "83889a899e51",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Registering new user information.",
           "source_text": "Registering new user information",
           "strength": "capability",
@@ -902,8 +1032,47 @@
           "previous_text": null
         },
         {
+          "req_id": "4ff607054d83",
+          "slot": "requirements",
+          "text": "If you want to change the language, select English (United States).",
+          "source_text": "If you want to change the language, select English (United States).",
+          "strength": "capability",
+          "source": "p.272 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": "3. Name your profile and select Next.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "43092f4e8791",
+          "slot": "requirements",
+          "text": "By selecting Profile lock, you can set security settings for your profile.",
+          "source_text": "By selecting Profile lock, you can set security settings for your profile.",
+          "strength": "capability",
+          "source": "p.272 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "8840826c8d87",
+          "slot": "user_setting",
+          "text": "By selecting Set up Google Assistant and apps, you can customize settings related to Google. An internet connection is required to change settings. 2 Wi-Fi Connection P.306.",
+          "source_text": "By selecting Set up Google Assistant and apps, you can customize settings related to Google. An internet connection is required to change settings. 2 Wi-Fi Connection P.306",
+          "strength": "capability",
+          "source": "p.272 / bullet",
+          "page_citation": "uuAudio System Basic OperationuStart Up",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "b9a9134a033e",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Registering new user information Refer to the Google website for more information on setting up a profile.",
           "source_text": "1Registering new user information Refer to the Google website for more information on setting up a profile.",
           "strength": "capability",
@@ -916,7 +1085,7 @@
         },
         {
           "req_id": "717157a2c6f1",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Additional information for Google Apps and Services is available at mygarage.honda.com (U.S.) or honda.ca (English) / www.honda.ca/fr (French) (Canada).",
           "source_text": "Additional information for Google Apps and Services is available at mygarage.honda.com (U.S.) or honda.ca (English) / www.honda.ca/fr (French) (Canada).",
           "strength": "capability",
@@ -929,7 +1098,7 @@
         },
         {
           "req_id": "5219fd888b17",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Specifications may be changed via system updates, etc.",
           "source_text": "Specifications may be changed via system updates, etc.",
           "strength": "capability",
@@ -1007,7 +1176,7 @@
         },
         {
           "number": 2,
-          "text": "Select Reboot. uIf Safe Mode is selected, the audio system will be rebooted with third-party applications turned off. After the power mode has been turned off once, third-party applications can be used again.",
+          "text": "Select Reboot.",
           "sequence": 1,
           "source": "p.273 / step"
         }
@@ -1035,6 +1204,19 @@
           "source": "p.273 / text",
           "page_citation": "uuAudio System Basic OperationuReboot Audio",
           "next_step_text": "1. Select and hold Home until the reboot dialog screen appears.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "e9bb1ae342f2",
+          "slot": "requirements",
+          "text": "If Safe Mode is selected, the audio system will be rebooted with third-party applications turned off. After the power mode has been turned off once, third-party applications can be used again.",
+          "source_text": "If Safe Mode is selected, the audio system will be rebooted with third-party applications turned off. After the power mode has been turned off once, third-party applications can be used again.",
+          "strength": "capability",
+          "source": "p.273 / bullet",
+          "page_citation": "uuAudio System Basic OperationuReboot Audio",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -1091,7 +1273,7 @@
         },
         {
           "number": 6,
-          "text": "Import a desired picture. uMultiple pictures can be imported at the same time.",
+          "text": "Import a desired picture.",
           "sequence": 1,
           "source": "p.277 / step"
         },
@@ -1103,7 +1285,7 @@
         },
         {
           "number": 8,
-          "text": "Select Add Files. uThe display will return to the Clock Faces screen.",
+          "text": "Select Add Files.",
           "sequence": 1,
           "source": "p.277 / step"
         },
@@ -1133,7 +1315,7 @@
         },
         {
           "number": 5,
-          "text": "Select Save. uThe display will return to the Clock Faces screen.",
+          "text": "Select Save.",
           "sequence": 2,
           "source": "p.278 / step"
         },
@@ -1163,7 +1345,7 @@
         },
         {
           "number": 5,
-          "text": "Select Select Files to Delete. uWhen you want to delete everything wallpaper. Select Delete All Files.",
+          "text": "Select Select Files to Delete.",
           "sequence": 3,
           "source": "p.278 / step"
         },
@@ -1181,7 +1363,7 @@
         },
         {
           "number": 8,
-          "text": "Select Delete Files. uThe display will return to the Clock Faces screen.",
+          "text": "Select Delete Files.",
           "sequence": 3,
           "source": "p.278 / step"
         },
@@ -1205,25 +1387,25 @@
         },
         {
           "number": 1,
-          "text": "Select and hold an icon. Hide uThe screen switches to the customization screen.",
+          "text": "Select and hold an icon. Hide",
           "sequence": 5,
           "source": "p.280 / step"
         },
         {
           "number": 2,
-          "text": "Drag and drop the icon to where you want it to be. uDrag and drop the icon to Hide to remove from the home screen.",
+          "text": "Drag and drop the icon to where you want it to be.",
           "sequence": 5,
           "source": "p.280 / step"
         },
         {
           "number": 3,
-          "text": "Select Home or Back. uThe screen will return to the home screen.",
+          "text": "Select Home or Back.",
           "sequence": 5,
           "source": "p.280 / step"
         },
         {
           "number": 1,
-          "text": "Select and hold an icon. uThe screen switches to the customization screen.",
+          "text": "Select and hold an icon.",
           "sequence": 6,
           "source": "p.281 / step"
         },
@@ -1235,13 +1417,13 @@
         },
         {
           "number": 3,
-          "text": "Drag and drop the icon you want to store to the left of the home screen. Drag and drop to uThe icon is stored as a shortcut. preset icon.",
+          "text": "Drag and drop the icon you want to store to the left of the home screen. Drag and drop to",
           "sequence": 6,
           "source": "p.281 / step"
         },
         {
           "number": 4,
-          "text": "Select Home or Back. uThe screen will return to the home screen.",
+          "text": "Select Home or Back.",
           "sequence": 6,
           "source": "p.281 / step"
         },
@@ -1811,6 +1993,32 @@
           "previous_text": null
         },
         {
+          "req_id": "02dc54950ae8",
+          "slot": "requirements",
+          "text": "Multiple pictures can be imported at the same time.",
+          "source_text": "Multiple pictures can be imported at the same time.",
+          "strength": "capability",
+          "source": "p.277 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "7. Select Select Files.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fdbb5b2d3e51",
+          "slot": "requirements",
+          "text": "The display will return to the Clock Faces screen.",
+          "source_text": "The display will return to the Clock Faces screen.",
+          "strength": "capability",
+          "source": "p.277 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "1. Select Clock.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "a862ff98c117",
           "slot": "exception",
           "text": "1Wallpaper Setup The wallpaper you set up on Clock Faces cannot be displayed on the driver information interface.",
@@ -1902,6 +2110,19 @@
           "previous_text": null
         },
         {
+          "req_id": "fdbb5b2d3e51",
+          "slot": "requirements",
+          "text": "The display will return to the Clock Faces screen.",
+          "source_text": "The display will return to the Clock Faces screen.",
+          "strength": "capability",
+          "source": "p.278 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "1. Select Clock.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "2a39e5316abd",
           "slot": "requirements",
           "text": "Delete wallpaper.",
@@ -1910,6 +2131,32 @@
           "source": "p.278 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
           "next_step_text": "1. Select Clock.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "b4c1fe47a131",
+          "slot": "requirements",
+          "text": "When you want to delete everything wallpaper. Select Delete All Files.",
+          "source_text": "When you want to delete everything wallpaper. Select Delete All Files.",
+          "strength": "capability",
+          "source": "p.278 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "6. Select a desired wallpaper.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "fdbb5b2d3e51",
+          "slot": "requirements",
+          "text": "The display will return to the Clock Faces screen.",
+          "source_text": "The display will return to the Clock Faces screen.",
+          "strength": "capability",
+          "source": "p.278 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "1. Select Home.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2039,7 +2286,7 @@
           "strength": "capability",
           "source": "p.280 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. Hide uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon. Hide",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2052,7 +2299,46 @@
           "strength": "capability",
           "source": "p.280 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. Hide uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon. Hide",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "192928ced6cc",
+          "slot": "requirements",
+          "text": "The screen switches to the customization screen.",
+          "source_text": "The screen switches to the customization screen.",
+          "strength": "capability",
+          "source": "p.280 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "2. Drag and drop the icon to where you want it to be.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "37d49bda15df",
+          "slot": "requirements",
+          "text": "Drag and drop the icon to Hide to remove from the home screen.",
+          "source_text": "Drag and drop the icon to Hide to remove from the home screen.",
+          "strength": "capability",
+          "source": "p.280 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "3. Select Home or Back.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bc733a1591e6",
+          "slot": "requirements",
+          "text": "The screen will return to the home screen.",
+          "source_text": "The screen will return to the home screen.",
+          "strength": "capability",
+          "source": "p.280 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "1. Select and hold an icon.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2065,7 +2351,7 @@
           "strength": "capability",
           "source": "p.280 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2078,7 +2364,7 @@
           "strength": "capability",
           "source": "p.280 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2091,7 +2377,7 @@
           "strength": "capability",
           "source": "p.280 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2104,7 +2390,7 @@
           "strength": "capability",
           "source": "p.281 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2117,7 +2403,46 @@
           "strength": "capability",
           "source": "p.281 / text",
           "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
-          "next_step_text": "1. Select and hold an icon. uThe screen switches to the customization screen.",
+          "next_step_text": "1. Select and hold an icon.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "192928ced6cc",
+          "slot": "requirements",
+          "text": "The screen switches to the customization screen.",
+          "source_text": "The screen switches to the customization screen.",
+          "strength": "capability",
+          "source": "p.281 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "2. Select Edit Shortcuts.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ea7aa7b67d02",
+          "slot": "requirements",
+          "text": "The icon is stored as a shortcut. preset icon.",
+          "source_text": "The icon is stored as a shortcut. preset icon.",
+          "strength": "capability",
+          "source": "p.281 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "4. Select Home or Back.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bc733a1591e6",
+          "slot": "requirements",
+          "text": "The screen will return to the home screen.",
+          "source_text": "The screen will return to the home screen.",
+          "strength": "capability",
+          "source": "p.281 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAudio/Information Screen",
+          "next_step_text": "1. Select and hold an icon.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -2300,7 +2625,7 @@
         },
         {
           "number": 2,
-          "text": "When the power mode is turned to OFF, the permission screen is displayed. Once a system update is started, the vehicle will become unable to move. uWhen you select Proceed Now, the system update begins immediately. uIf you select Set Update Time, you can set a time for the update to be performed. uIf you select Remind me Later, you can delay the system update. The permission screen will be displayed again the next time the power mode is turned to OFF.",
+          "text": "When the power mode is turned to OFF, the permission screen is displayed. Once a system update is started, the vehicle will become unable to move.",
           "sequence": 1,
           "source": "p.282 / step"
         },
@@ -2389,8 +2714,47 @@
           "previous_text": null
         },
         {
+          "req_id": "45027efab68c",
+          "slot": "requirements",
+          "text": "When you select Proceed Now, the system update begins immediately.",
+          "source_text": "When you select Proceed Now, the system update begins immediately.",
+          "strength": "capability",
+          "source": "p.282 / bullet",
+          "page_citation": "uuAudio System Basic OperationuSystem Updates",
+          "next_step_text": "3. The next time the power mode is turned to ON, the system update results screen 1Performing/Scheduling System Updates will be displayed.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3998889f5cc1",
+          "slot": "requirements",
+          "text": "If you select Set Update Time, you can set a time for the update to be performed.",
+          "source_text": "If you select Set Update Time, you can set a time for the update to be performed.",
+          "strength": "capability",
+          "source": "p.282 / bullet",
+          "page_citation": "uuAudio System Basic OperationuSystem Updates",
+          "next_step_text": "3. The next time the power mode is turned to ON, the system update results screen 1Performing/Scheduling System Updates will be displayed.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "779333233cc3",
+          "slot": "requirements",
+          "text": "If you select Remind me Later, you can delay the system update. The permission screen will be displayed again the next time the power mode is turned to OFF.",
+          "source_text": "If you select Remind me Later, you can delay the system update. The permission screen will be displayed again the next time the power mode is turned to OFF.",
+          "strength": "capability",
+          "source": "p.282 / bullet",
+          "page_citation": "uuAudio System Basic OperationuSystem Updates",
+          "next_step_text": "3. The next time the power mode is turned to ON, the system update results screen 1Performing/Scheduling System Updates will be displayed.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "a5365dde7bce",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1System Updates.",
           "source_text": "1System Updates",
           "strength": "capability",
@@ -2403,7 +2767,7 @@
         },
         {
           "req_id": "b283f2a7818c",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "When a system update is started, the vehicle will be unable to move.",
           "source_text": "When a system update is started, the vehicle will be unable to move.",
           "strength": "capability",
@@ -2416,7 +2780,7 @@
         },
         {
           "req_id": "a75e96588871",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "If new software has been released, perform an update as soon as possible.",
           "source_text": "If new software has been released, perform an update as soon as possible.",
           "strength": "capability",
@@ -2429,7 +2793,7 @@
         },
         {
           "req_id": "2e730e82f459",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "If a system update fails, please consult a dealer.",
           "source_text": "If a system update fails, please consult a dealer.",
           "strength": "capability",
@@ -2442,7 +2806,7 @@
         },
         {
           "req_id": "21a3cb19bd82",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "System updates that change specifications may result in some discrepancies with the information in this owner’s manual. For the most up-to-date information, please refer to the Honda website.",
           "source_text": "System updates that change specifications may result in some discrepancies with the information in this owner’s manual. For the most up-to-date information, please refer to the Honda website.",
           "strength": "capability",
@@ -2455,7 +2819,7 @@
         },
         {
           "req_id": "867a3008f09d",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Performing/Scheduling System Updates.",
           "source_text": "1Performing/Scheduling System Updates",
           "strength": "capability",
@@ -2468,7 +2832,7 @@
         },
         {
           "req_id": "1da1911003f3",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "NOTICE For important updates, Remind me Later will stop displaying after it has been selected a certain number of times.",
           "source_text": "NOTICE For important updates, Remind me Later will stop displaying after it has been selected a certain number of times.",
           "strength": "capability",
@@ -2493,7 +2857,7 @@
         },
         {
           "req_id": "8cdb546e2478",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Make sure your vehicle is stopped in a safe location before starting a system update.",
           "source_text": "Make sure your vehicle is stopped in a safe location before starting a system update.",
           "strength": "capability",
@@ -2506,7 +2870,7 @@
         },
         {
           "req_id": "2b736f0661a5",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "System Updates Settings.",
           "source_text": "System Updates Settings",
           "strength": "capability",
@@ -2519,7 +2883,7 @@
         },
         {
           "req_id": "0c9c7a2d9545",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You can change or confirm system update settings.",
           "source_text": "You can change or confirm system update settings.",
           "strength": "capability",
@@ -2532,7 +2896,7 @@
         },
         {
           "req_id": "9c8d3c67482f",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "The following settings can be set.",
           "source_text": "The following settings can be set.",
           "strength": "capability",
@@ -4660,7 +5024,7 @@
         },
         {
           "number": 3,
-          "text": "Select an item. uThe selection begins playing.",
+          "text": "Select an item.",
           "sequence": 2,
           "source": "p.298 / step"
         }
@@ -4927,6 +5291,19 @@
           "previous_text": null
         },
         {
+          "req_id": "9e351adcb6ea",
+          "slot": "requirements",
+          "text": "The selection begins playing.",
+          "source_text": "The selection begins playing.",
+          "strength": "capability",
+          "source": "p.298 / bullet",
+          "page_citation": "uuAudio System Basic OperationuPlaying Bluetooth® Audio",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "dec6e00914b6",
           "slot": "requirements",
           "text": "1To Play Bluetooth® Audio Files To play the audio files, you may need to operate your phone. If so, follow the phone maker’s operating instructions.",
@@ -5150,7 +5527,7 @@
         },
         {
           "number": 2,
-          "text": "Select the system status icon to see the messages. uA notification is continuously displayed on the B-zone until the new message is read.",
+          "text": "Select the system status icon to see the messages.",
           "sequence": 2,
           "source": "p.302 / step"
         },
@@ -5418,6 +5795,19 @@
           "source": "p.302 / text",
           "page_citation": "uuAudio System Basic OperationuHondaLink®",
           "next_step_text": "1. A notification appears and notifies you of a new message on the B-zone.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "073dee01e7fa",
+          "slot": "requirements",
+          "text": "A notification is continuously displayed on the B-zone until the new message is read.",
+          "source_text": "A notification is continuously displayed on the B-zone until the new message is read.",
+          "strength": "capability",
+          "source": "p.302 / bullet",
+          "page_citation": "uuAudio System Basic OperationuHondaLink®",
+          "next_step_text": "3. Select a new message to open.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -5998,7 +6388,7 @@
         },
         {
           "number": 4,
-          "text": "Select Wi-Fi. uTo change the Wi-Fi settings, select Options.",
+          "text": "Select Wi-Fi.",
           "sequence": 1,
           "source": "p.306 / step"
         },
@@ -6010,7 +6400,7 @@
         },
         {
           "number": 6,
-          "text": "Select Connect. uWhen the connection is successful, the status text Connected next to the network name is displayed on the list.",
+          "text": "Select Connect.",
           "sequence": 1,
           "source": "p.306 / step"
         },
@@ -6125,6 +6515,32 @@
           "source": "p.306 / text",
           "page_citation": "uuAudio System Basic OperationuWi-Fi Connection",
           "next_step_text": "1. Select Home.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "aef4dd62c52e",
+          "slot": "requirements",
+          "text": "To change the Wi-Fi settings, select Options.",
+          "source_text": "To change the Wi-Fi settings, select Options.",
+          "strength": "capability",
+          "source": "p.306 / bullet",
+          "page_citation": "uuAudio System Basic OperationuWi-Fi Connection",
+          "next_step_text": "5. Select the access point you want to connect to the system.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "cf1ff57cf05d",
+          "slot": "requirements",
+          "text": "When the connection is successful, the status text Connected next to the network name is displayed on the list.",
+          "source_text": "When the connection is successful, the status text Connected next to the network name is displayed on the list.",
+          "strength": "capability",
+          "source": "p.306 / bullet",
+          "page_citation": "uuAudio System Basic OperationuWi-Fi Connection",
+          "next_step_text": "7. Select Home to go back to the home screen.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6424,13 +6840,13 @@
       "procedure": [
         {
           "number": 1,
-          "text": "Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "text": "Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "sequence": 1,
           "source": "p.311 / step"
         },
         {
           "number": 2,
-          "text": "Select Yes. uIf you do not allow this consent, select No.",
+          "text": "Select Yes.",
           "sequence": 1,
           "source": "p.311 / step"
         },
@@ -6474,7 +6890,7 @@
           "strength": "capability",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6487,7 +6903,7 @@
           "strength": "capability",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6500,7 +6916,7 @@
           "strength": "constraint",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6513,7 +6929,7 @@
           "strength": "constraint",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6526,7 +6942,7 @@
           "strength": "capability",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6539,7 +6955,7 @@
           "strength": "capability",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6552,7 +6968,7 @@
           "strength": "constraint",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6565,7 +6981,7 @@
           "strength": "capability",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6578,7 +6994,7 @@
           "strength": "capability",
           "source": "p.309 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6591,7 +7007,7 @@
           "strength": "capability",
           "source": "p.310 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6604,7 +7020,7 @@
           "strength": "capability",
           "source": "p.310 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6617,7 +7033,7 @@
           "strength": "capability",
           "source": "p.310 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6630,7 +7046,7 @@
           "strength": "constraint",
           "source": "p.310 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6643,7 +7059,7 @@
           "strength": "constraint",
           "source": "p.310 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6656,14 +7072,40 @@
           "strength": "capability",
           "source": "p.311 / text",
           "page_citation": "uuAudio System Basic OperationuApple CarPlay",
-          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the iPhone to the USB charging/connector port. 2 USB Ports P.265",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bce440072c3a",
+          "slot": "requirements",
+          "text": "The confirmation screen will be displayed.",
+          "source_text": "The confirmation screen will be displayed.",
+          "strength": "capability",
+          "source": "p.311 / bullet",
+          "page_citation": "uuAudio System Basic OperationuApple CarPlay",
+          "next_step_text": "2. Select Yes.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "67d4abd16bbe",
+          "slot": "requirements",
+          "text": "If you do not allow this consent, select No.",
+          "source_text": "If you do not allow this consent, select No.",
+          "strength": "capability",
+          "source": "p.311 / bullet",
+          "page_citation": "uuAudio System Basic OperationuApple CarPlay",
+          "next_step_text": "1. Select Home.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "5edd2e000d4c",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You may change the consent settings under the Connections settings menu.",
           "source_text": "You may change the consent settings under the Connections settings menu.",
           "strength": "capability",
@@ -6676,7 +7118,7 @@
         },
         {
           "req_id": "08d97b753310",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Connect Apple CarPlay Wirelessly.",
           "source_text": "Connect Apple CarPlay Wirelessly",
           "strength": "capability",
@@ -6689,7 +7131,7 @@
         },
         {
           "req_id": "fe59d97baafa",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Apple CarPlay Only initialize Apple CarPlay when you are safely parked. When Apple CarPlay first detects your iPhone, you will need to set up your iPhone. Refer to the instruction manual that came with your iPhone.",
           "source_text": "1Apple CarPlay Only initialize Apple CarPlay when you are safely parked. When Apple CarPlay first detects your iPhone, you will need to set up your iPhone. Refer to the instruction manual that came with your iPhone.",
           "strength": "constraint",
@@ -6702,7 +7144,7 @@
         },
         {
           "req_id": "a0c7e322bc21",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You can also use the method below to set up Apple CarPlay: Select Home General Settings Connections Manage Device Connections Select Device.",
           "source_text": "You can also use the method below to set up Apple CarPlay: Select Home General Settings Connections Manage Device Connections Select Device.",
           "strength": "capability",
@@ -6715,7 +7157,7 @@
         },
         {
           "req_id": "9c0bc7ccb90c",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Use of user and vehicle information The use and handling of user and vehicle information transmitted to/from your iPhone by Apple CarPlay is governed by the Apple iOS terms and conditions and Apple’s Privacy Policy.",
           "source_text": "Use of user and vehicle information The use and handling of user and vehicle information transmitted to/from your iPhone by Apple CarPlay is governed by the Apple iOS terms and conditions and Apple’s Privacy Policy.",
           "strength": "capability",
@@ -6728,7 +7170,7 @@
         },
         {
           "req_id": "479a10818870",
-          "slot": "overview",
+          "slot": "exception",
           "text": "If there is a problem with the connection of your iPhone, an error code will be displayed. 2 Customized Features P.346.",
           "source_text": "If there is a problem with the connection of your iPhone, an error code will be displayed. 2 Customized Features P.346",
           "strength": "capability",
@@ -6741,7 +7183,7 @@
         },
         {
           "req_id": "c08293152a12",
-          "slot": "overview",
+          "slot": "exception",
           "text": "Wireless Apple CarPlay and AT&T Hotspot cannot be used at the same time. When using Apple CarPlay and AT&T Hotspot at the same time, connect to Apple CarPlay with a USB cable.",
           "source_text": "Wireless Apple CarPlay and AT&T Hotspot cannot be used at the same time. When using Apple CarPlay and AT&T Hotspot at the same time, connect to Apple CarPlay with a USB cable.",
           "strength": "constraint",
@@ -6754,7 +7196,7 @@
         },
         {
           "req_id": "ee453e6a4762",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Operating Apple CarPlay with Siri.",
           "source_text": "Operating Apple CarPlay with Siri",
           "strength": "capability",
@@ -6767,7 +7209,7 @@
         },
         {
           "req_id": "f50875458a9d",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Press and hold the (Talk) button to activate Siri. Press again to deactivate Siri. Press and release to activate standard voice recognition system.",
           "source_text": "Press and hold the (Talk) button to activate Siri. Press again to deactivate Siri. Press and release to activate standard voice recognition system.",
           "strength": "capability",
@@ -6780,7 +7222,7 @@
         },
         {
           "req_id": "4f8cbdd89660",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Operating Apple CarPlay with Siri Below are examples of questions and commands for Siri:.",
           "source_text": "1Operating Apple CarPlay with Siri Below are examples of questions and commands for Siri:",
           "strength": "capability",
@@ -6887,13 +7329,13 @@
       "procedure": [
         {
           "number": 1,
-          "text": "Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "text": "Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "sequence": 1,
           "source": "p.315 / step"
         },
         {
           "number": 2,
-          "text": "Select Yes. uIf you do not allow this consent, select No.",
+          "text": "Select Yes.",
           "sequence": 1,
           "source": "p.315 / step"
         },
@@ -6937,7 +7379,7 @@
           "strength": "capability",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6950,7 +7392,7 @@
           "strength": "capability",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6963,7 +7405,7 @@
           "strength": "constraint",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6976,7 +7418,7 @@
           "strength": "constraint",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -6989,7 +7431,7 @@
           "strength": "constraint",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7002,7 +7444,7 @@
           "strength": "capability",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7015,7 +7457,7 @@
           "strength": "capability",
           "source": "p.313 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7028,7 +7470,7 @@
           "strength": "capability",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7041,7 +7483,7 @@
           "strength": "capability",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7054,7 +7496,7 @@
           "strength": "capability",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7067,7 +7509,7 @@
           "strength": "capability",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7080,7 +7522,7 @@
           "strength": "capability",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7093,7 +7535,7 @@
           "strength": "constraint",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7106,7 +7548,7 @@
           "strength": "constraint",
           "source": "p.314 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7119,14 +7561,40 @@
           "strength": "capability",
           "source": "p.315 / text",
           "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
-          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265 uThe confirmation screen will be displayed.",
+          "next_step_text": "1. Connect the Android phone to the USB charging/connector port. 2 USB Ports P.265",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "61f98dbe3447",
+          "slot": "requirements",
+          "text": "The confirmation screen will be displayed.",
+          "source_text": "The confirmation screen will be displayed.",
+          "strength": "capability",
+          "source": "p.315 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
+          "next_step_text": "2. Select Yes.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4bd6dbde3af1",
+          "slot": "requirements",
+          "text": "If you do not allow this consent, select No.",
+          "source_text": "If you do not allow this consent, select No.",
+          "strength": "capability",
+          "source": "p.315 / bullet",
+          "page_citation": "uuAudio System Basic OperationuAndroid AutoTM",
+          "next_step_text": "1. Select Home.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "262d9405f498",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You may change the consent settings under the Connections settings menu.",
           "source_text": "You may change the consent settings under the Connections settings menu.",
           "strength": "capability",
@@ -7139,7 +7607,7 @@
         },
         {
           "req_id": "1963262578b3",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Connect Android Auto Wirelessly.",
           "source_text": "Connect Android Auto Wirelessly",
           "strength": "capability",
@@ -7152,7 +7620,7 @@
         },
         {
           "req_id": "b76bc46cf4f8",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Android AutoTM Only initialize Android Auto when you are safely parked. When Android Auto first detects your phone, you will need to set up your phone so that auto pairing is possible. Please refer to your phone’s instructions.",
           "source_text": "1Android AutoTM Only initialize Android Auto when you are safely parked. When Android Auto first detects your phone, you will need to set up your phone so that auto pairing is possible. Please refer to your phone’s instructions.",
           "strength": "constraint",
@@ -7165,7 +7633,7 @@
         },
         {
           "req_id": "c0aa9ab1a1ab",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You can use the method below to change Android Auto settings after you have completed the initial setup: Select Home General Settings Connections Manage Device Connections Select Device.",
           "source_text": "You can use the method below to change Android Auto settings after you have completed the initial setup: Select Home General Settings Connections Manage Device Connections Select Device.",
           "strength": "capability",
@@ -7178,7 +7646,7 @@
         },
         {
           "req_id": "0a1289247347",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Use of user and vehicle information The use and handling of user and vehicle information transmitted to/from your phone by Android Auto is governed by Google’s Privacy Policy.",
           "source_text": "Use of user and vehicle information The use and handling of user and vehicle information transmitted to/from your phone by Android Auto is governed by Google’s Privacy Policy.",
           "strength": "capability",
@@ -7191,7 +7659,7 @@
         },
         {
           "req_id": "21ce8cb12257",
-          "slot": "overview",
+          "slot": "exception",
           "text": "If there is a problem with the connection of your smartphone, an error code will be displayed. 2 Customized Features P.346.",
           "source_text": "If there is a problem with the connection of your smartphone, an error code will be displayed. 2 Customized Features P.346",
           "strength": "capability",
@@ -7204,7 +7672,7 @@
         },
         {
           "req_id": "86a228eab0e7",
-          "slot": "overview",
+          "slot": "exception",
           "text": "Wireless Android Auto and AT&T Hotspot cannot be used at the same time. When using Android Auto and AT&T Hotspot at the same time, connect to Android Auto with a USB cable.",
           "source_text": "Wireless Android Auto and AT&T Hotspot cannot be used at the same time. When using Android Auto and AT&T Hotspot at the same time, connect to Android Auto with a USB cable.",
           "strength": "constraint",
@@ -7217,7 +7685,7 @@
         },
         {
           "req_id": "695339300a44",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Operating Android Auto with Google Assistant.",
           "source_text": "Operating Android Auto with Google Assistant",
           "strength": "capability",
@@ -7230,7 +7698,7 @@
         },
         {
           "req_id": "56eee8dd704e",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Press and hold the (Talk) button to operate Android Auto with your voice. Press and release to activate the standard voice recognition system.",
           "source_text": "Press and hold the (Talk) button to operate Android Auto with your voice. Press and release to activate the standard voice recognition system.",
           "strength": "capability",
@@ -7243,7 +7711,7 @@
         },
         {
           "req_id": "00beab955f2f",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Operating Android Auto with Google Assistant Below are examples of commands you can give with voice recognition:.",
           "source_text": "1Operating Android Auto with Google Assistant Below are examples of commands you can give with voice recognition:",
           "strength": "capability",
@@ -7478,10 +7946,23 @@
           "previous_text": null
         },
         {
-          "req_id": "5579f5405bca",
+          "req_id": "b11759f71431",
           "slot": "requirements",
-          "text": "Saying “Hey Google.” uWake words vary by region and language. Refer to the Google website for more information.",
-          "source_text": "Saying “Hey Google.” uWake words vary by region and language. Refer to the Google website for more information.",
+          "text": "Saying “Hey Google.”.",
+          "source_text": "Saying “Hey Google.”",
+          "strength": "capability",
+          "source": "p.318 / bullet",
+          "page_citation": "uuAudio System Basic OperationuGoogle built-in",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "9b27d3485613",
+          "slot": "requirements",
+          "text": "Wake words vary by region and language. Refer to the Google website for more information.",
+          "source_text": "Wake words vary by region and language. Refer to the Google website for more information.",
           "strength": "capability",
           "source": "p.318 / bullet",
           "page_citation": "uuAudio System Basic OperationuGoogle built-in",
@@ -7706,7 +8187,7 @@
       "procedure": [
         {
           "number": 1,
-          "text": "Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "text": "Select User Info.",
           "sequence": 1,
           "source": "p.321 / step"
         },
@@ -7730,7 +8211,7 @@
         },
         {
           "number": 1,
-          "text": "Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked.",
+          "text": "Select User Info.",
           "sequence": 2,
           "source": "p.322 / step"
         },
@@ -7780,7 +8261,7 @@
           "strength": "capability",
           "source": "p.319 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7793,7 +8274,7 @@
           "strength": "capability",
           "source": "p.319 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7806,7 +8287,7 @@
           "strength": "constraint",
           "source": "p.319 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7819,7 +8300,7 @@
           "strength": "capability",
           "source": "p.319 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7832,7 +8313,7 @@
           "strength": "constraint",
           "source": "p.319 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7845,7 +8326,7 @@
           "strength": "constraint",
           "source": "p.319 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7858,7 +8339,7 @@
           "strength": "constraint",
           "source": "p.320 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7871,7 +8352,7 @@
           "strength": "capability",
           "source": "p.320 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -7884,66 +8365,118 @@
           "strength": "capability",
           "source": "p.321 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "dbe93e496a7d",
+          "slot": "requirements",
+          "text": "You can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323.",
+          "source_text": "You can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323",
+          "strength": "constraint",
+          "source": "p.321 / bullet",
+          "page_citation": "uuAudio System Basic OperationuUser Information",
+          "next_step_text": "2. Select Change Profile.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "99260aa8711b",
+          "slot": "requirements",
+          "text": "You can add users even when the doors are open and unlocked.",
+          "source_text": "You can add users even when the doors are open and unlocked.",
+          "strength": "constraint",
+          "source": "p.321 / bullet",
+          "page_citation": "uuAudio System Basic OperationuUser Information",
+          "next_step_text": "2. Select Change Profile.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "f3f6d38f6d28",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Registering a User Profile can be changed only when the vehicle is parked.",
           "source_text": "1Registering a User Profile can be changed only when the vehicle is parked.",
           "strength": "constraint",
           "source": "p.321 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "f592a37c33f7",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You can add up to 4 users other than the Owner user and the Guest user.",
           "source_text": "You can add up to 4 users other than the Owner user and the Guest user.",
           "strength": "capability",
           "source": "p.321 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "6f421a5fa9f4",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "When you add a user, the audio/information screen is loaded under that user.",
           "source_text": "When you add a user, the audio/information screen is loaded under that user.",
           "strength": "capability",
           "source": "p.321 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "0aed97b8595a",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Switching Users.",
           "source_text": "Switching Users",
           "strength": "capability",
           "source": "p.322 / text",
           "page_citation": "uuAudio System Basic OperationuUser Information",
-          "next_step_text": "1. Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked.",
+          "next_step_text": "1. Select User Info.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "ee6f5c18d45c",
+          "slot": "requirements",
+          "text": "You can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323.",
+          "source_text": "You can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323",
+          "strength": "constraint",
+          "source": "p.322 / bullet",
+          "page_citation": "uuAudio System Basic OperationuUser Information",
+          "next_step_text": "2. Select Change Profile.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3da2439a21c1",
+          "slot": "requirements",
+          "text": "You can switch users even when the doors are open and unlocked.",
+          "source_text": "You can switch users even when the doors are open and unlocked.",
+          "strength": "constraint",
+          "source": "p.322 / bullet",
+          "page_citation": "uuAudio System Basic OperationuUser Information",
+          "next_step_text": "2. Select Change Profile.",
           "thresholds": [],
           "change": null,
           "previous_text": null
         },
         {
           "req_id": "6b7bc1dbd5e5",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Deleting Users.",
           "source_text": "Deleting Users",
           "strength": "capability",
@@ -7956,7 +8489,7 @@
         },
         {
           "req_id": "a58893abb435",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Switching Users Profile can be changed only when the vehicle is parked.",
           "source_text": "1Switching Users Profile can be changed only when the vehicle is parked.",
           "strength": "constraint",
@@ -7969,7 +8502,7 @@
         },
         {
           "req_id": "babd229bf632",
-          "slot": "overview",
+          "slot": "user_setting",
           "text": "Users with customized security settings can restrict screen operations by selecting the Screen Lock shortcut.",
           "source_text": "Users with customized security settings can restrict screen operations by selecting the Screen Lock shortcut.",
           "strength": "capability",
@@ -7982,7 +8515,7 @@
         },
         {
           "req_id": "60c21275d014",
-          "slot": "overview",
+          "slot": "exception",
           "text": "The transmitter settings may not be switched when you change the Owner user. If this happens, change to a different user and then try switching to the desired user again.",
           "source_text": "The transmitter settings may not be switched when you change the Owner user. If this happens, change to a different user and then try switching to the desired user again.",
           "strength": "constraint",
@@ -7995,7 +8528,7 @@
         },
         {
           "req_id": "e219aae7fdc6",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Deleting Users When the profile currently being used is deleted, the audio/information screen is loaded under the Guest user.",
           "source_text": "1Deleting Users When the profile currently being used is deleted, the audio/information screen is loaded under the Guest user.",
           "strength": "constraint",
@@ -8008,7 +8541,7 @@
         },
         {
           "req_id": "e210475daa27",
-          "slot": "overview",
+          "slot": "user_setting",
           "text": "While using the Owner user, you can delete other users via General Settings Advanced Settings. 2 Customized Features P.346.",
           "source_text": "While using the Owner user, you can delete other users via General Settings Advanced Settings. 2 Customized Features P.346",
           "strength": "capability",
@@ -8021,7 +8554,7 @@
         },
         {
           "req_id": "60c9fc30512d",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Depending on the version of your OS, the steps for deleting a user may differ from the instructions on this page. Follow the on-screen prompts.",
           "source_text": "Depending on the version of your OS, the steps for deleting a user may differ from the instructions on this page. Follow the on-screen prompts.",
           "strength": "capability",
@@ -8449,7 +8982,7 @@
         },
         {
           "number": 4,
-          "text": "Select Factory Data Reset. uA confirmation message appears on the screen.",
+          "text": "Select Factory Data Reset.",
           "sequence": 1,
           "source": "p.368 / step"
         },
@@ -8461,7 +8994,7 @@
         },
         {
           "number": 6,
-          "text": "Select Reset again to reset the settings. uThe system will reboot.",
+          "text": "Select Reset again to reset the settings.",
           "sequence": 1,
           "source": "p.368 / step"
         },
@@ -8550,8 +9083,34 @@
           "previous_text": null
         },
         {
+          "req_id": "489cb8a283b8",
+          "slot": "requirements",
+          "text": "A confirmation message appears on the screen.",
+          "source_text": "A confirmation message appears on the screen.",
+          "strength": "capability",
+          "source": "p.368 / bullet",
+          "page_citation": "uuCustomized FeaturesuDefaulting All the Settings",
+          "next_step_text": "5. Select Continue.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "62711b12c93a",
+          "slot": "requirements",
+          "text": "The system will reboot.",
+          "source_text": "The system will reboot.",
+          "strength": "capability",
+          "source": "p.368 / bullet",
+          "page_citation": "uuCustomized FeaturesuDefaulting All the Settings",
+          "next_step_text": "1. Select Home.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "f41b76ec8079",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "Defaulting Vehicle Settings.",
           "source_text": "Defaulting Vehicle Settings",
           "strength": "capability",
@@ -8564,7 +9123,7 @@
         },
         {
           "req_id": "483200b2b267",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "1Defaulting All the Settings When you transfer the vehicle to a third-party, reset all settings to default and delete all personal data.",
           "source_text": "1Defaulting All the Settings When you transfer the vehicle to a third-party, reset all settings to default and delete all personal data.",
           "strength": "constraint",
@@ -8577,7 +9136,7 @@
         },
         {
           "req_id": "8090cc6473c6",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "If you perform Factory Data Reset, it will reset the preinstalled apps to their factory default.",
           "source_text": "If you perform Factory Data Reset, it will reset the preinstalled apps to their factory default.",
           "strength": "capability",
@@ -8590,7 +9149,7 @@
         },
         {
           "req_id": "b967605b0c6d",
-          "slot": "overview",
+          "slot": "exception",
           "text": "If you perform Factory Data Reset, you cannot use the HondaLink® because it goes offline. 2 HondaLink® P.300.",
           "source_text": "If you perform Factory Data Reset, you cannot use the HondaLink® because it goes offline. 2 HondaLink® P.300",
           "strength": "constraint",
@@ -9097,19 +9656,19 @@
         },
         {
           "number": 4,
-          "text": "Make sure your phone is in search or discoverable mode, then select Search for Devices. uHFL automatically searches for a Bluetooth® device.",
+          "text": "Make sure your phone is in search or discoverable mode, then select Search for Devices.",
           "sequence": 4,
           "source": "p.374 / step"
         },
         {
           "number": 5,
-          "text": "Select your phone when it appears on the list. uIf your phone still does not appear, search for Bluetooth® devices using your phone. From your phone, search for Vehicle Name.",
+          "text": "Select your phone when it appears on the list.",
           "sequence": 4,
           "source": "p.374 / step"
         },
         {
           "number": 6,
-          "text": "The system gives you a pairing code on the audio/information screen. uConfirm if the pairing code on the screen and your phone matches. This may vary by phone.",
+          "text": "The system gives you a pairing code on the audio/information screen.",
           "sequence": 4,
           "source": "p.374 / step"
         },
@@ -9139,7 +9698,7 @@
         },
         {
           "number": 4,
-          "text": "Select a phone to connect. uHFL disconnects the connected phone and starts searching for another paired phone.",
+          "text": "Select a phone to connect.",
           "sequence": 5,
           "source": "p.375 / step"
         },
@@ -9379,13 +9938,13 @@
         },
         {
           "number": 3,
-          "text": "Select a name. uYou can sort by First Name or Last Name. Select the icon on the upper right of the screen.",
+          "text": "Select a name.",
           "sequence": 15,
           "source": "p.381 / step"
         },
         {
           "number": 4,
-          "text": "Select a number. uDialing starts automatically.",
+          "text": "Select a number.",
           "sequence": 15,
           "source": "p.381 / step"
         },
@@ -9403,13 +9962,13 @@
         },
         {
           "number": 3,
-          "text": "Select a number. uUse the keyboard on the touch screen for entering numbers.",
+          "text": "Select a number.",
           "sequence": 16,
           "source": "p.381 / step"
         },
         {
           "number": 4,
-          "text": "Select Call. uDialing starts automatically.",
+          "text": "Select Call.",
           "sequence": 16,
           "source": "p.381 / step"
         },
@@ -9421,13 +9980,13 @@
         },
         {
           "number": 2,
-          "text": "Select Recents. uYou can sort by All, Dialed, Missed, or Received. Select the icon on the upper right of the screen.",
+          "text": "Select Recents.",
           "sequence": 17,
           "source": "p.382 / step"
         },
         {
           "number": 3,
-          "text": "Select a number. uDialing starts automatically.",
+          "text": "Select a number.",
           "sequence": 17,
           "source": "p.382 / step"
         },
@@ -9439,7 +9998,7 @@
         },
         {
           "number": 2,
-          "text": "Select desired favorite contact. uDialing starts automatically.",
+          "text": "Select desired favorite contact.",
           "sequence": 18,
           "source": "p.382 / step"
         }
@@ -9693,6 +10252,45 @@
           "previous_text": null
         },
         {
+          "req_id": "4dabbbf398c7",
+          "slot": "requirements",
+          "text": "HFL automatically searches for a Bluetooth® device.",
+          "source_text": "HFL automatically searches for a Bluetooth® device.",
+          "strength": "capability",
+          "source": "p.374 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "5. Select your phone when it appears on the list.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "45957632ef5d",
+          "slot": "requirements",
+          "text": "If your phone still does not appear, search for Bluetooth® devices using your phone. From your phone, search for Vehicle Name.",
+          "source_text": "If your phone still does not appear, search for Bluetooth® devices using your phone. From your phone, search for Vehicle Name.",
+          "strength": "capability",
+          "source": "p.374 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "6. The system gives you a pairing code on the audio/information screen.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "066ecd9a750e",
+          "slot": "requirements",
+          "text": "Confirm if the pairing code on the screen and your phone matches. This may vary by phone.",
+          "source_text": "Confirm if the pairing code on the screen and your phone matches. This may vary by phone.",
+          "strength": "constraint",
+          "source": "p.374 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "7. Select Yes.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "040fa0b425d0",
           "slot": "requirements",
           "text": "1Phone Setup Your Bluetooth®-compatible phone must be paired to the system before you can make and receive hands-free calls.",
@@ -9779,6 +10377,19 @@
           "source": "p.375 / text",
           "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
           "next_step_text": "1. Go to the phone screen. 2 Phone screen P.372",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "4c5c0c0726ca",
+          "slot": "requirements",
+          "text": "HFL disconnects the connected phone and starts searching for another paired phone.",
+          "source_text": "HFL disconnects the connected phone and starts searching for another paired phone.",
+          "strength": "capability",
+          "source": "p.375 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "5. Select Bluetooth or Apple CarPlay, Android Auto.",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -10187,6 +10798,32 @@
           "previous_text": null
         },
         {
+          "req_id": "7a5a430a31cc",
+          "slot": "requirements",
+          "text": "You can sort by First Name or Last Name. Select the icon on the upper right of the screen.",
+          "source_text": "You can sort by First Name or Last Name. Select the icon on the upper right of the screen.",
+          "strength": "capability",
+          "source": "p.381 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "4. Select a number.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0674bb8fa278",
+          "slot": "requirements",
+          "text": "Dialing starts automatically.",
+          "source_text": "Dialing starts automatically.",
+          "strength": "capability",
+          "source": "p.381 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "1. Go to the phone menu screen. 2 Phone menu screen P.372",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "5f343a131f49",
           "slot": "requirements",
           "text": "To make a call using a phone number.",
@@ -10195,6 +10832,32 @@
           "source": "p.381 / text",
           "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
           "next_step_text": "1. Go to the phone menu screen. 2 Phone menu screen P.372",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "bcbbbfac55cf",
+          "slot": "requirements",
+          "text": "Use the keyboard on the touch screen for entering numbers.",
+          "source_text": "Use the keyboard on the touch screen for entering numbers.",
+          "strength": "capability",
+          "source": "p.381 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "4. Select Call.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0674bb8fa278",
+          "slot": "requirements",
+          "text": "Dialing starts automatically.",
+          "source_text": "Dialing starts automatically.",
+          "strength": "capability",
+          "source": "p.381 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "1. Go to the phone screen. 2 Phone screen P.372",
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -10226,6 +10889,32 @@
           "previous_text": null
         },
         {
+          "req_id": "20bc1069db04",
+          "slot": "requirements",
+          "text": "You can sort by All, Dialed, Missed, or Received. Select the icon on the upper right of the screen.",
+          "source_text": "You can sort by All, Dialed, Missed, or Received. Select the icon on the upper right of the screen.",
+          "strength": "capability",
+          "source": "p.382 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "3. Select a number.",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0674bb8fa278",
+          "slot": "requirements",
+          "text": "Dialing starts automatically.",
+          "source_text": "Dialing starts automatically.",
+          "strength": "capability",
+          "source": "p.382 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": "1. Go to the phone screen. 2 Phone screen P.372",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "27d5a1819953",
           "slot": "requirements",
           "text": "To make a call using a favorite contact entry.",
@@ -10234,6 +10923,19 @@
           "source": "p.382 / text",
           "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
           "next_step_text": "1. Go to the phone screen. 2 Phone screen P.372",
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "0674bb8fa278",
+          "slot": "requirements",
+          "text": "Dialing starts automatically.",
+          "source_text": "Dialing starts automatically.",
+          "strength": "capability",
+          "source": "p.382 / bullet",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": null,
           "thresholds": [],
           "change": null,
           "previous_text": null
@@ -10267,10 +10969,23 @@
         {
           "req_id": "c80c35502c4c",
           "slot": "requirements",
-          "text": "1Receiving a Call Call Waiting When there is an incoming call, an audible Select (answer) to put the current call on hold to notification sounds (if activated) and the answer the incoming call. Incoming Call... screen appears. Select using the left selector wheel to return to the current call. Select (ignore) to ignore the incoming call if you You can answer the call using the left selector do not want to answer it. wheel. Select if you want to hang up the current call. To answer the call, roll up or down to select (answer) on the driver information You can select the icons on the audio/information interface or head-up display* and then press screen instead of the and on the driver the left selector wheel. information interface or head-up display*. uIf you want to decline or end the call, select (ignore) on the driver information interface or head-up display* using the left selector wheel.",
-          "source_text": "1Receiving a Call Call Waiting When there is an incoming call, an audible Select (answer) to put the current call on hold to notification sounds (if activated) and the answer the incoming call. Incoming Call... screen appears. Select using the left selector wheel to return to the current call. Select (ignore) to ignore the incoming call if you You can answer the call using the left selector do not want to answer it. wheel. Select if you want to hang up the current call. To answer the call, roll up or down to select (answer) on the driver information You can select the icons on the audio/information interface or head-up display* and then press screen instead of the and on the driver the left selector wheel. information interface or head-up display*. uIf you want to decline or end the call, select (ignore) on the driver information interface or head-up display* using the left selector wheel.",
+          "text": "1Receiving a Call Call Waiting When there is an incoming call, an audible Select (answer) to put the current call on hold to notification sounds (if activated) and the answer the incoming call. Incoming Call... screen appears. Select using the left selector wheel to return to the current call. Select (ignore) to ignore the incoming call if you You can answer the call using the left selector do not want to answer it. wheel. Select if you want to hang up the current call. To answer the call, roll up or down to select (answer) on the driver information You can select the icons on the audio/information interface or head-up display* and then press screen instead of the and on the driver the left selector wheel. information interface or head-up display*.",
+          "source_text": "1Receiving a Call Call Waiting When there is an incoming call, an audible Select (answer) to put the current call on hold to notification sounds (if activated) and the answer the incoming call. Incoming Call... screen appears. Select using the left selector wheel to return to the current call. Select (ignore) to ignore the incoming call if you You can answer the call using the left selector do not want to answer it. wheel. Select if you want to hang up the current call. To answer the call, roll up or down to select (answer) on the driver information You can select the icons on the audio/information interface or head-up display* and then press screen instead of the and on the driver the left selector wheel. information interface or head-up display*.",
           "strength": "constraint",
           "source": "p.383 / text",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "35e051561465",
+          "slot": "requirements",
+          "text": "If you want to decline or end the call, select (ignore) on the driver information interface or head-up display* using the left selector wheel.",
+          "source_text": "If you want to decline or end the call, select (ignore) on the driver information interface or head-up display* using the left selector wheel.",
+          "strength": "capability",
+          "source": "p.383 / bullet",
           "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
           "next_step_text": null,
           "thresholds": [],
@@ -10304,12 +11019,25 @@
           "previous_text": null
         },
         {
-          "req_id": "4191316c9225",
+          "req_id": "15a2a9a41889",
           "slot": "requirements",
-          "text": "Select the option. Mute Icon uThe mute icon appears when Mute is selected. Select Unmute to turn it off.",
-          "source_text": "Select the option. Mute Icon uThe mute icon appears when Mute is selected. Select Unmute to turn it off.",
-          "strength": "constraint",
+          "text": "Select the option. Mute Icon.",
+          "source_text": "Select the option. Mute Icon",
+          "strength": "capability",
           "source": "p.384 / text",
+          "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "800b3469acf8",
+          "slot": "requirements",
+          "text": "The mute icon appears when Mute is selected. Select Unmute to turn it off.",
+          "source_text": "The mute icon appears when Mute is selected. Select Unmute to turn it off.",
+          "strength": "constraint",
+          "source": "p.384 / bullet",
           "page_citation": "uuBluetooth® HandsFreeLink®uHFL Menus",
           "next_step_text": null,
           "thresholds": [],
@@ -10411,7 +11139,7 @@
         },
         {
           "number": 2,
-          "text": "Select CabinTalk. uSelect OFF to mute your voice.",
+          "text": "Select CabinTalk.",
           "sequence": 1,
           "source": "p.385 / step"
         }
@@ -10444,8 +11172,21 @@
           "previous_text": null
         },
         {
+          "req_id": "aee96bb5b240",
+          "slot": "requirements",
+          "text": "Select OFF to mute your voice.",
+          "source_text": "Select OFF to mute your voice.",
+          "strength": "capability",
+          "source": "p.385 / bullet",
+          "page_citation": "CabinTalk®",
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
           "req_id": "5d4c9b1b6627",
-          "slot": "overview",
+          "slot": "requirements",
           "text": "You can adjust the speaker volume by turning the volume knob.",
           "source_text": "You can adjust the speaker volume by turning the volume knob.",
           "strength": "capability",

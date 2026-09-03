@@ -26,10 +26,12 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>When listening to the radio : To select the next preset radio station. Press : To select the previous preset radio station. Press : To select the next strong station. Press and hold : To select the previous strong station. Press and hold. | capability | p.269 / bullet |
-| 2 | <span class="req-label">Step -</span>When listening to a wired connection, USB flash drive, or Bluetooth® Audio, or Smartphone Connection uDepending on a connected device, operations may be changed. : To skip to the next song. Press : To go back to the beginning of the current or previous song. Press. | capability | p.269 / bullet |
-| 3 | <span class="req-label">Step -</span>When listening to a USB flash drive : To skip to the next folder. Press and hold : To go back to the previous folder. Press and hold. | capability | p.269 / bullet |
-| 4 | <span class="req-label">Audio Remote Controls</span>Left Selector Wheel Roll up or down: To cycle through the audio modes, roll up or down and then press the left selector wheel. | capability | p.269 / text |
+| 2 | <span class="req-label">Step -</span>When listening to a wired connection, USB flash drive, or Bluetooth® Audio, or Smartphone Connection. | capability | p.269 / bullet |
+| 3 | <span class="req-label">Step -</span>Depending on a connected device, operations may be changed. : To skip to the next song. Press : To go back to the beginning of the current or previous song. Press. | capability | p.269 / bullet |
+| 4 | <span class="req-label">Step -</span>When listening to a USB flash drive : To skip to the next folder. Press and hold : To go back to the previous folder. Press and hold. | capability | p.269 / bullet |
+| 5 | <span class="req-label">Audio Remote Controls</span>Left Selector Wheel Roll up or down: To cycle through the audio modes, roll up or down and then press the left selector wheel. | capability | p.269 / text |
 <!-- GENERATED:END function=9817cf259ba1 -->
+
 
 
 

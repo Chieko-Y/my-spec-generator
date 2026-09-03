@@ -11,7 +11,7 @@ flowchart TD
     subgraph SEQ1["Sequence 1"]
     direction TB
     S1_1["1. Select and hold Home until the reboot dialog screen appe…"]
-    S1_2["2. Select Reboot. uIf Safe Mode is selected, the audio syst…"]
+    S1_2["2. Select Reboot."]
     S1_1 --> S1_2
     end
 ```
@@ -19,7 +19,7 @@ flowchart TD
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Select and hold Home until the reboot dialog screen appears. | p.273 / step |
-| 1 | 2 | Select Reboot. uIf Safe Mode is selected, the audio system will be rebooted with third-party applications turned off. After the power mode has been turned off once, third-party applications can be used again. | p.273 / step |
+| 1 | 2 | Select Reboot. | p.273 / step |
 
 ## 5-2-1. Service overview
 
@@ -27,7 +27,14 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Reboot Audio</span>Reboot Audio. | capability | p.273 / text |
 | 2 | <span class="req-label">Reboot Audio</span>You can reboot the audio system. | capability | p.273 / text |
+
+## 5-2-2. Service requirements
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">Step -</span>If Safe Mode is selected, the audio system will be rebooted with third-party applications turned off. After the power mode has been turned off once, third-party applications can be used again. | capability | p.273 / bullet |
 <!-- GENERATED:END function=4aecd100d6a7 -->
+
 
 
 

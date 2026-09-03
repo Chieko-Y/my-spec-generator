@@ -34,7 +34,7 @@ flowchart TD
     subgraph SEQ2["Sequence 2"]
     direction TB
     S2_1["1. A notification appears and notifies you of a new message…"]
-    S2_2["2. Select the system status icon to see the messages. uA no…"]
+    S2_2["2. Select the system status icon to see the messages."]
     S2_3["3. Select a new message to open."]
     S2_1 --> S2_2
     S2_2 --> S2_3
@@ -49,7 +49,7 @@ flowchart TD
 | 1 | 4 | Select Data Sharing with Honda. | p.300 / step |
 | 1 | 5 | Select Enable. | p.300 / step |
 | 2 | 1 | A notification appears and notifies you of a new message on the B-zone. | p.302 / step |
-| 2 | 2 | Select the system status icon to see the messages. uA notification is continuously displayed on the B-zone until the new message is read. | p.302 / step |
+| 2 | 2 | Select the system status icon to see the messages. | p.302 / step |
 | 2 | 3 | Select a new message to open. | p.302 / step |
 
 ## 15-2-1. Service overview
@@ -81,7 +81,9 @@ flowchart TD
 | 4 | <span class="req-label">HondaLink®</span>Vehicle Information and Message from Honda Tips. | capability | p.302 / text |
 | 5 | <span class="req-label">HondaLink®</span>You can check the messages that are received quickly in the shortcut operation. | capability | p.302 / text |
 | 6 | <span class="req-label">HondaLink®</span>Notification. | capability | p.302 / text |
+| 7 | <span class="req-label">Step -</span>A notification is continuously displayed on the B-zone until the new message is read. | capability | p.302 / bullet |
 <!-- GENERATED:END function=c91c02774e47 -->
+
 
 
 

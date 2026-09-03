@@ -40,27 +40,32 @@
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Do not leave any devices or USB flash drives in the audio files, and connecting compatible vehicle. Direct sunlight and high temperatures may damage it. phones with Apple CarPlay or Android Auto. | capability | p.265 / bullet |
-| 2 | <span class="req-label">Step -</span>We recommend that you use a USB cable if you are uTo prevent any potential issues, be sure attaching a USB flash drive to the USB port. to use an Apple MFi Certified Lightning. | constraint | p.265 / bullet |
-| 3 | <span class="req-label">Step -</span>Do not connect any devices or USB flash drives Connector for Apple CarPlay. USB cables using a hub. should be certified by USB-IF to be. | capability | p.265 / bullet |
-| 4 | <span class="req-label">Step -</span>Do not use a device such as a card reader or hard disk compliant with USB 2.0 Standard. drive, as the device or your files may be damaged. | capability | p.265 / bullet |
-| 5 | <span class="req-label">Step -</span>We recommend backing up your data before using. | capability | p.265 / bullet |
-| 6 | <span class="req-label">USB Ports</span>USB charging port on the front panel. | capability | p.265 / text |
-| 7 | <span class="req-label">USB Ports</span>the device in your vehicle. and the back of the console. | capability | p.265 / text |
-| 8 | <span class="req-label">Step -</span>Displayed messages may vary depending on the compartment ( ) device model and software version. The USB port is only for charging devices. | capability | p.265 / bullet |
-| 9 | <span class="req-label">Step -</span>The USB ports on the front panel and the back of the console compartment support USB Power Delivery. | capability | p.265 / bullet |
-| 10 | <span class="req-label">Step -</span>USB standard output When using 1 port: 5V/3A(15W), 9V/3A(27W), 15V/3A(45W), 20V/3A(60W) When using both ports: 5V/3A(15W), 9V/3A(27W), 20V/2.25A(45W), Max 60W in total For amperage details, read the operating manual of the device that needs to be charged. | constraint | p.265 / bullet |
-| 11 | <span class="req-label">Step -</span>The USB port also supports PPS (Programmable Power Supply). PPS 5.0V-21V (Max 60W). | capability | p.265 / bullet |
-| 12 | <span class="req-label">USB Ports</span>On both sides of the third row seats*. | capability | p.266 / text |
-| 13 | <span class="req-label">USB Ports</span>USB charging port on both sides of the. | capability | p.266 / text |
+| 2 | <span class="req-label">Step -</span>We recommend that you use a USB cable if you are. | constraint | p.265 / bullet |
+| 3 | <span class="req-label">Step -</span>To prevent any potential issues, be sure attaching a USB flash drive to the USB port. to use an Apple MFi Certified Lightning. | capability | p.265 / bullet |
+| 4 | <span class="req-label">Step -</span>Do not connect any devices or USB flash drives Connector for Apple CarPlay. USB cables using a hub. should be certified by USB-IF to be. | capability | p.265 / bullet |
+| 5 | <span class="req-label">Step -</span>Do not use a device such as a card reader or hard disk compliant with USB 2.0 Standard. drive, as the device or your files may be damaged. | capability | p.265 / bullet |
+| 6 | <span class="req-label">Step -</span>We recommend backing up your data before using. | capability | p.265 / bullet |
+| 7 | <span class="req-label">USB Ports</span>USB charging port on the front panel. | capability | p.265 / text |
+| 8 | <span class="req-label">USB Ports</span>the device in your vehicle. and the back of the console. | capability | p.265 / text |
+| 9 | <span class="req-label">Step -</span>Displayed messages may vary depending on the compartment ( ) device model and software version. The USB port is only for charging devices. | capability | p.265 / bullet |
+| 10 | <span class="req-label">Step -</span>The USB ports on the front panel and the back of the console compartment support USB Power Delivery. | capability | p.265 / bullet |
+| 11 | <span class="req-label">Step -</span>USB standard output When using 1 port: 5V/3A(15W), 9V/3A(27W), 15V/3A(45W), 20V/3A(60W) When using both ports: 5V/3A(15W), 9V/3A(27W), 20V/2.25A(45W), Max 60W in total For amperage details, read the operating manual of the device that needs to be charged. | constraint | p.265 / bullet |
+| 12 | <span class="req-label">Step -</span>The USB port also supports PPS (Programmable Power Supply). PPS 5.0V-21V (Max 60W). | capability | p.265 / bullet |
+| 13 | <span class="req-label">USB Ports</span>On both sides of the third row seats*. | capability | p.266 / text |
+| 14 | <span class="req-label">USB Ports</span>USB charging port on both sides of the. | capability | p.266 / text |
+| 15 | <span class="req-label">USB Ports</span>third row seats ( )* The USB port (3.0A) is only for charging devices. | capability | p.266 / text |
+| 16 | <span class="req-label">Step -</span>The USB port can supply up to 3.0A of power. It does not output 3.0A unless requested by the device. | constraint | p.266 / bullet |
 
 ## 1-5. Exception operation
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Step -</span>Some devices may not work even if they are uYou cannot play music even if you have connected to the USB ports. connected music players to it. Supplementary information about USB Charging:. | constraint | p.265 / bullet |
-| 2 | <span class="req-label">Step -</span>Charging may not start or may operate slowly depending on the connected devices and cables. Using only one port while not connecting anything (including cables) to the other port may solve the issue. | capability | p.265 / bullet |
-| 3 | <span class="req-label">USB Ports</span>third row seats ( )* The USB port (3.0A) is only for charging devices. uThe USB port can supply up to 3.0A of power. It does not output 3.0A unless requested by the device. uYou cannot play music even if you have connected music players to it. | constraint | p.266 / text |
+| 1 | <span class="req-label">Step -</span>Some devices may not work even if they are. | constraint | p.265 / bullet |
+| 2 | <span class="req-label">Step -</span>You cannot play music even if you have connected to the USB ports. connected music players to it. Supplementary information about USB Charging:. | constraint | p.265 / bullet |
+| 3 | <span class="req-label">Step -</span>Charging may not start or may operate slowly depending on the connected devices and cables. Using only one port while not connecting anything (including cables) to the other port may solve the issue. | capability | p.265 / bullet |
+| 4 | <span class="req-label">Step -</span>You cannot play music even if you have connected music players to it. | constraint | p.266 / bullet |
 <!-- GENERATED:END function=95b41420c160 -->
+
 
 
 

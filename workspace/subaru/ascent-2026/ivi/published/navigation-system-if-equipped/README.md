@@ -1,12 +1,12 @@
 <!-- GENERATED:START index (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
-# Subaru Ascent 2026 — navigation-system-if-equipped — Presumed specification
+# Subaru Ascent 2026 — Navigation System (If equipped) — Presumed specification
 
 > This is a machine-derived estimate, not an official requirements document. Numeric thresholds left blank could not be found in the manual and must be filled in by a tester with evidence.
 
 | Field | Value |
 |---|---|
 | Maker / Model | Subaru / Ascent 2026 |
-| Scope | navigation-system-if-equipped |
+| Scope | Navigation System (If equipped) |
 | Markets | US, CA |
 | Profile | subaru_chapter_toc_v1 |
 | Manual ID | subaru/ascent-2026/ivi |
@@ -39,12 +39,25 @@ How wording in the manual maps to the in-house term. **The original text is not 
 |---|---|---|---:|---|
 | AA | abbreviation | `Android Auto` | 1 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
 
+## Headings not matched to body text
+These bookmark entries could not be located in the extracted body text and were not turned into functions. Reported instead of silently dropped.
+- Map Screen Operation
+- Location Menu Pop-up
+- Orientation Of The Map
+- Other Information
+- Search Screen
+- Edit List Screen
+- Current Route Screen
+- Standard Map Icon
+- Typical Voice Guidance Prompts
+- Map Data
+
 ## Functions
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
-    ROOT["Subaru Ascent 2026 — navigation-system-if-equipped"]
+    ROOT["Subaru Ascent 2026 — Navigation System (If equipped)"]
     ROOT --> A1["Navigation System (If equipped)"]
     A1 --> A1F1["1 Map Screen Overview"]
     A1 --> A1F2["2 Map Screen Operation ⚠"]
@@ -103,6 +116,7 @@ flowchart LR
 | 25 | [Using A USB Memory Device](/specifications/subaru/ascent-2026/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 6 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/ascent-2026/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
 
 
 

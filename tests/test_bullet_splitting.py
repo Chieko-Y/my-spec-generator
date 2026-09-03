@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from domain.spec_building import _LEADING_HEADING_MARKER, _split_bullets
+from domain.spec_building import _LEADING_HEADING_MARKER, _NOTE_GLYPH, _split_bullets, _split_lines
 
 
 def test_plain_paragraph_with_no_bullets_is_untouched():
@@ -116,3 +116,61 @@ def test_leading_heading_marker_only_strips_a_leading_occurrence():
     # seen at the very start of the paragraph in the real data.
     text = "Select the ■ icon to continue."
     assert _LEADING_HEADING_MARKER.sub("", text) == text
+
+
+def test_honda_note_glyph_is_split_off_and_stripped():
+    """Real Honda Pilot case, 2026-09-03: "u" reused as a note/result bullet
+    glyph in font HONDACommon (same reused-glyph trick as the running-head
+    arrows, see infrastructure.pdf_reader) sits directly against a
+    capitalized word with no space ("uSelect OFF to mute your voice.").
+    Reported by the user ("28. CabinTalk®でステップがSelect CabinTalk.
+    uSelect OFF to mute your voice.と出てる"). The original app's own real
+    output for this exact text has no "u" and treats it as its own separate
+    row (26-hfl-menus.md: "Select CabinTalk." and "Select OFF to mute your
+    voice." are two distinct table rows, not one fused sentence)."""
+    text = "Select CabinTalk. uSelect OFF to mute your voice."
+    result = _split_bullets(text)
+    assert result == [
+        ("Select CabinTalk.", False),
+        ("Select OFF to mute your voice.", True),
+    ]
+
+
+def test_note_glyph_regex_matches_only_the_confirmed_real_shapes():
+    assert _NOTE_GLYPH.search("uSelect OFF to mute your voice.")
+    assert _NOTE_GLYPH.search("uWhen you select Proceed Now, the update begins.")
+    assert not _NOTE_GLYPH.search("your audio system")
+    assert not _NOTE_GLYPH.search("until you find a mode")
+
+
+def test_note_glyph_does_not_misfire_on_a_real_word():
+    """A real lowercase "u" is never immediately followed by a capital letter
+    with nothing between in ordinary English prose -- this shape is what
+    makes the glyph safely distinguishable at the text level alone."""
+    text = "Your audio system allows your voice to be used."
+    assert _split_bullets(text) == [(text, False)]
+
+
+def test_a_note_glyph_line_breaks_a_step_continuation_instead_of_merging():
+    """The real bug: a numbered step ("2.Select CabinTalk.") was swallowing
+    the very next line ("uSelect OFF to mute your voice.") as if it were the
+    step's own wrapped continuation text, purely because it sat close enough
+    vertically. A note-glyph line must break the continuation the same way a
+    real bullet character already does."""
+    from domain.manual_parsing import Line, Section
+
+    lines = [
+        Line(page=0, text="1.Select Home.", top=100.0),
+        Line(page=0, text="2.Select CabinTalk.", top=110.0),
+        Line(page=0, text="uSelect OFF to mute your voice.", top=120.0),
+    ]
+    section = Section(
+        title="CabinTalk", level=0, page_start=0, page_end=1, lines=lines,
+        matched_by_text=True, source_bookmark_index=0,
+    )
+
+    steps, groups = _split_lines(section)
+
+    assert steps == [(1, 0, 100.0, "Select Home."), (2, 0, 110.0, "Select CabinTalk.")]
+    assert len(groups) == 1
+    assert [l.text for l in groups[0]] == ["uSelect OFF to mute your voice."]

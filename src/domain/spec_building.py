@@ -79,26 +79,53 @@ _BULLET_SPLIT = re.compile(r"(?<!\S)[" + _BULLET_CHARS + r"]")
 # confirmed directly against the same PDF.
 _BULLET_ISOLATION_CHARS = 2
 
+# Honda Pilot's own DTP tooling draws a "note/result" bullet by reusing the
+# Latin lowercase "u" code point in a dedicated symbol font (HONDACommon) --
+# the exact same reused-glyph trick already known from the running-head
+# arrows (see infrastructure.pdf_reader.read_running_head_breadcrumbs), just
+# used here inline within body paragraphs instead of the page margin.
+# Confirmed real, 2026-09-03, Honda Pilot p.385 (CabinTalk®): the character
+# rendered as "u" directly before "Select OFF to mute your voice." is in
+# font `HONDACommon`, same as the running-head separator, while every other
+# "u" on that same page (inside real words like "your"/"audio") is in the
+# ordinary body font (FrutigerLTStd-*). Distinguishing by FONT would need
+# character-level PDF access this module doesn't have (pure domain layer,
+# works on already-extracted Line text) -- but the glyph is reliably
+# recognizable by its own TEXT SHAPE instead: it always sits directly against
+# a capitalized word with no space ("uSelect", "uWhen", "uIf", "uThe",
+# "uConfirm", "uHFL" -- confirmed real across many pages), a shape no real
+# English word has (a lowercase "u" is never immediately followed by a
+# capital letter with nothing between). The original app's own real output
+# for this exact sentence confirms both halves of the fix this pattern
+# drives: the glyph is dropped entirely ("Select OFF to mute your voice.",
+# no leading "u") and the note becomes its own separate row, never merged
+# into the step/sentence before it ("26-hfl-menus.md": step "2. Select
+# CabinTalk." and the note "Select OFF to mute your voice." are two distinct
+# table rows, not one fused sentence).
+_NOTE_GLYPH = re.compile(r"(?<!\S)u(?=[A-Z])")
+
 
 def _split_bullets(paragraph: str) -> list[tuple[str, bool]]:
-    """Split on inline bullet glyphs, returning (text, is_bullet) pairs.
+    """Split on inline bullet glyphs (or Honda's "u"-glyph note marker, see
+    _NOTE_GLYPH), returning (text, is_bullet) pairs.
 
-    A paragraph that starts with prose before its first "●" yields that lead-in as
-    (text, False) and every split after it as (text, True). A paragraph that starts
-    directly with "●" (no lead-in at all — a group made of nothing but list items)
-    must not have its first item mislabeled as lead-in text: a split matched at the
-    very start of the string produces a leading empty piece, which is what signals
-    that case here.
+    A paragraph that starts with prose before its first split point yields that
+    lead-in as (text, False) and every split after it as (text, True). A
+    paragraph that starts directly with a bullet/note glyph (no lead-in at
+    all — a group made of nothing but list items) must not have its first
+    item mislabeled as lead-in text: a split matched at the very start of the
+    string produces a leading empty piece, which is what signals that case
+    here.
     """
-    if not any(ch in paragraph for ch in _BULLET_CHARS):
+    if not any(ch in paragraph for ch in _BULLET_CHARS) and not _NOTE_GLYPH.search(paragraph):
         return [(paragraph, False)]
 
     positions = []
-    for m in _BULLET_SPLIT.finditer(paragraph):
+    for m in re.finditer(r"(?<!\S)[" + _BULLET_CHARS + r"]|" + _NOTE_GLYPH.pattern, paragraph):
         lo = max(0, m.start() - _BULLET_ISOLATION_CHARS)
         hi = min(len(paragraph), m.end() + _BULLET_ISOLATION_CHARS)
         neighborhood = paragraph[lo:m.start()] + paragraph[m.end():hi]
-        if not any(ch in _BULLET_CHARS for ch in neighborhood):
+        if not any(ch in _BULLET_CHARS for ch in neighborhood) and not _NOTE_GLYPH.search(neighborhood):
             positions.append(m.start())
     if not positions:
         return [(paragraph, False)]
@@ -245,6 +272,7 @@ def _split_lines(
         elif (
             open_step_idx is not None
             and text[0] not in _BULLET_CHARS
+            and not _NOTE_GLYPH.match(text)
             and not _starts_new_heading(text)
             and line.page == prev_page
             and prev_top is not None

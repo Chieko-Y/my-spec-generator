@@ -3,7 +3,7 @@
   "maker": "Subaru",
   "model": "Ascent 2026",
   "document_title": "",
-  "scope": "navigation-system-if-equipped",
+  "scope": "Navigation System (If equipped)",
   "markets": [
     "US",
     "CA"
@@ -22,9 +22,9 @@
       "Typical Voice Guidance Prompts",
       "Map Data"
     ],
-    "chapter_prefix": "navigation-system-if-equipped",
+    "chapter_prefix": "Navigation System (If equipped)",
     "chapter_slug": "navigation-system-if-equipped",
-    "chapter_label": "navigation-system-if-equipped",
+    "chapter_label": "Navigation System (If equipped)",
     "excluded_sections": []
   },
   "functions": [

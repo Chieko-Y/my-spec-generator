@@ -28,19 +28,20 @@
 | 4 | <span class="req-label">Google built-in</span>Google Assistant. | capability | p.318 / text |
 | 5 | <span class="req-label">Google built-in</span>You can operate vehicle functions and features with hands-free help from Google Assistant. | capability | p.318 / text |
 | 6 | <span class="req-label">Google built-in</span>You can activate Google Assistant by:. | capability | p.318 / text |
-| 7 | <span class="req-label">Step -</span>Saying “Hey Google.” uWake words vary by region and language. Refer to the Google website for more information. | capability | p.318 / bullet |
-| 8 | <span class="req-label">Step -</span>Pressing the (Talk) button on the steering wheel. | capability | p.318 / bullet |
-| 9 | <span class="req-label">Step -</span>Selecting the Google Assistant icon on the infotainment screen. | capability | p.318 / bullet |
-| 10 | <span class="req-label">Google built-in</span>Google Maps. | capability | p.318 / text |
-| 11 | <span class="req-label">Google built-in</span>Google Maps helps you reach your next destination faster with real-time traffic info, automatic rerouting, and voice control. | capability | p.318 / text |
-| 12 | <span class="req-label">Google built-in</span>Google Play. | capability | p.318 / text |
-| 13 | <span class="req-label">Google built-in</span>Download your favorite apps on Google Play. | capability | p.318 / text |
-| 14 | <span class="req-label">Step -</span>Turn on the seat heater. | capability | p.318 / bullet |
-| 15 | <span class="req-label">Step -</span>Play music. | capability | p.318 / bullet |
-| 16 | <span class="req-label">Step -</span>Play radio. | capability | p.318 / bullet |
-| 17 | <span class="req-label">Google built-in</span>1Google Maps You should be parked during setup. However, once Google Maps is set up, you can safely operate it using your voice. | capability | p.318 / text |
-| 18 | <span class="req-label">Google built-in</span>When your Google Account is linked with a valid user, destinations stored on other devices (home, work, favorites, previous searches, etc.) can be displayed. When the device and the vehicle are logged into the same Google Account, changing information on the device will change it on Google Maps as well. | constraint | p.318 / text |
-| 19 | <span class="req-label">Google built-in</span>1Google Play The vehicle must be stopped in order to download an app. Operate when vehicle is stopped in a safe location. | constraint | p.318 / text |
+| 7 | <span class="req-label">Step -</span>Saying “Hey Google.”. | capability | p.318 / bullet |
+| 8 | <span class="req-label">Step -</span>Wake words vary by region and language. Refer to the Google website for more information. | capability | p.318 / bullet |
+| 9 | <span class="req-label">Step -</span>Pressing the (Talk) button on the steering wheel. | capability | p.318 / bullet |
+| 10 | <span class="req-label">Step -</span>Selecting the Google Assistant icon on the infotainment screen. | capability | p.318 / bullet |
+| 11 | <span class="req-label">Google built-in</span>Google Maps. | capability | p.318 / text |
+| 12 | <span class="req-label">Google built-in</span>Google Maps helps you reach your next destination faster with real-time traffic info, automatic rerouting, and voice control. | capability | p.318 / text |
+| 13 | <span class="req-label">Google built-in</span>Google Play. | capability | p.318 / text |
+| 14 | <span class="req-label">Google built-in</span>Download your favorite apps on Google Play. | capability | p.318 / text |
+| 15 | <span class="req-label">Step -</span>Turn on the seat heater. | capability | p.318 / bullet |
+| 16 | <span class="req-label">Step -</span>Play music. | capability | p.318 / bullet |
+| 17 | <span class="req-label">Step -</span>Play radio. | capability | p.318 / bullet |
+| 18 | <span class="req-label">Google built-in</span>1Google Maps You should be parked during setup. However, once Google Maps is set up, you can safely operate it using your voice. | capability | p.318 / text |
+| 19 | <span class="req-label">Google built-in</span>When your Google Account is linked with a valid user, destinations stored on other devices (home, work, favorites, previous searches, etc.) can be displayed. When the device and the vehicle are logged into the same Google Account, changing information on the device will change it on Google Maps as well. | constraint | p.318 / text |
+| 20 | <span class="req-label">Google built-in</span>1Google Play The vehicle must be stopped in order to download an app. Operate when vehicle is stopped in a safe location. | constraint | p.318 / text |
 
 ## 21-3. Requirements for HMI
 
@@ -54,6 +55,7 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Google built-in</span>You can customize language and other settings regarding Google Assistant. 2 How to Customize the General Settings P.346. | capability | p.318 / text |
 <!-- GENERATED:END function=1507cedfef93 -->
+
 
 
 
