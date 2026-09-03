@@ -289,19 +289,19 @@ def _index_markdown(
         lines.append(glossary_table)
         lines.append("")
 
-    if spec.meta.get("unmatched_headings"):
-        lines.append("## Headings not matched to body text")
-        lines.append(
-            "These bookmark/index entries' exact printed text could not be located near "
-            "their expected page, so a coarser page-number boundary was used instead -- "
-            "the function below WAS still created, but its section boundary is less "
-            "precise than an exact text match would give. Worth a human spot-check that "
-            "the function's own content/boundaries look right. Reported instead of "
-            "silently guessing without a trace."
-        )
-        for title in spec.meta["unmatched_headings"]:
-            lines.append(f"- {_esc(title)}")
-        lines.append("")
+    # unmatched_headings is deliberately NOT surfaced here (2026-09-03): a
+    # heading whose exact printed text couldn't be located near its expected
+    # page still gets a real function via a coarser page-number fallback (see
+    # domain.manual_parsing._cut_sections) -- in practice this is usually a
+    # correctly-handled edge case with nothing wrong to find (confirmed real,
+    # Subaru outback-2025/ascent-2026: "Map Data" is flagged only because a
+    # coincidental, weak text overlap with an UNRELATED heading was correctly
+    # rejected by _MIN_CONTAINMENT_RATIO, not because anything is actually
+    # broken). A reviewer using this README has no way to act on it even when
+    # something IS wrong -- fixing a real extraction gap means changing the
+    # matching code, not something fillable on a review screen. Surfaced
+    # instead at generate() time only (cli.py/web.py), where the audience is
+    # whoever ran the generate and can actually investigate/fix it.
 
     lines.append("## Functions")
     lines.append("")

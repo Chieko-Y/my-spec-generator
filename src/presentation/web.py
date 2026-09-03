@@ -426,7 +426,15 @@ def generate(manual_id: str = Form(...), chapter_prefix: str = Form(...), chapte
     c = result.spec.counts()
     msg = f"{manual_id} — {chapter_prefix}: generated {c['functions']} functions / {c['requirements']} requirements"
     if result.unmatched_headings:
-        msg += f" ({len(result.unmatched_headings)} heading(s) not matched — see index)"
+        # Not surfaced in the published README (see markdown_publisher.py) --
+        # a reviewer has no way to act on this, only whoever ran generate()
+        # can investigate the matching code. Printed to the server's own
+        # console (same audience as specgen.py generate's stdout) rather than
+        # just the flash banner, since the full title list can be long.
+        print(f"{len(result.unmatched_headings)} heading(s) could not be matched to body text:")
+        for title in result.unmatched_headings:
+            print(f"  - {title}")
+        msg += f" ({len(result.unmatched_headings)} heading(s) used a coarser page-based boundary — see server console)"
     return _redirect("/manuals", msg)
 
 
