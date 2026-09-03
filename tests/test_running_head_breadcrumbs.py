@@ -52,8 +52,22 @@ def test_consecutive_pages_with_the_same_breadcrumb_become_one_section():
 
 def test_a_leaf_area_with_no_2level_children_becomes_its_own_function():
     """Real Honda Pilot case: "CabinTalk®" never gets a second breadcrumb level
-    anywhere in the chapter -- it's a genuine function in its own right, not a
-    lead-in to be folded away like "Audio System" is in the test above."""
+    anywhere in the chapter, so it becomes a function in its own right rather
+    than being folded away like "Audio System" is in the test above.
+
+    This was written from an untested assumption ("it must be a real
+    function, unlike an area lead-in") -- checked against the original app's
+    own real output 2026-09-03 and found the assumption was wrong about the
+    ORIGINAL: it actually merges a run like this BACKWARD into the preceding
+    function instead (confirmed: the original's own "26-hfl-menus.md"
+    contains CabinTalk®'s own body text verbatim, no separate CabinTalk®
+    function exists in its real published output). This rebuild's behavior
+    (own leaf function) is a DELIBERATE, considered divergence, not an
+    oversight -- CabinTalk® is a real, independently-named feature, and
+    burying its content inside an unrelated function ("HFL Menus") would be
+    worse for a reviewer than giving it its own reviewable card, even though
+    it moves the function count away from the original's own count. See
+    feedback memory "exceed the original" and docs/ARCHITECTURE.md "7.6"."""
     chapter = RunningHeadChapter(label="Features", page_start=0, page_end=9)
     lines = _lines_for_pages(range(0, 9))
     breadcrumbs = {
