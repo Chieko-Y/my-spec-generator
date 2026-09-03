@@ -32,7 +32,7 @@ pie showData
 Each image is a rendering of the corresponding area of the original PDF. **Images are not kept in the repository** (they are copies of another company's manual); `publish` creates them under `../figures/` on the machine that runs it.
 
 ## Headings not matched to body text
-These bookmark entries could not be located in the extracted body text and were not turned into functions. Reported instead of silently dropped.
+These bookmark/index entries' exact printed text could not be located near their expected page, so a coarser page-number boundary was used instead -- the function below WAS still created, but its section boundary is less precise than an exact text match would give. Worth a human spot-check that the function's own content/boundaries look right. Reported instead of silently guessing without a trace.
 - Map Screen Operation
 - Location Menu Pop-up
 - Orientation Of The Map
@@ -108,6 +108,7 @@ flowchart LR
 | 25 | [Using A USB Memory Device](/specifications/subaru/outback-2025/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 6 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/outback-2025/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
 
 
 

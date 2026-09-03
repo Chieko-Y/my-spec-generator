@@ -40,7 +40,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 | AA | abbreviation | `Android Auto` | 1 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
 
 ## Headings not matched to body text
-These bookmark entries could not be located in the extracted body text and were not turned into functions. Reported instead of silently dropped.
+These bookmark/index entries' exact printed text could not be located near their expected page, so a coarser page-number boundary was used instead -- the function below WAS still created, but its section boundary is less precise than an exact text match would give. Worth a human spot-check that the function's own content/boundaries look right. Reported instead of silently guessing without a trace.
 - Map Screen Operation
 - Location Menu Pop-up
 - Orientation Of The Map
@@ -116,6 +116,7 @@ flowchart LR
 | 25 | [Using A USB Memory Device](/specifications/subaru/ascent-2026/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 6 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/ascent-2026/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
 
 
 

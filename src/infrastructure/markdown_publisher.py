@@ -292,8 +292,12 @@ def _index_markdown(
     if spec.meta.get("unmatched_headings"):
         lines.append("## Headings not matched to body text")
         lines.append(
-            "These bookmark entries could not be located in the extracted body text and "
-            "were not turned into functions. Reported instead of silently dropped."
+            "These bookmark/index entries' exact printed text could not be located near "
+            "their expected page, so a coarser page-number boundary was used instead -- "
+            "the function below WAS still created, but its section boundary is less "
+            "precise than an exact text match would give. Worth a human spot-check that "
+            "the function's own content/boundaries look right. Reported instead of "
+            "silently guessing without a trace."
         )
         for title in spec.meta["unmatched_headings"]:
             lines.append(f"- {_esc(title)}")
