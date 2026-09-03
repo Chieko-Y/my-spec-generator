@@ -58,6 +58,11 @@ class FileConfigProvider:
             ),
             header_boundary_pt=layout_raw.get("header_boundary_pt", base_layout.header_boundary_pt),
             footer_boundary_pt=layout_raw.get("footer_boundary_pt", base_layout.footer_boundary_pt),
+            page_number_offset=layout_raw.get("page_number_offset", base_layout.page_number_offset),
+            heading_prefixes=layout_raw.get("heading_prefixes", base_layout.heading_prefixes),
+            running_head_separator_font=layout_raw.get(
+                "running_head_separator_font", base_layout.running_head_separator_font
+            ),
         )
 
         if "slot_rules" in raw:

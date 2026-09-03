@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from .figures import is_full_bleed_placement, is_stretched_fill
 from .manual_parsing import (
     Bookmark,
     Line,
@@ -126,16 +127,31 @@ def _detect_header_footer(lines: list[Line]) -> tuple[float, float | None, list[
 
 
 def _detect_figure_thresholds(
-    image_rects: dict[int, list[tuple[float, float, float, float]]]
+    image_rects: dict[int, list[tuple[float, float, float, float, int | None, int | None]]]
 ) -> tuple[float | None, float | None, list[str]]:
     """Icons and real screen-illustration figures cluster at very different sizes
     (confirmed against the real Subaru PDF, 2026-08-25: ~11.5pt icons vs. 100pt+
     figures) -- find the widest gap in the sorted size distribution instead of
-    assuming a fixed threshold like the current hardcoded 40pt."""
+    assuming a fixed threshold like the current hardcoded 40pt.
+
+    Stretched-fill background boxes (see domain.figures.is_stretched_fill) and
+    full-bleed chapter-divider art (see domain.figures.is_full_bleed_placement)
+    are dropped first -- both confirmed against the real Honda Pilot PDF,
+    2026-09-02: a 194x336pt stretched 1x1px fill, left in, becomes the widest
+    embedded image on nearly every page; a 696x260.9pt full-bleed chapter-divider
+    photo (real, high-dpi -- not caught by the stretched-fill check) sits at the
+    same negative x0 on 8 of the manual's 9 chapters. Either one alone drags the
+    derived threshold up past every real figure in the whole manual (max
+    ~337x261pt) -- deriving figure_min_width/height_pt from that skewed
+    distribution silently excludes every real figure a chapter has."""
     widths: list[float] = []
     heights: list[float] = []
     for rects in image_rects.values():
-        for x0, top, x1, bottom in rects:
+        for x0, top, x1, bottom, native_w, native_h in rects:
+            if is_stretched_fill(native_w, native_h, x1 - x0, bottom - top):
+                continue
+            if is_full_bleed_placement((x0, top, x1, bottom)):
+                continue
             widths.append(x1 - x0)
             heights.append(bottom - top)
     notes: list[str] = []
@@ -166,7 +182,7 @@ def _detect_figure_thresholds(
 def derive_layout(
     lines: list[Line],
     bookmarks: list[Bookmark],
-    image_rects: dict[int, list[tuple[float, float, float, float]]] | None = None,
+    image_rects: dict[int, list[tuple[float, float, float, float, int | None, int | None]]] | None = None,
 ) -> DerivedLayoutReport:
     notes: list[str] = []
 

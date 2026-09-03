@@ -81,6 +81,7 @@ def figure_to_dict(f: FigureRef) -> dict:
     return {
         "figure_id": f.figure_id,
         "page": f.page,
+        "printed_page": f.printed_page,
         "rect": list(f.rect),
         "caption_source": f.caption_source,
         "caption_text": f.caption_text,
@@ -93,6 +94,11 @@ def figure_from_dict(d: dict) -> FigureRef:
     return FigureRef(
         figure_id=d["figure_id"],
         page=d["page"],
+        # Older spec.json files predate printed_page (see LayoutConfig.
+        # page_number_offset, 2026-09-02) -- fall back to the pre-existing (and,
+        # for every profile except Honda's, still correct) page+1 assumption
+        # rather than fail to load them.
+        printed_page=d.get("printed_page", d["page"] + 1),
         rect=tuple(d["rect"]),
         caption_source=d.get("caption_source", ""),
         caption_text=d.get("caption_text"),

@@ -146,6 +146,15 @@ class FigureRef:
     caption_text: str | None
     image_path: str | None = None
     legend_requirements: list[RequirementItem] = field(default_factory=list)
+    # `page` is the raw 0-indexed page used for internal geometry (matching against
+    # Section boundaries); `printed_page` is what a human should ever be shown --
+    # `page` plus the manual's own Profile.layout.page_number_offset, resolved once
+    # at extraction time (see use_cases.py::_extract_figures) since nothing
+    # downstream of the generated spec (markdown_publisher, the web templates) has
+    # the Profile in scope to compute it itself. See LayoutConfig.page_number_offset
+    # for why a flat "+1" is wrong for some real manuals (confirmed Honda Pilot,
+    # 2026-09-02).
+    printed_page: int = 0
 
 
 @dataclass

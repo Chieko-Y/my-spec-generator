@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from domain.figures import caption_for, is_qr_code_caption
+from domain.figures import caption_for, is_full_bleed_placement, is_qr_code_caption, is_stretched_fill
 from domain.manual_parsing import Line
 
 
@@ -73,3 +73,44 @@ def test_is_qr_code_caption_does_not_flag_real_captions():
     assert is_qr_code_caption("Visit https://www.mysubaru.com for details.") is False
     assert is_qr_code_caption(None) is False
     assert is_qr_code_caption("") is False
+
+
+def test_is_stretched_fill_flags_a_one_pixel_background_box():
+    """Real Honda Pilot PDF case, 2026-09-02: a text-background box painted by
+    stretching a 1x1px source image to 194.2x336.3pt (~0.3 effective dpi) was
+    the widest embedded image on nearly every page of the manual, dragging the
+    auto-derived figure_min_width/height_pt up to ~517x299pt -- above every
+    real figure in the whole manual (max ~337x261pt) -- and silently excluding
+    all of them. This is the same defect the original app's own docs record
+    fixing on this exact PDF (a stretched fill sits at ~0.4dpi, a real figure
+    or icon at 130dpi+, three orders of magnitude apart)."""
+    assert is_stretched_fill(1, 1, 194.2, 336.3) is True
+
+
+def test_is_stretched_fill_does_not_flag_real_figures_or_icons():
+    # Real Honda Pilot measurements, same PDF/session: a full screen-mockup
+    # figure and a small inline icon, both ~150-300dpi.
+    assert is_stretched_fill(631, 309, 227.2, 111.1) is False
+    assert is_stretched_fill(31, 24, 11.1, 8.5) is False
+
+
+def test_is_stretched_fill_is_false_without_native_size():
+    # Most PDF libraries won't always expose srcsize -- fall back to size-only
+    # filtering (domain.figures.is_figure_sized) rather than guessing.
+    assert is_stretched_fill(None, None, 194.2, 336.3) is False
+    assert is_stretched_fill(0, 0, 194.2, 336.3) is False
+
+
+def test_is_full_bleed_placement_flags_a_negative_origin():
+    """Real Honda Pilot PDF case, 2026-09-02: a 696x260.9pt chapter-divider photo
+    (a real, high-dpi embedded image -- not a stretched fill) sits at x0=-11.1pt,
+    bleeding past the page's own left edge, on 8 of the manual's 9 chapters.
+    Left in, it alone still drags the auto-derived figure_min_width_pt up to
+    ~517pt -- above every real figure in the manual -- even after stretched
+    fills are excluded, since it's real and passes that filter cleanly."""
+    assert is_full_bleed_placement((-11.1, 45.4, 684.9, 306.3)) is True
+    assert is_full_bleed_placement((10.0, -2.0, 200.0, 150.0)) is True
+
+
+def test_is_full_bleed_placement_does_not_flag_a_real_figure():
+    assert is_full_bleed_placement((123.4, 197.8, 256.2, 293.9)) is False

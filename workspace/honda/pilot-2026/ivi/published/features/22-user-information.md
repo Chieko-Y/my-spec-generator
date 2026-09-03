@@ -1,0 +1,45 @@
+<!-- GENERATED:START function=21db6d0177b4 (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
+# 22. User Information
+
+<div class="fn-meta"><b>Function path:</b> Audio System Basic Operation / User Information<br><b>Source:</b> printed page 319, 320, 321, 322<br><b>Test-ready:</b> <span class="test-ready-no">no — procedure missing or thresholds unfilled</span></div>
+
+<p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
+
+## Figures (areas of the original PDF; the OM has no figure numbers or captions)
+![figure](../figures/FIG-ffafea031ad3.png)
+- Figure 22-1 source: p.319
+- (Copied from OM) a User Information
+![figure](../figures/FIG-12a422d64ddf.png)
+- Figure 22-2 source: p.320
+- (Copied from OM) website.
+
+## 22-2-1. Service overview
+
+| # | Presumed requirement | Strength | Source |
+|---|---|---|---|
+| 1 | <span class="req-label">User Information</span>User Information. | capability | p.319 / text |
+| 2 | <span class="req-label">User Information</span>a User Information. | capability | p.319 / text |
+| 3 | <span class="req-label">User Information</span>1User Information This feature cannot be used while driving. | constraint | p.319 / text |
+| 4 | <span class="req-label">User Information</span>You can customize settings individually for each user. 2 Profile Settings P.323. | capability | p.319 / text |
+| 5 | <span class="req-label">User Information</span>You can customize security settings for each user. If you have forgotten security settings, you will need to delete the user and create a new one. If you have forgotten security settings for the Owner user, please contact a dealer or Honda Customer Service. 2 Customer Service Information P.682. | constraint | p.319 / text |
+| 6 | <span class="req-label">User Information</span>Certain features are unavailable when using a newly created user or the Guest user. | constraint | p.319 / text |
+| 7 | <span class="req-label">User Information</span>You can add and change users, as well as customize user settings. By registering a user, you can personalize your vehicle settings. You can select a user when the audio/information screen loads, even when the doors are open or unlocked. | constraint | p.320 / text |
+| 8 | <span class="req-label">User Information</span>By linking your profile with your Google Account, you can enjoy a more personalized Google built-in experience. For more assistance on account linking, visit the Google website. | capability | p.320 / text |
+| 9 | <span class="req-label">User Information</span>Registering a User. | capability | p.321 / text |
+| 10 | <span class="req-label">User Information</span>1.Select User Info. uYou can also add users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can add users even when the doors are open and unlocked. 2.Select Change Profile. 3.Select the +Add User. 4.Enter User Information. 2 Start Up P.271. | constraint | p.321 / text |
+| 11 | <span class="req-label">User Information</span>1Registering a User Profile can be changed only when the vehicle is parked. | constraint | p.321 / text |
+| 12 | <span class="req-label">User Information</span>You can add up to 4 users other than the Owner user and the Guest user. | capability | p.321 / text |
+| 13 | <span class="req-label">User Information</span>When you add a user, the audio/information screen is loaded under that user. | capability | p.321 / text |
+| 14 | <span class="req-label">User Information</span>Switching Users. | capability | p.322 / text |
+| 15 | <span class="req-label">User Information</span>1.Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked. 2.Select Change Profile. 3.Select the user you want to use. | constraint | p.322 / text |
+| 16 | <span class="req-label">User Information</span>Deleting Users. | capability | p.322 / text |
+| 17 | <span class="req-label">User Information</span>1.Select Profile Settings. 2.Select Manage Profile. 3.Select Your Profile. 4.Select Delete. | capability | p.322 / text |
+| 18 | <span class="req-label">User Information</span>1Switching Users Profile can be changed only when the vehicle is parked. | constraint | p.322 / text |
+| 19 | <span class="req-label">User Information</span>Users with customized security settings can restrict screen operations by selecting the Screen Lock shortcut. | capability | p.322 / text |
+| 20 | <span class="req-label">User Information</span>The transmitter settings may not be switched when you change the Owner user. If this happens, change to a different user and then try switching to the desired user again. | constraint | p.322 / text |
+| 21 | <span class="req-label">User Information</span>1Deleting Users When the profile currently being used is deleted, the audio/information screen is loaded under the Guest user. | constraint | p.322 / text |
+| 22 | <span class="req-label">User Information</span>While using the Owner user, you can delete other users via General Settings Advanced Settings. 2 Customized Features P.346. | capability | p.322 / text |
+| 23 | <span class="req-label">User Information</span>Depending on the version of your OS, the steps for deleting a user may differ from the instructions on this page. Follow the on-screen prompts. | capability | p.322 / text |
+<!-- GENERATED:END function=21db6d0177b4 -->
+
+

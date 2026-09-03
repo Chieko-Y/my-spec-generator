@@ -56,6 +56,10 @@ class Section:
     # (confirmed directly: a Subaru figure at the top of page 118 belongs to the
     # section ending there, not the one starting later on the same page — assigning
     # by page range alone put it on the wrong function, 2026-08-25).
+    area: str = ""  # per-section area/group name, when the section-cutting strategy
+    # actually knows it (see build_blocks_from_running_head_breadcrumbs); empty means
+    # "unknown", and callers fall back to the chapter-wide area_title they already had
+    # (every bookmark/font-heading/item-index path's existing behavior, unchanged).
 
 
 @dataclass
@@ -267,12 +271,45 @@ def _find_exact_line_for_heading(
 # body text, and a short line is still a real line (e.g. a single short instruction).
 
 
+def find_top_level_chapter_range(
+    bookmarks: list[Bookmark], chapter_prefix: str | None
+) -> tuple[int, int] | None:
+    """(page_start, page_end) for the top-level bookmark build_blocks would match
+    for this chapter_prefix -- exposed so a caller needing PDF access before
+    build_blocks runs (e.g. to fetch running_head_breadcrumbs, which build_blocks
+    itself can't do -- domain/ is stdlib-only) can find the same page range
+    without duplicating build_blocks' own bookmark-matching logic."""
+    if not bookmarks:
+        return None
+    top_level = min(b.level for b in bookmarks)
+    chapters = [b for b in bookmarks if b.level == top_level]
+    if chapter_prefix:
+        prefix_norm = _normalize(chapter_prefix)
+        matched_chapters = [c for c in chapters if _normalize(c.title).startswith(prefix_norm)]
+    else:
+        matched_chapters = chapters
+    if not matched_chapters:
+        return None
+    chapter = matched_chapters[0]
+    chapter_start_idx = bookmarks.index(chapter)
+    next_chapter = next(
+        (b for b in bookmarks[chapter_start_idx + 1 :] if b.level <= chapter.level), None
+    )
+    if next_chapter is not None:
+        return chapter.page_index, next_chapter.page_index
+    return chapter.page_index, None  # caller must clamp page_end itself (needs `lines`)
+
+
 def build_blocks(
     lines: list[Line],
     bookmarks: list[Bookmark],
     chapter_prefix: str | None,
     section_depth_below_chapter: int = 2,  # unused by the current algorithm; kept so
     # existing profile.json layout blocks and call sites don't need to change shape.
+    page_number_offset: int = 1,  # see LayoutConfig.page_number_offset
+    running_head_breadcrumbs: dict[int, list[str]] | None = None,  # see
+    # build_blocks_from_running_head_breadcrumbs; fetched by the caller (needs
+    # PDF access build_blocks itself doesn't have) and passed through as plain data.
 ) -> BuildBlocksResult:
     if not bookmarks:
         return BuildBlocksResult(chapter_title=None, sections=[], unmatched_headings=[])
@@ -318,9 +355,25 @@ def build_blocks(
         chapter_range = RunningHeadChapter(
             label=chapter.title, page_start=chapter.page_index, page_end=chapter_end_page
         )
+        # Tried first, when available: a real 2-level "Area▶Function" breadcrumb
+        # printed in every page's own margin (see LayoutConfig.
+        # running_head_separator_font) is read directly off each page, not
+        # text-matched/guessed against a chapter's own item index -- confirmed
+        # far more complete and accurate on the real Honda Pilot PDF, 2026-09-02:
+        # the item-index path silently dropped 3 real functions (their own
+        # heading failed to text-match) and mis-promoted 4 Area headers to their
+        # own "functions". Full incident in docs/ARCHITECTURE.md.
+        if running_head_breadcrumbs:
+            from_breadcrumbs = build_blocks_from_running_head_breadcrumbs(
+                lines, chapter_range, running_head_breadcrumbs
+            )
+            if from_breadcrumbs is not None:
+                return from_breadcrumbs
         item_index_entries = detect_item_index_entries(lines, chapter.page_index, chapter_end_page)
         if item_index_entries is not None:
-            indexed = build_blocks_from_item_index(lines, chapter_range, item_index_entries)
+            indexed = build_blocks_from_item_index(
+                lines, chapter_range, item_index_entries, page_number_offset
+            )
             if indexed is not None:
                 return indexed
         return build_blocks_from_font_headings(lines, chapter_range)
@@ -1078,7 +1131,10 @@ def detect_item_index_entries(
 
 
 def build_blocks_from_item_index(
-    lines: list[Line], chapter: RunningHeadChapter, entries: list[tuple[str, int]]
+    lines: list[Line],
+    chapter: RunningHeadChapter,
+    entries: list[tuple[str, int]],
+    page_number_offset: int = 1,
 ) -> BuildBlocksResult | None:
     """The item-index counterpart to build_blocks_from_font_headings: instead of
     guessing headings from font size, each entry's name is text-matched (same
@@ -1108,7 +1164,13 @@ def build_blocks_from_item_index(
     resolved: list[tuple[str, int, float, bool]] = []
     matched_count = 0
     for name, printed_page in entries:
-        guess_page = printed_page - 1  # printed pages are 1-based, Line.page is 0-based
+        # printed = page_index + page_number_offset (see LayoutConfig.page_number_offset),
+        # so page_index = printed - page_number_offset. A hardcoded "- 1" here (assuming
+        # every PDF's printed numbering starts on physical page 1) put a real Honda Pilot
+        # item-index entry's search window 2 pages too early, confirmed directly,
+        # 2026-09-02: "CabinTalk® ... 385" resolved to the PRECEDING function's own
+        # heading instead, silently absorbing 2 pages of unrelated content.
+        guess_page = printed_page - page_number_offset
         candidate_lines = [l for l in chapter_lines if guess_page + lo <= l.page <= guess_page + hi]
         matched_line = _find_exact_line_for_heading(name, candidate_lines, min_heading_size)
         if matched_line is not None:
@@ -1127,3 +1189,146 @@ def build_blocks_from_item_index(
     ]
     sections, unmatched = _cut_sections(chapter_lines, candidates, chapter.page_end)
     return BuildBlocksResult(chapter_title=chapter.label, sections=sections, unmatched_headings=unmatched)
+
+
+_RUNNING_HEAD_BREADCRUMB_MIN_FUNCTIONS = 3  # same spirit as _ITEM_INDEX_MIN_ENTRIES --
+# a couple of coincidental page-margin matches shouldn't be trusted as a real
+# breadcrumb; require this many distinct 2+-level runs before using it at all.
+_RUNNING_HEAD_BREADCRUMB_MAX_SEGMENT_LEN = 80  # matches _ITEM_INDEX_NAME_MAX_LEN's
+# reasoning. A page with no real breadcrumb line at all (a chapter's own divider
+# page, confirmed real: Honda Pilot p.264 has only a DTP timestamp/filename
+# watermark in its header band, no breadcrumb) still returns ONE long, garbled
+# "segment" from read_running_head_breadcrumbs (nothing to split it on) -- reject
+# it here rather than let it become a spurious one-page "function". The length
+# check alone didn't catch every real case (54 chars, under even a generous
+# bound) -- _PRODUCTION_FILENAME_RE (already used elsewhere for this exact class
+# of DTP artifact) reliably matches the ".book" extension baked into it.
+
+
+def build_blocks_from_running_head_breadcrumbs(
+    lines: list[Line],
+    chapter: RunningHeadChapter,
+    breadcrumbs: dict[int, list[str]],
+) -> BuildBlocksResult | None:
+    """A real 2-level "▶▶Area▶Function" breadcrumb printed in every content
+    page's own margin (see LayoutConfig.running_head_separator_font,
+    infrastructure.pdf_reader.PdfManualReader.read_running_head_breadcrumbs)
+    gives exact per-page section boundaries directly, no text-matching/guessing
+    against a chapter's own item index needed at all.
+
+    A run of consecutive pages sharing the identical breadcrumb becomes one
+    Section, titled by the breadcrumb's own last (deepest) level, with every
+    earlier level joined as `Section.area`. A page whose breadcrumb has only
+    ONE level (just the Area, no Function yet) is that area's own lead-in
+    content -- UNLESS that same area name is seen with a real (2+-level)
+    breadcrumb elsewhere in the chapter, in which case the bare-area pages are
+    that area's introduction, not a distinct "function" of their own
+    (confirmed real, Honda Pilot, 2026-09-02: "Audio System" alone, before
+    "USB Ports" begins, must NOT become its own function -- the original
+    app's own real output has no such function -- while "CabinTalk®", which
+    never gets a second breadcrumb level anywhere in the chapter, is a
+    genuine leaf function in its own right).
+
+    A bare-area lead-in run is folded FORWARD into the section that
+    immediately follows it (that area's own first function) rather than
+    dropped -- confirmed real, Honda Pilot, 2026-09-03: the printed running
+    head reflects whichever breadcrumb was current at the TOP of a page, so
+    a page whose margin still read "Bluetooth® HandsFreeLink®" alone already
+    had the next function's ("Using HFL") own heading, body text, and a
+    figure lower down that same page. Simply dropping the bare run (this
+    rebuild's own earlier behavior, and confirmed the original app's real
+    output does the same, see docs/HANDOVER.md 2026-09-03) leaves that page
+    owned by no Section at all, and _extract_figures's (page, start_top)
+    window search then silently attributes it to whichever PRECEDING section
+    happens to extend forward to fill the gap -- landing a figure on the
+    wrong function. Matching the original's own behavior here was
+    deliberately not the goal (see feedback memory "exceed the original",
+    2026-09-03): this is a real, fixable limitation of page-level breadcrumb
+    precision, not something worth reproducing just because the original
+    has it too. Only merges into a run sharing the same area; a bare run
+    with nothing suitable following it (chapter's last run, or a different
+    area next) is dropped, same as before -- there is nothing safe to
+    attribute it to.
+
+    Returns None (never a partial guess) when there's too little 2+-level
+    coverage to trust this as the section-cutting strategy for this chapter --
+    callers must fall back to the item-index/font-heading paths instead.
+    """
+    chapter_lines = [l for l in lines if chapter.page_start <= l.page < chapter.page_end]
+    chapter_lines = drop_repeating_margin_glyphs(chapter_lines)
+
+    pages_in_range = sorted(
+        p
+        for p, segs in breadcrumbs.items()
+        if chapter.page_start <= p < chapter.page_end
+        and all(
+            len(s) <= _RUNNING_HEAD_BREADCRUMB_MAX_SEGMENT_LEN and not _PRODUCTION_FILENAME_RE.search(s)
+            for s in segs
+        )
+    )
+    if not pages_in_range:
+        return None
+
+    runs: list[tuple[tuple[str, ...], int, int]] = []
+    cur_bc: tuple[str, ...] | None = None
+    run_start = 0
+    prev_page = None
+    for p in pages_in_range:
+        bc = tuple(breadcrumbs[p])
+        if cur_bc is None or bc != cur_bc or (prev_page is not None and p != prev_page + 1):
+            if cur_bc is not None:
+                runs.append((cur_bc, run_start, prev_page + 1))
+            cur_bc, run_start = bc, p
+        prev_page = p
+    if cur_bc is not None:
+        runs.append((cur_bc, run_start, prev_page + 1))
+
+    if sum(1 for bc, _, _ in runs if len(bc) >= 2) < _RUNNING_HEAD_BREADCRUMB_MIN_FUNCTIONS:
+        return None
+
+    areas_with_children = {bc[0] for bc, _, _ in runs if len(bc) >= 2}
+
+    # Fold a bare-area lead-in run forward into the section that immediately
+    # follows it (that area's own first function) instead of dropping its
+    # page range entirely -- see this function's own docstring for why. Only
+    # for a SINGLE-page bare run: a real multi-page area introduction (e.g.
+    # Honda Pilot's own "Customized Features" bare lead-in, confirmed real,
+    # 2026-09-03: 22 consecutive pages before "Defaulting All the Settings"
+    # even begins) is genuine standalone content, not a running-head lag --
+    # folding a run that long into the single narrow function after it would
+    # bloat that function with 22 pages of unrelated content, a real
+    # regression, not an improvement. The margin-lag case this exists to fix
+    # only ever shaves off at most the one page whose body outran its own
+    # running head.
+    i = 0
+    while i < len(runs):
+        bc, page_start, page_end = runs[i]
+        if len(bc) == 1 and bc[0] in areas_with_children:
+            if page_end - page_start == 1 and i + 1 < len(runs) and runs[i + 1][0][0] == bc[0]:
+                next_bc, _, next_end = runs[i + 1]
+                runs[i + 1] = (next_bc, page_start, next_end)
+            del runs[i]  # this area's own lead-in content, not a distinct function
+            continue
+        i += 1
+
+    sections: list[Section] = []
+    for i, (bc, page_start, page_end) in enumerate(runs):
+        section_lines = [l for l in chapter_lines if page_start <= l.page < page_end]
+        if not section_lines:
+            continue
+        sections.append(
+            Section(
+                title=bc[-1],
+                level=0,
+                page_start=page_start,
+                page_end=page_end,
+                lines=section_lines,
+                matched_by_text=True,
+                source_bookmark_index=i,
+                start_top=0.0,
+                area=" / ".join(bc[:-1]),
+            )
+        )
+    if not sections:
+        return None
+    return BuildBlocksResult(chapter_title=chapter.label, sections=sections, unmatched_headings=[])

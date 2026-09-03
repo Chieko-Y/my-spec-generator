@@ -32,11 +32,25 @@ class ManualReader(Protocol):
 
     def read_image_rects(
         self, pdf_path: str, page_start: int = 0, page_end: int | None = None
-    ) -> dict[int, list[tuple[float, float, float, float]]]:
-        """page_index -> raw embedded-image bounding boxes (x0, top, x1, bottom)
-        for pages in [page_start, page_end), unfiltered by size — see domain.figures
-        for the filter/merge step. Callers generating one chapter should always
-        pass its actual page range rather than scanning the whole document."""
+    ) -> dict[int, list[tuple[float, float, float, float, int | None, int | None]]]:
+        """page_index -> raw embedded-image bounding boxes (x0, top, x1, bottom,
+        native_width_px, native_height_px) for pages in [page_start, page_end),
+        unfiltered by size — see domain.figures for the filter/merge step.
+        Callers generating one chapter should always pass its actual page range
+        rather than scanning the whole document."""
+        ...
+
+    def read_running_head_breadcrumbs(
+        self,
+        pdf_path: str,
+        page_start: int,
+        page_end: int,
+        header_boundary_pt: float,
+        separator_font_hint: str,
+    ) -> dict[int, list[str]]:
+        """page_index -> breadcrumb levels (e.g. ["Area", "Function"]) read from
+        that page's own header-band running head — see
+        domain.profile.LayoutConfig.running_head_separator_font."""
         ...
 
 

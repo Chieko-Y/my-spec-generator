@@ -12,10 +12,10 @@
 <div class="card">
   <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border)">
     <h3 style="margin:0">{{ row.function_number }}. {{ row.function_title }}</h3>
-    <small style="color:#6b6f76">Figure {{ row.index }} / p.{{ fig.page + 1 }} / {{ row.width }}×{{ row.height }}pt</small>
+    <small style="color:#6b6f76">Figure {{ row.index }} / p.{{ fig.printed_page }} / {{ row.width }}×{{ row.height }}pt</small>
   </div>
   <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-top:12px">
-    <img src="/specifications/{{ manual_id }}/figures/{{ row.image_filename }}" style="max-width:420px;max-height:380px;border:1px solid var(--border);border-radius:4px;flex-shrink:0">
+    <img src="/specifications/{{ manual_id }}/figures/{{ row.image_filename }}" style="max-width:420px;max-height:280px;border:1px solid var(--border);border-radius:4px;flex-shrink:0">
     <div style="flex:1;min-width:280px">
       {% if fig.caption_text %}
       <p><small style="color:#6b6f76">(Copied from OM) {{ fig.caption_text }}</small></p>

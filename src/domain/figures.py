@@ -61,6 +61,22 @@ def is_figure_sized(rect: Rect, min_width_pt: float, min_height_pt: float) -> bo
     return (x1 - x0) >= min_width_pt and (bottom - top) >= min_height_pt
 
 
+def is_full_bleed_placement(rect: Rect) -> bool:
+    """A rect that starts past the page's own left or top edge (negative
+    coordinate) is deliberate full-bleed cover/divider art, not a screen
+    illustration -- confirmed against the real Honda Pilot PDF, 2026-09-02: a
+    696x260.9pt chapter-divider photo (a real, high-resolution embedded image,
+    not a domain.figures.is_stretched_fill case -- ~200 effective dpi) sits at
+    x0=-11.1pt on 8 of the manual's 9 chapter-opener pages, identically. A real
+    screen-illustration figure is placed within the page's printed margins and
+    would never have a negative coordinate, so no page-size lookup is needed to
+    tell them apart. Left uncaught, this single outlier still drags the
+    auto-derived figure_min_width_pt up to ~517pt even after stretched fills
+    are excluded, since it is real (high-dpi) and passes that filter."""
+    x0, top, x1, bottom = rect
+    return x0 < 0 or top < 0
+
+
 _BARE_URL_RE = re.compile(r"^\s*https?://\S+\s*$", re.IGNORECASE)
 
 
@@ -76,6 +92,33 @@ def is_qr_code_caption(caption_text: str | None) -> bool:
     one screen, so figure counts everywhere (published Markdown included) match.
     """
     return bool(caption_text and _BARE_URL_RE.match(caption_text))
+
+
+def is_stretched_fill(
+    native_width_px: int | None,
+    native_height_px: int | None,
+    placed_width_pt: float,
+    placed_height_pt: float,
+    min_dpi: float = 10.0,
+) -> bool:
+    """A background/text box painted by stretching a tiny (often literally 1x1)
+    source image across a large placed area is not a figure, no matter how big
+    its placed rect is -- confirmed against the real Honda Pilot PDF, 2026-09-02:
+    a 194x336pt rect that survived every size-based filter (bigger than every
+    real figure on its own page) turned out to be a 1x1px image at ~0.3
+    effective DPI, painting a body-text background box. This is exactly the
+    same defect the original app (OnlineManualSpecTranslator) hit and fixed on
+    this same PDF -- see its docs/ARCHITECTURE.md "図の扱い" 2: a stretched fill
+    sits at ~0.4dpi, a real figure or inline icon at 130dpi or higher, three
+    orders of magnitude apart. Maker/profile-independent (unlike
+    figure_min_width/height_pt), so this applies before any profile-derived
+    size threshold, not instead of it.
+    """
+    if not native_width_px or not native_height_px or placed_width_pt <= 0 or placed_height_pt <= 0:
+        return False
+    dpi_w = native_width_px / placed_width_pt * 72
+    dpi_h = native_height_px / placed_height_pt * 72
+    return dpi_w < min_dpi and dpi_h < min_dpi
 
 
 def caption_for(rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 20.0) -> Line | None:

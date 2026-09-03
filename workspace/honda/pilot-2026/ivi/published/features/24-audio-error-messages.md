@@ -9,17 +9,16 @@
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
-| 1 | <span class="req-label">Audio Error Messages</span>■Switching Users. | capability | p.324 / text |
-| 2 | <span class="req-label">Audio Error Messages</span>1.Select User Info. uYou can also change users when Profile Settings Change Profile is selected. 2 Profile Settings P.323 uYou can switch users even when the doors are open and unlocked. 2.Select Change Profile. 3.Select the user you want to use. | constraint | p.324 / text |
-| 3 | <span class="req-label">Audio Error Messages</span>■Deleting Users. | capability | p.324 / text |
-| 4 | <span class="req-label">Audio Error Messages</span>1.Select Profile Settings. 2.Select Manage Profile. 3.Select Your Profile. 4.Select Delete. | capability | p.324 / text |
-| 5 | <span class="req-label">Audio Error Messages</span>1Switching Users Profile can be changed only when the vehicle is parked. | constraint | p.324 / text |
-| 6 | <span class="req-label">Audio Error Messages</span>Users with customized security settings can restrict screen operations by selecting the Screen Lock shortcut. | capability | p.324 / text |
-| 7 | <span class="req-label">Audio Error Messages</span>The transmitter settings may not be switched when you change the Owner user. If this happens, change to a different user and then try switching to the desired user again. | constraint | p.324 / text |
-| 8 | <span class="req-label">Audio Error Messages</span>1Deleting Users When the profile currently being used is deleted, the audio/information screen is loaded under the Guest user. | constraint | p.324 / text |
-| 9 | <span class="req-label">Audio Error Messages</span>While using the Owner user, you can delete other users via General Settings Advanced Settings. 2 Customized Features P.346. | capability | p.324 / text |
-| 10 | <span class="req-label">Audio Error Messages</span>Depending on the version of your OS, the steps for deleting a user may differ from the instructions on this page. Follow the on-screen prompts. | capability | p.324 / text |
+| 1 | <span class="req-label">Audio Error Messages</span>The following error messages are just examples. If you see an error message not listed below, follow the on-screen instructions to clear it. | constraint | p.324 / text |
+| 2 | <span class="req-label">Audio Error Messages</span>iPod/USB Flash Drive. | capability | p.324 / text |
+| 3 | <span class="req-label">Audio Error Messages</span>If an error occurs while playing an iPod or USB flash drive, you may see the following error messages. If you cannot clear the error message, contact a dealer. | constraint | p.324 / text |
+| 4 | <span class="req-label">Audio Error Messages</span>Error Message. | capability | p.324 / text |
+| 5 | <span class="req-label">Audio Error Messages</span>Appears when the files in the USB flash drive are copyright protected or an The selected file cannot be played on this unsupported format. This error message appears for about five seconds, then plays system the next file. | constraint | p.324 / text |
+| 6 | <span class="req-label">Audio Error Messages</span>iPod Appears when the iPod is empty. No Data USB flash drive Appears when the USB flash drive is empty. | constraint | p.324 / text |
+| 7 | <span class="req-label">Audio Error Messages</span>Appears when an unsupported device is connected. If it appears when a supported device is connected, reconnect the device. Error Appears when unsupported formats are in the device. Check that compatible files are stored on the device. | constraint | p.324 / text |
+| 8 | <span class="req-label">Audio Error Messages</span>Appears when only a HUB is connected. If it appears, connect a USB flash drive to USB Hub Unsupported the HUB. | constraint | p.324 / text |
+| 9 | <span class="req-label">Audio Error Messages</span>A charging error has occurred with the Appears when an incompatible device is connected. Disconnect the device. Then, connected USB device. When safe please turn the audio system off and turn it on again. Do not reconnect the device that check the compatibility of the device and USB caused the error. cable and try again. | constraint | p.324 / text |
+| 10 | <span class="req-label">Audio Error Messages</span>Solution. | capability | p.324 / text |
 <!-- GENERATED:END function=a0b97ebf358d -->
-
 
 

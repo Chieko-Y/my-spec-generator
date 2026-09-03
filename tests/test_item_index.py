@@ -222,6 +222,32 @@ def test_a_body_sized_caption_fragment_is_never_matched_even_with_strong_contain
     assert result.unmatched_headings == ["Contact List"]
 
 
+def test_page_number_offset_shifts_the_search_window_to_the_real_page():
+    """Real Honda Pilot PDF case, 2026-09-02: this manual's printed page numbers
+    are page_index - 1, not the hardcoded-elsewhere assumption of page_index + 1
+    (confirmed by rendering a page and reading its own printed footer). Before
+    this fix, "CabinTalk® ... 385" resolved 2 pages too early and silently
+    absorbed the PRECEDING function's own content (its real heading sits at
+    page_index 386, but the unadjusted guess searched around page_index 384)."""
+    chapter = RunningHeadChapter(label="ch", page_start=0, page_end=10)
+    lines = [
+        Line(page=7, text="Second Topic", top=80.0, x0=60.0, size=14.0),
+        Line(page=7, text="Body under second.", top=90.0, x0=60.0, size=9.0),
+    ] + [Line(page=0, text=f"Body filler {i}.", top=1000.0 + i, x0=60.0, size=9.0) for i in range(6)]
+    entries = [("Second Topic", 5)]  # printed page 5, real heading at page_index 7
+
+    # Without the real offset, the default (+1) guess lands 2 pages early and
+    # the entry is left unmatched -- a bug, not a passing "no match" case.
+    unadjusted = build_blocks_from_item_index(lines, chapter, entries)
+    assert unadjusted is None or unadjusted.unmatched_headings == ["Second Topic"]
+
+    result = build_blocks_from_item_index(lines, chapter, entries, page_number_offset=-1)
+
+    assert result is not None
+    assert result.unmatched_headings == []
+    assert [s.title for s in result.sections] == ["Second Topic"]
+
+
 def test_returns_none_when_fewer_than_half_the_entries_match():
     chapter = RunningHeadChapter(label="ch", page_start=0, page_end=1)
     lines = _chapter_lines([("Second Topic", 80.0, 14.0)])

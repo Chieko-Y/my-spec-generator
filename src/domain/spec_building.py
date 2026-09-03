@@ -113,6 +113,19 @@ def _split_bullets(paragraph: str) -> list[tuple[str, bool]]:
 _WRAP_HYPHEN = re.compile(r"(\w)-$")
 
 
+# Honda's own printed sub-heading marker ("■ Receiving a Call", "■Editing a
+# favorite station...") sits directly against the heading text with no space,
+# same layout quirk as _BULLET_CHARS -- but unlike a bullet it never starts a
+# new requirement item, it's fused with the body text that follows it into one
+# paragraph (confirmed 2026-09-02, Honda Pilot: "Display Setup■Changing the
+# Screen Brightness." -- one requirement, not two). The original app's own
+# real output for this exact same text has no "■" at all ("Changing the Screen
+# Brightness"), confirming it's page typography to drop, not real content.
+# Only a LEADING "■" is stripped -- it is always a heading marker at the start
+# of the section's own paragraph, never seen elsewhere in the confirmed cases.
+_LEADING_HEADING_MARKER = re.compile(r"^■\s*")
+
+
 def _join_paragraph_lines(texts: list[str]) -> str:
     parts: list[str] = []
     for raw in texts:
@@ -165,7 +178,9 @@ def _merge_orphan_step_numbers(lines: list[Line]) -> list[Line]:
     return merged
 
 
-def _split_lines(section: Section) -> tuple[list[tuple[int, int, float, str]], list[list]]:
+def _split_lines(
+    section: Section, heading_prefixes: tuple[str, ...] = ()
+) -> tuple[list[tuple[int, int, float, str]], list[list]]:
     """Return (numbered_steps, paragraph_line_groups). Each numbered step is
     (number, page, top, text) -- top is the step number's own line position,
     kept so a requirement can be matched to "whichever step comes next" by
@@ -187,6 +202,15 @@ def _split_lines(section: Section) -> tuple[list[tuple[int, int, float, str]], l
     against the same page -- "8. After at least 5 minutes ... start the engine
     again." sits 13.7pt above an unrelated "● The new map data will be
     applied." note, well inside the gap threshold).
+
+    A line starting with one of the profile's own heading_prefixes (see
+    LayoutConfig.heading_prefixes) is treated the same way -- it always starts a
+    new paragraph group and is never merged as a step continuation, even when
+    close by. Without this, a real sub-heading fuses into whatever text happens
+    to sit near it (confirmed real Honda Pilot case, 2026-09-02: "■Editing a
+    favorite station" fusing with the unrelated body text that followed it into
+    one unreadable requirement) -- the same defect the original app
+    (OnlineManualSpecTranslator) found and fixed on this exact PDF.
     """
     steps: list[list] = []
     prose_lines: list = []
@@ -194,17 +218,21 @@ def _split_lines(section: Section) -> tuple[list[tuple[int, int, float, str]], l
     prev_top = None
     prev_page = None
 
+    def _starts_new_heading(text: str) -> bool:
+        return bool(heading_prefixes) and text.startswith(heading_prefixes)
+
     for line in _merge_orphan_step_numbers(section.lines):
         text = line.text.strip()
         if not text:
             continue
         m = _NUMBERED_STEP.match(text)
-        if m:
+        if m and not _starts_new_heading(text):
             steps.append([int(m.group(1)), line.page, line.top, m.group(2).strip()])
             open_step_idx = len(steps) - 1
         elif (
             open_step_idx is not None
             and text[0] not in _BULLET_CHARS
+            and not _starts_new_heading(text)
             and line.page == prev_page
             and prev_top is not None
             and (line.top - prev_top) <= _PARAGRAPH_GAP_PT
@@ -221,15 +249,23 @@ def _split_lines(section: Section) -> tuple[list[tuple[int, int, float, str]], l
     current: list = []
     prev_top = None
     prev_page = None
+    prev_was_heading = False
     for line in prose_lines:
         text = line.text.strip()
         if not text:
             continue
+        is_heading = _starts_new_heading(text)
         starts_new = False
         if current:
             if line.page != prev_page:
                 starts_new = True
             elif prev_top is not None and (line.top - prev_top) > _PARAGRAPH_GAP_PT:
+                starts_new = True
+            # A heading line is always its own solo group -- never absorbs the
+            # prose that follows it either, matching the original app's own
+            # real output (a printed sub-heading becomes its own row, distinct
+            # from the body text or numbered step that follows it).
+            elif is_heading or prev_was_heading:
                 starts_new = True
         if starts_new:
             groups.append(current)
@@ -237,6 +273,7 @@ def _split_lines(section: Section) -> tuple[list[tuple[int, int, float, str]], l
         current.append(line)
         prev_top = line.top
         prev_page = line.page
+        prev_was_heading = is_heading
     if current:
         groups.append(current)
     return steps, groups
@@ -257,7 +294,7 @@ def build_function_spec(
     function_id = content_id("function", manual_id, area_title, section.title)
     function_path = f"{area_title} / {title}" if area_title else title
 
-    steps_raw, paragraph_groups = _split_lines(section)
+    steps_raw, paragraph_groups = _split_lines(section, tuple(profile.layout.heading_prefixes))
     # (page, top, "N. text") per step, in reading-order -- used below to cite
     # "whichever step comes next" alongside a requirement. Confirmed against
     # the real Subaru Outback 2026 PDF, 2026-08-31: a requirement/exception
@@ -275,10 +312,11 @@ def build_function_spec(
                 return label
         return None
 
+    offset = profile.layout.page_number_offset
     procedure: list[ProcedureStep] = []
     for seq, (number, page, top, text) in enumerate(steps_raw, start=1):
         procedure.append(
-            ProcedureStep(number=number, text=text, sequence=seq, source=f"p.{page + 1} / step")
+            ProcedureStep(number=number, text=text, sequence=seq, source=f"p.{page + offset} / step")
         )
 
     requirements: list[RequirementItem] = []
@@ -295,7 +333,7 @@ def build_function_spec(
     seen_bullet_in_section = False
 
     for group in paragraph_groups:
-        paragraph = _join_paragraph_lines([l.text for l in group]).strip()
+        paragraph = _LEADING_HEADING_MARKER.sub("", _join_paragraph_lines([l.text for l in group]).strip())
         if len(paragraph) < 8:
             continue
         page = group[0].page
@@ -312,7 +350,7 @@ def build_function_spec(
                 continue
             req_text = item if item.endswith((".", "!", "?")) else item + "."
             req_id = content_id("requirement", manual_id, section.title, item[:120])
-            source = f"p.{page + 1} / {'bullet' if is_bullet else 'text'}"
+            source = f"p.{page + offset} / {'bullet' if is_bullet else 'text'}"
             page_citation = page_running_head.get(page) if page_running_head else None
 
             if is_bullet:
@@ -342,7 +380,7 @@ def build_function_spec(
                 )
             )
 
-    pages = sorted({l.page + 1 for l in section.lines} | {section.page_start + 1})
+    pages = sorted({l.page + offset for l in section.lines} | {section.page_start + offset})
 
     return FunctionSpec(
         function_id=function_id,
@@ -370,10 +408,43 @@ def build_manual_spec_functions(
             section,
             profile,
             manual_id,
-            area_title,
+            section.area or area_title,
             i + 1,
             figures_by_section[i] if figures_by_section else None,
             page_running_head,
         )
         for i, section in enumerate(sections)
     ]
+
+
+def filter_excluded_sections(
+    functions: list[FunctionSpec], excluded_titles: list[str]
+) -> tuple[list[FunctionSpec], list[str]]:
+    """Drop functions whose title matches one of Profile.excluded_section_titles
+    (case-insensitive substring -- a real title is rarely the exact configured
+    phrase verbatim, e.g. Honda's real "Honda App License Agreement" against a
+    configured "License Agreement"). Returns (kept, excluded_titles_seen) so a
+    caller can record what was dropped and why (see meta["excluded_sections"])
+    rather than let it vanish silently -- license/copyright text isn't a real
+    operable function, but a reviewer should still be able to see it was found
+    and deliberately excluded, not simply missed."""
+    if not excluded_titles:
+        return functions, []
+    needles = [t.lower() for t in excluded_titles]
+    kept: list[FunctionSpec] = []
+    excluded: list[str] = []
+    for fn in functions:
+        title_lower = fn.title.lower()
+        if any(n in title_lower for n in needles):
+            excluded.append(fn.title)
+        else:
+            kept.append(fn)
+    # chapter_number was assigned by position in the UNFILTERED list -- dropping
+    # entries here would otherwise leave gaps (confirmed real, Honda Pilot,
+    # 2026-09-02: "CabinTalk®" stayed numbered "32" after 4 earlier License
+    # entries were filtered out, instead of renumbering down to its real "28").
+    # function_id/content_id don't depend on chapter_number, so renumbering here
+    # is safe -- it doesn't change identity, only display order.
+    for i, fn in enumerate(kept, start=1):
+        fn.chapter_number = str(i)
+    return kept, excluded

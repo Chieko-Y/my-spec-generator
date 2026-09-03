@@ -89,7 +89,11 @@ def _sample_anomaly_ratio(
     )
     filtered = order_by_columns(filtered, profile.layout.columns)
     blocks = build_blocks(
-        filtered, bookmarks, prefix, section_depth_below_chapter=profile.layout.section_depth_below_chapter
+        filtered,
+        bookmarks,
+        prefix,
+        section_depth_below_chapter=profile.layout.section_depth_below_chapter,
+        page_number_offset=profile.layout.page_number_offset,
     )
     if not blocks.sections:
         return 1.0  # nothing parsed at all -- worst case, not "no signal"

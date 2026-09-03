@@ -191,7 +191,7 @@ def _function_markdown(function, manual_id: str) -> str:
         lines.append("## Figures (areas of the original PDF; the OM has no figure numbers or captions)")
         for i, fig in enumerate(function.figures, start=1):
             lines.append(f"![figure]({fig.image_path or f'../figures/FIG-{fig.figure_id}.png'})")
-            lines.append(f"- Figure {function.chapter_number}-{i} source: p.{fig.page + 1}")
+            lines.append(f"- Figure {function.chapter_number}-{i} source: p.{fig.printed_page}")
             if fig.caption_text:
                 lines.append(f"- (Copied from OM) {_esc(fig.caption_text)}")
         lines.append("")

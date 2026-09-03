@@ -206,9 +206,9 @@ class PdfManualReader:
 
     def read_image_rects(
         self, pdf_path: str, page_start: int = 0, page_end: int | None = None
-    ) -> dict[int, list[tuple[float, float, float, float]]]:
-        """page_index -> raw embedded-image bounding boxes (x0, top, x1, bottom),
-        for pages in [page_start, page_end).
+    ) -> dict[int, list[tuple[float, float, float, float, int | None, int | None]]]:
+        """page_index -> raw embedded-image bounding boxes (x0, top, x1, bottom,
+        native_width_px, native_height_px), for pages in [page_start, page_end).
 
         Screen-illustration figures in a real owner's manual are embedded raster
         images, not vector art assembled from many small shapes — confirmed
@@ -219,20 +219,107 @@ class PdfManualReader:
         Size filtering happens later (domain.figures.is_figure_sized); this just
         collects candidates.
 
+        The native pixel size (pdfplumber's "srcsize") rides along too: a real
+        figure/icon and a stretched-fill background box can be the same placed
+        size in points, but not the same *effective resolution* — see
+        domain.figures.is_stretched_fill, confirmed against the Honda Pilot PDF,
+        2026-09-02.
+
         page_start/page_end default to the whole document, but a caller generating
         one chapter should always pass its actual page range: scanning every page
         of a 140-page manual for one 20-page chapter's figures was the dominant
         cost in a generate() that otherwise finished in seconds (observed directly,
         2026-08-25 — phone chapter, 9 real figures, over 2 minutes end to end).
         """
-        out: dict[int, list[tuple[float, float, float, float]]] = {}
+        out: dict[int, list[tuple[float, float, float, float, int | None, int | None]]] = {}
         with pdfplumber.open(pdf_path) as pdf:
             pages = pdf.pages[page_start:page_end] if page_end is not None else pdf.pages[page_start:]
             for offset, page in enumerate(pages):
                 page_index = page_start + offset
-                rects = [(im["x0"], im["top"], im["x1"], im["bottom"]) for im in page.images]
+                rects = []
+                for im in page.images:
+                    native_w, native_h = im.get("srcsize") or (None, None)
+                    rects.append((im["x0"], im["top"], im["x1"], im["bottom"], native_w, native_h))
                 if rects:
                     out[page_index] = rects
+        return out
+
+    def read_running_head_breadcrumbs(
+        self,
+        pdf_path: str,
+        page_start: int,
+        page_end: int,
+        header_boundary_pt: float,
+        separator_font_hint: str,
+    ) -> dict[int, list[str]]:
+        """page_index -> breadcrumb levels (e.g. ["Audio System Basic Operation",
+        "Display Setup"]) read from that page's own header-band running head.
+
+        Some manuals print a "▶▶Area▶Function"-shaped breadcrumb in the page
+        margin of every content page. The arrow glyphs are drawn by a dedicated
+        symbol font that reuses a Latin code point (confirmed real, Honda Pilot,
+        2026-09-02: both arrows decode as the letter "u", indistinguishable by
+        character code alone from a real "u" inside a word like "Audio" -- but
+        always rendered in a different font, `separator_font_hint` a substring of
+        it (e.g. "HONDACommon"), never the surrounding body font. Splitting on
+        "u"-in-that-font (not on "u" generally, which would butcher every real
+        word containing the letter) recovers the levels cleanly.
+
+        The header band can hold more than one physical line (confirmed real,
+        Honda Pilot: a DTP timestamp/filename watermark line sits above the
+        breadcrumb's own line, at a different `top`) -- sorting every header-band
+        character by x0 alone, ignoring which line each one is actually on,
+        interleaves the two lines' characters together into garbage whenever
+        their x0 ranges happen to overlap on a given page. Characters are
+        grouped by (rounded) `top` first; only the LAST (bottom-most, closest to
+        the body) line is used, matching this manual's own consistent stacking
+        order -- the breadcrumb line isn't always the one holding a separator
+        character (a page whose whole breadcrumb is just one bare Area name, no
+        Function yet, has none at all), so "which line has a separator" can't be
+        the selector.
+        """
+        out: dict[int, list[str]] = {}
+        with pdfplumber.open(pdf_path) as pdf:
+            for page_index in range(page_start, min(page_end, len(pdf.pages))):
+                page = pdf.pages[page_index]
+                lines_by_top: dict[float, list] = {}
+                for c in page.chars:
+                    if c["top"] < header_boundary_pt:
+                        # Rounding to 1 decimal wrongly split one real visual line
+                        # into two groups (confirmed real, Honda Pilot: the same
+                        # breadcrumb line's own glyphs land at top=70.1 and
+                        # top=70.3 -- different glyphs' baselines differ by a
+                        # fraction of a point even within one line). A whole
+                        # point is coarse enough to always merge those, still far
+                        # finer than the ~30pt gap between genuinely different
+                        # header-band lines.
+                        lines_by_top.setdefault(round(c["top"]), []).append(c)
+                if not lines_by_top:
+                    continue
+                breadcrumb_line = lines_by_top[max(lines_by_top)]
+                chars = sorted(breadcrumb_line, key=lambda c: c["x0"])
+                # A page whose whole breadcrumb is a single bare Area name (no
+                # Function reached yet) has NO separator character at all on this
+                # line -- confirmed real, Honda Pilot p.265 ("Audio System" alone,
+                # zero arrows). Separators are pure delimiters here, not a
+                # "collection hasn't started yet" gate: with zero of them the
+                # whole line becomes one segment; with two, three parts split
+                # into two segments (an empty first split, from two adjacent
+                # separators, is silently dropped by the `if current.strip()`
+                # checks below).
+                segments: list[str] = []
+                current = ""
+                for c in chars:
+                    if c["text"] == "u" and separator_font_hint in c["fontname"]:
+                        if current.strip():
+                            segments.append(current.strip())
+                        current = ""
+                    else:
+                        current += c["text"]
+                if current.strip():
+                    segments.append(current.strip())
+                if segments:
+                    out[page_index] = segments
         return out
 
     def outline_preview(self, pdf_path: str) -> tuple[int, list[Bookmark]]:

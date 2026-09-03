@@ -228,8 +228,14 @@ code { background: #f0f1f3; padding: 1px 4px; border-radius: 3px; font-size: 12p
    image resolution (reported as too rough before that, 2026-08-25) — but with no
    display size cap, a 1735x1035px PNG rendered at native size blew far past the
    ~1100px content column (reported directly the same way, same day). Cap display
-   width to the column, let height follow; the file itself is untouched. */
-.pub-doc img { width: 100%; max-width: 480px; height: auto; display: block; margin: 8px 0; }
+   width to the column, let height follow; the file itself is untouched.
+   max-height added 2026-09-02: a forced width:100% blows up a PORTRAIT figure
+   (a real phone-screenshot crop, Honda Pilot CabinTalk/Mute Icon, 424x665px
+   native) to ~753px tall once stretched to the 480px column width — reported
+   directly ("2個目がでかい"). width:auto/height:auto (not width:100%) also
+   stops every small figure being force-upscaled to fill the column regardless
+   of its own native size. */
+.pub-doc img { max-width: 480px; max-height: 480px; width: auto; height: auto; display: block; margin: 8px 0; }
 
 .pub-doc h1 {
   border-bottom: 2px solid var(--text);

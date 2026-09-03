@@ -10,7 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from domain.spec_building import _split_bullets
+from domain.spec_building import _LEADING_HEADING_MARKER, _split_bullets
 
 
 def test_plain_paragraph_with_no_bullets_is_untouched():
@@ -97,3 +97,22 @@ def test_placeholder_circles_with_a_spurious_extra_space_are_not_treated_as_bull
     assert item.count("○") == 9
     assert item.startswith("In this manual")
     assert item.endswith("”.")
+
+
+def test_leading_heading_marker_is_stripped():
+    """Real Honda Pilot case, 2026-09-02: "■" is Honda's own printed sub-heading
+    marker, sitting directly against the heading text with no space
+    ("■Changing the Screen Brightness."). The original app's own real output for
+    this exact text has no "■" at all -- confirmed directly
+    (workspace/honda/pilot-2026/features/published/9-display-setup.md: "Changing
+    the Screen Brightness", source=heading). Reported by the user as showing up
+    in the rebuild's requirement text ("手順に■Receiving a Call.とかある")."""
+    assert _LEADING_HEADING_MARKER.sub("", "■Changing the Screen Brightness.") == "Changing the Screen Brightness."
+    assert _LEADING_HEADING_MARKER.sub("", "■ Receiving a Call") == "Receiving a Call"
+
+
+def test_leading_heading_marker_only_strips_a_leading_occurrence():
+    # "■" mid-sentence (not the confirmed real case) is left alone -- only ever
+    # seen at the very start of the paragraph in the real data.
+    text = "Select the ■ icon to continue."
+    assert _LEADING_HEADING_MARKER.sub("", text) == text

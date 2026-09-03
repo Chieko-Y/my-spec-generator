@@ -123,3 +123,67 @@ def test_requirement_between_two_steps_cites_the_step_it_leads_into():
 
     req = next(r for r in spec.requirements if "Caution" in r.text)
     assert req.next_step_text == "2. Touch “I Agree”."
+
+
+def test_page_citations_use_the_profiles_page_number_offset():
+    """Real Honda Pilot PDF case, 2026-09-02: a flat "page_index + 1" assumption
+    (0-indexed -> 1-indexed) is only correct when a PDF's printed page numbering
+    starts on its very first physical page. Confirmed wrong on this manual:
+    page_index 264 (the Features chapter's own divider page) prints "263" in its
+    own footer, and the original app's own real citation for identical text
+    ("Changing the Screen Brightness") is p.285, not this rebuild's un-offset
+    p.287 -- both match a -1 offset, not +1. LayoutConfig.page_number_offset
+    (default 1, preserving every other manual's existing correct behavior) must
+    actually be applied, not just exist unused."""
+    # page_index 286 is the real Honda Pilot PDF page whose own printed footer
+    # reads "285" -- confirmed directly by rendering it, 2026-09-02.
+    lines = [Line(page=286, text="1. Select the setting you want.", top=100.0)]
+    section = Section(
+        title="Display Setup", level=0, page_start=286, page_end=287, lines=lines,
+        matched_by_text=True, source_bookmark_index=0,
+    )
+    profile = Profile(
+        profile_id="test-honda",
+        extends=None,
+        derived_from="fixture",
+        slot_rules=[],
+        layout=LayoutConfig(page_number_offset=-1),
+    )
+
+    spec = build_function_spec(section, profile, "manual", "Display Setup", 1)
+
+    assert spec.procedure[0].source == "p.285 / step"
+    assert spec.pages == [285]
+
+
+def test_heading_prefix_stops_a_subheading_fusing_into_nearby_prose():
+    """Real Honda Pilot PDF case, 2026-09-02: "■Editing a favorite station"
+    (a real printed sub-heading) sat close enough to the following body text
+    that plain adjacency grouping fused them into one unreadable requirement
+    ("■Editing a favorite station Select and hold the desired favorite station
+    icon..."). This is the exact defect the original app (OnlineManualSpec
+    Translator) found and fixed on this same PDF via layout.heading_prefixes
+    (its own CLAUDE.md, 2026-07-29: "小見出しを跨いで文が繋がる", Google
+    built-in's Assistant/Maps/Play sub-headings fusing into one sentence)."""
+    lines = [
+        Line(page=0, text="■Editing a favorite station", top=100.0),
+        Line(page=0, text="Select and hold the desired favorite station icon.", top=108.0),
+    ]
+    section = Section(
+        title="Test section", level=0, page_start=0, page_end=1, lines=lines,
+        matched_by_text=True, source_bookmark_index=0,
+    )
+    profile = Profile(
+        profile_id="test-honda",
+        extends=None,
+        derived_from="fixture",
+        slot_rules=[],
+        layout=LayoutConfig(heading_prefixes=["■"]),
+    )
+
+    spec = build_function_spec(section, profile, "manual", "Test area", 1)
+
+    texts = [r.text for r in spec.requirements]
+    assert "Editing a favorite station." in texts
+    assert "Select and hold the desired favorite station icon." in texts
+    assert not any("■" in t for t in texts)

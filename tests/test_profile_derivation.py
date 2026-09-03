@@ -92,8 +92,8 @@ def test_prefers_chapter_toc_over_running_head_when_both_are_detectable():
 def test_detects_figure_size_threshold_from_the_widest_size_gap():
     # Icons (~11pt) vs. real screen-illustration figures (100pt+) -- confirmed
     # against the real Subaru PDF, 2026-08-25 (see docs/HANDOVER.md).
-    icons = {p: [(0.0, 0.0, 11.0, 11.0)] for p in range(6)}
-    figures = {p + 100: [(0.0, 0.0, 200.0, 150.0)] for p in range(6)}
+    icons = {p: [(0.0, 0.0, 11.0, 11.0, None, None)] for p in range(6)}
+    figures = {p + 100: [(0.0, 0.0, 200.0, 150.0, None, None)] for p in range(6)}
     image_rects = {**icons, **figures}
     bookmarks = [Bookmark(title=f"Chapter {i}", level=0, page_index=i) for i in range(3)]
     lines = [Line(page=p, text="x", top=10.0, x0=60.0) for p in range(3)]
@@ -102,3 +102,30 @@ def test_detects_figure_size_threshold_from_the_widest_size_gap():
 
     assert report.figure_min_width_pt is not None
     assert 11.0 < report.figure_min_width_pt < 200.0
+
+
+def test_stretched_fill_boxes_do_not_skew_the_derived_figure_threshold():
+    """Real Honda Pilot PDF case, 2026-09-02: a 1x1px background box stretched to
+    194.2x336.3pt appeared on nearly every page alongside real figures (100-200pt)
+    and icons (~11pt). Left in, it becomes the widest embedded image and the
+    derived threshold jumps to ~265pt (between the real figures and the fill),
+    which still passes but for the wrong reason -- and a bigger real manual where
+    the fill is the single widest item entirely (no real figure anywhere close)
+    would derive a threshold above every real figure, excluding all of them. The
+    fill must be dropped before the gap search runs at all."""
+    icons = {p: [(0.0, 0.0, 11.0, 11.0, 31, 24)] for p in range(6)}
+    figures = {p + 100: [(0.0, 0.0, 200.0, 150.0, 400, 300)] for p in range(6)}
+    fills = {p + 200: [(0.0, 0.0, 194.2, 336.3, 1, 1)] for p in range(6)}
+    # A real, high-dpi full-bleed chapter-divider photo -- not a stretched fill,
+    # so only the negative-x0 check catches it (Honda Pilot PDF, 2026-09-02).
+    dividers = {p + 300: [(-11.1, 45.4, 684.9, 306.3, 1934, 725)] for p in range(3)}
+    image_rects = {**icons, **figures, **fills, **dividers}
+    bookmarks = [Bookmark(title=f"Chapter {i}", level=0, page_index=i) for i in range(3)]
+    lines = [Line(page=p, text="x", top=10.0, x0=60.0) for p in range(3)]
+
+    report = derive_layout(lines, bookmarks, image_rects)
+
+    assert report.figure_min_width_pt is not None
+    assert 11.0 < report.figure_min_width_pt < 200.0
+    assert report.figure_min_height_pt is not None
+    assert 11.0 < report.figure_min_height_pt < 150.0

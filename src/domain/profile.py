@@ -38,6 +38,45 @@ class LayoutConfig:
     # profiles that never set these behave exactly as before.
     header_boundary_pt: float = 0.0
     footer_boundary_pt: float | None = None
+    # Every "p.N" citation in this app is built from a 0-indexed page_index, so a
+    # constant must be added to turn it into the manual's own PRINTED page number.
+    # The naive assumption (+1, i.e. page_index 0 = printed page 1) only holds when
+    # a PDF's printed numbering starts on its very first physical page. Confirmed
+    # wrong on the real Honda Pilot PDF, 2026-09-02: page_index 264 (the Features
+    # chapter's own divider page) prints "263" in its own footer, and the same -1
+    # offset was independently confirmed by matching two of the original app's own
+    # real citations for identical text ("Changing the Screen Brightness" = p.285,
+    # this rebuild's un-offset default showed p.287; "CabinTalk" = p.385, this
+    # rebuild's default showed a p.385-387 range instead of p.385 alone). This is a
+    # per-PDF constant (how many unnumbered front-matter pages precede printed page
+    # 1), not a bug in the +1 arithmetic itself -- Subaru's PDFs happen to need no
+    # correction (offset=1 is exactly page_index+1), Honda's needs -1.
+    page_number_offset: int = 1
+    # A character a manual uses to print its own sub-headings inline with body
+    # text, glued directly against the heading with no space (e.g. Honda's "■",
+    # confirmed real: "■Editing a favorite station Select and hold..."). Without
+    # this, paragraph-grouping (spec_building.py::_split_lines) has no signal
+    # that a new heading starts here and fuses the heading into whatever
+    # prose/step happens to sit close above it -- this is the exact defect the
+    # original app (OnlineManualSpecTranslator) found and fixed on this same
+    # Honda Pilot PDF (its own CLAUDE.md, 2026-07-29: "小見出しを跨いで文が繋がる"
+    # -- a Google built-in section's Assistant/Maps/Play sub-headings were fusing
+    # into one sentence -- fixed with this exact field). Default empty list
+    # preserves every other manual's existing behavior.
+    heading_prefixes: list[str] = field(default_factory=list)
+    # Some manuals print a 2-level "▶▶Area▶Function" breadcrumb in the page margin
+    # on every content page (confirmed real, Honda Pilot, 2026-09-02) -- far more
+    # reliable than text-matching a chapter's own printed item index against body
+    # headings (see docs/ARCHITECTURE.md for the full incident: an item-index-based
+    # guess silently dropped 3 real functions and mis-promoted 4 Area headers to
+    # their own "functions"). The arrow glyphs are drawn by a dedicated symbol font
+    # reusing the Latin code point for "u" (a common PDF/DTP trick) -- indistinguishable
+    # from a real letter "u" in an area/function name (e.g. "Audio") by character code
+    # alone, but always in a DIFFERENT font than the surrounding text. This is that
+    # font's name (a substring match against pdfplumber's fontname, e.g.
+    # "HONDACommon"). None (default) disables breadcrumb-based section splitting
+    # entirely -- every existing manual's behavior is unchanged.
+    running_head_separator_font: str | None = None
 
 
 @dataclass

@@ -1,13 +1,23 @@
 {
   "profile_id": "honda_v1",
   "extends": "generic_v1",
-  "derived_from": "Auto-derived from honda/pilot-2026/ivi via derive_layout -- review before activating.",
+  "derived_from": "Auto-derived from honda/pilot-2026/ivi via derive_layout, reviewed and corrected 2026-09-02 -- see docs/HANDOVER.md same date. figure_min_width/height_pt removed: the auto-derived value (fixed after a stretched-fill and a full-bleed-divider bug in derive_layout, see docs/ARCHITECTURE.md '8. 図の抽出') still comes out above the real figure sizes actually used in the Features chapter, because this PDF's own figures range widely in size across chapters (large photographic illustrations in Quick Reference/Safe Driving vs. smaller screen-mockup composites in Features) -- one whole-document widest-gap threshold can't serve both. Falls back to generic_v1's 40x40pt default instead, which is well below every real content figure and merged-icon-composite measured on this PDF and well above lone inline icons (~5-20pt).",
   "layout": {
     "columns": 2,
     "section_source": "bookmarks",
     "header_boundary_pt": 75,
     "footer_boundary_pt": 450,
-    "figure_min_width_pt": 516.513,
-    "figure_min_height_pt": 298.554
-  }
+    "page_number_offset": -1,
+    "heading_prefixes": ["■"],
+    "running_head_separator_font": "HONDACommon"
+  },
+  "excluded_section_titles": [
+    "License Agreement",
+    "Software License Agreement",
+    "Copyright",
+    "Trademarks",
+    "Legal Information",
+    "Open Source Licenses",
+    "License Information"
+  ]
 }

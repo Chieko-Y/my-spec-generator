@@ -9,7 +9,14 @@ import re
 import threading
 from dataclasses import dataclass, field, replace
 
-from domain.figures import caption_for, is_figure_sized, is_qr_code_caption, merge_rects
+from domain.figures import (
+    caption_for,
+    is_figure_sized,
+    is_full_bleed_placement,
+    is_qr_code_caption,
+    is_stretched_fill,
+    merge_rects,
+)
 from domain.manual_identity import IdentityGuess, guess_identity
 from domain.manual_parsing import (
     ChapterClassification,
@@ -28,6 +35,7 @@ from domain.manual_parsing import (
     drop_repeating_margin_glyphs,
     filter_page_furniture,
     find_running_head_chapter,
+    find_top_level_chapter_range,
     normalize_label,
     order_by_columns,
     sample_heading_evidence,
@@ -45,7 +53,7 @@ from domain.overlay import (
     apply_thresholds,
     existing_threshold_overlay,
 )
-from domain.spec_building import build_manual_spec_functions
+from domain.spec_building import build_manual_spec_functions, filter_excluded_sections
 
 from .ports import (
     ChapterAllowlistRepository,
@@ -390,6 +398,20 @@ class UseCases:
                     available_chapters=[c.label for c in confirmed],
                 )
         else:
+            running_head_breadcrumbs = None
+            if profile.layout.running_head_separator_font:
+                chapter_range = find_top_level_chapter_range(bookmarks, chapter_prefix)
+                if chapter_range is not None:
+                    range_start, range_end = chapter_range
+                    if range_end is None:
+                        range_end = max((l.page for l in lines), default=range_start) + 1
+                    running_head_breadcrumbs = self.manual_reader.read_running_head_breadcrumbs(
+                        pdf_path,
+                        range_start,
+                        range_end,
+                        profile.layout.header_boundary_pt,
+                        profile.layout.running_head_separator_font,
+                    )
             lines = filter_page_furniture(
                 lines, profile.layout.header_boundary_pt, profile.layout.footer_boundary_pt
             )
@@ -399,6 +421,8 @@ class UseCases:
                 bookmarks,
                 chapter_prefix,
                 section_depth_below_chapter=profile.layout.section_depth_below_chapter,
+                page_number_offset=profile.layout.page_number_offset,
+                running_head_breadcrumbs=running_head_breadcrumbs,
             )
         if not blocks.sections:
             top_level = min((b.level for b in bookmarks), default=0)
@@ -414,13 +438,14 @@ class UseCases:
         functions = build_manual_spec_functions(
             blocks.sections, profile, manual_id, area_title, figures_by_section, page_running_head
         )
+        functions, excluded_sections = filter_excluded_sections(functions, profile.excluded_section_titles)
 
         meta = {
             "unmatched_headings": blocks.unmatched_headings,
             "chapter_prefix": chapter_prefix,
             "chapter_slug": chapter_slug,
             "chapter_label": chapter_label or blocks.chapter_title or chapter_prefix,
-            "excluded_sections": [],
+            "excluded_sections": excluded_sections,
         }
 
         spec = ManualSpec(
@@ -736,7 +761,13 @@ class UseCases:
 
         figures_by_section: list[list[FigureRef]] = [[] for _ in sections]
         for page_index, raw_rects in rects_by_page.items():
-            merged = merge_rects(raw_rects, profile.layout.figure_merge_distance_pt)
+            real_rects = [
+                (x0, top, x1, bottom)
+                for x0, top, x1, bottom, native_w, native_h in raw_rects
+                if not is_stretched_fill(native_w, native_h, x1 - x0, bottom - top)
+                and not is_full_bleed_placement((x0, top, x1, bottom))
+            ]
+            merged = merge_rects(real_rects, profile.layout.figure_merge_distance_pt)
             sized = [
                 r
                 for r in merged
@@ -776,6 +807,7 @@ class UseCases:
                         rect=rect,
                         caption_source="pdf_image",
                         caption_text=nearest_line.text if nearest_line else None,
+                        printed_page=page_index + profile.layout.page_number_offset,
                     )
                 )
         return figures_by_section
