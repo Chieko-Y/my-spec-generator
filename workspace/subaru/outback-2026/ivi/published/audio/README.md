@@ -14,15 +14,15 @@
 ## Numeric thresholds
 
 - Thresholds detected: **2**
-- Filled: **0** / unfilled: **2**
+- Filled: **1** / unfilled: **1**
 - Test-ready functions: **10 / 27**
 
 The manual states almost no numbers, so a tester fills the thresholds in. A function that still has an unfilled threshold cannot become a test specification (`is_test_ready=false`). Fill them in `overlay/thresholds.yaml` or on the screen.
 
 ```mermaid
 pie showData
-    "Filled" : 0
-    "Unfilled" : 2
+    "Filled" : 1
+    "Unfilled" : 1
 ```
 
 ## Figures in the manual
@@ -101,10 +101,12 @@ flowchart LR
 | 22 | [Connecting an Android Auto device](/specifications/subaru/outback-2026/ivi/file/22-connecting-an-android-auto-device.md?chapter=audio) | Audio | 0 | 0 | 0 | o |
 | 23 | [Overview](/specifications/subaru/outback-2026/ivi/file/23-overview.md?chapter=audio) | Audio | 15 | 1 | 0 | - |
 | 24 | [Operating information](/specifications/subaru/outback-2026/ivi/file/24-operating-information.md?chapter=audio) | Audio | 2 | 0 | 0 | - |
-| 25 | [Radio](/specifications/subaru/outback-2026/ivi/file/25-radio.md?chapter=audio) | Audio | 11 | 0 | 2 | - |
+| 25 | [Radio](/specifications/subaru/outback-2026/ivi/file/25-radio.md?chapter=audio) | Audio | 11 | 0 | 1 | - |
 | 26 | [USB memory device](/specifications/subaru/outback-2026/ivi/file/26-usb-memory-device.md?chapter=audio) | Audio | 3 | 0 | 0 | - |
 | 27 | [File information](/specifications/subaru/outback-2026/ivi/file/27-file-information.md?chapter=audio) | Audio | 17 | 1 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

@@ -3438,7 +3438,7 @@
               "unit": "distance",
               "context": "Usually, a problem with radio reception does not mean there is a problem with the radio — it is just the normal result of conditions outside the vehicle. For example, nearby buildings and terrain can interfere with FM reception. Power lines or phone wires can interfere with AM signals. And of course, radio signals have a limited range. The farther the vehicle is from a station, the weaker its signal will be. In addition, reception conditions change constantly as the vehicle moves.",
               "value": "",
-              "status": "unfilled",
+              "status": "not_applicable",
               "evidence": "input error",
               "filled_by": "Chieko"
             }

@@ -1,6 +1,6 @@
 thresholds:
 - threshold_id: b0c980c6d3b7
   value: ''
-  status: unfilled
+  status: not_applicable
   evidence: input error
   filled_by: Chieko

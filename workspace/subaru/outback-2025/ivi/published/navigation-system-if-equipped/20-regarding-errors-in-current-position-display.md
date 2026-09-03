@@ -12,3 +12,4 @@
 | 1 | <span class="req-label">Regarding Errors In Current Position Display</span>The system displays the vehicle current position based on GPS information and data from various sensors and road maps. However, when the radiowave signals from GPS satellites are weak or when signals are received from only two satellites or less, errors may occur in the position. Modifying or adjusting the system will not prevent these errors. | constraint | p.221 / text |
 <!-- GENERATED:END function=e7306d81091e -->
 
+

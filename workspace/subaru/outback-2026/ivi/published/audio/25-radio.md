@@ -6,11 +6,11 @@
 <p class="fn-disclaimer">Every "Presumed requirement" row below is machine-derived from the Owner's Manual text by rule-based extraction — not AI-written — and traceable to the printed page in its Source column.</p>
 
 ## Numeric thresholds (filled in by a tester)
-Filled: 0 / unfilled: 2
+Filled: 1 / unfilled: 1
 
 | Threshold | Matching text (Copied from OM) | Kind | Unit | Value | Status | Evidence | Filled by |
 |---|---|---|---|---|---|---|---|
-| b0c980c6d3b7 | nearby | distance | distance | **unfilled** | unfilled | input error | Chieko |
+| b0c980c6d3b7 | nearby | distance | distance | **unfilled** | not_applicable | input error | Chieko |
 | 43ba52f2c1cb | nearby | distance | distance | **unfilled** | unfilled | — | — |
 
 ## 25-2-1. Service overview
@@ -29,6 +29,8 @@ Filled: 0 / unfilled: 2
 | 10 | <span class="req-label">Radio</span>Cargo loaded on the roof luggage carrier, especially metal objects, may adversely affect the reception of SiriusXM®. | capability | p.112 / text |
 | 11 | <span class="req-label">Radio</span>Alternation or modifications carried out without appropriate authorization may invalidate the user’s right to operate the equipment. | capability | p.113 / text |
 <!-- GENERATED:END function=1371954c350e -->
+
+
 
 
 
