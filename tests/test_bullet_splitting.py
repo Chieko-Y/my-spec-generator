@@ -10,7 +10,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from domain.spec_building import _LEADING_HEADING_MARKER, _NOTE_GLYPH, _split_bullets, _split_lines
+from domain.spec_building import (
+    _LEADING_HEADING_MARKER,
+    _NOTE_GLYPH,
+    _split_bullets,
+    _split_lines,
+    strip_leading_note_glyph,
+)
 
 
 def test_plain_paragraph_with_no_bullets_is_untouched():
@@ -174,3 +180,19 @@ def test_a_note_glyph_line_breaks_a_step_continuation_instead_of_merging():
     assert steps == [(1, 0, 100.0, "Select Home."), (2, 0, 110.0, "Select CabinTalk.")]
     assert len(groups) == 1
     assert [l.text for l in groups[0]] == ["uSelect OFF to mute your voice."]
+
+
+def test_strip_leading_note_glyph_used_for_figure_captions():
+    """User asked for this too, 2026-09-03: the figure caption for this same
+    CabinTalk image was still showing the raw glyph ("uSelect OFF to mute
+    your voice.") since caption_for (application.use_cases._extract_figures)
+    is a separate code path from _split_lines/_split_bullets. Unlike a
+    paragraph, a caption is one short phrase quoted verbatim -- only strip a
+    LEADING occurrence, never split it into multiple pieces."""
+    assert strip_leading_note_glyph("uSelect OFF to mute your voice.") == "Select OFF to mute your voice."
+    # A real word is never touched, same guarantee _NOTE_GLYPH itself gives.
+    assert strip_leading_note_glyph("Your audio system allows your voice.") == "Your audio system allows your voice."
+    # Only a LEADING occurrence is stripped -- a mid-caption one (not a
+    # confirmed real case) is left alone, matching _LEADING_HEADING_MARKER's
+    # own leading-only precedent for "■".
+    assert strip_leading_note_glyph("Select the icon. uThen confirm.") == "Select the icon. uThen confirm."

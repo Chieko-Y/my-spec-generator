@@ -53,7 +53,7 @@ from domain.overlay import (
     apply_thresholds,
     existing_threshold_overlay,
 )
-from domain.spec_building import build_manual_spec_functions, filter_excluded_sections
+from domain.spec_building import build_manual_spec_functions, filter_excluded_sections, strip_leading_note_glyph
 
 from .ports import (
     ChapterAllowlistRepository,
@@ -806,7 +806,7 @@ class UseCases:
                         page=page_index,
                         rect=rect,
                         caption_source="pdf_image",
-                        caption_text=nearest_line.text if nearest_line else None,
+                        caption_text=strip_leading_note_glyph(nearest_line.text) if nearest_line else None,
                         printed_page=page_index + profile.layout.page_number_offset,
                     )
                 )

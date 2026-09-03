@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-e45829f2ccd5.png)
 - Figure 28-1 source: p.385
-- (Copied from OM) uSelect OFF to mute your voice.
+- (Copied from OM) Select OFF to mute your voice.
 
 ## Procedure
 ```mermaid
@@ -40,6 +40,7 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>Select OFF to mute your voice. | capability | p.385 / bullet |
 | 2 | <span class="req-label">CabinTalk®</span>You can adjust the speaker volume by turning the volume knob. | capability | p.385 / text |
 <!-- GENERATED:END function=fde298b9dda6 -->
+
 
 
 

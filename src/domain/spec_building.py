@@ -105,6 +105,17 @@ _BULLET_ISOLATION_CHARS = 2
 _NOTE_GLYPH = re.compile(r"(?<!\S)u(?=[A-Z])")
 
 
+def strip_leading_note_glyph(text: str) -> str:
+    """Public wrapper around _NOTE_GLYPH for callers outside this module that
+    only ever need to drop a LEADING occurrence (e.g. a figure caption, which
+    is otherwise quoted verbatim -- see application.use_cases._extract_figures.
+    Unlike the mid-paragraph splitting _split_bullets does, a caption is a
+    single short phrase, not a paragraph to split into multiple rows -- only
+    strip, never split, and only when the glyph is the very first thing (a
+    real occurrence is always sentence-initial in the confirmed data)."""
+    return _NOTE_GLYPH.sub("", text, count=1) if _NOTE_GLYPH.match(text) else text
+
+
 def _split_bullets(paragraph: str) -> list[tuple[str, bool]]:
     """Split on inline bullet glyphs (or Honda's "u"-glyph note marker, see
     _NOTE_GLYPH), returning (text, is_bullet) pairs.
