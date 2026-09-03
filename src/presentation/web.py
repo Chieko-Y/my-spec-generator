@@ -664,21 +664,28 @@ def thresholds_manual(request: Request, manual_id: str, chapter: str):
     spec = uc.load_spec(manual_id, chapter)
     if spec is None:
         raise HTTPException(404, "generate this chapter first")
-    rows = []
+    groups = []
     for f in spec.functions:
+        rows = []
         for r in f.requirements:
             for t in r.thresholds:
                 rows.append({
-                    "function": f.title,
                     "function_path": f.function_path,
                     "source": r.source,
                     "page_citation": r.page_citation,
                     "next_step_text": r.next_step_text,
                     "threshold": t,
                 })
+        if rows:
+            groups.append({
+                "chapter_number": f.chapter_number,
+                "function": f.title,
+                "unfilled_count": sum(1 for row in rows if row["threshold"].status == ParameterStatus.UNFILLED),
+                "rows": rows,
+            })
     return _render(
         request, "thresholds.html", "thresholds",
-        manual_id=manual_id, chapter=chapter, rows=rows, statuses=list(ParameterStatus),
+        manual_id=manual_id, chapter=chapter, groups=groups, statuses=list(ParameterStatus),
     )
 
 

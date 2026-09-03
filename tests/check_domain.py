@@ -122,6 +122,19 @@ def test_is_test_ready_requires_procedure_and_filled_thresholds() -> None:
     threshold.filled_by = "tester1"
     check("4c. procedure present and all thresholds filled -> test-ready", fn_with_procedure_unfilled.is_test_ready is True)
 
+    # 2026-09-03: a detected threshold that turns out not to be real for this
+    # manual (e.g. domain.parameters' vague_distance firing on "nearby
+    # states" -- geographic adjacency, not an unstated spatial distance) has
+    # no real value to measure, but must still count as resolved, not as a
+    # permanent block on this function's test-readiness.
+    threshold.value = None
+    threshold.status = ParameterStatus.NOT_APPLICABLE
+    threshold.evidence = "geographic adjacency, not a real distance threshold"
+    check(
+        "4d. a threshold marked not_applicable (no value) is still test-ready",
+        fn_with_procedure_unfilled.is_test_ready is True,
+    )
+
 
 def test_content_id_ignores_position() -> None:
     from domain.model import content_id

@@ -193,3 +193,71 @@ def test_register_refuses_to_silently_overwrite_an_existing_manual_id(client, tm
     resp = client.get("/manuals", follow_redirects=False)
     assert f'href="/specifications/{manual_id}?chapter=navigation"' not in resp.text
     assert "not viewable" in resp.text
+
+
+def test_thresholds_page_groups_rows_under_their_own_function(client, tmp_path):
+    """Regression test for the 2026-09-03 redesign (from a flat table to one
+    card per function, each threshold its own block within it) -- the route
+    now groups by FunctionSpec instead of emitting one flat row list, so this
+    exercises that grouping actually reaches the template with the right
+    shape (function header + per-function unfilled count + the threshold's
+    own matched phrase)."""
+    import json
+
+    sys.path.insert(0, str(SRC))
+    from domain.model import (
+        FunctionSpec,
+        ManualSpec,
+        ParameterStatus,
+        RequirementItem,
+        RequirementStrength,
+        SpecSlot,
+        ThresholdParameter,
+    )
+    from infrastructure.serialization import spec_to_dict
+
+    manual_id = "toyota/rav4-2026/multimedia"
+    threshold = ThresholdParameter(
+        threshold_id="th1",
+        matching_text="a certain period of time",
+        kind="duration",
+        unit="time",
+        context="...after a certain period of time.",
+    )
+    requirement = RequirementItem(
+        req_id="r1",
+        slot=SpecSlot.OVERVIEW,
+        text="...after a certain period of time.",
+        source_text="...after a certain period of time.",
+        strength=RequirementStrength.CAPABILITY,
+        source="p.1 / text",
+        thresholds=[threshold],
+    )
+    function = FunctionSpec(
+        function_id="f1",
+        chapter_number="1",
+        title="Map screen",
+        area="Navigation",
+        function_path="Navigation / Map screen",
+        pages=[1],
+        requirements=[requirement],
+    )
+    spec = ManualSpec(
+        manual_id=manual_id,
+        maker="Toyota",
+        model="RAV4 2026",
+        document_title="Multimedia",
+        scope="navigation",
+        markets=["US"],
+        profile_id="generic_v1",
+        functions=[function],
+    )
+    spec_path = tmp_path / "workspace" / manual_id / "generated" / "navigation" / "spec.json"
+    spec_path.write_text(json.dumps(spec_to_dict(spec)), encoding="utf-8")
+
+    resp = client.get(f"/thresholds/{manual_id}", params={"chapter": "navigation"})
+
+    assert resp.status_code == 200
+    assert "1&ensp;Map screen" in resp.text
+    assert "1 unfilled" in resp.text
+    assert "a certain period of time" in resp.text

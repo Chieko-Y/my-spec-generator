@@ -62,6 +62,20 @@ class ParameterStatus(str, Enum):
     FROM_SPEC = "from_spec"
     MEASURED = "measured"
     ASSUMED = "assumed"
+    # A detected threshold that turns out not to be a real one for this
+    # manual (e.g. domain.parameters' vague_distance firing on "nearby
+    # states" -- geographic adjacency, not an unstated spatial distance) --
+    # confirmed real, 2026-09-03: domain.parameters.py's own module docstring
+    # already promised "a false positive gets closed by a tester as 'not
+    # applicable'", but no status existed to actually do that, so a false
+    # positive permanently blocked that function's test-readiness with no
+    # way to resolve it. Deliberately still requires evidence/filled_by, same
+    # as every other non-UNFILLED status (see ThresholdParameter.__post_init__)
+    # -- "why this doesn't apply" is still a decision worth a paper trail, not
+    # a silent dismissal. Treated as "resolved" everywhere is_test_ready and
+    # counts() already just check `status != UNFILLED` -- no special-casing
+    # needed beyond adding this value.
+    NOT_APPLICABLE = "not_applicable"
 
 
 class TermCategory(str, Enum):

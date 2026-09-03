@@ -24,11 +24,16 @@ class OverlayEntry:
             raise ValueError("OverlayEntry requires evidence — a threshold cannot be confirmed without it")
         if not self.filled_by:
             raise ValueError("OverlayEntry requires filled_by")
-        # A blank value is only meaningful for a deliberate revert (status back to
-        # UNFILLED) -- any other status claims to be a real confirmed/derived
+        # A blank value is meaningful for a deliberate revert (status back to
+        # UNFILLED) and for NOT_APPLICABLE (2026-09-03: a detected threshold
+        # that turns out not to be real for this manual has nothing to
+        # measure -- forcing a fake value there would be worse than no value
+        # at all). Every other status claims to be a real confirmed/derived
         # number, so it must actually carry one.
-        if self.status != ParameterStatus.UNFILLED and not self.value:
-            raise ValueError("OverlayEntry requires a value unless status is being reverted to unfilled")
+        if self.status not in (ParameterStatus.UNFILLED, ParameterStatus.NOT_APPLICABLE) and not self.value:
+            raise ValueError(
+                "OverlayEntry requires a value unless status is unfilled or not_applicable"
+            )
 
 
 @dataclass

@@ -1,37 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Thresholds — <code>{{ manual_id }}</code> — {{ chapter }}</h1>
-<p>A value can only be saved with evidence and who filled it in — the manual never states the number itself, so a person has to vouch for it. Setting status back to <code>unfilled</code> reverts a threshold that was confirmed by mistake — evidence/filled_by are still required, so the revert itself stays on record.</p>
-<table>
-  <tr><th>Function</th><th>Source</th><th>Matching text</th><th>Kind / Unit</th><th>Current value</th><th>Status</th><th>Set new value</th></tr>
-  {% for row in rows %}
+<p>A value can only be saved with evidence and who filled it in — the manual never states the number itself, so a person has to vouch for it. Setting status back to <code>unfilled</code> reverts a threshold that was confirmed by mistake — evidence/filled_by are still required, so the revert itself stays on record. If a detected threshold turns out not to be a real one for this manual, set status to <code>not_applicable</code> (with evidence for why) instead of leaving it unfilled forever — it can always be changed to a different status later.</p>
+
+{% if not groups %}
+<div class="flash warn">No numeric thresholds detected in this chapter.</div>
+{% endif %}
+
+{% for group in groups %}
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border)">
+    <h3 style="margin:0">{{ group.chapter_number }}&ensp;{{ group.function }}</h3>
+    <span class="badge {{ 'ready' if group.unfilled_count == 0 else 'unreviewed' }}">{{ group.unfilled_count }} unfilled</span>
+  </div>
+
+  {% for row in group.rows %}
   {% set t = row.threshold %}
-  <tr>
-    <td>{{ row.function }}</td>
-    <td>{{ row.source }}<br><small style="color:#6b6f76">{{ row.function_path }}{% if row.page_citation %} — {{ row.page_citation }}{% endif %}{% if row.next_step_text %} {{ row.next_step_text }}{% endif %}</small></td>
-    <td>{{ t.matching_text }}<br><small style="color:#6b6f76">{{ t.context }}</small></td>
-    <td>{{ t.kind }} / {{ t.unit or '—' }}</td>
-    <td>{{ t.value or '—' }}</td>
-    <td>{{ t.status.value }}</td>
-    <td>
-      <form method="post" action="/thresholds/{{ manual_id }}">
-        <input type="hidden" name="chapter" value="{{ chapter }}">
-        <input type="hidden" name="threshold_id" value="{{ t.threshold_id }}">
-        <input type="text" name="value" placeholder="value (blank if reverting)" style="width:160px;display:inline-block">
-        <select name="status" style="width:120px;display:inline-block">
-          {% for s in statuses %}
-          <option value="{{ s.value }}">{{ s.value }}</option>
-          {% endfor %}
-        </select>
-        <input type="text" name="filled_by" placeholder="your name" required style="width:100px;display:inline-block">
-        <br>
-        <input type="text" name="evidence" placeholder="evidence (required)" required style="width:260px">
-        <button type="submit">Save</button>
-      </form>
-    </td>
-  </tr>
-  {% else %}
-  <tr><td colspan="7">No numeric thresholds detected in this manual.</td></tr>
+  <div style="padding:14px 0;{% if not loop.last %}border-bottom:1px solid var(--border);{% endif %}">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+      <div style="font-weight:600">&#8220;{{ t.matching_text }}&#8221;</div>
+      {% if t.status.value != 'unfilled' %}
+      <span class="badge ready">{% if t.value %}{{ t.value }}{% if t.unit and t.unit != 'as stated' %} {{ t.unit }}{% endif %} — {% endif %}{{ t.status.value }}</span>
+      {% endif %}
+    </div>
+    <div style="color:#6b6f76;font-size:13px;margin-top:2px">{{ t.kind }} / unit {{ t.unit or '—' }} · {{ row.function_path }}{% if row.page_citation %} · {{ row.page_citation }}{% endif %}</div>
+    <p style="margin:8px 0"><small style="color:#6b6f76">(Copied from OM) {{ t.context }}</small></p>
+
+    <form method="post" action="/thresholds/{{ manual_id }}" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <input type="hidden" name="chapter" value="{{ chapter }}">
+      <input type="hidden" name="threshold_id" value="{{ t.threshold_id }}">
+      <input type="text" name="value" value="{{ t.value or '' }}" placeholder="value (e.g. 3 s) — blank to revert" style="width:200px">
+      <select name="status" style="width:140px">
+        {% for s in statuses %}
+        <option value="{{ s.value }}" {% if s == t.status %}selected{% endif %}>{{ s.value }}</option>
+        {% endfor %}
+      </select>
+      <input type="text" name="evidence" value="{{ t.evidence or '' }}" placeholder="evidence — why this value (required)" required style="flex:1;min-width:220px">
+      <input type="text" name="filled_by" value="{{ t.filled_by or '' }}" placeholder="your name" required style="width:140px">
+      <button type="submit">Save</button>
+    </form>
+  </div>
   {% endfor %}
-</table>
+</div>
+{% endfor %}
 {% endblock %}

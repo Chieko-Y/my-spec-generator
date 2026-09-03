@@ -99,14 +99,52 @@ def test_overlay_entry_allows_a_blank_value_when_reverting_to_unfilled():
 
 
 def test_overlay_entry_rejects_a_blank_value_for_any_non_revert_status():
-    """A blank value is only legitimate when explicitly reverting to unfilled --
-    any other status claims to be a real confirmed/derived number and must
-    actually carry one."""
+    """A blank value is only legitimate when explicitly reverting to unfilled
+    or marking a threshold not_applicable -- any other status claims to be a
+    real confirmed/derived number and must actually carry one."""
     for status in ParameterStatus:
-        if status == ParameterStatus.UNFILLED:
+        if status in (ParameterStatus.UNFILLED, ParameterStatus.NOT_APPLICABLE):
             continue
         try:
             OverlayEntry(threshold_id="t1", value="", status=status, evidence="e", filled_by="f")
             assert False, f"expected ValueError for status={status}"
         except ValueError:
             pass
+
+
+def test_overlay_entry_allows_a_blank_value_when_marking_not_applicable():
+    """2026-09-03: a detected threshold that turns out not to be real for this
+    manual (e.g. a vague_distance false positive on geographic adjacency, not
+    an unstated spatial distance) has nothing to measure -- forcing a fake
+    value there would be worse than allowing none."""
+    entry = OverlayEntry(
+        threshold_id="t1", value="", status=ParameterStatus.NOT_APPLICABLE,
+        evidence="Geographic adjacency, not a real distance threshold.", filled_by="tester C",
+    )
+    assert entry.value == ""
+
+
+def test_a_not_applicable_threshold_can_later_be_changed_to_a_different_status():
+    """Answers a real question the user asked, 2026-09-03: marking a threshold
+    not_applicable is not a one-way door -- like any other status, a later
+    set_parameter call with a different status simply replaces the overlay
+    entry (use_cases.set_parameter drops any existing entry for the same
+    threshold_id before appending the new one)."""
+    threshold = ThresholdParameter(
+        threshold_id="t1", matching_text="nearby states", kind="distance", unit="distance",
+        context="ctx", value="", status=ParameterStatus.NOT_APPLICABLE,
+        evidence="Geographic adjacency, not a real distance threshold.", filled_by="tester C",
+    )
+    out = existing_threshold_overlay(_spec_with_threshold(threshold))
+    assert len(out) == 1
+    assert out[0].status == ParameterStatus.NOT_APPLICABLE
+
+    # A tester later decides it WAS a real threshold after all and measures it.
+    threshold.value = "50"
+    threshold.status = ParameterStatus.MEASURED
+    threshold.evidence = "Measured on a real drive between two cities."
+    threshold.filled_by = "tester D"
+    out = existing_threshold_overlay(_spec_with_threshold(threshold))
+    assert len(out) == 1
+    assert out[0].status == ParameterStatus.MEASURED
+    assert out[0].value == "50"
