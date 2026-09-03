@@ -16,8 +16,10 @@ request landed on.
 """
 from __future__ import annotations
 
+import os
 import re
 import statistics
+import threading
 from concurrent.futures import ThreadPoolExecutor
 
 import pdfplumber
@@ -195,14 +197,52 @@ def _read_bookmarks(pdf_path: str) -> list[Bookmark]:
 
 
 class PdfManualReader:
+    """`read()` memoizes its own (expensive) full-document scan per process --
+    see its own docstring below for why."""
+
+    def __init__(self) -> None:
+        self._read_cache: dict[tuple[str, int, float], tuple[list[Line], list[Bookmark]]] = {}
+        self._read_cache_lock = threading.Lock()
+
     def read(self, pdf_path: str, columns: int = 1) -> tuple[list[Line], list[Bookmark]]:
+        """generate() calls this once per chapter, but it always re-scans the
+        WHOLE document regardless of which chapter was asked for -- confirmed
+        the dominant cost for a large manual (Honda Pilot, 700+ pages: 1-2
+        minutes per call, see feedback memory "diagnose hang via CPU"),
+        observed real 2026-09-01: a second chapter of the SAME manual paid
+        the full re-read again with nothing to show for the first one.
+
+        Cached in-process, keyed by (pdf_path, columns, mtime) -- mtime rides
+        along so replacing the PDF on disk under the same path (a corrected
+        upload) invalidates the cache automatically rather than silently
+        serving stale content. Safe to share the returned Line/Bookmark
+        objects across callers: nothing downstream mutates them in place
+        (every transform, e.g. domain.manual_parsing.order_by_columns, uses
+        dataclasses.replace to produce new objects) -- confirmed by grepping
+        the whole src/ tree for any `.top =`/`.text =`/`.x0 =`/`.page =`
+        assignment before relying on this, 2026-09-03.
+
+        Unbounded for now -- deliberately not an LRU or similar: this
+        process only ever sees a handful of distinct manuals across its
+        lifetime today, so eviction would be premature engineering. Revisit
+        if the number of manuals actively cycled through in one running
+        server grows enough for memory to matter.
+        """
+        cache_key = (pdf_path, columns, os.path.getmtime(pdf_path))
+        with self._read_cache_lock:
+            cached = self._read_cache.get(cache_key)
+        if cached is not None:
+            return cached
         lines: list[Line] = []
         with pdfplumber.open(pdf_path) as pdf:
             for page_index, page in enumerate(pdf.pages):
                 words = page.extract_words(use_text_flow=False, keep_blank_chars=False)
                 lines.extend(_group_words_into_lines(words, page_index, columns))
         bookmarks = _read_bookmarks(pdf_path)
-        return lines, bookmarks
+        result = (lines, bookmarks)
+        with self._read_cache_lock:
+            self._read_cache[cache_key] = result
+        return result
 
     def read_image_rects(
         self, pdf_path: str, page_start: int = 0, page_end: int | None = None
