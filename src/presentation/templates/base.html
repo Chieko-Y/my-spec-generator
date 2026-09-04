@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>{{ app_name }}</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/style.css?v={{ static_version }}">
   <script src="/static/vendor/mermaid.min.js"></script>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -24,6 +24,17 @@
           try { localStorage.setItem(key, details.open ? "1" : "0"); } catch (e) {}
         });
       });
+
+      // The Specifications page's file list (spec_view.html's .spec-nav-col)
+      // scrolls independently of the document body, and every navigation is a
+      // full page load starting scrolled to the top of that list -- so
+      // clicking into, say, function 20 of 28 always reloaded with the list
+      // showing functions 1-8 and the real (correctly highlighted) active
+      // item scrolled out of view below the fold, making it look like nothing
+      // was selected at all (reported directly, 2026-09-04). Bring the
+      // active link into view within its own scroll container on every load.
+      const activeNavLink = document.querySelector(".spec-nav a.active");
+      if (activeNavLink) { activeNavLink.scrollIntoView({ block: "center" }); }
     });
   </script>
 </head>

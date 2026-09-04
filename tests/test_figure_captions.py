@@ -31,6 +31,96 @@ def test_picks_the_nearest_line_in_the_same_column_not_an_offcolumn_line_that_ha
     assert result.text == "Select to change audio modes."
 
 
+def test_prefers_a_heading_prefixed_line_over_a_step_whose_top_falls_inside_the_rect():
+    """Real Honda CR-V 2026 case, 2026-09-04: a screenshot's own printed label
+    ("■Phone menu screen", genuinely 30pt above the image, same column) lost to
+    an unrelated numbered step ("3.Select Menu.") purely because that step's own
+    `top` happened to fall INSIDE the image's vertical span (vertical distance
+    0 -- a numbered step list running down the page alongside a screenshot will
+    always coincide with its height this way). Reported directly by a user
+    reading real generated output ("実際はPhone menu screenですよね")."""
+    rect = (35.4, 112.5, 166.0, 176.4)
+    lines = [
+        Line(page=0, text="■Phone menu screen", top=82.1, x0=34.0),
+        Line(page=0, text="1.Press the button.", top=92.6, x0=177.2),
+        Line(page=0, text="2.Select the phone zone.", top=105.4, x0=177.2),
+        Line(page=0, text="3.Select Menu.", top=116.9, x0=177.2),  # top falls inside the rect
+    ]
+    result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
+    assert result is not None
+    assert result.text == "■Phone menu screen"
+
+
+def test_heading_prefixes_default_never_changes_the_result():
+    """Default empty heading_prefixes (every profile without Honda's "■"
+    convention, including every confirmed Subaru case in this file) must behave
+    exactly as before -- the same scenario as above, without heading_prefixes,
+    still picks the step whose top falls inside the rect (vertical distance 0
+    wins on plain distance, matching this function's pre-2026-09-04 behavior)."""
+    rect = (35.4, 112.5, 166.0, 176.4)
+    lines = [
+        Line(page=0, text="■Phone menu screen", top=82.1, x0=34.0),
+        Line(page=0, text="3.Select Menu.", top=116.9, x0=177.2),
+    ]
+    result = caption_for(rect, page=0, lines=lines)
+    assert result is not None
+    assert result.text == "3.Select Menu."
+
+
+def test_a_wrapped_heading_caption_is_merged_across_its_two_physical_lines():
+    """Real Honda CR-V 2026 case, 2026-09-04: the winning heading-prefixed
+    caption line itself wraps across 2 physical PDF lines ("■To pair a cell
+    phone (when there is no" / "phone paired to the system) Phone Pairing
+    Tips:", 10pt apart, same page) -- caption_for previously returned only the
+    first, truncated fragment. Reported directly by a user reading real
+    generated output ("文章が切れてる")."""
+    rect = (35.4, 122.0, 166.0, 185.9)
+    lines = [
+        Line(page=0, text="■To pair a cell phone (when there is no", top=103.2, x0=177.2),
+        Line(page=0, text="phone paired to the system) Phone Pairing Tips:", top=113.2, x0=187.1),
+        Line(page=0, text="1.Press the button.", top=126.4, x0=177.2),
+    ]
+    result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
+    assert result is not None
+    assert result.text == (
+        "■To pair a cell phone (when there is no phone paired to the system) Phone Pairing Tips:"
+    )
+
+
+def test_a_wrapped_caption_does_not_absorb_the_next_capitalized_sentence():
+    """Real Honda CR-V 2026 case, 2026-09-04: "■To make a call using the
+    imported phonebook" is a genuinely complete heading (no terminal
+    punctuation of its own, same shape as a real wrap-in-progress) followed by
+    a real NEW sentence, "When your phone is paired, ..." -- without the
+    lowercase-start check this got fully absorbed into the caption, an
+    over-merge in the opposite direction from the truncation bug this same
+    feature fixes."""
+    rect = (35.4, 220.0, 166.0, 284.0)
+    lines = [
+        Line(page=0, text="■To make a call using the imported phonebook", top=210.4, x0=34.0),
+        Line(page=0, text="When your phone is paired, the contents of its phonebook are automatically", top=222.1, x0=34.0),
+        Line(page=0, text="imported to HFL.", top=233.7, x0=34.0),
+        Line(page=0, text="1.Press the button.", top=245.2, x0=34.0),
+    ]
+    result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
+    assert result is not None
+    assert result.text == "■To make a call using the imported phonebook"
+
+
+def test_a_wrapped_caption_stops_at_a_numbered_step_not_at_a_gap():
+    """A numbered procedure step at a small vertical gap below a genuinely
+    complete (no terminal punctuation of its own) short heading must not be
+    absorbed as if it were that heading's continuation."""
+    rect = (35.4, 90.0, 166.0, 154.0)
+    lines = [
+        Line(page=0, text="■Phone menu screen", top=82.1, x0=34.0),
+        Line(page=0, text="1.Press the button.", top=92.6, x0=177.2),
+    ]
+    result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
+    assert result is not None
+    assert result.text == "■Phone menu screen"
+
+
 def test_excludes_a_lone_short_line_even_when_no_better_column_candidate_exists():
     """Real Subaru case: a lone "1" recurs at the exact same coordinates on 8
     different pages — a page-decoration glyph, not body text — and happened to fall

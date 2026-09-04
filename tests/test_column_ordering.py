@@ -123,6 +123,64 @@ def test_drop_repeating_margin_glyphs_requires_same_position_and_text():
     assert "Tab2" in [l.text for l in result]  # only 2 pages, below the min_repeat_pages bar
 
 
+def test_detect_sidebars_is_off_by_default_even_with_a_real_looking_sidebar_shape():
+    """LayoutConfig.column_detect_per_page defaults to False (see domain.profile)
+    -- order_by_columns must leave a columns=1 manual's pages completely
+    untouched unless a caller explicitly opts in, even when a page shape would
+    otherwise qualify as a sidebar. Protects every existing profile's behavior
+    (Subaru, Honda Pilot) from the 2026-09-04 "column-count-agnostic"
+    experiment's confirmed regression risk (docs/HANDOVER.md same date)."""
+    left = [Line(page=0, text=f"L{i}", top=float(i * 10), x0=50.0) for i in range(3)]
+    right = [Line(page=0, text=f"R{i}", top=float(i * 10), x0=300.0) for i in range(3)]
+    mixed = sorted(left + right, key=lambda l: l.top)
+
+    assert order_by_columns(mixed, 1) == mixed
+    assert order_by_columns(mixed, 1, detect_sidebars=False) == mixed
+
+
+def test_detect_sidebars_reorders_a_genuine_looking_sidebar_on_a_1column_manual():
+    """Real Honda CR-V 2026 case (docs/ARCHITECTURE.md "17."): a chapter that's
+    1-column overall still has pages with a real local sidebar (an icon-meaning
+    legend running parallel to the main step-by-step procedure column) -- with
+    detect_sidebars=True and enough corroboration (>=2 lines each side, real
+    vertical overlap), it must be reordered the same way a columns=2 manual
+    would be."""
+    left = [Line(page=0, text=f"L{i}", top=float(i * 10), x0=50.0) for i in range(4)]
+    right = [Line(page=0, text=f"R{i}", top=float(i * 10) + 5.0, x0=300.0) for i in range(4)]
+    mixed = sorted(left + right, key=lambda l: l.top)
+
+    result = order_by_columns(mixed, 1, detect_sidebars=True)
+
+    assert [l.text for l in result] == ["L0", "L1", "L2", "L3", "R0", "R1", "R2", "R3"]
+
+
+def test_detect_sidebars_ignores_a_single_stray_line_on_the_far_side():
+    """The clearest real false-positive shape found during investigation (a
+    Subaru page number/lone dot-leader digit landing far to one side of an
+    otherwise single-column page): only 1 line on the far side, with zero
+    vertical overlap with the main text -- must NOT be treated as a sidebar."""
+    main = [Line(page=0, text=f"L{i}", top=float(i * 10), x0=50.0) for i in range(10)]
+    stray = [Line(page=0, text="1", top=500.0, x0=560.0)]  # a lone page-number-shaped line
+    mixed = main + stray
+
+    result = order_by_columns(mixed, 1, detect_sidebars=True)
+
+    assert result == mixed
+
+
+def test_detect_sidebars_ignores_two_lines_with_no_vertical_overlap():
+    """Two lines on the far side is still not enough if they don't run in
+    parallel with the main column -- e.g. a small legend/graphic sitting well
+    below the main text, not a real sidebar note."""
+    main = [Line(page=0, text=f"L{i}", top=float(i * 10), x0=50.0) for i in range(5)]
+    far_below = [Line(page=0, text="Poor", top=500.0, x0=400.0), Line(page=0, text="Excellent", top=510.0, x0=400.0)]
+    mixed = main + far_below
+
+    result = order_by_columns(mixed, 1, detect_sidebars=True)
+
+    assert result == mixed
+
+
 def test_synthetic_top_for_position_matches_column_major_order():
     """A raw (x0, top) position -- e.g. a PDF image rect's own coordinates,
     which never go through order_by_columns -- must convert into the same

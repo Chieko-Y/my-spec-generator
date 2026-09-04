@@ -76,6 +76,28 @@ def test_build_blocks_from_font_headings_cuts_sections_on_larger_font_size():
     assert [l.text for l in result.sections[1].lines] == ["Turn the volume knob."]
 
 
+def test_build_blocks_from_font_headings_drops_a_heading_that_repeats_the_chapter_title():
+    """Real Honda CR-V 2026 case (docs/HANDOVER.md 2026-09-04): a chapter's own
+    opening page reprints its title ("Features") as a large-font divider line,
+    immediately above the chapter's intro sentence and its own printed item
+    index. Without this exclusion that divider line became its own spurious
+    function -- literally named the same as its parent chapter -- whose body was
+    the intro blurb plus the raw item-index text (a user-reported garbled-looking
+    real result, not a hypothetical)."""
+    chapter = RunningHeadChapter(label="Features", page_start=0, page_end=1)
+    lines = [
+        Line(page=0, text="Features", top=10.0, x0=60.0, size=18.0),  # chapter-title divider repeat
+        Line(page=0, text="This chapter describes how to operate technology features.", top=20.0, x0=60.0, size=10.0),
+        Line(page=0, text="Audio System....................252", top=30.0, x0=60.0, size=10.0),
+        Line(page=0, text="About Your Audio System", top=50.0, x0=60.0, size=14.0),
+        Line(page=0, text="Touch the source icon to select it.", top=60.0, x0=60.0, size=10.0),
+    ]
+
+    result = build_blocks_from_font_headings(lines, chapter)
+
+    assert [s.title for s in result.sections] == ["About Your Audio System"]
+
+
 def test_sample_heading_evidence_finds_font_sized_headings_within_page_range():
     lines = [
         Line(page=0, text="audio", top=5.0, x0=500.0, size=8.0),  # the running-head label itself

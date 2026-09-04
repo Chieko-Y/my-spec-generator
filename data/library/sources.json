@@ -50,5 +50,18 @@
       "CA"
     ],
     "license_state": "internal_use_permitted"
+  },
+  "honda/cr-v-2026/ivi": {
+    "maker": "Honda",
+    "model": "CR-V 2026",
+    "title": "2026 Honda CR-V Owner's Manual (A3A02626OMEN)",
+    "local_path": "",
+    "source_url": "",
+    "retrieved_at": "2026-09-03",
+    "markets": [
+      "US",
+      "CA"
+    ],
+    "license_state": "internal_use_permitted"
   }
 }

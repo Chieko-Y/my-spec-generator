@@ -25,7 +25,7 @@ from infrastructure.repositories import (
 
 
 class FakeManualReader:
-    def read(self, pdf_path: str, columns: int = 1):
+    def read(self, pdf_path: str, columns: int = 1, split_cross_column: bool = False):
         lines = [
             Line(page=0, text="Multimedia", top=20.0),
             Line(page=1, text="Navigation", top=20.0),

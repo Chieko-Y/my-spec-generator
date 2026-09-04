@@ -67,7 +67,7 @@ def _toc_and_body_lines() -> list[Line]:
 
 
 class FakeManualReader:
-    def read(self, pdf_path: str, columns: int = 1):
+    def read(self, pdf_path: str, columns: int = 1, split_cross_column: bool = False):
         return _toc_and_body_lines(), []
 
     def outline_preview(self, pdf_path: str):
@@ -148,7 +148,7 @@ def test_derive_toc_chapters_finds_the_real_toc_structure(tmp_path):
 
 def test_derive_toc_chapters_raises_when_no_toc_found(tmp_path):
     class NoTocManualReader(FakeManualReader):
-        def read(self, pdf_path: str, columns: int = 1):
+        def read(self, pdf_path: str, columns: int = 1, split_cross_column: bool = False):
             return [Line(page=0, text="Body text only.", top=50.0)], []
 
     uc, manual_id = _build_uc(tmp_path)

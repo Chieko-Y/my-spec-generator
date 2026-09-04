@@ -140,7 +140,9 @@ def _build_line_from_words(ws_sorted: list[dict], page_index: int) -> Line | Non
     )
 
 
-def _group_words_into_lines(words: list[dict], page_index: int, columns: int = 1) -> list[Line]:
+def _group_words_into_lines(
+    words: list[dict], page_index: int, columns: int = 1, split_cross_column: bool = False
+) -> list[Line]:
     # Cluster by proximity to the first word's top in the current cluster, not by
     # rounding top/tolerance to a fixed grid. Binning put two words 1.06pt apart —
     # well inside the 3pt tolerance — into different lines because they straddled a
@@ -162,12 +164,31 @@ def _group_words_into_lines(words: list[dict], page_index: int, columns: int = 1
     lines: list[Line] = []
     for ws in clusters:
         ws_sorted = sorted(ws, key=lambda w: w["x0"])
-        # columns > 1 only: a Y-cluster can still legitimately contain two
-        # different columns' words (see _MAX_INTRA_LINE_GAP_PT above) -- gated on
-        # columns so the well-tested single-column pipeline's behavior is
-        # unchanged (a genuinely wide gap within one real single-column line, e.g.
-        # a table row, should NOT be split there).
-        groups = _split_cross_column_cluster(ws_sorted) if columns > 1 else [ws_sorted]
+        # columns > 1 (or split_cross_column, see below): a Y-cluster can still
+        # legitimately contain two different columns' words (see
+        # _MAX_INTRA_LINE_GAP_PT above) -- gated so the well-tested
+        # single-column pipeline's behavior is unchanged by default (a
+        # genuinely wide gap within one real single-column line, e.g. a table
+        # row, should NOT be split there).
+        #
+        # split_cross_column (from LayoutConfig.column_detect_per_page) opts a
+        # single "columns=1" manual into this same splitting even though it
+        # isn't declared multi-column overall -- confirmed real, Honda CR-V
+        # 2026, 2026-09-04: on an otherwise 1-column page, a short bold-9pt
+        # heading ("Phone menu screen", x0=34-134) and an unrelated light-8pt
+        # sentence fragment from a genuinely different zone of the page
+        # (x0=371+, ~237pt away) landed in the same Y-cluster and fused into
+        # one Line's text ("Phone menu screen compatible cell phone to the
+        # system while the vehicle") -- reported directly by a user reading
+        # real generated output, who pointed out the two pieces are "clearly
+        # separated, and the formatting is different too" (confirmed: 9pt
+        # bold vs 8pt light). Deliberately NOT the default for every manual --
+        # same regression-risk reasoning as column_detect_per_page's other use
+        # in domain.manual_parsing.order_by_columns (docs/ARCHITECTURE.md
+        # "17."/"18."): scoped to manuals with no reviewed baseline to protect.
+        groups = (
+            _split_cross_column_cluster(ws_sorted) if columns > 1 or split_cross_column else [ws_sorted]
+        )
         for group in groups:
             line = _build_line_from_words(group, page_index)
             if line is not None:
@@ -201,10 +222,12 @@ class PdfManualReader:
     see its own docstring below for why."""
 
     def __init__(self) -> None:
-        self._read_cache: dict[tuple[str, int, float], tuple[list[Line], list[Bookmark]]] = {}
+        self._read_cache: dict[tuple[str, int, bool, float], tuple[list[Line], list[Bookmark]]] = {}
         self._read_cache_lock = threading.Lock()
 
-    def read(self, pdf_path: str, columns: int = 1) -> tuple[list[Line], list[Bookmark]]:
+    def read(
+        self, pdf_path: str, columns: int = 1, split_cross_column: bool = False
+    ) -> tuple[list[Line], list[Bookmark]]:
         """generate() calls this once per chapter, but it always re-scans the
         WHOLE document regardless of which chapter was asked for -- confirmed
         the dominant cost for a large manual (Honda Pilot, 700+ pages: 1-2
@@ -212,15 +235,16 @@ class PdfManualReader:
         observed real 2026-09-01: a second chapter of the SAME manual paid
         the full re-read again with nothing to show for the first one.
 
-        Cached in-process, keyed by (pdf_path, columns, mtime) -- mtime rides
-        along so replacing the PDF on disk under the same path (a corrected
-        upload) invalidates the cache automatically rather than silently
-        serving stale content. Safe to share the returned Line/Bookmark
-        objects across callers: nothing downstream mutates them in place
-        (every transform, e.g. domain.manual_parsing.order_by_columns, uses
-        dataclasses.replace to produce new objects) -- confirmed by grepping
-        the whole src/ tree for any `.top =`/`.text =`/`.x0 =`/`.page =`
-        assignment before relying on this, 2026-09-03.
+        Cached in-process, keyed by (pdf_path, columns, split_cross_column,
+        mtime) -- mtime rides along so replacing the PDF on disk under the
+        same path (a corrected upload) invalidates the cache automatically
+        rather than silently serving stale content. Safe to share the
+        returned Line/Bookmark objects across callers: nothing downstream
+        mutates them in place (every transform, e.g.
+        domain.manual_parsing.order_by_columns, uses dataclasses.replace to
+        produce new objects) -- confirmed by grepping the whole src/ tree for
+        any `.top =`/`.text =`/`.x0 =`/`.page =` assignment before relying on
+        this, 2026-09-03.
 
         Unbounded for now -- deliberately not an LRU or similar: this
         process only ever sees a handful of distinct manuals across its
@@ -228,7 +252,7 @@ class PdfManualReader:
         if the number of manuals actively cycled through in one running
         server grows enough for memory to matter.
         """
-        cache_key = (pdf_path, columns, os.path.getmtime(pdf_path))
+        cache_key = (pdf_path, columns, split_cross_column, os.path.getmtime(pdf_path))
         with self._read_cache_lock:
             cached = self._read_cache.get(cache_key)
         if cached is not None:
@@ -236,8 +260,29 @@ class PdfManualReader:
         lines: list[Line] = []
         with pdfplumber.open(pdf_path) as pdf:
             for page_index, page in enumerate(pdf.pages):
-                words = page.extract_words(use_text_flow=False, keep_blank_chars=False)
-                lines.extend(_group_words_into_lines(words, page_index, columns))
+                words = page.extract_words(
+                    use_text_flow=False, keep_blank_chars=False, extra_attrs=["upright"]
+                )
+                # Rotated text (upright=False) is a vertical page-edge tab label
+                # printed as real extractable text, not an image -- confirmed
+                # against the real Honda CR-V 2026 PDF, 2026-09-04: a rotated
+                # "Features" chapter tab is printed in the side margin of nearly
+                # every page of that chapter (direction="ttb", top-to-bottom).
+                # pdfplumber still reports a page-coordinate bounding box for it,
+                # and that box's `top` sometimes coincidentally lands within
+                # _LINE_TOLERANCE_PT of a real horizontal line's `top` on the same
+                # page -- _group_words_into_lines then fuses the two into one Line
+                # (e.g. "Features ■To" prefixed onto a real heading, or
+                # "Features 2.Select Recents." spliced into real step text),
+                # confirmed by a user reading the real generated output. No
+                # horizontal (real body/heading) text anywhere in any manual
+                # profiled so far has ever needed to be rotated, so dropping every
+                # non-upright word before line-grouping is safe generally, not
+                # just for this one recurring label.
+                words = [w for w in words if w.get("upright", True)]
+                lines.extend(
+                    _group_words_into_lines(words, page_index, columns, split_cross_column)
+                )
         bookmarks = _read_bookmarks(pdf_path)
         result = (lines, bookmarks)
         with self._read_cache_lock:

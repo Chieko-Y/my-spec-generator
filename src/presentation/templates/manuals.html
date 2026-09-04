@@ -145,7 +145,7 @@
             </select>
             <label>Chapter label shown in the generated title (optional)</label>
             <input type="text" name="chapter_label">
-            <button type="submit">Generate</button>
+            <button type="submit" class="generate-submit-btn" disabled>Generate</button>
           </form>
         </details>
       </td>
@@ -417,6 +417,7 @@ document.querySelectorAll('.generate-details').forEach((details) => {
   const select = details.querySelector('.chapter-select');
   const form = details.querySelector('form');
   const reviewEl = details.querySelector('.profile-review');
+  const submitBtn = form.querySelector('.generate-submit-btn');
 
   function renderReview(data) {
     statusEl.textContent = 'This manual needs a one-time review before it can be generated.';
@@ -522,6 +523,14 @@ document.querySelectorAll('.generate-details').forEach((details) => {
     reviewEl.style.display = 'none';
     reviewEl.innerHTML = '';
     form.style.display = '';
+    // Generate must stay disabled until a real chapter is actually selectable --
+    // the <select> was already disabled while loading, but the submit <button>
+    // itself was not, so a click during this window submitted the form with
+    // chapter_prefix silently missing (disabled <select> options are dropped
+    // from the submitted data, not just visually greyed out). Reported directly
+    // by a user clicking Generate before the dropdown had finished loading.
+    select.disabled = true;
+    submitBtn.disabled = true;
     try {
       const res = await fetch('/api/chapters/' + manualId);
       if (!res.ok) {
@@ -547,6 +556,7 @@ document.querySelectorAll('.generate-details').forEach((details) => {
         select.appendChild(opt);
       }
       select.disabled = false;
+      submitBtn.disabled = false;
       statusEl.textContent = `${data.page_count} page(s), ${data.chapters.length} top-level chapter(s) found.` +
         (data.shallow_warning ? ' Warning: bookmarks are shallow (few levels) — sections inside the chosen chapter may not split well.' : '');
     } catch (e) {

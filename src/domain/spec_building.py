@@ -53,7 +53,17 @@ _CONSTRAINT_MARKERS = (" if ", " when ", " unless ", "cannot", " only if ")
 # line breaks between items (e.g. "...server: ● Displaying traffic... ● Displaying
 # parking..."). Each bullet is its own independently testable requirement, not a
 # sub-clause of the paragraph before it, so it must not stay merged into one row.
-_BULLET_CHARS = "●•▪○◦"
+# "■" joined this set 2026-09-04: Honda CR-V 2026 real data showed it appearing
+# MID-paragraph, not just leading ("...you must first pair your Bluetooth-
+# ■Phone menu screen compatible cell phone to the system...", "...cannot be
+# ■To delete a paired phone selected.") -- text that would otherwise read as one
+# garbled run-on sentence with an unrelated caption/note fragment spliced into
+# the middle of it. A LEADING "■" is still handled separately by
+# _LEADING_HEADING_MARKER below (stripped, not split -- that confirmed Honda
+# Pilot behavior is unaffected: _LEADING_HEADING_MARKER already consumes any
+# leading "■" before this set is ever consulted, so only a genuinely
+# mid-paragraph "■" newly becomes a split point here).
+_BULLET_CHARS = "●•▪○◦■"
 # A bullet only counts as a split point when nothing but whitespace (or a string
 # edge) precedes it — a real bullet always starts a fresh word, though the manual's
 # own typesetting doesn't reliably put a space *after* it (e.g. "●Operate the touch
@@ -116,6 +126,19 @@ def strip_leading_note_glyph(text: str) -> str:
     return _NOTE_GLYPH.sub("", text, count=1) if _NOTE_GLYPH.match(text) else text
 
 
+def strip_leading_heading_marker(text: str) -> str:
+    """Public wrapper around _LEADING_HEADING_MARKER (defined further below)
+    for callers outside this module -- same "strip, never split" contract as
+    strip_leading_note_glyph above, for the same reason (a figure caption is a
+    single short phrase, not a paragraph to split into rows). Needed because
+    caption_for (domain.figures) picks its nearest-line candidate from the RAW
+    lines, before this module's own paragraph-grouping ever runs -- a genuine
+    caption-worthy heading like Honda's "■Phone menu screen" reaches
+    application.use_cases._extract_figures with its leading "■" still
+    attached, confirmed real, Honda CR-V 2026, 2026-09-04."""
+    return _LEADING_HEADING_MARKER.sub("", text)
+
+
 def _split_bullets(paragraph: str) -> list[tuple[str, bool]]:
     """Split on inline bullet glyphs (or Honda's "u"-glyph note marker, see
     _NOTE_GLYPH), returning (text, is_bullet) pairs.
@@ -166,14 +189,21 @@ _WRAP_HYPHEN = re.compile(r"(\w)-$")
 
 # Honda's own printed sub-heading marker ("■ Receiving a Call", "■Editing a
 # favorite station...") sits directly against the heading text with no space,
-# same layout quirk as _BULLET_CHARS -- but unlike a bullet it never starts a
-# new requirement item, it's fused with the body text that follows it into one
-# paragraph (confirmed 2026-09-02, Honda Pilot: "Display Setup■Changing the
-# Screen Brightness." -- one requirement, not two). The original app's own
-# real output for this exact same text has no "■" at all ("Changing the Screen
-# Brightness"), confirming it's page typography to drop, not real content.
-# Only a LEADING "■" is stripped -- it is always a heading marker at the start
-# of the section's own paragraph, never seen elsewhere in the confirmed cases.
+# same layout quirk as _BULLET_CHARS -- but when it's the very first thing in
+# its own paragraph group, it never starts a new requirement item there, it's
+# fused with the body text that follows it into one paragraph (confirmed
+# 2026-09-02, Honda Pilot: "Display Setup■Changing the Screen Brightness." --
+# one requirement, not two). The original app's own real output for this exact
+# same text has no "■" at all ("Changing the Screen Brightness"), confirming
+# it's page typography to drop, not real content. Only a LEADING "■" is
+# stripped here (applied to each paragraph group BEFORE _split_bullets ever
+# runs, see build_function_spec below) -- a "■" anywhere else in the same
+# paragraph is left for _BULLET_CHARS/_split_bullets to split into its own row
+# instead, since by definition it can't be "this paragraph's own opening
+# marker" a second time. Confirmed necessary, not just leading, 2026-09-04:
+# real Honda CR-V 2026 data has "■" appearing mid-paragraph, spliced into
+# unrelated surrounding text ("...Bluetooth- ■Phone menu screen compatible
+# cell phone...").
 _LEADING_HEADING_MARKER = re.compile(r"^■\s*")
 
 

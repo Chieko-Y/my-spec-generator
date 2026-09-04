@@ -194,6 +194,21 @@ def _function_markdown(function, manual_id: str) -> str:
             lines.append(f"- Figure {function.chapter_number}-{i} source: p.{fig.printed_page}")
             if fig.caption_text:
                 lines.append(f"- (Copied from OM) {_esc(fig.caption_text)}")
+            # Blank line between figures, not just at the very end of the loop.
+            # Without it every figure's image+source+caption ran together with
+            # no blank line anywhere between them, so python-markdown's nl2br
+            # extension (see markdown_view.py) rendered the WHOLE figures
+            # section as one single <p> with plain <br> between every line --
+            # no real paragraph boundary anywhere, so the gap between one
+            # figure's own caption and the NEXT figure's image looked
+            # identical to the gap between an image and its own caption.
+            # Reported directly, 2026-09-04 ("図とキャプションがちょっと
+            # 離れていて、次の図のキャプションとまちがえそう"). A blank line
+            # here makes each figure its own <p> (real browser paragraph
+            # margin between figures) while the 3 lines within one figure
+            # stay tightly <br>-joined -- a real, visible distinction instead
+            # of uniform spacing throughout.
+            lines.append("")
         lines.append("")
 
     if function.procedure:
@@ -380,5 +395,33 @@ class MarkdownSpecPublisher:
             (published_dir / ".stale_files_after_last_publish.txt").write_text(
                 "\n".join(stale), encoding="utf-8"
             )
+        else:
+            (published_dir / ".stale_files_after_last_publish.txt").unlink(missing_ok=True)
 
         return written
+
+    def _stale_manifest_path(self, manual_id: str, chapter_slug: str) -> Path:
+        return self.workspace_dir / manual_id / "published" / chapter_slug / ".stale_files_after_last_publish.txt"
+
+    def list_stale_files(self, manual_id: str, chapter_slug: str) -> list[str]:
+        manifest = self._stale_manifest_path(manual_id, chapter_slug)
+        if not manifest.exists():
+            return []
+        return [line for line in manifest.read_text(encoding="utf-8").splitlines() if line]
+
+    def delete_stale_files(self, manual_id: str, chapter_slug: str) -> list[str]:
+        """Deletes exactly the files this publisher itself listed as stale after
+        the last publish() call -- never a caller-supplied filename list, so this
+        can only ever remove a file publish() itself decided is no longer part of
+        the current spec (see the "old files are reported, not deleted
+        automatically" note in publish() above; this is the human-triggered
+        follow-up action, not a change to that default)."""
+        published_dir = self.workspace_dir / manual_id / "published" / chapter_slug
+        deleted = []
+        for name in self.list_stale_files(manual_id, chapter_slug):
+            path = published_dir / name
+            if path.exists():
+                path.unlink()
+                deleted.append(name)
+        self._stale_manifest_path(manual_id, chapter_slug).unlink(missing_ok=True)
+        return deleted

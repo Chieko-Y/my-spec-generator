@@ -19,7 +19,9 @@ from domain.profile import Profile
 
 
 class ManualReader(Protocol):
-    def read(self, pdf_path: str, columns: int = 1) -> tuple[list[Line], list[Bookmark]]: ...
+    def read(
+        self, pdf_path: str, columns: int = 1, split_cross_column: bool = False
+    ) -> tuple[list[Line], list[Bookmark]]: ...
 
     def outline_preview(self, pdf_path: str) -> tuple[int, list[Bookmark]]:
         """Return (page_count, bookmarks) without extracting body text — used for the
@@ -122,6 +124,10 @@ class SpecPublisher(Protocol):
     def publish(
         self, spec: ManualSpec, chapter_slug: str, allow_restricted: bool, terms: list[GlossaryTerm]
     ) -> list[str]: ...
+
+    def list_stale_files(self, manual_id: str, chapter_slug: str) -> list[str]: ...
+
+    def delete_stale_files(self, manual_id: str, chapter_slug: str) -> list[str]: ...
 
 
 class FigureRenderer(Protocol):

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <p><code>{{ manual_id }}</code></p>
-<div style="display:flex; gap:24px;">
-  <div style="width:240px; flex:none;">
+<div class="spec-view-row">
+  <div class="spec-nav-col">
     <div class="card spec-nav">
       <a class="readme-link {{ 'active' if not chapter else '' }}" href="/specifications/{{ manual_id }}">README (all chapters)</a>
       {% for c in nav %}
@@ -16,7 +16,20 @@
       {% endfor %}
     </div>
   </div>
-  <div class="pub-doc" style="flex:1;">
+  <div class="pub-doc">
+    {% if stale_files %}
+    <div class="card" style="border-color:#c77;background:#fff6f6;margin-bottom:12px;">
+      <strong>This chapter has {{ stale_files|length }} leftover file(s) from an earlier generate/publish</strong>
+      <p style="font-size:13px;color:#6b6f76;">These filenames are no longer produced by the current spec (usually because the profile or section-cut changed) but were never deleted automatically, so a function number can appear to be duplicated. Hidden from the sidebar above already.</p>
+      <ul style="font-size:13px;">
+        {% for f in stale_files %}<li><code>{{ f }}</code></li>{% endfor %}
+      </ul>
+      <form method="post" action="/specifications/{{ manual_id }}/stale-files/delete">
+        <input type="hidden" name="chapter" value="{{ chapter }}">
+        <button type="submit">Delete these {{ stale_files|length }} file(s)</button>
+      </form>
+    </div>
+    {% endif %}
     {{ body_html | safe }}
   </div>
 </div>

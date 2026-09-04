@@ -493,7 +493,17 @@ def detect_column_count(lines: list[Line]) -> tuple[int, float | None]:
     return 2, (xs[idx] + xs[idx + 1]) / 2
 
 
-def order_by_columns(lines: list[Line], columns: int) -> list[Line]:
+_SIDEBAR_MIN_LINES_PER_SIDE = 2  # a real second column/sidebar has more than
+# one line of its own; a lone stray line (a page number, an isolated
+# dot-leader digit) landing on the far side of the widest x0 gap is not one.
+_SIDEBAR_MIN_OVERLAP_PT = 20.0  # the two sides' `top` ranges must genuinely
+# overlap -- a real column/sidebar runs in parallel with the main text, not
+# somewhere entirely above or below it on the page.
+
+
+def order_by_columns(
+    lines: list[Line], columns: int, detect_sidebars: bool = False
+) -> list[Line]:
     """Rewrite each Line's `top` into a reading-order key AND return the lines
     sorted by (page, new top), so every caller — whether it only compares
     (page, top) tuples (build_blocks' section-window logic, filter_page_furniture's
@@ -554,10 +564,38 @@ def order_by_columns(lines: list[Line], columns: int) -> list[Line]:
     requirements, caught by a manual regression check right after this was
     first written column-count-agnostic) with zero real-data evidence it was
     even needed there.
+
+    `detect_sidebars` (default False, opt-in via LayoutConfig.
+    column_detect_per_page): when columns <= 1, still scan each page for a
+    genuine local sidebar/note block and reorder just that page -- e.g. a
+    "1-column overall" chapter whose printed manual still boxes off tip/note
+    text next to the main flow on SOME pages. Confirmed real, Honda CR-V 2026,
+    2026-09-04 (docs/ARCHITECTURE.md "17."): an icon-meaning legend column
+    ("The phone is compatible with Bluetooth® Audio.", etc.) sits to the right
+    of the main step-by-step procedure column on the same page; read in raw
+    top order the two interleave and the legend text never reaches the
+    paragraph it belongs to. A real second column/sidebar was DELIBERATELY
+    NOT auto-enabled for every columns<=1 manual (docs/HANDOVER.md 2026-09-04
+    "column-count-agnostic" experiment): tested directly against the real
+    pipeline, it changed requirement counts by +4% to +25% across multiple
+    already-reviewed Subaru/Honda Pilot chapters with no way to confirm
+    whether that was correct recovery or new corruption -- some of those
+    pages turned out to be 3-column-ish (docs/ARCHITECTURE.md "17."), which
+    this function's 2-column-only design can't safely reorder anyway. Gated
+    on two corroborating signals to at least exclude the clearest false
+    positives (a lone stray line -- a page number, an isolated dot-leader
+    digit -- landing on the far side of the widest x0 gap is not a real
+    column): both sides need >= _SIDEBAR_MIN_LINES_PER_SIDE lines, and their
+    `top` ranges must overlap by >= _SIDEBAR_MIN_OVERLAP_PT. Does NOT call
+    drop_repeating_margin_glyphs -- that sub-step is what regressed Subaru in
+    the column-count-agnostic experiment above, and there is no real-data
+    evidence it is needed on this path either.
     """
-    if columns <= 1:
+    if columns > 1:
+        lines = drop_repeating_margin_glyphs(lines)
+    elif not detect_sidebars:
         return lines
-    lines = drop_repeating_margin_glyphs(lines)
+
     by_page: dict[int, list[Line]] = {}
     for l in lines:
         by_page.setdefault(l.page, []).append(l)
@@ -568,6 +606,20 @@ def order_by_columns(lines: list[Line], columns: int) -> list[Line]:
         if detected_columns <= 1 or boundary is None:
             out.extend(page_lines)
             continue
+        if columns <= 1:
+            # Sidebar path only: require corroboration a plain columns > 1
+            # manual doesn't need, since that path is already validated as-is.
+            left = [l for l in page_lines if l.x0 < boundary]
+            right = [l for l in page_lines if l.x0 >= boundary]
+            if len(left) < _SIDEBAR_MIN_LINES_PER_SIDE or len(right) < _SIDEBAR_MIN_LINES_PER_SIDE:
+                out.extend(page_lines)
+                continue
+            left_tops = [l.top for l in left]
+            right_tops = [l.top for l in right]
+            overlap = min(max(left_tops), max(right_tops)) - max(min(left_tops), min(right_tops))
+            if overlap < _SIDEBAR_MIN_OVERLAP_PT:
+                out.extend(page_lines)
+                continue
         out.extend(
             replace(l, top=(0 if l.x0 < boundary else 1) * _COLUMN_OFFSET_PT + l.top)
             for l in page_lines
@@ -806,6 +858,16 @@ def build_blocks_from_font_headings(
     couple points larger than body text (e.g. 12pt vs ~8-9pt body), clearing the
     size_ratio threshold even though they aren't real headings. Same _HAS_LETTER_RE
     signal detect_running_head_chapters already uses for the same judgment call.
+    Also excludes a candidate whose text matches the CHAPTER's own title --
+    confirmed against the real Honda CR-V 2026 PDF, 2026-09-04: this chapter's
+    opening page (252) reprints the chapter title "Features" itself as a large-
+    font divider line, immediately above the chapter's intro sentence and its own
+    printed item index. Without this exclusion that divider line becomes a
+    spurious function named "Features" (same as its own parent chapter) whose
+    body is the intro blurb plus the raw dot-leader item index text -- reported
+    directly by a user reading the real generated output. A real sub-function
+    sharing its exact name with the chapter that contains it is not a pattern
+    expected to occur legitimately.
     Cuts sections from ordered_chapter_lines (not the raw, possibly column-
     interleaved chapter_lines) so each Section's own lines come out in true
     column-major reading order even if a caller passes lines straight from a
@@ -820,6 +882,7 @@ def build_blocks_from_font_headings(
         return BuildBlocksResult(chapter_title=chapter.label, sections=[], unmatched_headings=[])
 
     body_size = statistics.median(sizes)
+    chapter_title_norm = _normalize(chapter.label)
     ordered_chapter_lines = sorted(chapter_lines, key=lambda l: (l.page, l.top))
     raw_heading_lines = sorted(
         (
@@ -828,6 +891,7 @@ def build_blocks_from_font_headings(
             if l.size >= body_size * size_ratio
             and _HAS_LETTER_RE.search(l.text)
             and not _SUBHEADING_MARKER_RE.match(l.text.strip())
+            and _normalize(l.text.strip()) != chapter_title_norm
         ),
         key=lambda l: (l.page, l.top),
     )

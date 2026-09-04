@@ -15,6 +15,7 @@ from domain.spec_building import (
     _NOTE_GLYPH,
     _split_bullets,
     _split_lines,
+    strip_leading_heading_marker,
     strip_leading_note_glyph,
 )
 
@@ -118,10 +119,30 @@ def test_leading_heading_marker_is_stripped():
 
 
 def test_leading_heading_marker_only_strips_a_leading_occurrence():
-    # "■" mid-sentence (not the confirmed real case) is left alone -- only ever
-    # seen at the very start of the paragraph in the real data.
+    # _LEADING_HEADING_MARKER itself only ever matches at position 0 (anchored
+    # regex) -- a mid-sentence "■" is left for _BULLET_CHARS/_split_bullets to
+    # split into its own row instead (see test_mid_paragraph_note_glyph_is_
+    # split_into_its_own_row below), not silently dropped here.
     text = "Select the ■ icon to continue."
     assert _LEADING_HEADING_MARKER.sub("", text) == text
+
+
+def test_mid_paragraph_black_square_glyph_is_split_into_its_own_row():
+    """Real Honda CR-V 2026 case, 2026-09-04: "■" is CR-V's own note/caption
+    marker, same convention as Honda Pilot's, but observed spliced into the
+    MIDDLE of an otherwise unrelated sentence -- not just leading (which
+    _LEADING_HEADING_MARKER already handled). Reported directly by the user
+    reading real generated output: "...you must first pair your Bluetooth-
+    ■Phone menu screen compatible cell phone to the system while the vehicle."
+    Without this fix the whole thing stayed one unreadable fused sentence;
+    splitting on "■" the same way an ordinary bullet splits isolates the
+    spliced-in fragment instead of letting it corrupt the surrounding text."""
+    text = "cannot be ■To delete a paired phone selected."
+    result = _split_bullets(text)
+    assert result == [
+        ("cannot be", False),
+        ("To delete a paired phone selected.", True),
+    ]
 
 
 def test_honda_note_glyph_is_split_off_and_stripped():
@@ -196,3 +217,15 @@ def test_strip_leading_note_glyph_used_for_figure_captions():
     # confirmed real case) is left alone, matching _LEADING_HEADING_MARKER's
     # own leading-only precedent for "■".
     assert strip_leading_note_glyph("Select the icon. uThen confirm.") == "Select the icon. uThen confirm."
+
+
+def test_strip_leading_heading_marker_used_for_figure_captions():
+    """Real Honda CR-V 2026 case, 2026-09-04: caption_for (domain.figures)
+    picks its nearest-line candidate from the RAW lines, before this module's
+    paragraph-grouping (which is what _LEADING_HEADING_MARKER was originally
+    wired into) ever runs -- a genuine caption-worthy heading ("■Phone menu
+    screen") reached application.use_cases._extract_figures with its leading
+    "■" still attached. Same "strip a leading occurrence only, never split"
+    contract as strip_leading_note_glyph above."""
+    assert strip_leading_heading_marker("■Phone menu screen") == "Phone menu screen"
+    assert strip_leading_heading_marker("No marker here.") == "No marker here."

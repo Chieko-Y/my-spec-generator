@@ -84,3 +84,67 @@ def test_score_fitness_skips_bookmark_and_anomaly_checks_for_running_head_profil
 
     assert report.bookmark_depth_ok is None
     assert report.anomaly_ratio is None
+
+
+def test_score_fitness_catches_one_chapter_being_a_different_column_count():
+    """Real Honda CR-V 2026 case (docs/HANDOVER.md 2026-09-04): the document as a
+    whole is 1-column, but its Features chapter specifically is 2-column. A
+    whole-document aggregate check missed this and let generic_v1 (columns=1) pass
+    cleanly; the per-chapter check must catch it even though every OTHER chapter
+    genuinely agrees with the profile."""
+    bookmarks = [
+        Bookmark(title="Safety", level=0, page_index=0),
+        Bookmark(title="Features", level=0, page_index=10),
+        Bookmark(title="Maintenance", level=0, page_index=20),
+    ]
+    # Front matter and Maintenance: single-column, no wide x0 gap.
+    one_column_lines = [
+        Line(page=p, text=f"L{p}", top=10.0, x0=50.0)
+        for p in list(range(0, 10)) + list(range(20, 30))
+    ]
+    # Features (pages 10-19): two clearly separated columns, x0 gap > MIN_COLUMN_GAP_PT.
+    two_column_lines = [
+        Line(page=p, text=f"left{p}", top=10.0, x0=50.0) for p in range(10, 20)
+    ] + [
+        Line(page=p, text=f"right{p}", top=10.0, x0=300.0) for p in range(10, 20)
+    ]
+    profile = _profile(section_source="bookmarks", columns=1)
+
+    report = score_fitness(one_column_lines + two_column_lines, bookmarks, profile)
+
+    assert report.column_match_ok is False
+    assert any("Features" in r and "2-column" in r for r in report.reasons)
+
+
+def test_sample_anomaly_ratio_reports_the_worst_chapter_not_just_the_first(monkeypatch):
+    """The 'one-click Generate' path (resolve_manual_profile) doesn't know a target
+    chapter yet, so it used to sample only the first top-level bookmark chapter --
+    typically front matter (e.g. "A Few Words About Safety" for every Honda manual
+    seen so far), which is rarely where a real layout mismatch garbles text. A
+    profile that's clean for front matter but garbles a later real chapter (e.g.
+    Features) must still fail. Isolated from build_blocks/text_anomalies'
+    heuristics (covered elsewhere) by faking _anomaly_ratio_for_chapter's per-
+    chapter result directly -- this test is only about the sampling/aggregation
+    logic in _sample_anomaly_ratio itself."""
+    import domain.profile_fitness as profile_fitness
+
+    bookmarks = [
+        Bookmark(title="Safety", level=0, page_index=0),
+        Bookmark(title="Features", level=0, page_index=1),
+        Bookmark(title="Maintenance", level=0, page_index=2),
+    ]
+    ratios_by_chapter = {"Safety": 0.0, "Features": 0.9, "Maintenance": 0.1}
+    monkeypatch.setattr(
+        profile_fitness,
+        "_anomaly_ratio_for_chapter",
+        lambda lines, bookmarks, profile, prefix: ratios_by_chapter[prefix],
+    )
+    profile = _profile(section_source="bookmarks", columns=1)
+
+    ratio, chapter = profile_fitness._sample_anomaly_ratio([], bookmarks, profile, None)
+
+    assert chapter == "Features"
+    assert ratio == 0.9
+
+    report = score_fitness([], bookmarks, profile)
+    assert any("Features" in r and "90%" in r for r in report.reasons)

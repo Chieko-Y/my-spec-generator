@@ -84,7 +84,25 @@ body {
 /* Specifications page's own left panel (spec_view.html): README + one
    accordion per chapter, each expanding to that chapter's function files.
    Same caret/accordion look as the maker accordion above, but this list
-   lives in the main content area, not .nav-sidebar. */
+   lives in the main content area, not .nav-sidebar.
+
+   .spec-view-row/.spec-nav-col/.pub-doc together give the nav list and the
+   document body their OWN independent scrollbars, each confined to a fixed-
+   height row -- not position:sticky, which reported as still letting the
+   list drift out of view (2026-09-04: user found the current item hard to
+   place after scrolling the document, tried sticky first, still unclear).
+   With a fixed-height row, scrolling the document (mouse over .pub-doc)
+   physically cannot move .spec-nav-col at all, and the nav list gets its own
+   scrollbar only once it's actually taller than the row -- no ambiguity
+   about which panel a scroll gesture affects. The row's height is the
+   viewport minus .app-main's own top+bottom padding (24px each), so it fits
+   without the page itself growing a second, outer scrollbar. */
+.spec-view-row { display: flex; gap: 16px; height: calc(100vh - 48px); }
+.spec-nav-col {
+  width: 220px;
+  flex: none;
+  overflow-y: auto;
+}
 .spec-nav a {
   display: block;
   padding: 6px 12px;
@@ -92,11 +110,23 @@ body {
   color: var(--text);
   text-decoration: none;
   border-radius: 4px;
+  border-left: 3px solid transparent;
 }
 .spec-nav a:hover { background: #f0f1f3; }
-.spec-nav a.active { background: #eaf0fe; color: var(--accent); font-weight: 600; }
+/* Stronger than a plain background tint alone -- a left accent bar reads as
+   "current position" at a glance even when scanning quickly, the same cue
+   .nav-sidebar's own top-level active tab is missing but this list benefits
+   more from (many more items, all the same visual weight otherwise). */
+.spec-nav a.active { background: #eaf0fe; color: var(--accent); font-weight: 600; border-left-color: var(--accent); }
 .spec-nav .readme-link { font-weight: 600; margin-bottom: 4px; }
 
+/* Bold + accent color + uppercase so a chapter name (e.g. "Features",
+   "Phone") reads as a structurally different, higher level than the plain
+   function file-links nested under it -- previously the same weight/color as
+   everything else, so it was hard to tell "this is a chapter" from "this is
+   just another item" at a glance (reported directly, 2026-09-04).
+   text-transform is purely visual (CSS-only) -- the underlying chapter slug/
+   label used in URLs and everywhere else is untouched. */
 .spec-nav details.chapter-accordion summary {
   list-style: none;
   cursor: pointer;
@@ -105,6 +135,10 @@ body {
   gap: 6px;
   padding: 6px 12px;
   font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   border-radius: 4px;
 }
 .spec-nav details.chapter-accordion summary::-webkit-details-marker { display: none; }
@@ -184,18 +218,24 @@ code { background: #f0f1f3; padding: 1px 4px; border-radius: 3px; font-size: 12p
 
 .pub-doc {
   background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 20px 28px;
-  /* .pub-doc is a flex child (style="flex:1" in spec_view.html) inside a flex row
-     with the file-list sidebar. A flex child's default min-width is auto, not 0 —
-     it will not shrink below the intrinsic width of whatever is inside it (a wide
-     table, a mermaid SVG with long node labels), so the whole page grows past the
+  /* .pub-doc is a flex child (.spec-view-row above) next to the file-list
+     sidebar. A flex child's default min-width is auto, not 0 — it will not
+     shrink below the intrinsic width of whatever is inside it (a wide table,
+     a mermaid SVG with long node labels), so the whole page grows past the
      viewport and needs horizontal scroll even though nothing inside .pub-doc
-     individually looks oversized (reported directly, 2026-08-25, after the image
-     size itself was already capped — this is the classic flexbox min-width trap,
-     a second, separate cause). min-width: 0 lets this column actually shrink;
-     overflow-x is a fallback so if some single element is still wider than the
-     column, only that box scrolls instead of the whole page. */
+     individually looks oversized (reported directly, 2026-08-25, after the
+     image size itself was already capped — this is the classic flexbox
+     min-width trap, a second, separate cause). min-width: 0 lets this column
+     actually shrink; overflow-x is a fallback so if some single element is
+     still wider than the column, only that box scrolls instead of the whole
+     page. flex/overflow-y make this column scroll independently of
+     .spec-nav-col within their shared fixed-height row (see that rule's own
+     comment above) — the document's own vertical scroll never touches the
+     nav list, and vice versa. */
+  flex: 1;
   min-width: 0;
   overflow-x: auto;
+  overflow-y: auto;
 }
 .pub-doc s, .pub-doc del { color: var(--bad); }
 /* Glossary term highlight -- a matched manual wording, hover shows the
@@ -235,7 +275,26 @@ code { background: #f0f1f3; padding: 1px 4px; border-radius: 3px; font-size: 12p
    directly ("2個目がでかい"). width:auto/height:auto (not width:100%) also
    stops every small figure being force-upscaled to fill the column regardless
    of its own native size. */
-.pub-doc img { max-width: 480px; max-height: 480px; width: auto; height: auto; display: block; margin: 8px 0; }
+.pub-doc img { max-width: 480px; max-height: 480px; width: auto; height: auto; display: block; margin: 0; }
+/* Each figure is its own paragraph (image + <br>-joined source/caption
+   lines, see markdown_publisher.py's blank-line-between-figures fix). A
+   caption still read as roughly equidistant between its own image (above)
+   and the next figure's image (below) even after giving the image an
+   asymmetric margin -- reported directly, 2026-09-04, twice (first with a
+   screenshot, then "下と上の真ん中にあるので、もう少し上に移動できると
+   いいかな" after the first attempt), because that approach depended on
+   exactly how a <p>'s own top margin collapses with a replaced first-child
+   element's (<img>) margin -- not reliable enough to trust by eye. Setting
+   the margin explicitly on the PARAGRAPH itself instead removes that
+   guesswork entirely: zero top margin (so it starts right where the
+   previous figure's bottom margin ends, nothing to collapse with) and one
+   clear bottom margin (:has(img) scopes this to figure paragraphs only, not
+   every plain-text paragraph elsewhere in the document). The image itself
+   now has NO margin at all -- still asked to be tighter after a first pass
+   at 4px ("もうちょっとキャプションを上に詰めたらいいかな") -- so the only
+   gap left between an image and its own caption is the text line's own
+   normal leading, not an explicit margin on top of it. */
+.pub-doc p:has(img) { margin: 0 0 28px; }
 
 .pub-doc h1 {
   border-bottom: 2px solid var(--text);

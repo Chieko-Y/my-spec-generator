@@ -17,6 +17,7 @@ from .manual_parsing import (
     build_blocks,
     detect_column_count,
     filter_page_furniture,
+    find_top_level_chapter_range,
     order_by_columns,
 )
 from .profile import Profile
@@ -59,35 +60,53 @@ def bookmark_depth_ok(bookmarks: list[Bookmark]) -> tuple[bool, str]:
     return True, ""
 
 
-def _column_match_ok(lines: list[Line], profile: Profile) -> tuple[bool, str]:
+def _column_match_ok(lines: list[Line], bookmarks: list[Bookmark], profile: Profile) -> tuple[bool, str]:
+    """Checked per top-level chapter, not once over the whole document. A whole-
+    document aggregate silently averages away a chapter that's genuinely a
+    different column count from the rest of the book -- confirmed against the real
+    Honda CR-V 2026 PDF (docs/HANDOVER.md 2026-09-04): its Features chapter is
+    2-column but the document overall is mostly 1-column, so the aggregate said
+    "1-column", matched generic_v1's columns=1, and passed -- while the real
+    Features text was garbled (a left-column heading fused into an unrelated
+    right-column sentence) because nothing ever looked at that chapter specifically.
+    Only meaningful for section_source="bookmarks", same scope as
+    _sample_anomaly_ratio below; other section sources fall back to the old
+    whole-document check.
+    """
+    if profile.layout.section_source == "bookmarks" and bookmarks:
+        top_level = min(b.level for b in bookmarks)
+        chapters = [b for b in bookmarks if b.level == top_level]
+        max_page = max((l.page for l in lines), default=-1)
+        for chapter in chapters:
+            chapter_range = find_top_level_chapter_range(bookmarks, chapter.title)
+            if chapter_range is None:
+                continue
+            page_start, page_end = chapter_range
+            page_end = max_page + 1 if page_end is None else page_end
+            chapter_lines = [l for l in lines if page_start <= l.page < page_end]
+            if len(chapter_lines) < 2:
+                continue
+            detected, _ = detect_column_count(chapter_lines)
+            if detected != profile.layout.columns:
+                return False, (
+                    f"chapter {chapter.title!r}: detected {detected}-column layout, "
+                    f"profile assumes {profile.layout.columns}"
+                )
+        return True, ""
+
     detected, _ = detect_column_count(lines)
     if detected != profile.layout.columns:
         return False, f"detected {detected}-column layout, profile assumes {profile.layout.columns}"
     return True, ""
 
 
-def _sample_anomaly_ratio(
-    lines: list[Line], bookmarks: list[Bookmark], profile: Profile, chapter_prefix: str | None
-) -> float | None:
-    """Actually run the parsing pipeline with this profile on one sample chapter and
-    score the result with text_anomalies.flag -- the most direct signal available,
-    matching this project's practice of checking real output rather than assuming a
-    profile fits from its config values alone. Only meaningful for
-    section_source="bookmarks" today: running_head/chapter_toc sampling would need a
-    chapter target this function doesn't have without running its own detection
-    first, which belongs in profile_derivation.py, not here.
-    """
-    if profile.layout.section_source != "bookmarks" or not bookmarks:
-        return None
-    top_level = min(b.level for b in bookmarks)
-    prefix = chapter_prefix or next((b.title for b in bookmarks if b.level == top_level), None)
-    if prefix is None:
-        return None
-
+def _anomaly_ratio_for_chapter(
+    lines: list[Line], bookmarks: list[Bookmark], profile: Profile, prefix: str
+) -> float:
     filtered = filter_page_furniture(
         lines, profile.layout.header_boundary_pt, profile.layout.footer_boundary_pt
     )
-    filtered = order_by_columns(filtered, profile.layout.columns)
+    filtered = order_by_columns(filtered, profile.layout.columns, profile.layout.column_detect_per_page)
     blocks = build_blocks(
         filtered,
         bookmarks,
@@ -117,6 +136,48 @@ def _sample_anomaly_ratio(
     return flagged / total
 
 
+def _sample_anomaly_ratio(
+    lines: list[Line], bookmarks: list[Bookmark], profile: Profile, chapter_prefix: str | None
+) -> tuple[float | None, str | None]:
+    """Actually run the parsing pipeline with this profile and score the result
+    with text_anomalies.flag -- the most direct signal available, matching this
+    project's practice of checking real output rather than assuming a profile fits
+    from its config values alone. Only meaningful for section_source="bookmarks"
+    today: running_head/chapter_toc sampling would need a chapter target this
+    function doesn't have without running its own detection first, which belongs
+    in profile_derivation.py, not here.
+
+    When `chapter_prefix` is given (an explicit single-chapter check), only that
+    chapter is sampled, same as before. When it's None -- the "one-click Generate"
+    profile-resolution path, which doesn't know a target chapter yet -- EVERY
+    top-level bookmark chapter is sampled and the WORST ratio is returned, not
+    just the first one. Sampling only the first top-level chapter (front-matter
+    boilerplate like "A Few Words About Safety" in every Honda manual seen so far)
+    let a profile that's wrong for a real content chapter (e.g. Features) pass
+    cleanly, since front matter is rarely where a layout mismatch garbles text --
+    confirmed against the real Honda CR-V 2026 PDF (docs/HANDOVER.md 2026-09-04).
+    Returns (ratio, chapter_title_sampled) so the caller can name the offending
+    chapter in its reason.
+    """
+    if profile.layout.section_source != "bookmarks" or not bookmarks:
+        return None, None
+
+    if chapter_prefix is not None:
+        return _anomaly_ratio_for_chapter(lines, bookmarks, profile, chapter_prefix), chapter_prefix
+
+    top_level = min(b.level for b in bookmarks)
+    chapters = [b for b in bookmarks if b.level == top_level]
+    if not chapters:
+        return None, None
+    worst_ratio = -1.0
+    worst_title: str | None = None
+    for chapter in chapters:
+        ratio = _anomaly_ratio_for_chapter(lines, bookmarks, profile, chapter.title)
+        if ratio > worst_ratio:
+            worst_ratio, worst_title = ratio, chapter.title
+    return worst_ratio, worst_title
+
+
 def score_fitness(
     lines: list[Line],
     bookmarks: list[Bookmark],
@@ -131,15 +192,15 @@ def score_fitness(
         if not bookmarks_ok:
             reasons.append(reason)
 
-    column_match_ok, reason = _column_match_ok(lines, profile)
+    column_match_ok, reason = _column_match_ok(lines, bookmarks, profile)
     if not column_match_ok:
         reasons.append(reason)
 
-    anomaly_ratio = _sample_anomaly_ratio(lines, bookmarks, profile, chapter_prefix)
+    anomaly_ratio, anomaly_chapter = _sample_anomaly_ratio(lines, bookmarks, profile, chapter_prefix)
     if anomaly_ratio is not None and anomaly_ratio > _ANOMALY_RATIO_THRESHOLD:
         reasons.append(
-            f"{anomaly_ratio:.0%} of sample requirement/step text looks garbled "
-            f"(threshold {_ANOMALY_RATIO_THRESHOLD:.0%})"
+            f"chapter {anomaly_chapter!r}: {anomaly_ratio:.0%} of sample requirement/step "
+            f"text looks garbled (threshold {_ANOMALY_RATIO_THRESHOLD:.0%})"
         )
 
     return FitnessReport(

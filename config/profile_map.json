@@ -4,7 +4,8 @@
     "subaru/outback-2026/ivi": "subaru_v1",
     "subaru/outback-2025/ivi": "subaru_chapter_toc_v1",
     "subaru/ascent-2026/ivi": "subaru_chapter_toc_v1",
-    "honda/pilot-2026/ivi": "honda_v1"
+    "honda/pilot-2026/ivi": "honda_v1",
+    "honda/cr-v-2026/ivi": "honda_v2"
   },
   "default_profile_id": "generic_v1"
 }

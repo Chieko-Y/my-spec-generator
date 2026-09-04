@@ -63,6 +63,9 @@ class FileConfigProvider:
             running_head_separator_font=layout_raw.get(
                 "running_head_separator_font", base_layout.running_head_separator_font
             ),
+            column_detect_per_page=layout_raw.get(
+                "column_detect_per_page", base_layout.column_detect_per_page
+            ),
         )
 
         if "slot_rules" in raw:

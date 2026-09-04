@@ -41,6 +41,18 @@ app.mount("/static", StaticFiles(directory=str(settings.PROJECT_ROOT / "static")
 
 templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
 
+# StaticFiles serves style.css with no explicit Cache-Control (unlike every
+# HTML page below, which _render always marks no-cache) -- a browser's own
+# heuristic caching can then keep serving a stale copy after a real CSS
+# change even across a plain reload, confirmed directly, 2026-09-04: a user
+# saw the Specifications page's file-list layout still broken after several
+# normal reloads, only fixed by a hard refresh. Appending this process-start
+# mtime as a query string busts that cache on every server restart (the same
+# point any src/ or static/ edit already needs a restart to take effect, see
+# docs/NEW_MAKER_CHECKLIST.md's server-restart trap) without needing a user
+# to know to hard-refresh.
+STATIC_VERSION = str(int((settings.PROJECT_ROOT / "static" / "style.css").stat().st_mtime))
+
 uc = build_use_cases()
 
 
@@ -142,6 +154,7 @@ def _render(request: Request, template: str, active_tab: str, **ctx) -> HTMLResp
             "makers": _makers_for_sidebar(),
             "flash": flash,
             "flash_kind": flash_kind,
+            "static_version": STATIC_VERSION,
             **ctx,
         },
     )
@@ -609,12 +622,19 @@ def _spec_nav(manual_id: str) -> list[dict]:
     always links to a chapter's README separately, as that chapter
     accordion's first item) -- computed for every chapter regardless of which
     one is currently being viewed, so the whole nav tree is always visible,
-    not just the active chapter's files."""
+    not just the active chapter's files. Stale files (a leftover from an
+    earlier publish() under a different profile/section-cut, see
+    list_stale_published_files) are excluded -- otherwise a chapter that's
+    been regenerated shows both the old and new file for the same function
+    number side by side (reported directly: CR-V's Features listed both
+    "1-audio-system.md" from an earlier generic_v1 run and "1-features.md"
+    from the corrected honda_v2 run)."""
     nav = []
     for chapter in _viewable_chapters_in_order(manual_id):
         pub_dir = settings.WORKSPACE_DIR / manual_id / "published" / chapter
+        stale = set(uc.list_stale_published_files(manual_id, chapter))
         files = sorted(
-            (p.name for p in pub_dir.glob("*.md") if p.name != "README.md"),
+            (p.name for p in pub_dir.glob("*.md") if p.name != "README.md" and p.name not in stale),
             key=_function_file_sort_key,
         )
         nav.append({"chapter": chapter, "files": files})
@@ -624,6 +644,7 @@ def _spec_nav(manual_id: str) -> list[dict]:
 def _render_spec_view(
     request: Request, manual_id: str, body_html: str, chapter: str | None, current_file: str | None
 ) -> HTMLResponse:
+    stale_files = uc.list_stale_published_files(manual_id, chapter) if chapter else []
     return _render(
         request,
         "spec_view.html",
@@ -633,6 +654,20 @@ def _render_spec_view(
         chapter=chapter,
         current_file=current_file,
         body_html=body_html,
+        stale_files=stale_files,
+    )
+
+
+# Deleting stale files must stay a deliberate, human-triggered action (never
+# automatic on publish, see markdown_publisher.py's publish() docstring) --
+# this route only ever deletes exactly the filenames list_stale_published_files
+# itself already named, never anything the client submits.
+@app.post("/specifications/{manual_id:path}/stale-files/delete")
+def delete_stale_files_route(manual_id: str, chapter: str = Form(...)):
+    deleted = uc.delete_stale_published_files(manual_id, chapter)
+    return _redirect(
+        f"/specifications/{manual_id}?chapter={chapter}",
+        f"deleted {len(deleted)} stale file(s)" if deleted else "no stale files to delete",
     )
 
 

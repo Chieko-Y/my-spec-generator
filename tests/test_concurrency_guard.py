@@ -32,7 +32,7 @@ class SlowManualReader:
     def __init__(self, delay_s: float):
         self.delay_s = delay_s
 
-    def read(self, pdf_path: str, columns: int = 1):
+    def read(self, pdf_path: str, columns: int = 1, split_cross_column: bool = False):
         time.sleep(self.delay_s)
         lines = [
             Line(page=0, text="Multimedia", top=20.0),

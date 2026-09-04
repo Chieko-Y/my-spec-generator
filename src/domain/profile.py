@@ -77,6 +77,18 @@ class LayoutConfig:
     # "HONDACommon"). None (default) disables breadcrumb-based section splitting
     # entirely -- every existing manual's behavior is unchanged.
     running_head_separator_font: str | None = None
+    # Opt-in per manual, default False so every existing profile's behavior is
+    # unchanged (see domain.manual_parsing.order_by_columns's `detect_sidebars`
+    # param docstring for the full incident/rationale, docs/ARCHITECTURE.md
+    # "17."). columns<=1 normally skips per-page column detection entirely;
+    # this makes order_by_columns still scan each page for a genuine local
+    # sidebar/note block (gated on corroboration -- see that docstring) even
+    # though the chapter is 1-column overall. Deliberately NOT the default:
+    # tested directly against Subaru/Honda Pilot's already-reviewed output and
+    # found to change requirement counts unpredictably with no way to confirm
+    # correctness there. Set true only for a manual with no reviewed baseline
+    # to protect (first used: honda/cr-v-2026/ivi via honda_v2.json).
+    column_detect_per_page: bool = False
 
 
 @dataclass

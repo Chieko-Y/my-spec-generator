@@ -1,0 +1,13 @@
+{
+  "profile_id": "honda_v2",
+  "extends": "generic_v1",
+  "derived_from": "Auto-derived from honda/cr-v-2026/ivi via derive_layout, reviewed 2026-09-04 -- see docs/HANDOVER.md same date. figure_min_width/height_pt removed: the auto-derived value (282.98x177.13pt) excluded every real content figure in the Features chapter, whose actual figures are portrait screen-mockup composites around 194x336pt -- one whole-document widest-gap threshold picked a boundary above them (same failure mode already documented for honda_v1). Falls back to generic_v1's 40x40pt default instead, confirmed well below every real content figure measured in this chapter (from ~130pt icon composites up to the 194x336pt mockups) and well above lone inline icons (~2-25pt). heading_prefixes:[\"■\"] added same day, matching honda_v1 -- CR-V uses the identical \"■\" sub-heading marker convention (confirmed real: \"■To make a call using the imported phonebook\", \"■Favorite Contacts\"), and derive_layout's draft never sets this field (it isn't derived automatically), so it was silently missing until reviewed here. column_detect_per_page:true added same day (docs/ARCHITECTURE.md \"17.\"): the Features chapter is 1-column overall but individual pages have a real local sidebar (e.g. an icon-meaning legend running parallel to the main procedure column, p.316) that a plain columns=1 read never reorders, scattering the sidebar's text into the wrong place. Deliberately NOT enabled by default for every manual (tested directly against Subaru/Honda Pilot and found to change already-reviewed output unpredictably) -- CR-V has no reviewed baseline to protect, so it opts in here specifically.",
+  "layout": {
+    "columns": 1,
+    "section_source": "bookmarks",
+    "header_boundary_pt": 20,
+    "footer_boundary_pt": 395,
+    "heading_prefixes": ["■"],
+    "column_detect_per_page": true
+  }
+}

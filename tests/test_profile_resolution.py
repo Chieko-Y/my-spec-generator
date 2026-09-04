@@ -49,7 +49,7 @@ class FakeManualReader:
         )
         self.read_calls = 0
 
-    def read(self, pdf_path: str, columns: int = 1):
+    def read(self, pdf_path: str, columns: int = 1, split_cross_column: bool = False):
         self.read_calls += 1
         return self.lines, self.bookmarks
 

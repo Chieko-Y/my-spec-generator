@@ -73,7 +73,7 @@ class FakeManualReader:
     def __init__(self, lines: list[Line] | None = None):
         self._lines = lines if lines is not None else _running_head_lines()
 
-    def read(self, pdf_path: str, columns: int = 1):
+    def read(self, pdf_path: str, columns: int = 1, split_cross_column: bool = False):
         return self._lines, []
 
     def outline_preview(self, pdf_path: str):

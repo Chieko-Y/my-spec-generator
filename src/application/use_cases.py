@@ -53,7 +53,12 @@ from domain.overlay import (
     apply_thresholds,
     existing_threshold_overlay,
 )
-from domain.spec_building import build_manual_spec_functions, filter_excluded_sections, strip_leading_note_glyph
+from domain.spec_building import (
+    build_manual_spec_functions,
+    filter_excluded_sections,
+    strip_leading_heading_marker,
+    strip_leading_note_glyph,
+)
 
 from .ports import (
     ChapterAllowlistRepository,
@@ -258,13 +263,19 @@ class UseCases:
 
         pdf_path = self.original_library.path_for(manual_id)
         profile = self.config_provider.profile_for(manual_id, source.get("maker", ""))
-        # Column-aware word-to-line clustering (columns > 1) needs the profile's
-        # columns value at read() time, before any line even exists to reorder --
-        # merging words from two different columns into one Line's text (when they
-        # happen to land close vertically) can't be undone by reordering lines
-        # afterward. See pdf_reader.py::_group_words_into_lines for the real case
-        # this fixes (2026-08-27, 2025 Subaru supplement).
-        lines, bookmarks = self.manual_reader.read(pdf_path, columns=profile.layout.columns)
+        # Column-aware word-to-line clustering (columns > 1, or
+        # column_detect_per_page for a columns=1 manual that still has local
+        # cross-column fusion on some pages -- see pdf_reader.py::
+        # _group_words_into_lines) needs the profile's settings at read() time,
+        # before any line even exists to reorder -- merging words from two
+        # different columns/zones into one Line's text (when they happen to
+        # land close vertically) can't be undone by reordering lines
+        # afterward. See pdf_reader.py::_group_words_into_lines for the real
+        # cases this fixes (2026-08-27, 2025 Subaru supplement; 2026-09-04,
+        # Honda CR-V 2026).
+        lines, bookmarks = self.manual_reader.read(
+            pdf_path, columns=profile.layout.columns, split_cross_column=profile.layout.column_detect_per_page
+        )
         # Snapshot each page's own printed running-head/footer text (production
         # filename + page number) before filter_page_furniture (below, per branch)
         # drops it as noise -- kept only as citation metadata on each requirement
@@ -339,7 +350,9 @@ class UseCases:
             # line as column 0 and left the true left/right column text unsplit and
             # interleaved, same as if columns=1 had been used).
             chapter_lines = [l for l in lines if match.page_start <= l.page < match.page_end]
-            chapter_lines = order_by_columns(chapter_lines, profile.layout.columns)
+            chapter_lines = order_by_columns(
+                chapter_lines, profile.layout.columns, profile.layout.column_detect_per_page
+            )
             blocks = None
             if item_index_entries is not None:
                 blocks = build_blocks_from_item_index(chapter_lines, match, item_index_entries)
@@ -384,7 +397,9 @@ class UseCases:
                 lines, profile.layout.header_boundary_pt, profile.layout.footer_boundary_pt
             )
             chapter_lines = [l for l in lines if match.page_start <= l.page < match.page_end]
-            chapter_lines = order_by_columns(chapter_lines, profile.layout.columns)
+            chapter_lines = order_by_columns(
+                chapter_lines, profile.layout.columns, profile.layout.column_detect_per_page
+            )
             blocks = None
             if item_index_entries is not None:
                 blocks = build_blocks_from_item_index(chapter_lines, match, item_index_entries)
@@ -415,9 +430,28 @@ class UseCases:
             lines = filter_page_furniture(
                 lines, profile.layout.header_boundary_pt, profile.layout.footer_boundary_pt
             )
-            lines = order_by_columns(lines, profile.layout.columns)
+            # A separate variable, not reassigning `lines` -- _extract_figures
+            # below (and synthetic_top_for_position within it) needs the RAW,
+            # un-reordered lines to detect each page's own column boundary and
+            # convert a figure rect's real coordinates into synthetic space
+            # itself; handing it already-reordered lines double-transforms
+            # them (see that function's own docstring: "lines_on_page should
+            # be this page's real text lines"). Confirmed real, Honda CR-V
+            # 2026, 2026-09-04: with column_detect_per_page reordering some of
+            # this manual's pages, a figure caption search using the
+            # already-reordered lines picked a farther, wrong heading over a
+            # closer, correct one purely because the synthetic top values no
+            # longer reflected real physical distance. This branch (bookmarks,
+            # also Honda Pilot's own section_source) was the only one of the
+            # three that reassigned `lines` here instead of using a separate
+            # name -- the running_head/chapter_toc branches above already (by
+            # accident of using `chapter_lines`) passed raw lines through
+            # correctly.
+            ordered_lines = order_by_columns(
+                lines, profile.layout.columns, profile.layout.column_detect_per_page
+            )
             blocks = build_blocks(
-                lines,
+                ordered_lines,
                 bookmarks,
                 chapter_prefix,
                 section_depth_below_chapter=profile.layout.section_depth_below_chapter,
@@ -792,7 +826,9 @@ class UseCases:
                         break
                 if section_idx is None:
                     continue
-                nearest_line = caption_for(rect, page_index, lines)
+                nearest_line = caption_for(
+                    rect, page_index, lines, heading_prefixes=tuple(profile.layout.heading_prefixes)
+                )
                 if is_qr_code_caption(nearest_line.text if nearest_line else None):
                     continue
                 figure_id = content_id(
@@ -806,7 +842,11 @@ class UseCases:
                         page=page_index,
                         rect=rect,
                         caption_source="pdf_image",
-                        caption_text=strip_leading_note_glyph(nearest_line.text) if nearest_line else None,
+                        caption_text=(
+                            strip_leading_heading_marker(strip_leading_note_glyph(nearest_line.text))
+                            if nearest_line
+                            else None
+                        ),
                         printed_page=page_index + profile.layout.page_number_offset,
                     )
                 )
@@ -843,6 +883,20 @@ class UseCases:
         return self.spec_publisher.publish(
             spec, chapter_slug=chapter_slug, allow_restricted=allow_restricted, terms=self.glossary_repository.load_all()
         )
+
+    def list_stale_published_files(self, manual_id: str, chapter_slug: str) -> list[str]:
+        """Filenames left over under published/<chapter>/ from an earlier publish()
+        under a different profile/section-cut (different function slugs) that the
+        current spec no longer produces -- publish() itself never deletes these
+        (docs/ARCHITECTURE.md '9.'), so this is what a reviewer/UI checks to find
+        out there's cleanup to do."""
+        return self.spec_publisher.list_stale_files(manual_id, chapter_slug)
+
+    def delete_stale_published_files(self, manual_id: str, chapter_slug: str) -> list[str]:
+        """Human-triggered follow-up to list_stale_published_files -- deletes only
+        the files publish() itself already decided are stale, never an arbitrary
+        caller-supplied list."""
+        return self.spec_publisher.delete_stale_files(manual_id, chapter_slug)
 
     def list_chapters(self, manual_id: str) -> list[str]:
         """Chapter slugs that have a generated spec for this manual_id — what the
