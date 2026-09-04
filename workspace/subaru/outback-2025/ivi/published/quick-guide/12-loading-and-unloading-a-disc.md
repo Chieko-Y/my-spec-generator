@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-b452a8ffb34b.png)
 - Figure 12-1 source: p.35
 - (Copied from OM) MEMORY DEVICE/
+
 ![figure](../figures/FIG-01b9b7e7b120.png)
 - Figure 12-2 source: p.35
 - (Copied from OM) Display the playback mode list.
+
 
 ## 12-2-1. Service overview
 
@@ -23,6 +25,8 @@
 | 4 | <span class="req-label">Loading And Unloading A Disc</span>Display the playback mode list. | capability | p.35 / text |
 | 5 | <span class="req-label">Loading And Unloading A Disc</span>MEMORY DEVICE/ Unloading a disc. | capability | p.35 / text |
 <!-- GENERATED:END function=e919a6179f2b -->
+
+
 
 
 

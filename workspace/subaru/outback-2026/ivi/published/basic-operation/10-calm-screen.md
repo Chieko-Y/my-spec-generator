@@ -10,6 +10,7 @@
 - Figure 10-1 source: p.23
 - (Copied from OM) Outside temperature
 
+
 ## 10-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -24,6 +25,8 @@
 | 2 | <span class="req-label">Step -</span>Select to display the clock setting screen. Refer to the vehicle Owner’s Manual for details. | capability | p.24 / bullet |
 | 3 | <span class="req-label">Calm screen</span>Date and day of the week. | capability | p.24 / text |
 <!-- GENERATED:END function=a5944e1f90d7 -->
+
+
 
 
 

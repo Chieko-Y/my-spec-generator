@@ -10,6 +10,7 @@
 - Figure 15-1 source: p.84
 - (Copied from OM) reply): →P.86
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -51,6 +52,8 @@ flowchart TD
 | 6 | <span class="req-label">Step -</span>Sending a new short message: → P.86. | capability | p.84 / bullet |
 | 7 | <span class="req-label">Step -</span>Calling the message sender: → P.86. | capability | p.84 / bullet |
 <!-- GENERATED:END function=4e595c9321c1 -->
+
+
 
 
 

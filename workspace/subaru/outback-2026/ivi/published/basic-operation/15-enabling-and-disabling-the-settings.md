@@ -10,12 +10,15 @@
 - Figure 15-1 source: p.29
 - (Copied from OM) OFF
 
+
 ## 15-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Enabling and disabling the settings</span>Select the icon on the right of the desired item. | capability | p.28 / text |
 <!-- GENERATED:END function=572bb074fb99 -->
+
+
 
 
 

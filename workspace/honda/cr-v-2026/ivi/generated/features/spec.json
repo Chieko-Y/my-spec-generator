@@ -849,7 +849,7 @@
             181.1159973
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select OK.",
+          "caption_text": "If you do not select OK within 5 seconds,",
           "image_path": null,
           "legend_requirements": []
         }
@@ -1642,7 +1642,7 @@
             285.87600710000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select Audio Source",
+          "caption_text": "Selecting an Audio Source",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2369,7 +2369,7 @@
             252.095993
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Audio/Information Screen",
+          "caption_text": "Music Library Icon",
           "image_path": null,
           "legend_requirements": []
         }
@@ -3065,7 +3065,7 @@
             286.41600040000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Shuffle Icon",
+          "caption_text": "Music Library Icon",
           "image_path": null,
           "legend_requirements": []
         }
@@ -6154,7 +6154,7 @@
             264.6959991
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(Volume) Switch",
+          "caption_text": "HFL Buttons",
           "image_path": null,
           "legend_requirements": []
         },

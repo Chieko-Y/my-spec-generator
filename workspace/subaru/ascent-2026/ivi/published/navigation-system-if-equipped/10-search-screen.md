@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-195a9dc4dfc1.png)
 - Figure 10-1 source: p.167
 - (Copied from OM) Enter keyword(s) to search for a destination.
+
 ![figure](../figures/FIG-499f2920c604.png)
 - Figure 10-2 source: p.168
 - (Copied from OM) Select to narrow down the list by POI category.
+
 
 ## 10-2-1. Service overview
 
@@ -53,6 +55,8 @@
 | 23 | <span class="req-label">Step -</span>Go (Go ): Select to search for a route to the selected destination. (→P.172). | capability | p.169 / bullet |
 | 24 | <span class="req-label">Search Screen</span>The desired point can be registered as home, work, or favorite. The registered points can be set as a destination. Registered points can be added, changed and deleted on the. | capability | p.169 / text |
 <!-- GENERATED:END function=998542289335 -->
+
+
 
 
 

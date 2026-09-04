@@ -123,7 +123,7 @@ def is_stretched_fill(
 
 
 def caption_for(
-    rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 20.0,
+    rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 30.0,
     heading_prefixes: tuple[str, ...] = (),
 ) -> Line | None:
     """The nearest text line to a figure, as a stand-in caption — the source PDFs
@@ -150,6 +150,19 @@ def caption_for(
     that coincidence. A caption this short is useless even on the rare chance it
     were real body text, so excluding it outright is strictly better than trying to
     tell "real" and "furniture" apart by pattern.
+
+    column_margin_pt default raised 20 -> 30, 2026-09-04: real Subaru Outback
+    2026 case, "Search screen" (Navigation if equipped) -- the figure's own
+    rect sits at x0=144.9, and the real closest paragraph text ("...can be set
+    for places where postal address is not precisely allocated.") sits at
+    x0=119.1, a genuine 25.8pt gap, just outside the old 20pt margin. Excluded
+    from the same-column candidate set entirely, the caption fell through to
+    a same-column-but-farther, completely unrelated bullet item ("Select to
+    display a list of gas stations.", describing a different icon in a
+    button list on the same page) -- reported directly by a user reading real
+    generated output. 30pt still leaves a wide margin below the ~320pt gap
+    the original 20pt value was chosen to reject (see the "5" legend-digit
+    case above), so this widening doesn't reopen that one.
 
     `heading_prefixes` (from LayoutConfig.heading_prefixes, e.g. Honda's "■") is
     tried as a same-column tiebreaker BEFORE plain distance: a heading-prefixed

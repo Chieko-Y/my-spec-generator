@@ -9,42 +9,55 @@
 ![figure](../figures/FIG-59c6f0f3e936.png)
 - Figure 23-1 source: p.54
 - (Copied from OM) 3D Heading-up screen 2D Heading-up screen
+
 ![figure](../figures/FIG-421047495046.png)
 - Figure 23-2 source: p.54
 - (Copied from OM) 3D Heading-up screen 2D Heading-up screen
+
 ![figure](../figures/FIG-d608d195d372.png)
 - Figure 23-3 source: p.54
 - (Copied from OM) Guidance display
+
 ![figure](../figures/FIG-df56e45d1189.png)
 - Figure 23-4 source: p.54
 - (Copied from OM) Remaining distance and/
+
 ![figure](../figures/FIG-415296a299c3.png)
 - Figure 23-5 source: p.54
 - (Copied from OM) Current street
+
 ![figure](../figures/FIG-4e3bb45a3d61.png)
 - Figure 23-6 source: p.54
-- (Copied from OM) Touch screen to display
+- (Copied from OM) Zoom in
+
 ![figure](../figures/FIG-63e6872e32a1.png)
 - Figure 23-7 source: p.55
-- (Copied from OM) type.
+- (Copied from OM) The travel route is displayed,
+
 ![figure](../figures/FIG-6932c65df81b.png)
 - Figure 23-8 source: p.55
 - (Copied from OM) The screen display
+
 ![figure](../figures/FIG-738c50127cba.png)
 - Figure 23-9 source: p.55
 - (Copied from OM) search menu.
+
 ![figure](../figures/FIG-4f34af39c22d.png)
 - Figure 23-10 source: p.55
 - (Copied from OM) results will
+
 ![figure](../figures/FIG-86f18111cfe8.png)
 - Figure 23-11 source: p.55
-- (Copied from OM) The screen display
+- (Copied from OM) Destinations matching the
+
 ![figure](../figures/FIG-4074ed621bd4.png)
 - Figure 23-12 source: p.55
 - (Copied from OM) Start driving.
+
 ![figure](../figures/FIG-0a7fcbbccc08.png)
 - Figure 23-13 source: p.55
 - (Copied from OM) POI, etc.
+
 
 ## 23-2-1. Service overview
 
@@ -71,6 +84,8 @@
 | 19 | <span class="req-label">Map Screen </span>The screen display Route guidance starts. automatically changes to display travel lanes at expressway junctions, etc. P.213 JUNCTION SCREEN RETURNING HOME If you register an address as Home, it The travel route is displayed, can be quickly set as a destination. and voice guidance starts. | constraint | p.55 / text |
 | 20 | <span class="req-label">Map Screen </span>Register an address as Home P.209 Setting Home as the destination P.205 55. | capability | p.55 / text |
 <!-- GENERATED:END function=c764c444e3e7 -->
+
+
 
 
 

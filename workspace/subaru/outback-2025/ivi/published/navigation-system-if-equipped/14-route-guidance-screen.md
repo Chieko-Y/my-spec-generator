@@ -9,15 +9,19 @@
 ![figure](../figures/FIG-4104b045d17e.png)
 - Figure 14-1 source: p.212
 - (Copied from OM) Current position
+
 ![figure](../figures/FIG-b30fcc731cb4.png)
 - Figure 14-2 source: p.213
-- (Copied from OM) Navigation
+- (Copied from OM) settings screen. (→P.219)
+
 ![figure](../figures/FIG-ef9fef0bf106.png)
 - Figure 14-3 source: p.214
 - (Copied from OM) Select to enable search for a parking place near the
+
 ![figure](../figures/FIG-5a719ad826ac.png)
 - Figure 14-4 source: p.214
 - (Copied from OM) Select to enable search for a parking place near the
+
 
 ## 14-2-1. Service overview
 
@@ -55,6 +59,8 @@
 | 17 | <span class="req-label">Step -</span>Avoid Part of Route (Avoid Part of Route): Select to display a list of sections of the current route. (→P.215). | capability | p.214 / bullet |
 | 18 | <span class="req-label">Step -</span>Reorder Stops (Reorder Stops): Select to change the order of the currently set destination and waypoints. (→P.215). | capability | p.214 / bullet |
 <!-- GENERATED:END function=d761e1219f48 -->
+
+
 
 
 

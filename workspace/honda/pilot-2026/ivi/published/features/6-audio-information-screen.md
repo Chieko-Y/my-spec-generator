@@ -8,22 +8,28 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-01e3a204e402.png)
 - Figure 6-1 source: p.274
-- (Copied from OM) Mode Change Switch Bar
+- (Copied from OM) Switching the display
+
 ![figure](../figures/FIG-f5fee10f999b.png)
 - Figure 6-2 source: p.276
-- (Copied from OM) in the A-Zone.
+- (Copied from OM) B-Zone
+
 ![figure](../figures/FIG-8e26777e7c01.png)
 - Figure 6-3 source: p.279
-- (Copied from OM) Swipe
+- (Copied from OM) To move to the next screen
+
 ![figure](../figures/FIG-2318cce77952.png)
 - Figure 6-4 source: p.280
-- (Copied from OM) 3.Select Home or Back.
+- (Copied from OM) To move/remove icons on the home screen
+
 ![figure](../figures/FIG-ce35375e2504.png)
 - Figure 6-5 source: p.281
-- (Copied from OM) Drag and drop to
+- (Copied from OM) To shortcut icons on the home screen
+
 ![figure](../figures/FIG-172453ffcd21.png)
 - Figure 6-6 source: p.281
-- (Copied from OM) Status Area
+- (Copied from OM) Status Bar
+
 
 ## Procedure (7 sequences; the manual restarts the numbering)
 ```mermaid
@@ -261,6 +267,8 @@ flowchart TD
 | 4 | <span class="req-label">Step -</span>When importing wallpaper files, the image must be in the USB flash drive’s root directory. Images in a folder cannot be imported. | constraint | p.277 / bullet |
 | 5 | <span class="req-label">Audio/Information Screen</span>1Wallpaper Setup You cannot delete the initially imported wallpapers. | constraint | p.278 / text |
 <!-- GENERATED:END function=022558815f1e -->
+
+
 
 
 

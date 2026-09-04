@@ -10,6 +10,7 @@
 - Figure 2-1 source: p.17
 - (Copied from OM) Touch “I Agree”.
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -45,6 +46,8 @@ Filled: 0 / unfilled: 1
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>After a few seconds, the “Caution” screen will be displayed. | capability | p.16 / bullet |
 <!-- GENERATED:END function=b91711464c99 -->
+
+
 
 
 

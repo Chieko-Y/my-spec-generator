@@ -34,7 +34,44 @@
       // was selected at all (reported directly, 2026-09-04). Bring the
       // active link into view within its own scroll container on every load.
       const activeNavLink = document.querySelector(".spec-nav a.active");
-      if (activeNavLink) { activeNavLink.scrollIntoView({ block: "center" }); }
+      if (activeNavLink) { activeNavLink.scrollIntoView({ block: "nearest" }); }
+
+      // .pub-doc (the document panel) also scrolls independently -- clicking
+      // a sub-chapter/function link should always land with that file's own
+      // title at the very top, not wherever the previous file happened to be
+      // scrolled to (reported directly, 2026-09-04, twice -- the first pass
+      // only reset .pub-doc's own scrollTop and did not help, so the real
+      // culprit was the OUTER page/window scroll position, not .pub-doc's
+      // internal one). Force both explicitly, in this order, so neither the
+      // browser's own scroll-restoration heuristics nor the nav-link
+      // scrollIntoView call above (changed to "nearest" so it no longer asks
+      // to center the item, which could itself nudge an ancestor's scroll)
+      // can leave the page scrolled anywhere but the very top.
+      const pubDoc = document.querySelector(".pub-doc");
+      if (pubDoc) { pubDoc.scrollTop = 0; }
+      window.scrollTo(0, 0);
+
+      // Published spec tables (Presumed requirement/Strength/Source, Seq/
+      // Step/Operation/Source, Threshold/.../Filled by, ...) are plain
+      // markdown tables with no per-column widths, so the browser's default
+      // table-layout:auto squeezes a short header like "Strength" or
+      // "Source" down to wherever the OTHER columns' long prose leaves room,
+      // wrapping it onto 2+ lines (reported directly, 2026-09-04). These
+      // header labels are always short, single-line-worthy text -- a fixed
+      // whitelist (not a column-position rule, since "Source" is column 4 in
+      // one table and column 8 in another) marks exactly the short-label
+      // headers nowrap, so table-layout:auto reserves just enough width for
+      // them and gives the rest to the genuinely long columns (Presumed
+      // requirement, Operation, Matching text) that still wrap normally.
+      const NOWRAP_HEADERS = new Set([
+        "#", "No.", "Change", "Strength", "Source", "Seq", "Step", "Threshold",
+        "Kind", "Unit", "Value", "Status", "Evidence", "Filled by", "Hits",
+        "Category", "Function", "Area", "Figures", "Test-ready", "Field",
+        "Scope", "Markets", "Profile", "Manual ID",
+      ]);
+      document.querySelectorAll(".pub-doc th").forEach((th) => {
+        if (NOWRAP_HEADERS.has(th.textContent.trim())) { th.style.whiteSpace = "nowrap"; }
+      });
     });
   </script>
 </head>

@@ -8,10 +8,12 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-86c76b3f45ce.png)
 - Figure 11-1 source: p.169
-- (Copied from OM) Menu
+- (Copied from OM) Favorites
+
 ![figure](../figures/FIG-75c06824dd61.png)
 - Figure 11-2 source: p.171
-- (Copied from OM) (Add Work)/
+- (Copied from OM) points.
+
 
 ## Procedure (2 sequences; the manual restarts the numbering)
 ```mermaid
@@ -19,7 +21,7 @@ flowchart TD
     subgraph SEQ1["Sequence 1"]
     direction TB
     S1_1["1. Display the map screen. (→P.158)"]
-    S1_2["2. Select (Menu). Menu 3. → Favorites (Favorites)"]
+    S1_2["2. Select (Menu). Menu 3. → (Favorites) Favorites"]
     S1_1 --> S1_2
     end
     subgraph SEQ2["Sequence 2"]
@@ -33,7 +35,7 @@ flowchart TD
 | Seq | Step | Operation (Copied from OM) | Source |
 |---|---|---|---|
 | 1 | 1 | Display the map screen. (→P.158) | p.169 / step |
-| 1 | 2 | Select (Menu). Menu 3. → Favorites (Favorites) | p.169 / step |
+| 1 | 2 | Select (Menu). Menu 3. → (Favorites) Favorites | p.169 / step |
 | 2 | 1 | Select (Add Home)/ (Add). | p.171 / step |
 | 2 | 2 | Perform any of the following to display a point you wish to register: | p.171 / step |
 
@@ -62,6 +64,8 @@ flowchart TD
 | 6 | <span class="req-label">Step -</span>To register a favorite, enter a name. | capability | p.171 / bullet |
 | 7 | <span class="req-label">Step -</span>Icons will be displayed on the map to indicate registered points. | capability | p.171 / bullet |
 <!-- GENERATED:END function=d430a9e07e0c -->
+
+
 
 
 

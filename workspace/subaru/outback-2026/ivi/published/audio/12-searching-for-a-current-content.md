@@ -10,6 +10,7 @@
 - Figure 12-1 source: p.100
 - (Copied from OM) phone icon or text message.
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -64,6 +65,8 @@ flowchart TD
 | 1 | <span class="req-label">Step -</span>Voice commands may not be recognized if:. | capability | p.100 / bullet |
 | 2 | <span class="req-label">Step -</span>If there is excessive background noise, such as wind noise, the system may not recognize the command properly and using voice commands may not be possible. | capability | p.100 / bullet |
 <!-- GENERATED:END function=9f626bfcadf7 -->
+
+
 
 
 

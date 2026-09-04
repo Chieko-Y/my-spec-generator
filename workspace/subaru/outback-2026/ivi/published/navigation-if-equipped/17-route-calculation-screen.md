@@ -10,6 +10,7 @@
 - Figure 17-1 source: p.132
 - (Copied from OM) Candidate routes (max. 3 routes)
 
+
 ## 17-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -31,6 +32,8 @@
 | 8 | <span class="req-label">Route calculation screen</span>Displays expected time and distance to the destination. | capability | p.132 / text |
 | 9 | <span class="req-label">Route calculation screen</span>Select to start route guidance. (→P.133). | capability | p.132 / text |
 <!-- GENERATED:END function=0568510c1da1 -->
+
+
 
 
 

@@ -9,36 +9,47 @@
 ![figure](../figures/FIG-ba248bfae041.png)
 - Figure 15-1 source: p.39
 - (Copied from OM) Features: - 11.6-inch touch screen
+
 ![figure](../figures/FIG-8f98a73363cc.png)
 - Figure 15-2 source: p.39
 - (Copied from OM) 11.6-inch touch screen
+
 ![figure](../figures/FIG-3fc8740e3165.png)
 - Figure 15-3 source: p.40
 - (Copied from OM) Adoption of intuitive and easy-to-use
+
 ![figure](../figures/FIG-22b38c7c2c0b.png)
 - Figure 15-4 source: p.41
 - (Copied from OM) display.
+
 ![figure](../figures/FIG-bb82ee8f6563.png)
 - Figure 15-5 source: p.41
 - (Copied from OM) Displays search prediction
+
 ![figure](../figures/FIG-d61733797b16.png)
 - Figure 15-6 source: p.41
 - (Copied from OM) “what3words”.
+
 ![figure](../figures/FIG-44bf549bd2e7.png)
 - Figure 15-7 source: p.41
-- (Copied from OM) Guide
+- (Copied from OM) Rough destination search function* P.205
+
 ![figure](../figures/FIG-8ca967e04715.png)
 - Figure 15-8 source: p.42
-- (Copied from OM) Apple CarPlay/Android Auto can be used wirelessly.
+- (Copied from OM) Bluetooth phones/devices wirelessly.
+
 ![figure](../figures/FIG-cc163b36a5b2.png)
 - Figure 15-9 source: p.42
 - (Copied from OM) P.129
+
 ![figure](../figures/FIG-481aeda0a9d9.png)
 - Figure 15-10 source: p.42
 - (Copied from OM) P.133
+
 ![figure](../figures/FIG-f03b7ceabd57.png)
 - Figure 15-11 source: p.42
 - (Copied from OM) Apple CarPlay/Android Auto can be used wirelessly.
+
 
 ## 15-2-1. Service overview
 
@@ -88,6 +99,8 @@
 | 42 | <span class="req-label">Steering Wheel Controls</span>Apple CarPlay/Android Auto can be used wirelessly. | capability | p.42 / text |
 | 43 | <span class="req-label">Steering Wheel Controls</span>Valet mode restricts operations of the system when valet parking is used, to prevent unwanted access to personal information stored in the system. To enable/disable valet mode, enter a password preset by the user. Refer to the vehicle Owner’s Manual. | constraint | p.42 / text |
 <!-- GENERATED:END function=200b388acc33 -->
+
+
 
 
 

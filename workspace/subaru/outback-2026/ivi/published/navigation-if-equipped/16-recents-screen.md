@@ -10,6 +10,7 @@
 - Figure 16-1 source: p.131
 - (Copied from OM) List of past destinations
 
+
 ## 16-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -26,6 +27,8 @@
 | 2 | <span class="req-label">Step -</span>“[icon]”: Select to register the past destination(s) to the favorites screen. | capability | p.131 / bullet |
 | 3 | <span class="req-label">Recents screen</span>Select to delete all destinations history. | capability | p.131 / text |
 <!-- GENERATED:END function=32fd032a21f2 -->
+
+
 
 
 

@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-c31a47252526.png)
 - Figure 9-1 source: p.123
 - (Copied from OM) ● “Continue”: Select to search for gas stations.
+
 ![figure](../figures/FIG-1541e3bdc548.png)
 - Figure 9-2 source: p.124
 - (Copied from OM) ● “Search”: Select to search for rest areas.
+
 
 ## 9-2-1. Service overview
 
@@ -31,6 +33,8 @@
 | 5 | <span class="req-label">Step -</span>“Search”: Select to search for rest areas. | capability | p.124 / bullet |
 | 6 | <span class="req-label">Step -</span>“Dismiss”: Select to delete the message. | capability | p.124 / bullet |
 <!-- GENERATED:END function=2d72f3019460 -->
+
+
 
 
 

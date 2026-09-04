@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-039fb6c24437.png)
 - Figure 8-1 source: p.202
 - (Copied from OM) (Search): Select to search for gas stations.
+
 ![figure](../figures/FIG-524932b2032f.png)
 - Figure 8-2 source: p.202
 - (Copied from OM) (Search): Select to search for rest areas.
+
 
 ## 8-2-1. Service overview
 
@@ -31,6 +33,8 @@
 | 3 | <span class="req-label">Other Information</span>(Search): Select to search for rest areas. | capability | p.202 / text |
 | 4 | <span class="req-label">Step -</span>(Ignore): Select to delete the message. ● ● Pop-up screens can be turned on/off using the “Periodic Rest Notification” setting on the general settings screen. (→P.94). | capability | p.202 / bullet |
 <!-- GENERATED:END function=64f1d00089a4 -->
+
+
 
 
 

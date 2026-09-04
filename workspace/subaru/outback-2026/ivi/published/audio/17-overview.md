@@ -10,6 +10,7 @@
 - Figure 17-1 source: p.105
 - (Copied from OM) Select to change audio modes.
 
+
 ## 17-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -61,6 +62,8 @@
 | 4 | <span class="req-label">Step -</span>Depending on the music playback application of a Bluetooth device, the Bluetooth audio may not operate properly. | capability | p.107 / bullet |
 | 5 | <span class="req-label">Step -</span>If the specifications or profile of the connected Bluetooth device is lower than recommended or not compatible, the Bluetooth device may not function properly. | capability | p.107 / bullet |
 <!-- GENERATED:END function=5584790bd13c -->
+
+
 
 
 

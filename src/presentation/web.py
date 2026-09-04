@@ -641,17 +641,29 @@ def _spec_nav(manual_id: str) -> list[dict]:
     return nav
 
 
+def _chapter_display_name(chapter_slug: str) -> str:
+    # Chapter slugs are lowercase-hyphenated directory names ("hfl-menus"),
+    # not the manual's own real heading capitalization -- good enough for a
+    # page title without needing to re-load the generated spec.json just for
+    # its meta.chapter_label.
+    return chapter_slug.replace("-", " ").title()
+
+
 def _render_spec_view(
     request: Request, manual_id: str, body_html: str, chapter: str | None, current_file: str | None
 ) -> HTMLResponse:
     stale_files = uc.list_stale_published_files(manual_id, chapter) if chapter else []
+    source = uc.source_registry.get(manual_id) or {}
     return _render(
         request,
         "spec_view.html",
         "specifications",
         manual_id=manual_id,
-        nav=_spec_nav(manual_id),
+        maker=source.get("maker") or "",
+        model=source.get("model") or manual_id,
         chapter=chapter,
+        chapter_title=_chapter_display_name(chapter) if chapter else None,
+        nav=_spec_nav(manual_id),
         current_file=current_file,
         body_html=body_html,
         stale_files=stale_files,

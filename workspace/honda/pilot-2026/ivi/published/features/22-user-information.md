@@ -8,10 +8,12 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-ffafea031ad3.png)
 - Figure 22-1 source: p.319
-- (Copied from OM) a User Information
+- (Copied from OM) You can customize settings individually for each user.
+
 ![figure](../figures/FIG-12a422d64ddf.png)
 - Figure 22-2 source: p.320
 - (Copied from OM) website.
+
 
 ## Procedure (3 sequences; the manual restarts the numbering)
 ```mermaid
@@ -104,6 +106,8 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">User Information</span>The transmitter settings may not be switched when you change the Owner user. If this happens, change to a different user and then try switching to the desired user again. | constraint | p.322 / text |
 <!-- GENERATED:END function=21db6d0177b4 -->
+
+
 
 
 

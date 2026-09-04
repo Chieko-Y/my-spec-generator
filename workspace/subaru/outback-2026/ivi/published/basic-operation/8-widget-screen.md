@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-29dac9675fed.png)
 - Figure 8-1 source: p.21
 - (Copied from OM) Models without navigation system
+
 ![figure](../figures/FIG-d070bfe078d1.png)
 - Figure 8-2 source: p.21
 - (Copied from OM) Displays the map screen. Simple operations are available on this screen.
+
 
 ## 8-2-1. Service overview
 
@@ -23,6 +25,8 @@
 | 4 | <span class="req-label">Widget screen</span>Displays simple operations screen of the selected audio source. Simple operations are available on this screen. Selecting the upper part displays the audio screen. (→P.89). | capability | p.21 / text |
 | 5 | <span class="req-label">Widget screen</span>Displays recent calls. Select to make a call. Selecting the upper part displays the phone screen. (→P.74). | capability | p.21 / text |
 <!-- GENERATED:END function=ffa1806d4d34 -->
+
+
 
 
 

@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-c17e6e306b3b.png)
 - Figure 4-1 source: p.15
-- (Copied from OM) Before Driving Checklist
+- (Copied from OM) Seat Belts
+
 
 ## 4-2-1. Service overview
 
@@ -39,6 +40,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Safe Driving (P35)</span>Exhaust Gas Hazard (P92). | capability | p.15 / text |
 <!-- GENERATED:END function=cee2bf69ca87 -->
+
+
 
 
 

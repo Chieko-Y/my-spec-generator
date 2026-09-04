@@ -10,6 +10,7 @@
 - Figure 1-1 source: p.74
 - (Copied from OM) Touch “[icon]” to activate Android Auto. (→P.70)
 
+
 ## 1-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -33,6 +34,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Phone screen</span>Display the level of phone reception. If a cellular phone is not connected via Bluetooth, this icon will not be displayed. The level of reception does not always correspond with the level displayed on the cellular phone. The level of reception may not be displayed depending on the phone you have. | constraint | p.74 / text |
 <!-- GENERATED:END function=e35fb8eec3d2 -->
+
+
 
 
 

@@ -10,6 +10,7 @@
 - Figure 16-1 source: p.43
 - (Copied from OM) Car settings icon*
 
+
 ## Numeric thresholds (filled in by a tester)
 Filled: 1 / unfilled: 0
 
@@ -26,13 +27,15 @@ Filled: 1 / unfilled: 0
 | 3 | <span class="req-label">Overview</span>Auto Vehicle Hold (AVH) ON/OFF icon*. | capability | p.43 / text |
 | 4 | <span class="req-label">Overview</span>Auto Start Stop ON/OFF icon*. | capability | p.43 / text |
 | 5 | <span class="req-label">Overview</span>Information bar* Touch to display the operation screen of the selected category. | capability | p.43 / text |
-| 6 | <span class="req-label">Overview</span>Turn the knob to select a radio station or skip to the next or previous track/file. Press and hold the knob to display the sound customization screen. P.149 SYSTEM/11.6-INCH. | capability | p.43 / text |
+| 6 | <span class="req-label">Overview</span>Turn the knob to select a radio station or skip to the next or previous track/file. Press and hold the knob to display the sound customization screen. P.149. | capability | p.43 / text |
 | 7 | <span class="req-label">Overview</span>Display the home screen. | capability | p.43 / text |
 | 8 | <span class="req-label">Overview</span>Display the manage devices screen. P.46,47. | capability | p.43 / text |
 | 9 | <span class="req-label">Overview</span>Set a driver profile P.48,92. | capability | p.43 / text |
 | 10 | <span class="req-label">Overview</span>Climate control screen*. | capability | p.43 / text |
 | 11 | <span class="req-label">Overview</span>*: Refer to the vehicle Owner’s Manual. 43. | capability | p.43 / text |
 <!-- GENERATED:END function=9ba4dbfb5bfe -->
+
+
 
 
 

@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-1fb9a71820ee.png)
 - Figure 25-1 source: p.57
-- (Copied from OM) ● Related:
+- (Copied from OM) Mix preset function
+
 
 ## 25-2-2. Service requirements
 
@@ -28,6 +29,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Search: Enables search content by voice command or by using keypad/ keyboard. P.159. | capability | p.57 / bullet |
 <!-- GENERATED:END function=51ff53923268 -->
+
+
 
 
 

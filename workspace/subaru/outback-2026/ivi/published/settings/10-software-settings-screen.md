@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-31639b85a17c.png)
 - Figure 10-1 source: p.48
-- (Copied from OM) 3. Select the items to be set.
+- (Copied from OM) are not to be used, disable the settings, check the
+
 
 ## Procedure
 ```mermaid
@@ -47,6 +48,8 @@ flowchart TD
 | 3 | <span class="req-label">Software settings screen</span>“Reset”: Select to reset all setup items. The audio system restarts automatically after resetting factory data. “Factory Data Reset” To complete the reset process, turn the ignition switch to OFF after the audio system has restarted, and then turn to ACC or ON after approximately 3 minutes. | capability | p.48 / text |
 | 4 | <span class="req-label">Software settings screen</span>*: If equipped. | constraint | p.49 / text |
 <!-- GENERATED:END function=70a5c8b94926 -->
+
+
 
 
 

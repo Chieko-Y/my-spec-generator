@@ -10,6 +10,7 @@
 - Figure 9-1 source: p.22
 - (Copied from OM) Display the Apple CarPlay screen. (→P.67)
 
+
 ## Procedure (3 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
@@ -79,6 +80,8 @@ flowchart TD
 | 5 | <span class="req-label">Step -</span>User can move buttons to another page by dragging them to the corresponding end of the screen if the number of buttons allows for multiple pages. | constraint | p.23 / bullet |
 | 6 | <span class="req-label">Apps screen</span>When deleting shortcut icons. | capability | p.23 / text |
 <!-- GENERATED:END function=d0183e16e02e -->
+
+
 
 
 

@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-f88c3527a8d4.png)
 - Figure 25-1 source: p.187
-- (Copied from OM) (Wi-Fi)
+- (Copied from OM) Wi-Fi
+
 
 ## Procedure (2 sequences; the manual restarts the numbering)
 ```mermaid
@@ -71,6 +72,8 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>The update for the selected region will be automatically downloaded and installed. | capability | p.187 / bullet |
 | 4 | <span class="req-label">Step -</span>The new map data will be applied. | capability | p.187 / bullet |
 <!-- GENERATED:END function=5a5f0a20f2c8 -->
+
+
 
 
 

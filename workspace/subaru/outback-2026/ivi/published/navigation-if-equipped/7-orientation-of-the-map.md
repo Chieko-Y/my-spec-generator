@@ -9,12 +9,15 @@
 ![figure](../figures/FIG-559959908fc0.png)
 - Figure 7-1 source: p.121
 - (Copied from OM) ● Regardless of the direction of vehicle travel, north is always up.
+
 ![figure](../figures/FIG-6d12f40f6e7d.png)
 - Figure 7-2 source: p.122
 - (Copied from OM) ● The direction of vehicle travel is always up.
+
 ![figure](../figures/FIG-6062a8e8bca4.png)
 - Figure 7-3 source: p.122
 - (Copied from OM) ● The direction of vehicle travel is always up.
+
 
 ## Procedure
 ```mermaid
@@ -47,6 +50,8 @@ flowchart TD
 | 6 | <span class="req-label">Orientation of the map</span>2D heading-up. | capability | p.122 / text |
 | 7 | <span class="req-label">Step -</span>The direction of vehicle travel is always up. | capability | p.122 / bullet |
 <!-- GENERATED:END function=f07b78057f98 -->
+
+
 
 
 

@@ -10,6 +10,7 @@
 - Figure 12-1 source: p.172
 - (Copied from OM) Select for the item you wish to delete.
 
+
 ## 12-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -20,6 +21,8 @@
 | 4 | <span class="req-label">Edit List Screen</span>Select to delete selected item(s). | capability | p.172 / text |
 | 5 | <span class="req-label">Edit List Screen</span>Select to select all items. Select again to deselect all items. | capability | p.172 / text |
 <!-- GENERATED:END function=87e88702083a -->
+
+
 
 
 

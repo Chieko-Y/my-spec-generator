@@ -9,15 +9,19 @@
 ![figure](../figures/FIG-2a90872ab4be.png)
 - Figure 14-1 source: p.174
 - (Copied from OM) Current position
+
 ![figure](../figures/FIG-ea8712e57aca.png)
 - Figure 14-2 source: p.175
-- (Copied from OM) Navigation
+- (Copied from OM) settings screen. (→P.181)
+
 ![figure](../figures/FIG-ba31583754f1.png)
 - Figure 14-3 source: p.176
 - (Copied from OM) Select to enable search for a parking place near the
+
 ![figure](../figures/FIG-17d5b5296322.png)
 - Figure 14-4 source: p.176
 - (Copied from OM) Select to enable search for a parking place near the
+
 
 ## 14-2-1. Service overview
 
@@ -62,6 +66,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Route Guidance Screen</span>*: Use of this function may not be possible depending on country and vehicle. | capability | p.175 / text |
 <!-- GENERATED:END function=0e54f7635911 -->
+
+
 
 
 

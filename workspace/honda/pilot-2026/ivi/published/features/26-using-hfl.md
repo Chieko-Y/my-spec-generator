@@ -8,10 +8,12 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-c7f72602c712.png)
 - Figure 26-1 source: p.369
-- (Copied from OM) Left Selector Wheel
+- (Copied from OM) HFL Buttons
+
 ![figure](../figures/FIG-346a680b2d70.png)
 - Figure 26-2 source: p.371
-- (Copied from OM) Caller’s Name (if registered)/
+- (Copied from OM) Signal
+
 
 ## 26-2-1. Service overview
 
@@ -54,6 +56,8 @@
 | 1 | <span class="req-label">Using HFL</span>To use the system, the Bluetooth setting must be On. If there is an active connection to Apple CarPlay, HFL is unavailable. | constraint | p.369 / text |
 | 2 | <span class="req-label">Using HFL</span>Certain manual functions are disabled or inoperable while the vehicle is in motion. You cannot select a grayed-out option until the vehicle is stopped. | constraint | p.371 / text |
 <!-- GENERATED:END function=1ce7baa0fdef -->
+
+
 
 
 

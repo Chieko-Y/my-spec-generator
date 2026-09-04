@@ -10,6 +10,7 @@
 - Figure 21-1 source: p.34
 - (Copied from OM) will be displayed.
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -35,6 +36,8 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>To cancel voice assistance, press and hold the voice assistance switch on the steering wheel, or touch “[icon]”. | capability | p.34 / bullet |
 | 4 | <span class="req-label">Step -</span>Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the speech guidance volume. | capability | p.34 / bullet |
 <!-- GENERATED:END function=938ec02b730c -->
+
+
 
 
 

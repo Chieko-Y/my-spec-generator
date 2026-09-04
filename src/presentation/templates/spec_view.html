@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<p><code>{{ manual_id }}</code></p>
+<h1 class="spec-view-title">{{ maker }} {{ model }}{% if chapter_title %} — {{ chapter_title }}{% endif %}</h1>
 <div class="spec-view-row">
   <div class="spec-nav-col">
     <div class="card spec-nav">

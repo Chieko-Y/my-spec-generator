@@ -10,6 +10,7 @@
 - Figure 4-1 source: p.19
 - (Copied from OM) Display the home screen.
 
+
 ## 4-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -22,6 +23,8 @@
 | 6 | <span class="req-label">Main menu</span>“Driver Profile”: By registering the preferred vehicle conditions and settings of registered drivers in advance, the driver profiles function allows those conditions/settings to be recalled when a registered driver is to drive. Refer to the vehicle Owner’s Manual for details. “Manage Devices”: Display two devices based on the favorites registration and use history conditions. Select the desired device to display its settings screen. (→P.44). | constraint | p.19 / text |
 | 7 | <span class="req-label">Main menu</span>*: If equipped. | constraint | p.20 / text |
 <!-- GENERATED:END function=69f2c9e9c8eb -->
+
+
 
 
 

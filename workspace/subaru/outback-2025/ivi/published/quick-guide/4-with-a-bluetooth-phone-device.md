@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-1504720b6209.png)
 - Figure 4-1 source: p.23
 - (Copied from OM) Prepare the Bluetooth
+
 ![figure](../figures/FIG-81ced71bf946.png)
 - Figure 4-2 source: p.23
-- (Copied from OM) Guide
+- (Copied from OM) Follow instructions displayed to
+
 
 ## 4-2-1. Service overview
 
@@ -25,6 +27,8 @@
 | 6 | <span class="req-label">With A Bluetooth Phone/Device</span>Follow instructions displayed to operate the Bluetooth phone/device. | capability | p.23 / text |
 | 7 | <span class="req-label">With A Bluetooth Phone/Device</span>If unable to pair, check whether your Bluetooth phone/device is compatible with the system. | capability | p.23 / text |
 <!-- GENERATED:END function=f7cb3194f8a8 -->
+
+
 
 
 

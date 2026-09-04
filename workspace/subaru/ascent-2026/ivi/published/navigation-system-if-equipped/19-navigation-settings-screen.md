@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-4a5cbead9b58.png)
 - Figure 19-1 source: p.181
-- (Copied from OM) Navigation
+- (Copied from OM) (Settings).
+
 
 ## 19-2-1. Service overview
 
@@ -26,6 +27,8 @@
 | 10 | <span class="req-label">Navigation Settings Screen</span>During a route guidance: Select to display route option screen. (→P.176) Not during a route guidance: Select to display the main menu screen. (→P.165). | capability | p.182 / text |
 | 11 | <span class="req-label">Navigation Settings Screen</span>Select to set the updating of map data. (→P.185). | capability | p.182 / text |
 <!-- GENERATED:END function=04968bfa3b27 -->
+
+
 
 
 

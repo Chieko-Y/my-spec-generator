@@ -704,7 +704,7 @@
             164.64958460000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Guide",
+          "caption_text": "Follow instructions displayed to",
           "image_path": null,
           "legend_requirements": []
         }
@@ -915,7 +915,7 @@
             173.3154315
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Registering a Bluetooth phone",
+          "caption_text": "Select a language.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1413,7 +1413,7 @@
             228.32803840000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Having messages",
+          "caption_text": "Select the message",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1931,7 +1931,7 @@
             277.5094927
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Preset stations/channels",
+          "caption_text": "Select to display a list",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1961,7 +1961,7 @@
             184.963815
           ],
           "caption_source": "pdf_image",
-          "caption_text": "radio station.",
+          "caption_text": "A valid subscription to SiriusXM®",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2454,7 +2454,7 @@
             291.1541969
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "P.94",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2484,7 +2484,7 @@
             183.2878791
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "P.83",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2499,7 +2499,7 @@
             220.1176172
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "P.100",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2529,7 +2529,7 @@
             254.17011050000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "DISPLAY",
+          "caption_text": "adjust the clock manually.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3257,7 +3257,7 @@
             240.2417996
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Guide",
+          "caption_text": "Rough destination search function* P.205",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3272,7 +3272,7 @@
             200.21679290000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Apple CarPlay/Android Auto can be used wirelessly.",
+          "caption_text": "Bluetooth phones/devices wirelessly.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3414,8 +3414,8 @@
         {
           "req_id": "8f6876f80fa0",
           "slot": "overview",
-          "text": "Turn the knob to select a radio station or skip to the next or previous track/file. Press and hold the knob to display the sound customization screen. P.149 SYSTEM/11.6-INCH.",
-          "source_text": "Turn the knob to select a radio station or skip to the next or previous track/file. Press and hold the knob to display the sound customization screen. P.149 SYSTEM/11.6-INCH",
+          "text": "Turn the knob to select a radio station or skip to the next or previous track/file. Press and hold the knob to display the sound customization screen. P.149.",
+          "source_text": "Turn the knob to select a radio station or skip to the next or previous track/file. Press and hold the knob to display the sound customization screen. P.149",
           "strength": "capability",
           "source": "p.43 / text",
           "page_citation": "BASIC FUNCTION BASIC FUNCTION",
@@ -3745,7 +3745,7 @@
             409.9974532
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Apps SCREEN",
+          "caption_text": "P.60",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3775,7 +3775,7 @@
             177.86904040000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Media SCREEN",
+          "caption_text": "P.58",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3805,7 +3805,7 @@
             178.7391791
           ],
           "caption_source": "pdf_image",
-          "caption_text": "**:: IIff eeqquuiippppeedd",
+          "caption_text": "P.54",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3960,7 +3960,7 @@
             217.9375492
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Operate the Bluetooth phone/device.",
+          "caption_text": "Follow instructions",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3990,7 +3990,7 @@
             400.1324105
           ],
           "caption_source": "pdf_image",
-          "caption_text": "When using an NFC compatible device, it is not necessary to perform the above",
+          "caption_text": "paired.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -4199,7 +4199,7 @@
             221.428393
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Registering a Bluetooth phone",
+          "caption_text": "Select a language.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4898,7 +4898,7 @@
             218.27831210000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "*: If available (for iOS only reception possible)",
+          "caption_text": "the desired number.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -5264,7 +5264,7 @@
             203.6914516
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Touch screen to display",
+          "caption_text": "Zoom in",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5279,7 +5279,7 @@
             353.6432788
           ],
           "caption_source": "pdf_image",
-          "caption_text": "type.",
+          "caption_text": "The travel route is displayed,",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5339,7 +5339,7 @@
             186.2928109
           ],
           "caption_source": "pdf_image",
-          "caption_text": "The screen display",
+          "caption_text": "Destinations matching the",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5517,7 +5517,7 @@
             309.6197314
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Preset stations/channels",
+          "caption_text": "channels.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5547,7 +5547,7 @@
             190.31076610000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Mix preset function",
+          "caption_text": "radio station.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -5681,7 +5681,7 @@
             190.3107356
           ],
           "caption_source": "pdf_image",
-          "caption_text": "● Related:",
+          "caption_text": "Mix preset function",
           "image_path": null,
           "legend_requirements": []
         }
@@ -5884,7 +5884,7 @@
             364.3226922
           ],
           "caption_source": "pdf_image",
-          "caption_text": "DISPLAY",
+          "caption_text": "Display the playback mode list.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5968,7 +5968,7 @@
             365.9427116
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select the playback mode.",
+          "caption_text": "Depending on the audio source, several",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5983,7 +5983,7 @@
             365.852726
           ],
           "caption_source": "pdf_image",
-          "caption_text": "DISPLAY",
+          "caption_text": "Play a track.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -6351,10 +6351,10 @@
       "procedure": [],
       "requirements": [
         {
-          "req_id": "f0dffb256c36",
+          "req_id": "848669f12db9",
           "slot": "overview",
-          "text": "General Sound Navigation P.219 Car* P.94 P.100.",
-          "source_text": "General Sound Navigation P.219 Car* P.94 P.100",
+          "text": "General Sound P.94.",
+          "source_text": "General Sound P.94",
           "strength": "capability",
           "source": "p.63 / text",
           "page_citation": "BASIC FUNCTION",
@@ -6364,10 +6364,10 @@
           "previous_text": null
         },
         {
-          "req_id": "0cf8fb66a50a",
+          "req_id": "e4b6affc2240",
           "slot": "overview",
-          "text": "LLORCS LLORCS.",
-          "source_text": "LLORCS LLORCS",
+          "text": "Navigation P.219 Car* P.100.",
+          "source_text": "Navigation P.219 Car* P.100",
           "strength": "capability",
           "source": "p.63 / text",
           "page_citation": "BASIC FUNCTION",
@@ -6377,10 +6377,10 @@
           "previous_text": null
         },
         {
-          "req_id": "fe7938f34b8e",
+          "req_id": "5ac93c4388e9",
           "slot": "overview",
-          "text": "Phone Radio P.83 P.102.",
-          "source_text": "Phone Radio P.83 P.102",
+          "text": "Radio P.83 P.102.",
+          "source_text": "Radio P.83 P.102",
           "strength": "capability",
           "source": "p.63 / text",
           "page_citation": "BASIC FUNCTION",
@@ -6454,7 +6454,7 @@
             373.3046379
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "Car*",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6469,7 +6469,7 @@
             407.1227429
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "P.94",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6484,7 +6484,7 @@
             263.1774535
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "P.100",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6514,7 +6514,7 @@
             251.89104590000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "LLORCS",
+          "caption_text": "Navigation P.219",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6589,7 +6589,7 @@
             407.6938124
           ],
           "caption_source": "pdf_image",
-          "caption_text": "*2: 11.6-inch display system with SUBARU",
+          "caption_text": "Adjust the clock.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6604,7 +6604,7 @@
             204.22317759999999
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Adjust the clock.",
+          "caption_text": "Display the clock settings screen.",
           "image_path": null,
           "legend_requirements": []
         }

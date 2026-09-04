@@ -9,18 +9,23 @@
 ![figure](../figures/FIG-fd75516e18f3.png)
 - Figure 1-1 source: p.9
 - (Copied from OM) ❚Left Selector Wheel
+
 ![figure](../figures/FIG-7d124078b816.png)
 - Figure 1-2 source: p.10
 - (Copied from OM) ❚Interior Fuse Box
+
 ![figure](../figures/FIG-9ac6b3d4123b.png)
 - Figure 1-3 source: p.11
 - (Copied from OM) ❚Panoramic Roof Switch*
+
 ![figure](../figures/FIG-e0fbac72e1c4.png)
 - Figure 1-4 source: p.12
-- (Copied from OM) ❚Rear Wiper
+- (Copied from OM) Visual Index
+
 ![figure](../figures/FIG-86f12452bb38.png)
 - Figure 1-5 source: p.12
-- (Copied from OM) ❚Power Door Mirrors
+- (Copied from OM) Visual Index
+
 
 ## Numeric thresholds (filled in by a tester)
 Filled: 0 / unfilled: 1
@@ -55,6 +60,8 @@ Filled: 0 / unfilled: 1
 | 20 | <span class="req-label">Visual Index</span>❚Front Seat (P211) ❚ USB Ports (P265) ❚Second Row Outer Seat Heater Buttons* (P252) ❚Second Row Seat (P214) ❚Seat Belt (Installing a Child Seat) (P84) ❚Seat Belt to Secure a Child Seat (P86) ❚LATCH to Secure a Child Seat (P79) ❚ USB Ports* (P265) ❚Third Row Seat (P220) ❚Accessory Power Socket* (P244) ❚Walk Away Close Button* (P174) ❚Cargo Area Light (P233). | capability | p.11 / text |
 | 21 | <span class="req-label">Visual Index</span>❚Multi View Camera* (P554) ❚Maintenance Under the Hood (P581) ❚Windshield Wipers (P201, 599) ❚Power Door Mirrors (P209) ❚Side Turn Signal Lights* (P195, 594) ❚Multi View Camera* (P554) ❚Door Lock/Unlock Control (P155) ❚Front Turn Signal Lights (P195, 594) ❚Headlights (P193, 594) ❚Front Side Marker Lights (P193, 594) ❚Daytime Running Lights/Parking Lights (P193, 197, 594) ❚Tires (P604, 627) ❚Fog Lights (P197, 594) ❚How to Refuel (P566) ❚High-Mount Brake Light (P598) ❚Rear Wiper (P203, 602) ❚Rear License Plate Light (P597) ❚Opening/Closing the Tailgate (P170) ❚Back-Up Lights (P597) ❚Taillights* (P597) ❚Tailgate Outer Handle (P176) ❚Rear View Camera* (P552) ❚Multi View Camera* (P554) ❚Brake/Taillights (P595) ❚Rear Side Marker Lights (P595) ❚Rear Turn Signal Lights (P595). | capability | p.12 / text |
 <!-- GENERATED:END function=cce166261af8 -->
+
+
 
 
 

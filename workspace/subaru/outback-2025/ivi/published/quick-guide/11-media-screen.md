@@ -10,6 +10,7 @@
 - Figure 11-1 source: p.34
 - (Copied from OM) Repeat all tracks → repeat
 
+
 ## 11-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -19,6 +20,8 @@
 | 3 | <span class="req-label">Media Screen</span>CD*1 P.187 USB/iPod/iPhone P.190 Bluetooth audio P.81. | capability | p.34 / text |
 | 4 | <span class="req-label">Media Screen</span>*1: If equipped with a CD player *2: Operable when USB Audio is used and Folders (Folders) is selected from (Browse). | constraint | p.34 / text |
 <!-- GENERATED:END function=211f8d68a425 -->
+
+
 
 
 

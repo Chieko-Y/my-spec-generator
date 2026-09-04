@@ -8,13 +8,16 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-ecbe825c95a4.png)
 - Figure 7-1 source: p.22
-- (Copied from OM) (P263)
+- (Copied from OM) VOL(+/VOL(- (Volume)
+
 ![figure](../figures/FIG-200d978165dc.png)
 - Figure 7-2 source: p.22
 - (Copied from OM) VOL(+/VOL(- (Volume)
+
 ![figure](../figures/FIG-6288dd9349c6.png)
 - Figure 7-3 source: p.23
-- (Copied from OM) Audio/Information Screen
+- (Copied from OM) VOL/ AUDIO (Volume/Power) Knob
+
 
 ## 7-2-1. Service overview
 
@@ -40,6 +43,8 @@
 | 10 | <span class="req-label">Features (P263)</span>Instructions. | capability | p.24 / text |
 | 11 | <span class="req-label">Features (P263)</span>2 System Updates (P282). | capability | p.24 / text |
 <!-- GENERATED:END function=d1fafc42d9f6 -->
+
+
 
 
 

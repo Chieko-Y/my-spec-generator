@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-b766782b6428.png)
 - Figure 13-1 source: p.127
-- (Copied from OM) and touch “Search here”. Then a new search will be performed.
+- (Copied from OM) Obtains online and displays various information related to the destination.
+
 
 ## 13-2-1. Service overview
 
@@ -29,6 +30,8 @@
 | 2 | <span class="req-label">Destination information screen</span>Select to start route guidance. (→P.133). | capability | p.128 / text |
 | 3 | <span class="req-label">Destination information screen</span>Displays expected time and distance to the destination. | capability | p.128 / text |
 <!-- GENERATED:END function=26a0bbe8768f -->
+
+
 
 
 

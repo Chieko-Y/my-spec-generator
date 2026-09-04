@@ -12,7 +12,7 @@
 
 ![figure](../figures/FIG-70336c320f4e.png)
 - Figure 9-2 source: p.265
-- (Copied from OM) Select Audio Source
+- (Copied from OM) Selecting an Audio Source
 
 
 ## Procedure
@@ -56,6 +56,8 @@ flowchart TD
 | 6 | <span class="req-label">Display Setup</span>1Changing the Screen Brightness You can adjust the screen brightness by sliding or tapping on the brightness bar. You can change the Contrast and Black Level settings in the same manner. | capability | p.265 / text |
 | 7 | <span class="req-label">Display Setup</span>To reset the settings, select Reset to Default. | capability | p.265 / text |
 <!-- GENERATED:END function=e4c2e44ae352 -->
+
+
 
 
 

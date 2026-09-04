@@ -8,13 +8,16 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-c08d30dd144e.png)
 - Figure 3-1 source: p.14
-- (Copied from OM) (P433)
+- (Copied from OM) Ambient Meter
+
 ![figure](../figures/FIG-bdaa9b4fccc1.png)
 - Figure 3-2 source: p.14
 - (Copied from OM) DRIVE MODE Switch
+
 ![figure](../figures/FIG-f7d651516887.png)
 - Figure 3-3 source: p.14
-- (Copied from OM) DRIVE MODE Switch
+- (Copied from OM) Ambient Meter
+
 
 ## 3-2-1. Service overview
 
@@ -31,6 +34,8 @@
 | 3 | <span class="req-label">Eco Assist® System (P433)</span>Ambient Meter. | capability | p.14 / text |
 | 4 | <span class="req-label">Eco Assist® System (P433)</span>DRIVE MODE Switch (P433) Select the ECON mode to help maximize fuel economy. | capability | p.14 / text |
 <!-- GENERATED:END function=7ceeb6b4e3ed -->
+
+
 
 
 

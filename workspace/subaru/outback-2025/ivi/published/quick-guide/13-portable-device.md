@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-6679d5538ed3.png)
 - Figure 13-1 source: p.35
 - (Copied from OM) Select the playback mode.
+
 ![figure](../figures/FIG-1cd187361f58.png)
 - Figure 13-2 source: p.35
 - (Copied from OM) Play a track.
+
 
 ## 13-2-1. Service overview
 
@@ -21,6 +23,8 @@
 | 2 | <span class="req-label">Portable Device</span>Select the playback mode. Play a track. | capability | p.35 / text |
 | 3 | <span class="req-label">Portable Device</span>Depending on the audio source, several items from these categories are displayed in a list. | capability | p.35 / text |
 <!-- GENERATED:END function=c7354a95c02b -->
+
+
 
 
 

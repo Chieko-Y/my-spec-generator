@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-505f04b479ef.png)
 - Figure 3-1 source: p.22
 - (Copied from OM) Displays the operating status of
+
 ![figure](../figures/FIG-cbc1a7d2bab0.png)
 - Figure 3-2 source: p.22
 - (Copied from OM) Turn the Auto Vehicle Hold (AVH) system on/off.
+
 
 ## 3-2-1. Service overview
 
@@ -26,6 +28,8 @@
 | 7 | <span class="req-label">Car Information/Climate Control Screen</span>Setup and display vehicle part replacement intervals. Refer to the vehicle Owner’s Manual. | capability | p.22 / text |
 | 8 | <span class="req-label">Car Information/Climate Control Screen</span>Displays the operating status of vehicle functions, vehicle status, and vehicle inclination. Refer to the vehicle Owner’s Manual. | capability | p.22 / text |
 <!-- GENERATED:END function=3a27b00af556 -->
+
+
 
 
 

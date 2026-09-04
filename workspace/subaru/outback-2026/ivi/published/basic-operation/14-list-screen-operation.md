@@ -10,6 +10,7 @@
 - Figure 14-1 source: p.28
 - (Copied from OM) Select to skip to the next or previous page.
 
+
 ## 14-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -20,6 +21,8 @@
 | 4 | <span class="req-label">List screen operation</span>This indicates the displayed screen’s position. To scroll: Drag the position indicator. To jump: Select the desired position of the rail. | capability | p.28 / text |
 | 5 | <span class="req-label">List screen operation</span>Some lists contain character screen buttons which allow users to jump directly to list entries that begin with the same letter as the character screen button. Every time the same character screen button is selected, the list starting with the subsequent character is displayed. | capability | p.28 / text |
 <!-- GENERATED:END function=67b4190dcaaa -->
+
+
 
 
 

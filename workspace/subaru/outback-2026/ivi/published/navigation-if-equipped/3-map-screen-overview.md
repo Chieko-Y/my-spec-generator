@@ -10,6 +10,7 @@
 - Figure 3-1 source: p.119
 - (Copied from OM) To display the map screen, touch “[icon]” of the main menu.
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -43,6 +44,8 @@ flowchart TD
 | 4 | <span class="req-label">Map screen overview</span>Select to change the map display mode between 2D north-up, 2D heading-up, or 3D heading-up. (→P.121). | capability | p.120 / text |
 | 5 | <span class="req-label">Step -</span>The speed limit is displayed only when information is available in the map data. | constraint | p.120 / bullet |
 <!-- GENERATED:END function=9aad734301de -->
+
+
 
 
 

@@ -97,7 +97,15 @@ body {
    about which panel a scroll gesture affects. The row's height is the
    viewport minus .app-main's own top+bottom padding (24px each), so it fits
    without the page itself growing a second, outer scrollbar. */
-.spec-view-row { display: flex; gap: 16px; height: calc(100vh - 48px); }
+/* 48px = .app-main's own top+bottom padding; 50px = .spec-view-title's own
+   rendered height + bottom margin, added once that heading replaced the old
+   single-line manual_id <p> above this row -- without subtracting it here
+   too, .app-main's total content (title + this row) ran taller than the
+   viewport, giving the OUTER page its own small scrollbar on top of this
+   row's already-independent one, which is what let the page load scrolled
+   somewhere other than the very top even after resetting .pub-doc's own
+   scrollTop (reported directly, 2026-09-04). */
+.spec-view-row { display: flex; gap: 16px; height: calc(100vh - 48px - 50px); }
 .spec-nav-col {
   width: 220px;
   flex: none;
@@ -155,6 +163,16 @@ body {
 .app-main { flex: 1; min-width: 0; padding: 24px 32px; max-width: 1100px; }
 
 h1 { font-size: 22px; margin-top: 0; }
+/* Specifications page's own page-level heading (spec_view.html) -- maker +
+   model + chapter, e.g. "Subaru Ascent 2026 — HFL Menus". Previously just
+   the raw manual_id slug in small monospace <code> (e.g.
+   "subaru/ascent-2026/ivi"), which didn't say which chapter was even open;
+   reported directly, 2026-09-04 ("大き目の" / "太文字"). Bigger and bolder
+   than a regular in-body <h1> (e.g. a function's own "23. HFL Menus" title
+   inside body_html, which shares the plain h1 rule above) so this reads as
+   the page's own top-level heading, not one more function heading among
+   many. */
+.spec-view-title { font-size: 26px; font-weight: 800; margin: 0 0 16px; }
 h2 { font-size: 17px; }
 
 table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }

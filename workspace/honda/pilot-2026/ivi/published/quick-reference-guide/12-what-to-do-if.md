@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-add1577fd13e.png)
 - Figure 12-1 source: p.32
-- (Copied from OM) opened from inside the
+- (Copied from OM) lock position. If so, open the rear
+
 
 ## 12-2-1. Service overview
 
@@ -47,6 +48,8 @@
 | 18 | <span class="req-label">Step -</span>Close the driver’s door and manually change the gear position. 2 When opening the driver’s door (P422). | constraint | p.34 / bullet |
 | 19 | <span class="req-label">What to Do If</span>The brake pads may need to be replaced. Have your vehicle inspected by a dealer. | capability | p.34 / text |
 <!-- GENERATED:END function=c224a27dedde -->
+
+
 
 
 

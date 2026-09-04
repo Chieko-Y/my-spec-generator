@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-824659409ba3.png)
 - Figure 5-1 source: p.261
-- (Copied from OM) Select OK.
+- (Copied from OM) If you do not select OK within 5 seconds,
 
 
 ## 5-2-1. Service overview
@@ -17,6 +17,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Start Up</span>The 9" Color Touchscreen starts automatically when you set the power mode to ACCESSORY or ON. At start-up, the following screen about the disclaimer will be displayed. | constraint | p.261 / text |
 <!-- GENERATED:END function=8a62fb9997ec -->
+
+
 
 
 

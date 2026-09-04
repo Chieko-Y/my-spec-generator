@@ -9,15 +9,19 @@
 ![figure](../figures/FIG-ed3dc3862275.png)
 - Figure 5-1 source: p.24
 - (Copied from OM) phone screen
+
 ![figure](../figures/FIG-37f40d6d4007.png)
 - Figure 5-2 source: p.24
 - (Copied from OM) Bluetooth audio screen
+
 ![figure](../figures/FIG-40dbcb9dac0e.png)
 - Figure 5-3 source: p.24
 - (Copied from OM) settings screen
+
 ![figure](../figures/FIG-43c246d8104d.png)
 - Figure 5-4 source: p.24
 - (Copied from OM) Bluetooth audio screen
+
 
 ## 5-2-1. Service overview
 
@@ -26,6 +30,8 @@
 | 1 | <span class="req-label">Adding A Bluetooth Phone/Device</span>Adding from the phone screen. | capability | p.24 / text |
 | 2 | <span class="req-label">Adding A Bluetooth Phone/Device</span>Adding from the Adding from the Bluetooth audio screen settings screen. | capability | p.24 / text |
 <!-- GENERATED:END function=ced471fbdeea -->
+
+
 
 
 

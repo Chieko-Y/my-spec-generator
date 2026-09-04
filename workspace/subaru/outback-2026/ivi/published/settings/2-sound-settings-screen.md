@@ -10,6 +10,7 @@
 - Figure 2-1 source: p.41
 - (Copied from OM) 3. Select the items to be set.
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -56,6 +57,8 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>“Safety Warning Volume”: Select to adjust the warning volume level. Refer to the vehicle Owner’s Manual for “Volume Controls” details. | capability | p.42 / bullet |
 <!-- GENERATED:END function=26c4d1ead423 -->
+
+
 
 
 

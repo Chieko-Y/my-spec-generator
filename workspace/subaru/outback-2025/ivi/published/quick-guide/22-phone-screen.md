@@ -9,45 +9,59 @@
 ![figure](../figures/FIG-dd963e46b78d.png)
 - Figure 22-1 source: p.50
 - (Copied from OM) Directly input a number
+
 ![figure](../figures/FIG-497b41d20564.png)
 - Figure 22-2 source: p.50
 - (Copied from OM) P.121,122,123
+
 ![figure](../figures/FIG-a11a1c23178c.png)
 - Figure 22-3 source: p.51
 - (Copied from OM) Switch to call
+
 ![figure](../figures/FIG-a21001ec19c7.png)
 - Figure 22-4 source: p.51
 - (Copied from OM) Start three-way call
+
 ![figure](../figures/FIG-c0e6293625c0.png)
 - Figure 22-5 source: p.51
 - (Copied from OM) The notification setting on the Bluetooth phone may need to be activated in
+
 ![figure](../figures/FIG-7356002e32ee.png)
 - Figure 22-6 source: p.51
 - (Copied from OM) not be possible depending on the Bluetooth phone used.
+
 ![figure](../figures/FIG-c128df6df209.png)
 - Figure 22-7 source: p.51
 - (Copied from OM) Place call
+
 ![figure](../figures/FIG-1c8f34a1c731.png)
 - Figure 22-8 source: p.52
 - (Copied from OM) Calling the message
+
 ![figure](../figures/FIG-d4af116180b6.png)
 - Figure 22-9 source: p.52
 - (Copied from OM) Having messages
+
 ![figure](../figures/FIG-bce4365662f7.png)
 - Figure 22-10 source: p.52
 - (Copied from OM) When there are unread messages in the message inbox
+
 ![figure](../figures/FIG-974c6eb00829.png)
 - Figure 22-11 source: p.53
 - (Copied from OM) Select message.
+
 ![figure](../figures/FIG-a48d20b1490a.png)
 - Figure 22-12 source: p.53
 - (Copied from OM) The notification setting on the Bluetooth phone may need to be activated
+
 ![figure](../figures/FIG-2ca685d39f9e.png)
 - Figure 22-13 source: p.53
 - (Copied from OM) Send message.
+
 ![figure](../figures/FIG-3e4bf1c29d96.png)
 - Figure 22-14 source: p.53
-- (Copied from OM) *: If available (for iOS only reception possible)
+- (Copied from OM) the desired number.
+
 
 ## 22-2-1. Service overview
 
@@ -79,6 +93,8 @@
 | 24 | <span class="req-label">Phone Screen</span>Send message. | capability | p.53 / text |
 | 25 | <span class="req-label">Phone Screen</span>*: If available (for iOS only reception possible) 53. | constraint | p.53 / text |
 <!-- GENERATED:END function=72e3a88ac6d6 -->
+
+
 
 
 

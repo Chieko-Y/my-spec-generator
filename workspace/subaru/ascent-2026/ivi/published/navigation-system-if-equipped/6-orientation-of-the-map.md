@@ -8,13 +8,16 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-0e58de970313.png)
 - Figure 6-1 source: p.161
-- (Copied from OM) always up.
+- (Copied from OM) ● Regardless of the direction of vehicle travel, north is
+
 ![figure](../figures/FIG-aa5a9529ab98.png)
 - Figure 6-2 source: p.162
 - (Copied from OM) ● The direction of vehicle travel is always up.
+
 ![figure](../figures/FIG-bfdfde5fb088.png)
 - Figure 6-3 source: p.162
 - (Copied from OM) ● The direction of vehicle travel is always up.
+
 
 ## Procedure
 ```mermaid
@@ -51,6 +54,8 @@ flowchart TD
 | 3 | <span class="req-label">Step -</span>The direction of vehicle travel is always up. | capability | p.162 / bullet |
 | 4 | <span class="req-label">Step -</span>The direction of vehicle travel is always up. | capability | p.162 / bullet |
 <!-- GENERATED:END function=9c26ec3fccd3 -->
+
+
 
 
 

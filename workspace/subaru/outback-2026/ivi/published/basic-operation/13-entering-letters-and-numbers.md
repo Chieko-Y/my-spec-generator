@@ -10,6 +10,7 @@
 - Figure 13-1 source: p.27
 - (Copied from OM) Display predictive entries.*
 
+
 ## 13-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -37,6 +38,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Entering letters and numbers</span>*: Depending on the function used, predictive entries may not be displayed. | capability | p.28 / text |
 <!-- GENERATED:END function=cf904db19713 -->
+
+
 
 
 

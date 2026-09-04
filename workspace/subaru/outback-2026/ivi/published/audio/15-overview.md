@@ -10,6 +10,7 @@
 - Figure 15-1 source: p.103
 - (Copied from OM) Select to change audio modes.
 
+
 ## 15-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -44,6 +45,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the device or music file being played, the cover art may not be displayed. | capability | p.104 / bullet |
 <!-- GENERATED:END function=5584790bd13c -->
+
+
 
 
 

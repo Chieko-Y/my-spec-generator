@@ -10,6 +10,7 @@
 - Figure 13-1 source: p.210
 - (Copied from OM) Candidate route overview
 
+
 ## 13-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -22,6 +23,8 @@
 | 6 | <span class="req-label">Route Calculation Screen</span>l Be sure to obey traffic regulations and keep road conditions in mind while driving. If a traffic sign on the road has been changed, the route guidance may not indicate such changed information. | constraint | p.211 / text |
 | 7 | <span class="req-label">Route Calculation Screen</span>NOTE l The route for returning may not be the same as that for going. l The route guidance to the destination may not be the shortest route or a route without traffic congestion. l Route guidance may not be available if there is no road data for the specified location. l If a destination that is not located on a road is set, the vehicle will be guided to the point on a road nearest to the destination. The road nearest to the selected point is set as the destination. | constraint | p.211 / text |
 <!-- GENERATED:END function=48ded43b2503 -->
+
+
 
 
 

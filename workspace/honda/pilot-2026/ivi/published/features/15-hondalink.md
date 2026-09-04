@@ -8,13 +8,16 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-df58eee0c047.png)
 - Figure 15-1 source: p.300
-- (Copied from OM) OK.
+- (Copied from OM) To link with HondaLink®
+
 ![figure](../figures/FIG-9ba835f5edc1.png)
 - Figure 15-2 source: p.302
-- (Copied from OM) Notification
+- (Copied from OM) Vehicle Information and Message from Honda Tips
+
 ![figure](../figures/FIG-4b140239a115.png)
 - Figure 15-3 source: p.302
 - (Copied from OM) Notification
+
 
 ## Procedure (2 sequences; the manual restarts the numbering)
 ```mermaid
@@ -83,6 +86,8 @@ flowchart TD
 | 6 | <span class="req-label">HondaLink®</span>Notification. | capability | p.302 / text |
 | 7 | <span class="req-label">Step -</span>A notification is continuously displayed on the B-zone until the new message is read. | capability | p.302 / bullet |
 <!-- GENERATED:END function=c91c02774e47 -->
+
+
 
 
 

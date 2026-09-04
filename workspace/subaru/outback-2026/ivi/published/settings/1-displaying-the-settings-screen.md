@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-b38bd96fd185.png)
 - Figure 1-1 source: p.40
 - (Copied from OM) Select to display the sound settings screen. (→P.41)
+
 ![figure](../figures/FIG-c42f781ac0fd.png)
 - Figure 1-2 source: p.40
 - (Copied from OM) Select to display the sound settings screen. (→P.41)
+
 
 ## Procedure
 ```mermaid
@@ -47,6 +49,8 @@ flowchart TD
 | 12 | <span class="req-label">Displaying the settings screen</span>Select to display the network connection settings screen. (→P.47). | capability | p.41 / text |
 | 13 | <span class="req-label">Displaying the settings screen</span>Select to display the software settings screen. (→P.48). | capability | p.41 / text |
 <!-- GENERATED:END function=e0f9d8f184e3 -->
+
+
 
 
 

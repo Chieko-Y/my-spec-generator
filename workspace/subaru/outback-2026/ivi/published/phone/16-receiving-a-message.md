@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-58b4b37b593b.png)
 - Figure 16-1 source: p.84
 - (Copied from OM) ● “View”: Select to display the message inbox screen.
+
 ![figure](../figures/FIG-6ca68ebee38e.png)
 - Figure 16-2 source: p.85
 - (Copied from OM) 2. The following screen is displayed.
+
 
 ## Procedure
 ```mermaid
@@ -56,6 +58,8 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>Depending on the cellular phone used for receiving messages, or its registration status with the system, some information may not be displayed. | capability | p.85 / bullet |
 <!-- GENERATED:END function=347befe594c3 -->
+
+
 
 
 

@@ -9,33 +9,43 @@
 ![figure](../figures/FIG-c2eee7760c5f.png)
 - Figure 29-1 source: p.60
 - (Copied from OM) Usable
+
 ![figure](../figures/FIG-6e8b3b5d84c2.png)
 - Figure 29-2 source: p.60
 - (Copied from OM) Apple CarPlay
+
 ![figure](../figures/FIG-5d5d08ed7c30.png)
 - Figure 29-3 source: p.61
 - (Copied from OM) MySubaru
+
 ![figure](../figures/FIG-eb21fe366f36.png)
 - Figure 29-4 source: p.61
 - (Copied from OM) MySubaru
+
 ![figure](../figures/FIG-38d9066a46f3.png)
 - Figure 29-5 source: p.62
 - (Copied from OM) Fuel prices
+
 ![figure](../figures/FIG-369fe98796f1.png)
 - Figure 29-6 source: p.62
 - (Copied from OM) Weather
+
 ![figure](../figures/FIG-65e18f7468f8.png)
 - Figure 29-7 source: p.62
 - (Copied from OM) Stocks
+
 ![figure](../figures/FIG-fa3d70a2fa1b.png)
 - Figure 29-8 source: p.62
 - (Copied from OM) Parking
+
 ![figure](../figures/FIG-c1cc6202acea.png)
 - Figure 29-9 source: p.62
 - (Copied from OM) Sports
+
 ![figure](../figures/FIG-66132397dc9b.png)
 - Figure 29-10 source: p.62
 - (Copied from OM) Weather alerts
+
 
 ## 29-2-1. Service overview
 
@@ -56,6 +66,8 @@
 | 13 | <span class="req-label">Apps Screen</span>Fuel prices Sports. | capability | p.62 / text |
 | 14 | <span class="req-label">Apps Screen</span>Weather Weather alerts. | capability | p.62 / text |
 <!-- GENERATED:END function=ff44f90fa2b7 -->
+
+
 
 
 

@@ -9,42 +9,55 @@
 ![figure](../figures/FIG-a3c7f89a902d.png)
 - Figure 7-1 source: p.26
 - (Copied from OM) Directly input a number
+
 ![figure](../figures/FIG-b45610a8015c.png)
 - Figure 7-2 source: p.26
 - (Copied from OM) P.121,122,123
+
 ![figure](../figures/FIG-29b2e427dd0a.png)
 - Figure 7-3 source: p.27
 - (Copied from OM) Mute the connected
+
 ![figure](../figures/FIG-a5598356d331.png)
 - Figure 7-4 source: p.27
 - (Copied from OM) Start three-way
+
 ![figure](../figures/FIG-60803b733d31.png)
 - Figure 7-5 source: p.27
 - (Copied from OM) The notification setting on the Bluetooth phone may need to be
+
 ![figure](../figures/FIG-3a6757ac27ee.png)
 - Figure 7-6 source: p.27
 - (Copied from OM) not be possible depending on the Bluetooth phone used.
+
 ![figure](../figures/FIG-697fccf7e2d5.png)
 - Figure 7-7 source: p.27
 - (Copied from OM) Select number for making call.
+
 ![figure](../figures/FIG-ca083732c0d1.png)
 - Figure 7-8 source: p.28
-- (Copied from OM) Having messages
+- (Copied from OM) Select the message
+
 ![figure](../figures/FIG-e0f30217aba3.png)
 - Figure 7-9 source: p.28
 - (Copied from OM) Calling the message
+
 ![figure](../figures/FIG-3f8fef1f6a9d.png)
 - Figure 7-10 source: p.28
 - (Copied from OM) number.
+
 ![figure](../figures/FIG-ca2a08fe5d2a.png)
 - Figure 7-11 source: p.28
 - (Copied from OM) The notification setting on the Bluetooth phone may need to be
+
 ![figure](../figures/FIG-a891286e416d.png)
 - Figure 7-12 source: p.28
 - (Copied from OM) number.
+
 ![figure](../figures/FIG-186bd4c40989.png)
 - Figure 7-13 source: p.28
 - (Copied from OM) Select message.
+
 
 ## 7-2-1. Service overview
 
@@ -73,6 +86,8 @@
 | 21 | <span class="req-label">Phone Screen</span>Select the message Select message. icon next to the desired number. | capability | p.28 / text |
 | 22 | <span class="req-label">Phone Screen</span>Send message. | capability | p.28 / text |
 <!-- GENERATED:END function=72e3a88ac6d6 -->
+
+
 
 
 

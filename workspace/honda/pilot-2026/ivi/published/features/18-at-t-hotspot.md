@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-75b42e718863.png)
 - Figure 18-1 source: p.308
-- (Copied from OM) a Hotspot Enable
+- (Copied from OM) AT&amp;T Hotspot Menu
+
 
 ## 18-2-1. Service overview
 
@@ -22,6 +23,8 @@
 | 6 | <span class="req-label">AT&amp;T Hotspot</span>Hotspot username and password can be changed in the Settings of the AT&amp;T Hotspot app. Settings cannot be accessed while driving. Park in a safe place to adjust Hotspot settings. | constraint | p.308 / text |
 | 7 | <span class="req-label">AT&amp;T Hotspot</span>Alternatively, you can use your mobile hotspot to connect the vehicle and other mobile devices to the Internet. 2 Wi-Fi Connection P.306. | capability | p.308 / text |
 <!-- GENERATED:END function=367d3ed11a70 -->
+
+
 
 
 

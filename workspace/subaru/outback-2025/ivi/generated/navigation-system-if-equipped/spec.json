@@ -376,19 +376,19 @@
         {
           "req_id": "8009aa43fef6",
           "slot": "overview",
-          "text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
-          "source_text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+          "text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+          "source_text": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
           "strength": "constraint",
           "source": "p.197 / text",
           "page_citation": "BASIC OPERATION MAP SCREEN OPERATION Select to change the map display mode between 2D",
           "next_step_text": null,
           "thresholds": [
             {
-              "threshold_id": "ec36984985b7",
+              "threshold_id": "f6da51b12752",
               "matching_text": "a certain amount of time",
               "kind": "quantity",
               "unit": "as stated",
-              "context": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the System current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
+              "context": "NOTE l While driving, the current position mark is fixed on the screen and the map moves. l The current position is automatically set as the vehicle receives signals from the GPS (Global Positioning System). If the current position is not correct, it is automatically corrected after the vehicle receives signals from the GPS. l If the battery has been disconnected or when the vehicle is new, the current position may not be correct. As soon as the system receives signals from the GPS, the correct current position will be displayed. l After moving the map, if it is not moved for a certain amount of time, it will automatically return to the current position.",
               "value": null,
               "status": "unfilled",
               "evidence": null,
@@ -516,7 +516,7 @@
             317.1031921
           ],
           "caption_source": "pdf_image",
-          "caption_text": "adjusted manually during route guidance. To reenable the automatic",
+          "caption_text": "Select a point from a list.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -710,7 +710,7 @@
             331.6685
           ],
           "caption_source": "pdf_image",
-          "caption_text": "always up.",
+          "caption_text": "● Regardless of the direction of vehicle travel, north is",
           "image_path": null,
           "legend_requirements": []
         },
@@ -835,7 +835,7 @@
             298.03785400000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "To receive the data service information in the vehicle, a",
+          "caption_text": "be turned on/off. (→P.219)",
           "image_path": null,
           "legend_requirements": []
         },
@@ -850,7 +850,7 @@
             349.3231628
           ],
           "caption_source": "pdf_image",
-          "caption_text": "System",
+          "caption_text": "be turned on/off. (→P.219)",
           "image_path": null,
           "legend_requirements": []
         }
@@ -1675,7 +1675,7 @@
         },
         {
           "number": 2,
-          "text": "Select (Menu). Menu 3. → Favorites (Favorites)",
+          "text": "Select (Menu). Menu 3. → (Favorites) Favorites",
           "sequence": 1,
           "source": "p.207 / step"
         },
@@ -1901,7 +1901,7 @@
             365.2071503
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Menu",
+          "caption_text": "Favorites",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1916,7 +1916,7 @@
             253.14234620000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(Add Work)/",
+          "caption_text": "points.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2518,7 +2518,7 @@
             293.97163090000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Navigation",
+          "caption_text": "settings screen. (→P.219)",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2774,7 +2774,7 @@
             320.5232361
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(Manage Route)",
+          "caption_text": "Manage Route",
           "image_path": null,
           "legend_requirements": []
         }
@@ -3258,7 +3258,7 @@
             352.34016110000005
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Navigation",
+          "caption_text": "(Settings).",
           "image_path": null,
           "legend_requirements": []
         }
@@ -4085,7 +4085,7 @@
             342.868573
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(Wi-Fi)",
+          "caption_text": "Wi-Fi",
           "image_path": null,
           "legend_requirements": []
         }

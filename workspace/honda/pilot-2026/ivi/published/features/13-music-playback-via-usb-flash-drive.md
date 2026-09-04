@@ -10,6 +10,7 @@
 - Figure 13-1 source: p.294
 - (Copied from OM) Audio/Information Screen
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -59,6 +60,8 @@ Filled: 0 / unfilled: 1
 | 17 | <span class="req-label">Music Playback via USB Flash Drive</span>Random Random off: Random mode turns off. Random all files: Plays all files in random order. Random in folder: Plays all files in the current folder in random order. | capability | p.296 / text |
 | 18 | <span class="req-label">Music Playback via USB Flash Drive</span>Repeat Repeat off: Repeat mode turns off. Repeat file: Repeats the current playing file. Repeat in folder: Repeats all files in the current folder. | capability | p.296 / text |
 <!-- GENERATED:END function=65adcb3696ea -->
+
+
 
 
 

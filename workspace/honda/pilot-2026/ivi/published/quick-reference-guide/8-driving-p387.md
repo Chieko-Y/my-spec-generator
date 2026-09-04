@@ -8,25 +8,32 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-ba42cd986d2e.png)
 - Figure 8-1 source: p.25
-- (Copied from OM) Park
+- (Copied from OM) Drive/S Position
+
 ![figure](../figures/FIG-5861aabab21b.png)
 - Figure 8-2 source: p.25
 - (Copied from OM) Gear Position Indicator
+
 ![figure](../figures/FIG-22ae06a7b676.png)
 - Figure 8-3 source: p.26
-- (Copied from OM) Indicator
+- (Copied from OM) the instrument panel.
+
 ![figure](../figures/FIG-9b0ff7aa872c.png)
 - Figure 8-4 source: p.26
-- (Copied from OM) Indicator
+- (Copied from OM) gear number is displayed in
+
 ![figure](../figures/FIG-eb5a99edb527.png)
 - Figure 8-5 source: p.26
 - (Copied from OM) Paddle Shifter Paddle Shifter
+
 ![figure](../figures/FIG-afe92e0789cc.png)
 - Figure 8-6 source: p.27
 - (Copied from OM) Wait for five seconds
+
 ![figure](../figures/FIG-6a32b925cc58.png)
 - Figure 8-7 source: p.27
 - (Copied from OM) Wait for five seconds
+
 
 ## Numeric thresholds (filled in by a tester)
 Filled: 0 / unfilled: 1
@@ -85,6 +92,8 @@ Filled: 0 / unfilled: 1
 | 38 | <span class="req-label">Driving (P387)</span>b Press and release the rear edge of the fuel fill door to make it open slightly. | capability | p.27 / text |
 | 39 | <span class="req-label">Driving (P387)</span>c After refueling, Wait for five seconds wait for about five seconds before removing the filler nozzle. | capability | p.27 / text |
 <!-- GENERATED:END function=5d9abca3e6e4 -->
+
+
 
 
 

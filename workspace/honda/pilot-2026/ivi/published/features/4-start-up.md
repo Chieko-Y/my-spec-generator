@@ -9,12 +9,15 @@
 ![figure](../figures/FIG-e3345807a29e.png)
 - Figure 4-1 source: p.270
 - (Copied from OM) VOL/ AUDIO (Volume/Power) Knob
+
 ![figure](../figures/FIG-51b8125d44ce.png)
 - Figure 4-2 source: p.272
-- (Copied from OM) 1Registering new user information
+- (Copied from OM) Additional information for Google Apps and Services
+
 ![figure](../figures/FIG-5f822fca2947.png)
 - Figure 4-3 source: p.272
-- (Copied from OM) 3.Name your profile and select Next.
+- (Copied from OM) Registering new user information
+
 
 ## Procedure
 ```mermaid
@@ -93,6 +96,8 @@ Filled: 0 / unfilled: 1
 |---|---|---|---|
 | 1 | <span class="req-label">Start Up</span>Data Sharing with Honda Enable: Data communication available. Disable: Data communication unavailable. | capability | p.271 / text |
 <!-- GENERATED:END function=f1aa70e723ed -->
+
+
 
 
 

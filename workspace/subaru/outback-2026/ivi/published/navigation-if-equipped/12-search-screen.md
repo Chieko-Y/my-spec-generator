@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-18c40a1a14b6.png)
 - Figure 12-1 source: p.126
-- (Copied from OM) Select to display a list of gas stations.
+- (Copied from OM) can be set for places where postal address is not precisely allocated.
+
 
 ## 12-2-1. Service overview
 
@@ -26,6 +27,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>On the screen showing a list of destination candidates, move to the desired point on the map and touch “Search here”. Then a new search will be performed. | capability | p.127 / bullet |
 <!-- GENERATED:END function=f0239234c144 -->
+
+
 
 
 

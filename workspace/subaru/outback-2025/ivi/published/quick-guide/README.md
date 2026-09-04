@@ -37,21 +37,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 
 | In-house term | Category | Wording in the manual | Hits | Evidence |
 |---|---|---|---:|---|
-| AA | abbreviation | `Android Auto` | 24 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
-
-## Headings not matched to body text
-These bookmark entries could not be located in the extracted body text and were not turned into functions. Reported instead of silently dropped.
-- Home Screen
-- Car Information/Climate Control Screen
-- With A Bluetooth Phone/Device
-- Adding A Bluetooth Phone/Device
-- Create A Driver Profile
-- Loading And Unloading A Disc
-- Home Screen
-- With A Bluetooth Phone/Device
-- Managing A Bluetooth Phone/Device
-- Create A Driver Profile
-- Loading And Unloading A Disc
+| AA | abbreviation | `Android Auto` | 23 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
 
 ## Functions
 
@@ -127,6 +113,8 @@ flowchart LR
 | 30 | [Settings Screen](/specifications/subaru/outback-2025/ivi/file/30-settings-screen.md?chapter=quick-guide) | Quick Guide | 7 | 11 | 0 | - |
 | 31 | [Steering Wheel Controls](/specifications/subaru/outback-2025/ivi/file/31-steering-wheel-controls.md?chapter=quick-guide) | Quick Guide | 4 | 0 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

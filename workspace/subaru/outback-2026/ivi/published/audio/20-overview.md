@@ -10,6 +10,7 @@
 - Figure 20-1 source: p.108
 - (Copied from OM) Select to change audio modes.
 
+
 ## 20-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -41,6 +42,8 @@
 | 2 | <span class="req-label">Step -</span>Depending on the Apple CarPlay device or music file being played, the cover art may not be displayed. | capability | p.109 / bullet |
 | 3 | <span class="req-label">Step -</span>Tracks selected by operating a connected Apple CarPlay device may not be recognized or displayed properly. | capability | p.109 / bullet |
 <!-- GENERATED:END function=5584790bd13c -->
+
+
 
 
 

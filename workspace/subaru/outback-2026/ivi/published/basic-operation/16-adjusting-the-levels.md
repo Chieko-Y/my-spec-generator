@@ -10,12 +10,15 @@
 - Figure 16-1 source: p.29
 - (Copied from OM) drag the icon.
 
+
 ## 16-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
 |---|---|---|---|
 | 1 | <span class="req-label">Adjusting the levels</span>To adjust the levels, select the desired place of the screen bar, touch “[icon]” / “[icon]”, or drag the icon. | capability | p.29 / text |
 <!-- GENERATED:END function=83325b0665f0 -->
+
+
 
 
 

@@ -10,6 +10,7 @@
 - Figure 14-1 source: p.129
 - (Copied from OM) ●“Add home”: Select to register a point as home. (→P.130)
 
+
 ## 14-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -32,6 +33,8 @@
 | 8 | <span class="req-label">Step -</span>“[icon]”: Select to delete registered point(s). | capability | p.129 / bullet |
 | 9 | <span class="req-label">Step -</span>“[icon]”: Select to change names of the registered point(s). | capability | p.129 / bullet |
 <!-- GENERATED:END function=aaf603dc37d1 -->
+
+
 
 
 

@@ -10,6 +10,7 @@
 - Figure 10-1 source: p.33
 - (Copied from OM) Mix preset function
 
+
 ## 10-2-2. Service requirements
 
 | # | Presumed requirement | Strength | Source |
@@ -21,6 +22,8 @@
 | 5 | <span class="req-label">Useful SiriusXM® Radio Functions</span>Mix preset function Multiple stations can be registered as presets. (AM, FM or SiriusXM® Radio) P.154,163. | capability | p.33 / text |
 | 6 | <span class="req-label">Useful SiriusXM® Radio Functions</span>Select and hold one of the preset buttons. | capability | p.33 / text |
 <!-- GENERATED:END function=51ff53923268 -->
+
+
 
 
 

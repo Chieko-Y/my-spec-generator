@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-c4b9a20907b6.png)
 - Figure 9-1 source: p.285
-- (Copied from OM) 2.Select an icon on the source list to switch
+- (Copied from OM) Selecting an Audio Source
+
 
 ## Procedure (2 sequences; the manual restarts the numbering)
 ```mermaid
@@ -52,6 +53,8 @@ flowchart TD
 | 6 | <span class="req-label">Display Setup</span>1Changing the Screen Brightness You can change the Contrast and Black Level settings in the same manner. | capability | p.285 / text |
 | 7 | <span class="req-label">Display Setup</span>To reset the settings, select Reset to Default. | capability | p.285 / text |
 <!-- GENERATED:END function=2ae8194b5a7c -->
+
+
 
 
 

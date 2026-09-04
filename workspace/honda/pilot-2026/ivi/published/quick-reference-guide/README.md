@@ -59,7 +59,7 @@ flowchart LR
 | 3 | [Eco Assist® System (P433)](/specifications/honda/pilot-2026/ivi/file/3-eco-assist-system-p433.md?chapter=quick-reference-guide) | Quick Reference Guide | 5 | 3 | 0 | - |
 | 4 | [Safe Driving (P35)](/specifications/honda/pilot-2026/ivi/file/4-safe-driving-p35.md?chapter=quick-reference-guide) | Quick Reference Guide | 14 | 1 | 0 | - |
 | 5 | [Instrument Panel (P95)](/specifications/honda/pilot-2026/ivi/file/5-instrument-panel-p95.md?chapter=quick-reference-guide) | Quick Reference Guide | 13 | 1 | 1 | - |
-| 6 | [Controls (P149)](/specifications/honda/pilot-2026/ivi/file/6-controls-p149.md?chapter=quick-reference-guide) | Quick Reference Guide | 57 | 13 | 3 | - |
+| 6 | [Controls (P149)](/specifications/honda/pilot-2026/ivi/file/6-controls-p149.md?chapter=quick-reference-guide) | Quick Reference Guide | 59 | 13 | 3 | - |
 | 7 | [Features (P263)](/specifications/honda/pilot-2026/ivi/file/7-features-p263.md?chapter=quick-reference-guide) | Quick Reference Guide | 14 | 3 | 0 | - |
 | 8 | [Driving (P387)](/specifications/honda/pilot-2026/ivi/file/8-driving-p387.md?chapter=quick-reference-guide) | Quick Reference Guide | 40 | 7 | 1 | - |
 | 9 | [Honda Sensing®(P453)](/specifications/honda/pilot-2026/ivi/file/9-honda-sensing-p453.md?chapter=quick-reference-guide) | Quick Reference Guide | 18 | 0 | 2 | - |
@@ -67,6 +67,8 @@ flowchart LR
 | 11 | [Handling the Unexpected (P625)](/specifications/honda/pilot-2026/ivi/file/11-handling-the-unexpected-p625.md?chapter=quick-reference-guide) | Quick Reference Guide | 8 | 4 | 0 | - |
 | 12 | [What to Do If](/specifications/honda/pilot-2026/ivi/file/12-what-to-do-if.md?chapter=quick-reference-guide) | Quick Reference Guide | 27 | 1 | 0 | - |
 <!-- GENERATED:END index -->
+
+
 
 
 

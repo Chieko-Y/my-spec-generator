@@ -10,6 +10,7 @@
 - Figure 4-1 source: p.44
 - (Copied from OM) Select to reset the adjusted position.
 
+
 ## 4-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -19,6 +20,8 @@
 | 3 | <span class="req-label">Balance/fader settings</span>Select to reset the adjusted position. | capability | p.44 / text |
 | 4 | <span class="req-label">Balance/fader settings</span>Select the icon to adjust sound balance. | capability | p.44 / text |
 <!-- GENERATED:END function=6965bcaf7c57 -->
+
+
 
 
 

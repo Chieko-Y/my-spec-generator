@@ -10,6 +10,7 @@
 - Figure 8-1 source: p.95
 - (Copied from OM) Select to change audio modes. 5
 
+
 ## 8-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -47,6 +48,8 @@
 | 22 | <span class="req-label">Overview</span>Select to tune to preset channels. (Preset channels can also be changed using the / switch on the steering wheel.) The preset channel list can be scrolled by swiping the list. | capability | p.96 / text |
 | 23 | <span class="req-label">Overview</span>*: For content distributed on-demand and online, “More Episodes” may be displayed instead of “Related” on this screen button. | capability | p.96 / text |
 <!-- GENERATED:END function=5584790bd13c -->
+
+
 
 
 

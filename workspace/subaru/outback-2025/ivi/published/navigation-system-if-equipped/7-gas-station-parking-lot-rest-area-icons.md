@@ -8,10 +8,12 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-65d1c8f1ad59.png)
 - Figure 7-1 source: p.201
-- (Copied from OM) To receive the data service information in the vehicle, a
+- (Copied from OM) be turned on/off. (→P.219)
+
 ![figure](../figures/FIG-f2c8201f0207.png)
 - Figure 7-2 source: p.201
-- (Copied from OM) System
+- (Copied from OM) be turned on/off. (→P.219)
+
 
 ## 7-2-1. Service overview
 
@@ -33,6 +35,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Gas Station/Parking Lot/Rest Area Icons</span>*: Use of this function may not be possible depending on country and vehicle. Road sections affected by traffic conditions are displayed in a different color on the map, and a small icon representing the type of traffic condition is displayed above the road. | capability | p.201 / text |
 <!-- GENERATED:END function=705ccca6f718 -->
+
+
 
 
 

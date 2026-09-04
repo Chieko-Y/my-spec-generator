@@ -8,13 +8,16 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-66e767c4bff7.png)
 - Figure 10-1 source: p.30
-- (Copied from OM) (P599)
+- (Copied from OM) Lights
+
 ![figure](../figures/FIG-6908681e14bf.png)
 - Figure 10-2 source: p.30
 - (Copied from OM) (P581)
+
 ![figure](../figures/FIG-11035af02fef.png)
 - Figure 10-3 source: p.30
 - (Copied from OM) (P581)
+
 
 ## 10-2-1. Service overview
 
@@ -40,6 +43,8 @@
 | 12 | <span class="req-label">Step -</span>Check tire pressures regularly. | capability | p.30 / bullet |
 | 13 | <span class="req-label">Step -</span>Install snow tires for winter driving. | capability | p.30 / bullet |
 <!-- GENERATED:END function=bdf3d2c7f0dd -->
+
+
 
 
 

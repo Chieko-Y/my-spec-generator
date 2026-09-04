@@ -9,15 +9,19 @@
 ![figure](../figures/FIG-c9e611aa10d8.png)
 - Figure 11-1 source: p.31
 - (Copied from OM) the cargo area.
+
 ![figure](../figures/FIG-5904131ed2e3.png)
 - Figure 11-2 source: p.31
 - (Copied from OM) owner’s manual.
+
 ![figure](../figures/FIG-7674572e991d.png)
 - Figure 11-3 source: p.31
-- (Copied from OM) booster battery.
+- (Copied from OM) and let the engine cool down.
+
 ![figure](../figures/FIG-6be325280e69.png)
 - Figure 11-4 source: p.31
 - (Copied from OM) and let the engine cool down.
+
 
 ## 11-2-1. Service overview
 
@@ -37,6 +41,8 @@
 | 6 | <span class="req-label">Step -</span>Check for a blown fuse if an electrical. | constraint | p.31 / bullet |
 | 7 | <span class="req-label">Step -</span>Call a professional towing service if you owner’s manual. device does not operate. need to tow your vehicle. | constraint | p.31 / bullet |
 <!-- GENERATED:END function=930102048b88 -->
+
+
 
 
 

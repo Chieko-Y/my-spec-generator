@@ -1305,7 +1305,7 @@
             626.9940039
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select to display a list of gas stations.",
+          "caption_text": "can be set for places where postal address is not precisely allocated.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -1453,7 +1453,7 @@
             647.3939978
           ],
           "caption_source": "pdf_image",
-          "caption_text": "and touch “Search here”. Then a new search will be performed.",
+          "caption_text": "Obtains online and displays various information related to the destination.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2272,7 +2272,7 @@
             488.5139929
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Next guidance display",
+          "caption_text": "conditions to guide another route.",
           "image_path": null,
           "legend_requirements": []
         }

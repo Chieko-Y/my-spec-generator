@@ -10,6 +10,7 @@
 - Figure 9-1 source: p.203
 - (Copied from OM) Menu
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -49,6 +50,8 @@ flowchart TD
 | 7 | <span class="req-label">Main Menu Screen Overview</span>To display frequently set destinations, select “Keep trip history on this device for optional features” and “Predict Privacy (Privacy) frequent destinations” to on then select Frequent destinations (Frequent destinations). | capability | p.204 / text |
 | 8 | <span class="req-label">Main Menu Screen Overview</span>*2: If a point has been registered as home. *3: If a point has not been registered as work. *4: If a point has been registered as work. *5: This item can only be selected when a route has been registered to My Routes. | constraint | p.204 / text |
 <!-- GENERATED:END function=0cada0fbf622 -->
+
+
 
 
 

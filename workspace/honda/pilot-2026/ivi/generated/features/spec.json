@@ -451,7 +451,7 @@
             280.76599999999996
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Remote Controls",
+          "caption_text": "USB Flash Drive",
           "image_path": null,
           "legend_requirements": []
         },
@@ -466,7 +466,7 @@
             230.846
           ],
           "caption_source": "pdf_image",
-          "caption_text": "On the back of the console",
+          "caption_text": "USB charging port on the front panel and the back of the console compartment (",
           "image_path": null,
           "legend_requirements": []
         },
@@ -481,7 +481,7 @@
             357.14599999999996
           ],
           "caption_source": "pdf_image",
-          "caption_text": "compartment",
+          "caption_text": "USB charging port on the front panel and the back of the console compartment (",
           "image_path": null,
           "legend_requirements": []
         },
@@ -496,7 +496,7 @@
             229.64600000000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "On both sides of the third row seats*",
+          "caption_text": "USB charging port on both sides of the third row seats (",
           "image_path": null,
           "legend_requirements": []
         }
@@ -1137,7 +1137,7 @@
             226.346
           ],
           "caption_source": "pdf_image",
-          "caption_text": "1Registering new user information",
+          "caption_text": "Additional information for Google Apps and Services",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1152,7 +1152,7 @@
             202.046
           ],
           "caption_source": "pdf_image",
-          "caption_text": "3.Name your profile and select Next.",
+          "caption_text": "Registering new user information",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2525,7 +2525,7 @@
             347.906
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Mode Change Switch Bar",
+          "caption_text": "Switching the display",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2540,7 +2540,7 @@
             282.14599999999996
           ],
           "caption_source": "pdf_image",
-          "caption_text": "in the A-Zone.",
+          "caption_text": "B-Zone",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2555,7 +2555,7 @@
             330.38599999999997
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Swipe",
+          "caption_text": "To move to the next screen",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2570,7 +2570,7 @@
             297.926
           ],
           "caption_source": "pdf_image",
-          "caption_text": "3.Select Home or Back.",
+          "caption_text": "To move/remove icons on the home screen",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2585,7 +2585,7 @@
             217.94600000000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Drag and drop to",
+          "caption_text": "To shortcut icons on the home screen",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2600,7 +2600,7 @@
             394.346
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Status Area",
+          "caption_text": "Status Bar",
           "image_path": null,
           "legend_requirements": []
         }
@@ -3488,7 +3488,7 @@
             340.706
           ],
           "caption_source": "pdf_image",
-          "caption_text": "2.Select an icon on the source list to switch",
+          "caption_text": "Selecting an Audio Source",
           "image_path": null,
           "legend_requirements": []
         }
@@ -4373,7 +4373,7 @@
             319.946
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Audio/Information Screen",
+          "caption_text": "Favorite Station Icons, Add Favorite",
           "image_path": null,
           "legend_requirements": []
         }
@@ -5825,7 +5825,7 @@
             405.866
           ],
           "caption_source": "pdf_image",
-          "caption_text": "OK.",
+          "caption_text": "To link with HondaLink®",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5840,7 +5840,7 @@
             339.326
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Notification",
+          "caption_text": "Vehicle Information and Message from Honda Tips",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6819,7 +6819,7 @@
             283.706
           ],
           "caption_source": "pdf_image",
-          "caption_text": "a Hotspot Enable",
+          "caption_text": "AT&T Hotspot Menu",
           "image_path": null,
           "legend_requirements": []
         }
@@ -8166,7 +8166,7 @@
             256.346
           ],
           "caption_source": "pdf_image",
-          "caption_text": "1Google built-in",
+          "caption_text": "Additional information for Google Apps and Services",
           "image_path": null,
           "legend_requirements": []
         }
@@ -8578,7 +8578,7 @@
             241.64600000000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "a User Information",
+          "caption_text": "You can customize settings individually for each user.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -9527,7 +9527,7 @@
             315.326
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Left Selector Wheel",
+          "caption_text": "HFL Buttons",
           "image_path": null,
           "legend_requirements": []
         },
@@ -9542,7 +9542,7 @@
             294.38599999999997
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Caller’s Name (if registered)/",
+          "caption_text": "Signal",
           "image_path": null,
           "legend_requirements": []
         }
@@ -11070,7 +11070,7 @@
             389.486
           ],
           "caption_source": "pdf_image",
-          "caption_text": "2.Select Phone.",
+          "caption_text": "Phone screen",
           "image_path": null,
           "legend_requirements": []
         },
@@ -11085,7 +11085,7 @@
             227.546
           ],
           "caption_source": "pdf_image",
-          "caption_text": "phonebook, call history, or favorite contact",
+          "caption_text": "Making a Call",
           "image_path": null,
           "legend_requirements": []
         },
@@ -11100,7 +11100,7 @@
             222.74599999999998
           ],
           "caption_source": "pdf_image",
-          "caption_text": "■Receiving a Call",
+          "caption_text": "Receiving a Call",
           "image_path": null,
           "legend_requirements": []
         },
@@ -11115,7 +11115,7 @@
             334.166
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Mute Icon",
+          "caption_text": "Options During a Call",
           "image_path": null,
           "legend_requirements": []
         }
@@ -11210,7 +11210,7 @@
             255.62599999999998
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select OFF to mute your voice.",
+          "caption_text": "How to use",
           "image_path": null,
           "legend_requirements": []
         }

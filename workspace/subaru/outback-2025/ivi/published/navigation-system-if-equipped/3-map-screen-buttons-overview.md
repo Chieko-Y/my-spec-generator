@@ -10,6 +10,7 @@
 - Figure 3-1 source: p.197
 - (Copied from OM) Select to change the scale of the map screen. (→P.198)
 
+
 ## 3-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -17,6 +18,8 @@
 | 1 | <span class="req-label">Map Screen Buttons Overview</span>The map screen buttons can be accessed by selecting any point on the map. | capability | p.197 / text |
 | 2 | <span class="req-label">Map Screen Buttons Overview</span>Select to change the scale of the map screen. (→P.198). | capability | p.197 / text |
 <!-- GENERATED:END function=866fa052f11d -->
+
+
 
 
 

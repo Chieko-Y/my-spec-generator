@@ -10,6 +10,7 @@
 - Figure 13-1 source: p.81
 - (Copied from OM) Select to mute your voice to the other party.
 
+
 ## 13-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -29,6 +30,8 @@
 | 2 | <span class="req-label">Step -</span>Changing between cellular phone call and hands-free call can be performed by operating the cellular phone directly. Transferring methods and operations will be different depending on the type of cellular phone you have. For the operation of the cellular phone, see the manual that comes with it. | capability | p.82 / bullet |
 | 3 | <span class="req-label">Step -</span>Turn the VOLUME knob, or use the +/- switch on the steering wheel to adjust the volume of the other party’s voice. | capability | p.82 / bullet |
 <!-- GENERATED:END function=26fd43965619 -->
+
+
 
 
 

@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-28de342a73a1.png)
 - Figure 21-1 source: p.317
-- (Copied from OM) 1Google built-in
+- (Copied from OM) Additional information for Google Apps and Services
+
 
 ## 21-2-1. Service overview
 
@@ -55,6 +56,8 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Google built-in</span>You can customize language and other settings regarding Google Assistant. 2 How to Customize the General Settings P.346. | capability | p.318 / text |
 <!-- GENERATED:END function=1507cedfef93 -->
+
+
 
 
 

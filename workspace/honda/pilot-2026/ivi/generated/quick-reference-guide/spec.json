@@ -375,7 +375,7 @@
             410.846
           ],
           "caption_source": "pdf_image",
-          "caption_text": "❚Rear Wiper",
+          "caption_text": "Visual Index",
           "image_path": null,
           "legend_requirements": []
         },
@@ -390,7 +390,7 @@
             267.266
           ],
           "caption_source": "pdf_image",
-          "caption_text": "❚Power Door Mirrors",
+          "caption_text": "Visual Index",
           "image_path": null,
           "legend_requirements": []
         }
@@ -642,7 +642,7 @@
             421.346
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(P433)",
+          "caption_text": "Ambient Meter",
           "image_path": null,
           "legend_requirements": []
         },
@@ -672,7 +672,7 @@
             250.406
           ],
           "caption_source": "pdf_image",
-          "caption_text": "DRIVE MODE Switch",
+          "caption_text": "Ambient Meter",
           "image_path": null,
           "legend_requirements": []
         }
@@ -884,7 +884,7 @@
             342.14599999999996
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Before Driving Checklist",
+          "caption_text": "Seat Belts",
           "image_path": null,
           "legend_requirements": []
         }
@@ -1327,10 +1327,36 @@
         {
           "req_id": "54e9a14aa74f",
           "slot": "overview",
-          "text": "Wipers and Washers Models with automatic intermittent wipers AUTO should always be turned OFF before the following situations in order to prevent (P201) severe damage to the wiper system: Wiper/Washer Control Lever Cleaning the windshield ● ● Driving through a car wash Adjustment Ring.",
-          "source_text": "Wipers and Washers Models with automatic intermittent wipers AUTO should always be turned OFF before the following situations in order to prevent (P201) severe damage to the wiper system: Wiper/Washer Control Lever Cleaning the windshield ● ● Driving through a car wash Adjustment Ring",
+          "text": "Wipers and Washers Models with automatic intermittent wipers AUTO should always be turned OFF before the following situations in order to prevent (P201) severe damage to the wiper system: Wiper/Washer Control Lever.",
+          "source_text": "Wipers and Washers Models with automatic intermittent wipers AUTO should always be turned OFF before the following situations in order to prevent (P201) severe damage to the wiper system: Wiper/Washer Control Lever",
           "strength": "capability",
           "source": "p.18 / text",
+          "page_citation": null,
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "3e5dcf102f61",
+          "slot": "requirements",
+          "text": "Cleaning the windshield.",
+          "source_text": "Cleaning the windshield",
+          "strength": "capability",
+          "source": "p.18 / bullet",
+          "page_citation": null,
+          "next_step_text": null,
+          "thresholds": [],
+          "change": null,
+          "previous_text": null
+        },
+        {
+          "req_id": "300f6bdba708",
+          "slot": "requirements",
+          "text": "Driving through a car wash Adjustment Ring.",
+          "source_text": "Driving through a car wash Adjustment Ring",
+          "strength": "capability",
+          "source": "p.18 / bullet",
           "page_citation": null,
           "next_step_text": null,
           "thresholds": [],
@@ -1934,7 +1960,7 @@
             262.826
           ],
           "caption_source": "pdf_image",
-          "caption_text": "ENGINE START/STOP",
+          "caption_text": "power mode.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1964,7 +1990,7 @@
             314.666
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(P195)",
+          "caption_text": "AUTO*2: Wiper speed varies automatically",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1979,7 +2005,7 @@
             283.654
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Wipers and Washers",
+          "caption_text": "MIST",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1994,7 +2020,7 @@
             313.346
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Models with automatic intermittent wipers",
+          "caption_text": "Lever",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2009,7 +2035,7 @@
             240.086
           ],
           "caption_source": "pdf_image",
-          "caption_text": "unlock and open it at the same time.",
+          "caption_text": "Tailgate",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2039,7 +2065,7 @@
             235.286
           ],
           "caption_source": "pdf_image",
-          "caption_text": "1 sec.",
+          "caption_text": "the tailgate.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2054,7 +2080,7 @@
             302.126
           ],
           "caption_source": "pdf_image",
-          "caption_text": "selector switch to L or R.",
+          "caption_text": "Adjustment Switch",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2298,7 +2324,7 @@
             236.726
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(P263)",
+          "caption_text": "VOL(+/VOL(- (Volume)",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2328,7 +2354,7 @@
             312.68600000000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Audio/Information Screen",
+          "caption_text": "VOL/ AUDIO (Volume/Power) Knob",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2892,7 +2918,7 @@
             298.106
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Park",
+          "caption_text": "Drive/S Position",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2922,7 +2948,7 @@
             449.246
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Indicator",
+          "caption_text": "the instrument panel.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2937,7 +2963,7 @@
             325.76599999999996
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Indicator",
+          "caption_text": "gear number is displayed in",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3467,7 +3493,7 @@
             351.326
           ],
           "caption_source": "pdf_image",
-          "caption_text": "(P599)",
+          "caption_text": "Lights",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3661,7 +3687,7 @@
             246.14600000000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "booster battery.",
+          "caption_text": "and let the engine cool down.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4059,7 +4085,7 @@
             262.766
           ],
           "caption_source": "pdf_image",
-          "caption_text": "opened from inside the",
+          "caption_text": "lock position. If so, open the rear",
           "image_path": null,
           "legend_requirements": []
         }

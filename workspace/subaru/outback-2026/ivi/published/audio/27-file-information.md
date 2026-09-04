@@ -10,6 +10,7 @@
 - Figure 27-1 source: p.114
 - (Copied from OM) ● The play order may change depending on the personal computer and
 
+
 ## 27-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -42,6 +43,8 @@
 | 1 | <span class="req-label">Step -</span>This system plays back files with .mp3/.wma/.m4a file extensions as AAC/AAC+ v2/MP3/WMA files respectively. To prevent noise and playback errors, use the appropriate file extension. | capability | p.114 / bullet |
 | 2 | <span class="req-label">Step -</span>MP3 files are compatible with the ID3 Tag Ver. 1.0, Ver. 1.1, Ver. 2.2 and Ver. 2.3 formats. This system cannot display folder name, file name and artist name in other formats. | constraint | p.114 / bullet |
 <!-- GENERATED:END function=086a1af648b8 -->
+
+
 
 
 

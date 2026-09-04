@@ -31,6 +31,29 @@ def test_picks_the_nearest_line_in_the_same_column_not_an_offcolumn_line_that_ha
     assert result.text == "Select to change audio modes."
 
 
+def test_column_margin_is_wide_enough_for_a_real_25pt_gap():
+    """Real Subaru Outback 2026 case, 2026-09-04: "Search screen" (Navigation
+    if equipped) -- the figure's rect sits at x0=144.9, and the real closest
+    paragraph text sits at x0=119.1, a genuine 25.8pt gap. With the old 20pt
+    margin this line was excluded from the same-column candidate set
+    entirely, and the caption fell through to a same-column-but-farther,
+    completely unrelated bullet item describing a different icon on the same
+    page ("Select to display a list of gas stations.")."""
+    rect = (144.9, 440.7, 457.0, 627.0)
+    lines = [
+        Line(page=0, text="Select to display a list of gas stations.", top=292.7, x0=151.4),
+        Line(
+            page=0,
+            text="can be set for places where postal address is not precisely allocated.",
+            top=383.5,
+            x0=119.1,
+        ),
+    ]
+    result = caption_for(rect, page=0, lines=lines)
+    assert result is not None
+    assert result.text == "can be set for places where postal address is not precisely allocated."
+
+
 def test_prefers_a_heading_prefixed_line_over_a_step_whose_top_falls_inside_the_rect():
     """Real Honda CR-V 2026 case, 2026-09-04: a screenshot's own printed label
     ("■Phone menu screen", genuinely 30pt above the image, same column) lost to

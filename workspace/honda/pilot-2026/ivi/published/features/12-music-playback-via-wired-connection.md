@@ -10,6 +10,7 @@
 - Figure 12-1 source: p.291
 - (Copied from OM) Audio/Information Screen
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -60,6 +61,8 @@ Filled: 0 / unfilled: 1
 | 18 | <span class="req-label">Music Playback via Wired Connection</span>Play Mode Menu Items Shuffle Shuffle off: Shuffle mode turns off. Shuffle all songs: Plays all available songs in a selected list in random order. | capability | p.293 / text |
 | 19 | <span class="req-label">Music Playback via Wired Connection</span>Repeat Repeat off: Repeat mode turns off. Repeat song: Repeats the current song. Repeat all: Repeats all available songs in a selected list. | capability | p.293 / text |
 <!-- GENERATED:END function=0ea47a2b9199 -->
+
+
 
 
 

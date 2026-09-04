@@ -10,6 +10,7 @@
 - Figure 9-1 source: p.47
 - (Copied from OM) 3. Select the items to be set.
 
+
 ## Procedure
 ```mermaid
 flowchart TD
@@ -36,6 +37,8 @@ flowchart TD
 | 4 | <span class="req-label">Network connection settings screen</span>Select to set the Wi-Fi® Hotspot function settings. “Wi-Fi Hotspot”* Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details. | capability | p.47 / text |
 | 5 | <span class="req-label">Network connection settings screen</span>*: If equipped. | constraint | p.47 / text |
 <!-- GENERATED:END function=fac4ff375d3b -->
+
+
 
 
 

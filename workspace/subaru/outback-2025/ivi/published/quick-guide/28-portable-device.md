@@ -8,10 +8,12 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-cbb8faef2d32.png)
 - Figure 28-1 source: p.59
-- (Copied from OM) Select the playback mode.
+- (Copied from OM) Depending on the audio source, several
+
 ![figure](../figures/FIG-2eb10f2ca5ea.png)
 - Figure 28-2 source: p.59
-- (Copied from OM) DISPLAY
+- (Copied from OM) Play a track.
+
 
 ## 28-2-1. Service overview
 
@@ -21,6 +23,8 @@
 | 2 | <span class="req-label">Portable Device</span>Select the playback mode. Play a track. | capability | p.59 / text |
 | 3 | <span class="req-label">Portable Device</span>Depending on the audio source, several items from these categories are displayed in a list. | capability | p.59 / text |
 <!-- GENERATED:END function=c7354a95c02b -->
+
+
 
 
 

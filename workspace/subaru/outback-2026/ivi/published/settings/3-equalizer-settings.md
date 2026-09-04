@@ -10,6 +10,7 @@
 - Figure 3-1 source: p.43
 - (Copied from OM) Select to reset all setup items.
 
+
 ## 3-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -20,6 +21,8 @@
 | 4 | <span class="req-label">Equalizer settings</span>Select to adjust mid-pitched tones. | capability | p.43 / text |
 | 5 | <span class="req-label">Equalizer settings</span>Select to adjust low-pitched tones. | capability | p.43 / text |
 <!-- GENERATED:END function=de4f4a203b7a -->
+
+
 
 
 

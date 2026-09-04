@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-7fb40ab4b23f.png)
 - Figure 11-1 source: p.287
-- (Copied from OM) Audio/Information Screen
+- (Copied from OM) Favorite Station Icons, Add Favorite
+
 
 ## Procedure (7 sequences; the manual restarts the numbering)
 ```mermaid
@@ -126,6 +127,8 @@ Filled: 1 / unfilled: 0
 | 21 | <span class="req-label">Step -</span>HD Radio: Automatically choose a digital or an analog channel, or listen to analog only. | capability | p.290 / bullet |
 | 22 | <span class="req-label">Step -</span>Artwork: Turns the artwork display on and off. | capability | p.290 / bullet |
 <!-- GENERATED:END function=35b7539e28da -->
+
+
 
 
 

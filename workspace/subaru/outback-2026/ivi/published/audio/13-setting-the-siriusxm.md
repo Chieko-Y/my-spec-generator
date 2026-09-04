@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-b95baf822334.png)
 - Figure 13-1 source: p.101
 - (Copied from OM) 2. Select the desired item to be set.
+
 ![figure](../figures/FIG-0abb8e9c4940.png)
 - Figure 13-2 source: p.102
 - (Copied from OM) Select to change avatars.
+
 
 ## Procedure
 ```mermaid
@@ -53,6 +55,8 @@ flowchart TD
 | 18 | <span class="req-label">Setting the SiriusXM®</span>“Start Up Recommenda- Select to enable/disable the start up recommendations function. tions”. | capability | p.102 / text |
 | 19 | <span class="req-label">Setting the SiriusXM®</span>“Reset History” Select to delete all the listening history. | capability | p.102 / text |
 <!-- GENERATED:END function=0b1461817628 -->
+
+
 
 
 

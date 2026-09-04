@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-88d8c8789ed8.png)
 - Figure 15-1 source: p.215
-- (Copied from OM) (Manage Route)
+- (Copied from OM) Manage Route
+
 
 ## Procedure
 ```mermaid
@@ -45,6 +46,8 @@ flowchart TD
 | 13 | <span class="req-label">Current Route Screen</span>Select to change the order of the currently set destination and waypoints. Select a destination, select or to change its position in Reorder Stops the list, and then select Done (Reorder Stops) (Done) to confirm the change. Edit Stops (Edit Stops): Select to display the edit stops screen. To delete a waypoint, select then Delete (Delete). | capability | p.216 / text |
 | 14 | <span class="req-label">Current Route Screen</span>Play Route Preview (Play Route Preview): Select Play Route Preview t o e n t e r route preview mode. (Play Route Preview)/ (→ P .2 1 7 ) Stop Route Preview Stop Route Preview (Stop Route Preview) (Stop Route Preview): Select to exit route preview mode. | capability | p.216 / text |
 <!-- GENERATED:END function=7442f3e43f2f -->
+
+
 
 
 

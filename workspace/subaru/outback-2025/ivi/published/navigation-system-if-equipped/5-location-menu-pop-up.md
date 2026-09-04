@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-d05424e0c2eb.png)
 - Figure 5-1 source: p.198
-- (Copied from OM) adjusted manually during route guidance. To reenable the automatic
+- (Copied from OM) Select a point from a list.
+
 
 ## Procedure
 ```mermaid
@@ -42,6 +43,8 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Location Menu Pop-up</span>NOTE l The scale of the map screen can also be changed with the double touch or pinch operation. (→P.71) l If the map scale has been changed after moving the map, the map scale will return to previous scale when the map is returned to the current position. l The automatic zoom function may not operate if the map scale is adjusted manually during route guidance. To reenable the automatic zoom function, change the orientation of the map screen. (→P.199). | constraint | p.198 / text |
 <!-- GENERATED:END function=23fdbf986932 -->
+
+
 
 
 

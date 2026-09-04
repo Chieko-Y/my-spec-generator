@@ -10,6 +10,7 @@
 - Figure 11-1 source: p.125
 - (Copied from OM) Select to display the search screen. (→P.126)
 
+
 ## 11-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -29,6 +30,8 @@
 | 6 | <span class="req-label">Navigation menu screen</span>Select to display a list of recently set destinations. (→P.130). | capability | p.126 / text |
 | 7 | <span class="req-label">Navigation menu screen</span>Select to display a list of gas stations. | capability | p.126 / text |
 <!-- GENERATED:END function=d3e5e86188c6 -->
+
+
 
 
 

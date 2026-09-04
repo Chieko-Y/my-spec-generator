@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-95a4d181a798.png)
 - Figure 7-1 source: p.46
-- (Copied from OM) 3. Select the items to be set.
+- (Copied from OM) favorites, phonebook of the connected Bluetooth
+
 
 ## Procedure
 ```mermaid
@@ -54,6 +55,8 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>The profile version of the connected Bluetooth phone may not be compatible with downloading phonebook data. For details, contact your SUBARU dealer. | capability | p.46 / bullet |
 <!-- GENERATED:END function=450ed13667f8 -->
+
+
 
 
 

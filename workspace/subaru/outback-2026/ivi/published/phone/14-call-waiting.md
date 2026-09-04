@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-268f5b711884.png)
 - Figure 14-1 source: p.82
 - (Copied from OM) ● The first call is put on hold.
+
 ![figure](../figures/FIG-1608150d54d9.png)
 - Figure 14-2 source: p.83
 - (Copied from OM) who is on hold will be switched.
+
 
 ## Procedure
 ```mermaid
@@ -50,6 +52,8 @@ flowchart TD
 |---|---|---|---|
 | 1 | <span class="req-label">Step -</span>To end all of the calls connected, press and hold switch on the steering wheel. *: Depending on the company of the Bluetooth phone that is connected to the system, the conference call function may not be available. 4. | capability | p.83 / bullet |
 <!-- GENERATED:END function=2dd38fc77be2 -->
+
+
 
 
 

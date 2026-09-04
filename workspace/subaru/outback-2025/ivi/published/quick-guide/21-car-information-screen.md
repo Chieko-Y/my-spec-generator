@@ -9,9 +9,11 @@
 ![figure](../figures/FIG-dc9c0d4f018a.png)
 - Figure 21-1 source: p.49
 - (Copied from OM) Refer to the vehicle Owner’s Manual.
+
 ![figure](../figures/FIG-6d786fa6ba30.png)
 - Figure 21-2 source: p.49
 - (Copied from OM) Refer to the vehicle Owner’s Manual.
+
 
 ## 21-2-1. Service overview
 
@@ -20,6 +22,8 @@
 | 1 | <span class="req-label">Car Information Screen</span>Displays the operating status of vehicle functions, vehicle status, and vehicle inclination. Refer to the vehicle Owner’s Manual. | capability | p.49 / text |
 | 2 | <span class="req-label">Car Information Screen</span>Setup and display vehicle part replacement intervals. Refer to the vehicle Owner’s Manual. | capability | p.49 / text |
 <!-- GENERATED:END function=0b641309a1c2 -->
+
+
 
 
 

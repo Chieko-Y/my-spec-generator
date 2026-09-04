@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-0b8defe3f7bb.png)
 - Figure 13-1 source: p.273
-- (Copied from OM) Shuffle Icon
+- (Copied from OM) Music Library Icon
 
 
 ## Procedure (2 sequences; the manual restarts the numbering)
@@ -92,6 +92,8 @@ Filled: 0 / unfilled: 2
 | 2 | <span class="req-label">Playing Bluetooth® Audio</span>1How to Select a Song from the Music Search List Depending on the Bluetooth® device you connect, some or all of the categories may not be displayed. | capability | p.274 / text |
 | 3 | <span class="req-label">Playing Bluetooth® Audio</span>1How to Select a Play Mode Depending on the Bluetooth® device you connect, some or all of the functions may not be displayed. | capability | p.275 / text |
 <!-- GENERATED:END function=bfae0f3ebe54 -->
+
+
 
 
 

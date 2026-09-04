@@ -10,6 +10,7 @@
 - Figure 16-1 source: p.217
 - (Copied from OM) Select to change the preview speed to “1X”/“2X”/“4X”.
 
+
 ## 16-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -28,6 +29,8 @@
 | 12 | <span class="req-label">Standard Map Icon</span>You have arrived at your destination. | capability | p.217 / text |
 | 13 | <span class="req-label">Standard Map Icon</span>You have arrived at your waypoint. | capability | p.217 / text |
 <!-- GENERATED:END function=6993b39cc921 -->
+
+
 
 
 

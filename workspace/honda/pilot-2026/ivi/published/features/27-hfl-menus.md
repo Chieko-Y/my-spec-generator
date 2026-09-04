@@ -8,16 +8,20 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-11e77bea30c2.png)
 - Figure 27-1 source: p.372
-- (Copied from OM) 2.Select Phone.
+- (Copied from OM) Phone screen
+
 ![figure](../figures/FIG-da60e2f1ac79.png)
 - Figure 27-2 source: p.380
-- (Copied from OM) phonebook, call history, or favorite contact
+- (Copied from OM) Making a Call
+
 ![figure](../figures/FIG-9e6c52593a00.png)
 - Figure 27-3 source: p.383
-- (Copied from OM) ■Receiving a Call
+- (Copied from OM) Receiving a Call
+
 ![figure](../figures/FIG-4c27d63c5b87.png)
 - Figure 27-4 source: p.384
-- (Copied from OM) Mute Icon
+- (Copied from OM) Options During a Call
+
 
 ## Procedure (18 sequences; the manual restarts the numbering)
 ```mermaid
@@ -375,6 +379,8 @@ flowchart TD
 | 3 | <span class="req-label">HFL Menus</span>On some phones, it may not be possible to import the category icons to the system. | capability | p.377 / text |
 | 4 | <span class="req-label">HFL Menus</span>While there is an active connection with Apple CarPlay, phone calls cannot be made with HandsFreeLink® and are only made from Apple CarPlay. | constraint | p.380 / text |
 <!-- GENERATED:END function=a9918ba7a001 -->
+
+
 
 
 

@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-a6aad30752b7.png)
 - Figure 18-1 source: p.133
-- (Copied from OM) Next guidance display
+- (Copied from OM) conditions to guide another route.
+
 
 ## 18-2-1. Service overview
 
@@ -43,6 +44,8 @@
 | 3 | <span class="req-label">Step -</span>The route guidance to the destination may not be the shortest route or a route without traffic congestion. | capability | p.134 / bullet |
 | 4 | <span class="req-label">Step -</span>Route guidance may not be available if there is no road data for the specified location. | constraint | p.134 / bullet |
 <!-- GENERATED:END function=9fa584252787 -->
+
+
 
 
 

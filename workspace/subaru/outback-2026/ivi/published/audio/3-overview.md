@@ -10,6 +10,7 @@
 - Figure 3-1 source: p.91
 - (Copied from OM) Select to change audio modes. 5
 
+
 ## 3-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -35,6 +36,8 @@
 | 1 | <span class="req-label">Step -</span>The radio automatically changes to stereo reception when a stereo broadcast is received. | constraint | p.92 / bullet |
 | 2 | <span class="req-label">Step -</span>When the HD Radio mode is on, the radio automatically tunes to an HD Radio signal in AM or FM where available. | capability | p.92 / bullet |
 <!-- GENERATED:END function=5584790bd13c -->
+
+
 
 
 

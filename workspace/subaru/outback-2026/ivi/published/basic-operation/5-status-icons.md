@@ -10,6 +10,7 @@
 - Figure 5-1 source: p.20
 - (Copied from OM) Poor Excellent
 
+
 ## 5-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -21,6 +22,8 @@
 | 5 | <span class="req-label">Status icons</span>Displayed when DCM (Data Communication Module in vehicle cellular connection) is used. *1 Select to display the privacy policy and terms of use. | constraint | p.20 / text |
 | 6 | <span class="req-label">Status icons</span>*1: If equipped *2: Refer to the Owner’s Manual supplement for “MySubaru Connected Services” for details. | constraint | p.20 / text |
 <!-- GENERATED:END function=f39b23aaa768 -->
+
+
 
 
 

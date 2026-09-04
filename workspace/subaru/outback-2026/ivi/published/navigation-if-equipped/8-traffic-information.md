@@ -10,6 +10,7 @@
 - Figure 8-1 source: p.123
 - (Copied from OM) ● To display traffic information for the area around your vehicle on the map, it is necessary to
 
+
 ## 8-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -31,6 +32,8 @@
 | 1 | <span class="req-label">Step -</span>In situations where DCM (Data Communication Module) communication cannot be established, it is not possible to receive traffic information. Also, in areas of weak communication signals, it may not be possible to receive traffic information. To receive traffic information, move the vehicle to an area where communication signals can be received normally. | constraint | p.123 / bullet |
 | 2 | <span class="req-label">Step -</span>The traffic information displaying function may not be available depending on country and vehicle. | capability | p.123 / bullet |
 <!-- GENERATED:END function=d66270745b8c -->
+
+
 
 
 

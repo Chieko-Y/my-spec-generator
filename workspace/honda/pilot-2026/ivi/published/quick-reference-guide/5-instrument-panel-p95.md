@@ -10,6 +10,7 @@
 - Figure 5-1 source: p.16
 - (Copied from OM) Current Mode for ACC with Low Speed Follow, the LKAS, and Traffic Jam Assist
 
+
 ## Numeric thresholds (filled in by a tester)
 Filled: 0 / unfilled: 1
 
@@ -40,6 +41,8 @@ Filled: 0 / unfilled: 1
 | 11 | <span class="req-label">Instrument Panel (P95)</span>Fuel Gauge (P119). | capability | p.16 / text |
 | 12 | <span class="req-label">Instrument Panel (P95)</span>Odometer (P119). | capability | p.16 / text |
 <!-- GENERATED:END function=50ca0ad67758 -->
+
+
 
 
 

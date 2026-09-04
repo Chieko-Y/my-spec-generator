@@ -8,7 +8,8 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-b9366f7f5736.png)
 - Figure 6-1 source: p.45
-- (Copied from OM) 3. Select the items to be set.
+- (Copied from OM) Manual for details.
+
 
 ## Procedure
 ```mermaid
@@ -46,6 +47,8 @@ flowchart TD
 | 5 | <span class="req-label">Displays settings screen</span>“Language” Refer to the vehicle Owner’s Manual for details. | capability | p.45 / text |
 | 6 | <span class="req-label">Displays settings screen</span>*: If equipped. | constraint | p.45 / text |
 <!-- GENERATED:END function=214f9158e97a -->
+
+
 
 
 

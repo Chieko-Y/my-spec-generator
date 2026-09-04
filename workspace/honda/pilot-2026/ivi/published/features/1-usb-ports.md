@@ -8,16 +8,20 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-ac69f0be0002.png)
 - Figure 1-1 source: p.264
-- (Copied from OM) Remote Controls
+- (Copied from OM) USB Flash Drive
+
 ![figure](../figures/FIG-bea66bda37ba.png)
 - Figure 1-2 source: p.265
-- (Copied from OM) On the back of the console
+- (Copied from OM) USB charging port on the front panel and the back of the console compartment (
+
 ![figure](../figures/FIG-c88a1220b884.png)
 - Figure 1-3 source: p.265
-- (Copied from OM) compartment
+- (Copied from OM) USB charging port on the front panel and the back of the console compartment (
+
 ![figure](../figures/FIG-8a2b6e2e0114.png)
 - Figure 1-4 source: p.266
-- (Copied from OM) On both sides of the third row seats*
+- (Copied from OM) USB charging port on both sides of the third row seats (
+
 
 ## 1-2-1. Service overview
 
@@ -65,6 +69,8 @@
 | 3 | <span class="req-label">Step -</span>Charging may not start or may operate slowly depending on the connected devices and cables. Using only one port while not connecting anything (including cables) to the other port may solve the issue. | capability | p.265 / bullet |
 | 4 | <span class="req-label">Step -</span>You cannot play music even if you have connected music players to it. | constraint | p.266 / bullet |
 <!-- GENERATED:END function=95b41420c160 -->
+
+
 
 
 

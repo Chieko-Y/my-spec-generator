@@ -10,6 +10,7 @@
 - Figure 10-1 source: p.125
 - (Copied from OM) Navigation menu
 
+
 ## 10-2-1. Service overview
 
 | # | Presumed requirement | Strength | Source |
@@ -17,6 +18,8 @@
 | 1 | <span class="req-label">Displayed on the instrument cluster display</span>The instrument cluster’s basic screen will display some of the navigation system display that is displayed on the center information display. | capability | p.124 / text |
 | 2 | <span class="req-label">Displayed on the instrument cluster display</span>When map mode is selected for the instrument cluster display, map and the navigation system display are displayed. Refer to the vehicle Owner’s Manual for how to select map mode. | capability | p.124 / text |
 <!-- GENERATED:END function=bfa15bd028bd -->
+
+
 
 
 

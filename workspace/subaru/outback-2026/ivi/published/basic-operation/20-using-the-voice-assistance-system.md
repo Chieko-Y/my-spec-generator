@@ -10,6 +10,7 @@
 - Figure 20-1 source: p.32
 - (Copied from OM) the screen.
 
+
 ## Procedure (3 sequences; the manual restarts the numbering)
 ```mermaid
 flowchart TD
@@ -76,6 +77,8 @@ flowchart TD
 | 2 | <span class="req-label">Step -</span>Voice commands may not be recognized if:. | capability | p.33 / bullet |
 | 3 | <span class="req-label">Step -</span>In the following conditions, the system may not recognize the command properly and using voice commands may not be possible:. | capability | p.33 / bullet |
 <!-- GENERATED:END function=ecf8ca696b8a -->
+
+
 
 
 
