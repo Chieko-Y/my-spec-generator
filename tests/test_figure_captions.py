@@ -160,6 +160,46 @@ def test_excludes_a_lone_short_line_even_when_no_better_column_candidate_exists(
     assert result.text == "Center information display overview"
 
 
+def test_a_wide_figure_does_not_reach_an_unrelated_right_column_line_that_merely_sits_close():
+    """Real Honda CR-V 2026 case, "5. Start Up" (Features), 2026-09-08: a 130pt-
+    wide figure's real caption paragraph ("...the following screen about the
+    disclaimer will be displayed.") sits directly above it in the SAME column
+    (x0=34.0, matching the figure's own x0=35.6), 25.6pt away. But a completely
+    unrelated right-column callout box ("If you do not select OK within 5
+    seconds,", describing a different on-screen button, x0=186.1) sat only
+    2.6pt above the figure -- reachable only through the widened same-column
+    window (figure x1 + margin), which a 130pt-wide figure pushes far enough
+    right to reach it -- and won purely on that y-coincidence. No heading-
+    prefix convention applies to this page. Reported directly by a user
+    comparing this rebuild's output against the original app's own real
+    output for the same page ("一番近いところというならばオリジナルの方が
+    ただしいような")."""
+    rect = (35.6, 108.0, 165.6, 181.1)
+    lines = [
+        Line(page=0, text="Start Up", top=39.6, x0=34.0),
+        Line(
+            page=0,
+            text='The 9" Color Touchscreen starts automatically when you set the power mode to',
+            top=59.4,
+            x0=34.0,
+        ),
+        Line(
+            page=0,
+            text="ACCESSORY or ON. At start-up, the following screen about the disclaimer will be",
+            top=70.9,
+            x0=34.0,
+        ),
+        Line(page=0, text="displayed.", top=82.4, x0=34.0),
+        Line(page=0, text="Select OK.", top=93.9, x0=177.2),
+        Line(page=0, text="If you do not select OK within 5 seconds,", top=105.4, x0=186.1),
+        Line(page=0, text="the home screen will be displayed.", top=116.9, x0=197.0),
+        Line(page=0, text="Reboot Audio", top=210.3, x0=34.0),
+    ]
+    result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
+    assert result is not None
+    assert result.text == "displayed."
+
+
 def test_returns_none_when_every_candidate_on_the_page_is_too_short():
     rect = (100.0, 100.0, 200.0, 200.0)
     lines = [Line(page=0, text="1", top=150.0, x0=100.0), Line(page=0, text="12", top=400.0, x0=100.0)]

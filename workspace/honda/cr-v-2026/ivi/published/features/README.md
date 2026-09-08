@@ -1,12 +1,12 @@
 <!-- GENERATED:START index (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
-# 2026 Honda CR-V Owner's Manual (A3A02626OMEN) — Features — Presumed specification
+# 2026 Honda CR-V Owner's Manual (A3A02626OMEN) — features — Presumed specification
 
 > This is a machine-derived estimate, not an official requirements document. Numeric thresholds left blank could not be found in the manual and must be filled in by a tester with evidence.
 
 | Field | Value |
 |---|---|
 | Maker / Model | Honda / CR-V 2026 |
-| Scope | Features |
+| Scope | features |
 | Markets | US, CA |
 | Profile | honda_v2 |
 | Manual ID | honda/cr-v-2026/ivi |
@@ -37,14 +37,14 @@ How wording in the manual maps to the in-house term. **The original text is not 
 
 | In-house term | Category | Wording in the manual | Hits | Evidence |
 |---|---|---|---:|---|
-| AA | abbreviation | `Android Auto` | 60 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
+| AA | abbreviation | `Android Auto` | 59 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
 
 ## Functions
 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
-    ROOT["2026 Honda CR-V Owner's Manual (A3A02626OMEN) — Features"]
+    ROOT["2026 Honda CR-V Owner's Manual (A3A02626OMEN) — features"]
     ROOT --> A1["Features"]
     A1 --> A1F1["1 About Your Audio System ⚠"]
     A1 --> A1F2["2 USB Ports ⚠"]
@@ -97,6 +97,9 @@ flowchart LR
 | 22 | [Using HFL](/specifications/honda/cr-v-2026/ivi/file/22-using-hfl.md?chapter=features) | Features | 30 | 3 | 0 | o |
 | 23 | [HFL Menus](/specifications/honda/cr-v-2026/ivi/file/23-hfl-menus.md?chapter=features) | Features | 75 | 7 | 0 | o |
 <!-- GENERATED:END index -->
+
+
+
 
 
 

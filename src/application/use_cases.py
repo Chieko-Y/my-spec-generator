@@ -427,6 +427,22 @@ class UseCases:
                         profile.layout.header_boundary_pt,
                         profile.layout.running_head_separator_font,
                     )
+                    # page_running_head (captured above from plain Line text,
+                    # which carries no per-character font info) leaks the raw
+                    # "u" arrow-separator glyph verbatim wherever this profile
+                    # uses the "▶▶Area▶Function" breadcrumb convention --
+                    # confirmed real, Honda CR-V 2026, 2026-09-08: a Thresholds-
+                    # tab citation read 'uu9" Color TouchscreenuStart Up'
+                    # (docs/ARCHITECTURE.md same date). running_head_breadcrumbs
+                    # already parses this correctly (it distinguishes the
+                    # reused glyph from a real letter "u" by font, not by
+                    # pattern-matching text -- see read_running_head_
+                    # breadcrumbs's own docstring), so prefer its clean,
+                    # already-split segments for every page it covers instead
+                    # of the raw header-band text.
+                    for citation_page, segments in running_head_breadcrumbs.items():
+                        if segments:
+                            page_running_head[citation_page] = " / ".join(segments)
             lines = filter_page_furniture(
                 lines, profile.layout.header_boundary_pt, profile.layout.footer_boundary_pt
             )

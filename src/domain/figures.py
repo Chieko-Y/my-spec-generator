@@ -195,11 +195,48 @@ def caption_for(
     page_lines = [l for l in lines if l.page == page and len(l.text.strip()) > 2]
     if not page_lines:
         return None
-    same_column = [l for l in page_lines if x0 - column_margin_pt <= l.x0 <= x1 + column_margin_pt]
-    candidates = same_column or page_lines
 
     def is_heading_line(l: Line) -> bool:
         return bool(heading_prefixes) and l.text.startswith(heading_prefixes)
+
+    def overlaps_vertically(l: Line) -> bool:
+        return top <= l.top <= bottom
+
+    def in_narrow_window(l: Line) -> bool:
+        # Same column as the figure's own left edge -- where a real body
+        # paragraph in this column actually starts.
+        return abs(l.x0 - x0) <= column_margin_pt
+
+    def in_wide_window(l: Line) -> bool:
+        return x0 - column_margin_pt <= l.x0 <= x1 + column_margin_pt
+
+    # The wide window (out to the figure's own RIGHT edge + margin, not just its
+    # left) exists so a real screenshot's own printed heading/step-list running
+    # down its right side -- confirmed real, Honda CR-V 2026 ("■Phone menu
+    # screen" above the image; a numbered step list beside it whose `top` falls
+    # inside the image's own height) -- is still reachable as a candidate even
+    # though it doesn't share the figure's left-edge x0. But for a WIDE figure
+    # that widened window can reach deep into a genuinely unrelated right-hand
+    # column too (confirmed real, Honda CR-V 2026: the "Start Up" figure's own
+    # rect is 130pt wide, and a same-height right-column callout box, "If you do
+    # not select OK within 5 seconds,", sat close enough vertically to beat the
+    # figure's real above-it paragraph purely by y-coincidence -- same failure
+    # shape as this function's very first fixed case, the "5" legend digit, just
+    # not far enough right to be caught by the plain width check alone). A line
+    # reachable ONLY via the widened window (not the narrow one) is kept as a
+    # candidate solely when it's plausibly actually about this figure: either it
+    # vertically overlaps the figure itself (a step/label truly running down
+    # beside it), or it carries this profile's own heading-prefix convention
+    # (Honda's "■", a genuine printed label regardless of position). A plain
+    # non-heading line that merely happens to land a little to the right of a
+    # wide figure's edge, without overlapping it, is exactly the shape of the
+    # false candidate that widened window was never meant to admit.
+    same_column = [
+        l
+        for l in page_lines
+        if in_narrow_window(l) or (in_wide_window(l) and (overlaps_vertically(l) or is_heading_line(l)))
+    ]
+    candidates = same_column or page_lines
 
     def distance(l: Line) -> tuple[bool, float, float]:
         if l.top < top:

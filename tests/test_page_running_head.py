@@ -43,3 +43,27 @@ def test_page_with_only_a_filename_header_line_yields_no_citation():
 def test_lines_outside_the_header_band_are_ignored():
     lines = [Line(page=0, text="Some running head", top=200.0)]
     assert capture_page_running_head(lines, header_boundary_pt=165.0) == {}
+
+
+def test_honda_breadcrumb_arrow_glyphs_are_stripped_and_replaced_with_spaces():
+    """Real Honda CR-V 2026 case, "5. Start Up" (Features), 2026-09-08: this
+    manual's "▶▶Area▶Function" margin breadcrumb draws its arrows by reusing
+    the Latin lowercase "u" code point in the HONDACommon font -- Line objects
+    here carry no font info, so the raw text leaks the arrow glyphs verbatim
+    ('uu9" Color TouchscreenuStart Up'), including one glued directly between
+    two labels with no real space at all. Reported directly by a user reading
+    real generated output while investigating an unrelated figure-caption bug
+    for this exact page."""
+    lines = [Line(page=260, text='uu9" Color TouchscreenuStart Up', top=13.8, x0=431.7)]
+    result = capture_page_running_head(lines, header_boundary_pt=20.0)
+    assert result == {260: '9" Color Touchscreen Start Up'}
+
+
+def test_a_real_lowercase_u_inside_a_word_is_left_alone():
+    """The arrow-glyph strip must never touch an ordinary word containing the
+    letter "u" -- only a "u" run sitting at a label boundary (start of text,
+    or glued directly onto the next capitalized/numeric label with no real
+    space) qualifies. "Audio Settings" has a real "u" mid-word and a real
+    space before its capitalized second word -- neither should ever match."""
+    lines = [Line(page=0, text="Audio Settings", top=13.8)]
+    assert capture_page_running_head(lines, header_boundary_pt=20.0) == {0: "Audio Settings"}

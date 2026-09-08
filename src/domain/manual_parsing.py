@@ -145,6 +145,35 @@ _PRODUCTION_FILENAME_RE = re.compile(r"\.(book|fm|mif|indd|docx?|framemaker)\b",
 # filename, not because of what script it's written in.
 
 
+_HEADER_ARROW_GLYPH_RE = re.compile(r'(?:(?<!\S)|(?<=[a-z]))u+(?=[A-Z0-9"])')
+# Some Honda manuals (confirmed real, Pilot and CR-V, both using the
+# HONDACommon font) print a "▶▶Area▶Function" breadcrumb in this same header
+# band, whose arrow glyphs reuse the Latin lowercase "u" code point --
+# distinguishable from a real "u" only by font (see
+# infrastructure.pdf_reader.read_running_head_breadcrumbs, which parses this
+# correctly using per-character font info at PDF-read time). `Line` objects
+# here carry no font info at all (word-grouped text only), so this can't
+# reuse that same approach -- but the arrow glyph always glues two labels
+# together with NO real space where one belongs (confirmed real, CR-V p.259:
+# 'uu9" Color TouchscreenuStart Up', the raw concatenation of the arrows
+# themselves plus 'Area' and 'Function'), a shape that never occurs in real
+# running prose. Matches a run of literal "u"s sitting at a word boundary
+# (start of string / after whitespace, so "uu" before a label starting with a
+# digit or quote is caught) OR wedged directly after a lowercase letter with
+# no space (so the mid-string "u" between "Touchscreen" and "Start" is also
+# caught) and immediately before an uppercase letter, digit, or quote -- and
+# replaces it with a real space, restoring normal word boundaries instead of
+# just deleting the glyph. A one-off `running_head_separator_font` field was
+# tried instead (font-accurate, matching read_running_head_breadcrumbs) and
+# reverted, 2026-09-08: setting it for CR-V changed which section-splitting
+# strategy build_blocks picks, silently regressing that chapter's already-
+# reviewed function count (23 -> 21, docs/ARCHITECTURE.md same date) -- this
+# text-only heuristic is scoped to the header band ONLY and never touches
+# section-splitting, so it carries no such risk.
+def _strip_header_arrow_glyphs(text: str) -> str:
+    return re.sub(r"\s+", " ", _HEADER_ARROW_GLYPH_RE.sub(" ", text)).strip()
+
+
 def capture_page_running_head(lines: list[Line], header_boundary_pt: float) -> dict[int, str]:
     """Snapshot each page's header-band text -- the PDF's own printed running-head
     label (e.g. a chapter/section title repeated in the margin) -- before
@@ -154,11 +183,13 @@ def capture_page_running_head(lines: list[Line], header_boundary_pt: float) -> d
     like a production filename artifact are skipped (see
     _PRODUCTION_FILENAME_RE) -- confirmed against the real Subaru Outback 2026
     PDF, 2026-08-31, to be redundant DTP-tool furniture, not manual content.
+    Honda's reused-glyph breadcrumb arrows (see _strip_header_arrow_glyphs) are
+    stripped from each line before joining.
     """
     by_page: dict[int, list[str]] = {}
     for l in lines:
         if l.top < header_boundary_pt and l.text.strip() and not _PRODUCTION_FILENAME_RE.search(l.text):
-            by_page.setdefault(l.page, []).append(l.text)
+            by_page.setdefault(l.page, []).append(_strip_header_arrow_glyphs(l.text))
     return {page: " ".join(texts) for page, texts in by_page.items()}
 
 
