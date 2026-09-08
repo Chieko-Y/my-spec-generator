@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-4903a5c1a258.png)
 - Figure 1-1 source: p.252
-- (Copied from OM) Device
+- (Copied from OM) Remote Controls
 
 
 ## 1-2-1. Service overview
@@ -22,6 +22,7 @@
 | 5 | <span class="req-label">About Your Audio System</span>1About Your Audio System State or local laws may prohibit the operation of handheld electronic devices while operating a vehicle. | capability | p.252 / text |
 | 6 | <span class="req-label">About Your Audio System</span>USB Flash Drive. | capability | p.252 / text |
 <!-- GENERATED:END function=6f36c93708e4 -->
+
 
 
 

@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-6d883e2fac9b.png)
 - Figure 12-1 source: p.269
-- (Copied from OM) Music Library Icon
+- (Copied from OM) Audio/Information Screen
 
 
 ## Procedure
@@ -52,6 +52,7 @@ flowchart TD
 | 16 | <span class="req-label">Music Playback via USB Flash Drive</span>WMA files protected by digital rights management (DRM) cannot be played. The audio system displays File Error, and then skips to the next song. | constraint | p.270 / text |
 | 17 | <span class="req-label">Music Playback via USB Flash Drive</span>If there is a problem, you may see an error message on the audio/information screen. 2 iPod/USB Flash Drive P.282. | capability | p.270 / text |
 <!-- GENERATED:END function=fdc39666133d -->
+
 
 
 

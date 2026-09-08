@@ -16,7 +16,7 @@
 
 ![figure](../figures/FIG-92b3d843a5fe.png)
 - Figure 22-3 source: p.312
-- (Copied from OM) Caller’s Name (If
+- (Copied from OM) Signal Strength
 
 
 ## Procedure
@@ -80,6 +80,7 @@ flowchart TD
 | 1 | <span class="req-label">Using HFL</span>If there is an active connection to Apple CarPlay or Android Auto, HFL is unavailable. | capability | p.310 / text |
 | 2 | <span class="req-label">Using HFL</span>Certain manual functions are disabled or inoperable while the vehicle is in motion. You cannot select a grayed-out option until the vehicle is stopped. | constraint | p.312 / text |
 <!-- GENERATED:END function=18d2ef322cee -->
+
 
 
 

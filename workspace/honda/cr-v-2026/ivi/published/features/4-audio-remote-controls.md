@@ -12,7 +12,7 @@
 
 ![figure](../figures/FIG-6a2591c2c3a1.png)
 - Figure 4-2 source: p.255
-- (Copied from OM) VOL(+/VOL(-
+- (Copied from OM) VOL(+/VOL(- (Volume) Switch
 
 
 ## 4-2-1. Service overview
@@ -51,6 +51,7 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Audio Remote Controls</span>Models with B-type meter Left Selector Wheel Roll up or down: To cycle through the audio modes, roll up or down and then press the left selector wheel: Back/Phone/FM/AM/USB/Bluetooth/Apple CarPlay/Android Auto/Customize display. | capability | p.257 / text |
 <!-- GENERATED:END function=3eefe40e4d15 -->
+
 
 
 

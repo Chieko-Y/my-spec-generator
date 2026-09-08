@@ -74,12 +74,21 @@ def test_prefers_a_heading_prefixed_line_over_a_step_whose_top_falls_inside_the_
     assert result.text == "■Phone menu screen"
 
 
-def test_heading_prefixes_default_never_changes_the_result():
-    """Default empty heading_prefixes (every profile without Honda's "■"
-    convention, including every confirmed Subaru case in this file) must behave
-    exactly as before -- the same scenario as above, without heading_prefixes,
-    still picks the step whose top falls inside the rect (vertical distance 0
-    wins on plain distance, matching this function's pre-2026-09-04 behavior)."""
+def test_same_column_above_wins_over_an_overlapping_step_even_without_heading_prefixes():
+    """Superseded 2026-09-08: this used to guard that a manual WITHOUT Honda's
+    "■" convention keeps picking "3.Select Menu." here (vertical distance 0,
+    off-column, wins on plain distance) -- preserving that as "unchanged
+    legacy behavior" for the heading_prefixes feature's own sake, not because
+    it was ever confirmed correct. The same real Honda case that motivated
+    heading_prefixes in the first place ("実際はPhone menu screenですよね")
+    makes plain "■Phone menu screen" -- a same-column line with a real gap
+    above the figure -- the true answer regardless of whether this profile
+    happens to have heading_prefixes configured: the PDF doesn't care about
+    our config. The redesigned tiering (same-column-at-any-position and a
+    real gap above are both "trustworthy", compared by nearest distance
+    against each other; only a same-height-but-off-column line like
+    "3.Select Menu." is de-prioritized) now gets this right without needing
+    the heading marker as a special case at all."""
     rect = (35.4, 112.5, 166.0, 176.4)
     lines = [
         Line(page=0, text="■Phone menu screen", top=82.1, x0=34.0),
@@ -87,7 +96,7 @@ def test_heading_prefixes_default_never_changes_the_result():
     ]
     result = caption_for(rect, page=0, lines=lines)
     assert result is not None
-    assert result.text == "3.Select Menu."
+    assert result.text == "■Phone menu screen"
 
 
 def test_a_wrapped_heading_caption_is_merged_across_its_two_physical_lines():
@@ -198,6 +207,110 @@ def test_a_wide_figure_does_not_reach_an_unrelated_right_column_line_that_merely
     result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
     assert result is not None
     assert result.text == "displayed."
+
+
+def test_a_weak_wide_only_candidate_still_wins_when_it_is_the_only_same_column_line():
+    """Real Honda Pilot 2026 regression, "Music Playback via Wired Connection"
+    (Features), 2026-09-08: the fix above (excluding a wide-only, non-
+    overlapping, non-heading candidate outright) emptied `same_column`
+    entirely for this figure -- its one plausible candidate,
+    'Audio/Information Screen', was reachable only through the widened
+    window and doesn't overlap the figure vertically. That fell through to
+    `candidates = same_column or page_lines`, an unscoped whole-page search
+    that picked a stray fragment of an unrelated sentence ('to change
+    songs.') purely because it happened to sit vertically inside the
+    figure's span, elsewhere on the page, in a different column entirely.
+    A weak wide-only candidate must be de-prioritized, not dropped: it
+    should still win when it is the only same-column candidate at all, so
+    the search never widens to the whole page in the first place."""
+    rect = (277.884, 231.434, 452.991, 330.026)
+    lines = [
+        Line(page=0, text="Music Playback via Wired Connection", top=95.9, x0=90.7),
+        Line(page=0, text="Audio/Information Screen", top=172.9, x0=324.4),
+        # An unrelated sentence elsewhere on the page, in a different column,
+        # whose `top` happens to fall inside the figure's own vertical span --
+        # must never be reachable at all (far outside both windows).
+        Line(page=0, text="Select", top=298.7, x0=96.2),
+        Line(page=0, text="or", top=298.7, x0=138.9),
+        Line(page=0, text="to change songs.", top=298.7, x0=167.8),
+    ]
+    result = caption_for(rect, page=0, lines=lines)
+    assert result is not None
+    assert result.text == "Audio/Information Screen"
+
+
+def test_a_same_line_split_fragment_never_wins_even_when_its_x0_coincides_with_the_column():
+    """Real Honda Pilot 2026 regression, "Playing Bluetooth® Audio", 2026-09-08:
+    "Select or to change file." (one printed line, on a dense 3-column icon-
+    legend page) was split by a column-detection quirk into three separate
+    Line objects sharing one `top` -- "Select", "or", "to change file." --
+    and "to change file." (a genuine sentence fragment, starting lowercase
+    mid-sentence) happened to land at almost exactly the figure's own x0,
+    winning as a "same column" candidate purely on that coincidence. Excluded
+    now as a same-line-split fragment (a lowercase-starting line with another
+    line at the same `top`, positioned to its own left) regardless of how
+    well its x0 happens to line up -- this minimal fixture (just the split
+    fragment plus the figure's real, correct label) confirms the fragment
+    itself can never win and the real label ("Play/Pause Icon") does.
+
+    Deliberately NOT a full end-to-end reproduction of the real page: with
+    every other icon's own real surrounding text also present (a dense 3-
+    column icon-legend layout), the fragment no longer wins, but a
+    DIFFERENT, real, complete sentence belonging to a neighboring icon
+    ("...is connected to HFL.", describing the Bluetooth indicator, not
+    Play/Pause) currently wins instead -- a known, still-unresolved gap in
+    this specific dense layout shape, tracked separately
+    (docs/ARCHITECTURE.md 2026-09-08). This test only locks in the piece
+    that IS fully fixed: a garbled split-line fragment can never be the
+    answer, regardless of how it happens to line up."""
+    rect = (168.924, 273.374, 349.536, 348.446)
+    lines = [
+        Line(page=0, text="Playing Bluetooth® Audio", top=95.9, x0=90.7),
+        Line(page=0, text="Select", top=195.7, x0=98.9),
+        Line(page=0, text="or", top=195.7, x0=141.5),
+        Line(page=0, text="to change file.", top=195.7, x0=170.4),
+        Line(page=0, text="Play/Pause Icon", top=368.5, x0=206.2),
+    ]
+    result = caption_for(rect, page=0, lines=lines)
+    assert result is not None
+    assert result.text != "to change file."
+    assert result.text == "Play/Pause Icon"
+
+
+def test_a_caption_above_a_wide_figure_can_start_left_of_the_figures_own_x0():
+    """Real Honda CR-V 2026 case, "9. Music Playback via Wired Connection"
+    (Features), 2026-09-08 -- confirmed against the ORIGINAL app's own real
+    output, which the user pasted directly: 'Cover Art Audio/Information
+    Screen' at PDF p.269, 181x89pt (the exact figure size here). That caption
+    starts 61.9pt to the LEFT of the figure's own rect x0 -- a real header for
+    the whole composite screenshot block, not aligned to the merged image
+    rect's own (somewhat arbitrary) left edge -- well outside
+    column_margin_pt (30pt), so the old narrow/wide windows never reached it
+    at all. This rebuild instead picked 'Repeat Icon', a same-column-but-
+    BELOW icon label 70.2pt away that coincidentally fell inside the old
+    narrow window, purely because nothing better was ever considered.
+
+    The one printed line is itself split into two Line objects sharing one
+    `top` ('Cover Art' / 'Audio/Information Screen') by this profile's own
+    column_detect_per_page setting (confirmed real, same PDF, same profile,
+    2026-09-08) -- both independently tie for the win here, which is the
+    signal the same-height merge (right below) uses to join them back into
+    the original's own exact text."""
+    rect = (205.824, 163.304, 386.556, 252.096)
+    lines = [
+        Line(page=0, text="Music Playback via Wired Connection", top=39.6, x0=34.0),
+        Line(page=0, text="Using your USB connector, connect the device to the USB port,", top=59.4, x0=34.0),
+        Line(page=0, text="then select Audio Source and USB icon.", top=70.9, x0=34.0),
+        Line(page=0, text="2 USB Ports P.253", top=82.5, x0=43.8),
+        Line(page=0, text="Cover Art", top=118.8, x0=143.9),
+        Line(page=0, text="Audio/Information Screen", top=118.8, x0=339.4),
+        Line(page=0, text="Music Library Icon", top=174.4, x0=415.0),
+        Line(page=0, text="Repeat Icon", top=322.3, x0=203.0),
+        Line(page=0, text="Select to repeat the current song.", top=332.8, x0=203.0),
+    ]
+    result = caption_for(rect, page=0, lines=lines)
+    assert result is not None
+    assert result.text == "Cover Art Audio/Information Screen"
 
 
 def test_returns_none_when_every_candidate_on_the_page_is_too_short():

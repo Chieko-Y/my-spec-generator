@@ -121,7 +121,7 @@
             247.1159973
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Device",
+          "caption_text": "Remote Controls",
           "image_path": null,
           "legend_requirements": []
         }
@@ -806,7 +806,7 @@
             334.29600519999997
           ],
           "caption_source": "pdf_image",
-          "caption_text": "VOL(+/VOL(-",
+          "caption_text": "VOL(+/VOL(- (Volume) Switch",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2099,7 +2099,7 @@
             253.4759979
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Scan Icon",
+          "caption_text": "Audio/Information Screen",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2369,7 +2369,7 @@
             252.095993
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Music Library Icon",
+          "caption_text": "Cover Art Audio/Information Screen",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2640,7 +2640,7 @@
             269.1959991
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Music Library Icon",
+          "caption_text": "Audio/Information Screen",
           "image_path": null,
           "legend_requirements": []
         }
@@ -3065,7 +3065,7 @@
             286.41600040000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Music Library Icon",
+          "caption_text": "is connected to HFL.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -6169,7 +6169,7 @@
             211.8359985
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Caller’s Name (If",
+          "caption_text": "Signal Strength",
           "image_path": null,
           "legend_requirements": []
         }

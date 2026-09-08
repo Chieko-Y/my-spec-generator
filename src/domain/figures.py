@@ -122,6 +122,19 @@ def is_stretched_fill(
     return dpi_w < min_dpi and dpi_h < min_dpi
 
 
+_ABOVE_WINDOW_MARGIN_PT = 70.0
+# How far left/right of a wide figure's own rect a candidate ABOVE it may
+# still start and count as that figure's caption -- see caption_for's
+# in_above_window docstring for the real Honda CR-V case (61.9pt) this is
+# sized for, and the real case (259pt away) it must still reject.
+_CAPTION_GRAZE_GAP_PT = 8.0
+# The smallest vertical gap that counts as a real "printed above the figure"
+# caption rather than a coincidental graze of the figure's own top edge --
+# see caption_for's is_above docstring for the real 2.6pt Honda CR-V graze
+# this exists to reject, versus every real confirmed caption gap checked so
+# far (25.6-121pt).
+
+
 def caption_for(
     rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 30.0,
     heading_prefixes: tuple[str, ...] = (),
@@ -202,54 +215,140 @@ def caption_for(
     def overlaps_vertically(l: Line) -> bool:
         return top <= l.top <= bottom
 
+    def is_above(l: Line) -> bool:
+        # A real caption/header printed ABOVE a composite figure -- Honda's
+        # own house style, confirmed in every real case checked so far
+        # (Pilot/CR-V) -- must clear a real gap, not just graze the figure's
+        # top edge: confirmed real, Honda CR-V 2026 ("Start Up"), a
+        # completely unrelated right-column callout sat only 2.6pt above the
+        # figure and would otherwise pass as "above" too.
+        return l.top < top and (top - l.top) >= _CAPTION_GRAZE_GAP_PT
+
     def in_narrow_window(l: Line) -> bool:
         # Same column as the figure's own left edge -- where a real body
         # paragraph in this column actually starts.
         return abs(l.x0 - x0) <= column_margin_pt
 
     def in_wide_window(l: Line) -> bool:
+        # Extends out to the figure's own RIGHT edge + margin, not just its
+        # left, so a real screenshot's own printed step-list running down its
+        # right side -- confirmed real, Honda CR-V 2026 (a numbered step list
+        # beside "Phone menu screen" whose `top` falls inside the image's own
+        # height) -- is still reachable even though it doesn't share the
+        # figure's left-edge x0.
         return x0 - column_margin_pt <= l.x0 <= x1 + column_margin_pt
 
-    # The wide window (out to the figure's own RIGHT edge + margin, not just its
-    # left) exists so a real screenshot's own printed heading/step-list running
-    # down its right side -- confirmed real, Honda CR-V 2026 ("■Phone menu
-    # screen" above the image; a numbered step list beside it whose `top` falls
-    # inside the image's own height) -- is still reachable as a candidate even
-    # though it doesn't share the figure's left-edge x0. But for a WIDE figure
-    # that widened window can reach deep into a genuinely unrelated right-hand
-    # column too (confirmed real, Honda CR-V 2026: the "Start Up" figure's own
-    # rect is 130pt wide, and a same-height right-column callout box, "If you do
-    # not select OK within 5 seconds,", sat close enough vertically to beat the
-    # figure's real above-it paragraph purely by y-coincidence -- same failure
-    # shape as this function's very first fixed case, the "5" legend digit, just
-    # not far enough right to be caught by the plain width check alone). A line
-    # reachable ONLY via the widened window (not the narrow one) is kept as a
-    # candidate solely when it's plausibly actually about this figure: either it
-    # vertically overlaps the figure itself (a step/label truly running down
-    # beside it), or it carries this profile's own heading-prefix convention
-    # (Honda's "■", a genuine printed label regardless of position). A plain
-    # non-heading line that merely happens to land a little to the right of a
-    # wide figure's edge, without overlapping it, is exactly the shape of the
-    # false candidate that widened window was never meant to admit.
-    same_column = [
-        l
-        for l in page_lines
-        if in_narrow_window(l) or (in_wide_window(l) and (overlaps_vertically(l) or is_heading_line(l)))
-    ]
+    def in_above_window(l: Line) -> bool:
+        # A real caption above a WIDE composite figure isn't bound by the
+        # figure's own narrow column margin on the LEFT -- confirmed real,
+        # Honda CR-V 2026 ("Music Playback via Wired Connection"): the true
+        # caption, "Cover Art Audio/Information Screen", starts 61.9pt left
+        # of the figure's own x0, well outside column_margin_pt, because
+        # it's a header for the whole composite block, not aligned to the
+        # merged image rect's own (somewhat arbitrary) left edge. No such
+        # widening on the RIGHT, though (capped at the figure's own x1, not
+        # beyond it): confirmed real, same PDF, "Start Up" -- a right-column
+        # callout box's own first line ("Select OK.") sits only 11.6pt past
+        # the figure's x1 with a real (non-graze) 14.1pt vertical gap above
+        # it, and would otherwise beat the figure's genuine caption on pure
+        # distance. An above-positioned caption never starts to the right of
+        # the figure it captions in any real case checked so far -- only
+        # level-with-or-left-of it.
+        return x0 - _ABOVE_WINDOW_MARGIN_PT <= l.x0 <= x1
+
+    def is_same_line_fragment(l: Line) -> bool:
+        # A line starting with a lowercase letter that has ANOTHER line on
+        # this page at (near enough) the same `top`, positioned to ITS OWN
+        # left, is almost certainly one half of a single physical sentence a
+        # column-detection quirk split apart horizontally -- confirmed real,
+        # Honda Pilot 2026: "Select or to change file." (one printed line, a
+        # 3-column dense icon-legend page) came back as three separate Line
+        # objects ("Select", "or", "to change file.") all sharing one `top`.
+        # A genuine multi-line paragraph wrap (e.g. "...will be" ->
+        # "displayed.") always sits at a DIFFERENT `top` than the sentence's
+        # own start -- only a same-line splitting artifact repeats it, so
+        # this never flags a real wrapped caption.
+        stripped = l.text.lstrip()
+        if not stripped or not stripped[0].islower():
+            return False
+        return any(
+            o is not l and o.page == l.page and abs(o.top - l.top) < 1.0 and o.x0 < l.x0
+            for o in page_lines
+        )
+
+    same_column = [l for l in page_lines if in_wide_window(l) or (is_above(l) and in_above_window(l))]
     candidates = same_column or page_lines
 
-    def distance(l: Line) -> tuple[bool, float, float]:
+    def tier(l: Line) -> int:
+        # Tier 0 (heading) always wins outright, distance never considered.
+        # Tier 1 ("trustworthy": same column at ANY vertical position, or a
+        # real caption-shaped gap above the figure reaching left of it) is
+        # compared by raw nearest-distance internally -- confirmed real,
+        # Honda CR-V 2026, two DIFFERENT real cases pulling in opposite
+        # directions settle correctly under nearest-within-tier1: "Music
+        # Playback via Wired Connection" needs its real above-caption
+        # (44.5pt gap) to beat a same-column-but-unrelated icon label
+        # 70.2pt below ("Repeat Icon"), while a real Subaru case (this
+        # file's own first test) needs a same-column line 62.2pt below to
+        # beat a same-column-but-unrelated line 129.8pt above -- an above-
+        # beats-narrow (or narrow-beats-above) STRICT tier ordering breaks
+        # one of these no matter which way it's set; plain nearest-wins,
+        # once both are established as trustworthy at all, settles both.
+        # Tier 2 (wide-only: reachable only by overlapping the figure's own
+        # height, or previously reachable only past its right edge, from a
+        # column matched by neither narrow nor above) is the same "weak"
+        # last-resort shape this function has always needed to de-prioritize
+        # rather than drop outright -- see is_same_line_fragment's sibling
+        # note on why dropping instead of de-prioritizing empties
+        # `same_column` for a figure whose only real candidate happens to be
+        # this shape.
+        if is_heading_line(l):
+            return 0
+        if is_same_line_fragment(l):
+            return 3  # last resort, kept only so same_column is never empty
+        if in_narrow_window(l) or (is_above(l) and in_above_window(l)):
+            return 1
+        return 2
+
+    def distance(l: Line) -> tuple[int, float, float]:
         if l.top < top:
             vertical = top - l.top
         elif l.top > bottom:
             vertical = l.top - bottom
         else:
             vertical = 0.0
-        return not is_heading_line(l), vertical, abs(l.x0 - x0)
+        return tier(l), vertical, abs(l.x0 - x0)
 
     best = min(candidates, key=distance)
     if is_heading_line(best):
-        best = _merge_wrapped_caption(best, page_lines)
+        return _merge_wrapped_caption(best, page_lines)
+    # A caption horizontally split into two same-height pieces by a column-
+    # detection quirk (the SAME real shape is_same_line_fragment guards
+    # against, just with both halves reading as complete phrases on their
+    # own instead of one being a lowercase mid-sentence fragment) is merged
+    # back into one line here -- confirmed real, Honda CR-V 2026 ("Music
+    # Playback via Wired Connection"): "Cover Art Audio/Information Screen",
+    # one printed line per the original app's own real citation, comes back
+    # from this rebuild's column-aware line-grouping as two Line objects,
+    # "Cover Art" and "Audio/Information Screen", sharing one `top` -- both
+    # independently TIE for the win (same tier, same vertical distance),
+    # which is itself the signal that they belong together.
+    #
+    # Matching on tier+vertical (an exact tie), not just "any same_column
+    # line at this top", is required -- confirmed real, Honda Pilot 2026: a
+    # dense icon-legend grid routinely row-aligns two genuinely DIFFERENT
+    # icons' own separate labels at the same height by design (not a split
+    # caption at all), and merging on shared height alone glued unrelated
+    # pairs together (e.g. "Left Selector" + "VOL(+/VOL(-", two different
+    # controls). Only a real tie is trustworthy enough to merge.
+    tied = distance(best)[:2]
+    siblings = sorted(
+        (l for l in same_column if l is not best and distance(l)[:2] == tied),
+        key=lambda l: l.x0,
+    )
+    if siblings:
+        ordered = sorted([best, *siblings], key=lambda l: l.x0)
+        best = replace(best, text=" ".join(l.text for l in ordered))
     return best
 
 

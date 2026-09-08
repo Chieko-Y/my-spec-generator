@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-714fa85ea27a.png)
 - Figure 10-1 source: p.264
-- (Copied from OM) Scan Icon
+- (Copied from OM) Audio/Information Screen
 
 
 ## Procedure (4 sequences; the manual restarts the numbering)
@@ -96,6 +96,7 @@ Filled: 1 / unfilled: 0
 | 19 | <span class="req-label">Step -</span>Program Service Name: Sets whether to display the program service name. | capability | p.266 / bullet |
 | 20 | <span class="req-label">Playing AM/FM Radio</span>1Radio Data System (RDS) When you select an RDS-capable FM station, the RDS automatically turns on, and the frequency display changes to the station name. When the signal of that station becomes weak, the display continues to show the last displayed station name. | constraint | p.266 / text |
 <!-- GENERATED:END function=429fe0660c09 -->
+
 
 
 

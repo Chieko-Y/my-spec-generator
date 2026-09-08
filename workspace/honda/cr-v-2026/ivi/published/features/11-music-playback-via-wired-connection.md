@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-5fe6576a65a3.png)
 - Figure 11-1 source: p.267
-- (Copied from OM) Music Library Icon
+- (Copied from OM) Cover Art Audio/Information Screen
 
 
 ## Procedure
@@ -58,6 +58,7 @@ Filled: 0 / unfilled: 1
 | 15 | <span class="req-label">Music Playback via Wired Connection</span>1Music Playback via Wired Connection Available operating functions vary on models or versions. Some functions may not be available on the vehicle’s audio system. | capability | p.268 / text |
 | 16 | <span class="req-label">Music Playback via Wired Connection</span>While an iPhone is connected via Apple CarPlay, audio files on the iPhone can only be played using Apple CarPlay. | capability | p.268 / text |
 <!-- GENERATED:END function=f1324a2514fb -->
+
 
 
 
