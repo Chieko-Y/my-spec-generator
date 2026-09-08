@@ -75,20 +75,24 @@ def test_prefers_a_heading_prefixed_line_over_a_step_whose_top_falls_inside_the_
 
 
 def test_same_column_above_wins_over_an_overlapping_step_even_without_heading_prefixes():
-    """Superseded 2026-09-08: this used to guard that a manual WITHOUT Honda's
-    "■" convention keeps picking "3.Select Menu." here (vertical distance 0,
-    off-column, wins on plain distance) -- preserving that as "unchanged
-    legacy behavior" for the heading_prefixes feature's own sake, not because
-    it was ever confirmed correct. The same real Honda case that motivated
-    heading_prefixes in the first place ("実際はPhone menu screenですよね")
-    makes plain "■Phone menu screen" -- a same-column line with a real gap
-    above the figure -- the true answer regardless of whether this profile
-    happens to have heading_prefixes configured: the PDF doesn't care about
-    our config. The redesigned tiering (same-column-at-any-position and a
-    real gap above are both "trustworthy", compared by nearest distance
-    against each other; only a same-height-but-off-column line like
-    "3.Select Menu." is de-prioritized) now gets this right without needing
-    the heading marker as a special case at all."""
+    """Restored 2026-09-08 to match the committed baseline (75da915), after a
+    same-day detour: a strict "above always outranks narrow/overlap" tier
+    ordering was tried, motivated by a mistaken belief that dropping
+    "vertically overlapping is unconditionally trustworthy" had caused a
+    real Subaru regression -- that belief could not be reproduced against
+    this file's own committed history (overlaps_vertically was never used
+    as a tier signal in 75da915 to begin with) and the strict ordering broke
+    4 confirmed-correct, already-reviewed Honda CR-V captions instead ("Audio
+    Remote Controls", "About Your Audio System": a genuinely close narrow-
+    window candidate, 2.2-12.2pt away, must beat a farther above-window
+    candidate, 12.2-28.1pt away, that also happens to qualify as "above").
+    Reverted to the one merged "trustworthy" pool, pure nearest-distance
+    design this test originally locked in: the same real Honda case that
+    motivated heading_prefixes in the first place ("実際はPhone menu
+    screenですよね") makes plain "■Phone menu screen" -- a same-column line
+    with a real gap above the figure -- the true answer regardless of
+    whether this profile happens to have heading_prefixes configured: the
+    PDF doesn't care about our config."""
     rect = (35.4, 112.5, 166.0, 176.4)
     lines = [
         Line(page=0, text="■Phone menu screen", top=82.1, x0=34.0),
@@ -290,6 +294,12 @@ def test_a_caption_above_a_wide_figure_can_start_left_of_the_figures_own_x0():
     BELOW icon label 70.2pt away that coincidentally fell inside the old
     narrow window, purely because nothing better was ever considered.
 
+    The left widening itself is scoped to profiles with heading_prefixes
+    configured (2026-09-08, same day -- regenerating every Subaru chapter
+    against the unscoped version surfaced 60+ new caption changes across
+    previously-clean chapters), so heading_prefixes is passed explicitly
+    here to match honda_v2.json's own real profile.
+
     The one printed line is itself split into two Line objects sharing one
     `top` ('Cover Art' / 'Audio/Information Screen') by this profile's own
     column_detect_per_page setting (confirmed real, same PDF, same profile,
@@ -308,9 +318,35 @@ def test_a_caption_above_a_wide_figure_can_start_left_of_the_figures_own_x0():
         Line(page=0, text="Repeat Icon", top=322.3, x0=203.0),
         Line(page=0, text="Select to repeat the current song.", top=332.8, x0=203.0),
     ]
-    result = caption_for(rect, page=0, lines=lines)
+    result = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
     assert result is not None
     assert result.text == "Cover Art Audio/Information Screen"
+
+
+def test_the_widened_above_window_never_applies_without_heading_prefixes():
+    """The left-widened above-window (see in_above_window) is scoped to
+    profiles with heading_prefixes configured -- confirmed real, 2026-09-08:
+    regenerating every already-reviewed Subaru chapter (none of which set
+    heading_prefixes) against the unscoped version surfaced 60+ new caption
+    changes across chapters that were previously untouched and clean, some
+    looking like real regressions. Same geometry, both outcomes locked in
+    here: with heading_prefixes, a real caption 60pt left of the figure (only
+    reachable via the widened window) wins; without it, that same line is
+    never even a candidate, and a same-column-but-unrelated line the old
+    (pre-2026-09-08) window already reached wins instead -- matching every
+    Subaru manual's own already-reviewed, pre-existing behavior exactly."""
+    rect = (200.0, 300.0, 250.0, 350.0)
+    lines = [
+        Line(page=0, text="Real caption far left of the figure", top=280.0, x0=140.0),
+        Line(page=0, text="Unrelated icon label below the figure", top=390.0, x0=245.0),
+    ]
+    with_prefix = caption_for(rect, page=0, lines=lines, heading_prefixes=("■",))
+    assert with_prefix is not None
+    assert with_prefix.text == "Real caption far left of the figure"
+
+    without_prefix = caption_for(rect, page=0, lines=lines)
+    assert without_prefix is not None
+    assert without_prefix.text == "Unrelated icon label below the figure"
 
 
 def test_returns_none_when_every_candidate_on_the_page_is_too_short():

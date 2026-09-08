@@ -134,6 +134,24 @@ _CAPTION_GRAZE_GAP_PT = 8.0
 # this exists to reject, versus every real confirmed caption gap checked so
 # far (25.6-121pt).
 
+_SAME_LINE_FRAGMENT_MAX_GAP_PT = 100.0
+# The largest horizontal gap between a lowercase-starting line and its
+# same-top left-hand sibling that still counts as "one physical PDF line
+# split apart by a column-detection quirk" (see is_same_line_fragment) rather
+# than "two unrelated column headers that happen to share a row in a real
+# multi-column grid". Confirmed real, Honda Pilot 2026 (the true split-line
+# case this whole check exists for): "Select" / "or" / "to change file." are
+# 3 pieces of one fractured sentence, but "or" is itself excluded from
+# page_lines by the 2-character-minimum filter above, so the closest
+# qualifying sibling actually checked is "Select", 71.5pt away. Confirmed
+# real, Subaru Outback 2025 2026-09-08 (the false-positive this constant was
+# added to reject): a 3-column grid's own two-line headings ("Adding from
+# the" / "phone screen", "Bluetooth audio screen", "settings screen") share
+# one `top` on their second line, 133-136pt apart -- a real column pitch,
+# not a split sentence -- which wrongly excluded the true nearer half of a
+# genuine 2-line caption in each of that grid's 3 columns. 100pt sits
+# between the two.
+
 
 def caption_for(
     rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 30.0,
@@ -254,12 +272,33 @@ def caption_for(
         # distance. An above-positioned caption never starts to the right of
         # the figure it captions in any real case checked so far -- only
         # level-with-or-left-of it.
+        #
+        # The LEFT widening itself is scoped to profiles with heading_prefixes
+        # configured (Honda's own convention today) -- confirmed real,
+        # 2026-09-08: regenerating every already-reviewed Subaru chapter
+        # against the widened window (no heading_prefixes involved at all)
+        # surfaced 60+ new caption changes across chapters that were
+        # previously untouched and clean. The one confirmed real case
+        # motivating the wider window is Honda-only; without independent
+        # confirmation it generalizes safely to every other manual's own
+        # layout conventions, it must not touch content this project has
+        # already spent real review time getting right. Without
+        # heading_prefixes this degrades to EXACTLY in_narrow_window's own
+        # symmetric range, not just "the same left margin, still capped at
+        # x1" -- confirmed real, same day: for a WIDE figure x1 sits far to
+        # the right of x0+column_margin_pt, so a naive `x0 - margin <= l.x0
+        # <= x1` fallback still reached almost as far right as the old wide
+        # window ever did, with no left widening involved at all.
+        if not heading_prefixes:
+            return in_narrow_window(l)
         return x0 - _ABOVE_WINDOW_MARGIN_PT <= l.x0 <= x1
 
     def is_same_line_fragment(l: Line) -> bool:
         # A line starting with a lowercase letter that has ANOTHER line on
         # this page at (near enough) the same `top`, positioned to ITS OWN
-        # left, is almost certainly one half of a single physical sentence a
+        # left AND close enough horizontally (word-spacing close, not
+        # column-pitch close -- see _SAME_LINE_FRAGMENT_MAX_GAP_PT), is
+        # almost certainly one half of a single physical sentence a
         # column-detection quirk split apart horizontally -- confirmed real,
         # Honda Pilot 2026: "Select or to change file." (one printed line, a
         # 3-column dense icon-legend page) came back as three separate Line
@@ -272,7 +311,11 @@ def caption_for(
         if not stripped or not stripped[0].islower():
             return False
         return any(
-            o is not l and o.page == l.page and abs(o.top - l.top) < 1.0 and o.x0 < l.x0
+            o is not l
+            and o.page == l.page
+            and abs(o.top - l.top) < 1.0
+            and o.x0 < l.x0
+            and (l.x0 - o.x0) <= _SAME_LINE_FRAGMENT_MAX_GAP_PT
             for o in page_lines
         )
 
@@ -281,9 +324,10 @@ def caption_for(
 
     def tier(l: Line) -> int:
         # Tier 0 (heading) always wins outright, distance never considered.
-        # Tier 1 ("trustworthy": same column at ANY vertical position, or a
-        # real caption-shaped gap above the figure reaching left of it) is
-        # compared by raw nearest-distance internally -- confirmed real,
+        # Tier 1 ("trustworthy": same column at ANY vertical position, a
+        # real caption-shaped gap above the figure reaching left of it, or a
+        # candidate literally inside the figure's own horizontal footprint)
+        # is compared by raw nearest-distance internally -- confirmed real,
         # Honda CR-V 2026, two DIFFERENT real cases pulling in opposite
         # directions settle correctly under nearest-within-tier1: "Music
         # Playback via Wired Connection" needs its real above-caption
@@ -294,6 +338,13 @@ def caption_for(
         # beats-narrow (or narrow-beats-above) STRICT tier ordering breaks
         # one of these no matter which way it's set; plain nearest-wins,
         # once both are established as trustworthy at all, settles both.
+        # Confirmed again real, 2026-09-08, Honda CR-V ("Audio Remote
+        # Controls" and "About Your Audio System"): a STRICT "above always
+        # outranks narrow" ordering (tried the same day, briefly) broke 4
+        # already-reviewed CR-V captions where a genuinely close narrow-
+        # window candidate (2.2-12.2pt away) must beat a farther above-
+        # window candidate (12.2-28.1pt away) that happened to also qualify
+        # as "above" -- reverted back to one merged pool, pure nearest-wins.
         # Tier 2 (wide-only: reachable only by overlapping the figure's own
         # height, or previously reachable only past its right edge, from a
         # column matched by neither narrow nor above) is the same "weak"
@@ -302,6 +353,22 @@ def caption_for(
         # note on why dropping instead of de-prioritizing empties
         # `same_column` for a figure whose only real candidate happens to be
         # this shape.
+        #
+        # A candidate literally inside the figure's own horizontal footprint
+        # [x0, x1] but reachable by neither narrow nor above was tried as an
+        # ADDITIONAL tier-1 signal (`in_rect_x_span`) same day -- it fixed 2
+        # confirmed real Subaru "Phone Screen" cases (a true caption 90.8pt
+        # right of the figure's own x0, and one 11.9pt below it, both too
+        # far for in_narrow_window) but also surfaced 28 new, mostly
+        # unverified caption changes across an already-reviewed, previously-
+        # clean chapter (Quick Guide) once every densely-packed grid page's
+        # own internal labels started competing for tier 1 -- an "own x-span,
+        # not overlapping" guard fixed the one CR-V case caught by direct
+        # testing ("Device"/"USB Flash Drive"), but the volume and breadth of
+        # still-unverified changes elsewhere was not worth the 2 cases it
+        # fixed. Reverted; those 2 Phone Screen cases are left as a known,
+        # accepted residual limitation (docs/ARCHITECTURE.md 2026-09-08 "29.")
+        # -- same standing policy as Honda Pilot's "Play/Pause Icon" case.
         if is_heading_line(l):
             return 0
         if is_same_line_fragment(l):

@@ -314,7 +314,7 @@
             291.9167259
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Status bar P.76",
+          "caption_text": "Media SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -329,7 +329,7 @@
             406.89755260000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.32",
+          "caption_text": "Radio SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -344,7 +344,7 @@
             177.7258703
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.29",
+          "caption_text": "Apps SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -359,7 +359,7 @@
             177.57634690000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.36",
+          "caption_text": "Settings SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -374,7 +374,7 @@
             407.0386528
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.34",
+          "caption_text": "Media SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -389,7 +389,7 @@
             178.23984940000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.26",
+          "caption_text": "Phone SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -419,7 +419,7 @@
             372.12872020000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Frequently used functions and operations can be added to the home screen. P.77",
+          "caption_text": "Add Shortcut",
           "image_path": null,
           "legend_requirements": []
         }
@@ -915,7 +915,7 @@
             173.3154315
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select a language.",
+          "caption_text": "Registering a Bluetooth phone",
           "image_path": null,
           "legend_requirements": []
         },
@@ -975,7 +975,7 @@
             306.8465441
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Procedure complete.",
+          "caption_text": "Select a language.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1308,7 +1308,7 @@
             338.3406623
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Directly input a number",
+          "caption_text": "a recent contact P.112,122",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1323,7 +1323,7 @@
             338.3406623
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.121,122,123",
+          "caption_text": "P.114,122",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1353,7 +1353,7 @@
             167.37920739999998
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Start three-way",
+          "caption_text": "Keypad",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1428,7 +1428,7 @@
             171.083349
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Calling the message",
+          "caption_text": "Replying to a message",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1676,7 +1676,7 @@
             201.3341936
           ],
           "caption_source": "pdf_image",
-          "caption_text": "applications",
+          "caption_text": "Apple CarPlay can be used to view Apple Maps, play music, and place calls by",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1691,7 +1691,7 @@
             370.2654853
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Apple CarPlay can be used to view Apple Maps, play music, and place calls by",
+          "caption_text": "Apple CarPlay",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1706,7 +1706,7 @@
             192.86790740000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Android Auto can be used to view Google Maps, play music, and place calls by",
+          "caption_text": "Android Auto",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1721,7 +1721,7 @@
             234.88538300000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Fuel prices",
+          "caption_text": "following a free trial. P.161",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1736,7 +1736,7 @@
             356.5039726
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Weather",
+          "caption_text": "following a free trial. P.161",
           "image_path": null,
           "legend_requirements": []
         },
@@ -1931,7 +1931,7 @@
             277.5094927
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select to display a list",
+          "caption_text": "Preset stations/channels",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2069,7 +2069,7 @@
             184.963815
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Mix preset function",
+          "caption_text": "Select and hold one of the",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2151,7 +2151,7 @@
             265.8553696
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Repeat all tracks → repeat",
+          "caption_text": "Change media source",
           "image_path": null,
           "legend_requirements": []
         }
@@ -2246,7 +2246,7 @@
             185.11333439999999
           ],
           "caption_source": "pdf_image",
-          "caption_text": "MEMORY DEVICE/",
+          "caption_text": "MEMORY DEVICE/ PORTABLE DEVICE",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2454,7 +2454,7 @@
             291.1541969
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.94",
+          "caption_text": "General",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2469,7 +2469,7 @@
             175.8141807
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.102",
+          "caption_text": "Radio",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2484,7 +2484,7 @@
             183.2878791
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.83",
+          "caption_text": "Phone",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2499,7 +2499,7 @@
             220.1176172
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.100",
+          "caption_text": "Sound",
           "image_path": null,
           "legend_requirements": []
         },
@@ -2514,7 +2514,7 @@
             254.5787745
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Adjust the clock.",
+          "caption_text": "Display the clock settings screen.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3182,7 +3182,7 @@
             380.4856142
           ],
           "caption_source": "pdf_image",
-          "caption_text": "11.6-inch touch screen",
+          "caption_text": "Features: - 11.6-inch touch screen",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3197,7 +3197,7 @@
             437.7103758
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Adoption of intuitive and easy-to-use",
+          "caption_text": "Adoption of intuitive and easy-to-use smartphone-like graphical user interface name of a function. A large 11.6-inch touch screen display has been adopted. Information can be displayed seamlessly between this display and the display in the meter cluster. Function description display function Function descriptions or operation hints can be displayed when an",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3287,7 +3287,7 @@
             378.3003551
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.129",
+          "caption_text": "Apple CarPlay/Android Auto can be used wirelessly.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3730,7 +3730,7 @@
             178.68114430000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.56",
+          "caption_text": "Radio SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3745,7 +3745,7 @@
             409.9974532
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.60",
+          "caption_text": "Apps SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3760,7 +3760,7 @@
             409.2276142
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.63",
+          "caption_text": "Settings SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3775,7 +3775,7 @@
             177.86904040000002
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.58",
+          "caption_text": "Media SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3790,7 +3790,7 @@
             300.71264940000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.50",
+          "caption_text": "Phone SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3805,7 +3805,7 @@
             178.7391791
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.54",
+          "caption_text": "Map SCREEN*",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3820,7 +3820,7 @@
             292.41936910000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.49",
+          "caption_text": "Car information SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3835,7 +3835,7 @@
             265.88782690000005
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Turn the Auto Vehicle Hold (AVH)",
+          "caption_text": "Refer to the vehicle Owner’s Manual.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -3850,7 +3850,7 @@
             375.6620442
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Frequently used functions and operations can be added to",
+          "caption_text": "Add Shortcut",
           "image_path": null,
           "legend_requirements": []
         }
@@ -3960,7 +3960,7 @@
             217.9375492
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Follow instructions",
+          "caption_text": "Operate the Bluetooth phone/device.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4199,7 +4199,7 @@
             221.428393
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Select a language.",
+          "caption_text": "Registering a Bluetooth phone",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4259,7 +4259,7 @@
             397.44208990000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Procedure complete.",
+          "caption_text": "Select a language.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4703,7 +4703,7 @@
             356.35578480000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Directly input a number",
+          "caption_text": "a recent contact P.112,122",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4718,7 +4718,7 @@
             356.35578480000004
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.121,122,123",
+          "caption_text": "P.114,122",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4748,7 +4748,7 @@
             198.5416659
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Start three-way call",
+          "caption_text": "Select number for making call.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4793,7 +4793,7 @@
             366.5303045
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Place call",
+          "caption_text": "Select number for making call.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -4808,7 +4808,7 @@
             173.42818320000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Calling the message",
+          "caption_text": "Replying to a message",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5189,7 +5189,7 @@
             362.88920310000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "3D Heading-up screen 2D Heading-up screen",
+          "caption_text": "2D North-up screen",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5219,7 +5219,7 @@
             362.88920310000003
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Guidance display",
+          "caption_text": "Speed limit",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5234,7 +5234,7 @@
             391.7304288
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Remaining distance and/",
+          "caption_text": "Remaining distance and/ or remaining time Current position",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5264,7 +5264,7 @@
             203.6914516
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Zoom in",
+          "caption_text": "Touch screen to display",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5294,7 +5294,7 @@
             330.4063
           ],
           "caption_source": "pdf_image",
-          "caption_text": "The screen display",
+          "caption_text": "JUNCTION SCREEN",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5324,7 +5324,7 @@
             186.3528271
           ],
           "caption_source": "pdf_image",
-          "caption_text": "results will",
+          "caption_text": "Route guidance starts.",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5517,7 +5517,7 @@
             309.6197314
           ],
           "caption_source": "pdf_image",
-          "caption_text": "channels.",
+          "caption_text": "Preset stations/channels",
           "image_path": null,
           "legend_requirements": []
         },
@@ -5681,7 +5681,7 @@
             190.3107356
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Mix preset function",
+          "caption_text": "Register the radio station.",
           "image_path": null,
           "legend_requirements": []
         }
@@ -5789,7 +5789,7 @@
             316.33721490000005
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Change tracks",
+          "caption_text": "Change media source",
           "image_path": null,
           "legend_requirements": []
         }
@@ -5899,7 +5899,7 @@
             185.1123445
           ],
           "caption_source": "pdf_image",
-          "caption_text": "MEMORY DEVICE/",
+          "caption_text": "MEMORY DEVICE/ PORTABLE DEVICE",
           "image_path": null,
           "legend_requirements": []
         }
@@ -6197,7 +6197,7 @@
             222.8625361
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Usable",
+          "caption_text": "Usable applications",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6469,7 +6469,7 @@
             407.1227429
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.94",
+          "caption_text": "General",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6484,7 +6484,7 @@
             263.1774535
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.100",
+          "caption_text": "Sound",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6499,7 +6499,7 @@
             362.7572443
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.83",
+          "caption_text": "Phone",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6529,7 +6529,7 @@
             373.304637
           ],
           "caption_source": "pdf_image",
-          "caption_text": "P.102",
+          "caption_text": "*: For settings related to EyeSight, refer to the Owner’s Manual supplement",
           "image_path": null,
           "legend_requirements": []
         },
@@ -6544,7 +6544,7 @@
             286.8732781
           ],
           "caption_source": "pdf_image",
-          "caption_text": "Adjust the clock.",
+          "caption_text": "Display the clock settings screen.",
           "image_path": null,
           "legend_requirements": []
         },
