@@ -19,6 +19,7 @@ from .manual_parsing import (
     detect_column_count,
     detect_running_head_chapters,
     detect_toc_chapters,
+    find_top_level_chapter_range,
 )
 from .profile_fitness import bookmark_depth_ok
 
@@ -179,6 +180,95 @@ def _detect_figure_thresholds(
     return w, h, notes
 
 
+def _chapter_ranges_for_figures(
+    section_source: str,
+    bookmarks: list[Bookmark],
+    running_chapters: list[RunningHeadChapter],
+    toc_chapters: list[TocChapterCandidate],
+    total_pages: int,
+) -> list[tuple[int, int]]:
+    """Page ranges to run the figure-size gap detector within, one per top-level
+    chapter -- mirrors profile_fitness.py's _column_match_ok/_sample_anomaly_ratio,
+    which already established (real Honda CR-V 2026 PDF, docs/HANDOVER.md
+    2026-09-04) that a whole-document aggregate hides a chapter whose real values
+    differ from the rest of the book. Empty when section_source has no page-ranged
+    chapters to scope by (section_source="undetermined") -- caller falls back to
+    the old whole-document behavior in that case."""
+    if section_source == "bookmarks" and bookmarks:
+        top_level = min(b.level for b in bookmarks)
+        ranges = []
+        for c in (b for b in bookmarks if b.level == top_level):
+            chapter_range = find_top_level_chapter_range(bookmarks, c.title)
+            if chapter_range is None:
+                continue
+            page_start, page_end = chapter_range
+            ranges.append((page_start, total_pages if page_end is None else page_end))
+        return ranges
+    if section_source == "running_head" and running_chapters:
+        return [(c.page_start, c.page_end) for c in running_chapters]
+    if section_source == "chapter_toc" and toc_chapters:
+        return [(c.page_start, c.page_end) for c in toc_chapters]
+    return []
+
+
+def _detect_figure_thresholds_scoped(
+    image_rects: dict[int, list[tuple[float, float, float, float, int | None, int | None]]],
+    chapter_ranges: list[tuple[int, int]],
+) -> tuple[float | None, float | None, list[str]]:
+    """Same icon-vs-figure gap detection as _detect_figure_thresholds, but scored
+    per chapter and combined by taking the most conservative (smallest) proposed
+    threshold across chapters, instead of one gap search over every embedded
+    image in the whole document.
+
+    Real content figures can legitimately span a wide size range of their own
+    across different chapters of the same manual (confirmed against the real
+    Honda CR-V 2026 PDF: ~130-213pt screen-mockup composites in Features vs. much
+    larger illustrations elsewhere) -- a single whole-document widest-gap search
+    can land its boundary between two chapters' different real-figure clusters
+    instead of between icons and figures, silently excluding an entire chapter's
+    figures (derived 282.98pt excluded every real Features figure, same failure
+    mode seen once already on Honda Pilot, docs/HANDOVER.md 2026-09-04). Taking
+    the smallest per-chapter threshold guarantees the final value sits at or
+    below every chapter's own icon/figure boundary -- it may let a few more small
+    images through as candidates in a chapter with larger figures, but per this
+    project's standing review-cost tradeoff (a false positive costs one review
+    click; a wrongly-excluded real figure is a silent miss) that is the safe
+    direction to err in.
+    """
+    if not chapter_ranges:
+        return _detect_figure_thresholds(image_rects)
+
+    per_chapter: list[tuple[float | None, float | None]] = []
+    for page_start, page_end in chapter_ranges:
+        scoped = {p: r for p, r in image_rects.items() if page_start <= p < page_end}
+        w, h, _ = _detect_figure_thresholds(scoped)
+        if w is not None or h is not None:
+            per_chapter.append((w, h))
+
+    notes: list[str] = []
+    if not per_chapter:
+        notes.append(
+            "no chapter had enough embedded images to detect a size threshold; keeping default"
+        )
+        return None, None, notes
+
+    ws = [w for w, _ in per_chapter if w is not None]
+    hs = [h for _, h in per_chapter if h is not None]
+    w = min(ws) if ws else None
+    h = min(hs) if hs else None
+    if w is not None:
+        notes.append(
+            f"figure_min_width_pt proposed at {w:.1f}pt (most conservative of {len(ws)} "
+            f"chapter-scoped widest-gap thresholds, out of {len(chapter_ranges)} chapter(s))"
+        )
+    if h is not None:
+        notes.append(
+            f"figure_min_height_pt proposed at {h:.1f}pt (most conservative of {len(hs)} "
+            f"chapter-scoped widest-gap thresholds, out of {len(chapter_ranges)} chapter(s))"
+        )
+    return w, h, notes
+
+
 def derive_layout(
     lines: list[Line],
     bookmarks: list[Bookmark],
@@ -239,7 +329,10 @@ def derive_layout(
     header_boundary_pt, footer_boundary_pt, hf_notes = _detect_header_footer(lines)
     notes.extend(hf_notes)
 
-    fig_w, fig_h, fig_notes = _detect_figure_thresholds(image_rects or {})
+    chapter_ranges = _chapter_ranges_for_figures(
+        section_source, bookmarks, running_chapters, toc_chapters, total_pages
+    )
+    fig_w, fig_h, fig_notes = _detect_figure_thresholds_scoped(image_rects or {}, chapter_ranges)
     notes.extend(fig_notes)
 
     return DerivedLayoutReport(

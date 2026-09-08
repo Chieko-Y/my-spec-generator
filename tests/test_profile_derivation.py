@@ -96,7 +96,12 @@ def test_detects_figure_size_threshold_from_the_widest_size_gap():
     figures = {p + 100: [(0.0, 0.0, 200.0, 150.0, None, None)] for p in range(6)}
     image_rects = {**icons, **figures}
     bookmarks = [Bookmark(title=f"Chapter {i}", level=0, page_index=i) for i in range(3)]
+    # Real body text (like a real PDF's own) covers the whole document, not just
+    # the first few pages -- needed so the third (open-ended) bookmark chapter's
+    # page range actually reaches the images at page 100+ instead of being cut
+    # off at whatever page the last Line happens to sit on.
     lines = [Line(page=p, text="x", top=10.0, x0=60.0) for p in range(3)]
+    lines.append(Line(page=105, text="x", top=10.0, x0=60.0))
 
     report = derive_layout(lines, bookmarks, image_rects)
 
@@ -121,7 +126,9 @@ def test_stretched_fill_boxes_do_not_skew_the_derived_figure_threshold():
     dividers = {p + 300: [(-11.1, 45.4, 684.9, 306.3, 1934, 725)] for p in range(3)}
     image_rects = {**icons, **figures, **fills, **dividers}
     bookmarks = [Bookmark(title=f"Chapter {i}", level=0, page_index=i) for i in range(3)]
+    # See the sibling test above for why this needs to reach the last image page.
     lines = [Line(page=p, text="x", top=10.0, x0=60.0) for p in range(3)]
+    lines.append(Line(page=302, text="x", top=10.0, x0=60.0))
 
     report = derive_layout(lines, bookmarks, image_rects)
 
@@ -129,3 +136,47 @@ def test_stretched_fill_boxes_do_not_skew_the_derived_figure_threshold():
     assert 11.0 < report.figure_min_width_pt < 200.0
     assert report.figure_min_height_pt is not None
     assert 11.0 < report.figure_min_height_pt < 150.0
+
+
+def test_figure_threshold_is_scoped_per_chapter_not_whole_document():
+    """Real Honda CR-V 2026 bug, 2026-09-04 (docs/HANDOVER.md same date): this
+    manual's real content figures are a different size range in different
+    chapters -- Quick Reference Guide's are much larger than Features' own
+    ~130-213pt screen-mockup composites. A single whole-document widest-gap
+    search found its biggest gap BETWEEN those two chapters' real-figure
+    clusters (not between icons and figures) and proposed 282.98pt, which
+    excluded every one of Features' own real figures (0 figures extracted).
+    Reproduced in miniature here: 'Quick Reference' has icons (~10pt) and large
+    figures (~300pt); 'Features' has icons (~10pt) and much smaller figures
+    (~120pt). A whole-document gap search would pick the 120->300 gap
+    (threshold ~210pt), excluding Features' real 120pt figures entirely --
+    scoping per top-level chapter and taking the most conservative threshold
+    must not do that."""
+    quick_reference_icons = {p: [(0.0, 0.0, 10.0, 10.0, None, None)] for p in range(6)}
+    quick_reference_figures = {
+        p + 10: [(0.0, 0.0, 300.0, 250.0, None, None)] for p in range(6)
+    }
+    features_icons = {p + 100: [(0.0, 0.0, 10.0, 10.0, None, None)] for p in range(6)}
+    features_figures = {
+        p + 110: [(0.0, 0.0, 120.0, 100.0, None, None)] for p in range(6)
+    }
+    image_rects = {
+        **quick_reference_icons,
+        **quick_reference_figures,
+        **features_icons,
+        **features_figures,
+    }
+    bookmarks = [
+        Bookmark(title="Quick Reference Guide", level=0, page_index=0),
+        Bookmark(title="Features", level=0, page_index=100),
+        Bookmark(title="Maintenance", level=0, page_index=200),
+    ]
+    lines = [Line(page=p, text="x", top=10.0, x0=60.0) for p in (0, 100, 200)]
+    lines.append(Line(page=215, text="x", top=10.0, x0=60.0))
+
+    report = derive_layout(lines, bookmarks, image_rects)
+
+    assert report.figure_min_width_pt is not None
+    assert 10.0 < report.figure_min_width_pt < 120.0
+    assert report.figure_min_height_pt is not None
+    assert 10.0 < report.figure_min_height_pt < 100.0
