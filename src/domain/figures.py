@@ -134,6 +134,7 @@ _CAPTION_GRAZE_GAP_PT = 8.0
 # this exists to reject, versus every real confirmed caption gap checked so
 # far (25.6-121pt).
 
+
 _SAME_LINE_FRAGMENT_MAX_GAP_PT = 100.0
 # The largest horizontal gap between a lowercase-starting line and its
 # same-top left-hand sibling that still counts as "one physical PDF line
@@ -249,6 +250,25 @@ def caption_for(
     def is_heading_line(l: Line) -> bool:
         return bool(heading_prefixes) and l.text.startswith(heading_prefixes)
 
+    # Excluding a heading-prefixed line from candidacy entirely when it's
+    # printed larger than the page's own body text was tried and reverted,
+    # 2026-09-09: it matches the original app's own documented caption_for
+    # principle (AGENTS.md/CLAUDE.md 2026-07-30, "節見出しは候補から外す(機能
+    # 名として既に出ている)") and correctly fixed a confirmed real Honda Pilot
+    # false positive ("■Vehicle Information and Message from Honda Tips",
+    # 10.98pt vs. the page's 9.00pt body text, beating "Notification") without
+    # disturbing any of the 3 confirmed real CR-V cases that need a heading to
+    # win (all printed at exactly 9.00pt, indistinguishable from body text) --
+    # but regenerating CR-V to check for regressions surfaced 7 DIFFERENT
+    # changes, several clearly worse (a running-head page-nav snippet or a
+    # lowercase sentence fragment replacing a correct label). Removing the
+    # heading that was previously winning exposes a DIFFERENT, already-latent
+    # tier1-beats-tier2 problem for an unrelated candidate on the same page --
+    # the same failure class as the reverted distance-cap attempt just before
+    # this one. 4th confirmed case (`in_rect_x_span`, the 5-tier redesign
+    # detour, composite_fallback+distance-cap, now this) of a targeted
+    # caption_for change breaking CR-V's already-verified baseline -- see
+    # docs/HANDOVER.md 2026-09-09 for the full incident.
     def overlaps_vertically(l: Line) -> bool:
         return top <= l.top <= bottom
 
