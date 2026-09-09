@@ -71,7 +71,8 @@ def highlight_glossary_terms(rendered_html: str, terms: list[GlossaryTerm], make
         term = lookup.get(m.group(0).lower())
         if term is None:  # pragma: no cover - can't happen, kept defensive
             return m.group(0)
-        tooltip = f"{term.in_house_term}: {term.meaning}" if term.meaning else term.in_house_term
+        label = f"{term.in_house_term} ({term.category.value})"
+        tooltip = f"{label}: {term.meaning}" if term.meaning else label
         return f'<mark class="glossary-term" title="{html.escape(tooltip, quote=True)}">{m.group(0)}</mark>'
 
     parts = _TAG_SPLIT.split(rendered_html)

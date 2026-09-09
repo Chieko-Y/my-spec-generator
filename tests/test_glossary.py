@@ -106,13 +106,36 @@ def test_highlight_wraps_only_plain_text_and_skips_pre_blocks():
     html = '<p>Touch the icon.</p><pre class="mermaid">A[Touch]</pre><a href="/x?Touch=1">Touch link</a>'
     out = highlight_glossary_terms(html, terms)
 
-    assert '<mark class="glossary-term" title="Select operation: tap the screen">Touch</mark> the icon.' in out
+    assert '<mark class="glossary-term" title="Select operation (operation): tap the screen">Touch</mark> the icon.' in out
     # Mermaid diagram source must survive completely untouched.
     assert '<pre class="mermaid">A[Touch]</pre>' in out
     # A tag's own attribute text (the href) must never be rewritten, only the
     # visible link text between the tags.
     assert 'href="/x?Touch=1"' in out
-    assert '<mark class="glossary-term" title="Select operation: tap the screen">Touch</mark> link</a>' in out
+    assert '<mark class="glossary-term" title="Select operation (operation): tap the screen">Touch</mark> link</a>' in out
+
+
+def test_highlight_tooltip_shows_the_category_next_to_the_term():
+    """User request, 2026-09-09: the hover tooltip only showed "term: meaning",
+    with no way to tell an abbreviation from a screen element or operation at a
+    glance -- "Hands-free telephone (abbreviation): Calling through the
+    in-vehicle microphone and speakers" instead of a bare "Hands-free
+    telephone: Calling through...". category is always present (required, no
+    default), so it's shown unconditionally."""
+    terms = [
+        _term(
+            "t1", [ManualWording(text="HFL")],
+            in_house_term="Hands-free telephone",
+            meaning="Calling through the in-vehicle microphone and speakers",
+            category=TermCategory.ABBREVIATION,
+        )
+    ]
+    out = highlight_glossary_terms("<p>Using HFL.</p>", terms)
+    assert (
+        '<mark class="glossary-term" '
+        'title="Hands-free telephone (abbreviation): '
+        'Calling through the in-vehicle microphone and speakers">HFL</mark>' in out
+    )
 
 
 def test_highlight_is_case_insensitive_and_no_op_with_no_terms():
