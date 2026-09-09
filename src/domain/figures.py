@@ -221,6 +221,25 @@ def caption_for(
     alone already reads as a complete phrase in every case checked so far
     (matches the original app's own equally "rough" sentence-as-caption style,
     see docs/ARCHITECTURE.md "19.").
+
+    A "use the section/function title when the rect looks like a composite
+    (merge_rects fused 2+ source rects into it)" fallback was tried and reverted,
+    2026-09-09: it fixed 7 confirmed real Honda Pilot cases (a full-screen
+    composite's nearest line picking one arbitrary unrelated icon label out of
+    several scattered around it -- e.g. "is connected to HFL.", a fragment of
+    the neighboring "Bluetooth® Indicator" icon's own description, beating the
+    real "Play/Pause Icon" purely on tier) but broke several already-good CR-V
+    captions when regenerated to check for regressions: real, specific, directly
+    printed labels ("(Home) Button", "Left Selector Wheel") on CR-V's own
+    multi-fragment composite crops got overwritten with a generic, duplicate
+    section title, and two DIFFERENT figures sharing one function ended up with
+    the identical, non-distinguishing caption. A merge count > 1 does not
+    reliably mean "no single caption is correct" -- confirmed real, same PDF, a
+    composite fused from 4 source rects can still carry one genuine, specific,
+    directly-printed label for the whole crop. The real fix this project's own
+    comments already point to (associate each PRE-merge rect with its own
+    nearest label before merging, not after) is a bigger architectural change,
+    not yet attempted -- see docs/HANDOVER.md 2026-09-09 for the full incident.
     """
     x0, top, x1, bottom = rect
     page_lines = [l for l in lines if l.page == page and len(l.text.strip()) > 2]
@@ -369,6 +388,16 @@ def caption_for(
         # fixed. Reverted; those 2 Phone Screen cases are left as a known,
         # accepted residual limitation (docs/ARCHITECTURE.md 2026-09-08 "29.")
         # -- same standing policy as Honda Pilot's "Play/Pause Icon" case.
+        #
+        # A distance cap on this unconditional win was tried and reverted,
+        # 2026-09-09: it fixed 2 confirmed real Honda Pilot false positives (an
+        # unrelated subsection heading 48-80pt away beating the true nearby
+        # caption) but changed 5 already-good Honda CR-V captions when
+        # regenerated to check for regressions, at least 3 of them clearly worse
+        # (a lowercase sentence fragment or a wrong nearby label replacing a
+        # correct one) -- see docs/HANDOVER.md 2026-09-09 for the full incident.
+        # Left as a known, accepted residual limitation, same standing policy as
+        # the "Play/Pause Icon" case above.
         if is_heading_line(l):
             return 0
         if is_same_line_fragment(l):
