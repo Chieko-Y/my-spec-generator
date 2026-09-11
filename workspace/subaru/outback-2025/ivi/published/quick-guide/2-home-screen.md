@@ -8,27 +8,27 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-17d780d35dd9.png)
 - Figure 2-1 source: p.20
-- (Copied from OM) Status bar P.76
+- (Copied from OM) Media SCREEN
 
 ![figure](../figures/FIG-58465e0d4506.png)
 - Figure 2-2 source: p.20
-- (Copied from OM) P.32
+- (Copied from OM) Radio SCREEN
 
 ![figure](../figures/FIG-781e5c501e3c.png)
 - Figure 2-3 source: p.20
-- (Copied from OM) P.29
+- (Copied from OM) Apps SCREEN
 
 ![figure](../figures/FIG-5000b9d4ce9d.png)
 - Figure 2-4 source: p.20
-- (Copied from OM) P.36
+- (Copied from OM) Settings SCREEN
 
 ![figure](../figures/FIG-13158ef06f71.png)
 - Figure 2-5 source: p.20
-- (Copied from OM) P.34
+- (Copied from OM) Media SCREEN
 
 ![figure](../figures/FIG-91353206b743.png)
 - Figure 2-6 source: p.20
-- (Copied from OM) P.26
+- (Copied from OM) Phone SCREEN
 
 ![figure](../figures/FIG-3891b28520c6.png)
 - Figure 2-7 source: p.21
@@ -36,7 +36,7 @@
 
 ![figure](../figures/FIG-bf179eac4569.png)
 - Figure 2-8 source: p.21
-- (Copied from OM) Frequently used functions and operations can be added to the home screen. P.77
+- (Copied from OM) Add Shortcut
 
 
 ## 2-2-1. Service overview
@@ -54,6 +54,9 @@
 | 9 | <span class="req-label">Home Screen</span>Refer to the vehicle Owner’s Manual. | capability | p.21 / text |
 | 10 | <span class="req-label">Home Screen</span>Frequently used functions and operations can be added to the home screen. P.77 Button positions can be changed freely. P.78. | capability | p.21 / text |
 <!-- GENERATED:END function=1173e3d1d4a6 -->
+
+
+
 
 
 

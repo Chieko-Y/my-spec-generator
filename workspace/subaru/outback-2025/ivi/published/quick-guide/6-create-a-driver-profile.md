@@ -12,7 +12,7 @@
 
 ![figure](../figures/FIG-4330073c0006.png)
 - Figure 6-2 source: p.25
-- (Copied from OM) Select a language.
+- (Copied from OM) Registering a Bluetooth phone
 
 ![figure](../figures/FIG-c60ddda03a82.png)
 - Figure 6-3 source: p.25
@@ -28,7 +28,7 @@
 
 ![figure](../figures/FIG-63a130928ee7.png)
 - Figure 6-6 source: p.25
-- (Copied from OM) Procedure complete.
+- (Copied from OM) Select a language.
 
 ![figure](../figures/FIG-39bfbe31a6c3.png)
 - Figure 6-7 source: p.25
@@ -45,6 +45,9 @@
 | 4 | <span class="req-label">Create A Driver Profile</span>Registering a Bluetooth phone. | capability | p.25 / text |
 | 5 | <span class="req-label">Create A Driver Profile</span>Procedure complete. | capability | p.25 / text |
 <!-- GENERATED:END function=2832a4dfdb0f -->
+
+
+
 
 
 

@@ -14,6 +14,21 @@
       "evidence": "Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full (\"Android Auto\") — no abbreviated form appears in the manual text; \"AA\" is an in-house-only abbreviation.",
       "filled_by": "Chieko",
       "notes": ""
+    },
+    {
+      "term_id": "7372d306bbbd",
+      "in_house_term": "Hands-free telephone",
+      "meaning": "Calling through the in-vehicle microphone and speakers",
+      "category": "abbreviation",
+      "manual_wordings": [
+        {
+          "text": "HFL",
+          "maker": "honda"
+        }
+      ],
+      "evidence": "Counted by string match over workspace/**/published/*.md (2026-07-30, after re-publishing RAV4): Honda Pilot 85 / HR-V 73, Toyota and GM 0. The abbreviation is not used outside Honda, so it is restricted to maker=honda.",
+      "filled_by": "Chieko",
+      "notes": ""
     }
   ]
 }

@@ -12,39 +12,39 @@
 
 ![figure](../figures/FIG-ca6cb361b4ce.png)
 - Figure 17-2 source: p.44
-- (Copied from OM) P.56
+- (Copied from OM) Radio SCREEN
 
 ![figure](../figures/FIG-a74e343996c3.png)
 - Figure 17-3 source: p.44
-- (Copied from OM) P.60
+- (Copied from OM) Apps SCREEN
 
 ![figure](../figures/FIG-d3f7f66e24f3.png)
 - Figure 17-4 source: p.44
-- (Copied from OM) P.63
+- (Copied from OM) Settings SCREEN
 
 ![figure](../figures/FIG-0700346464e3.png)
 - Figure 17-5 source: p.44
-- (Copied from OM) P.58
+- (Copied from OM) Media SCREEN
 
 ![figure](../figures/FIG-a6c3f026011f.png)
 - Figure 17-6 source: p.44
-- (Copied from OM) P.50
+- (Copied from OM) Phone SCREEN
 
 ![figure](../figures/FIG-d2b703f10cac.png)
 - Figure 17-7 source: p.44
-- (Copied from OM) P.54
+- (Copied from OM) Map SCREEN*
 
 ![figure](../figures/FIG-bbf6b1715d9f.png)
 - Figure 17-8 source: p.44
-- (Copied from OM) P.49
+- (Copied from OM) Car information SCREEN
 
 ![figure](../figures/FIG-d8690923e79f.png)
 - Figure 17-9 source: p.45
-- (Copied from OM) Turn the Auto Vehicle Hold (AVH)
+- (Copied from OM) Refer to the vehicle Owner’s Manual.
 
 ![figure](../figures/FIG-2ef93eebe59f.png)
 - Figure 17-10 source: p.45
-- (Copied from OM) Frequently used functions and operations can be added to
+- (Copied from OM) Add Shortcut
 
 
 ## 17-2-1. Service overview
@@ -66,6 +66,9 @@
 | 13 | <span class="req-label">Home Screen</span>Turn the Auto Vehicle Hold (AVH) system on/off. Refer to the vehicle Owner’s Manual. | capability | p.45 / text |
 | 14 | <span class="req-label">Home Screen</span>Turn the Vehicle Dynamics Control system on/off. Refer to the vehicle Owner’s Manual. | capability | p.45 / text |
 <!-- GENERATED:END function=1173e3d1d4a6 -->
+
+
+
 
 
 

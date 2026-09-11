@@ -16,7 +16,7 @@
 
 ![figure](../figures/FIG-4b140239a115.png)
 - Figure 15-3 source: p.302
-- (Copied from OM) Notification
+- (Copied from OM) Vehicle Information and Message from Honda Tips
 
 
 ## Procedure (2 sequences; the manual restarts the numbering)
@@ -86,6 +86,10 @@ flowchart TD
 | 6 | <span class="req-label">HondaLink®</span>Notification. | capability | p.302 / text |
 | 7 | <span class="req-label">Step -</span>A notification is continuously displayed on the B-zone until the new message is read. | capability | p.302 / bullet |
 <!-- GENERATED:END function=c91c02774e47 -->
+
+
+
+
 
 
 

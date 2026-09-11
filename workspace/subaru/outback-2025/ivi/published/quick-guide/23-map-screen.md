@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-59c6f0f3e936.png)
 - Figure 23-1 source: p.54
-- (Copied from OM) 3D Heading-up screen 2D Heading-up screen
+- (Copied from OM) 2D North-up screen
 
 ![figure](../figures/FIG-421047495046.png)
 - Figure 23-2 source: p.54
@@ -16,11 +16,11 @@
 
 ![figure](../figures/FIG-d608d195d372.png)
 - Figure 23-3 source: p.54
-- (Copied from OM) Guidance display
+- (Copied from OM) Speed limit
 
 ![figure](../figures/FIG-df56e45d1189.png)
 - Figure 23-4 source: p.54
-- (Copied from OM) Remaining distance and/
+- (Copied from OM) Remaining distance and/ or remaining time Current position
 
 ![figure](../figures/FIG-415296a299c3.png)
 - Figure 23-5 source: p.54
@@ -28,7 +28,7 @@
 
 ![figure](../figures/FIG-4e3bb45a3d61.png)
 - Figure 23-6 source: p.54
-- (Copied from OM) Zoom in
+- (Copied from OM) Touch screen to display
 
 ![figure](../figures/FIG-63e6872e32a1.png)
 - Figure 23-7 source: p.55
@@ -36,7 +36,7 @@
 
 ![figure](../figures/FIG-6932c65df81b.png)
 - Figure 23-8 source: p.55
-- (Copied from OM) The screen display
+- (Copied from OM) JUNCTION SCREEN
 
 ![figure](../figures/FIG-738c50127cba.png)
 - Figure 23-9 source: p.55
@@ -44,7 +44,7 @@
 
 ![figure](../figures/FIG-4f34af39c22d.png)
 - Figure 23-10 source: p.55
-- (Copied from OM) results will
+- (Copied from OM) Route guidance starts.
 
 ![figure](../figures/FIG-86f18111cfe8.png)
 - Figure 23-11 source: p.55
@@ -84,6 +84,9 @@
 | 19 | <span class="req-label">Map Screen </span>The screen display Route guidance starts. automatically changes to display travel lanes at expressway junctions, etc. P.213 JUNCTION SCREEN RETURNING HOME If you register an address as Home, it The travel route is displayed, can be quickly set as a destination. and voice guidance starts. | constraint | p.55 / text |
 | 20 | <span class="req-label">Map Screen </span>Register an address as Home P.209 Setting Home as the destination P.205 55. | capability | p.55 / text |
 <!-- GENERATED:END function=c764c444e3e7 -->
+
+
+
 
 
 

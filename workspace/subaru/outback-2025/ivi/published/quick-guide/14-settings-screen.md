@@ -8,23 +8,23 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-57114547adbe.png)
 - Figure 14-1 source: p.36
-- (Copied from OM) P.94
+- (Copied from OM) General
 
 ![figure](../figures/FIG-820e7a872497.png)
 - Figure 14-2 source: p.36
-- (Copied from OM) P.102
+- (Copied from OM) Radio
 
 ![figure](../figures/FIG-7c2b1b5a0fb3.png)
 - Figure 14-3 source: p.36
-- (Copied from OM) P.83
+- (Copied from OM) Phone
 
 ![figure](../figures/FIG-a1eb2cf93bfe.png)
 - Figure 14-4 source: p.36
-- (Copied from OM) P.100
+- (Copied from OM) Sound
 
 ![figure](../figures/FIG-1667d0db28e3.png)
 - Figure 14-5 source: p.37
-- (Copied from OM) Adjust the clock.
+- (Copied from OM) Display the clock settings screen.
 
 ![figure](../figures/FIG-52ca3319d029.png)
 - Figure 14-6 source: p.37
@@ -54,6 +54,9 @@
 | 5 | <span class="req-label">Settings Screen</span>Display the clock settings screen. | capability | p.37 / text |
 | 6 | <span class="req-label">Settings Screen</span>Adjust the clock. | capability | p.37 / text |
 <!-- GENERATED:END function=5dba5365b523 -->
+
+
+
 
 
 

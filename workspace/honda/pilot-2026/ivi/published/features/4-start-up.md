@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-e3345807a29e.png)
 - Figure 4-1 source: p.270
-- (Copied from OM) VOL/ AUDIO (Volume/Power) Knob
+- (Copied from OM) Audio/Information Screen
 
 ![figure](../figures/FIG-51b8125d44ce.png)
 - Figure 4-2 source: p.272
@@ -96,6 +96,10 @@ Filled: 0 / unfilled: 1
 |---|---|---|---|
 | 1 | <span class="req-label">Start Up</span>Data Sharing with Honda Enable: Data communication available. Disable: Data communication unavailable. | capability | p.271 / text |
 <!-- GENERATED:END function=f1aa70e723ed -->
+
+
+
+
 
 
 

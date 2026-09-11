@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-021d1e3a8f26.png)
 - Figure 4-1 source: p.255
-- (Copied from OM) (Home) Button
+- (Copied from OM) (Home) Button Left Selector Wheel VOL(+/VOL(- (Volume) Switch
 
 ![figure](../figures/FIG-6a2591c2c3a1.png)
 - Figure 4-2 source: p.255
@@ -51,6 +51,7 @@
 |---|---|---|---|
 | 1 | <span class="req-label">Audio Remote Controls</span>Models with B-type meter Left Selector Wheel Roll up or down: To cycle through the audio modes, roll up or down and then press the left selector wheel: Back/Phone/FM/AM/USB/Bluetooth/Apple CarPlay/Android Auto/Customize display. | capability | p.257 / text |
 <!-- GENERATED:END function=3eefe40e4d15 -->
+
 
 
 

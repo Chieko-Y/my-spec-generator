@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-ac69f0be0002.png)
 - Figure 1-1 source: p.264
-- (Copied from OM) USB Flash Drive
+- (Copied from OM) Remote Controls
 
 ![figure](../figures/FIG-bea66bda37ba.png)
 - Figure 1-2 source: p.265
@@ -69,6 +69,10 @@
 | 3 | <span class="req-label">Step -</span>Charging may not start or may operate slowly depending on the connected devices and cables. Using only one port while not connecting anything (including cables) to the other port may solve the issue. | capability | p.265 / bullet |
 | 4 | <span class="req-label">Step -</span>You cannot play music even if you have connected music players to it. | constraint | p.266 / bullet |
 <!-- GENERATED:END function=95b41420c160 -->
+
+
+
+
 
 
 

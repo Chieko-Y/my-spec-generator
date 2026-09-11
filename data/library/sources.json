@@ -63,5 +63,18 @@
       "CA"
     ],
     "license_state": "internal_use_permitted"
+  },
+  "honda/hr-v-2026/ivi": {
+    "maker": "Honda",
+    "model": "HR-V 2026",
+    "title": "2026 Honda HR-V Owner's Manual (A3V02626OMEN)",
+    "local_path": "",
+    "source_url": "",
+    "retrieved_at": "2026-09-09",
+    "markets": [
+      "US",
+      "CA"
+    ],
+    "license_state": "internal_use_permitted"
   }
 }

@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-852f9f492bfb.png)
 - Figure 26-1 source: p.58
-- (Copied from OM) Change tracks
+- (Copied from OM) Change media source
 
 
 ## 26-2-1. Service overview
@@ -22,6 +22,9 @@
 | 5 | <span class="req-label">Media Screen</span>CD*1 P.187 USB/iPod/iPhone P.190 Bluetooth audio P.81. | capability | p.58 / text |
 | 6 | <span class="req-label">Media Screen</span>*1: If equipped with a CD player *2: Operable when USB Audio is used and Folders (Folders) is selected from (Browse). | constraint | p.58 / text |
 <!-- GENERATED:END function=211f8d68a425 -->
+
+
+
 
 
 

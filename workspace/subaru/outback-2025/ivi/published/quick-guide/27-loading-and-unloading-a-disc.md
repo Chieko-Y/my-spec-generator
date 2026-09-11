@@ -12,7 +12,7 @@
 
 ![figure](../figures/FIG-f8a7581e2d36.png)
 - Figure 27-2 source: p.59
-- (Copied from OM) MEMORY DEVICE/
+- (Copied from OM) MEMORY DEVICE/ PORTABLE DEVICE
 
 
 ## 27-2-1. Service overview
@@ -25,6 +25,9 @@
 | 4 | <span class="req-label">Loading And Unloading A Disc</span>Display the playback mode list. | capability | p.59 / text |
 | 5 | <span class="req-label">Loading And Unloading A Disc</span>MEMORY DEVICE/ Unloading a disc. | capability | p.59 / text |
 <!-- GENERATED:END function=e919a6179f2b -->
+
+
+
 
 
 

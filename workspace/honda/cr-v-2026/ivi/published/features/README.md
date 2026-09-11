@@ -38,6 +38,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 | In-house term | Category | Wording in the manual | Hits | Evidence |
 |---|---|---|---:|---|
 | AA | abbreviation | `Android Auto` | 59 | Counted by string match over workspace/subaru/**/published/*.md (2026-09-01): outback-2026 31 / outback-2025 24 / ascent-2026 1. Always printed in full ("Android Auto") — no abbreviated form appears in the manual text; "AA" is an in-house-only abbreviation. |
+| Hands-free telephone | abbreviation | `HFL` | 32 | Counted by string match over workspace/**/published/*.md (2026-07-30, after re-publishing RAV4): Honda Pilot 85 / HR-V 73, Toyota and GM 0. The abbreviation is not used outside Honda, so it is restricted to maker=honda. |
 
 ## Functions
 
@@ -97,6 +98,7 @@ flowchart LR
 | 22 | [Using HFL](/specifications/honda/cr-v-2026/ivi/file/22-using-hfl.md?chapter=features) | Features | 30 | 3 | 0 | o |
 | 23 | [HFL Menus](/specifications/honda/cr-v-2026/ivi/file/23-hfl-menus.md?chapter=features) | Features | 75 | 7 | 0 | o |
 <!-- GENERATED:END index -->
+
 
 
 

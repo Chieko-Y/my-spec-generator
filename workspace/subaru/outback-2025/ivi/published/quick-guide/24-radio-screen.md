@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-7e264ca5b27d.png)
 - Figure 24-1 source: p.56
-- (Copied from OM) channels.
+- (Copied from OM) Preset stations/channels
 
 ![figure](../figures/FIG-b1195f63a2d3.png)
 - Figure 24-2 source: p.56
@@ -33,6 +33,9 @@
 | 8 | <span class="req-label">Radio Screen</span>Select the radio band and the radio station. | capability | p.57 / text |
 | 9 | <span class="req-label">Radio Screen</span>A valid subscription to SiriusXM® Radio is required to receive satellite radio service. | capability | p.57 / text |
 <!-- GENERATED:END function=1d8a44cc6cec -->
+
+
+
 
 
 

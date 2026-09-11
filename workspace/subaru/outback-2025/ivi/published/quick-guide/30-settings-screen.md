@@ -12,15 +12,15 @@
 
 ![figure](../figures/FIG-fd3a89e8fd1a.png)
 - Figure 30-2 source: p.63
-- (Copied from OM) P.94
+- (Copied from OM) General
 
 ![figure](../figures/FIG-0abd9f782be9.png)
 - Figure 30-3 source: p.63
-- (Copied from OM) P.100
+- (Copied from OM) Sound
 
 ![figure](../figures/FIG-5e889133f270.png)
 - Figure 30-4 source: p.63
-- (Copied from OM) P.83
+- (Copied from OM) Phone
 
 ![figure](../figures/FIG-d1a2c4985c67.png)
 - Figure 30-5 source: p.63
@@ -28,11 +28,11 @@
 
 ![figure](../figures/FIG-f2e035ffe022.png)
 - Figure 30-6 source: p.63
-- (Copied from OM) P.102
+- (Copied from OM) *: For settings related to EyeSight, refer to the Owner’s Manual supplement
 
 ![figure](../figures/FIG-c7abb176677b.png)
 - Figure 30-7 source: p.64
-- (Copied from OM) Adjust the clock.
+- (Copied from OM) Display the clock settings screen.
 
 ![figure](../figures/FIG-df187d6e20f4.png)
 - Figure 30-8 source: p.64
@@ -63,6 +63,9 @@
 | 6 | <span class="req-label">Settings Screen</span>Select the manual mode. Adjust the clock. | capability | p.64 / text |
 | 7 | <span class="req-label">Settings Screen</span>*1: 11.6-inch display with Navi system *2: 11.6-inch display system with SUBARU STARLINK Safety and Security *3: 11.6-inch display system without SUBARU STARLINK Safety and Security. | capability | p.64 / text |
 <!-- GENERATED:END function=5dba5365b523 -->
+
+
+
 
 
 

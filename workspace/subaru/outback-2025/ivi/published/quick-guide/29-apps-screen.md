@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-c2eee7760c5f.png)
 - Figure 29-1 source: p.60
-- (Copied from OM) Usable
+- (Copied from OM) Usable applications
 
 ![figure](../figures/FIG-6e8b3b5d84c2.png)
 - Figure 29-2 source: p.60
@@ -66,6 +66,9 @@
 | 13 | <span class="req-label">Apps Screen</span>Fuel prices Sports. | capability | p.62 / text |
 | 14 | <span class="req-label">Apps Screen</span>Weather Weather alerts. | capability | p.62 / text |
 <!-- GENERATED:END function=ff44f90fa2b7 -->
+
+
+
 
 
 

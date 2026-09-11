@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-4bca5a89aad9.png)
 - Figure 10-1 source: p.33
-- (Copied from OM) Mix preset function
+- (Copied from OM) Select and hold one of the
 
 
 ## 10-2-2. Service requirements
@@ -22,6 +22,9 @@
 | 5 | <span class="req-label">Useful SiriusXM® Radio Functions</span>Mix preset function Multiple stations can be registered as presets. (AM, FM or SiriusXM® Radio) P.154,163. | capability | p.33 / text |
 | 6 | <span class="req-label">Useful SiriusXM® Radio Functions</span>Select and hold one of the preset buttons. | capability | p.33 / text |
 <!-- GENERATED:END function=51ff53923268 -->
+
+
+
 
 
 

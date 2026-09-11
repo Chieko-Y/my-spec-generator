@@ -12,11 +12,11 @@
 
 ![figure](../figures/FIG-8f98a73363cc.png)
 - Figure 15-2 source: p.39
-- (Copied from OM) 11.6-inch touch screen
+- (Copied from OM) Features: - 11.6-inch touch screen
 
 ![figure](../figures/FIG-3fc8740e3165.png)
 - Figure 15-3 source: p.40
-- (Copied from OM) Adoption of intuitive and easy-to-use
+- (Copied from OM) Adoption of intuitive and easy-to-use smartphone-like graphical user interface name of a function. A large 11.6-inch touch screen display has been adopted. Information can be displayed seamlessly between this display and the display in the meter cluster. Function description display function Function descriptions or operation hints can be displayed when an
 
 ![figure](../figures/FIG-22b38c7c2c0b.png)
 - Figure 15-4 source: p.41
@@ -40,7 +40,7 @@
 
 ![figure](../figures/FIG-cc163b36a5b2.png)
 - Figure 15-9 source: p.42
-- (Copied from OM) P.129
+- (Copied from OM) Apple CarPlay/Android Auto can be used wirelessly.
 
 ![figure](../figures/FIG-481aeda0a9d9.png)
 - Figure 15-10 source: p.42
@@ -99,6 +99,9 @@
 | 42 | <span class="req-label">Steering Wheel Controls</span>Apple CarPlay/Android Auto can be used wirelessly. | capability | p.42 / text |
 | 43 | <span class="req-label">Steering Wheel Controls</span>Valet mode restricts operations of the system when valet parking is used, to prevent unwanted access to personal information stored in the system. To enable/disable valet mode, enter a password preset by the user. Refer to the vehicle Owner’s Manual. | constraint | p.42 / text |
 <!-- GENERATED:END function=200b388acc33 -->
+
+
+
 
 
 

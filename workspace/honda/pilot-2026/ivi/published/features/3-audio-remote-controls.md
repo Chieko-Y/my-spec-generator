@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-cc6aec2ede3a.png)
 - Figure 3-1 source: p.268
-- (Copied from OM) Press Down: To decrease the volume.
+- (Copied from OM) Left Selector Wheel
 
 
 ## 3-2-1. Service overview
@@ -32,6 +32,10 @@
 | 4 | <span class="req-label">Step -</span>When listening to a USB flash drive : To skip to the next folder. Press and hold : To go back to the previous folder. Press and hold. | capability | p.269 / bullet |
 | 5 | <span class="req-label">Audio Remote Controls</span>Left Selector Wheel Roll up or down: To cycle through the audio modes, roll up or down and then press the left selector wheel. | capability | p.269 / text |
 <!-- GENERATED:END function=9817cf259ba1 -->
+
+
+
+
 
 
 

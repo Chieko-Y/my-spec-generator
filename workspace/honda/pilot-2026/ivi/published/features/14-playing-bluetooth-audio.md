@@ -8,7 +8,7 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-2a6653f67072.png)
 - Figure 14-1 source: p.297
-- (Copied from OM) Play/Pause Icon
+- (Copied from OM) is connected to HFL.
 
 
 ## Procedure (2 sequences; the manual restarts the numbering)
@@ -97,6 +97,10 @@ Filled: 0 / unfilled: 1
 | 4 | <span class="req-label">Playing Bluetooth® Audio</span>1Searching for Music Depending on the Bluetooth® device you connect, some or all of the lists may not be displayed. | capability | p.298 / text |
 | 5 | <span class="req-label">Playing Bluetooth® Audio</span>1How to Select a Play Mode Depending on the Bluetooth® device you connect, some or all of the functions may not be displayed. | capability | p.299 / text |
 <!-- GENERATED:END function=a78de7491615 -->
+
+
+
+
 
 
 

@@ -8,23 +8,23 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-13266bbae933.png)
 - Figure 8-1 source: p.29
-- (Copied from OM) applications
+- (Copied from OM) Apple CarPlay can be used to view Apple Maps, play music, and place calls by
 
 ![figure](../figures/FIG-27047d290eb2.png)
 - Figure 8-2 source: p.29
-- (Copied from OM) Apple CarPlay can be used to view Apple Maps, play music, and place calls by
+- (Copied from OM) Apple CarPlay
 
 ![figure](../figures/FIG-1eb7e1ebc674.png)
 - Figure 8-3 source: p.30
-- (Copied from OM) Android Auto can be used to view Google Maps, play music, and place calls by
+- (Copied from OM) Android Auto
 
 ![figure](../figures/FIG-7edef58d9a91.png)
 - Figure 8-4 source: p.31
-- (Copied from OM) Fuel prices
+- (Copied from OM) following a free trial. P.161
 
 ![figure](../figures/FIG-3c537ff59458.png)
 - Figure 8-5 source: p.31
-- (Copied from OM) Weather
+- (Copied from OM) following a free trial. P.161
 
 ![figure](../figures/FIG-d968182f5ac4.png)
 - Figure 8-6 source: p.31
@@ -60,6 +60,9 @@
 | 11 | <span class="req-label">Apps Screen</span>Fuel prices Sports. | capability | p.31 / text |
 | 12 | <span class="req-label">Apps Screen</span>Weather Weather alerts. | capability | p.31 / text |
 <!-- GENERATED:END function=ff44f90fa2b7 -->
+
+
+
 
 
 

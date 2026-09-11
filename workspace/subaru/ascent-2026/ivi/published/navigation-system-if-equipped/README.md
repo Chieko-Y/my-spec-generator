@@ -1,12 +1,12 @@
 <!-- GENERATED:START index (generated; edits inside this block are overwritten by the next publish — write your own notes outside it) -->
-# Subaru Ascent 2026 — Navigation System (If equipped) — Presumed specification
+# Subaru Ascent 2026 — navigation-system-if-equipped — Presumed specification
 
 > This is a machine-derived estimate, not an official requirements document. Numeric thresholds left blank could not be found in the manual and must be filled in by a tester with evidence.
 
 | Field | Value |
 |---|---|
 | Maker / Model | Subaru / Ascent 2026 |
-| Scope | Navigation System (If equipped) |
+| Scope | navigation-system-if-equipped |
 | Markets | US, CA |
 | Profile | subaru_chapter_toc_v1 |
 | Manual ID | subaru/ascent-2026/ivi |
@@ -44,7 +44,7 @@ How wording in the manual maps to the in-house term. **The original text is not 
 ```mermaid
 %%{init: {"themeVariables": {"fontSize": "11px"}}}%%
 flowchart LR
-    ROOT["Subaru Ascent 2026 — Navigation System (If equipped)"]
+    ROOT["Subaru Ascent 2026 — navigation-system-if-equipped"]
     ROOT --> A1["Navigation System (If equipped)"]
     A1 --> A1F1["1 Map Screen Overview"]
     A1 --> A1F2["2 Map Screen Operation ⚠"]
@@ -103,6 +103,9 @@ flowchart LR
 | 25 | [Using A USB Memory Device](/specifications/subaru/ascent-2026/ivi/file/25-using-a-usb-memory-device.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 6 | 1 | 0 | o |
 | 26 | [Using Wi-Fi®](/specifications/subaru/ascent-2026/ivi/file/26-using-wi-fi.md?chapter=navigation-system-if-equipped) | Navigation System (If equipped) | 2 | 0 | 0 | o |
 <!-- GENERATED:END index -->
+
+
+
 
 
 

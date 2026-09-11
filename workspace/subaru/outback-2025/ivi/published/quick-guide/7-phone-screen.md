@@ -8,11 +8,11 @@
 ## Figures (areas of the original PDF; the OM has no figure numbers or captions)
 ![figure](../figures/FIG-a3c7f89a902d.png)
 - Figure 7-1 source: p.26
-- (Copied from OM) Directly input a number
+- (Copied from OM) a recent contact P.112,122
 
 ![figure](../figures/FIG-b45610a8015c.png)
 - Figure 7-2 source: p.26
-- (Copied from OM) P.121,122,123
+- (Copied from OM) P.114,122
 
 ![figure](../figures/FIG-29b2e427dd0a.png)
 - Figure 7-3 source: p.27
@@ -20,7 +20,7 @@
 
 ![figure](../figures/FIG-a5598356d331.png)
 - Figure 7-4 source: p.27
-- (Copied from OM) Start three-way
+- (Copied from OM) Keypad
 
 ![figure](../figures/FIG-60803b733d31.png)
 - Figure 7-5 source: p.27
@@ -40,7 +40,7 @@
 
 ![figure](../figures/FIG-e0f30217aba3.png)
 - Figure 7-9 source: p.28
-- (Copied from OM) Calling the message
+- (Copied from OM) Replying to a message
 
 ![figure](../figures/FIG-3f8fef1f6a9d.png)
 - Figure 7-10 source: p.28
@@ -86,6 +86,9 @@
 | 21 | <span class="req-label">Phone Screen</span>Select the message Select message. icon next to the desired number. | capability | p.28 / text |
 | 22 | <span class="req-label">Phone Screen</span>Send message. | capability | p.28 / text |
 <!-- GENERATED:END function=72e3a88ac6d6 -->
+
+
+
 
 
 

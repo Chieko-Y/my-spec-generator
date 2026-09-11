@@ -29,20 +29,30 @@ def merge_rects(rects: list[Rect], distance_pt: float = 3.0) -> list[Rect]:
     (Honda's 22-fragment figures disappear entirely); merging first keeps them
     findable. See ARCHITECTURE.md "図の扱い" 2.
     """
-    merged = [r for r in rects]
+    return [r for r, _count in merge_rects_with_counts(rects, distance_pt)]
+
+
+def merge_rects_with_counts(rects: list[Rect], distance_pt: float = 3.0) -> list[tuple[Rect, int]]:
+    """Same merge as merge_rects, but also reports how many source rects fed into
+    each final merged rect -- caption_for's composite-caption-list absorption (see
+    its own `merge_count` parameter) needs this to tell a genuine multi-fragment
+    composite (a photo assembled from several icon/leader-line fragments) apart
+    from an ordinary single-source figure.
+    """
+    merged = [(r, 1) for r in rects]
     changed = True
     while changed:
         changed = False
-        result: list[Rect] = []
+        result: list[tuple[Rect, int]] = []
         used = [False] * len(merged)
-        for i, a in enumerate(merged):
+        for i, (a, a_count) in enumerate(merged):
             if used[i]:
                 continue
-            cur = a
+            cur, cur_count = a, a_count
             for j in range(i + 1, len(merged)):
                 if used[j]:
                     continue
-                b = merged[j]
+                b, b_count = merged[j]
                 if _close_or_overlapping(cur, b, distance_pt):
                     cur = (
                         min(cur[0], b[0]),
@@ -50,9 +60,10 @@ def merge_rects(rects: list[Rect], distance_pt: float = 3.0) -> list[Rect]:
                         max(cur[2], b[2]),
                         max(cur[3], b[3]),
                     )
+                    cur_count += b_count
                     used[j] = True
                     changed = True
-            result.append(cur)
+            result.append((cur, cur_count))
         merged = result
     return merged
 
@@ -154,9 +165,124 @@ _SAME_LINE_FRAGMENT_MAX_GAP_PT = 100.0
 # between the two.
 
 
+_COMPOSITE_LIST_GAP_PT = 15.0
+# The largest gap between two consecutive lines that still counts as one
+# stacked printed legend/label list directly beside a composite figure --
+# confirmed real, Honda HR-V 2026, 2026-09-10 ("Audio Remote Controls", a
+# steering-wheel photo crop): "(Home) Button" / "Left Selector Wheel" /
+# "VOL(+/VOL(- (Volume) Switch" are printed directly below the image, 11.6pt
+# and 11.8pt apart respectively. Confirmed real, Honda CR-V 2026, same day (a
+# DIFFERENT composite on the same PDF page): "(Home) Button" / "Left Selector
+# Wheel" sit 12.7pt apart. On its own this gap is indistinguishable from an
+# ordinary paragraph's own line height (confirmed real, same day: a 927-
+# composite-figure scan across every Honda/Subaru manual found dozens of
+# bullet lists, legend tables, and page cross-references sitting at this
+# same gap next to OTHER composite figures) -- see _looks_like_label below
+# for the signal that actually tells them apart.
+_COMPOSITE_LIST_X0_TOLERANCE_PT = 20.0
+# How far a stacked label's own x0 may drift from the first (nearest) label's
+# x0 and still count as the same list -- confirmed real, same HR-V case: the
+# 3 labels' x0 values (109.8/113.5/101.3) span 12.4pt. Confirmed real, same
+# CR-V case: (56.8/72.4) span 15.6pt -- both comfortably under 20pt.
+_MAX_COMPOSITE_LIST_SIZE = 6
+# A composite photo realistically carries a handful of button/icon labels,
+# never dozens -- caps how far absorption can run even if a page's own
+# unrelated layout happens to keep satisfying every other check indefinitely.
+_PAGE_REF_RE = re.compile(r"^P\.?\s*\d")
+# A "see page N" cross-reference ("P.135", "P 135") reads as all-uppercase-
+# initial (passes _looks_like_label's own word-casing check) but is never a
+# real caption -- confirmed real, Honda Pilot 2026, 2026-09-10: "Assist Mode"
+# sitting next to "P.135" (a cross-reference to an unrelated page) would
+# otherwise be absorbed into "Assist Mode P.135".
+
+
+def _looks_like_label(text: str) -> bool:
+    """A genuine printed UI-control label (Honda's own house style for a
+    composite photo's leader-line captions -- "(Home) Button", "Left Selector
+    Wheel", "VOL(+/VOL(- (Volume) Switch") is short, title-case throughout,
+    and reads as a name, not a sentence: every alphabetic word starts with an
+    uppercase letter, with no ordinary lowercase connective word anywhere.
+
+    This is the signal that survived direct testing, 2026-09-10, after a pure
+    geometry-only version of composite-list absorption (same gap/x0 checks,
+    no content check at all) was tried and reverted: regenerating every
+    composite figure (927 across Pilot/CR-V/HR-V/3 Subaru manuals) showed it
+    fixed the 3 confirmed target cases above but ALSO absorbed a wiper-mode
+    legend ("MIST OFF" + "OFF"/"INT*1: Low speed with intermittent"/"AUTO*2:
+    Wiper speed varies automatically"/"LO: Low speed wipe"/"HI: High speed
+    wipe" all glued into one caption), safety-checklist bullet points (3
+    separate, already-complete "●..." sentences glued together), and in two
+    cases literally duplicated an already-complete sentence onto itself
+    ("...behind the Honda emblem on the front grille. behind the Honda emblem
+    on the front grille.") -- geometry alone (consistent line gap + x0)
+    cannot tell a real button-label stack apart from an ordinary bullet list
+    or legend table, since both have the exact same shape. Every one of those
+    bad cases contains an ordinary lowercase word ("with", "varies", "must",
+    "be", "behind", "the", ...) that a real short control-name label never
+    does; every confirmed real label case above is pure title-case. See
+    _PAGE_REF_RE for the one all-caps-initial exception that still needs its
+    own explicit exclusion (a page cross-reference).
+    """
+    if _PAGE_REF_RE.match(text.strip()):
+        return False
+    words = re.findall(r"[A-Za-z]+", text)
+    return bool(words) and all(w[0].isupper() for w in words)
+
+
+def _absorb_composite_caption_list(best: Line, same_column: list[Line], rect: Rect) -> Line:
+    """For a composite figure (2+ pre-merge source rects fused by merge_rects into
+    one -- see caption_for's `merge_count`), the single nearest-line pick this
+    function otherwise always makes covers only ONE button/icon's own printed
+    label when several are stacked directly next to the figure -- confirmed real,
+    Honda HR-V 2026 and Honda CR-V 2026, 2026-09-10 (see _COMPOSITE_LIST_GAP_PT's
+    docstring for the exact measured cases). The LIVE original app's own output
+    for the HR-V case concatenates all 3 labels; this rebuild previously kept only
+    the first ("(Home) Button").
+
+    Walks outward from `best`, in whichever direction it sits relative to the
+    figure (lines below it if best is at/below the figure's own top edge, lines
+    above it if best is an above-window caption), absorbing each next same-column
+    line while the gap to the previous absorbed line stays within
+    _COMPOSITE_LIST_GAP_PT, its x0 stays within _COMPOSITE_LIST_X0_TOLERANCE_PT of
+    best's own x0, AND it (like `best` itself) passes _looks_like_label --
+    required after a pure-geometry version of this same walk was tried and
+    reverted the same day for absorbing bullet lists, legend tables, and page
+    references that happen to share the exact same stacked-line geometry (see
+    _looks_like_label's own docstring for the full incident). Capped at
+    _MAX_COMPOSITE_LIST_SIZE. Scoped to composite figures only (the merge_count
+    >= 2 check lives in the caller): an ordinary single-source figure's own
+    single nearest line has always been the right answer by itself in every
+    confirmed case in this file outside the composite ones.
+    """
+    if not _looks_like_label(best.text):
+        return best
+    direction_down = best.top >= rect[1]
+    pool = sorted((l for l in same_column if l is not best), key=lambda l: l.top)
+    candidates = [l for l in pool if l.top > best.top] if direction_down else \
+        [l for l in reversed(pool) if l.top < best.top]
+    ordered = [best]
+    prev = best
+    for l in candidates:
+        if len(ordered) >= _MAX_COMPOSITE_LIST_SIZE:
+            break
+        if abs(l.top - prev.top) > _COMPOSITE_LIST_GAP_PT:
+            break
+        if abs(l.x0 - best.x0) > _COMPOSITE_LIST_X0_TOLERANCE_PT:
+            break
+        if not _looks_like_label(l.text):
+            break
+        ordered.append(l)
+        prev = l
+    if len(ordered) == 1:
+        return best
+    if not direction_down:
+        ordered.reverse()
+    return replace(best, text=" ".join(l.text for l in ordered))
+
+
 def caption_for(
     rect: Rect, page: int, lines: list[Line], column_margin_pt: float = 30.0,
-    heading_prefixes: tuple[str, ...] = (),
+    heading_prefixes: tuple[str, ...] = (), merge_count: int = 1,
 ) -> Line | None:
     """The nearest text line to a figure, as a stand-in caption — the source PDFs
     have no real figure captions (confirmed against the original app's own output,
@@ -465,6 +591,8 @@ def caption_for(
     if siblings:
         ordered = sorted([best, *siblings], key=lambda l: l.x0)
         best = replace(best, text=" ".join(l.text for l in ordered))
+    if merge_count >= 2:
+        best = _absorb_composite_caption_list(best, same_column, rect)
     return best
 
 

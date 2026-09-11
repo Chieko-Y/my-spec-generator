@@ -1,0 +1,14 @@
+{
+  "profile_id": "honda_v3",
+  "extends": "generic_v1",
+  "derived_from": "Auto-derived from honda/hr-v-2026/ivi via derive_layout, never reviewed before this manual was activated. column_detect_per_page:true added 2026-09-09 -- user reported \"USB Ports\" Figure 2-1's caption fused with unrelated text (\"On the front panel ■USB charging/connector port ( ) 1USB Ports\"). Confirmed real, same PDF page 211: a same-top Y-cluster spanning the figure's own left-column callout (\"On the front panel\", x0=94.6), an unrelated ■-prefixed heading further right (x0=233.9), and a page-edge running-number tab label (\"1USB Ports\", x0=421.0) were fused into one Line -- same class of bug column_detect_per_page was added for CR-V to fix (docs/ARCHITECTURE.md \"17.\"). Verified directly against the real PDF: with this field set, the cluster splits into its 4 real pieces and caption_for correctly picks \"On the front panel\" alone. Many other requirement bullets in this chapter show the identical fusion pattern, not just this one figure -- likely affects the whole chapter. heading_prefixes deliberately NOT added yet: this same page also has an unrelated ■ heading 86.5pt below the figure that would win Tier 0 outright (same absolute-priority problem documented for Honda Pilot, docs/ARCHITECTURE.md \"30.\") and make this specific case WORSE, not better -- needs its own separate review before enabling.",
+  "layout": {
+    "columns": 1,
+    "section_source": "bookmarks",
+    "header_boundary_pt": 75,
+    "footer_boundary_pt": 450,
+    "figure_min_width_pt": 94.96200000000005,
+    "figure_min_height_pt": 47.44200000000001,
+    "column_detect_per_page": true
+  }
+}

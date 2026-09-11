@@ -15,7 +15,7 @@ from domain.figures import (
     is_full_bleed_placement,
     is_qr_code_caption,
     is_stretched_fill,
-    merge_rects,
+    merge_rects_with_counts,
 )
 from domain.manual_identity import IdentityGuess, guess_identity
 from domain.manual_parsing import (
@@ -817,13 +817,13 @@ class UseCases:
                 if not is_stretched_fill(native_w, native_h, x1 - x0, bottom - top)
                 and not is_full_bleed_placement((x0, top, x1, bottom))
             ]
-            merged = merge_rects(real_rects, profile.layout.figure_merge_distance_pt)
+            merged = merge_rects_with_counts(real_rects, profile.layout.figure_merge_distance_pt)
             sized = [
-                r
-                for r in merged
+                (r, count)
+                for r, count in merged
                 if is_figure_sized(r, profile.layout.figure_min_width_pt, profile.layout.figure_min_height_pt)
             ]
-            for rect in sized:
+            for rect, merge_count in sized:
                 # rect = (x0, top, x1, bottom)
                 synthetic_top = synthetic_top_for_position(
                     boundary_lines_by_page.get(page_index, []), rect[0], rect[1], profile.layout.columns
@@ -843,7 +843,8 @@ class UseCases:
                 if section_idx is None:
                     continue
                 nearest_line = caption_for(
-                    rect, page_index, lines, heading_prefixes=tuple(profile.layout.heading_prefixes)
+                    rect, page_index, lines, heading_prefixes=tuple(profile.layout.heading_prefixes),
+                    merge_count=merge_count,
                 )
                 if is_qr_code_caption(nearest_line.text if nearest_line else None):
                     continue
