@@ -18,6 +18,7 @@ from domain.model import ManualSpec, ParameterStatus
 from domain.overlay import GlossaryTerm
 from domain.profile import SLOT_DISPLAY
 
+from domain.slug import function_filename
 from .repositories import slugify
 
 _START_RE = lambda tag: re.compile(  # noqa: E731
@@ -52,7 +53,7 @@ def _wrap_generated(tag: str, body: str, existing_path: Path) -> str:
 
 
 def _function_filename(function) -> str:
-    return f"{function.chapter_number}-{slugify(function.title)}.md"
+    return function_filename(function.chapter_number, function.title)
 
 
 def _threshold_table(thresholds) -> str:

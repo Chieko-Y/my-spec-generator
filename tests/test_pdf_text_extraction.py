@@ -91,3 +91,9 @@ def test_lines_split_by_vertical_proximity_not_a_fixed_grid_boundary():
     lines = _group_words_into_lines(words, page_index=0)
     assert len(lines) == 1
     assert lines[0].text == "dis- play"
+
+
+def test_clean_title_strips_c1_control_leader_glyphs():
+    from infrastructure.pdf_reader import _clean_title
+
+    assert _clean_title("Map Screen " + "\x9e" * 40) == "Map Screen"

@@ -44,7 +44,7 @@ from domain.manual_parsing import (
 from domain.profile_derivation import DerivedLayoutReport, derive_layout
 from domain.profile_fitness import FitnessReport, score_fitness
 from domain.model import FigureRef, ManualSpec, ParameterStatus, content_id
-from domain.slug import slugify
+from domain.slug import function_filename, slugify
 from domain.overlay import (
     FigureElement,
     GlossaryTerm,
@@ -1043,7 +1043,7 @@ class UseCases:
                 f,
                 chapter_number=f"{chapter_index}.{f.chapter_number}",
                 published_href=(
-                    f"/specifications/{manual_id}/file/{f.chapter_number}-{slugify(f.title)}.md"
+                    f"/specifications/{manual_id}/file/{function_filename(f.chapter_number, f.title)}"
                     f"?chapter={slug}"
                 ),
             )

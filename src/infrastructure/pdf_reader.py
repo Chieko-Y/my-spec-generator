@@ -42,6 +42,17 @@ _PDFIUM_EXECUTOR = ThreadPoolExecutor(max_workers=1, thread_name_prefix="pdfium"
 # stripped rather than kept.
 _ICON_GLYPH_RE = re.compile(r"[\ue000-\uf8ff]")
 
+
+# C1 control characters (U+0080-U+009F) are never real text. Confirmed 2026-09-21
+# against the real 2025 Subaru supplement: a bookmark title in the PDF outline
+# ("Map Screen" + ~40 x U+009E, its dot-leader glyph) carried them through to
+# the chapter title / function path, where they render as a row of tofu boxes.
+_C1_CONTROL_RE = re.compile(r"[\x80-\x9f]")
+
+
+def _clean_title(text: str) -> str:
+    return _C1_CONTROL_RE.sub("", text).strip()
+
 # This manual's own printing convention quotes an on-screen UI element's name
 # ("Network Connection", "Wi-Fi Security"). When that element is a bare icon
 # instead of a text label, the icon glyph itself has no extractable text at
@@ -98,7 +109,7 @@ def _split_cross_column_cluster(ws_sorted: list[dict]) -> list[list[dict]]:
 
 
 def _build_line_from_words(ws_sorted: list[dict], page_index: int) -> Line | None:
-    cleaned = [(_ICON_GLYPH_RE.sub("", w["text"]), w) for w in ws_sorted]
+    cleaned = [(_C1_CONTROL_RE.sub("", _ICON_GLYPH_RE.sub("", w["text"])), w) for w in ws_sorted]
     cleaned = [(t, w) for t, w in cleaned if t]
     if not cleaned:
         return None
@@ -207,7 +218,7 @@ def _read_bookmarks_unsafe(pdf_path: str) -> list[Bookmark]:
             page_index = dest.get_index() if dest is not None else None
             if page_index is None:
                 continue
-            out.append(Bookmark(title=bm.get_title().strip(), level=bm.level, page_index=page_index))
+            out.append(Bookmark(title=_clean_title(bm.get_title()), level=bm.level, page_index=page_index))
         return out
     finally:
         doc.close()
